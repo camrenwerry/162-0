@@ -85,12 +85,17 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
   const [displayTeam, setDisplayTeam] = useState(FIRST_COMBINATION.team)
   const [displayDecade, setDisplayDecade] = useState(FIRST_COMBINATION.decade)
   const [isRolling, setIsRolling] = useState(false)
+  const [committingPlayerId, setCommittingPlayerId] = useState<string | null>(null)
+  const [recentlyFilledPosition, setRecentlyFilledPosition] = useState<Position | null>(null)
 
   const rosterRef = useRef(roster)
   const usedCombinationsRef = useRef(new Set<string>())
   const rollingRef = useRef(false)
   const assignmentLockRef = useRef(false)
   const rollTimersRef = useRef<Array<ReturnType<typeof setTimeout>>>([])
+  const commitTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const rosterEffectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const resultsTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const filledCount = Object.keys(roster).length
   const round = Math.min(filledCount + 1, POSITIONS.length)
@@ -149,7 +154,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
       return
     }
 
-    const delays = [65, 65, 75, 85, 100, 120, 145, 180]
+    const delays = [55, 60, 65, 75, 90, 110, 135, 155, 180]
     let elapsed = 0
     delays.forEach((delay, index) => {
       elapsed += delay
@@ -169,6 +174,9 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     return () => {
       clearRollTimers()
       rollingRef.current = false
+      if (commitTimerRef.current) clearTimeout(commitTimerRef.current)
+      if (rosterEffectTimerRef.current) clearTimeout(rosterEffectTimerRef.current)
+      if (resultsTimerRef.current) clearTimeout(resultsTimerRef.current)
     }
   }, [beginRoundRoll, clearRollTimers])
 
@@ -187,34 +195,50 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
       })
   }, [combination, draftedIds, filter, search, sort])
 
-  const selectPlayer = (player: Player) => {
-    if (isRolling || assignmentLockRef.current || getAvailablePositions(player, roster).length === 0) return
+  const interactionsDisabled = isRolling || committingPlayerId !== null
+
+  const selectPlayer = useCallback((player: Player) => {
+    if (interactionsDisabled || assignmentLockRef.current || getAvailablePositions(player, roster).length === 0) return
     setSelectedPlayer(player)
-  }
+  }, [interactionsDisabled, roster])
 
   const choosePosition = (position: Position) => {
-    if (assignmentLockRef.current || isRolling || !selectedPlayer) return
+    if (assignmentLockRef.current || interactionsDisabled || !selectedPlayer) return
     if (roster[position] || !getAvailablePositions(selectedPlayer, roster).includes(position)) return
 
     assignmentLockRef.current = true
-    const nextRoster = { ...roster, [position]: selectedPlayer }
-    rosterRef.current = nextRoster
-    setRoster(nextRoster)
+    const committedPlayer = selectedPlayer
+    setCommittingPlayerId(committedPlayer.id)
     setSelectedPlayer(null)
-    setSearch('')
-    setFilter('ALL')
-    setSort('war')
+    const commitDuration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 120 : 300
+    commitTimerRef.current = setTimeout(() => {
+      const nextRoster = { ...rosterRef.current, [position]: committedPlayer }
+      rosterRef.current = nextRoster
+      setRoster(nextRoster)
+      setRecentlyFilledPosition(position)
+      setSearch('')
+      setFilter('ALL')
+      setSort('war')
+      rosterEffectTimerRef.current = setTimeout(() => setRecentlyFilledPosition(null), 850)
 
-    if (Object.keys(nextRoster).length === POSITIONS.length) {
-      setComplete(true)
-      return
-    }
-    beginRoundRoll(nextRoster)
+      if (Object.keys(nextRoster).length === POSITIONS.length) {
+        resultsTimerRef.current = setTimeout(() => {
+          setCommittingPlayerId(null)
+          setComplete(true)
+        }, 600)
+        return
+      }
+      setCommittingPlayerId(null)
+      beginRoundRoll(nextRoster)
+    }, commitDuration)
   }
 
   const resetGame = () => {
     const emptyRoster: Roster = {}
     clearRollTimers()
+    if (commitTimerRef.current) clearTimeout(commitTimerRef.current)
+    if (rosterEffectTimerRef.current) clearTimeout(rosterEffectTimerRef.current)
+    if (resultsTimerRef.current) clearTimeout(resultsTimerRef.current)
     usedCombinationsRef.current.clear()
     rollingRef.current = false
     assignmentLockRef.current = false
@@ -227,6 +251,8 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     setCombination(FIRST_COMBINATION)
     setDisplayTeam(FIRST_COMBINATION.team)
     setDisplayDecade(FIRST_COMBINATION.decade)
+    setCommittingPlayerId(null)
+    setRecentlyFilledPosition(null)
     setComplete(false)
     beginRoundRoll(emptyRoster)
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -256,11 +282,11 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
           <div className="draft-controls">
             <label className="draft-search">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.25" /><path d="m15.2 15.2 4.2 4.2" /></svg>
-              <input disabled={isRolling} value={search} onChange={(event) => setSearch(event.target.value)} type="search" placeholder="Search players" />
+              <input disabled={interactionsDisabled} value={search} onChange={(event) => setSearch(event.target.value)} type="search" placeholder="Search players" />
             </label>
             <label className="draft-sort">
               <span>Sort</span>
-              <select disabled={isRolling} value={sort} onChange={(event) => setSort(event.target.value as SortKey)}>
+              <select disabled={interactionsDisabled} value={sort} onChange={(event) => setSort(event.target.value as SortKey)}>
                 {sortOptions.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
               </select>
             </label>
@@ -270,7 +296,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
             {FILTERS.map((positionFilter) => (
               <button
                 className={filter === positionFilter ? 'is-active' : ''}
-                disabled={isRolling}
+                disabled={interactionsDisabled}
                 key={positionFilter}
                 type="button"
                 onClick={() => {
@@ -281,12 +307,18 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
             ))}
           </div>
 
-          <PlayerList players={players} roster={roster} interactionsDisabled={isRolling} onSelect={selectPlayer} />
+          <PlayerList
+            players={players}
+            roster={roster}
+            interactionsDisabled={interactionsDisabled}
+            committingPlayerId={committingPlayerId}
+            onSelect={selectPlayer}
+          />
         </section>
       </div>
 
-      <RosterBar roster={roster} />
-      {selectedPlayer && !isRolling && (
+      <RosterBar roster={roster} recentlyFilledPosition={recentlyFilledPosition} />
+      {selectedPlayer && !interactionsDisabled && (
         <PositionPicker player={selectedPlayer} roster={roster} onCancel={() => setSelectedPlayer(null)} onConfirm={choosePosition} />
       )}
     </main>

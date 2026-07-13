@@ -1,7 +1,8 @@
-import { POSITIONS, type Roster } from '../../types/draft'
+import { POSITIONS, type Position, type Roster } from '../../types/draft'
 
 interface RosterBarProps {
   roster: Roster
+  recentlyFilledPosition: Position | null
 }
 
 function surname(name: string) {
@@ -10,7 +11,7 @@ function surname(name: string) {
   return /^(Jr\.|Sr\.|II|III)$/.test(last) ? parts[parts.length - 2] : last
 }
 
-export default function RosterBar({ roster }: RosterBarProps) {
+export default function RosterBar({ roster, recentlyFilledPosition }: RosterBarProps) {
   const filled = Object.keys(roster).length
 
   return (
@@ -21,9 +22,10 @@ export default function RosterBar({ roster }: RosterBarProps) {
       </div>
       <div className="roster-bar__slots">
         {POSITIONS.map((position) => (
-          <div className={roster[position] ? 'is-filled' : ''} key={position}>
+          <div className={`${roster[position] ? 'is-filled' : ''}${recentlyFilledPosition === position ? ' is-new' : ''}`} key={position}>
             <strong>{position}</strong>
             {roster[position] && <span>{surname(roster[position].name)}</span>}
+            {recentlyFilledPosition === position && <i aria-hidden="true">✓</i>}
           </div>
         ))}
       </div>

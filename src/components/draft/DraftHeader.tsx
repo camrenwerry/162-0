@@ -31,7 +31,7 @@ export default function DraftHeader({
       <div className="matchup-card">
         <div className="matchup-card__identity">
           <span className="matchup-card__label">On the clock</span>
-          <div className={`matchup-card__badges${isRolling ? ' is-rolling' : ''}`} aria-live="polite">
+          <div key={combination.id} className={`matchup-card__badges${isRolling ? ' is-rolling' : ' is-landed'}`} aria-live="polite">
             <strong>{displayTeam}</strong>
             <span>{displayDecade}</span>
           </div>

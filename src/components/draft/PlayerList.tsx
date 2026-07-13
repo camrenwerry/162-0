@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import type { PlayerCardData } from '../../types/draft'
 import type { Roster } from '../../types/draft'
 import { getAvailablePositions } from '../../utils/draft'
@@ -8,14 +9,15 @@ interface PlayerListProps {
   onSelect: (player: PlayerCardData) => void
   roster: Roster
   interactionsDisabled: boolean
+  committingPlayerId: string | null
 }
 
-export default function PlayerList({ players, onSelect, roster, interactionsDisabled }: PlayerListProps) {
+function PlayerList({ players, onSelect, roster, interactionsDisabled, committingPlayerId }: PlayerListProps) {
   if (players.length === 0) {
     return (
       <div className="classic-empty">
         <span aria-hidden="true" />
-        <strong>No players found</strong>
+        <strong>No matching players.</strong>
         <p>Try a different search or position filter.</p>
       </div>
     )
@@ -30,8 +32,11 @@ export default function PlayerList({ players, onSelect, roster, interactionsDisa
           onSelect={onSelect}
           isAvailable={getAvailablePositions(player, roster).length > 0}
           interactionsDisabled={interactionsDisabled}
+          isDrafting={committingPlayerId === player.id}
         />
       ))}
     </div>
   )
 }
+
+export default memo(PlayerList)

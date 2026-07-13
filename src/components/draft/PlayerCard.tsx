@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import type { PlayerCardData } from '../../types/draft'
 
 interface PlayerCardProps {
@@ -5,13 +6,14 @@ interface PlayerCardProps {
   onSelect: (player: PlayerCardData) => void
   isAvailable: boolean
   interactionsDisabled: boolean
+  isDrafting: boolean
 }
 
 function formatAverage(value: number) {
   return value.toFixed(3).replace(/^0/, '')
 }
 
-export default function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled }: PlayerCardProps) {
+function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDrafting }: PlayerCardProps) {
   const stats = player.type === 'hitter'
     ? [
         ['WAR', player.stats.war.toFixed(1)],
@@ -29,7 +31,7 @@ export default function PlayerCard({ player, onSelect, isAvailable, interactions
 
   return (
     <button
-      className={`player-card${!isAvailable ? ' is-unavailable' : ''}`}
+      className={`player-card${!isAvailable ? ' is-unavailable' : ''}${isDrafting ? ' is-drafting' : ''}`}
       type="button"
       disabled={!isAvailable || interactionsDisabled}
       onClick={() => onSelect(player)}
@@ -56,3 +58,5 @@ export default function PlayerCard({ player, onSelect, isAvailable, interactions
     </button>
   )
 }
+
+export default memo(PlayerCard)
