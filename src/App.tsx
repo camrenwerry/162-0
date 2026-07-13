@@ -1,122 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { useEffect, useState } from 'react'
 import './App.css'
+import Logo162 from './components/Logo162'
+import ClassicMode from './components/draft/ClassicMode'
 
-function App() {
-  const [count, setCount] = useState(0)
+type Route = '/' | '/draft'
 
+function HomePage({ navigate }: { navigate: (route: Route) => void }) {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <main className="home-page">
+      <div className="home-atmosphere" aria-hidden="true">
+        <span className="stadium-light stadium-light--left" />
+        <span className="stadium-light stadium-light--right" />
+        <span className="home-atmosphere__spotlight" />
+        <span className="home-atmosphere__seating" />
+        <span className="home-atmosphere__fog" />
+        <span className="home-atmosphere__field"><i /></span>
+      </div>
+      <section className="home-focus shell">
+        <div className="home-brand">
+          <Logo162 />
+          <div className="home-tagline"><span />Build. Draft. Dominate.<span /></div>
+          <p>Can you build the<br />greatest baseball team<br />ever assembled?</p>
+          <div className="home-divider" aria-hidden="true"><span /></div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
+        <button className="play-button" type="button" onClick={() => navigate('/draft')}>
+          <svg className="play-button__bats" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M6.2 25.8 22.9 9.1c1.7-1.7 2.4-3.5 1.5-4.4-.9-.9-2.7-.2-4.4 1.5L3.3 22.9c-1.1 1.1-1.2 2.5-.3 3.4.8.8 2.2.7 3.2-.5Z" />
+            <path d="m4.6 21.8 5.6 5.6M25.8 25.8 9.1 9.1C7.4 7.4 6.7 5.6 7.6 4.7c.9-.9 2.7-.2 4.4 1.5l16.7 16.7c1.1 1.1 1.2 2.5.3 3.4-.8.8-2.2.7-3.2-.5Z" />
+            <path d="m27.4 21.8-5.6 5.6" />
+          </svg>
+          <span>Play Classic</span>
         </button>
       </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    </main>
   )
+}
+
+function App() {
+  const getRoute = (): Route => window.location.pathname === '/draft' ? '/draft' : '/'
+  const [route, setRoute] = useState<Route>(getRoute)
+
+  useEffect(() => {
+    const handlePopState = () => setRoute(getRoute())
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
+
+  const navigate = (nextRoute: Route) => {
+    if (nextRoute !== route) window.history.pushState({}, '', nextRoute)
+    setRoute(nextRoute)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  return route === '/draft' ? <ClassicMode onHome={() => navigate('/')} /> : <HomePage navigate={navigate} />
 }
 
 export default App

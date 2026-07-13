@@ -1,0 +1,77 @@
+.logo-162 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 0.08em 0 0.16em;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.9rem, 4.8vw, 2.6rem);
+  font-family: var(--font-display);
+  font-size: clamp(7.15rem, 37vw, 13.75rem);
+  font-weight: 900;
+  letter-spacing: 0.015em;
+  line-height: 1.04;
+  filter:
+    drop-shadow(0 0.08em 0.09em rgb(0 0 0 / 68%))
+    drop-shadow(0 0 0.18em rgb(154 185 216 / 12%));
+  isolation: isolate;
+}
+
+.logo-162::before {
+  position: absolute;
+  z-index: -1;
+  width: min(110vw, 35rem);
+  height: 1.15em;
+  border-radius: 50%;
+  background: rgb(140 175 211 / 7%);
+  content: '';
+  filter: blur(1.25rem);
+}
+
+.logo-162__numbers,
+.logo-162__zero {
+  position: relative;
+  display: block;
+  padding-bottom: 0.035em;
+  background: linear-gradient(150deg, #fff 7%, #e8eaed 53%, #cfd3d8 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px rgb(255 255 255 / 12%);
+}
+
+.logo-162__numbers::after,
+.logo-162__zero::after {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(108deg, transparent 0 4px, rgb(2 5 9 / 9%) 4px 5px),
+    radial-gradient(circle at 30% 35%, transparent 0 1px, rgb(0 0 0 / 9%) 1.2px, transparent 1.8px) 0 0 / 13px 15px;
+  background-clip: text;
+  color: transparent;
+  content: attr(data-text);
+  opacity: 0.48;
+  pointer-events: none;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0;
+}
+
+.logo-162__zero {
+  background: linear-gradient(150deg, #f63d48 8%, #db242f 55%, #a91420 100%);
+  background-clip: text;
+  filter: drop-shadow(0 0 0.12em rgb(218 36 47 / 18%));
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: rgb(255 79 89 / 20%);
+}
+
+.logo-162__dash {
+  width: clamp(1.8rem, 8vw, 3.6rem);
+  height: clamp(0.3rem, 1.25vw, 0.58rem);
+  flex: 0 0 auto;
+  background: linear-gradient(180deg, #db3540, #a91924);
+  box-shadow: 0 0 1.2rem rgb(220 38 49 / 16%);
+}
+
+@media (min-width: 700px) {
+  .logo-162 { gap: clamp(1.75rem, 3vw, 2.6rem); }
+}
