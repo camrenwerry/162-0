@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { useDialogFocusTrap } from './useDialogFocusTrap'
 import './GameMenu.css'
 
 export interface GameMenuProps {
@@ -13,6 +14,9 @@ type Confirmation = 'home' | 'restart' | null
 export default function GameMenu({ onHome, onRestart, confirmHome = true, className }: GameMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [confirmation, setConfirmation] = useState<Confirmation>(null)
+  const confirmationRef = useRef<HTMLElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+  useDialogFocusTrap(confirmation !== null, confirmationRef, triggerRef)
 
   useEffect(() => {
     if (!isOpen && !confirmation) return
@@ -47,6 +51,7 @@ export default function GameMenu({ onHome, onRestart, confirmHome = true, classN
     <div className={`game-menu${className ? ` ${className}` : ''}`}>
       <button
         className="game-menu__trigger"
+        ref={triggerRef}
         type="button"
         aria-label="Game menu"
         aria-expanded={isOpen}
@@ -76,7 +81,7 @@ export default function GameMenu({ onHome, onRestart, confirmHome = true, classN
         <div className="game-confirmation" role="presentation" onMouseDown={(event) => {
           if (event.target === event.currentTarget) setConfirmation(null)
         }}>
-          <section role="alertdialog" aria-modal="true" aria-labelledby="game-confirmation-title" aria-describedby="game-confirmation-message">
+          <section ref={confirmationRef} role="alertdialog" aria-modal="true" aria-labelledby="game-confirmation-title" aria-describedby="game-confirmation-message">
             <span>{confirmation === 'home' ? 'Exit draft' : 'New draft'}</span>
             <h2 id="game-confirmation-title">{confirmation === 'home' ? 'Leave this game?' : 'Restart this game?'}</h2>
             <p id="game-confirmation-message">

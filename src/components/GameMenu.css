@@ -1,12 +1,12 @@
 .game-menu { position: relative; z-index: 70; }
-.game-menu__trigger { position: relative; z-index: 3; display: grid; width: 2.55rem; height: 2.55rem; padding: 0; place-content: center; gap: 0.2rem; border: 1px solid #6d5a31; border-radius: 50%; background: rgb(11 17 24 / 88%); box-shadow: 0 0.55rem 1.4rem rgb(0 0 0 / 22%); cursor: pointer; transition: border-color 150ms ease, background 150ms ease, transform 150ms ease; }
+.game-menu__trigger { position: relative; z-index: 3; display: grid; width: 2.75rem; height: 2.75rem; padding: 0; place-content: center; gap: 0.2rem; border: 1px solid #6d5a31; border-radius: 50%; background: rgb(11 17 24 / 88%); box-shadow: 0 0.55rem 1.4rem rgb(0 0 0 / 22%); cursor: pointer; transition: border-color 150ms ease, background 150ms ease, transform 150ms ease; }
 .game-menu__trigger span { width: 0.95rem; height: 1px; background: #aab4c1; transition: background 150ms ease; }
 .game-menu__trigger:hover { border-color: #f5c542; background: #171811; transform: translateY(-1px); }
 .game-menu__trigger:hover span { background: #fff; }
 .game-menu__trigger:active { transform: scale(0.94); }
 .game-menu__dismiss { position: fixed; z-index: 1; inset: 0; border: 0; background: transparent; cursor: default; }
 .game-menu__popover { position: absolute; z-index: 2; top: calc(100% + 0.55rem); right: 0; width: 11.5rem; padding: 0.45rem; border: 1px solid #364250; border-radius: 0.75rem; background: rgb(13 20 29 / 98%); box-shadow: 0 1.2rem 3.5rem rgb(0 0 0 / 55%); backdrop-filter: blur(16px); animation: game-menu-in 150ms ease-out; }
-.game-menu__popover > span { display: block; padding: 0.45rem 0.55rem 0.5rem; color: #626f80; font-family: var(--font-display); font-size: 0.52rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+.game-menu__popover > span { display: block; padding: 0.45rem 0.55rem 0.5rem; color: #7c8999; font-family: var(--font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
 .game-menu__popover button { display: flex; width: 100%; min-height: 2.75rem; padding: 0 0.65rem; align-items: center; gap: 0.65rem; border: 0; border-radius: 0.5rem; background: transparent; color: #c5ccd5; cursor: pointer; font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-align: left; text-transform: uppercase; transition: color 140ms ease, background 140ms ease, transform 140ms ease; }
 .game-menu__popover button:hover { background: rgb(219 51 64 / 10%); color: #fff; }
 .game-menu__popover button:active { transform: scale(0.97); }
@@ -15,9 +15,9 @@
 .game-menu__popover button:last-of-type svg { stroke: #e63946; }
 .game-menu__popover button:first-of-type svg { fill: none; }
 
-.game-confirmation { position: fixed; z-index: 100; display: flex; inset: 0; padding: 1rem; align-items: center; justify-content: center; background: rgb(0 0 0 / 76%); backdrop-filter: blur(7px); animation: game-menu-fade 160ms ease-out; }
-.game-confirmation > section { width: min(100%, 25rem); padding: 1.3rem; border: 1px solid #3a4655; border-radius: 1rem; background: linear-gradient(145deg, #151f2a, #0a1017); box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 62%); text-align: left; animation: game-dialog-in 190ms cubic-bezier(0.16, 1, 0.3, 1); }
-.game-confirmation section > span { color: #dd414c; font-family: var(--font-display); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.game-confirmation { position: fixed; z-index: 100; display: flex; inset: 0; padding: calc(1rem + env(safe-area-inset-top)) calc(1rem + env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-left)); align-items: center; justify-content: center; background: rgb(0 0 0 / 76%); backdrop-filter: blur(7px); animation: game-menu-fade 160ms ease-out; }
+.game-confirmation > section { width: min(100%, 25rem); max-height: 100%; padding: 1.3rem; overflow-y: auto; overscroll-behavior: contain; border: 1px solid #3a4655; border-radius: 1rem; background: linear-gradient(145deg, #151f2a, #0a1017); box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 62%); text-align: left; animation: game-dialog-in 190ms cubic-bezier(0.16, 1, 0.3, 1); }
+.game-confirmation section > span { color: #e65a64; font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
 .game-confirmation h2 { margin-top: 0.4rem; font-family: var(--font-display); font-size: 1.65rem; font-style: italic; text-transform: uppercase; }
 .game-confirmation p { margin-top: 0.55rem; color: #8793a2; font-size: 0.76rem; line-height: 1.55; }
 .game-confirmation section > div { display: grid; grid-template-columns: 1fr 1.25fr; gap: 0.55rem; margin-top: 1.25rem; }
@@ -30,6 +30,11 @@
 @keyframes game-menu-in { from { opacity: 0; transform: translateY(-0.25rem) scale(0.98); } }
 @keyframes game-menu-fade { from { opacity: 0; } }
 @keyframes game-dialog-in { from { opacity: 0; transform: translateY(0.6rem) scale(0.98); } }
+
+@media (max-width: 480px) {
+  .game-menu__popover { width: min(11.5rem, calc(100vw - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right))); backdrop-filter: blur(8px); }
+  .game-confirmation { backdrop-filter: blur(4px); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .game-menu__popover, .game-confirmation, .game-confirmation > section { animation: none; }

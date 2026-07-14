@@ -60,7 +60,7 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
           <div className="results-roster__list">
             {ROSTER_SLOTS.map((slot) => (
               <div key={slot.id}>
-                <strong>{slot.label}</strong>
+                <strong>{slot.id}</strong>
                 <span>{roster[slot.id]?.name ?? '—'}</span>
                 <small>{roster[slot.id]?.team} {roster[slot.id]?.decade}</small>
               </div>

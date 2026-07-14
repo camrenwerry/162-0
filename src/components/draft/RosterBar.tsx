@@ -20,12 +20,12 @@ export default function RosterBar({ roster, recentlyFilledPosition }: RosterBarP
         <span>Your Roster</span>
         <strong>{filled}<i>/</i>{ROSTER_SLOTS.length}</strong>
       </div>
-      <div className="roster-bar__slots">
+      <div className="roster-bar__slots" role="list" aria-label="Roster positions">
         {ROSTER_SLOTS.map((slot) => {
           const player = roster[slot.id]
           return (
-            <div className={`${player ? 'is-filled' : ''}${recentlyFilledPosition === slot.id ? ' is-new' : ''}`} key={slot.id}>
-              <strong>{slot.label}</strong>
+            <div className={`${player ? 'is-filled' : ''}${recentlyFilledPosition === slot.id ? ' is-new' : ''}`} key={slot.id} role="listitem" aria-label={`${slot.id}, ${player ? player.name : 'open'}`}>
+              <strong>{slot.id}</strong>
               {player && <span>{surname(player.name)}</span>}
               {player && <small>{player.team} · {player.decade}</small>}
               {recentlyFilledPosition === slot.id && <i aria-hidden="true">✓</i>}

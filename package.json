@@ -16,6 +16,7 @@
     "test:engine": "vite build --ssr scripts/engine-smoke.ts --outDir /tmp/diamond-draft-engine-smoke --emptyOutDir && node /tmp/diamond-draft-engine-smoke/engine-smoke.js",
     "test:game": "node scripts/smoke-game.mjs",
     "test:scoring": "vite build --ssr scripts/scoring.test.ts --outDir /tmp/diamond-draft-scoring-tests --emptyOutDir && node /tmp/diamond-draft-scoring-tests/scoring.test.js",
+    "test:responsive": "node scripts/responsive-contract.test.mjs",
     "validate:data": "npm run data:validate && npm run data:audit"
   },
   "dependencies": {

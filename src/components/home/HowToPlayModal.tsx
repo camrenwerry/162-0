@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+import { useDialogFocusTrap } from '../useDialogFocusTrap'
 
 interface HowToPlayModalProps {
   onClose: () => void
@@ -8,11 +9,13 @@ const STEPS = [
   'Receive a random team and decade.',
   'Select one eligible player.',
   'Assign them to an open position.',
-  'Build an 11-player roster.',
+  'Build a 14-player roster.',
   'Complete the draft and receive a projected result.',
 ]
 
 export default function HowToPlayModal({ onClose }: HowToPlayModalProps) {
+  const dialogRef = useRef<HTMLElement>(null)
+  useDialogFocusTrap(true, dialogRef)
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onClose()
@@ -25,7 +28,7 @@ export default function HowToPlayModal({ onClose }: HowToPlayModalProps) {
     <div className="how-to-backdrop" role="presentation" onMouseDown={(event) => {
       if (event.target === event.currentTarget) onClose()
     }}>
-      <section className="how-to-modal" role="dialog" aria-modal="true" aria-labelledby="how-to-title">
+      <section className="how-to-modal" ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="how-to-title">
         <button type="button" aria-label="Close how to play" onClick={onClose}>×</button>
         <span>Classic Mode</span>
         <h2 id="how-to-title">How to Play</h2>

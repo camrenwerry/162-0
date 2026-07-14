@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { useDialogFocusTrap } from '../useDialogFocusTrap'
 import type { Player, Position } from '../../types/draft'
 
 interface PositionPickerProps {
@@ -10,6 +11,8 @@ interface PositionPickerProps {
 
 export default function PositionPicker({ player, availablePositions, onCancel, onConfirm }: PositionPickerProps) {
   const [position, setPosition] = useState<Position | null>(null)
+  const dialogRef = useRef<HTMLElement>(null)
+  useDialogFocusTrap(true, dialogRef)
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
@@ -23,7 +26,7 @@ export default function PositionPicker({ player, availablePositions, onCancel, o
     <div className="picker-backdrop" role="presentation" onMouseDown={(event) => {
       if (event.target === event.currentTarget) onCancel()
     }}>
-      <section className="position-picker" role="dialog" aria-modal="true" aria-labelledby="position-picker-title">
+      <section className="position-picker" ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="position-picker-title">
         <div className="position-picker__handle" aria-hidden="true" />
         <button className="position-picker__close" type="button" aria-label="Close position picker" onClick={onCancel}>×</button>
         <div className="position-picker__heading">

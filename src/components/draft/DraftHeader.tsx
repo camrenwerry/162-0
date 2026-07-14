@@ -33,10 +33,10 @@ export default function DraftHeader({
         <span>of {totalRounds}</span>
       </div>
       <div className="dd-draft-header__rerolls" aria-label="Game rerolls">
-        <button className="team-reroll" type="button" disabled={interactionsDisabled || !teamRerollAvailable} onClick={onTeamReroll}>
+        <button className="team-reroll" type="button" aria-label={`Team reroll, ${teamRerollAvailable ? 'available' : 'used'}`} disabled={interactionsDisabled || !teamRerollAvailable} onClick={onTeamReroll}>
           <RollIcon /><span>Team <small>{teamRerollAvailable ? 'Available' : 'Used'}</small></span>
         </button>
-        <button className="era-reroll" type="button" disabled={interactionsDisabled || !eraRerollAvailable} onClick={onEraReroll}>
+        <button className="era-reroll" type="button" aria-label={`Era reroll, ${eraRerollAvailable ? 'available' : 'used'}`} disabled={interactionsDisabled || !eraRerollAvailable} onClick={onEraReroll}>
           <RollIcon /><span>Era <small>{eraRerollAvailable ? 'Available' : 'Used'}</small></span>
         </button>
       </div>
