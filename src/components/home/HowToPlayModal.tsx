@@ -3,17 +3,18 @@ import { useDialogFocusTrap } from '../useDialogFocusTrap'
 
 interface HowToPlayModalProps {
   onClose: () => void
+  onReplayTutorial: () => void
 }
 
 const STEPS = [
-  'Receive a random team and decade.',
-  'Select one eligible player.',
-  'Assign them to an open position.',
-  'Build a 14-player roster.',
-  'Complete the draft and receive a projected result.',
+  ['The draw', 'Each round gives you a random franchise and decade. Every card uses that player’s best eligible season for that franchise in that decade.'],
+  ['Make a pick', 'Choose one player and assign them to a valid open position. Grey cards cannot fit your remaining roster.'],
+  ['Build 14', 'Fill C, the infield, three outfield spots, DH, three SP slots, and two RP slots.'],
+  ['Use rerolls wisely', 'You receive one Team reroll and one Era reroll for the entire game—not once per round.'],
+  ['Project the season', 'After pick 14, Diamond Draft grades your roster and projects a 162-game record.'],
 ]
 
-export default function HowToPlayModal({ onClose }: HowToPlayModalProps) {
+export default function HowToPlayModal({ onClose, onReplayTutorial }: HowToPlayModalProps) {
   const dialogRef = useRef<HTMLElement>(null)
   useDialogFocusTrap(true, dialogRef)
   useEffect(() => {
@@ -33,9 +34,12 @@ export default function HowToPlayModal({ onClose }: HowToPlayModalProps) {
         <span>Classic Mode</span>
         <h2 id="how-to-title">How to Play</h2>
         <ol>
-          {STEPS.map((step, index) => <li key={step}><strong>{index + 1}</strong><span>{step}</span></li>)}
+          {STEPS.map(([title, description], index) => <li key={title}><strong>{index + 1}</strong><span><b>{title}</b>{description}</span></li>)}
         </ol>
-        <button className="how-to-modal__done" type="button" onClick={onClose}>Got It</button>
+        <div className="how-to-modal__actions">
+          <button className="how-to-modal__replay" type="button" onClick={onReplayTutorial}>Replay first-game tips</button>
+          <button className="how-to-modal__done" type="button" onClick={onClose}>Got It</button>
+        </div>
       </section>
     </div>
   )

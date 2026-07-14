@@ -2,7 +2,34 @@
 
 Diamond Draft is a mobile-first historical baseball roster-building game. Classic Mode presents one franchise/decade pool in each of 14 rounds. A complete roster contains C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP, and two RP slots, followed by a deterministic 162-game projection.
 
-Version 0.10.0 is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API, or database server.
+Version 0.11.0 is a public beta of the static React + TypeScript + Vite application. It has no accounts, gameplay API, or database server. Local storage is used only to remember whether first-game tips were dismissed.
+
+## Public beta configuration
+
+Copy `.env.example` to `.env.local` to configure optional beta feedback:
+
+```bash
+VITE_FEEDBACK_URL=https://example.com/diamond-draft-feedback
+```
+
+When configured, feedback links appear in the gameplay menu and Results screen. Diamond Draft appends safe context parameters (`appVersion`, `currentScreen`, and, when available, `round`, `team`, `decade`, and `projectedRecord`). This works with a Google Form or any external form that accepts query parameters. When the variable is absent or invalid, the links are hidden.
+
+First-game tips are dismissible and can be re-enabled from **How to Play** on the Home screen. Home, Restart, Play Again, and a new game from Home all construct a fresh draft engine, clearing the roster, used combinations, and reroll usage.
+
+Results can be shared with the device’s native share sheet. Browsers without Web Share copy a text summary and the public URL to the clipboard instead; no result image or personal data is created.
+
+### Beta testing
+
+The most useful feedback covers incorrect players or featured seasons, incorrect positions, missing statistics, scoring balance, mobile layout issues, confusing instructions, and bugs or crashes. Include the round and displayed franchise/decade when reporting a draft issue.
+
+### Cloudflare Pages deployment
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Environment variable: optional `VITE_FEEDBACK_URL`
+- SPA routing: `public/_redirects` sends direct `/draft` requests to `index.html`
+
+Preview the exact production output locally with `npm run build && npm run preview`. Raw Lahman CSV files remain outside `src` and are not emitted to `dist`.
 
 ## Draft completion experience
 
@@ -59,6 +86,7 @@ src/data/generated/
   pools/<franchise>-<decade>.json
   runtime-pools/<franchise>-<decade>.json compact UI payloads without audit-only metadata
   data-report.json              full build/coverage/exclusion audit
+  readiness.json                compact browser startup-validation manifest
   index.ts                      TeamPool-facing registry
 ```
 
@@ -116,6 +144,7 @@ npm run test:engine
 npm run test:scoring
 npm run test:responsive
 npm run test:presentation
+npm run test:beta
 npm run lint
 npm run build
 ```

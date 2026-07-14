@@ -13,6 +13,8 @@
 .dd-home__field::after { right: 12%; }
 .dd-home__plate { position: absolute; bottom: 3.5%; left: 50%; width: 3.5rem; height: 3rem; background: rgb(238 235 220 / 18%); clip-path: polygon(12% 0, 88% 0, 100% 55%, 50% 100%, 0 55%); transform: translateX(-50%) perspective(8rem) rotateX(52deg); }
 .dd-home__content { position: relative; z-index: 2; display: flex; width: min(calc(100% - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right)), 28rem); min-height: 100svh; margin-inline: auto; padding-block: calc(max(4.5rem, 10vh) + env(safe-area-inset-top)) calc(max(4rem, 8vh) + env(safe-area-inset-bottom)); align-items: center; justify-content: center; flex-direction: column; text-align: center; }
+.dd-home__brand { position: relative; }
+.dd-home__brand > span { position: absolute; right: .15rem; bottom: -.8rem; color: #d9af48; font-family: var(--font-display); font-size: .55rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .dd-home__content > p { margin-top: 1.9rem; color: #c1c7ce; font-family: 'Bebas Neue', var(--font-display); font-size: clamp(0.82rem, 3.5vw, 1rem); letter-spacing: 0.16em; line-height: 1.55; text-transform: uppercase; text-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 70%); }
 .dd-home__actions { width: 100%; margin-top: clamp(2.8rem, 7vh, 4rem); }
 .dd-home__actions button { width: 100%; cursor: pointer; font-family: 'Bebas Neue', var(--font-display); font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: filter 160ms ease, transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
@@ -27,9 +29,13 @@
 .how-to-modal > span { color: #f5c542; font-family: var(--font-display); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
 .how-to-modal h2 { margin-top: 0.35rem; font-family: 'Bebas Neue', var(--font-display); font-size: 2rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .how-to-modal ol { display: grid; margin: 1.25rem 0 0; padding: 0; gap: 0.65rem; list-style: none; }
-.how-to-modal li { display: grid; grid-template-columns: 1.8rem 1fr; align-items: center; gap: 0.65rem; color: #b4bdc8; font-size: 0.72rem; line-height: 1.4; }
+.how-to-modal li { display: grid; grid-template-columns: 1.8rem 1fr; align-items: start; gap: 0.65rem; color: #aab4bf; font-size: 0.7rem; line-height: 1.5; }
 .how-to-modal li strong { display: grid; width: 1.75rem; height: 1.75rem; place-items: center; border: 1px solid #8b6a27; border-radius: 50%; color: #f5c542; font-family: var(--font-display); }
-.how-to-modal__done { width: 100%; min-height: 3.4rem; margin-top: 1.25rem; border: 1px solid #f6d25f; border-radius: 0.5rem; background: linear-gradient(#efc858, #b77a19); color: #111; cursor: pointer; font-family: var(--font-display); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.how-to-modal li span b { display: block; margin-bottom: .1rem; color: #e7ebef; font-family: var(--font-display); font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; }
+.how-to-modal__actions { display: grid; margin-top: 1.25rem; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.how-to-modal__actions button { min-height: 3.4rem; border-radius: 0.5rem; cursor: pointer; font-family: var(--font-display); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+.how-to-modal__replay { border: 1px solid #465565; background: #0c151e; color: #c3cbd4; }
+.how-to-modal__done { border: 1px solid #f6d25f; background: linear-gradient(#efc858, #b77a19); color: #111; }
 @keyframes dd-fade { from { opacity: 0; } }
 @keyframes dd-modal { from { opacity: 0; transform: translateY(0.6rem) scale(0.98); } }
 @media (min-width: 720px) { .dd-home__content { padding-block: calc(5rem + env(safe-area-inset-top)) calc(5rem + env(safe-area-inset-bottom)); } }

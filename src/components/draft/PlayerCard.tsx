@@ -28,7 +28,9 @@ function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDra
           <strong>{player.name}</strong>
           <span>{player.eligiblePositions.join(' · ')}</span>
           <small>{player.team} · {player.decade}</small>
-          <small>Featured season: {player.featuredSeason}</small>
+          <small className="player-card__season" title="This is the player’s best season with this franchise during the selected decade." aria-label={`Featured season ${player.featuredSeason}. This is the player’s best season with this franchise during the selected decade.`}>
+            Featured season: {player.featuredSeason} <span aria-hidden="true">ⓘ</span>
+          </small>
         </span>
         {!isAvailable
           ? <span className="player-card__unavailable">No open position</span>

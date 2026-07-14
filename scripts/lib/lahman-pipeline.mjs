@@ -529,7 +529,15 @@ export function validateGeneratedData(root = process.cwd()) {
   }
   for (const id of indexedIds) if (!poolFiles.includes(`${id}.json`)) errors.push(`${id}: indexed pool file is missing`)
   for (const file of runtimeFiles) if (!indexedIds.has(file.slice(0, -5))) errors.push(`${file.slice(0, -5)}: runtime pool is not indexed`)
-  return { errors, combinations: combinations.length, cards: pools.reduce((total, pool) => total + pool.cards, 0), pools }
+  const cards = pools.reduce((total, pool) => total + pool.cards, 0)
+  const readinessPath = path.join(generated, 'readiness.json')
+  if (!fs.existsSync(readinessPath)) errors.push('runtime readiness manifest is missing')
+  else {
+    const readiness = readJson(readinessPath)
+    if (readiness.blockingErrors !== 0) errors.push('runtime readiness manifest contains blocking errors')
+    if (readiness.combinations !== combinations.length || readiness.pools !== pools.length || readiness.cards !== cards) errors.push('runtime readiness manifest does not match generated data')
+  }
+  return { errors, combinations: combinations.length, cards, pools }
 }
 
 export function writeGeneratedData(root, built) {
@@ -544,6 +552,13 @@ export function writeGeneratedData(root, built) {
   fs.writeFileSync(path.join(directory, 'combinations.json'), json(built.combinations))
   fs.writeFileSync(path.join(directory, 'franchises.json'), json(built.report.franchises))
   fs.writeFileSync(path.join(directory, 'data-report.json'), json(built.report))
+  fs.writeFileSync(path.join(directory, 'readiness.json'), json({
+    schemaVersion: 1,
+    combinations: built.combinations.length,
+    pools: Object.keys(built.pools).length,
+    cards: Object.values(built.pools).reduce((total, cards) => total + cards.length, 0),
+    blockingErrors: 0,
+  }))
   const auditOnlyFields = new Set(['sourceMetadata', 'sourceNotes', 'notes', 'manualPositionOverride', 'selectionMetadata', 'stats'])
   for (const [id, cards] of Object.entries(built.pools)) {
     fs.writeFileSync(path.join(poolsDirectory, `${id}.json`), json(cards))
@@ -554,6 +569,6 @@ export function writeGeneratedData(root, built) {
   for (const name of fs.readdirSync(poolsDirectory)) if (name.endsWith('.json') && !expectedPoolFiles.has(name)) fs.unlinkSync(path.join(poolsDirectory, name))
   const imports = built.combinations.map(({ id }, index) => `import pool${index} from './runtime-pools/${id}.json'`).join('\n')
   const entries = built.combinations.map(({ id }, index) => `  '${id}': pool${index} as unknown as PlayerCard[],`).join('\n')
-  const registry = `${imports}\nimport combinations from './combinations.json'\nimport type { PlayerCard, TeamDecade } from '../../types/draft'\n\nexport const PLAYER_POOLS: Readonly<Record<string, readonly PlayerCard[]>> = {\n${entries}\n}\n\nexport const TEAM_DECADES = combinations as TeamDecade[]\nexport const PLAYER_CARDS = Object.values(PLAYER_POOLS).flat()\n`
+  const registry = `${imports}\nimport combinations from './combinations.json'\nimport readiness from './readiness.json'\nimport type { PlayerCard, TeamDecade } from '../../types/draft'\n\nexport const PLAYER_POOLS: Readonly<Record<string, readonly PlayerCard[]>> = {\n${entries}\n}\n\nexport const TEAM_DECADES = combinations as TeamDecade[]\nexport const PLAYER_CARDS = Object.values(PLAYER_POOLS).flat()\nexport const DATA_READINESS = readiness\n`
   fs.writeFileSync(path.join(directory, 'index.ts'), registry)
 }

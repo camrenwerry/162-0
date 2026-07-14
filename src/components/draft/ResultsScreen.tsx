@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import DiamondDraftLogo from '../DiamondDraftLogo'
 import GameMenu from '../GameMenu'
 import { ROSTER_SLOTS, type DraftResult, type Roster, type ScoringCategoryKey } from '../../types/draft'
+import { getFeedbackUrl, shareResult } from '../../utils/betaActions'
 
 interface ResultsScreenProps {
   roster: Roster
@@ -10,6 +12,18 @@ interface ResultsScreenProps {
 }
 
 export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: ResultsScreenProps) {
+  const [shareStatus, setShareStatus] = useState<string | null>(null)
+  const feedbackContext = { screen: 'results', projectedRecord: `${result.wins}-${result.losses}` }
+  const feedbackUrl = getFeedbackUrl(feedbackContext)
+  const handleShare = async () => {
+    try {
+      const outcome = await shareResult(result)
+      setShareStatus(outcome === 'copied' ? 'Result copied' : 'Result shared')
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return
+      setShareStatus('Sharing unavailable')
+    }
+  }
   const categoryLabel: Record<ScoringCategoryKey, string> = {
     offense: 'Offense', power: 'Power', contact: 'Contact & OBP', speed: 'Speed', defense: 'Defense',
     startingPitching: 'Starting Pitching', reliefPitching: 'Relief Pitching', rosterBalance: 'Roster Balance', overall: 'Overall',
@@ -28,7 +42,7 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
       <div className="results-screen__glow" aria-hidden="true" />
       <div className="results-particles" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
       <div className="results-shell">
-        <GameMenu className="results-game-menu" confirmHome={false} onHome={onHome} onRestart={onPlayAgain} />
+        <GameMenu className="results-game-menu" confirmHome={false} onHome={onHome} onRestart={onPlayAgain} feedbackContext={feedbackContext} />
         <button className="results-home" type="button" onClick={onHome}>Home</button>
         <DiamondDraftLogo className="results-logo" compact />
         <span className="results-kicker">Season Complete</span>
@@ -67,7 +81,13 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
             ))}
           </div>
         </section>
-        <button className="results-play-again" type="button" onClick={onPlayAgain}>New Game</button>
+        <div className="results-actions">
+          <button className="results-play-again" type="button" onClick={onPlayAgain}>Play Again</button>
+          <button type="button" onClick={handleShare}>Share Result</button>
+          <button type="button" onClick={onHome}>Home</button>
+          {feedbackUrl && <a href={feedbackUrl} target="_blank" rel="noreferrer">Send Feedback</a>}
+        </div>
+        <p className="results-share-status" role="status" aria-live="polite">{shareStatus}</p>
       </div>
     </main>
   )

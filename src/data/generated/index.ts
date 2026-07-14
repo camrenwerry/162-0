@@ -260,6 +260,7 @@ import pool258 from './runtime-pools/wsn-2000s.json'
 import pool259 from './runtime-pools/wsn-2010s.json'
 import pool260 from './runtime-pools/wsn-2020s.json'
 import combinations from './combinations.json'
+import readiness from './readiness.json'
 import type { PlayerCard, TeamDecade } from '../../types/draft'
 
 export const PLAYER_POOLS: Readonly<Record<string, readonly PlayerCard[]>> = {
@@ -528,3 +529,4 @@ export const PLAYER_POOLS: Readonly<Record<string, readonly PlayerCard[]>> = {
 
 export const TEAM_DECADES = combinations as TeamDecade[]
 export const PLAYER_CARDS = Object.values(PLAYER_POOLS).flat()
+export const DATA_READINESS = readiness

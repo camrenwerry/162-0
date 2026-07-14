@@ -1,21 +1,25 @@
 import { useEffect, useRef, useState } from 'react'
 import { useDialogFocusTrap } from './useDialogFocusTrap'
 import './GameMenu.css'
+import { BETA_LABEL } from '../config/beta'
+import { getFeedbackUrl, type FeedbackContext } from '../utils/betaActions'
 
 export interface GameMenuProps {
   onHome: () => void
   onRestart: () => void
   confirmHome?: boolean
   className?: string
+  feedbackContext?: FeedbackContext
 }
 
 type Confirmation = 'home' | 'restart' | null
 
-export default function GameMenu({ onHome, onRestart, confirmHome = true, className }: GameMenuProps) {
+export default function GameMenu({ onHome, onRestart, confirmHome = true, className, feedbackContext }: GameMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [confirmation, setConfirmation] = useState<Confirmation>(null)
   const confirmationRef = useRef<HTMLElement>(null)
   const triggerRef = useRef<HTMLButtonElement>(null)
+  const feedbackUrl = feedbackContext ? getFeedbackUrl(feedbackContext) : null
   useDialogFocusTrap(confirmation !== null, confirmationRef, triggerRef)
 
   useEffect(() => {
@@ -64,15 +68,19 @@ export default function GameMenu({ onHome, onRestart, confirmHome = true, classN
         <>
           <button className="game-menu__dismiss" type="button" aria-label="Close game menu" onClick={() => setIsOpen(false)} />
           <div className="game-menu__popover">
-            <span>Game menu</span>
-            <button type="button" onClick={chooseHome}>
+            <span>Game menu <b>{BETA_LABEL}</b></span>
+            <button className="game-menu__home" type="button" onClick={chooseHome}>
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m3 9 7-6 7 6v8h-5v-5H8v5H3Z" /></svg>
               Home
             </button>
-            <button type="button" onClick={chooseRestart}>
+            <button className="game-menu__restart" type="button" onClick={chooseRestart}>
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.7 7.2A6.2 6.2 0 1 0 16 12M15.7 3.8v3.7h-3.8" /></svg>
               Restart Game
             </button>
+            {feedbackUrl && <a className="game-menu__feedback" href={feedbackUrl} target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4h12v9H9l-4 3v-3H4Z" /></svg>
+              Send Feedback
+            </a>}
           </div>
         </>
       )}

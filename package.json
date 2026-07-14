@@ -1,7 +1,7 @@
 {
   "name": "diamond-draft",
   "private": true,
-  "version": "0.10.0",
+  "version": "0.11.0",
   "type": "module",
   "scripts": {
     "data:build": "node scripts/build-player-pools.mjs",
@@ -23,6 +23,7 @@
     "test:scoring": "vite build --ssr scripts/scoring.test.ts --outDir /tmp/diamond-draft-scoring-tests --emptyOutDir && node /tmp/diamond-draft-scoring-tests/scoring.test.js",
     "test:responsive": "node scripts/responsive-contract.test.mjs",
     "test:presentation": "node scripts/v010-presentation.test.mjs",
+    "test:beta": "vite build --ssr scripts/beta-readiness.test.ts --outDir /tmp/diamond-draft-beta-tests --emptyOutDir && node /tmp/diamond-draft-beta-tests/beta-readiness.test.js",
     "validate:data": "npm run data:lahman:validate"
   },
   "dependencies": {

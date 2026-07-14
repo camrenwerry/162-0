@@ -11,6 +11,9 @@ import ResultsScreen from './ResultsScreen'
 import RosterBar from './RosterBar'
 import TeamDecadeReveal from './TeamDecadeReveal'
 import SeasonSimulation from '../results/SeasonSimulation'
+import FirstGameHints from './FirstGameHints'
+import { checkProductionData } from '../../game/DataReadiness'
+import { BetaErrorBoundary, BetaRecovery } from '../BetaRecovery'
 import './ClassicMode.css'
 
 const FILTERS: PositionFilter[] = ['ALL', 'C', '1B', '2B', '3B', 'SS', 'OF', 'DH', 'SP', 'RP']
@@ -20,6 +23,15 @@ interface ClassicModeProps {
 }
 
 export default function ClassicMode({ onHome }: ClassicModeProps) {
+  const [readiness] = useState(() => checkProductionData())
+  if (!readiness.ready) {
+    if (import.meta.env.DEV) console.error('Diamond Draft data readiness failed:', readiness.issues)
+    return <BetaRecovery title="Player data unavailable" message="Diamond Draft could not verify its historical player pools. Reload the game, or return home and try again shortly." onHome={onHome} />
+  }
+  return <BetaErrorBoundary onHome={onHome}><ClassicDraft onHome={onHome} /></BetaErrorBoundary>
+}
+
+function ClassicDraft({ onHome }: ClassicModeProps) {
   const [engine] = useState(() => new DraftEngine())
   const [showResults, setShowResults] = useState(false)
   const draft = useDraftEngine(engine)
@@ -40,6 +52,10 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
       : <SeasonSimulation result={draft.result} onContinue={() => setShowResults(true)} onRestart={restartGame} onHome={leaveGame} />
   }
 
+  if (draft.complete) {
+    return <BetaRecovery title="Result unavailable" message="Your roster was completed, but the projected result could not be created. Start a new draft or return home." onHome={onHome} onRetry={restartGame} />
+  }
+
   return (
     <main className={`classic-page${draft.isRolling ? ' is-rolling' : ''}${draft.isFinishing ? ' is-finishing' : ''}`}>
       <div className="classic-page__atmosphere" aria-hidden="true" />
@@ -52,7 +68,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
           interactionsDisabled={draft.interactionsDisabled}
           onTeamReroll={() => engine.rerollTeam()}
           onEraReroll={() => engine.rerollEra()}
-          menu={<GameMenu onHome={leaveGame} onRestart={() => engine.restart()} />}
+          menu={<GameMenu onHome={leaveGame} onRestart={() => engine.restart()} feedbackContext={{ screen: 'draft', round: draft.round, team: draft.combination.team, decade: draft.combination.decade }} />}
         />
         <div className="draft-workspace">
           <div className="draft-primary">
@@ -63,6 +79,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
               rollingMode={draft.rollingMode}
             />
             <FranchiseProfile />
+            <FirstGameHints />
             <section className="draft-board" aria-labelledby="draft-board-title" aria-busy={draft.isRolling}>
               <div className="draft-board__heading">
                 <div>
@@ -115,6 +132,10 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
                 interactionsDisabled={draft.interactionsDisabled}
                 committingPlayerId={draft.committingPlayerId}
                 sort={draft.sort}
+                search={draft.search}
+                filter={draft.filter}
+                onClearSearch={() => engine.setSearch('')}
+                onResetFilter={() => engine.setFilter('ALL')}
                 onSelect={(playerId) => engine.selectPlayer(playerId)}
               />
             </section>
