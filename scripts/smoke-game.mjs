@@ -75,7 +75,9 @@ for (let game = 0; game < 100; game += 1) {
   ))
   let current = rerollable[Math.floor(Math.random() * rerollable.length)]
   used.add(current.id)
-  const teamOptions = combinations.filter((candidate) => candidate.decade === current.decade && !used.has(candidate.id))
+  const teamOptions = combinations.filter((candidate) => candidate.decade === current.decade
+    && !used.has(candidate.id)
+    && combinations.some((eraOption) => eraOption.franchiseId === candidate.franchiseId && eraOption.id !== candidate.id && !used.has(eraOption.id)))
   const heldDecade = current.decade
   current = teamOptions[Math.floor(Math.random() * teamOptions.length)]
   assert.equal(current.decade, heldDecade)

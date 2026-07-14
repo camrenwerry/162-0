@@ -16,7 +16,20 @@ When configured, feedback links appear in the gameplay menu and Results screen. 
 
 First-game tips are dismissible and can be re-enabled from **How to Play** on the Home screen. Home, Restart, Play Again, and a new game from Home all construct a fresh draft engine, clearing the roster, used combinations, and reroll usage.
 
-Results can be shared with the device’s native share sheet. Browsers without Web Share copy a text summary and the public URL to the clipboard instead; no result image or personal data is created.
+Results can be shared with the device’s native share sheet. The summary includes the projected record, overall grade, tier, strongest category, and `window.location.origin`. Browsers without Web Share copy the complete summary to the clipboard. If clipboard permission is blocked, a selectable fallback dialog keeps the result available for manual copying. No result image or personal data is created.
+
+## Installable PWA
+
+Diamond Draft is installable from supporting desktop and mobile browsers. It launches at the Home screen in portrait-oriented standalone mode and uses an auto-updating Workbox service worker. The lightweight Home application shell is available during a temporary network outage. The large historical draft-data chunk is intentionally excluded from precaching, and drafts and game history are not persisted offline.
+
+On iOS, open the deployed site in Safari and choose **Share → Add to Home Screen**. On supported Chromium browsers, use the browser’s install action. Safe-area metadata and the dark `#0D1117` theme are shared by the browser and standalone experience.
+
+The icon source is [`public/app-icon.svg`](public/app-icon.svg), a square recomposition of the existing Diamond Draft crest. Generated assets include 192×192 and 512×512 standard icons, a padded dark-background 512×512 maskable icon, a 180×180 Apple touch icon, and a browser favicon. To revise them:
+
+1. Edit `public/app-icon.svg`, keeping the core mark in the central safe area.
+2. Adjust padding or background in `pwa-assets.config.ts` if necessary.
+3. Run `npm run pwa:icons`.
+4. Inspect the standard, maskable, and Apple outputs before committing them.
 
 ### Beta testing
 
@@ -29,7 +42,15 @@ The most useful feedback covers incorrect players or featured seasons, incorrect
 - Environment variable: optional `VITE_FEEDBACK_URL`
 - SPA routing: `public/_redirects` sends direct `/draft` requests to `index.html`
 
-Preview the exact production output locally with `npm run build && npm run preview`. Raw Lahman CSV files remain outside `src` and are not emitted to `dist`.
+Preview and test the exact production output locally:
+
+```bash
+npm run build
+npm run test:pwa
+npm run preview
+```
+
+Open the HTTPS deployment—or the local preview on `localhost`, which browsers treat as secure—to inspect the manifest, service-worker registration, offline shell, and installability in browser developer tools. Raw Lahman CSV files remain outside `src` and are not emitted to `dist`.
 
 ## Draft completion experience
 

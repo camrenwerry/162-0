@@ -20,15 +20,18 @@ assert.equal(parsed.searchParams.get('currentScreen'), 'draft')
 assert.equal(parsed.searchParams.get('round'), '4')
 assert.equal(buildFeedbackUrl('not a url', { screen: 'home' }), null)
 
-const result = { wins: 101, losses: 61, overallGrade: 'A' } as DraftResult
+const result = { wins: 101, losses: 61, overallGrade: 'A', tierLabel: 'Contender', strongestCategory: 'startingPitching' } as DraftResult
 assert.match(buildShareText(result), /101–61/)
 assert.match(buildShareText(result), /Diamond Draft/)
+assert.match(buildShareText(result), /Tier: Contender/)
+assert.match(buildShareText(result), /Strongest Category: Starting Pitching/)
 let sharedText = ''
 assert.equal(await shareResult(result, { share: async (data) => { sharedText = data.text ?? '' }, publicUrl: 'https://play.example' }), 'shared')
 assert.match(sharedText, /101–61/)
 let copiedText = ''
 assert.equal(await shareResult(result, { writeText: async (text) => { copiedText = text }, publicUrl: 'https://play.example' }), 'copied')
 assert.match(copiedText, /https:\/\/play\.example/)
+await assert.rejects(() => shareResult(result, { writeText: async () => { throw new Error('denied') }, publicUrl: 'https://play.example' }))
 
 const memory = new Map<string, string>()
 const storage = {
@@ -46,11 +49,15 @@ const read = (path: string) => readFileSync(path, 'utf8')
 const header = read('src/components/draft/DraftHeader.tsx')
 const home = read('src/components/home/HomeScreen.tsx')
 const recovery = read('src/components/BetaRecovery.tsx')
+const resultsScreen = read('src/components/draft/ResultsScreen.tsx')
 assert.match(header, /1 per game/i)
 assert.match(header, /Changes only the franchise/)
 assert.match(header, /Changes only the decade/)
 assert.match(home, /resetTutorial/)
 assert.match(recovery, /componentDidCatch/)
 assert.match(recovery, /Restart Game/)
+assert.match(resultsScreen, /AbortError/)
+assert.match(resultsScreen, /ShareFallbackDialog/)
+assert.match(resultsScreen, /disabled=\{isSharing\}/)
 
 console.log('Beta readiness tests passed.')

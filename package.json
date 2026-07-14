@@ -12,6 +12,7 @@
     "data:lahman:validate": "node scripts/validate-lahman-data.mjs",
     "data:lahman:report": "node scripts/report-lahman-data.mjs",
     "data:lahman:all": "npm run data:lahman:build && npm run data:lahman:validate && npm run data:lahman:report",
+    "pwa:icons": "pwa-assets-generator",
     "dev": "vite",
     "build": "npm run validate:data && tsc -b && vite build",
     "lint": "eslint .",
@@ -24,6 +25,7 @@
     "test:responsive": "node scripts/responsive-contract.test.mjs",
     "test:presentation": "node scripts/v010-presentation.test.mjs",
     "test:beta": "vite build --ssr scripts/beta-readiness.test.ts --outDir /tmp/diamond-draft-beta-tests --emptyOutDir && node /tmp/diamond-draft-beta-tests/beta-readiness.test.js",
+    "test:pwa": "node scripts/pwa-deployment.test.mjs",
     "validate:data": "npm run data:lahman:validate"
   },
   "dependencies": {
@@ -35,6 +37,7 @@
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@vite-pwa/assets-generator": "^1.0.2",
     "@vitejs/plugin-react": "^6.0.3",
     "eslint": "^10.6.0",
     "eslint-plugin-react-hooks": "^7.1.1",
@@ -42,6 +45,7 @@
     "globals": "^17.7.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.62.0",
-    "vite": "^8.1.1"
+    "vite": "^8.1.1",
+    "vite-plugin-pwa": "^1.3.0"
   }
 }

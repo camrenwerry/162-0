@@ -28,7 +28,14 @@ export function getFeedbackUrl(context: FeedbackContext) {
 }
 
 export function buildShareText(result: DraftResult) {
-  return `Diamond Draft\nProjected Record: ${result.wins}–${result.losses}\nOverall Grade: ${result.overallGrade}\nCan you build a better team?`
+  const strongestCategory = result.strongestCategory
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/^./, (letter) => letter.toUpperCase())
+  return `Diamond Draft\nProjected Record: ${result.wins}–${result.losses}\nOverall Grade: ${result.overallGrade}\nTier: ${result.tierLabel}\nStrongest Category: ${strongestCategory}\n\nCan you build a better team?`
+}
+
+export function buildCompleteShareText(result: DraftResult, publicUrl = window.location.origin) {
+  return `${buildShareText(result)}\n\n${publicUrl}`
 }
 
 interface ShareDependencies {
@@ -42,11 +49,11 @@ export async function shareResult(result: DraftResult, dependencies: ShareDepend
   const share = dependencies.share ?? navigator.share?.bind(navigator)
   const publicUrl = dependencies.publicUrl ?? window.location.origin
   if (share) {
-    await share({ title: 'Diamond Draft result', text, url: publicUrl })
+    await share({ title: 'Diamond Draft', text, url: publicUrl })
     return 'shared'
   }
   const writeText = dependencies.writeText ?? navigator.clipboard?.writeText.bind(navigator.clipboard)
   if (!writeText) throw new Error('Clipboard unavailable')
-  await writeText(`${text}\n${publicUrl}`)
+  await writeText(buildCompleteShareText(result, publicUrl))
   return 'copied'
 }

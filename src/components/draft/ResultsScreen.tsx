@@ -2,7 +2,8 @@ import { useState } from 'react'
 import DiamondDraftLogo from '../DiamondDraftLogo'
 import GameMenu from '../GameMenu'
 import { ROSTER_SLOTS, type DraftResult, type Roster, type ScoringCategoryKey } from '../../types/draft'
-import { getFeedbackUrl, shareResult } from '../../utils/betaActions'
+import { buildCompleteShareText, getFeedbackUrl, shareResult } from '../../utils/betaActions'
+import ShareFallbackDialog from './ShareFallbackDialog'
 
 interface ResultsScreenProps {
   roster: Roster
@@ -13,15 +14,22 @@ interface ResultsScreenProps {
 
 export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: ResultsScreenProps) {
   const [shareStatus, setShareStatus] = useState<string | null>(null)
+  const [isSharing, setIsSharing] = useState(false)
+  const [fallbackShareText, setFallbackShareText] = useState<string | null>(null)
   const feedbackContext = { screen: 'results', projectedRecord: `${result.wins}-${result.losses}` }
   const feedbackUrl = getFeedbackUrl(feedbackContext)
   const handleShare = async () => {
+    if (isSharing) return
+    setIsSharing(true)
+    setShareStatus(null)
     try {
       const outcome = await shareResult(result)
-      setShareStatus(outcome === 'copied' ? 'Result copied' : 'Result shared')
+      setShareStatus(outcome === 'copied' ? 'RESULT COPIED' : 'RESULT SHARED')
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') return
-      setShareStatus('Sharing unavailable')
+      setFallbackShareText(buildCompleteShareText(result))
+    } finally {
+      setIsSharing(false)
     }
   }
   const categoryLabel: Record<ScoringCategoryKey, string> = {
@@ -83,12 +91,15 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
         </section>
         <div className="results-actions">
           <button className="results-play-again" type="button" onClick={onPlayAgain}>Play Again</button>
-          <button type="button" onClick={handleShare}>Share Result</button>
+          <button type="button" aria-label="Share Diamond Draft result" aria-busy={isSharing} disabled={isSharing} onClick={handleShare}>
+            {isSharing ? 'Sharing…' : 'Share Result'}
+          </button>
           <button type="button" onClick={onHome}>Home</button>
           {feedbackUrl && <a href={feedbackUrl} target="_blank" rel="noreferrer">Send Feedback</a>}
         </div>
         <p className="results-share-status" role="status" aria-live="polite">{shareStatus}</p>
       </div>
+      {fallbackShareText && <ShareFallbackDialog text={fallbackShareText} onClose={() => setFallbackShareText(null)} />}
     </main>
   )
 }
