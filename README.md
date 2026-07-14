@@ -8,7 +8,7 @@ Version 0.10.0 is a static React + TypeScript + Vite application. It has no acco
 
 Late-round player lists keep every matching card visible while grouping currently selectable players above greyed-out cards. The grouping is performed by the eligibility engine after search, position, player-type, and stat sorting, so each group preserves the chosen sort order and DH/SP/RP rules remain centralized.
 
-After the 14th roster assignment, the completed roster briefly lands before a deterministic Season Simulation presentation. The existing scoring engine runs once and its immutable result payload drives both the projected-record reveal and full Results screen. The presentation can be skipped without recalculating, supports one-session restart/Home confirmation, and uses a shortened stage sequence for `prefers-reduced-motion`.
+After the 14th roster assignment, the completed roster briefly lands before a deterministic Season Simulation presentation. One continuous progress animation moves through Simulating Season, Postseason, and Finalizing Results in about three seconds before revealing the record in the same stable card. The existing scoring engine runs once and its immutable result payload drives both the reveal and full Results screen. The presentation can be skipped without recalculating, supports one-session restart/Home confirmation, and uses a shortened sequence for `prefers-reduced-motion`.
 
 ## Historical data provenance
 

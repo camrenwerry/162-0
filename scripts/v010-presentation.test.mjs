@@ -12,6 +12,8 @@ assert(classic.includes("draft.complete && draft.result") && classic.includes('<
 assert(classic.includes('return showResults') && classic.includes(': <SeasonSimulation'), 'simulation should be the default completed-draft presentation before full Results')
 assert(simulation.includes('setIsRevealed(true)') && simulation.includes('onClick={skip}'), 'Skip must reveal the predetermined result immediately')
 assert(simulation.includes('completedRef.current') && simulation.includes('if (completedRef.current) return'), 'Skip and automatic completion must be idempotent')
+assert(simulation.includes('window.requestAnimationFrame(advance)') && !simulation.includes('setInterval'), 'simulation should use one lightweight animation-frame clock')
+assert(simulation.includes('continuedRef.current') && simulation.includes('if (!canContinue || continuedRef.current) return'), 'full Results continuation must be idempotent and reveal-gated')
 assert(!simulation.includes('calculateDraftResult') && !simulation.includes('DiamondDraftScoring'), 'presentation must never run scoring')
 assert(simulation.includes('getSimulationReveal(result)'), 'the reveal must derive only from the supplied result payload')
 assert(simulation.includes('<GameMenu') && simulation.includes('onRestart={onRestart}') && simulation.includes('onHome={onHome}'), 'simulation must expose safe restart and Home controls')
@@ -20,5 +22,7 @@ assert(playerList.includes('Unavailable for your remaining roster') && playerLis
 for (const inset of ['top', 'right', 'bottom', 'left']) assert(simulationCss.includes(`env(safe-area-inset-${inset})`), `simulation must respect the ${inset} safe area`)
 assert(simulationCss.includes('min-height: 2.75rem') && simulationCss.includes('overflow: hidden'), 'simulation must preserve mobile touch and overflow contracts')
 assert(simulationCss.includes('@media (prefers-reduced-motion: reduce)'), 'simulation must include a reduced-motion presentation')
+assert(simulationCss.includes('animation: simulation-progress var(--simulation-duration) linear forwards'), 'one continuous progress animation must span the sequence')
+assert(simulationCss.includes('grid-template-rows: 3.2rem minmax(19rem, 1fr) 3.8rem'), 'the simulation card must keep a stable layout across phases and reveal')
 
-console.log('v0.10 presentation contract passed: simulation handoff, predetermined reveal, Skip, menu safety, mobile safe areas, and reduced motion.')
+console.log('Presentation contract passed: continuous three-phase simulation, stable reveal, idempotent Skip/continue, menu safety, mobile safe areas, and reduced motion.')

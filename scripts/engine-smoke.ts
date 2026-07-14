@@ -5,7 +5,7 @@ import { getCompactPlayerStats } from '../src/game/PlayerStats'
 import { Randomizer } from '../src/game/Randomizer'
 import { DiamondDraftScoring } from '../src/game/ScoringEngine'
 import { TeamPool } from '../src/game/TeamPool'
-import { getSimulationReveal, getSimulationTiming, SIMULATION_STAGES } from '../src/components/results/simulationSequence'
+import { getSimulationDuration, getSimulationPhase, getSimulationReveal, SIMULATION_PHASES } from '../src/components/results/simulationSequence'
 import { ROSTER_SLOTS, type Position } from '../src/types/draft'
 
 const waitForTimers = () => new Promise((resolve) => setTimeout(resolve, 5))
@@ -219,11 +219,13 @@ draft = engine.getSnapshot()
 assert.equal(Object.keys(draft.roster).length, 0, 'Home/abandon must clear completed draft state')
 assert.equal(draft.result, null)
 
-assert.equal(SIMULATION_STAGES.length, 8)
-const standardTiming = getSimulationTiming(false)
-const reducedTiming = getSimulationTiming(true)
-assert(standardTiming.stageDuration * SIMULATION_STAGES.length + standardTiming.revealDelay >= 4_000)
-assert(reducedTiming.stageDuration < standardTiming.stageDuration && reducedTiming.revealDelay < standardTiming.revealDelay)
+assert.equal(SIMULATION_PHASES.length, 3)
+const standardDuration = getSimulationDuration(false)
+const reducedDuration = getSimulationDuration(true)
+assert(standardDuration >= 2_500 && standardDuration <= 3_500)
+assert(reducedDuration >= 500 && reducedDuration <= 1_000)
+const phaseProgression = [0, .5, .749, .75, .9, .919, .92, 1].map(getSimulationPhase)
+for (let index = 1; index < phaseProgression.length; index += 1) assert(phaseProgression[index] >= phaseProgression[index - 1], 'simulation phases must never move backward')
 
 unsubscribe()
 engine.dispose()

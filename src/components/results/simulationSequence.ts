@@ -1,25 +1,23 @@
 import type { DraftResult } from '../../types/draft'
 
-export interface SimulationStage {
+export interface SimulationPhase {
   label: string
   message: string
 }
 
-export const SIMULATION_STAGES: readonly SimulationStage[] = [
-  { label: 'Building your season', message: 'The roster is taking the field' },
-  { label: 'Opening Day', message: 'The lineup is finding its rhythm' },
-  { label: 'April', message: 'The rotation is settling in' },
-  { label: 'All-Star Break', message: 'The season is taking shape' },
-  { label: 'Trade Deadline', message: 'The bullpen is being tested' },
-  { label: 'September', message: 'The pennant race is heating up' },
-  { label: 'Postseason', message: 'October baseball begins' },
-  { label: 'Finalizing Results', message: 'Projecting the final standings' },
+export const SIMULATION_PHASES: readonly SimulationPhase[] = [
+  { label: 'Simulating Season', message: 'Your roster is taking the field.' },
+  { label: 'Postseason', message: 'The championship run begins.' },
+  { label: 'Finalizing Results', message: 'Calculating your projected record.' },
 ] as const
 
-export const getSimulationTiming = (reducedMotion: boolean) => ({
-  stageDuration: reducedMotion ? 170 : 540,
-  revealDelay: reducedMotion ? 120 : 360,
-})
+export const getSimulationDuration = (reducedMotion: boolean) => reducedMotion ? 800 : 3_000
+
+export function getSimulationPhase(progress: number) {
+  if (progress < .75) return 0
+  if (progress < .92) return 1
+  return 2
+}
 
 export const getSimulationReveal = (result: DraftResult) => ({
   wins: result.wins,

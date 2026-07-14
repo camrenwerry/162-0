@@ -1,45 +1,67 @@
 .season-simulation { position: relative; display: grid; min-height: 100svh; padding: calc(1rem + env(safe-area-inset-top)) calc(1rem + env(safe-area-inset-right)) calc(1.25rem + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-left)); overflow: hidden; place-items: center; background: radial-gradient(circle at 50% 34%, rgb(27 70 101 / 42%), transparent 34rem), linear-gradient(180deg, #07111a, #03070b 72%); color: #fff; isolation: isolate; }
 .season-simulation::before { position: absolute; z-index: -1; inset: 42% -20% -22%; border-top: 1px solid rgb(143 178 195 / 15%); border-radius: 50% 50% 0 0; background: repeating-radial-gradient(ellipse at 50% 0, transparent 0 2rem, rgb(115 145 160 / 4%) 2.05rem 2.1rem), linear-gradient(180deg, rgb(15 30 42 / 70%), #03070b); content: ''; }
 .season-simulation::after { position: absolute; z-index: 5; inset: 0; pointer-events: none; background: radial-gradient(circle at center, transparent 35%, rgb(0 0 0 / 62%) 100%); content: ''; }
-.season-simulation__lights { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 4% 8%, rgb(221 241 255 / 70%), transparent 8rem), radial-gradient(circle at 96% 8%, rgb(221 241 255 / 70%), transparent 8rem); opacity: 0.32; }
+.season-simulation__lights { position: absolute; z-index: -1; inset: -10% -20%; background: radial-gradient(circle at 8% 12%, rgb(221 241 255 / 64%), transparent 9rem), radial-gradient(circle at 92% 12%, rgb(221 241 255 / 64%), transparent 9rem); opacity: 0.28; animation: simulation-light-sweep 7s ease-in-out infinite alternate; }
+.season-simulation__particles { position: absolute; z-index: -1; inset: 0; overflow: hidden; opacity: 0.22; }
+.season-simulation__particles i { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #f9e6a0; animation: simulation-particle 5s ease-in-out infinite alternate; }
+.season-simulation__particles i:nth-child(1) { top: 24%; left: 18%; }
+.season-simulation__particles i:nth-child(2) { top: 38%; left: 78%; animation-delay: -2s; }
+.season-simulation__particles i:nth-child(3) { top: 67%; left: 27%; animation-delay: -3.5s; }
+.season-simulation__particles i:nth-child(4) { top: 72%; left: 72%; animation-delay: -1s; }
+.season-simulation__particles i:nth-child(5) { top: 18%; left: 55%; animation-delay: -4s; }
 .season-simulation__menu { position: fixed; z-index: 20; top: calc(0.85rem + env(safe-area-inset-top)); right: calc(0.85rem + env(safe-area-inset-right)); }
-.season-simulation__skip { position: fixed; z-index: 15; right: calc(0.85rem + env(safe-area-inset-right)); bottom: calc(0.85rem + env(safe-area-inset-bottom)); min-width: 4.25rem; min-height: 2.75rem; border: 1px solid #53616e; border-radius: 2rem; background: rgb(7 13 19 / 78%); color: #9da8b3; cursor: pointer; font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transition: border-color 150ms ease, color 150ms ease, transform 150ms ease; }
-.season-simulation__skip:hover { border-color: #d6ad45; color: #fff; transform: translateY(-1px); }
-.season-simulation__skip:active { transform: scale(0.95); }
-.season-simulation__shell { position: relative; z-index: 10; display: grid; width: min(100%, 38rem); min-height: min(34rem, calc(100dvh - 5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))); padding: clamp(1.25rem, 5vw, 2.5rem); place-items: center; border: 1px solid rgb(141 161 176 / 18%); border-radius: 1.25rem; background: linear-gradient(145deg, rgb(12 23 33 / 72%), rgb(4 9 14 / 60%)); box-shadow: 0 2rem 7rem rgb(0 0 0 / 45%), inset 0 1px rgb(255 255 255 / 4%); text-align: center; }
-.season-simulation__logo { position: absolute; top: clamp(1rem, 4vw, 1.6rem); left: 50%; width: clamp(7rem, 27vw, 9rem); transform: translateX(-50%); opacity: 0.72; }
-.season-simulation__progress-content, .season-simulation__reveal { width: 100%; animation: simulation-stage-in 360ms cubic-bezier(0.16, 1, 0.3, 1); }
-.season-simulation__baseball { display: grid; width: clamp(4rem, 18vw, 5.5rem); height: clamp(4rem, 18vw, 5.5rem); margin: 0 auto 1.25rem; place-items: center; border: 1px solid rgb(245 197 66 / 45%); border-radius: 50%; background: radial-gradient(circle, rgb(245 197 66 / 15%), transparent 66%); box-shadow: 0 0 2.5rem rgb(245 197 66 / 13%); animation: simulation-ball 1.2s ease-in-out infinite alternate; }
-.season-simulation__baseball span { font-size: clamp(1.8rem, 8vw, 2.5rem); filter: saturate(0.75); }
-.season-simulation__progress-content > small, .season-simulation__reveal > small { color: #d6ad45; font-family: var(--font-display); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
-.season-simulation__progress-content h1 { margin-top: 0.45rem; font-family: 'Bebas Neue', var(--font-display); font-size: clamp(2.25rem, 10vw, 4.25rem); letter-spacing: 0.055em; line-height: 0.95; text-transform: uppercase; text-wrap: balance; }
-.season-simulation__progress-content p { min-height: 1.5rem; margin-top: 0.8rem; color: #9ca8b4; font-size: clamp(0.72rem, 2.8vw, 0.86rem); letter-spacing: 0.03em; }
-.season-simulation__timeline { position: relative; display: flex; height: 0.42rem; margin-top: clamp(2rem, 8vw, 3.25rem); align-items: center; justify-content: space-between; border-radius: 1rem; background: #1d2a35; box-shadow: inset 0 1px 0 rgb(255 255 255 / 5%); }
-.season-simulation__timeline i { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(90deg, #9e1722, #e33b46 55%, #f5c542); box-shadow: 0 0 1rem rgb(227 59 70 / 35%); transform-origin: left; transition: transform 480ms cubic-bezier(0.16, 1, 0.3, 1); }
-.season-simulation__timeline span { position: relative; z-index: 1; width: 0.55rem; height: 0.55rem; border: 2px solid #354450; border-radius: 50%; background: #0a1118; transition: border-color 300ms ease, background 300ms ease, transform 300ms ease; }
-.season-simulation__timeline span.is-complete { border-color: #f5c542; background: #f5c542; transform: scale(1.12); }
-.season-simulation__progress-content > b { display: block; margin-top: 0.65rem; color: #73818e; font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.12em; }
-.season-simulation__reveal { animation: simulation-reveal 650ms cubic-bezier(0.16, 1, 0.3, 1); }
+.season-simulation__skip { position: fixed; z-index: 15; right: calc(0.85rem + env(safe-area-inset-right)); bottom: calc(0.85rem + env(safe-area-inset-bottom)); min-width: 4.25rem; min-height: 2.75rem; border: 1px solid #53616e; border-radius: 2rem; background: rgb(7 13 19 / 78%); color: #9da8b3; cursor: pointer; font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transition: border-color 150ms ease, color 150ms ease, opacity 220ms ease, transform 150ms ease; }
+.season-simulation__skip:hover:not(:disabled) { border-color: #d6ad45; color: #fff; transform: translateY(-1px); }
+.season-simulation__skip:active:not(:disabled) { transform: scale(0.95); }
+.season-simulation__skip:disabled { opacity: 0; pointer-events: none; }
+.season-simulation__shell { position: relative; z-index: 10; display: grid; width: min(100%, 38rem); min-height: min(34rem, calc(100dvh - 5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))); padding: clamp(1.25rem, 5vw, 2.5rem); grid-template-rows: 3.2rem minmax(19rem, 1fr) 3.8rem; place-items: center; border: 1px solid rgb(141 161 176 / 18%); border-radius: 1.25rem; background: linear-gradient(145deg, rgb(12 23 33 / 72%), rgb(4 9 14 / 60%)); box-shadow: 0 2rem 7rem rgb(0 0 0 / 45%), inset 0 1px rgb(255 255 255 / 4%); text-align: center; }
+.season-simulation__logo { align-self: start; width: clamp(7rem, 27vw, 9rem); opacity: 0.72; }
+.season-simulation__moment { position: relative; display: grid; width: 100%; height: 19rem; place-items: center; }
+.season-simulation__phase-region, .season-simulation__reveal { position: absolute; display: grid; inset: 0; place-items: center; }
+.season-simulation__phase-region { transition: opacity 280ms ease, transform 280ms ease; }
+.season-simulation__phase-region > div { position: absolute; display: grid; width: 100%; min-height: 8.5rem; place-content: center; opacity: 0; transform: translateY(0.35rem); transition: opacity 260ms ease, transform 260ms ease; }
+.season-simulation__phase-region > div.is-active { opacity: 1; transform: translateY(0); }
+.season-simulation__phase-region small, .season-simulation__reveal > small { color: #d6ad45; font-family: var(--font-display); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+.season-simulation__phase-region h1 { margin-top: 0.45rem; font-family: 'Bebas Neue', var(--font-display); font-size: clamp(2.45rem, 11vw, 4.4rem); letter-spacing: 0.055em; line-height: 0.95; text-transform: uppercase; text-wrap: balance; }
+.season-simulation__phase-region p { min-height: 2.5rem; margin-top: 0.75rem; padding-inline: 0.5rem; color: #9ca8b4; font-size: clamp(0.72rem, 2.8vw, 0.86rem); letter-spacing: 0.03em; line-height: 1.5; }
+.season-simulation__progress { position: absolute; right: 0; bottom: 1.1rem; left: 0; transition: opacity 280ms ease, transform 280ms ease; }
+.season-simulation__timeline { position: relative; height: 0.46rem; border-radius: 1rem; background: #1d2a35; box-shadow: inset 0 1px 0 rgb(255 255 255 / 5%); }
+.season-simulation__timeline i { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(90deg, #9e1722, #e33b46 55%, #f5c542); box-shadow: 0 0 1rem rgb(227 59 70 / 35%); transform: scaleX(0); transform-origin: left; animation: simulation-progress var(--simulation-duration) linear forwards; }
+.season-simulation__timeline span { position: absolute; z-index: 2; top: 50%; left: 0; font-size: 1rem; filter: saturate(0.7); transform: translate(-50%, -50%); animation: simulation-marker var(--simulation-duration) linear forwards; }
+.season-simulation__milestones { display: grid; margin-top: 0.65rem; grid-template-columns: 3fr 1fr auto; color: #6f7d89; font-family: var(--font-display); font-size: 0.52rem; letter-spacing: 0.08em; text-align: left; text-transform: uppercase; }
+.season-simulation__milestones span:nth-child(2) { text-align: center; }
+.season-simulation__milestones span:last-child { text-align: right; }
+.season-simulation__reveal { opacity: 0; pointer-events: none; transform: translateY(0.55rem) scale(0.98); transition: opacity 380ms ease, transform 480ms cubic-bezier(0.16, 1, 0.3, 1); }
 .season-simulation__reveal h1 { margin-top: 0.3rem; background: linear-gradient(180deg, #fff5c6, #f5c542 60%, #b87317); background-clip: text; color: transparent; filter: drop-shadow(0 0 1.4rem rgb(245 197 66 / 22%)); font-family: 'Bebas Neue', var(--font-display); font-size: clamp(5rem, 26vw, 9rem); letter-spacing: 0.015em; line-height: 0.92; }
 .season-simulation__reveal > strong { display: block; margin-top: 0.55rem; color: #fff; font-family: 'Bebas Neue', var(--font-display); font-size: clamp(1.35rem, 6vw, 2rem); letter-spacing: 0.1em; text-transform: uppercase; }
 .season-simulation__reveal p { margin-top: 0.8rem; color: #99a6b2; font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .season-simulation__reveal p b { margin-left: 0.3rem; color: #f5c542; font-size: 1.25rem; }
-.season-simulation__reveal button { width: min(100%, 20rem); min-height: 3.6rem; margin-top: 2rem; border: 1px solid #ffe17a; border-radius: 0.55rem; background: linear-gradient(#f3cc58, #b87a18); box-shadow: 0 0 2rem rgb(245 197 66 / 16%); color: #111; cursor: pointer; font-family: 'Bebas Neue', var(--font-display); font-size: 1.1rem; letter-spacing: 0.09em; text-transform: uppercase; transition: filter 150ms ease, transform 150ms ease; }
-.season-simulation__reveal button:hover { filter: brightness(1.08); transform: translateY(-1px); }
-.season-simulation__reveal button:active { transform: scale(0.98); }
+.season-simulation__action-region { display: grid; width: 100%; min-height: 3.6rem; place-items: center; }
+.season-simulation__continue { width: min(100%, 20rem); min-height: 3.6rem; border: 1px solid #ffe17a; border-radius: 0.55rem; background: linear-gradient(#f3cc58, #b87a18); box-shadow: 0 0 2rem rgb(245 197 66 / 16%); color: #111; cursor: pointer; font-family: 'Bebas Neue', var(--font-display); font-size: 1.1rem; letter-spacing: 0.09em; opacity: 0; pointer-events: none; text-transform: uppercase; transform: translateY(0.35rem); transition: filter 150ms ease, opacity 260ms ease, transform 260ms ease; }
+.season-simulation__continue:not(:disabled) { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.season-simulation__continue:hover:not(:disabled) { filter: brightness(1.08); transform: translateY(-1px); }
+.season-simulation__continue:active:not(:disabled) { transform: scale(0.98); }
+.season-simulation.is-revealed .season-simulation__phase-region, .season-simulation.is-revealed .season-simulation__progress { opacity: 0; pointer-events: none; transform: translateY(-0.35rem); }
+.season-simulation.is-revealed .season-simulation__reveal { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
+.season-simulation.is-revealed .season-simulation__timeline i { animation: none; transform: scaleX(1); }
+.season-simulation.is-revealed .season-simulation__timeline span { animation: none; left: 100%; }
 
-@keyframes simulation-stage-in { from { opacity: 0; transform: translateY(0.5rem); } }
-@keyframes simulation-reveal { from { opacity: 0; transform: scale(0.94); } }
-@keyframes simulation-ball { to { transform: translateY(-0.35rem) rotate(5deg); } }
+@keyframes simulation-progress { to { transform: scaleX(1); } }
+@keyframes simulation-marker { to { left: 100%; } }
+@keyframes simulation-light-sweep { to { opacity: 0.42; transform: translateX(2%); } }
+@keyframes simulation-particle { to { opacity: 0.25; transform: translateY(-0.65rem); } }
 
 @media (max-height: 700px) {
-  .season-simulation__shell { min-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom)); }
+  .season-simulation__shell { min-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom)); padding-block: 0.9rem; grid-template-rows: 2.5rem minmax(16rem, 1fr) 3.6rem; }
   .season-simulation__logo { width: 6.5rem; }
-  .season-simulation__baseball { width: 3.5rem; height: 3.5rem; margin-bottom: 0.8rem; }
-  .season-simulation__timeline { margin-top: 1.5rem; }
-  .season-simulation__reveal button { margin-top: 1.25rem; }
+  .season-simulation__moment { height: 16rem; }
+  .season-simulation__phase-region h1 { font-size: clamp(2.2rem, 10vw, 3.4rem); }
+  .season-simulation__phase-region p { margin-top: 0.55rem; }
+  .season-simulation__progress { bottom: 0.4rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .season-simulation *, .season-simulation *::before, .season-simulation *::after { scroll-behavior: auto !important; animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; }
+  .season-simulation__lights, .season-simulation__particles i { animation: none; }
+  .season-simulation__phase-region, .season-simulation__phase-region > div, .season-simulation__progress, .season-simulation__reveal, .season-simulation__continue, .season-simulation__skip { transition-duration: 120ms; }
+  .season-simulation__timeline i, .season-simulation__timeline span { animation-timing-function: ease-out; }
 }
