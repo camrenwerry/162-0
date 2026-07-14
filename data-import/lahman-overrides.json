@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "featuredSeasons": {},
+  "positions": {},
+  "names": {
+    "griffke02": {
+      "name": "Ken Griffey Jr.",
+      "sourceLabel": "Reviewed Diamond Draft legacy card identity",
+      "reason": "Lahman name fields omit the commonly used generational suffix.",
+      "verified": true
+    }
+  },
+  "notes": {},
+  "fieldCorrections": []
+}

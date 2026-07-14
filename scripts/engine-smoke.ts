@@ -9,25 +9,27 @@ const waitForTimers = () => new Promise((resolve) => setTimeout(resolve, 5))
 const pool = new TeamPool()
 const missingCombination = { ...pool.getCombinations()[0], id: 'missing-pool' }
 assert(!new TeamPool([missingCombination], {}).getCombinations().length)
-const cubs1980s = pool.getCombinations().find(({ id }) => id === 'chc-1980s')
-assert(cubs1980s)
-const bobDernier = pool.getPlayers(cubs1980s).find(({ name }) => name === 'Bob Dernier')
-const billCaudill = pool.getPlayers(cubs1980s).find(({ name }) => name === 'Bill Caudill')
-assert(bobDernier?.playerType === 'hitter' && billCaudill?.playerType === 'pitcher')
-assert.deepEqual(getCompactPlayerStats(bobDernier, 'hitter').map(({ label }) => label), ['WAR', 'OPS+', 'HR', 'AVG'])
-const bobPartialStats = { ...bobDernier.visibleStats, war: null, opsPlus: null, hr: 8, avg: .317, obp: null, slg: null, rbi: null, sb: null }
-const bobPartial = { ...bobDernier, id: 'partial-bob', visibleStats: bobPartialStats, stats: bobPartialStats }
-assert.deepEqual(getCompactPlayerStats(bobPartial, 'hitter').map(({ label, formattedValue }) => [label, formattedValue]), [['HR', '8'], ['AVG', '.317']])
-const billPartialStats = { ...billCaudill.visibleStats, war: null, eraPlus: null, era: 2.19, whip: null, so: null, wins: null, saves: 1, sv: 1 }
-const billPartial = { ...billCaudill, id: 'partial-bill', visibleStats: billPartialStats, stats: billPartialStats }
+const fixtureCombination = pool.getCombinations().find((combination) => {
+  const players = pool.getPlayers(combination)
+  return players.some(({ playerType }) => playerType !== 'pitcher') && players.some(({ playerType }) => playerType === 'pitcher')
+})
+assert(fixtureCombination)
+const fixtureHitter = pool.getPlayers(fixtureCombination).find(({ playerType }) => playerType === 'hitter')
+const fixturePitcher = pool.getPlayers(fixtureCombination).find(({ playerType }) => playerType === 'pitcher')
+assert(fixtureHitter?.playerType === 'hitter' && fixturePitcher?.playerType === 'pitcher')
+assert.deepEqual(getCompactPlayerStats(fixtureHitter, 'hitter').map(({ label }) => label), ['OPS', 'AVG', 'OBP', 'SLG'])
+const partialHitterStats = { ...fixtureHitter.visibleStats, ops: null, hr: 8, avg: .317, obp: null, slg: null, rbi: null, sb: null }
+const bobPartial = { ...fixtureHitter, id: 'partial-bob', visibleStats: partialHitterStats, stats: partialHitterStats }
+assert.deepEqual(getCompactPlayerStats(bobPartial, 'hitter').map(({ label, formattedValue }) => [label, formattedValue]).slice(0, 2), [['AVG', '.317'], ['HR', '8']])
+const partialPitcherStats = { ...fixturePitcher.visibleStats, era: 2.19, whip: null, so: null, wins: null, saves: 1, sv: 1, inningsPitched: null, games: null, starts: null, reliefAppearances: null, k9: null, bb9: null }
+const billPartial = { ...fixturePitcher, id: 'partial-bill', visibleStats: partialPitcherStats, stats: partialPitcherStats }
 assert.deepEqual(getCompactPlayerStats(billPartial, 'pitcher').map(({ label, formattedValue }) => [label, formattedValue]), [['ERA', '2.19'], ['SV', '1']])
 
-const bobWithoutHrStats = { ...bobPartialStats, hr: null }
+const bobWithoutHrStats = { ...partialHitterStats, hr: null }
 const bobWithoutHr = { ...bobPartial, id: 'partial-bob-no-hr', name: 'Zed Null', visibleStats: bobWithoutHrStats, stats: bobWithoutHrStats }
-const partialCombination = { ...cubs1980s, id: 'partial-pool' }
+const partialCombination = { ...fixtureCombination, id: 'partial-pool' }
 const partialPool = new TeamPool([partialCombination], { 'partial-pool': [bobPartial, bobWithoutHr, billPartial] })
 const partialOptions = partialPool.getAvailableSortOptions(partialCombination, new Set(), 'ALL').map(({ value }) => value)
-assert(!partialOptions.includes('war') && !partialOptions.includes('opsPlus') && !partialOptions.includes('eraPlus'))
 assert(partialOptions.includes('hr') && partialOptions.includes('avg') && partialOptions.includes('era') && partialOptions.includes('sv'))
 const partialHrSorted = partialPool.query({ combination: partialCombination, excludedIds: new Set(), filter: 'ALL', sort: 'hr', search: '' })
 assert.deepEqual(partialHrSorted.map(({ id }) => id), ['partial-bob', 'partial-bob-no-hr'])
@@ -91,11 +93,10 @@ for (let game = 0; game < 25; game += 1) {
 }
 const yankees2000s = pool.getCombinations().find(({ id }) => id === 'nyy-2000s')
 assert(yankees2000s)
-const warSorted = pool.query({ combination: yankees2000s, excludedIds: new Set(), filter: 'ALL', sort: 'war', search: '' })
-assert(warSorted.every(({ stats }) => stats.war !== null))
-for (let index = 1; index < warSorted.length; index += 1) assert((warSorted[index - 1].stats.war ?? -Infinity) >= (warSorted[index].stats.war ?? -Infinity))
-const opsSorted = pool.query({ combination: yankees2000s, excludedIds: new Set(), filter: 'ALL', sort: 'opsPlus', search: '' })
-const opsValue = (player: (typeof opsSorted)[number]) => player.playerType === 'pitcher' ? null : player.stats.opsPlus
+const seasonSorted = pool.query({ combination: yankees2000s, excludedIds: new Set(), filter: 'ALL', sort: 'featuredSeason', search: '' })
+for (let index = 1; index < seasonSorted.length; index += 1) assert(seasonSorted[index - 1].featuredSeason <= seasonSorted[index].featuredSeason)
+const opsSorted = pool.query({ combination: yankees2000s, excludedIds: new Set(), filter: 'ALL', sort: 'ops', search: '' })
+const opsValue = (player: (typeof opsSorted)[number]) => player.playerType === 'pitcher' ? null : player.visibleStats.ops
 assert(opsSorted.every((player) => player.playerType !== 'pitcher' && opsValue(player) !== null))
 for (let index = 1; index < opsSorted.length; index += 1) assert((opsValue(opsSorted[index - 1]) ?? -Infinity) >= (opsValue(opsSorted[index]) ?? -Infinity))
 let randomIndex = 0
@@ -125,7 +126,7 @@ engine.setSearch(searchName)
 assert(engine.getSnapshot().players.every(({ player }) => player.name === searchName))
 engine.setSearch('')
 engine.setFilter('SP')
-assert.equal(engine.getSnapshot().sort, 'war')
+assert.equal(engine.getSnapshot().sort, 'name')
 engine.setFilter('ALL')
 
 const initialDecade = engine.getSnapshot().combination.decade
@@ -160,7 +161,7 @@ draft = engine.getSnapshot()
 assert.equal(draft.complete, true)
 assert(draft.result)
 assert.equal(draft.result.wins + draft.result.losses, 162)
-assert.equal(draft.result.scoringVersion, '1.0')
+assert.equal(draft.result.scoringVersion, '2.0')
 assert.equal(Object.keys(draft.result.roster).length, ROSTER_SLOTS.length)
 assert.deepEqual(draft.result.roster, draft.roster)
 assert.equal(draft.result.overallGrade, draft.result.categoryGrades.overall)

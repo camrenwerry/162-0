@@ -39,8 +39,8 @@ export function calculateHitterValue(
     : clamp((scoring.defensiveValue === null ? 50 : normalizeMetric(scoring.defensiveValue, ranges.defense)) + positionAdjustment)
 
   const components = compact([
-    contribution('OPS+', stats.opsPlus, weights.opsPlus, ranges.opsPlus),
-    contribution('WAR', stats.war, weights.war, ranges.war),
+    contribution('era-adjusted offense', scoring.eraAdjustedOffense, weights.context, ranges.eraAdjustedOffense),
+    contribution('OPS', stats.ops, weights.ops, ranges.ops),
     contribution('OBP', stats.obp, weights.obp, ranges.obp),
     contribution('SLG', stats.slg, weights.slg, ranges.slg),
     contribution('HR/650 PA', hrRate, weights.hr, ranges.hrRate),
@@ -51,12 +51,12 @@ export function calculateHitterValue(
   ])
   const weighted = weightedScore(components)
 
-  const offenseComponents = components.filter(({ metric }) => ['OPS+', 'WAR', 'OBP', 'SLG', 'HR/650 PA', 'RBI/650 PA'].includes(metric))
+  const offenseComponents = components.filter(({ metric }) => ['era-adjusted offense', 'OPS', 'OBP', 'SLG', 'HR/650 PA', 'RBI/650 PA'].includes(metric))
   const powerComponents = components.filter(({ metric }) => ['SLG', 'HR/650 PA'].includes(metric))
   const contactComponents = compact([
     contribution('AVG', stats.avg, CATEGORY_COMPONENT_WEIGHTS.contact.avg, ranges.avg),
     contribution('OBP', stats.obp, CATEGORY_COMPONENT_WEIGHTS.contact.obp, ranges.obp),
-    contribution('OPS+', stats.opsPlus, CATEGORY_COMPONENT_WEIGHTS.contact.opsPlus, ranges.opsPlus),
+    contribution('OPS', stats.ops, CATEGORY_COMPONENT_WEIGHTS.contact.ops, ranges.ops),
   ])
 
   return {
@@ -97,12 +97,12 @@ export function calculateStartingPitcherValue(player: Pitcher | TwoWayPlayer, sl
       : null
   const starts = scoring.starts ?? scoring.gamesStarted ?? 0
   const components = compact([
-    contribution('ERA+', stats.eraPlus, weights.eraPlus, ranges.eraPlus),
-    contribution('WAR', stats.war, weights.war, ranges.war),
+    contribution('era-adjusted pitching', scoring.eraAdjustedPitching, weights.context, ranges.eraAdjustedPitching),
     contribution('ERA', stats.era, weights.era, ranges.era),
     contribution('WHIP', stats.whip, weights.whip, ranges.whip),
     contribution('innings', scoring.inningsPitched, weights.durability, ranges.innings),
     contribution('SO/9', strikeoutRate, weights.strikeouts, ranges.strikeoutRate),
+    contribution('BB/9', scoring.walkRate, weights.walks, ranges.walkRate),
     rateProxy,
     contribution('starts', starts, weights.starts, ranges.starts),
   ])
@@ -132,12 +132,12 @@ export function calculateReliefPitcherValue(player: Pitcher | TwoWayPlayer, slot
       ? contribution('K-BB rate proxy', scoring.strikeoutRate - scoring.walkRate, weights.ratePerformance, ranges.rateProxy)
       : null
   const components = compact([
-    contribution('ERA+', stats.eraPlus, weights.eraPlus, ranges.eraPlus),
-    contribution('WAR', stats.war, weights.war, ranges.war),
+    contribution('era-adjusted pitching', scoring.eraAdjustedPitching, weights.context, ranges.eraAdjustedPitching),
     contribution('ERA', stats.era, weights.era, ranges.era),
     contribution('WHIP', stats.whip, weights.whip, ranges.whip),
     contribution('saves', stats.sv, weights.saves, ranges.saves),
     contribution('SO/9', strikeoutRate, weights.strikeouts, ranges.strikeoutRate),
+    contribution('BB/9', scoring.walkRate, weights.walks, ranges.walkRate),
     contribution('relief appearances', scoring.reliefAppearances, weights.workload, ranges.appearances),
     rateProxy,
   ])

@@ -43,7 +43,7 @@ export function createGameState(initialCombination: TeamDecade): GameState {
     selectedPlayerId: null,
     search: '',
     filter: 'ALL',
-    sort: 'war',
+    sort: 'name',
     displayTeam: initialCombination.team,
     displayDecade: initialCombination.decade,
     isRolling: false,

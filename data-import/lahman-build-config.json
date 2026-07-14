@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "label": "SABR Lahman Baseball Database 2025",
+    "url": "https://sabr.org/lahman-database/",
+    "verifiedAt": "2026-07-14"
+  },
+  "years": { "minimum": 1920, "maximum": 2029 },
+  "pool": { "minimumCards": 24, "targetCards": 32, "maximumCards": 40 },
+  "eligibility": {
+    "minimumHitterPlateAppearances": 100,
+    "minimumPitcherInnings": 30,
+    "minimumFieldingGames": 10,
+    "minimumStarts": 10,
+    "minimumReliefAppearances": 15
+  },
+  "coverage": {
+    "C": 3, "1B": 3, "2B": 3, "3B": 3, "SS": 3,
+    "LF": 3, "CF": 3, "RF": 3, "SP": 5, "RP": 3
+  },
+  "selection": {
+    "formulaVersion": "lahman-1.0",
+    "hitter": {
+      "eraAdjustedOps": 0.45, "ops": 0.22, "plateAppearances": 0.08,
+      "homeRunRate": 0.08, "rbiRate": 0.06, "stolenBaseRate": 0.03,
+      "positionValue": 0.08
+    },
+    "starter": {
+      "eraAdjustedRunPrevention": 0.38, "whip": 0.18, "strikeoutsPerNine": 0.14,
+      "walksPerNine": 0.08, "innings": 0.14, "starts": 0.08
+    },
+    "reliever": {
+      "eraAdjustedRunPrevention": 0.32, "whip": 0.18, "strikeoutsPerNine": 0.16,
+      "walksPerNine": 0.08, "reliefAppearances": 0.12, "saves": 0.14
+    }
+  }
+}

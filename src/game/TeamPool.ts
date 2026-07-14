@@ -1,28 +1,28 @@
-import { PLAYER_CARDS, PLAYER_POOLS, TEAM_DECADES } from '../data/mlb'
+import { PLAYER_CARDS, PLAYER_POOLS, TEAM_DECADES } from '../data/generated'
 import { POSITIONS, type Player, type Position, type PositionFilter, type SortKey, type TeamDecade } from '../types/draft'
 
 export interface SortOption { value: SortKey; label: string }
 
 const UNIVERSAL_SORTS: SortOption[] = [
-  { value: 'war', label: 'WAR' },
   { value: 'name', label: 'Name (A–Z)' },
   { value: 'position', label: 'Position' },
+  { value: 'featuredSeason', label: 'Featured Season' },
 ]
 const HITTER_STATS: SortOption[] = [
-  { value: 'opsPlus', label: 'OPS+' }, { value: 'hr', label: 'HR' }, { value: 'avg', label: 'AVG' },
+  { value: 'ops', label: 'OPS' }, { value: 'hr', label: 'HR' }, { value: 'avg', label: 'AVG' },
   { value: 'obp', label: 'OBP' }, { value: 'slg', label: 'SLG' }, { value: 'rbi', label: 'RBI' }, { value: 'sb', label: 'SB' },
 ]
 const PITCHER_STATS: SortOption[] = [
-  { value: 'eraPlus', label: 'ERA+' }, { value: 'era', label: 'ERA' }, { value: 'whip', label: 'WHIP' },
+  { value: 'era', label: 'ERA' }, { value: 'whip', label: 'WHIP' },
   { value: 'so', label: 'SO' }, { value: 'wins', label: 'W' }, { value: 'sv', label: 'SV' },
 ]
-const HITTER_SORTS = [UNIVERSAL_SORTS[0], ...HITTER_STATS, UNIVERSAL_SORTS[1], UNIVERSAL_SORTS[2]]
-const PITCHER_SORTS = [UNIVERSAL_SORTS[0], ...PITCHER_STATS, UNIVERSAL_SORTS[1], UNIVERSAL_SORTS[2]]
+const HITTER_SORTS = [...HITTER_STATS, ...UNIVERSAL_SORTS]
+const PITCHER_SORTS = [...PITCHER_STATS, ...UNIVERSAL_SORTS]
 const ALL_SORTS = [...UNIVERSAL_SORTS, ...HITTER_STATS, ...PITCHER_STATS]
 const HITTER_KEYS = new Set<SortKey>(HITTER_STATS.map(({ value }) => value))
 const PITCHER_KEYS = new Set<SortKey>(PITCHER_STATS.map(({ value }) => value))
 const POSITION_ORDER = new Map(POSITIONS.map((position, index) => [position, index]))
-const ASCENDING = new Set<SortKey>(['era', 'whip', 'name', 'position'])
+const ASCENDING = new Set<SortKey>(['era', 'whip', 'name', 'position', 'featuredSeason'])
 
 function matchesPosition(player: Player, filter: PositionFilter) {
   if (filter === 'ALL') return true
@@ -41,9 +41,10 @@ function matchesSortType(player: Player, filter: PositionFilter, sort: SortKey) 
 function valueFor(player: Player, key: SortKey, statView: 'hitter' | 'pitcher'): number | string | null {
   if (key === 'name') return player.name
   if (key === 'position') return Math.min(...player.eligiblePositions.map((position) => POSITION_ORDER.get(position) ?? 99))
+  if (key === 'featuredSeason') return player.featuredSeason
   const stats = statView === 'pitcher' && player.playerType === 'twoWay'
     ? player.pitchingVisibleStats
-    : player.stats
+    : player.visibleStats
   return stats[key as keyof typeof stats] ?? null
 }
 
@@ -112,7 +113,7 @@ export class TeamPool implements TeamPoolSource {
       .filter((player) => matchesPosition(player, filter))
     const options = this.getSortOptions(filter).filter(({ value }) => {
       if (value === 'name') return true
-      if (value === 'position') return matchingPlayers.length > 0
+      if (value === 'position' || value === 'featuredSeason') return matchingPlayers.length > 0
       const statView = this.getStatView(filter, value)
       return matchingPlayers.some((player) => {
         const statValue = valueFor(player, value, statView)

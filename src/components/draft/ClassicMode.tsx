@@ -102,6 +102,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
                 players={draft.players}
                 interactionsDisabled={draft.interactionsDisabled}
                 committingPlayerId={draft.committingPlayerId}
+                sort={draft.sort}
                 onSelect={(playerId) => engine.selectPlayer(playerId)}
               />
             </section>

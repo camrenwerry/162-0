@@ -20,7 +20,7 @@ export const ROSTER_SLOTS = [
 export type Position = (typeof POSITIONS)[number]
 export type RosterSlotId = (typeof ROSTER_SLOTS)[number]['id']
 export type PositionFilter = 'ALL' | 'C' | '1B' | '2B' | '3B' | 'SS' | 'OF' | 'DH' | 'SP' | 'RP'
-export type SortKey = 'war' | 'name' | 'position' | 'opsPlus' | 'hr' | 'avg' | 'obp' | 'slg' | 'rbi' | 'sb' | 'eraPlus' | 'era' | 'whip' | 'so' | 'wins' | 'sv'
+export type SortKey = 'name' | 'position' | 'featuredSeason' | 'ops' | 'hr' | 'avg' | 'obp' | 'slg' | 'rbi' | 'sb' | 'era' | 'whip' | 'so' | 'wins' | 'sv'
 
 export interface TeamDecadeCombination {
   id: string
@@ -30,8 +30,7 @@ export interface TeamDecadeCombination {
   decade: Decade
 }
 
-export const DECADES = ['1980s', '1990s', '2000s', '2010s'] as const
-export type Decade = (typeof DECADES)[number]
+export type Decade = `${number}s`
 
 export interface SourceMetadata {
   verified: boolean
@@ -46,12 +45,15 @@ export interface SourceMetadata {
 export interface HitterVisibleStats {
   war: number | null
   opsPlus: number | null
+  ops: number | null
   hr: number | null
   avg: number | null
   obp: number | null
   slg: number | null
   rbi: number | null
   sb: number | null
+  games: number | null
+  plateAppearances: number | null
 }
 
 export interface PitcherVisibleStats {
@@ -63,6 +65,12 @@ export interface PitcherVisibleStats {
   wins: number | null
   saves: number | null
   sv: number | null
+  inningsPitched: number | null
+  games: number | null
+  starts: number | null
+  reliefAppearances: number | null
+  k9: number | null
+  bb9: number | null
 }
 
 export interface HitterScoringStats {
@@ -74,6 +82,7 @@ export interface HitterScoringStats {
   baserunningValue: number | null
   games: number
   plateAppearances: number
+  eraAdjustedOffense?: number | null
 }
 
 export interface PitcherScoringStats {
@@ -86,6 +95,7 @@ export interface PitcherScoringStats {
   gamesStarted?: number
   games?: number
   reliefAppearances: number
+  eraAdjustedPitching?: number | null
 }
 
 interface PlayerBase {
@@ -96,6 +106,7 @@ interface PlayerBase {
   franchiseId: string
   teamAbbreviation: string
   teamDisplayName: string
+  historicalTeamName?: string
   team: string
   decade: Decade
   featuredSeason: number
@@ -192,5 +203,5 @@ export interface DraftResult {
   strongestCategory: Exclude<ScoringCategoryKey, 'overall'>
   weakestCategory: Exclude<ScoringCategoryKey, 'overall'>
   bestPlayerValue: BestPlayerValue | null
-  scoringVersion: '1.0'
+  scoringVersion: '2.0'
 }

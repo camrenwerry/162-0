@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { getCompactPlayerStats } from '../../game/PlayerStats'
-import type { PlayerCardData } from '../../types/draft'
+import type { PlayerCardData, SortKey } from '../../types/draft'
 
 interface PlayerCardProps {
   player: PlayerCardData
@@ -9,10 +9,11 @@ interface PlayerCardProps {
   interactionsDisabled: boolean
   isDrafting: boolean
   statView: 'hitter' | 'pitcher'
+  sort: SortKey
 }
 
-function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDrafting, statView }: PlayerCardProps) {
-  const stats = getCompactPlayerStats(player, statView)
+function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDrafting, statView, sort }: PlayerCardProps) {
+  const stats = getCompactPlayerStats(player, statView, sort)
 
   return (
     <button

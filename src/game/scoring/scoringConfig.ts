@@ -1,9 +1,9 @@
 import type { LetterGrade, Position } from '../../types/draft'
 import type { MetricRange } from './types'
 
-// All v1.0 tuning values live here. Ranges map poor/average/excellent/elite
+// All v2.0 tuning values live here. Ranges map poor/average/excellent/elite
 // featured-season performances onto the common 0–100 scoring scale.
-export const SCORING_VERSION = '1.0' as const
+export const SCORING_VERSION = '2.0' as const
 
 export const NORMALIZATION_SCORE_ANCHORS = {
   poor: 15,
@@ -19,6 +19,8 @@ export const RATE_SCALES = {
 
 export const NORMALIZATION_RANGES = {
   hitter: {
+    eraAdjustedOffense: { poor: 65, average: 100, excellent: 135, elite: 190, direction: 'higher' },
+    ops: { poor: .5, average: .72, excellent: .9, elite: 1.2, direction: 'higher' },
     opsPlus: { poor: 70, average: 100, excellent: 130, elite: 180, direction: 'higher' },
     war: { poor: -1, average: 2, excellent: 5, elite: 10, direction: 'higher' },
     avg: { poor: .210, average: .260, excellent: .310, elite: .370, direction: 'higher' },
@@ -33,23 +35,27 @@ export const NORMALIZATION_RANGES = {
     defense: { poor: -15, average: 0, excellent: 10, elite: 25, direction: 'higher' },
   },
   starter: {
+    eraAdjustedPitching: { poor: 65, average: 100, excellent: 140, elite: 220, direction: 'higher' },
     eraPlus: { poor: 70, average: 100, excellent: 135, elite: 200, direction: 'higher' },
     war: { poor: -1, average: 2, excellent: 5, elite: 10, direction: 'higher' },
     era: { poor: 6, average: 4.2, excellent: 3, elite: 1.5, direction: 'lower' },
     whip: { poor: 1.7, average: 1.3, excellent: 1.08, elite: .78, direction: 'lower' },
     innings: { poor: 50, average: 150, excellent: 210, elite: 270, direction: 'higher' },
     strikeoutRate: { poor: 3, average: 7, excellent: 10, elite: 14, direction: 'higher' },
+    walkRate: { poor: 7, average: 3.5, excellent: 2, elite: .5, direction: 'lower' },
     fip: { poor: 6, average: 4.2, excellent: 3, elite: 1.7, direction: 'lower' },
     rateProxy: { poor: -1, average: 4, excellent: 8, elite: 14, direction: 'higher' },
     starts: { poor: 5, average: 25, excellent: 32, elite: 36, direction: 'higher' },
   },
   reliever: {
+    eraAdjustedPitching: { poor: 65, average: 100, excellent: 145, elite: 240, direction: 'higher' },
     eraPlus: { poor: 70, average: 100, excellent: 140, elite: 220, direction: 'higher' },
     war: { poor: -1, average: 1, excellent: 2.5, elite: 5, direction: 'higher' },
     era: { poor: 6, average: 4.1, excellent: 2.8, elite: 1.2, direction: 'lower' },
     whip: { poor: 1.7, average: 1.3, excellent: 1.05, elite: .72, direction: 'lower' },
     saves: { poor: 0, average: 10, excellent: 32, elite: 55, direction: 'higher' },
     strikeoutRate: { poor: 3, average: 8, excellent: 12, elite: 16, direction: 'higher' },
+    walkRate: { poor: 7, average: 3.5, excellent: 2, elite: .5, direction: 'lower' },
     appearances: { poor: 12, average: 45, excellent: 70, elite: 90, direction: 'higher' },
     fip: { poor: 6, average: 4.1, excellent: 2.8, elite: 1.5, direction: 'lower' },
     rateProxy: { poor: -1, average: 5, excellent: 10, elite: 16, direction: 'higher' },
@@ -58,9 +64,9 @@ export const NORMALIZATION_RANGES = {
 
 // Player weights are redistributed proportionally when a source metric is null.
 export const PLAYER_WEIGHTS = {
-  hitter: { opsPlus: .30, war: .20, obp: .12, slg: .12, hr: .08, rbi: .05, speed: .05, durability: .05, defense: .03 },
-  starter: { eraPlus: .28, war: .22, era: .12, whip: .10, durability: .10, strikeouts: .08, ratePerformance: .06, starts: .04 },
-  reliever: { eraPlus: .28, war: .18, era: .14, whip: .12, saves: .10, strikeouts: .08, workload: .06, ratePerformance: .04 },
+  hitter: { context: .25, ops: .20, obp: .10, slg: .10, hr: .08, rbi: .06, speed: .05, durability: .10, defense: .06 },
+  starter: { context: .27, era: .16, whip: .14, durability: .14, strikeouts: .10, walks: .07, starts: .08, ratePerformance: .04 },
+  reliever: { context: .25, era: .16, whip: .14, saves: .12, strikeouts: .11, walks: .08, workload: .10, ratePerformance: .04 },
 } as const
 
 // Small assignment-position adjustments; these cannot outweigh player quality.
@@ -95,7 +101,7 @@ export const BALANCE_WEIGHTS = {
 } as const
 
 export const CATEGORY_COMPONENT_WEIGHTS = {
-  contact: { avg: 1, obp: 1.4, opsPlus: .6 },
+  contact: { avg: 1, obp: 1.4, ops: .6 },
   powerContactDifferenceRate: 1.5,
 } as const
 

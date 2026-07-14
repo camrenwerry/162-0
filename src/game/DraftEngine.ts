@@ -98,8 +98,7 @@ export class DraftEngine {
       this.state.filter,
     )
     if (!sortOptions.some(({ value }) => value === this.state.sort)) {
-      this.state.sort = sortOptions.find(({ value }) => value === 'war')?.value
-        ?? sortOptions.find(({ value }) => value === 'name')?.value
+      this.state.sort = sortOptions.find(({ value }) => value === 'name')?.value
         ?? sortOptions[0].value
     }
     const selectedPlayer = this.pool.getPlayer(this.state.selectedPlayerId)

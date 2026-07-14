@@ -1,0 +1,1829 @@
+[
+  {
+    "id": "ana-1960s",
+    "franchiseId": "ana",
+    "team": "LAA",
+    "teamName": "Los Angeles Angels of Anaheim",
+    "decade": "1960s"
+  },
+  {
+    "id": "ana-1970s",
+    "franchiseId": "ana",
+    "team": "LAA",
+    "teamName": "Los Angeles Angels of Anaheim",
+    "decade": "1970s"
+  },
+  {
+    "id": "ana-1980s",
+    "franchiseId": "ana",
+    "team": "LAA",
+    "teamName": "Los Angeles Angels of Anaheim",
+    "decade": "1980s"
+  },
+  {
+    "id": "ana-1990s",
+    "franchiseId": "ana",
+    "team": "LAA",
+    "teamName": "Los Angeles Angels of Anaheim",
+    "decade": "1990s"
+  },
+  {
+    "id": "ana-2000s",
+    "franchiseId": "ana",
+    "team": "LAA",
+    "teamName": "Los Angeles Angels of Anaheim",
+    "decade": "2000s"
+  },
+  {
+    "id": "ana-2010s",
+    "franchiseId": "ana",
+    "team": "LAA",
+    "teamName": "Los Angeles Angels of Anaheim",
+    "decade": "2010s"
+  },
+  {
+    "id": "ana-2020s",
+    "franchiseId": "ana",
+    "team": "LAA",
+    "teamName": "Los Angeles Angels of Anaheim",
+    "decade": "2020s"
+  },
+  {
+    "id": "ari-1990s",
+    "franchiseId": "ari",
+    "team": "ARI",
+    "teamName": "Arizona Diamondbacks",
+    "decade": "1990s"
+  },
+  {
+    "id": "ari-2000s",
+    "franchiseId": "ari",
+    "team": "ARI",
+    "teamName": "Arizona Diamondbacks",
+    "decade": "2000s"
+  },
+  {
+    "id": "ari-2010s",
+    "franchiseId": "ari",
+    "team": "ARI",
+    "teamName": "Arizona Diamondbacks",
+    "decade": "2010s"
+  },
+  {
+    "id": "ari-2020s",
+    "franchiseId": "ari",
+    "team": "ARI",
+    "teamName": "Arizona Diamondbacks",
+    "decade": "2020s"
+  },
+  {
+    "id": "atl-1920s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "1920s"
+  },
+  {
+    "id": "atl-1930s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "1930s"
+  },
+  {
+    "id": "atl-1940s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "1940s"
+  },
+  {
+    "id": "atl-1950s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "1950s"
+  },
+  {
+    "id": "atl-1960s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "1960s"
+  },
+  {
+    "id": "atl-1970s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "1970s"
+  },
+  {
+    "id": "atl-1980s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "1980s"
+  },
+  {
+    "id": "atl-1990s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "1990s"
+  },
+  {
+    "id": "atl-2000s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "2000s"
+  },
+  {
+    "id": "atl-2010s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "2010s"
+  },
+  {
+    "id": "atl-2020s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "decade": "2020s"
+  },
+  {
+    "id": "bal-1920s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "1920s"
+  },
+  {
+    "id": "bal-1930s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "1930s"
+  },
+  {
+    "id": "bal-1940s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "1940s"
+  },
+  {
+    "id": "bal-1950s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "1950s"
+  },
+  {
+    "id": "bal-1960s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "1960s"
+  },
+  {
+    "id": "bal-1970s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "1970s"
+  },
+  {
+    "id": "bal-1980s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "1980s"
+  },
+  {
+    "id": "bal-1990s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "1990s"
+  },
+  {
+    "id": "bal-2000s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "2000s"
+  },
+  {
+    "id": "bal-2010s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "2010s"
+  },
+  {
+    "id": "bal-2020s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "decade": "2020s"
+  },
+  {
+    "id": "bos-1920s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "1920s"
+  },
+  {
+    "id": "bos-1930s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "1930s"
+  },
+  {
+    "id": "bos-1940s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "1940s"
+  },
+  {
+    "id": "bos-1950s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "1950s"
+  },
+  {
+    "id": "bos-1960s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "1960s"
+  },
+  {
+    "id": "bos-1970s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "1970s"
+  },
+  {
+    "id": "bos-1980s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "1980s"
+  },
+  {
+    "id": "bos-1990s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "1990s"
+  },
+  {
+    "id": "bos-2000s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "2000s"
+  },
+  {
+    "id": "bos-2010s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "2010s"
+  },
+  {
+    "id": "bos-2020s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "decade": "2020s"
+  },
+  {
+    "id": "chc-1920s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "1920s"
+  },
+  {
+    "id": "chc-1930s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "1930s"
+  },
+  {
+    "id": "chc-1940s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "1940s"
+  },
+  {
+    "id": "chc-1950s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "1950s"
+  },
+  {
+    "id": "chc-1960s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "1960s"
+  },
+  {
+    "id": "chc-1970s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "1970s"
+  },
+  {
+    "id": "chc-1980s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "1980s"
+  },
+  {
+    "id": "chc-1990s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "1990s"
+  },
+  {
+    "id": "chc-2000s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "2000s"
+  },
+  {
+    "id": "chc-2010s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "2010s"
+  },
+  {
+    "id": "chc-2020s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "decade": "2020s"
+  },
+  {
+    "id": "chw-1920s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "1920s"
+  },
+  {
+    "id": "chw-1930s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "1930s"
+  },
+  {
+    "id": "chw-1940s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "1940s"
+  },
+  {
+    "id": "chw-1950s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "1950s"
+  },
+  {
+    "id": "chw-1960s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "1960s"
+  },
+  {
+    "id": "chw-1970s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "1970s"
+  },
+  {
+    "id": "chw-1980s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "1980s"
+  },
+  {
+    "id": "chw-1990s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "1990s"
+  },
+  {
+    "id": "chw-2000s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "2000s"
+  },
+  {
+    "id": "chw-2010s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "2010s"
+  },
+  {
+    "id": "chw-2020s",
+    "franchiseId": "chw",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "decade": "2020s"
+  },
+  {
+    "id": "cin-1920s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "1920s"
+  },
+  {
+    "id": "cin-1930s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "1930s"
+  },
+  {
+    "id": "cin-1940s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "1940s"
+  },
+  {
+    "id": "cin-1950s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "1950s"
+  },
+  {
+    "id": "cin-1960s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "1960s"
+  },
+  {
+    "id": "cin-1970s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "1970s"
+  },
+  {
+    "id": "cin-1980s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "1980s"
+  },
+  {
+    "id": "cin-1990s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "1990s"
+  },
+  {
+    "id": "cin-2000s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "2000s"
+  },
+  {
+    "id": "cin-2010s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "2010s"
+  },
+  {
+    "id": "cin-2020s",
+    "franchiseId": "cin",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "decade": "2020s"
+  },
+  {
+    "id": "cle-1920s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "1920s"
+  },
+  {
+    "id": "cle-1930s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "1930s"
+  },
+  {
+    "id": "cle-1940s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "1940s"
+  },
+  {
+    "id": "cle-1950s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "1950s"
+  },
+  {
+    "id": "cle-1960s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "1960s"
+  },
+  {
+    "id": "cle-1970s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "1970s"
+  },
+  {
+    "id": "cle-1980s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "1980s"
+  },
+  {
+    "id": "cle-1990s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "1990s"
+  },
+  {
+    "id": "cle-2000s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "2000s"
+  },
+  {
+    "id": "cle-2010s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "2010s"
+  },
+  {
+    "id": "cle-2020s",
+    "franchiseId": "cle",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "decade": "2020s"
+  },
+  {
+    "id": "col-1990s",
+    "franchiseId": "col",
+    "team": "COL",
+    "teamName": "Colorado Rockies",
+    "decade": "1990s"
+  },
+  {
+    "id": "col-2000s",
+    "franchiseId": "col",
+    "team": "COL",
+    "teamName": "Colorado Rockies",
+    "decade": "2000s"
+  },
+  {
+    "id": "col-2010s",
+    "franchiseId": "col",
+    "team": "COL",
+    "teamName": "Colorado Rockies",
+    "decade": "2010s"
+  },
+  {
+    "id": "col-2020s",
+    "franchiseId": "col",
+    "team": "COL",
+    "teamName": "Colorado Rockies",
+    "decade": "2020s"
+  },
+  {
+    "id": "det-1920s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "1920s"
+  },
+  {
+    "id": "det-1930s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "1930s"
+  },
+  {
+    "id": "det-1940s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "1940s"
+  },
+  {
+    "id": "det-1950s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "1950s"
+  },
+  {
+    "id": "det-1960s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "1960s"
+  },
+  {
+    "id": "det-1970s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "1970s"
+  },
+  {
+    "id": "det-1980s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "1980s"
+  },
+  {
+    "id": "det-1990s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "1990s"
+  },
+  {
+    "id": "det-2000s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "2000s"
+  },
+  {
+    "id": "det-2010s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "2010s"
+  },
+  {
+    "id": "det-2020s",
+    "franchiseId": "det",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "decade": "2020s"
+  },
+  {
+    "id": "fla-1990s",
+    "franchiseId": "fla",
+    "team": "MIA",
+    "teamName": "Florida Marlins",
+    "decade": "1990s"
+  },
+  {
+    "id": "fla-2000s",
+    "franchiseId": "fla",
+    "team": "MIA",
+    "teamName": "Florida Marlins",
+    "decade": "2000s"
+  },
+  {
+    "id": "fla-2010s",
+    "franchiseId": "fla",
+    "team": "MIA",
+    "teamName": "Florida Marlins",
+    "decade": "2010s"
+  },
+  {
+    "id": "fla-2020s",
+    "franchiseId": "fla",
+    "team": "MIA",
+    "teamName": "Florida Marlins",
+    "decade": "2020s"
+  },
+  {
+    "id": "hou-1960s",
+    "franchiseId": "hou",
+    "team": "HOU",
+    "teamName": "Houston Astros",
+    "decade": "1960s"
+  },
+  {
+    "id": "hou-1970s",
+    "franchiseId": "hou",
+    "team": "HOU",
+    "teamName": "Houston Astros",
+    "decade": "1970s"
+  },
+  {
+    "id": "hou-1980s",
+    "franchiseId": "hou",
+    "team": "HOU",
+    "teamName": "Houston Astros",
+    "decade": "1980s"
+  },
+  {
+    "id": "hou-1990s",
+    "franchiseId": "hou",
+    "team": "HOU",
+    "teamName": "Houston Astros",
+    "decade": "1990s"
+  },
+  {
+    "id": "hou-2000s",
+    "franchiseId": "hou",
+    "team": "HOU",
+    "teamName": "Houston Astros",
+    "decade": "2000s"
+  },
+  {
+    "id": "hou-2010s",
+    "franchiseId": "hou",
+    "team": "HOU",
+    "teamName": "Houston Astros",
+    "decade": "2010s"
+  },
+  {
+    "id": "hou-2020s",
+    "franchiseId": "hou",
+    "team": "HOU",
+    "teamName": "Houston Astros",
+    "decade": "2020s"
+  },
+  {
+    "id": "kcr-1960s",
+    "franchiseId": "kcr",
+    "team": "KCR",
+    "teamName": "Kansas City Royals",
+    "decade": "1960s"
+  },
+  {
+    "id": "kcr-1970s",
+    "franchiseId": "kcr",
+    "team": "KCR",
+    "teamName": "Kansas City Royals",
+    "decade": "1970s"
+  },
+  {
+    "id": "kcr-1980s",
+    "franchiseId": "kcr",
+    "team": "KCR",
+    "teamName": "Kansas City Royals",
+    "decade": "1980s"
+  },
+  {
+    "id": "kcr-1990s",
+    "franchiseId": "kcr",
+    "team": "KCR",
+    "teamName": "Kansas City Royals",
+    "decade": "1990s"
+  },
+  {
+    "id": "kcr-2000s",
+    "franchiseId": "kcr",
+    "team": "KCR",
+    "teamName": "Kansas City Royals",
+    "decade": "2000s"
+  },
+  {
+    "id": "kcr-2010s",
+    "franchiseId": "kcr",
+    "team": "KCR",
+    "teamName": "Kansas City Royals",
+    "decade": "2010s"
+  },
+  {
+    "id": "kcr-2020s",
+    "franchiseId": "kcr",
+    "team": "KCR",
+    "teamName": "Kansas City Royals",
+    "decade": "2020s"
+  },
+  {
+    "id": "lad-1920s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "1920s"
+  },
+  {
+    "id": "lad-1930s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "1930s"
+  },
+  {
+    "id": "lad-1940s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "1940s"
+  },
+  {
+    "id": "lad-1950s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "1950s"
+  },
+  {
+    "id": "lad-1960s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "1960s"
+  },
+  {
+    "id": "lad-1970s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "1970s"
+  },
+  {
+    "id": "lad-1980s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "1980s"
+  },
+  {
+    "id": "lad-1990s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "1990s"
+  },
+  {
+    "id": "lad-2000s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "2000s"
+  },
+  {
+    "id": "lad-2010s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "2010s"
+  },
+  {
+    "id": "lad-2020s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "decade": "2020s"
+  },
+  {
+    "id": "mil-1960s",
+    "franchiseId": "mil",
+    "team": "MIL",
+    "teamName": "Milwaukee Brewers",
+    "decade": "1960s"
+  },
+  {
+    "id": "mil-1970s",
+    "franchiseId": "mil",
+    "team": "MIL",
+    "teamName": "Milwaukee Brewers",
+    "decade": "1970s"
+  },
+  {
+    "id": "mil-1980s",
+    "franchiseId": "mil",
+    "team": "MIL",
+    "teamName": "Milwaukee Brewers",
+    "decade": "1980s"
+  },
+  {
+    "id": "mil-1990s",
+    "franchiseId": "mil",
+    "team": "MIL",
+    "teamName": "Milwaukee Brewers",
+    "decade": "1990s"
+  },
+  {
+    "id": "mil-2000s",
+    "franchiseId": "mil",
+    "team": "MIL",
+    "teamName": "Milwaukee Brewers",
+    "decade": "2000s"
+  },
+  {
+    "id": "mil-2010s",
+    "franchiseId": "mil",
+    "team": "MIL",
+    "teamName": "Milwaukee Brewers",
+    "decade": "2010s"
+  },
+  {
+    "id": "mil-2020s",
+    "franchiseId": "mil",
+    "team": "MIL",
+    "teamName": "Milwaukee Brewers",
+    "decade": "2020s"
+  },
+  {
+    "id": "min-1920s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "1920s"
+  },
+  {
+    "id": "min-1930s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "1930s"
+  },
+  {
+    "id": "min-1940s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "1940s"
+  },
+  {
+    "id": "min-1950s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "1950s"
+  },
+  {
+    "id": "min-1960s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "1960s"
+  },
+  {
+    "id": "min-1970s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "1970s"
+  },
+  {
+    "id": "min-1980s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "1980s"
+  },
+  {
+    "id": "min-1990s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "1990s"
+  },
+  {
+    "id": "min-2000s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "2000s"
+  },
+  {
+    "id": "min-2010s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "2010s"
+  },
+  {
+    "id": "min-2020s",
+    "franchiseId": "min",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "decade": "2020s"
+  },
+  {
+    "id": "nym-1960s",
+    "franchiseId": "nym",
+    "team": "NYM",
+    "teamName": "New York Mets",
+    "decade": "1960s"
+  },
+  {
+    "id": "nym-1970s",
+    "franchiseId": "nym",
+    "team": "NYM",
+    "teamName": "New York Mets",
+    "decade": "1970s"
+  },
+  {
+    "id": "nym-1980s",
+    "franchiseId": "nym",
+    "team": "NYM",
+    "teamName": "New York Mets",
+    "decade": "1980s"
+  },
+  {
+    "id": "nym-1990s",
+    "franchiseId": "nym",
+    "team": "NYM",
+    "teamName": "New York Mets",
+    "decade": "1990s"
+  },
+  {
+    "id": "nym-2000s",
+    "franchiseId": "nym",
+    "team": "NYM",
+    "teamName": "New York Mets",
+    "decade": "2000s"
+  },
+  {
+    "id": "nym-2010s",
+    "franchiseId": "nym",
+    "team": "NYM",
+    "teamName": "New York Mets",
+    "decade": "2010s"
+  },
+  {
+    "id": "nym-2020s",
+    "franchiseId": "nym",
+    "team": "NYM",
+    "teamName": "New York Mets",
+    "decade": "2020s"
+  },
+  {
+    "id": "nyy-1920s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "1920s"
+  },
+  {
+    "id": "nyy-1930s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "1930s"
+  },
+  {
+    "id": "nyy-1940s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "1940s"
+  },
+  {
+    "id": "nyy-1950s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "1950s"
+  },
+  {
+    "id": "nyy-1960s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "1960s"
+  },
+  {
+    "id": "nyy-1970s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "1970s"
+  },
+  {
+    "id": "nyy-1980s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "1980s"
+  },
+  {
+    "id": "nyy-1990s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "1990s"
+  },
+  {
+    "id": "nyy-2000s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "2000s"
+  },
+  {
+    "id": "nyy-2010s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "2010s"
+  },
+  {
+    "id": "nyy-2020s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "decade": "2020s"
+  },
+  {
+    "id": "oak-1920s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "1920s"
+  },
+  {
+    "id": "oak-1930s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "1930s"
+  },
+  {
+    "id": "oak-1940s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "1940s"
+  },
+  {
+    "id": "oak-1950s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "1950s"
+  },
+  {
+    "id": "oak-1960s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "1960s"
+  },
+  {
+    "id": "oak-1970s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "1970s"
+  },
+  {
+    "id": "oak-1980s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "1980s"
+  },
+  {
+    "id": "oak-1990s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "1990s"
+  },
+  {
+    "id": "oak-2000s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "2000s"
+  },
+  {
+    "id": "oak-2010s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "2010s"
+  },
+  {
+    "id": "oak-2020s",
+    "franchiseId": "oak",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "decade": "2020s"
+  },
+  {
+    "id": "phi-1920s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "1920s"
+  },
+  {
+    "id": "phi-1930s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "1930s"
+  },
+  {
+    "id": "phi-1940s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "1940s"
+  },
+  {
+    "id": "phi-1950s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "1950s"
+  },
+  {
+    "id": "phi-1960s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "1960s"
+  },
+  {
+    "id": "phi-1970s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "1970s"
+  },
+  {
+    "id": "phi-1980s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "1980s"
+  },
+  {
+    "id": "phi-1990s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "1990s"
+  },
+  {
+    "id": "phi-2000s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "2000s"
+  },
+  {
+    "id": "phi-2010s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "2010s"
+  },
+  {
+    "id": "phi-2020s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "decade": "2020s"
+  },
+  {
+    "id": "pit-1920s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "1920s"
+  },
+  {
+    "id": "pit-1930s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "1930s"
+  },
+  {
+    "id": "pit-1940s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "1940s"
+  },
+  {
+    "id": "pit-1950s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "1950s"
+  },
+  {
+    "id": "pit-1960s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "1960s"
+  },
+  {
+    "id": "pit-1970s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "1970s"
+  },
+  {
+    "id": "pit-1980s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "1980s"
+  },
+  {
+    "id": "pit-1990s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "1990s"
+  },
+  {
+    "id": "pit-2000s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "2000s"
+  },
+  {
+    "id": "pit-2010s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "2010s"
+  },
+  {
+    "id": "pit-2020s",
+    "franchiseId": "pit",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "decade": "2020s"
+  },
+  {
+    "id": "sdp-1960s",
+    "franchiseId": "sdp",
+    "team": "SDP",
+    "teamName": "San Diego Padres",
+    "decade": "1960s"
+  },
+  {
+    "id": "sdp-1970s",
+    "franchiseId": "sdp",
+    "team": "SDP",
+    "teamName": "San Diego Padres",
+    "decade": "1970s"
+  },
+  {
+    "id": "sdp-1980s",
+    "franchiseId": "sdp",
+    "team": "SDP",
+    "teamName": "San Diego Padres",
+    "decade": "1980s"
+  },
+  {
+    "id": "sdp-1990s",
+    "franchiseId": "sdp",
+    "team": "SDP",
+    "teamName": "San Diego Padres",
+    "decade": "1990s"
+  },
+  {
+    "id": "sdp-2000s",
+    "franchiseId": "sdp",
+    "team": "SDP",
+    "teamName": "San Diego Padres",
+    "decade": "2000s"
+  },
+  {
+    "id": "sdp-2010s",
+    "franchiseId": "sdp",
+    "team": "SDP",
+    "teamName": "San Diego Padres",
+    "decade": "2010s"
+  },
+  {
+    "id": "sdp-2020s",
+    "franchiseId": "sdp",
+    "team": "SDP",
+    "teamName": "San Diego Padres",
+    "decade": "2020s"
+  },
+  {
+    "id": "sea-1970s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Seattle Mariners",
+    "decade": "1970s"
+  },
+  {
+    "id": "sea-1980s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Seattle Mariners",
+    "decade": "1980s"
+  },
+  {
+    "id": "sea-1990s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Seattle Mariners",
+    "decade": "1990s"
+  },
+  {
+    "id": "sea-2000s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Seattle Mariners",
+    "decade": "2000s"
+  },
+  {
+    "id": "sea-2010s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Seattle Mariners",
+    "decade": "2010s"
+  },
+  {
+    "id": "sea-2020s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Seattle Mariners",
+    "decade": "2020s"
+  },
+  {
+    "id": "sfg-1920s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "1920s"
+  },
+  {
+    "id": "sfg-1930s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "1930s"
+  },
+  {
+    "id": "sfg-1940s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "1940s"
+  },
+  {
+    "id": "sfg-1950s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "1950s"
+  },
+  {
+    "id": "sfg-1960s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "1960s"
+  },
+  {
+    "id": "sfg-1970s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "1970s"
+  },
+  {
+    "id": "sfg-1980s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "1980s"
+  },
+  {
+    "id": "sfg-1990s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "1990s"
+  },
+  {
+    "id": "sfg-2000s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "2000s"
+  },
+  {
+    "id": "sfg-2010s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "2010s"
+  },
+  {
+    "id": "sfg-2020s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "decade": "2020s"
+  },
+  {
+    "id": "sls-1920s",
+    "franchiseId": "sls",
+    "team": "SLS",
+    "teamName": "St. Louis Stars",
+    "decade": "1920s"
+  },
+  {
+    "id": "stl-1920s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "1920s"
+  },
+  {
+    "id": "stl-1930s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "1930s"
+  },
+  {
+    "id": "stl-1940s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "1940s"
+  },
+  {
+    "id": "stl-1950s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "1950s"
+  },
+  {
+    "id": "stl-1960s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "1960s"
+  },
+  {
+    "id": "stl-1970s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "1970s"
+  },
+  {
+    "id": "stl-1980s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "1980s"
+  },
+  {
+    "id": "stl-1990s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "1990s"
+  },
+  {
+    "id": "stl-2000s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "2000s"
+  },
+  {
+    "id": "stl-2010s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "2010s"
+  },
+  {
+    "id": "stl-2020s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "decade": "2020s"
+  },
+  {
+    "id": "tbd-1990s",
+    "franchiseId": "tbd",
+    "team": "TBR",
+    "teamName": "Tampa Bay Rays",
+    "decade": "1990s"
+  },
+  {
+    "id": "tbd-2000s",
+    "franchiseId": "tbd",
+    "team": "TBR",
+    "teamName": "Tampa Bay Rays",
+    "decade": "2000s"
+  },
+  {
+    "id": "tbd-2010s",
+    "franchiseId": "tbd",
+    "team": "TBR",
+    "teamName": "Tampa Bay Rays",
+    "decade": "2010s"
+  },
+  {
+    "id": "tbd-2020s",
+    "franchiseId": "tbd",
+    "team": "TBR",
+    "teamName": "Tampa Bay Rays",
+    "decade": "2020s"
+  },
+  {
+    "id": "tex-1960s",
+    "franchiseId": "tex",
+    "team": "TEX",
+    "teamName": "Texas Rangers",
+    "decade": "1960s"
+  },
+  {
+    "id": "tex-1970s",
+    "franchiseId": "tex",
+    "team": "TEX",
+    "teamName": "Texas Rangers",
+    "decade": "1970s"
+  },
+  {
+    "id": "tex-1980s",
+    "franchiseId": "tex",
+    "team": "TEX",
+    "teamName": "Texas Rangers",
+    "decade": "1980s"
+  },
+  {
+    "id": "tex-1990s",
+    "franchiseId": "tex",
+    "team": "TEX",
+    "teamName": "Texas Rangers",
+    "decade": "1990s"
+  },
+  {
+    "id": "tex-2000s",
+    "franchiseId": "tex",
+    "team": "TEX",
+    "teamName": "Texas Rangers",
+    "decade": "2000s"
+  },
+  {
+    "id": "tex-2010s",
+    "franchiseId": "tex",
+    "team": "TEX",
+    "teamName": "Texas Rangers",
+    "decade": "2010s"
+  },
+  {
+    "id": "tex-2020s",
+    "franchiseId": "tex",
+    "team": "TEX",
+    "teamName": "Texas Rangers",
+    "decade": "2020s"
+  },
+  {
+    "id": "tor-1970s",
+    "franchiseId": "tor",
+    "team": "TOR",
+    "teamName": "Toronto Blue Jays",
+    "decade": "1970s"
+  },
+  {
+    "id": "tor-1980s",
+    "franchiseId": "tor",
+    "team": "TOR",
+    "teamName": "Toronto Blue Jays",
+    "decade": "1980s"
+  },
+  {
+    "id": "tor-1990s",
+    "franchiseId": "tor",
+    "team": "TOR",
+    "teamName": "Toronto Blue Jays",
+    "decade": "1990s"
+  },
+  {
+    "id": "tor-2000s",
+    "franchiseId": "tor",
+    "team": "TOR",
+    "teamName": "Toronto Blue Jays",
+    "decade": "2000s"
+  },
+  {
+    "id": "tor-2010s",
+    "franchiseId": "tor",
+    "team": "TOR",
+    "teamName": "Toronto Blue Jays",
+    "decade": "2010s"
+  },
+  {
+    "id": "tor-2020s",
+    "franchiseId": "tor",
+    "team": "TOR",
+    "teamName": "Toronto Blue Jays",
+    "decade": "2020s"
+  },
+  {
+    "id": "wsn-1960s",
+    "franchiseId": "wsn",
+    "team": "WSN",
+    "teamName": "Washington Nationals",
+    "decade": "1960s"
+  },
+  {
+    "id": "wsn-1970s",
+    "franchiseId": "wsn",
+    "team": "WSN",
+    "teamName": "Washington Nationals",
+    "decade": "1970s"
+  },
+  {
+    "id": "wsn-1980s",
+    "franchiseId": "wsn",
+    "team": "WSN",
+    "teamName": "Washington Nationals",
+    "decade": "1980s"
+  },
+  {
+    "id": "wsn-1990s",
+    "franchiseId": "wsn",
+    "team": "WSN",
+    "teamName": "Washington Nationals",
+    "decade": "1990s"
+  },
+  {
+    "id": "wsn-2000s",
+    "franchiseId": "wsn",
+    "team": "WSN",
+    "teamName": "Washington Nationals",
+    "decade": "2000s"
+  },
+  {
+    "id": "wsn-2010s",
+    "franchiseId": "wsn",
+    "team": "WSN",
+    "teamName": "Washington Nationals",
+    "decade": "2010s"
+  },
+  {
+    "id": "wsn-2020s",
+    "franchiseId": "wsn",
+    "team": "WSN",
+    "teamName": "Washington Nationals",
+    "decade": "2020s"
+  }
+]

@@ -46,12 +46,12 @@ function fixturePlayer(player: Player, level: FixtureLevel, defenseOverride?: nu
     const fixture = HITTER_FIXTURES[level]
     return {
       ...player,
-      visibleStats: { war: fixture.war, opsPlus: fixture.opsPlus, hr: fixture.hr, avg: fixture.avg, obp: fixture.obp, slg: fixture.slg, rbi: fixture.rbi, sb: fixture.sb },
-      stats: { war: fixture.war, opsPlus: fixture.opsPlus, hr: fixture.hr, avg: fixture.avg, obp: fixture.obp, slg: fixture.slg, rbi: fixture.rbi, sb: fixture.sb },
+      visibleStats: { war: fixture.war, opsPlus: fixture.opsPlus, ops: fixture.obp + fixture.slg, hr: fixture.hr, avg: fixture.avg, obp: fixture.obp, slg: fixture.slg, rbi: fixture.rbi, sb: fixture.sb, games: fixture.games, plateAppearances: fixture.pa },
+      stats: { war: fixture.war, opsPlus: fixture.opsPlus, ops: fixture.obp + fixture.slg, hr: fixture.hr, avg: fixture.avg, obp: fixture.obp, slg: fixture.slg, rbi: fixture.rbi, sb: fixture.sb, games: fixture.games, plateAppearances: fixture.pa },
       scoringStats: {
         ...player.scoringStats,
         obp: fixture.obp, slg: fixture.slg, wrcPlus: fixture.opsPlus, games: fixture.games, plateAppearances: fixture.pa,
-        defensiveValue: defenseOverride ?? fixture.defense, baserunningValue: fixture.baserunning,
+        defensiveValue: defenseOverride ?? fixture.defense, baserunningValue: fixture.baserunning, eraAdjustedOffense: fixture.opsPlus,
       },
     }
   }
@@ -64,6 +64,8 @@ function fixturePlayer(player: Player, level: FixtureLevel, defenseOverride?: nu
   const stats = {
     war: fixture.war, eraPlus: fixture.eraPlus, era: fixture.era, whip: fixture.whip,
     so: Math.round(innings * fixture.soRate / 9), wins: fixture.wins, saves: fixture.saves, sv: fixture.saves,
+    inningsPitched: innings, games: starts + reliefAppearances, starts, reliefAppearances,
+    k9: fixture.soRate, bb9: fixture.walkRate,
   }
   return {
     ...player,
@@ -73,7 +75,7 @@ function fixturePlayer(player: Player, level: FixtureLevel, defenseOverride?: nu
       ...player.scoringStats,
       whip: fixture.whip, fip: fixture.fip, inningsPitched: innings, strikeoutRate: fixture.soRate,
       walkRate: fixture.walkRate, starts, gamesStarted: starts, games: starts + reliefAppearances,
-      reliefAppearances,
+      reliefAppearances, eraAdjustedPitching: fixture.eraPlus,
     },
   }
 }
@@ -134,7 +136,7 @@ assert(Math.abs(missingWarValue.components.reduce((total, component) => total + 
 assert(missingWarValue.value > 50, 'a strong hitter with one missing metric should remain strong')
 const lowCoverage = weightedScore([{ metric: 'only metric', rawValue: 1, normalizedValue: 90, configuredWeight: .1 }])
 assert(lowCoverage.score > 50 && lowCoverage.score < 90, 'insufficient coverage must blend toward neutral rather than treat missing metrics as zero')
-assert(normalizeMetric(160, NORMALIZATION_RANGES.hitter.opsPlus) > normalizeMetric(100, NORMALIZATION_RANGES.hitter.opsPlus))
+assert(normalizeMetric(1.05, NORMALIZATION_RANGES.hitter.ops) > normalizeMetric(.72, NORMALIZATION_RANGES.hitter.ops))
 assert(normalizeMetric(2, NORMALIZATION_RANGES.starter.era) > normalizeMetric(5, NORMALIZATION_RANGES.starter.era), 'lower-is-better normalization must be supported')
 
 const exceptionalScores = { ...perfect.categoryScores, overall: 100, offense: 100, defense: 100, startingPitching: 100, reliefPitching: 100, rosterBalance: 100 }
@@ -147,11 +149,11 @@ assert.equal(gradeForScore(80), 'B')
 assert.equal(gradeForScore(69), 'C+')
 assert.equal(gradeForScore(20), 'F')
 
-assert.equal(strong.scoringVersion, '1.0')
+assert.equal(strong.scoringVersion, '2.0')
 assert.equal(Object.keys(strong.roster).length, ROSTER_SLOTS.length)
 assert(strong.bestPlayerValue)
 assert(strong.strongestCategory && strong.weakestCategory)
 assert.equal(Object.keys(strong.categoryScores).length, 9)
 assert.deepEqual(Object.keys(strong.categoryScores), Object.keys(strong.categoryGrades))
 
-console.log(`Scoring v1.0 tests passed: weak ${weak.wins}–${weak.losses}, average ${average.wins}–${average.losses}, strong ${strong.wins}–${strong.losses}, perfect fixture ${perfect.wins}–${perfect.losses}.`)
+console.log(`Scoring v2.0 tests passed: weak ${weak.wins}–${weak.losses}, average ${average.wins}–${average.losses}, strong ${strong.wins}–${strong.losses}, perfect fixture ${perfect.wins}–${perfect.losses}.`)

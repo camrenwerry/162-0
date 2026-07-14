@@ -1,0 +1,1392 @@
+[
+  {
+    "franchiseId": "ab2",
+    "lahmanFranchiseId": "AB2",
+    "team": "ID",
+    "teamName": "Indianapolis ABCs",
+    "historicalNames": [
+      "Indianapolis ABCs",
+      "Indianapolis ABCs/Detroit Stars"
+    ],
+    "sourceTeamIds": [
+      "AB2",
+      "ID"
+    ],
+    "firstSeason": 1931,
+    "lastSeason": 1933
+  },
+  {
+    "franchiseId": "abc",
+    "lahmanFranchiseId": "ABC",
+    "team": "ABC",
+    "teamName": "Indianapolis ABCs",
+    "historicalNames": [
+      "Indianapolis ABCs"
+    ],
+    "sourceTeamIds": [
+      "ABC"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1926
+  },
+  {
+    "franchiseId": "acg",
+    "lahmanFranchiseId": "ACG",
+    "team": "ACG",
+    "teamName": "Akron Grays / Cleveland Giants",
+    "historicalNames": [
+      "Akron Grays / Cleveland Giants"
+    ],
+    "sourceTeamIds": [
+      "ACG"
+    ],
+    "firstSeason": 1933,
+    "lastSeason": 1933
+  },
+  {
+    "franchiseId": "ana",
+    "lahmanFranchiseId": "ANA",
+    "team": "LAA",
+    "teamName": "Los Angeles Angels of Anaheim",
+    "historicalNames": [
+      "Los Angeles Angels",
+      "California Angels",
+      "Anaheim Angels",
+      "Los Angeles Angels of Anaheim"
+    ],
+    "sourceTeamIds": [
+      "ANA",
+      "CAL",
+      "LAA"
+    ],
+    "firstSeason": 1961,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "ari",
+    "lahmanFranchiseId": "ARI",
+    "team": "ARI",
+    "teamName": "Arizona Diamondbacks",
+    "historicalNames": [
+      "Arizona Diamondbacks"
+    ],
+    "sourceTeamIds": [
+      "ARI"
+    ],
+    "firstSeason": 1998,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "atl",
+    "lahmanFranchiseId": "ATL",
+    "team": "ATL",
+    "teamName": "Atlanta Braves",
+    "historicalNames": [
+      "Boston Braves",
+      "Boston Bees",
+      "Milwaukee Braves",
+      "Atlanta Braves"
+    ],
+    "sourceTeamIds": [
+      "ATL",
+      "BSN",
+      "ML1"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "bal",
+    "lahmanFranchiseId": "BAL",
+    "team": "BAL",
+    "teamName": "Baltimore Orioles",
+    "historicalNames": [
+      "St. Louis Browns",
+      "Baltimore Orioles"
+    ],
+    "sourceTeamIds": [
+      "BAL",
+      "SLA"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "bbb",
+    "lahmanFranchiseId": "BBB",
+    "team": "BBB",
+    "teamName": "Birmingham Black Barons",
+    "historicalNames": [
+      "Birmingham Black Barons"
+    ],
+    "sourceTeamIds": [
+      "BBB"
+    ],
+    "firstSeason": 1923,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "bbs",
+    "lahmanFranchiseId": "BBS",
+    "team": "BBS",
+    "teamName": "Baltimore Black Sox",
+    "historicalNames": [
+      "Baltimore Black Sox",
+      "Baltimore Sox"
+    ],
+    "sourceTeamIds": [
+      "BBS",
+      "SOX"
+    ],
+    "firstSeason": 1922,
+    "lastSeason": 1934
+  },
+  {
+    "franchiseId": "bca",
+    "lahmanFranchiseId": "BCA",
+    "team": "IAB",
+    "teamName": "Atlanta Black Crackers",
+    "historicalNames": [
+      "Atlanta Black Crackers",
+      "Indianapolis ABCs/Atlanta Black Crackers"
+    ],
+    "sourceTeamIds": [
+      "BCA",
+      "IAB"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1939
+  },
+  {
+    "franchiseId": "beg",
+    "lahmanFranchiseId": "BEG",
+    "team": "BEG",
+    "teamName": "Baltimore Elite Giants",
+    "historicalNames": [
+      "Nashville Elite Giants",
+      "Cleveland Cubs",
+      "Columbus Elite Giants",
+      "Washington Elite Giants",
+      "Baltimore Elite Giants"
+    ],
+    "sourceTeamIds": [
+      "BEG",
+      "CCU",
+      "CEG",
+      "NEG",
+      "WEG"
+    ],
+    "firstSeason": 1930,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "bg1",
+    "lahmanFranchiseId": "BG1",
+    "team": "NYB",
+    "teamName": "Atlantic City Bacharach Giants",
+    "historicalNames": [
+      "Atlantic City Bacharach Giants",
+      "New York Bacharach Giants"
+    ],
+    "sourceTeamIds": [
+      "AC",
+      "NYB"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1922
+  },
+  {
+    "franchiseId": "bg2",
+    "lahmanFranchiseId": "BG2",
+    "team": "ACB",
+    "teamName": "Atlantic City Bacharach Giants",
+    "historicalNames": [
+      "Atlantic City Bacharach Giants"
+    ],
+    "sourceTeamIds": [
+      "ACB"
+    ],
+    "firstSeason": 1923,
+    "lastSeason": 1929
+  },
+  {
+    "franchiseId": "bos",
+    "lahmanFranchiseId": "BOS",
+    "team": "BOS",
+    "teamName": "Boston Red Sox",
+    "historicalNames": [
+      "Boston Red Sox"
+    ],
+    "sourceTeamIds": [
+      "BOS"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "br2",
+    "lahmanFranchiseId": "BR2",
+    "team": "BRG",
+    "teamName": "Brooklyn Royal Giants",
+    "historicalNames": [
+      "Brooklyn Royal Giants"
+    ],
+    "sourceTeamIds": [
+      "BRG"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1927
+  },
+  {
+    "franchiseId": "cag",
+    "lahmanFranchiseId": "CAG",
+    "team": "CAG",
+    "teamName": "Chicago American Giants",
+    "historicalNames": [
+      "Chicago American Giants",
+      "Chicago Columbia Giants"
+    ],
+    "sourceTeamIds": [
+      "CAG",
+      "CC2"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "cbb",
+    "lahmanFranchiseId": "CBB",
+    "team": "CBB",
+    "teamName": "Columbus Blue Birds",
+    "historicalNames": [
+      "Columbus Blue Birds"
+    ],
+    "sourceTeamIds": [
+      "CBB"
+    ],
+    "firstSeason": 1933,
+    "lastSeason": 1933
+  },
+  {
+    "franchiseId": "cbe",
+    "lahmanFranchiseId": "CBE",
+    "team": "CBE",
+    "teamName": "Cleveland Buckeyes",
+    "historicalNames": [
+      "Cincinnati-Cleveland Buckeyes",
+      "Cleveland Buckeyes"
+    ],
+    "sourceTeamIds": [
+      "CBE",
+      "CCB"
+    ],
+    "firstSeason": 1942,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "cbn",
+    "lahmanFranchiseId": "CBN",
+    "team": "CBN",
+    "teamName": "Cleveland Browns",
+    "historicalNames": [
+      "Cleveland Browns"
+    ],
+    "sourceTeamIds": [
+      "CBN"
+    ],
+    "firstSeason": 1924,
+    "lastSeason": 1924
+  },
+  {
+    "franchiseId": "cel",
+    "lahmanFranchiseId": "CEL",
+    "team": "CEL",
+    "teamName": "Cleveland Elites",
+    "historicalNames": [
+      "Cleveland Elites"
+    ],
+    "sourceTeamIds": [
+      "CEL"
+    ],
+    "firstSeason": 1926,
+    "lastSeason": 1926
+  },
+  {
+    "franchiseId": "chc",
+    "lahmanFranchiseId": "CHC",
+    "team": "CHC",
+    "teamName": "Chicago Cubs",
+    "historicalNames": [
+      "Chicago Cubs"
+    ],
+    "sourceTeamIds": [
+      "CHN"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "cht",
+    "lahmanFranchiseId": "CHT",
+    "team": "CHT",
+    "teamName": "Cleveland Hornets",
+    "historicalNames": [
+      "Cleveland Hornets"
+    ],
+    "sourceTeamIds": [
+      "CHT"
+    ],
+    "firstSeason": 1927,
+    "lastSeason": 1927
+  },
+  {
+    "franchiseId": "chw",
+    "lahmanFranchiseId": "CHW",
+    "team": "CHW",
+    "teamName": "Chicago White Sox",
+    "historicalNames": [
+      "Chicago White Sox"
+    ],
+    "sourceTeamIds": [
+      "CHA"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "cin",
+    "lahmanFranchiseId": "CIN",
+    "team": "CIN",
+    "teamName": "Cincinnati Reds",
+    "historicalNames": [
+      "Cincinnati Reds",
+      "Cincinnati Redlegs"
+    ],
+    "sourceTeamIds": [
+      "CIN"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "cl2",
+    "lahmanFranchiseId": "CL2",
+    "team": "CLS",
+    "teamName": "Cleveland Stars",
+    "historicalNames": [
+      "Cleveland Stars"
+    ],
+    "sourceTeamIds": [
+      "CLS"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "cle",
+    "lahmanFranchiseId": "CLE",
+    "team": "CLE",
+    "teamName": "Cleveland Indians",
+    "historicalNames": [
+      "Cleveland Indians",
+      "Cleveland Guardians"
+    ],
+    "sourceTeamIds": [
+      "CLE"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "cob",
+    "lahmanFranchiseId": "COB",
+    "team": "COB",
+    "teamName": "Columbus Buckeyes",
+    "historicalNames": [
+      "Columbus Buckeyes"
+    ],
+    "sourceTeamIds": [
+      "COB"
+    ],
+    "firstSeason": 1921,
+    "lastSeason": 1921
+  },
+  {
+    "franchiseId": "cog",
+    "lahmanFranchiseId": "COG",
+    "team": "COG",
+    "teamName": "Chicago Giants",
+    "historicalNames": [
+      "Chicago Giants"
+    ],
+    "sourceTeamIds": [
+      "COG"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1921
+  },
+  {
+    "franchiseId": "col",
+    "lahmanFranchiseId": "COL",
+    "team": "COL",
+    "teamName": "Colorado Rockies",
+    "historicalNames": [
+      "Colorado Rockies"
+    ],
+    "sourceTeamIds": [
+      "COL"
+    ],
+    "firstSeason": 1993,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "cot",
+    "lahmanFranchiseId": "COT",
+    "team": "COT",
+    "teamName": "Columbus Turf Club",
+    "historicalNames": [
+      "Columbus Turf Club"
+    ],
+    "sourceTeamIds": [
+      "COT"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "crs",
+    "lahmanFranchiseId": "CRS",
+    "team": "CRS",
+    "teamName": "Cleveland Red Sox",
+    "historicalNames": [
+      "Cleveland Red Sox"
+    ],
+    "sourceTeamIds": [
+      "CRS"
+    ],
+    "firstSeason": 1934,
+    "lastSeason": 1934
+  },
+  {
+    "franchiseId": "cse",
+    "lahmanFranchiseId": "CSE",
+    "team": "CSE",
+    "teamName": "Cuban Stars East",
+    "historicalNames": [
+      "Cuban Stars East"
+    ],
+    "sourceTeamIds": [
+      "CSE"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1929
+  },
+  {
+    "franchiseId": "csw",
+    "lahmanFranchiseId": "CSW",
+    "team": "CSW",
+    "teamName": "Cuban Stars West",
+    "historicalNames": [
+      "Cuban Stars West",
+      "Cincinnati Cuban Stars"
+    ],
+    "sourceTeamIds": [
+      "CS",
+      "CSW"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1930
+  },
+  {
+    "franchiseId": "ct",
+    "lahmanFranchiseId": "CT",
+    "team": "CT",
+    "teamName": "Cincinnati Tigers",
+    "historicalNames": [
+      "Cincinnati Tigers"
+    ],
+    "sourceTeamIds": [
+      "CT"
+    ],
+    "firstSeason": 1937,
+    "lastSeason": 1937
+  },
+  {
+    "franchiseId": "ctg",
+    "lahmanFranchiseId": "CTG",
+    "team": "CTG",
+    "teamName": "Cleveland Tigers",
+    "historicalNames": [
+      "Cleveland Tigers"
+    ],
+    "sourceTeamIds": [
+      "CTG"
+    ],
+    "firstSeason": 1928,
+    "lastSeason": 1928
+  },
+  {
+    "franchiseId": "cts",
+    "lahmanFranchiseId": "CTS",
+    "team": "CTS",
+    "teamName": "Cleveland Tate Stars",
+    "historicalNames": [
+      "Cleveland Tate Stars"
+    ],
+    "sourceTeamIds": [
+      "CTS"
+    ],
+    "firstSeason": 1922,
+    "lastSeason": 1922
+  },
+  {
+    "franchiseId": "cup",
+    "lahmanFranchiseId": "CUP",
+    "team": "CUP",
+    "teamName": "Pollock's Cuban Stars",
+    "historicalNames": [
+      "Pollock's Cuban Stars"
+    ],
+    "sourceTeamIds": [
+      "CUP"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "det",
+    "lahmanFranchiseId": "DET",
+    "team": "DET",
+    "teamName": "Detroit Tigers",
+    "historicalNames": [
+      "Detroit Tigers"
+    ],
+    "sourceTeamIds": [
+      "DET"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "ds",
+    "lahmanFranchiseId": "DS",
+    "team": "DS",
+    "teamName": "Detroit Stars",
+    "historicalNames": [
+      "Detroit Stars"
+    ],
+    "sourceTeamIds": [
+      "DS"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1931
+  },
+  {
+    "franchiseId": "dts",
+    "lahmanFranchiseId": "DTS",
+    "team": "DTS",
+    "teamName": "Detroit Stars",
+    "historicalNames": [
+      "Detroit Stars"
+    ],
+    "sourceTeamIds": [
+      "DTS"
+    ],
+    "firstSeason": 1937,
+    "lastSeason": 1937
+  },
+  {
+    "franchiseId": "dw",
+    "lahmanFranchiseId": "DW",
+    "team": "DW",
+    "teamName": "Detroit Wolves",
+    "historicalNames": [
+      "Detroit Wolves"
+    ],
+    "sourceTeamIds": [
+      "DW"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "dym",
+    "lahmanFranchiseId": "DYM",
+    "team": "DM",
+    "teamName": "Dayton Marcos",
+    "historicalNames": [
+      "Dayton Marcos"
+    ],
+    "sourceTeamIds": [
+      "DM"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1926
+  },
+  {
+    "franchiseId": "fla",
+    "lahmanFranchiseId": "FLA",
+    "team": "MIA",
+    "teamName": "Florida Marlins",
+    "historicalNames": [
+      "Florida Marlins",
+      "Miami Marlins"
+    ],
+    "sourceTeamIds": [
+      "FLO",
+      "MIA"
+    ],
+    "firstSeason": 1993,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "hbg",
+    "lahmanFranchiseId": "HBG",
+    "team": "HBG",
+    "teamName": "Harrisburg Giants",
+    "historicalNames": [
+      "Harrisburg Giants"
+    ],
+    "sourceTeamIds": [
+      "HBG"
+    ],
+    "firstSeason": 1924,
+    "lastSeason": 1927
+  },
+  {
+    "franchiseId": "hg",
+    "lahmanFranchiseId": "HG",
+    "team": "HG",
+    "teamName": "Homestead Grays",
+    "historicalNames": [
+      "Homestead Grays"
+    ],
+    "sourceTeamIds": [
+      "HG"
+    ],
+    "firstSeason": 1928,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "hil",
+    "lahmanFranchiseId": "HIL",
+    "team": "HIL",
+    "teamName": "Hilldale Club",
+    "historicalNames": [
+      "Hilldale Club"
+    ],
+    "sourceTeamIds": [
+      "HIL"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "hou",
+    "lahmanFranchiseId": "HOU",
+    "team": "HOU",
+    "teamName": "Houston Astros",
+    "historicalNames": [
+      "Houston Colt .45's",
+      "Houston Astros"
+    ],
+    "sourceTeamIds": [
+      "HOU"
+    ],
+    "firstSeason": 1962,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "ia",
+    "lahmanFranchiseId": "IA",
+    "team": "IA",
+    "teamName": "Indianapolis Athletics",
+    "historicalNames": [
+      "Indianapolis Athletics"
+    ],
+    "sourceTeamIds": [
+      "IA"
+    ],
+    "firstSeason": 1937,
+    "lastSeason": 1937
+  },
+  {
+    "franchiseId": "ic",
+    "lahmanFranchiseId": "IC",
+    "team": "IC",
+    "teamName": "Cincinnati-Indianapolis Clowns",
+    "historicalNames": [
+      "Cincinnati Clowns",
+      "Cincinnati-Indianapolis Clowns",
+      "Indianapolis Clowns"
+    ],
+    "sourceTeamIds": [
+      "CC",
+      "CIC",
+      "IC"
+    ],
+    "firstSeason": 1943,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "jrc",
+    "lahmanFranchiseId": "JRC",
+    "team": "JRC",
+    "teamName": "Jacksonville Red Caps",
+    "historicalNames": [
+      "Jacksonville Red Caps",
+      "Cleveland Bears"
+    ],
+    "sourceTeamIds": [
+      "CBR",
+      "JRC"
+    ],
+    "firstSeason": 1938,
+    "lastSeason": 1942
+  },
+  {
+    "franchiseId": "kcm",
+    "lahmanFranchiseId": "KCM",
+    "team": "KCM",
+    "teamName": "Kansas City Monarchs",
+    "historicalNames": [
+      "Kansas City Monarchs"
+    ],
+    "sourceTeamIds": [
+      "KCM"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "kcr",
+    "lahmanFranchiseId": "KCR",
+    "team": "KCR",
+    "teamName": "Kansas City Royals",
+    "historicalNames": [
+      "Kansas City Royals"
+    ],
+    "sourceTeamIds": [
+      "KCA"
+    ],
+    "firstSeason": 1969,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "lad",
+    "lahmanFranchiseId": "LAD",
+    "team": "LAD",
+    "teamName": "Los Angeles Dodgers",
+    "historicalNames": [
+      "Brooklyn Robins",
+      "Brooklyn Dodgers",
+      "Los Angeles Dodgers"
+    ],
+    "sourceTeamIds": [
+      "BRO",
+      "LAN"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "lrg",
+    "lahmanFranchiseId": "LRG",
+    "team": "LRG",
+    "teamName": "Little Rock Grays",
+    "historicalNames": [
+      "Little Rock Grays"
+    ],
+    "sourceTeamIds": [
+      "LRG"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "lvb",
+    "lahmanFranchiseId": "LVB",
+    "team": "LVB",
+    "teamName": "Louisville Black Caps",
+    "historicalNames": [
+      "Louisville White Sox",
+      "Louisville Black Caps"
+    ],
+    "sourceTeamIds": [
+      "LOW",
+      "LVB"
+    ],
+    "firstSeason": 1931,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "mb",
+    "lahmanFranchiseId": "MB",
+    "team": "MB",
+    "teamName": "Milwaukee Bears",
+    "historicalNames": [
+      "Milwaukee Bears"
+    ],
+    "sourceTeamIds": [
+      "MB"
+    ],
+    "firstSeason": 1923,
+    "lastSeason": 1923
+  },
+  {
+    "franchiseId": "mgs",
+    "lahmanFranchiseId": "MGS",
+    "team": "MGS",
+    "teamName": "Montgomery Grey Sox",
+    "historicalNames": [
+      "Montgomery Grey Sox"
+    ],
+    "sourceTeamIds": [
+      "MGS"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "mil",
+    "lahmanFranchiseId": "MIL",
+    "team": "MIL",
+    "teamName": "Milwaukee Brewers",
+    "historicalNames": [
+      "Seattle Pilots",
+      "Milwaukee Brewers"
+    ],
+    "sourceTeamIds": [
+      "MIL",
+      "ML4",
+      "SE1"
+    ],
+    "firstSeason": 1969,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "min",
+    "lahmanFranchiseId": "MIN",
+    "team": "MIN",
+    "teamName": "Minnesota Twins",
+    "historicalNames": [
+      "Washington Senators",
+      "Minnesota Twins"
+    ],
+    "sourceTeamIds": [
+      "MIN",
+      "WS1"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "mrm",
+    "lahmanFranchiseId": "MRM",
+    "team": "MRM",
+    "teamName": "Monroe Monarchs",
+    "historicalNames": [
+      "Monroe Monarchs"
+    ],
+    "sourceTeamIds": [
+      "MRM"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "mrs",
+    "lahmanFranchiseId": "MRS",
+    "team": "MRS",
+    "teamName": "Memphis Red Sox",
+    "historicalNames": [
+      "Memphis Red Sox"
+    ],
+    "sourceTeamIds": [
+      "MRS"
+    ],
+    "firstSeason": 1923,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "nby",
+    "lahmanFranchiseId": "NBY",
+    "team": "NBY",
+    "teamName": "New York Black Yankees",
+    "historicalNames": [
+      "Harlem Stars",
+      "New York Black Yankees"
+    ],
+    "sourceTeamIds": [
+      "HAR",
+      "NBY"
+    ],
+    "firstSeason": 1931,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "nd",
+    "lahmanFranchiseId": "ND",
+    "team": "ND",
+    "teamName": "Newark Dodgers",
+    "historicalNames": [
+      "Newark Dodgers"
+    ],
+    "sourceTeamIds": [
+      "ND"
+    ],
+    "firstSeason": 1934,
+    "lastSeason": 1935
+  },
+  {
+    "franchiseId": "ne",
+    "lahmanFranchiseId": "NE",
+    "team": "NE",
+    "teamName": "Newark Eagles",
+    "historicalNames": [
+      "Brooklyn Eagles",
+      "Newark Eagles"
+    ],
+    "sourceTeamIds": [
+      "BE",
+      "NE"
+    ],
+    "firstSeason": 1935,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "nlg",
+    "lahmanFranchiseId": "NLG",
+    "team": "NLG",
+    "teamName": "New York Lincoln Giants",
+    "historicalNames": [
+      "New York Lincoln Giants"
+    ],
+    "sourceTeamIds": [
+      "NLG"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1930
+  },
+  {
+    "franchiseId": "ns",
+    "lahmanFranchiseId": "NS",
+    "team": "NS",
+    "teamName": "Newark Stars",
+    "historicalNames": [
+      "Newark Stars"
+    ],
+    "sourceTeamIds": [
+      "NS"
+    ],
+    "firstSeason": 1926,
+    "lastSeason": 1926
+  },
+  {
+    "franchiseId": "nwb",
+    "lahmanFranchiseId": "NWB",
+    "team": "NWB",
+    "teamName": "Newark Browns",
+    "historicalNames": [
+      "Newark Browns"
+    ],
+    "sourceTeamIds": [
+      "NWB"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "nyc",
+    "lahmanFranchiseId": "NYC",
+    "team": "NYC",
+    "teamName": "New York Cubans",
+    "historicalNames": [
+      "New York Cubans"
+    ],
+    "sourceTeamIds": [
+      "NYC"
+    ],
+    "firstSeason": 1935,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "nym",
+    "lahmanFranchiseId": "NYM",
+    "team": "NYM",
+    "teamName": "New York Mets",
+    "historicalNames": [
+      "New York Mets"
+    ],
+    "sourceTeamIds": [
+      "NYN"
+    ],
+    "firstSeason": 1962,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "nyy",
+    "lahmanFranchiseId": "NYY",
+    "team": "NYY",
+    "teamName": "New York Yankees",
+    "historicalNames": [
+      "New York Yankees"
+    ],
+    "sourceTeamIds": [
+      "NYA"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "oak",
+    "lahmanFranchiseId": "OAK",
+    "team": "ATH",
+    "teamName": "Oakland Athletics",
+    "historicalNames": [
+      "Philadelphia Athletics",
+      "Kansas City Athletics",
+      "Oakland Athletics",
+      "Athletics"
+    ],
+    "sourceTeamIds": [
+      "ATH",
+      "KC1",
+      "OAK",
+      "PHA"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "pbg",
+    "lahmanFranchiseId": "PBG",
+    "team": "PBG",
+    "teamName": "Philadelphia Bacharach Giants",
+    "historicalNames": [
+      "Philadelphia Bacharach Giants"
+    ],
+    "sourceTeamIds": [
+      "PBG"
+    ],
+    "firstSeason": 1934,
+    "lastSeason": 1934
+  },
+  {
+    "franchiseId": "pbk",
+    "lahmanFranchiseId": "PBK",
+    "team": "PK",
+    "teamName": "Pittsburgh Keystones",
+    "historicalNames": [
+      "Pittsburgh Keystones"
+    ],
+    "sourceTeamIds": [
+      "PK"
+    ],
+    "firstSeason": 1922,
+    "lastSeason": 1922
+  },
+  {
+    "franchiseId": "pc",
+    "lahmanFranchiseId": "PC",
+    "team": "TIC",
+    "teamName": "Pittsburgh Crawfords",
+    "historicalNames": [
+      "Pittsburgh Crawfords",
+      "Toledo Crawfords",
+      "Toledo-Indianapolis Crawfords"
+    ],
+    "sourceTeamIds": [
+      "PC",
+      "TC",
+      "TC2",
+      "TIC"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1940
+  },
+  {
+    "franchiseId": "phi",
+    "lahmanFranchiseId": "PHI",
+    "team": "PHI",
+    "teamName": "Philadelphia Phillies",
+    "historicalNames": [
+      "Philadelphia Phillies",
+      "Philadelphia Blue Jays"
+    ],
+    "sourceTeamIds": [
+      "PHI"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "pit",
+    "lahmanFranchiseId": "PIT",
+    "team": "PIT",
+    "teamName": "Pittsburgh Pirates",
+    "historicalNames": [
+      "Pittsburgh Pirates"
+    ],
+    "sourceTeamIds": [
+      "PIT"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "ps",
+    "lahmanFranchiseId": "PS",
+    "team": "PS",
+    "teamName": "Philadelphia Stars",
+    "historicalNames": [
+      "Philadelphia Stars"
+    ],
+    "sourceTeamIds": [
+      "PS"
+    ],
+    "firstSeason": 1933,
+    "lastSeason": 1948
+  },
+  {
+    "franchiseId": "ptg",
+    "lahmanFranchiseId": "PTG",
+    "team": "PTG",
+    "teamName": "Philadelphia Tigers",
+    "historicalNames": [
+      "Philadelphia Tigers"
+    ],
+    "sourceTeamIds": [
+      "PTG"
+    ],
+    "firstSeason": 1928,
+    "lastSeason": 1928
+  },
+  {
+    "franchiseId": "sdp",
+    "lahmanFranchiseId": "SDP",
+    "team": "SDP",
+    "teamName": "San Diego Padres",
+    "historicalNames": [
+      "San Diego Padres"
+    ],
+    "sourceTeamIds": [
+      "SDN"
+    ],
+    "firstSeason": 1969,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "sea",
+    "lahmanFranchiseId": "SEA",
+    "team": "SEA",
+    "teamName": "Seattle Mariners",
+    "historicalNames": [
+      "Seattle Mariners"
+    ],
+    "sourceTeamIds": [
+      "SEA"
+    ],
+    "firstSeason": 1977,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "sen",
+    "lahmanFranchiseId": "SEN",
+    "team": "SEN",
+    "teamName": "Washington Black Senators",
+    "historicalNames": [
+      "Washington Black Senators"
+    ],
+    "sourceTeamIds": [
+      "SEN"
+    ],
+    "firstSeason": 1938,
+    "lastSeason": 1938
+  },
+  {
+    "franchiseId": "sfg",
+    "lahmanFranchiseId": "SFG",
+    "team": "SFG",
+    "teamName": "San Francisco Giants",
+    "historicalNames": [
+      "New York Giants",
+      "San Francisco Giants"
+    ],
+    "sourceTeamIds": [
+      "NY1",
+      "SFN"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "sl2",
+    "lahmanFranchiseId": "SL2",
+    "team": "SL2",
+    "teamName": "St. Louis Stars",
+    "historicalNames": [
+      "St. Louis Stars"
+    ],
+    "sourceTeamIds": [
+      "SL2"
+    ],
+    "firstSeason": 1937,
+    "lastSeason": 1937
+  },
+  {
+    "franchiseId": "sls",
+    "lahmanFranchiseId": "SLS",
+    "team": "SLS",
+    "teamName": "St. Louis Stars",
+    "historicalNames": [
+      "St. Louis Giants",
+      "St. Louis Stars"
+    ],
+    "sourceTeamIds": [
+      "SLG",
+      "SLS"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 1931
+  },
+  {
+    "franchiseId": "snh",
+    "lahmanFranchiseId": "SNH",
+    "team": "HSS",
+    "teamName": "St. Louis-New Orleans Stars",
+    "historicalNames": [
+      "Indianapolis ABCs",
+      "St. Louis Stars",
+      "St. Louis-New Orleans Stars",
+      "Harrisburg-St. Louis Stars"
+    ],
+    "sourceTeamIds": [
+      "AB3",
+      "HSS",
+      "SL3",
+      "SNS"
+    ],
+    "firstSeason": 1938,
+    "lastSeason": 1943
+  },
+  {
+    "franchiseId": "stl",
+    "lahmanFranchiseId": "STL",
+    "team": "STL",
+    "teamName": "St. Louis Cardinals",
+    "historicalNames": [
+      "St. Louis Cardinals"
+    ],
+    "sourceTeamIds": [
+      "SLN"
+    ],
+    "firstSeason": 1920,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "tbd",
+    "lahmanFranchiseId": "TBD",
+    "team": "TBR",
+    "teamName": "Tampa Bay Rays",
+    "historicalNames": [
+      "Tampa Bay Devil Rays",
+      "Tampa Bay Rays"
+    ],
+    "sourceTeamIds": [
+      "TBA"
+    ],
+    "firstSeason": 1998,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "tex",
+    "lahmanFranchiseId": "TEX",
+    "team": "TEX",
+    "teamName": "Texas Rangers",
+    "historicalNames": [
+      "Washington Senators",
+      "Texas Rangers"
+    ],
+    "sourceTeamIds": [
+      "TEX",
+      "WS2"
+    ],
+    "firstSeason": 1961,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "tor",
+    "lahmanFranchiseId": "TOR",
+    "team": "TOR",
+    "teamName": "Toronto Blue Jays",
+    "historicalNames": [
+      "Toronto Blue Jays"
+    ],
+    "sourceTeamIds": [
+      "TOR"
+    ],
+    "firstSeason": 1977,
+    "lastSeason": 2025
+  },
+  {
+    "franchiseId": "tt",
+    "lahmanFranchiseId": "TT",
+    "team": "TT",
+    "teamName": "Toledo Tigers",
+    "historicalNames": [
+      "Toledo Tigers"
+    ],
+    "sourceTeamIds": [
+      "TT"
+    ],
+    "firstSeason": 1923,
+    "lastSeason": 1923
+  },
+  {
+    "franchiseId": "wap",
+    "lahmanFranchiseId": "WAP",
+    "team": "WAP",
+    "teamName": "Washington Pilots",
+    "historicalNames": [
+      "Washington Pilots"
+    ],
+    "sourceTeamIds": [
+      "WAP"
+    ],
+    "firstSeason": 1932,
+    "lastSeason": 1932
+  },
+  {
+    "franchiseId": "wp",
+    "lahmanFranchiseId": "WP",
+    "team": "WMP",
+    "teamName": "Washington Potomacs",
+    "historicalNames": [
+      "Washington Potomacs",
+      "Wilmington Potomacs"
+    ],
+    "sourceTeamIds": [
+      "WMP",
+      "WP"
+    ],
+    "firstSeason": 1924,
+    "lastSeason": 1925
+  },
+  {
+    "franchiseId": "wsn",
+    "lahmanFranchiseId": "WSN",
+    "team": "WSN",
+    "teamName": "Washington Nationals",
+    "historicalNames": [
+      "Montreal Expos",
+      "Washington Nationals"
+    ],
+    "sourceTeamIds": [
+      "MON",
+      "WAS"
+    ],
+    "firstSeason": 1969,
+    "lastSeason": 2025
+  }
+]

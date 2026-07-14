@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import type { DraftPlayerView } from '../../types/draft'
+import type { DraftPlayerView, SortKey } from '../../types/draft'
 import PlayerCard from './PlayerCard'
 
 interface PlayerListProps {
@@ -7,9 +7,10 @@ interface PlayerListProps {
   onSelect: (playerId: string) => void
   interactionsDisabled: boolean
   committingPlayerId: string | null
+  sort: SortKey
 }
 
-function PlayerList({ players, onSelect, interactionsDisabled, committingPlayerId }: PlayerListProps) {
+function PlayerList({ players, onSelect, interactionsDisabled, committingPlayerId, sort }: PlayerListProps) {
   if (players.length === 0) {
     return (
       <div className="classic-empty">
@@ -31,6 +32,7 @@ function PlayerList({ players, onSelect, interactionsDisabled, committingPlayerI
           interactionsDisabled={interactionsDisabled}
           isDrafting={committingPlayerId === player.id}
           statView={statView}
+          sort={sort}
         />
       ))}
     </div>

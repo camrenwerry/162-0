@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict'
-import { readBuiltData } from './lib/player-pipeline.mjs'
+import fs from 'node:fs'
 
-const { combinations, pools } = readBuiltData(process.cwd())
+const combinations = JSON.parse(fs.readFileSync('src/data/generated/combinations.json', 'utf8'))
+const pools = Object.fromEntries(combinations.map(({ id }) => [id, JSON.parse(fs.readFileSync(`src/data/generated/pools/${id}.json`, 'utf8'))]))
 const players = Object.values(pools).flat()
 const slots = [
   ['C', 'C'], ['1B', '1B'], ['2B', '2B'], ['3B', '3B'], ['SS', 'SS'],
@@ -9,9 +10,9 @@ const slots = [
   ['SP1', 'SP'], ['SP2', 'SP'], ['SP3', 'SP'], ['RP1', 'RP'], ['RP2', 'RP'],
 ]
 const positionOrder = new Map(['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH', 'SP', 'RP'].map((position, index) => [position, index]))
-const universalSorts = new Set(['war', 'name', 'position'])
-const hitterSorts = new Set(['opsPlus', 'hr', 'avg', 'obp', 'slg', 'rbi', 'sb'])
-const pitcherSorts = new Set(['eraPlus', 'era', 'whip', 'so', 'wins', 'sv'])
+const universalSorts = new Set(['name', 'position', 'featuredSeason'])
+const hitterSorts = new Set(['ops', 'hr', 'avg', 'obp', 'slg', 'rbi', 'sb'])
+const pitcherSorts = new Set(['era', 'whip', 'so', 'wins', 'sv'])
 
 const firstOpenSlot = (position, roster) => slots.find(([id, label]) => label === position && !roster[id])?.[0] ?? null
 const availablePositions = (player, roster) => {
@@ -68,7 +69,11 @@ for (let game = 0; game < 200; game += 1) {
 // One team reroll preserves era; one era reroll preserves franchise.
 for (let game = 0; game < 100; game += 1) {
   const used = new Set()
-  let current = combinations[Math.floor(Math.random() * combinations.length)]
+  const rerollable = combinations.filter((candidate) => (
+    combinations.some((option) => option.id !== candidate.id && option.decade === candidate.decade)
+    && combinations.some((option) => option.id !== candidate.id && option.franchiseId === candidate.franchiseId)
+  ))
+  let current = rerollable[Math.floor(Math.random() * rerollable.length)]
   used.add(current.id)
   const teamOptions = combinations.filter((candidate) => candidate.decade === current.decade && !used.has(candidate.id))
   const heldDecade = current.decade
@@ -99,6 +104,7 @@ for (const key of pitcherSorts) assert(visibleForAllSort(key).every((player) => 
 const valueFor = (player, key) => {
   if (key === 'name') return player.name
   if (key === 'position') return Math.min(...player.eligiblePositions.map((position) => positionOrder.get(position)))
+  if (key === 'featuredSeason') return player.featuredSeason
   const stats = pitcherSorts.has(key) && player.playerType === 'twoWay' ? player.pitchingVisibleStats : player.stats
   return stats[key] ?? null
 }
@@ -110,12 +116,12 @@ const compare = (key, ascending) => (a, b) => {
   const primary = typeof av === 'string' ? av.localeCompare(bv) : av - bv
   return (ascending ? primary : -primary) || a.name.localeCompare(b.name)
 }
-for (const key of ['war', 'opsPlus', 'hr', 'avg', 'obp', 'slg', 'rbi', 'sb', 'eraPlus', 'so', 'wins', 'sv']) {
+for (const key of ['ops', 'hr', 'avg', 'obp', 'slg', 'rbi', 'sb', 'so', 'wins', 'sv']) {
   const compatible = pool.filter((player) => valueFor(player, key) !== null)
   const sorted = [...compatible].sort(compare(key, false))
   for (let index = 1; index < sorted.length; index += 1) assert(valueFor(sorted[index - 1], key) >= valueFor(sorted[index], key))
 }
-for (const key of ['era', 'whip', 'name', 'position']) {
+for (const key of ['era', 'whip', 'name', 'position', 'featuredSeason']) {
   const compatible = pool.filter((player) => valueFor(player, key) !== null)
   const sorted = [...compatible].sort(compare(key, true))
   for (let index = 1; index < sorted.length; index += 1) assert(valueFor(sorted[index - 1], key) <= valueFor(sorted[index], key))

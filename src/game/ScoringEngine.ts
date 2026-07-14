@@ -13,7 +13,7 @@ export class DiamondDraftScoring implements Scoring {
   calculate(roster: Roster) {
     const calculation = calculateDraftResult(roster)
     this.lastDiagnostics = calculation.diagnostics
-    if (diagnosticsEnabled) console.debug('[Diamond Draft scoring v1.0]', calculation.diagnostics)
+    if (diagnosticsEnabled) console.debug('[Diamond Draft scoring v2.0]', calculation.diagnostics)
     return calculation.result
   }
 
@@ -21,4 +21,3 @@ export class DiamondDraftScoring implements Scoring {
     return this.lastDiagnostics
   }
 }
-
