@@ -10,6 +10,7 @@ import PositionPicker from './PositionPicker'
 import ResultsScreen from './ResultsScreen'
 import RosterBar from './RosterBar'
 import TeamDecadeReveal from './TeamDecadeReveal'
+import SeasonSimulation from '../results/SeasonSimulation'
 import './ClassicMode.css'
 
 const FILTERS: PositionFilter[] = ['ALL', 'C', '1B', '2B', '3B', 'SS', 'OF', 'DH', 'SP', 'RP']
@@ -20,6 +21,7 @@ interface ClassicModeProps {
 
 export default function ClassicMode({ onHome }: ClassicModeProps) {
   const [engine] = useState(() => new DraftEngine())
+  const [showResults, setShowResults] = useState(false)
   const draft = useDraftEngine(engine)
 
   const leaveGame = () => {
@@ -27,12 +29,19 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     onHome()
   }
 
+  const restartGame = () => {
+    setShowResults(false)
+    engine.restart()
+  }
+
   if (draft.complete && draft.result) {
-    return <ResultsScreen roster={draft.roster} result={draft.result} onPlayAgain={() => engine.restart()} onHome={onHome} />
+    return showResults
+      ? <ResultsScreen roster={draft.roster} result={draft.result} onPlayAgain={restartGame} onHome={onHome} />
+      : <SeasonSimulation result={draft.result} onContinue={() => setShowResults(true)} onRestart={restartGame} onHome={leaveGame} />
   }
 
   return (
-    <main className={`classic-page${draft.isRolling ? ' is-rolling' : ''}`}>
+    <main className={`classic-page${draft.isRolling ? ' is-rolling' : ''}${draft.isFinishing ? ' is-finishing' : ''}`}>
       <div className="classic-page__atmosphere" aria-hidden="true" />
       <div className="classic-shell">
         <DraftHeader
@@ -60,7 +69,10 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
                   <span>{draft.isRolling ? 'Drawing matchup' : 'Available players'}</span>
                   <h1 id="draft-board-title">{draft.isRolling ? 'Rolling…' : 'Make your pick'}</h1>
                 </div>
-                <small>{draft.players.length} players{draft.sortTypeLabel && <b> · {draft.sortTypeLabel}</b>}</small>
+                <small>
+                  {draft.players.length} players{draft.sortTypeLabel && <b> · {draft.sortTypeLabel}</b>}
+                  {draft.unavailablePlayerCount > 0 && <em>{draft.availablePlayerCount} available · {draft.unavailablePlayerCount} unavailable</em>}
+                </small>
               </div>
 
               <div className="draft-controls">

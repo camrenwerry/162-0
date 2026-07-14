@@ -2,7 +2,13 @@
 
 Diamond Draft is a mobile-first historical baseball roster-building game. Classic Mode presents one franchise/decade pool in each of 14 rounds. A complete roster contains C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP, and two RP slots, followed by a deterministic 162-game projection.
 
-Version 0.9.0 is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API, or database server.
+Version 0.10.0 is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API, or database server.
+
+## Draft completion experience
+
+Late-round player lists keep every matching card visible while grouping currently selectable players above greyed-out cards. The grouping is performed by the eligibility engine after search, position, player-type, and stat sorting, so each group preserves the chosen sort order and DH/SP/RP rules remain centralized.
+
+After the 14th roster assignment, the completed roster briefly lands before a deterministic Season Simulation presentation. The existing scoring engine runs once and its immutable result payload drives both the projected-record reveal and full Results screen. The presentation can be skipped without recalculating, supports one-session restart/Home confirmation, and uses a shortened stage sequence for `prefers-reduced-motion`.
 
 ## Historical data provenance
 
@@ -109,6 +115,7 @@ npm run test:game
 npm run test:engine
 npm run test:scoring
 npm run test:responsive
+npm run test:presentation
 npm run lint
 npm run build
 ```

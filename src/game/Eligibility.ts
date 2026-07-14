@@ -17,6 +17,13 @@ export function isPlayerSelectable(player: Player, roster: Roster) {
   return getAvailablePositions(player, roster).length > 0
 }
 
+export function partitionPlayersByAvailability(players: readonly Player[], roster: Roster) {
+  const selectable: Player[] = []
+  const unavailable: Player[] = []
+  for (const player of players) (isPlayerSelectable(player, roster) ? selectable : unavailable).push(player)
+  return { selectable, unavailable }
+}
+
 export function resolveAssignmentSlot(player: Player, position: Position, roster: Roster): RosterSlotId | null {
   if (!getAvailablePositions(player, roster).includes(position)) return null
   return getFirstOpenSlot(position, roster)

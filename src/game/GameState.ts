@@ -27,6 +27,7 @@ export interface GameState {
   rollingMode: RollMode | null
   committingPlayerId: string | null
   recentlyFilledSlot: RosterSlotId | null
+  isFinishing: boolean
   complete: boolean
   result: DraftResult | null
 }
@@ -50,6 +51,7 @@ export function createGameState(initialCombination: TeamDecade): GameState {
     rollingMode: null,
     committingPlayerId: null,
     recentlyFilledSlot: null,
+    isFinishing: false,
     complete: false,
     result: null,
   }

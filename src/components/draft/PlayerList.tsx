@@ -23,17 +23,21 @@ function PlayerList({ players, onSelect, interactionsDisabled, committingPlayerI
 
   return (
     <div className="player-list-prototype" aria-live="polite">
-      {players.map(({ player, isAvailable, statView }) => (
-        <PlayerCard
-          key={player.id}
-          player={player}
-          onSelect={() => onSelect(player.id)}
-          isAvailable={isAvailable}
-          interactionsDisabled={interactionsDisabled}
-          isDrafting={committingPlayerId === player.id}
-          statView={statView}
-          sort={sort}
-        />
+      {players.map(({ player, isAvailable, statView }, index) => (
+        <span className="player-list-prototype__entry" key={player.id}>
+          {!isAvailable && (index === 0 || players[index - 1].isAvailable) && (
+            <span className="player-list-prototype__divider">Unavailable for your remaining roster</span>
+          )}
+          <PlayerCard
+            player={player}
+            onSelect={() => onSelect(player.id)}
+            isAvailable={isAvailable}
+            interactionsDisabled={interactionsDisabled}
+            isDrafting={committingPlayerId === player.id}
+            statView={statView}
+            sort={sort}
+          />
+        </span>
       ))}
     </div>
   )

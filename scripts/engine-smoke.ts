@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict'
 import { DraftEngine } from '../src/game/DraftEngine'
+import { partitionPlayersByAvailability } from '../src/game/Eligibility'
 import { getCompactPlayerStats } from '../src/game/PlayerStats'
 import { Randomizer } from '../src/game/Randomizer'
+import { DiamondDraftScoring } from '../src/game/ScoringEngine'
 import { TeamPool } from '../src/game/TeamPool'
-import { ROSTER_SLOTS } from '../src/types/draft'
+import { getSimulationReveal, getSimulationTiming, SIMULATION_STAGES } from '../src/components/results/simulationSequence'
+import { ROSTER_SLOTS, type Position } from '../src/types/draft'
 
 const waitForTimers = () => new Promise((resolve) => setTimeout(resolve, 5))
 const pool = new TeamPool()
@@ -24,6 +27,33 @@ assert.deepEqual(getCompactPlayerStats(bobPartial, 'hitter').map(({ label, forma
 const partialPitcherStats = { ...fixturePitcher.visibleStats, era: 2.19, whip: null, so: null, wins: null, saves: 1, sv: 1, inningsPitched: null, games: null, starts: null, reliefAppearances: null, k9: null, bb9: null }
 const billPartial = { ...fixturePitcher, id: 'partial-bill', visibleStats: partialPitcherStats, stats: partialPitcherStats }
 assert.deepEqual(getCompactPlayerStats(billPartial, 'pitcher').map(({ label, formattedValue }) => [label, formattedValue]), [['ERA', '2.19'], ['SV', '1']])
+
+const ssOnly = { ...fixtureHitter, id: 'ss-only', eligiblePositions: ['SS'] as Position[] }
+const ssAndThird = { ...fixtureHitter, id: 'ss-third', eligiblePositions: ['SS', '3B'] as Position[] }
+const dhOpen = partitionPlayersByAvailability([ssOnly], { SS: fixtureHitter })
+assert.deepEqual(dhOpen.selectable.map(({ id }) => id), ['ss-only'], 'an otherwise blocked hitter remains available for open DH')
+const grouped = partitionPlayersByAvailability([ssOnly, ssAndThird], { SS: fixtureHitter, DH: fixtureHitter })
+assert.deepEqual(grouped.selectable.map(({ id }) => id), ['ss-third'])
+assert.deepEqual(grouped.unavailable.map(({ id }) => id), ['ss-only'])
+const stableGrouping = partitionPlayersByAvailability([ssOnly, ssAndThird, { ...ssOnly, id: 'ss-only-2' }], { SS: fixtureHitter, DH: fixtureHitter })
+assert.deepEqual(stableGrouping.unavailable.map(({ id }) => id), ['ss-only', 'ss-only-2'], 'availability grouping must preserve selected sort order within each group')
+const lateCombination = { ...fixtureCombination, id: 'late-browse' }
+const unavailableSlugger = { ...ssOnly, id: 'unavailable-slugger', name: 'Alpha Slugger', visibleStats: { ...ssOnly.visibleStats, hr: 50 } }
+const availableUtility = { ...ssAndThird, id: 'available-utility', name: 'Bravo Utility', visibleStats: { ...ssAndThird.visibleStats, hr: 20 } }
+const latePool = new TeamPool([lateCombination], { 'late-browse': [unavailableSlugger, availableUtility] })
+const lateRoster = { SS: fixtureHitter, DH: fixtureHitter }
+const hrQuery = latePool.query({ combination: lateCombination, excludedIds: new Set(), filter: 'ALL', sort: 'hr', search: '' })
+const hrGrouping = partitionPlayersByAvailability(hrQuery, lateRoster)
+assert.deepEqual([...hrGrouping.selectable, ...hrGrouping.unavailable].map(({ id }) => id), ['available-utility', 'unavailable-slugger'], 'availability must take precedence over the selected stat sort')
+assert.deepEqual(partitionPlayersByAvailability(latePool.query({ combination: lateCombination, excludedIds: new Set(), filter: 'ALL', sort: 'name', search: 'Alpha' }), lateRoster).unavailable.map(({ id }) => id), ['unavailable-slugger'], 'search must preserve availability grouping')
+assert.deepEqual(partitionPlayersByAvailability(latePool.query({ combination: lateCombination, excludedIds: new Set(), filter: '3B', sort: 'name', search: '' }), lateRoster).selectable.map(({ id }) => id), ['available-utility'], 'position filters must preserve availability grouping')
+const fullPitchingRoster = { SP1: fixturePitcher, SP2: fixturePitcher, SP3: fixturePitcher, RP1: fixturePitcher, RP2: fixturePitcher }
+const starterOnly = { ...fixturePitcher, eligiblePositions: ['SP'] as Position[] }
+const relieverOnly = { ...fixturePitcher, eligiblePositions: ['RP'] as Position[] }
+assert.equal(partitionPlayersByAvailability([starterOnly], fullPitchingRoster).selectable.length, 0)
+assert.equal(partitionPlayersByAvailability([starterOnly], { SP1: fixturePitcher, SP2: fixturePitcher }).selectable.length, 1)
+assert.equal(partitionPlayersByAvailability([relieverOnly], fullPitchingRoster).selectable.length, 0)
+assert.equal(partitionPlayersByAvailability([relieverOnly], { RP1: fixturePitcher }).selectable.length, 1)
 
 const bobWithoutHrStats = { ...partialHitterStats, hr: null }
 const bobWithoutHr = { ...bobPartial, id: 'partial-bob-no-hr', name: 'Zed Null', visibleStats: bobWithoutHrStats, stats: bobWithoutHrStats }
@@ -101,9 +131,12 @@ assert(opsSorted.every((player) => player.playerType !== 'pitcher' && opsValue(p
 for (let index = 1; index < opsSorted.length; index += 1) assert((opsValue(opsSorted[index - 1]) ?? -Infinity) >= (opsValue(opsSorted[index]) ?? -Infinity))
 let randomIndex = 0
 const randomizer = new Randomizer(pool, () => ((randomIndex++ * 17) % 97) / 97)
+let scoringCalls = 0
+const deterministicScoring = new DiamondDraftScoring()
 const engine = new DraftEngine({
   pool,
   randomizer,
+  scoring: { calculate: (roster) => { scoringCalls += 1; return deterministicScoring.calculate(roster) } },
   reducedMotion: () => true,
   timings: { reducedRoll: 0, reducedCommit: 0, rosterEffect: 0, resultsReveal: 0 },
 })
@@ -162,6 +195,9 @@ assert.equal(draft.complete, true)
 assert(draft.result)
 assert.equal(draft.result.wins + draft.result.losses, 162)
 assert.equal(draft.result.scoringVersion, '2.0')
+assert.equal(scoringCalls, 1, 'final scoring must execute exactly once')
+assert.deepEqual(getSimulationReveal(draft.result), getSimulationReveal(draft.result), 'simulation reveal must reuse the predetermined result')
+assert.equal(scoringCalls, 1, 'reading or skipping the presentation result must not rerun scoring')
 assert.equal(Object.keys(draft.result.roster).length, ROSTER_SLOTS.length)
 assert.deepEqual(draft.result.roster, draft.roster)
 assert.equal(draft.result.overallGrade, draft.result.categoryGrades.overall)
@@ -176,7 +212,18 @@ assert.equal(draft.round, 1)
 assert.equal(Object.keys(draft.roster).length, 0)
 assert.equal(draft.teamRerollAvailable, true)
 assert.equal(draft.eraRerollAvailable, true)
+assert.equal(scoringCalls, 1, 'restart must not recalculate the prior result')
 assert(notifications > 20)
+engine.abandon()
+draft = engine.getSnapshot()
+assert.equal(Object.keys(draft.roster).length, 0, 'Home/abandon must clear completed draft state')
+assert.equal(draft.result, null)
+
+assert.equal(SIMULATION_STAGES.length, 8)
+const standardTiming = getSimulationTiming(false)
+const reducedTiming = getSimulationTiming(true)
+assert(standardTiming.stageDuration * SIMULATION_STAGES.length + standardTiming.revealDelay >= 4_000)
+assert(reducedTiming.stageDuration < standardTiming.stageDuration && reducedTiming.revealDelay < standardTiming.revealDelay)
 
 unsubscribe()
 engine.dispose()

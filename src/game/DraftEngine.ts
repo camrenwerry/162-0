@@ -1,4 +1,4 @@
-import { getAvailablePositions, isPlayerSelectable, resolveAssignmentSlot } from './Eligibility'
+import { getAvailablePositions, isPlayerSelectable, partitionPlayersByAvailability, resolveAssignmentSlot } from './Eligibility'
 import { createGameState, type GameState, type RollMode } from './GameState'
 import { Randomizer } from './Randomizer'
 import { DiamondDraftScoring, type Scoring } from './ScoringEngine'
@@ -19,6 +19,8 @@ export interface DraftSnapshot {
   selectedPlayer: Player | null
   availablePositions: readonly Position[]
   players: readonly DraftPlayerView[]
+  availablePlayerCount: number
+  unavailablePlayerCount: number
   search: string
   filter: PositionFilter
   sort: SortKey
@@ -29,6 +31,7 @@ export interface DraftSnapshot {
   interactionsDisabled: boolean
   committingPlayerId: string | null
   recentlyFilledSlot: RosterSlotId | null
+  isFinishing: boolean
   complete: boolean
   result: DraftResult | null
 }
@@ -109,6 +112,12 @@ export class DraftEngine {
       sort: this.state.sort,
       search: this.state.search,
     })
+    const groupedPlayers = partitionPlayersByAvailability(visiblePlayers, this.state.roster)
+    const statView = this.pool.getStatView(this.state.filter, this.state.sort)
+    const players = [
+      ...groupedPlayers.selectable.map((player) => ({ player, isAvailable: true, statView })),
+      ...groupedPlayers.unavailable.map((player) => ({ player, isAvailable: false, statView })),
+    ]
     return {
       roster: { ...this.state.roster },
       round: this.state.round,
@@ -122,11 +131,9 @@ export class DraftEngine {
       selectedPlayerIds: [...this.state.selectedPlayerIds],
       selectedPlayer,
       availablePositions: selectedPlayer ? getAvailablePositions(selectedPlayer, this.state.roster) : [],
-      players: visiblePlayers.map((player) => ({
-        player,
-        isAvailable: isPlayerSelectable(player, this.state.roster),
-        statView: this.pool.getStatView(this.state.filter, this.state.sort),
-      })),
+      players,
+      availablePlayerCount: groupedPlayers.selectable.length,
+      unavailablePlayerCount: groupedPlayers.unavailable.length,
       search: this.state.search,
       filter: this.state.filter,
       sort: this.state.sort,
@@ -137,6 +144,7 @@ export class DraftEngine {
       interactionsDisabled: this.state.isRolling || this.state.committingPlayerId !== null,
       committingPlayerId: this.state.committingPlayerId,
       recentlyFilledSlot: this.state.recentlyFilledSlot,
+      isFinishing: this.state.isFinishing,
       complete: this.state.complete,
       result: this.state.result,
     }
@@ -174,6 +182,7 @@ export class DraftEngine {
     this.state.isRolling = false
     this.state.rollingMode = null
     this.state.committingPlayerId = null
+    this.state.isFinishing = false
     this.assignmentLocked = false
     this.emit()
   }
@@ -294,12 +303,14 @@ export class DraftEngine {
       }, this.timings.rosterEffect)
 
       if (this.state.selectedPlayerIds.size === ROSTER_SLOTS.length) {
+        this.state.isFinishing = true
         this.resultsTimer = setTimeout(() => {
           this.state.committingPlayerId = null
+          this.state.isFinishing = false
           this.state.complete = true
           this.state.result = this.scoring.calculate(this.state.roster)
           this.emit()
-        }, this.timings.resultsReveal)
+        }, this.reducedMotion() ? this.timings.reducedCommit : this.timings.resultsReveal)
         this.emit()
         return
       }
