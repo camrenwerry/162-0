@@ -1,11 +1,37 @@
 import assert from 'node:assert/strict'
 import { DraftEngine } from '../src/game/DraftEngine'
+import { getCompactPlayerStats } from '../src/game/PlayerStats'
 import { Randomizer } from '../src/game/Randomizer'
 import { TeamPool } from '../src/game/TeamPool'
 import { ROSTER_SLOTS } from '../src/types/draft'
 
 const waitForTimers = () => new Promise((resolve) => setTimeout(resolve, 5))
 const pool = new TeamPool()
+const cubs1980s = pool.getCombinations().find(({ id }) => id === 'chc-1980s')
+assert(cubs1980s)
+const bobDernier = pool.getPlayers(cubs1980s).find(({ name }) => name === 'Bob Dernier')
+const billCaudill = pool.getPlayers(cubs1980s).find(({ name }) => name === 'Bill Caudill')
+assert(bobDernier?.playerType === 'hitter' && billCaudill?.playerType === 'pitcher')
+assert.deepEqual(getCompactPlayerStats(bobDernier, 'hitter').map(({ label }) => label), ['WAR', 'OPS+', 'HR', 'AVG'])
+const bobPartialStats = { ...bobDernier.visibleStats, war: null, opsPlus: null, hr: 8, avg: .317, obp: null, slg: null, rbi: null, sb: null }
+const bobPartial = { ...bobDernier, id: 'partial-bob', visibleStats: bobPartialStats, stats: bobPartialStats }
+assert.deepEqual(getCompactPlayerStats(bobPartial, 'hitter').map(({ label, formattedValue }) => [label, formattedValue]), [['HR', '8'], ['AVG', '.317']])
+const billPartialStats = { ...billCaudill.visibleStats, war: null, eraPlus: null, era: 2.19, whip: null, so: null, wins: null, saves: 1, sv: 1 }
+const billPartial = { ...billCaudill, id: 'partial-bill', visibleStats: billPartialStats, stats: billPartialStats }
+assert.deepEqual(getCompactPlayerStats(billPartial, 'pitcher').map(({ label, formattedValue }) => [label, formattedValue]), [['ERA', '2.19'], ['SV', '1']])
+
+const bobWithoutHrStats = { ...bobPartialStats, hr: null }
+const bobWithoutHr = { ...bobPartial, id: 'partial-bob-no-hr', name: 'Zed Null', visibleStats: bobWithoutHrStats, stats: bobWithoutHrStats }
+const partialCombination = { ...cubs1980s, id: 'partial-pool' }
+const partialPool = new TeamPool([partialCombination], { 'partial-pool': [bobPartial, bobWithoutHr, billPartial] })
+const partialOptions = partialPool.getAvailableSortOptions(partialCombination, new Set(), 'ALL').map(({ value }) => value)
+assert(!partialOptions.includes('war') && !partialOptions.includes('opsPlus') && !partialOptions.includes('eraPlus'))
+assert(partialOptions.includes('hr') && partialOptions.includes('avg') && partialOptions.includes('era') && partialOptions.includes('sv'))
+const partialHrSorted = partialPool.query({ combination: partialCombination, excludedIds: new Set(), filter: 'ALL', sort: 'hr', search: '' })
+assert.deepEqual(partialHrSorted.map(({ id }) => id), ['partial-bob', 'partial-bob-no-hr'])
+const partialEngine = new DraftEngine({ pool: partialPool, reducedMotion: () => true })
+assert.equal(partialEngine.getSnapshot().sort, 'name')
+partialEngine.dispose()
 const supported = pool.getCombinations()[0]
 assert(pool.getPlayers(supported).length > 0)
 assert(pool.getPlayers(supported).every((player) => (

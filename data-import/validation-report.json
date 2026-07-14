@@ -201,8 +201,14 @@
       "message": "Very low hitter playing time"
     }
   ],
+  "missingData": [],
   "summary": {
     "pools": 48,
-    "cards": 1371
+    "cards": 1371,
+    "missingStats": {
+      "war": 0,
+      "opsPlus": 0,
+      "eraPlus": 0
+    }
   }
 }

@@ -96,8 +96,10 @@
 .player-card__type, .player-card__unavailable { padding: 0.28rem 0.42rem; border: 1px solid #405165; border-radius: 0.3rem; color: #97a4b2; font-family: var(--font-display); font-size: 0.45rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
 .player-card__unavailable { border-color: #4a4f56; }
 .player-card__stats { display: grid; padding: 0.62rem 1.8rem 0.68rem 0.85rem; border-top: 1px solid #243240; background: rgb(3 8 13 / 30%); }
-.player-card__stats--hitter { grid-template-columns: repeat(4, 1fr); }
-.player-card__stats--pitcher { grid-template-columns: repeat(4, 1fr); }
+.player-card__stats--count-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.player-card__stats--count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.player-card__stats--count-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.player-card__stats--count-1 { grid-template-columns: minmax(0, 1fr); }
 .player-card__stats > span { display: flex; align-items: center; flex-direction: column; border-right: 1px solid #253341; }
 .player-card__stats > span:last-child { border: 0; }
 .player-card__stats small { color: #718092; font-family: var(--font-display); font-size: 0.46rem; letter-spacing: 0.08em; }

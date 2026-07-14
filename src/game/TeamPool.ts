@@ -74,7 +74,7 @@ export interface TeamPoolSource {
   getTeams(): Array<{ franchiseId: string; team: string; teamName: string }>
   getDecades(): TeamDecade['decade'][]
   getSortOptions(filter: PositionFilter): readonly SortOption[]
-  isSortValid(filter: PositionFilter, sort: SortKey): boolean
+  getAvailableSortOptions(combination: TeamDecade, excludedIds: ReadonlySet<string>, filter: PositionFilter): readonly SortOption[]
   getSortTypeLabel(filter: PositionFilter, sort: SortKey): string | null
   getStatView(filter: PositionFilter, sort: SortKey): 'hitter' | 'pitcher'
   query(query: PlayerQuery): Player[]
@@ -106,7 +106,21 @@ export class TeamPool implements TeamPoolSource {
     if (filter === 'SP' || filter === 'RP') return PITCHER_SORTS
     return HITTER_SORTS
   }
-  isSortValid(filter: PositionFilter, sort: SortKey) { return this.getSortOptions(filter).some((option) => option.value === sort) }
+  getAvailableSortOptions(combination: TeamDecade, excludedIds: ReadonlySet<string>, filter: PositionFilter) {
+    const matchingPlayers = this.getPlayers(combination)
+      .filter((player) => !excludedIds.has(player.id))
+      .filter((player) => matchesPosition(player, filter))
+    const options = this.getSortOptions(filter).filter(({ value }) => {
+      if (value === 'name') return true
+      if (value === 'position') return matchingPlayers.length > 0
+      const statView = this.getStatView(filter, value)
+      return matchingPlayers.some((player) => {
+        const statValue = valueFor(player, value, statView)
+        return matchesSortType(player, filter, value) && typeof statValue === 'number' && Number.isFinite(statValue)
+      })
+    })
+    return options.length ? options : [UNIVERSAL_SORTS[1]]
+  }
   getSortTypeLabel(filter: PositionFilter, sort: SortKey) {
     if (filter !== 'ALL') return null
     if (HITTER_KEYS.has(sort)) return 'Hitters'

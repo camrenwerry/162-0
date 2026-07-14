@@ -96,5 +96,7 @@ const invalidReport = validateBuiltData(invalid, inputs.config)
 assert(invalidReport.errors.some(({ message }) => message === 'Featured season outside decade'))
 assert(invalidReport.errors.some(({ message }) => message === 'Duplicate card ID'))
 assert(invalidReport.errors.some(({ message }) => message === 'Verified modern hitter missing required war'))
+assert.equal(invalidReport.summary.missingStats.war, 1)
+assert(invalidReport.missingData.some(({ card, stat, cause }) => card === verifiedHitter.id && stat === 'war' && cause === 'Source column unavailable'))
 
 console.log('Player pipeline tests passed: eligible-season selection, season-only positions, pitching thresholds, multi-position/two-way cards, nulls, and validation.')

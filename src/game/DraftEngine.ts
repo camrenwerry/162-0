@@ -88,6 +88,16 @@ export class DraftEngine {
   getSnapshot = () => this.snapshot
 
   private createSnapshot(): DraftSnapshot {
+    const sortOptions = this.pool.getAvailableSortOptions(
+      this.state.currentCombination,
+      this.state.selectedPlayerIds,
+      this.state.filter,
+    )
+    if (!sortOptions.some(({ value }) => value === this.state.sort)) {
+      this.state.sort = sortOptions.find(({ value }) => value === 'war')?.value
+        ?? sortOptions.find(({ value }) => value === 'name')?.value
+        ?? sortOptions[0].value
+    }
     const selectedPlayer = this.pool.getPlayer(this.state.selectedPlayerId)
     const visiblePlayers = this.pool.query({
       combination: this.state.currentCombination,
@@ -117,7 +127,7 @@ export class DraftEngine {
       search: this.state.search,
       filter: this.state.filter,
       sort: this.state.sort,
-      sortOptions: this.pool.getSortOptions(this.state.filter),
+      sortOptions,
       sortTypeLabel: this.pool.getSortTypeLabel(this.state.filter, this.state.sort),
       isRolling: this.state.isRolling,
       rollingMode: this.state.rollingMode,
@@ -232,12 +242,11 @@ export class DraftEngine {
   setFilter(filter: PositionFilter) {
     if (this.snapshot.interactionsDisabled) return
     this.state.filter = filter
-    if (!this.pool.isSortValid(filter, this.state.sort)) this.state.sort = 'war'
     this.emit()
   }
 
   setSort(sort: SortKey) {
-    if (this.snapshot.interactionsDisabled || !this.pool.isSortValid(this.state.filter, sort)) return
+    if (this.snapshot.interactionsDisabled || !this.snapshot.sortOptions.some(({ value }) => value === sort)) return
     this.state.sort = sort
     this.emit()
   }
@@ -275,7 +284,6 @@ export class DraftEngine {
       this.state.recentlyFilledSlot = slot
       this.state.search = ''
       this.state.filter = 'ALL'
-      if (!this.pool.isSortValid('ALL', this.state.sort)) this.state.sort = 'war'
       this.rosterEffectTimer = setTimeout(() => {
         this.state.recentlyFilledSlot = null
         this.emit()

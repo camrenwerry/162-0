@@ -55,6 +55,8 @@ The season import includes Lahman and Baseball-Reference identities, franchise/t
 
 React never imports pool JSON. `TeamPool` is the only runtime adapter; unsupported combinations return no cards, and the randomizer sees only combinations in the generated index. This boundary can later become lazy or remote without changing components.
 
+Compact cards render at most four real numeric values in documented hitter/pitcher priority order. Missing values remain in the data model and reports but are omitted from the compact grid. TeamPool exposes only sort choices backed by at least one usable value in the active pool/filter; same-type cards with null values remain visible and sort last.
+
 ## Build and validate data
 
 The generated JSON is committed, so Python is not required to run the app.
@@ -67,7 +69,7 @@ npm run data:report     # print the last generated report grouped by pool
 npm run test:data       # season selection and validation unit checks
 ```
 
-Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, full 14-slot roster feasibility, and missing verified modern WAR/OPS+/ERA+/WHIP fields. The audit additionally checks every displayed hitter and pitcher statistic and records every card's verification state. It requires at least three SP and two RP options. Coverage, unverified data, overrides, and low playing time are warnings.
+Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, full 14-slot roster feasibility, and missing verified modern WAR/OPS+/ERA+/WHIP fields. The audit additionally checks every displayed hitter and pitcher statistic and records every card's verification state. Missing-data reports summarize WAR, OPS+, and ERA+ counts and classify gaps as source-column, import-mapping, unverified-card, historical-source, or manual-review issues. It requires at least three SP and two RP options. Coverage, unverified data, overrides, and low playing time are warnings.
 
 To reproduce the raw import from an official Lahman checkout:
 

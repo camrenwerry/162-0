@@ -327,7 +327,7 @@ function poolCanComplete(cards) {
 }
 
 export function validateBuiltData({ pools, combinations }, config) {
-  const errors = []; const warnings = []; const ids = new Set()
+  const errors = []; const warnings = []; const missingData = []; const ids = new Set()
   const franchises = new Map(config.franchises.map((franchise) => [franchise.id, franchise]))
   const decades = new Map(config.decades.map((decade) => [decade.id, decade]))
   for (const combination of combinations) {
@@ -350,9 +350,27 @@ export function validateBuiltData({ pools, combinations }, config) {
       if (!card.visibleStats || !card.scoringStats) errors.push({ pool: combination.id, card: card.id, message: 'Missing required stat object' })
       if (card.playerType === 'hitter' && 'era' in card.visibleStats) errors.push({ pool: combination.id, card: card.id, message: 'Hitter has pitcher-only stat shape' })
       if (card.playerType === 'pitcher' && 'avg' in card.visibleStats) errors.push({ pool: combination.id, card: card.id, message: 'Pitcher has hitter-only stat shape' })
+      const hitterStats = card.playerType === 'pitcher' ? null : card.visibleStats
+      const pitcherStats = card.playerType === 'pitcher' ? card.visibleStats : card.playerType === 'twoWay' ? card.pitchingVisibleStats : null
+      const recordMissing = (stats, keys, group) => {
+        for (const key of keys) {
+          if (stats?.[key] !== null && stats?.[key] !== undefined) continue
+          const advanced = ['war', 'opsPlus', 'eraPlus'].includes(key)
+          const cause = !card.sourceMetadata?.verified
+            ? 'Unverified card'
+            : card.manualPositionOverride || card.notes
+              ? 'Manual review required'
+              : advanced && !card.sourceMetadata?.advancedStatsSourceUrls?.length
+                ? 'Import mapping missing'
+                : advanced
+                  ? 'Source column unavailable'
+                  : 'Historical source gap'
+          missingData.push({ pool: combination.id, card: card.id, player: card.name, team: card.teamAbbreviation, decade: card.decade, featuredSeason: card.featuredSeason, stat: key, group, verified: Boolean(card.sourceMetadata?.verified), cause })
+        }
+      }
+      if (hitterStats) recordMissing(hitterStats, ['war', 'opsPlus', 'hr', 'avg', 'obp', 'slg', 'rbi', 'sb'], 'hitting')
+      if (pitcherStats) recordMissing(pitcherStats, ['war', 'eraPlus', 'era', 'whip', 'so', 'wins', 'sv'], 'pitching')
       if (card.sourceMetadata?.verified) {
-        const hitterStats = card.playerType === 'pitcher' ? null : card.visibleStats
-        const pitcherStats = card.playerType === 'pitcher' ? card.visibleStats : card.playerType === 'twoWay' ? card.pitchingVisibleStats : null
         for (const key of hitterStats ? ['war', 'opsPlus', 'hr', 'avg'] : []) {
           if (hitterStats[key] === null || hitterStats[key] === undefined) errors.push({ pool: combination.id, card: card.id, message: `Verified modern hitter missing required ${key}` })
         }
@@ -380,7 +398,21 @@ export function validateBuiltData({ pools, combinations }, config) {
     if (relievers < 2) errors.push({ pool: combination.id, message: `Only ${relievers} RP options` })
     else if (relievers < 3) warnings.push({ pool: combination.id, message: `Only ${relievers} RP options; target is 3` })
   }
-  return { errors, warnings, summary: { pools: combinations.length, cards: Object.values(pools).flat().length } }
+  const countCardsMissing = (stat) => new Set(missingData.filter((item) => item.stat === stat).map((item) => item.card)).size
+  return {
+    errors,
+    warnings,
+    missingData,
+    summary: {
+      pools: combinations.length,
+      cards: Object.values(pools).flat().length,
+      missingStats: {
+        war: countCardsMissing('war'),
+        opsPlus: countCardsMissing('opsPlus'),
+        eraPlus: countCardsMissing('eraPlus'),
+      },
+    },
+  }
 }
 
 export function readInputs(root) {
@@ -424,7 +456,12 @@ export function formatReport(report) {
   for (const issue of [...report.errors.map((value) => ({ ...value, level: 'ERROR' })), ...report.warnings.map((value) => ({ ...value, level: 'WARN' }))]) {
     grouped.set(issue.pool ?? 'global', [...(grouped.get(issue.pool ?? 'global') ?? []), issue])
   }
-  const lines = [`Diamond Draft data report: ${report.summary.pools} pools, ${report.summary.cards} cards`, `Blocking errors: ${report.errors.length} · Warnings: ${report.warnings.length}`]
+  const missing = report.summary.missingStats ?? { war: 0, opsPlus: 0, eraPlus: 0 }
+  const lines = [
+    `Diamond Draft data report: ${report.summary.pools} pools, ${report.summary.cards} cards`,
+    `Blocking errors: ${report.errors.length} · Warnings: ${report.warnings.length}`,
+    `Missing WAR: ${missing.war} cards · Missing OPS+: ${missing.opsPlus} cards · Missing ERA+: ${missing.eraPlus} cards`,
+  ]
   for (const [pool, issues] of [...grouped.entries()].sort(([left], [right]) => left.localeCompare(right))) {
     lines.push(`\n${pool}`)
     const aggregatable = new Map()
@@ -437,6 +474,13 @@ export function formatReport(report) {
     }
     for (const issue of aggregatable.values()) lines.push(`  ${issue.level} ${issue.message} (${issue.count} cards)`)
     detailed.forEach((issue) => lines.push(`  ${issue.level} ${issue.card ? `[${issue.card}] ` : ''}${issue.message}`))
+  }
+  if (report.missingData?.length) {
+    lines.push('\nMissing visible data')
+    const causes = new Map()
+    for (const item of report.missingData) causes.set(item.cause, (causes.get(item.cause) ?? 0) + 1)
+    for (const [cause, count] of causes) lines.push(`  ${cause}: ${count}`)
+    for (const item of report.missingData) lines.push(`  [${item.card}] ${item.stat} · ${item.cause}`)
   }
   return lines.join('\n')
 }
