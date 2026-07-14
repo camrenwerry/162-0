@@ -1,7 +1,7 @@
 {
   "name": "diamond-draft",
   "private": true,
-  "version": "0.6.0",
+  "version": "0.7.0",
   "type": "module",
   "scripts": {
     "data:build": "node scripts/build-player-pools.mjs",

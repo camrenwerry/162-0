@@ -8,6 +8,7 @@ export interface RandomizerRequest {
   usedCombinationIds: ReadonlySet<string>
   teamRerollAvailable: boolean
   eraRerollAvailable: boolean
+  roundsRemaining: number
   isPlayable: (combination: TeamDecade) => boolean
 }
 
@@ -28,19 +29,31 @@ export class Randomizer {
 
   select(request: RandomizerRequest): TeamDecade | null {
     const combinations = this.pool.getCombinations()
-    const teamCount = this.pool.getTeams().length
-    const decadeCount = this.pool.getDecades().length
     const candidates = combinations.filter((candidate) => {
       if (request.usedCombinationIds.has(candidate.id)) return false
       if (request.mode === 'team' && candidate.decade !== request.current.decade) return false
       if (request.mode === 'era' && candidate.franchiseId !== request.current.franchiseId) return false
-      if (request.mode === 'both' && request.teamRerollAvailable) {
-        const decadeUseCount = combinations.filter((option) => option.decade === candidate.decade && request.usedCombinationIds.has(option.id)).length
-        if (decadeUseCount >= teamCount - 1) return false
+      const remainingAfterCandidate = combinations.filter((option) => !request.usedCombinationIds.has(option.id) && option.id !== candidate.id).length
+      if (remainingAfterCandidate < request.roundsRemaining - 1) return false
+      const mustPreserveTeamReroll = request.teamRerollAvailable && request.mode !== 'team'
+      if (mustPreserveTeamReroll) {
+        const hasTeamAlternative = combinations.some((option) => (
+          option.id !== candidate.id
+          && option.decade === candidate.decade
+          && !request.usedCombinationIds.has(option.id)
+          && request.isPlayable(option)
+        ))
+        if (!hasTeamAlternative) return false
       }
-      if (request.mode === 'both' && request.eraRerollAvailable) {
-        const teamUseCount = combinations.filter((option) => option.franchiseId === candidate.franchiseId && request.usedCombinationIds.has(option.id)).length
-        if (teamUseCount >= decadeCount - 1) return false
+      const mustPreserveEraReroll = request.eraRerollAvailable && request.mode !== 'era'
+      if (mustPreserveEraReroll) {
+        const hasEraAlternative = combinations.some((option) => (
+          option.id !== candidate.id
+          && option.franchiseId === candidate.franchiseId
+          && !request.usedCombinationIds.has(option.id)
+          && request.isPlayable(option)
+        ))
+        if (!hasEraAlternative) return false
       }
       return request.isPlayable(candidate)
     })

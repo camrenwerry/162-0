@@ -2,7 +2,7 @@
 
 Diamond Draft is a mobile-first baseball roster-building game. Classic Mode presents one MLB franchise/decade pool in each of 14 rounds. The player fills C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP slots, and two RP slots, then receives the current placeholder 162-game projection.
 
-Version 0.6.0 is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API calls, or database server.
+Version 0.7.0 is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API calls, or database server.
 
 ## Official card definition
 
@@ -69,7 +69,9 @@ npm run data:report     # print the last generated report grouped by pool
 npm run test:data       # season selection and validation unit checks
 ```
 
-Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, full 14-slot roster feasibility, and missing verified modern WAR/OPS+/ERA+/WHIP fields. The audit additionally checks every displayed hitter and pitcher statistic and records every card's verification state. Missing-data reports summarize WAR, OPS+, and ERA+ counts and classify gaps as source-column, import-mapping, unverified-card, historical-source, or manual-review issues. It requires at least three SP and two RP options. Coverage, unverified data, overrides, and low playing time are warnings.
+Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, full 14-slot roster feasibility, at least three SP and two RP options, and missing verified modern WAR/OPS+/ERA+/WHIP fields. The v0.7.0 build also requires at least 20 supported pools and writes generated runtime pools only after validation succeeds. The audit additionally checks every displayed hitter and pitcher statistic and records every card's verification state. Missing-data reports summarize WAR, OPS+, and ERA+ counts and classify gaps as source-column, import-mapping, unverified-card, historical-source, or manual-review issues.
+
+Coverage targets are at least three choices at C, 1B, 2B, 3B, SS, LF, CF, and RF, five SP choices, and three RP choices. Falling short of a target is a warning when the pool can still complete the roster; inability to assign 14 distinct players across all slots is blocking. Validation uses a matching algorithm, so one multi-position player cannot be counted as several simultaneous selections. DH is derived from any hitter under the game rule. Heavy dependence on one multi-position card is reported as a warning.
 
 To reproduce the raw import from an official Lahman checkout:
 
@@ -98,9 +100,24 @@ Every generated card includes internal `sourceMetadata` with verification state,
 
 ## Supported combinations
 
-The current data index contains 48 verified pools: Yankees, Red Sox, Dodgers, Giants, Cardinals, Cubs, Braves, Mariners, Orioles, Athletics, Angels, and Phillies for each of the 1980s, 1990s, 2000s, and 2010s. This includes the milestone pools SEA 1990s, NYY 2000s, ATL 1990s, STL 2000s, LAA 2010s, BOS 2000s, LAD 2010s, and CHC 1990s.
+The v0.7.0 index contains **48 playable pools and 1,371 verified cards**. Each listed franchise supports all four listed decades:
 
-Pools contain roughly 28–35 selected cards and are validated for complete-roster play. Coverage targets are warnings rather than a reason to invent players or eligibility.
+| Franchise | Abbreviation | Supported decades |
+| --- | --- | --- |
+| New York Yankees | NYY | 1980s, 1990s, 2000s, 2010s |
+| Boston Red Sox | BOS | 1980s, 1990s, 2000s, 2010s |
+| Los Angeles Dodgers | LAD | 1980s, 1990s, 2000s, 2010s |
+| San Francisco Giants | SFG | 1980s, 1990s, 2000s, 2010s |
+| St. Louis Cardinals | STL | 1980s, 1990s, 2000s, 2010s |
+| Chicago Cubs | CHC | 1980s, 1990s, 2000s, 2010s |
+| Atlanta Braves | ATL | 1980s, 1990s, 2000s, 2010s |
+| Seattle Mariners | SEA | 1980s, 1990s, 2000s, 2010s |
+| Baltimore Orioles | BAL | 1980s, 1990s, 2000s, 2010s |
+| Oakland Athletics | OAK | 1980s, 1990s, 2000s, 2010s |
+| Los Angeles Angels | LAA | 1980s, 1990s, 2000s, 2010s |
+| Philadelphia Phillies | PHI | 1980s, 1990s, 2000s, 2010s |
+
+Pools contain 24–36 selected cards and are validated for complete-roster play. Every current pool has at least five SP and three RP choices. Coverage targets remain warnings rather than a reason to invent players, positions, seasons, or statistics. Run `npm run data:report` for exact per-pool counts, position coverage, pitching depth, verification totals, missing advanced fields, blocking errors, and warnings.
 
 ## Run and test
 
@@ -130,5 +147,8 @@ Known limitations:
 - The pool covers 12 franchises and four decades, not all MLB history.
 - Baseball-Reference WAR, OPS+, and ERA+ are imported for the supported modern seasons. Other unavailable advanced scoring inputs remain `null`; the UI keeps its `—` fallback and nulls sort last.
 - Some pools use lower-playing-time but still threshold-qualified real seasons to preserve historical position coverage; these are called out in the report.
+- Exact position depth varies by franchise history. For example, a playable pool may warn below the three-player target rather than assign an unsupported secondary position.
 - The projection remains a game placeholder, not a final simulation or a claim of predictive accuracy.
 - Drafts are not persisted.
+
+At runtime, `TeamPool` exposes only generated indexed pools that contain cards. `DraftEngine` refuses to start without capacity for all 14 rounds and both one-time rerolls, and `Randomizer` reserves enough unused combinations to finish the draft without repetition. These checks produce developer-facing errors before a game starts rather than allowing a mid-draft dead end.

@@ -15,6 +15,7 @@ export const THRESHOLDS = Object.freeze({
 const FIELD_POSITIONS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF']
 const VALID_POSITIONS = new Set([...FIELD_POSITIONS, 'SP', 'RP'])
 const REQUIRED_ROSTER = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH', 'SP', 'SP', 'SP', 'RP', 'RP']
+const MINIMUM_SUPPORTED_POOLS = 20
 
 export function parseCsv(text) {
   const rows = []
@@ -309,7 +310,7 @@ export function buildPools({ seasonRows, fieldingRows, advancedRows = [], config
   return { pools, combinations }
 }
 
-function poolCanComplete(cards) {
+export function poolCanComplete(cards) {
   const cardToSlot = new Map()
   const canFill = (card, position) => position === 'DH'
     ? card.playerType === 'hitter' || card.playerType === 'twoWay'
@@ -326,8 +327,20 @@ function poolCanComplete(cards) {
   return REQUIRED_ROSTER.every((_, index) => assign(index, new Set()))
 }
 
+export function getPoolCoverage(cards) {
+  const positions = Object.fromEntries(FIELD_POSITIONS.map((position) => [
+    position,
+    cards.filter((card) => card.eligiblePositions.includes(position)).length,
+  ]))
+  positions.DH = cards.filter((card) => card.playerType !== 'pitcher').length
+  positions.SP = cards.filter((card) => card.eligiblePositions.includes('SP')).length
+  positions.RP = cards.filter((card) => card.eligiblePositions.includes('RP')).length
+  return positions
+}
+
 export function validateBuiltData({ pools, combinations }, config) {
   const errors = []; const warnings = []; const missingData = []; const ids = new Set()
+  if (combinations.length < MINIMUM_SUPPORTED_POOLS) errors.push({ pool: 'global', message: `Only ${combinations.length} supported pools; v0.7.0 requires at least ${MINIMUM_SUPPORTED_POOLS}` })
   const franchises = new Map(config.franchises.map((franchise) => [franchise.id, franchise]))
   const decades = new Map(config.decades.map((decade) => [decade.id, decade]))
   for (const combination of combinations) {
@@ -338,6 +351,7 @@ export function validateBuiltData({ pools, combinations }, config) {
     if (!decade) { errors.push({ pool: combination.id, message: 'Invalid decade' }); continue }
     if (!cards) { errors.push({ pool: combination.id, message: 'Missing pool file' }); continue }
     if (!poolCanComplete(cards)) errors.push({ pool: combination.id, message: 'Pool cannot complete the 14-slot roster' })
+    const coverage = getPoolCoverage(cards)
     for (const card of cards) {
       if (ids.has(card.id)) errors.push({ pool: combination.id, card: card.id, message: 'Duplicate card ID' })
       ids.add(card.id)
@@ -387,25 +401,49 @@ export function validateBuiltData({ pools, combinations }, config) {
       secondary.filter((key) => card.visibleStats[key] === null).forEach((key) => warnings.push({ pool: combination.id, card: card.id, message: `Missing secondary ${key}` }))
     }
     for (const position of FIELD_POSITIONS) {
-      const count = cards.filter((card) => card.eligiblePositions.includes(position)).length
+      const count = coverage[position]
       if (count === 0) errors.push({ pool: combination.id, message: `No ${position} option` })
       else if (count < 3) warnings.push({ pool: combination.id, message: `Only ${count} ${position} option${count === 1 ? '' : 's'}` })
     }
-    const starters = cards.filter((card) => card.eligiblePositions.includes('SP')).length
-    const relievers = cards.filter((card) => card.eligiblePositions.includes('RP')).length
+    const starters = coverage.SP
+    const relievers = coverage.RP
     if (starters < 3) errors.push({ pool: combination.id, message: `Only ${starters} SP options` })
     else if (starters < 5) warnings.push({ pool: combination.id, message: `Only ${starters} SP options; target is 5` })
     if (relievers < 2) errors.push({ pool: combination.id, message: `Only ${relievers} RP options` })
     else if (relievers < 3) warnings.push({ pool: combination.id, message: `Only ${relievers} RP options; target is 3` })
+    for (const card of cards) {
+      const scarcePositions = card.eligiblePositions.filter((position) => FIELD_POSITIONS.includes(position) && coverage[position] <= 3)
+      if (scarcePositions.length >= 3) warnings.push({ pool: combination.id, card: card.id, message: `Heavy multi-position dependence across ${scarcePositions.join(', ')}` })
+    }
   }
   const countCardsMissing = (stat) => new Set(missingData.filter((item) => item.stat === stat).map((item) => item.card)).size
+  const allCards = Object.values(pools).flat()
+  const poolReports = combinations.map((combination) => {
+    const cards = pools[combination.id] ?? []
+    const poolErrors = errors.filter(({ pool }) => pool === combination.id)
+    return {
+      id: combination.id,
+      team: combination.team,
+      decade: combination.decade,
+      cards: cards.length,
+      verifiedCards: cards.filter((card) => card.sourceMetadata?.verified).length,
+      unverifiedCards: cards.filter((card) => !card.sourceMetadata?.verified).length,
+      coverage: getPoolCoverage(cards),
+      rosterCompletable: poolCanComplete(cards),
+      playable: cards.length > 0 && poolCanComplete(cards) && poolErrors.length === 0,
+    }
+  })
   return {
     errors,
     warnings,
     missingData,
+    pools: poolReports,
     summary: {
       pools: combinations.length,
-      cards: Object.values(pools).flat().length,
+      playablePools: poolReports.filter(({ playable }) => playable).length,
+      cards: allCards.length,
+      verifiedCards: allCards.filter((card) => card.sourceMetadata?.verified).length,
+      unverifiedCards: allCards.filter((card) => !card.sourceMetadata?.verified).length,
       missingStats: {
         war: countCardsMissing('war'),
         opsPlus: countCardsMissing('opsPlus'),
@@ -435,7 +473,7 @@ export function readBuiltData(root) {
   return { combinations, pools }
 }
 
-export function writeBuiltData(root, built, report) {
+export function writeBuiltData(root, built) {
   const mlbDir = join(root, 'src/data/mlb')
   const poolsDir = join(mlbDir, 'pools')
   mkdirSync(poolsDir, { recursive: true })
@@ -444,11 +482,14 @@ export function writeBuiltData(root, built, report) {
   }
   for (const [id, cards] of Object.entries(built.pools)) writeFileSync(join(poolsDir, `${id}.json`), `${JSON.stringify(cards, null, 2)}\n`)
   writeFileSync(join(mlbDir, 'pool-index.json'), `${JSON.stringify(built.combinations, null, 2)}\n`)
-  writeFileSync(join(root, 'data-import/validation-report.json'), `${JSON.stringify(report, null, 2)}\n`)
 
   const imports = built.combinations.map((combination, index) => `import pool${index} from './pools/${combination.id}.json'`).join('\n')
   const entries = built.combinations.map((combination, index) => `  '${combination.id}': pool${index} as unknown as PlayerCard[],`).join('\n')
   writeFileSync(join(mlbDir, 'index.ts'), `${imports}\nimport combinations from './pool-index.json'\nimport type { PlayerCard, TeamDecade } from '../../types/draft'\n\nexport const PLAYER_POOLS: Readonly<Record<string, readonly PlayerCard[]>> = {\n${entries}\n}\n\nexport const TEAM_DECADES = combinations as TeamDecade[]\nexport const PLAYER_CARDS = Object.values(PLAYER_POOLS).flat()\n`)
+}
+
+export function writeValidationReport(root, report) {
+  writeFileSync(join(root, 'data-import/validation-report.json'), `${JSON.stringify(report, null, 2)}\n`)
 }
 
 export function formatReport(report) {
@@ -458,12 +499,21 @@ export function formatReport(report) {
   }
   const missing = report.summary.missingStats ?? { war: 0, opsPlus: 0, eraPlus: 0 }
   const lines = [
-    `Diamond Draft data report: ${report.summary.pools} pools, ${report.summary.cards} cards`,
+    `Diamond Draft data report: ${report.summary.pools} supported pools, ${report.summary.cards} cards`,
+    `Playable pools: ${report.summary.playablePools ?? report.summary.pools} · Verified cards: ${report.summary.verifiedCards ?? '—'} · Unverified cards: ${report.summary.unverifiedCards ?? '—'}`,
     `Blocking errors: ${report.errors.length} · Warnings: ${report.warnings.length}`,
     `Missing WAR: ${missing.war} cards · Missing OPS+: ${missing.opsPlus} cards · Missing ERA+: ${missing.eraPlus} cards`,
   ]
-  for (const [pool, issues] of [...grouped.entries()].sort(([left], [right]) => left.localeCompare(right))) {
-    lines.push(`\n${pool}`)
+  const poolIds = report.pools?.map(({ id }) => id) ?? [...grouped.keys()]
+  for (const pool of [...poolIds].sort()) {
+    const issues = grouped.get(pool) ?? []
+    const poolReport = report.pools?.find(({ id }) => id === pool)
+    const coverage = poolReport?.coverage
+    const coverageText = coverage
+      ? [...FIELD_POSITIONS, 'DH', 'SP', 'RP'].map((position) => `${position} ${coverage[position]}`).join(' · ')
+      : ''
+    lines.push(`\n${pool}${poolReport ? ` — ${poolReport.cards} cards · ${poolReport.playable ? 'PLAYABLE' : 'BLOCKED'}` : ''}`)
+    if (coverageText) lines.push(`  ${coverageText}`)
     const aggregatable = new Map()
     const detailed = []
     for (const issue of issues) {
@@ -482,5 +532,15 @@ export function formatReport(report) {
     for (const [cause, count] of causes) lines.push(`  ${cause}: ${count}`)
     for (const item of report.missingData) lines.push(`  [${item.card}] ${item.stat} · ${item.cause}`)
   }
+  lines.push(
+    '\nFinal summary',
+    `  Supported pools: ${report.summary.pools}`,
+    `  Playable pools: ${report.summary.playablePools ?? report.summary.pools}`,
+    `  Total cards: ${report.summary.cards}`,
+    `  Verified cards: ${report.summary.verifiedCards ?? '—'}`,
+    `  Unverified cards: ${report.summary.unverifiedCards ?? '—'}`,
+    `  Blocking errors: ${report.errors.length}`,
+    `  Warnings: ${report.warnings.length}`,
+  )
   return lines.join('\n')
 }

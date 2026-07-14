@@ -89,7 +89,7 @@ export class TeamPool implements TeamPoolSource {
     combinations: readonly TeamDecade[] = TEAM_DECADES,
     pools: Readonly<Record<string, readonly Player[]>> = PLAYER_POOLS,
   ) {
-    this.combinations = combinations
+    this.combinations = combinations.filter((combination) => (pools[combination.id]?.length ?? 0) > 0)
     this.pools = pools
     this.players = pools === PLAYER_POOLS ? PLAYER_CARDS : Object.values(pools).flat()
   }

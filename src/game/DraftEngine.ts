@@ -49,6 +49,7 @@ interface DraftTimings {
 }
 
 const DEFAULT_TIMINGS: DraftTimings = { reducedRoll: 180, reducedCommit: 120, rosterEffect: 850, resultsReveal: 600 }
+const REQUIRED_COMBINATION_CAPACITY = ROSTER_SLOTS.length + 2
 
 type Listener = () => void
 
@@ -74,8 +75,11 @@ export class DraftEngine {
     this.scoring = options.scoring ?? new BetaScoring()
     this.reducedMotion = options.reducedMotion ?? (() => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
     this.timings = { ...DEFAULT_TIMINGS, ...options.timings }
-    const initial = this.pool.getCombinations()[0]
-    if (!initial) throw new Error('DraftEngine requires at least one team/decade combination')
+    const supportedCombinations = this.pool.getCombinations()
+    if (supportedCombinations.length < REQUIRED_COMBINATION_CAPACITY) {
+      throw new Error(`DraftEngine requires at least ${REQUIRED_COMBINATION_CAPACITY} validated team/decade combinations for ${ROSTER_SLOTS.length} rounds and both rerolls; received ${supportedCombinations.length}.`)
+    }
+    const initial = supportedCombinations[0]
     this.state = createGameState(initial)
     this.snapshot = this.createSnapshot()
   }
@@ -189,6 +193,7 @@ export class DraftEngine {
       usedCombinationIds: this.state.usedCombinationIds,
       teamRerollAvailable: this.state.teamRerollAvailable,
       eraRerollAvailable: this.state.eraRerollAvailable,
+      roundsRemaining: ROSTER_SLOTS.length - this.state.selectedPlayerIds.size,
       isPlayable: (combination) => this.combinationIsPlayable(combination, roster),
     })
     if (!target) {

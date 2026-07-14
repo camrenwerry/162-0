@@ -83,6 +83,25 @@ const inputs = readInputs(root)
 const built = readBuiltData(root)
 const validReport = validateBuiltData(built, inputs.config)
 assert.equal(validReport.errors.length, 0, 'checked-in pools must pass blocking validation')
+assert(validReport.summary.pools >= 20, 'v0.7.0 requires at least 20 supported pools')
+assert.equal(validReport.summary.playablePools, validReport.summary.pools, 'every indexed pool must be playable')
+assert.equal(validReport.summary.verifiedCards, validReport.summary.cards, 'production pools should contain only verified cards')
+assert.equal(validReport.summary.unverifiedCards, 0)
+
+const milestonePools = [
+  'sea-1990s', 'nyy-2000s', 'atl-1990s', 'stl-2000s', 'laa-2010s',
+  'bos-2000s', 'lad-2010s', 'chc-1990s', 'sea-2000s', 'nyy-1990s',
+  'atl-2000s', 'stl-2010s', 'laa-2000s', 'bos-2010s', 'lad-2000s',
+  'chc-2000s', 'bal-1980s', 'bal-2000s', 'phi-1980s', 'phi-2000s',
+]
+const supportedPoolIds = new Set(validReport.pools.map(({ id }) => id))
+for (const poolId of milestonePools) assert(supportedPoolIds.has(poolId), `missing v0.7.0 milestone pool ${poolId}`)
+for (const pool of validReport.pools) {
+  assert(pool.cards >= 24 && pool.cards <= 36, `${pool.id} should contain 24–36 cards`)
+  assert(pool.rosterCompletable, `${pool.id} must support a complete 14-slot roster`)
+  assert(pool.coverage.SP >= 5, `${pool.id} should contain at least five SP choices`)
+  assert(pool.coverage.RP >= 3, `${pool.id} should contain at least three RP choices`)
+}
 assert(validReport.warnings.some(({ message }) => message.startsWith('Very low') || message.startsWith('Only ')), 'non-blocking coverage concerns should warn')
 
 const invalid = structuredClone(built)
@@ -99,4 +118,4 @@ assert(invalidReport.errors.some(({ message }) => message === 'Verified modern h
 assert.equal(invalidReport.summary.missingStats.war, 1)
 assert(invalidReport.missingData.some(({ card, stat, cause }) => card === verifiedHitter.id && stat === 'war' && cause === 'Source column unavailable'))
 
-console.log('Player pipeline tests passed: eligible-season selection, season-only positions, pitching thresholds, multi-position/two-way cards, nulls, and validation.')
+console.log('Player pipeline tests passed: featured seasons, positions, roles, 20-pool milestone coverage, pitching depth, playability, nulls, and validation.')

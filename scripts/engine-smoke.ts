@@ -7,6 +7,8 @@ import { ROSTER_SLOTS } from '../src/types/draft'
 
 const waitForTimers = () => new Promise((resolve) => setTimeout(resolve, 5))
 const pool = new TeamPool()
+const missingCombination = { ...pool.getCombinations()[0], id: 'missing-pool' }
+assert(!new TeamPool([missingCombination], {}).getCombinations().length)
 const cubs1980s = pool.getCombinations().find(({ id }) => id === 'chc-1980s')
 assert(cubs1980s)
 const bobDernier = pool.getPlayers(cubs1980s).find(({ name }) => name === 'Bob Dernier')
@@ -29,7 +31,14 @@ assert(!partialOptions.includes('war') && !partialOptions.includes('opsPlus') &&
 assert(partialOptions.includes('hr') && partialOptions.includes('avg') && partialOptions.includes('era') && partialOptions.includes('sv'))
 const partialHrSorted = partialPool.query({ combination: partialCombination, excludedIds: new Set(), filter: 'ALL', sort: 'hr', search: '' })
 assert.deepEqual(partialHrSorted.map(({ id }) => id), ['partial-bob', 'partial-bob-no-hr'])
-const partialEngine = new DraftEngine({ pool: partialPool, reducedMotion: () => true })
+assert.throws(
+  () => new DraftEngine({ pool: partialPool, reducedMotion: () => true }),
+  /requires at least 16 validated team\/decade combinations/,
+)
+const partialCombinations = Array.from({ length: 16 }, (_, index) => ({ ...partialCombination, id: `partial-pool-${index}` }))
+const partialPools = Object.fromEntries(partialCombinations.map(({ id }) => [id, [bobPartial, bobWithoutHr, billPartial]]))
+const capacityPool = new TeamPool(partialCombinations, partialPools)
+const partialEngine = new DraftEngine({ pool: capacityPool, reducedMotion: () => true })
 assert.equal(partialEngine.getSnapshot().sort, 'name')
 partialEngine.dispose()
 const supported = pool.getCombinations()[0]
@@ -40,6 +49,46 @@ assert(pool.getPlayers(supported).every((player) => (
   && String(player.featuredSeason).startsWith(supported.decade.slice(0, 3))
 )))
 assert.deepEqual(pool.getPlayers({ ...supported, id: 'unsupported-pool' }), [])
+for (let game = 0; game < 25; game += 1) {
+  let sequence = game
+  const simulationRandomizer = new Randomizer(pool, () => ((sequence++ * 19) % 101) / 101)
+  const used = new Set<string>()
+  let current = supported
+  let teamRerollAvailable = true
+  let eraRerollAvailable = true
+  for (let round = 0; round < ROSTER_SLOTS.length; round += 1) {
+    const selected = simulationRandomizer.select({
+      mode: 'both', current, usedCombinationIds: used, teamRerollAvailable, eraRerollAvailable,
+      roundsRemaining: ROSTER_SLOTS.length - round, isPlayable: () => true,
+    })
+    assert(selected, `Randomizer game ${game + 1} failed on round ${round + 1}`)
+    current = selected
+    used.add(current.id)
+    if (round === 1) {
+      const heldDecade = current.decade
+      const rerolled = simulationRandomizer.select({
+        mode: 'team', current, usedCombinationIds: used, teamRerollAvailable, eraRerollAvailable,
+        roundsRemaining: ROSTER_SLOTS.length - round, isPlayable: () => true,
+      })
+      assert(rerolled && rerolled.decade === heldDecade)
+      current = rerolled
+      used.add(current.id)
+      teamRerollAvailable = false
+    }
+    if (round === 7) {
+      const heldFranchise = current.franchiseId
+      const rerolled = simulationRandomizer.select({
+        mode: 'era', current, usedCombinationIds: used, teamRerollAvailable, eraRerollAvailable,
+        roundsRemaining: ROSTER_SLOTS.length - round, isPlayable: () => true,
+      })
+      assert(rerolled && rerolled.franchiseId === heldFranchise)
+      current = rerolled
+      used.add(current.id)
+      eraRerollAvailable = false
+    }
+  }
+  assert.equal(used.size, ROSTER_SLOTS.length + 2)
+}
 const yankees2000s = pool.getCombinations().find(({ id }) => id === 'nyy-2000s')
 assert(yankees2000s)
 const warSorted = pool.query({ combination: yankees2000s, excludedIds: new Set(), filter: 'ALL', sort: 'war', search: '' })
