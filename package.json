@@ -1,7 +1,7 @@
 {
   "name": "diamond-draft",
   "private": true,
-  "version": "0.7.0",
+  "version": "0.8.0",
   "type": "module",
   "scripts": {
     "data:build": "node scripts/build-player-pools.mjs",
@@ -15,6 +15,7 @@
     "test:data": "node scripts/player-pipeline.test.mjs",
     "test:engine": "vite build --ssr scripts/engine-smoke.ts --outDir /tmp/diamond-draft-engine-smoke --emptyOutDir && node /tmp/diamond-draft-engine-smoke/engine-smoke.js",
     "test:game": "node scripts/smoke-game.mjs",
+    "test:scoring": "vite build --ssr scripts/scoring.test.ts --outDir /tmp/diamond-draft-scoring-tests --emptyOutDir && node /tmp/diamond-draft-scoring-tests/scoring.test.js",
     "validate:data": "npm run data:validate && npm run data:audit"
   },
   "dependencies": {

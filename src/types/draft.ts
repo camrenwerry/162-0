@@ -166,20 +166,31 @@ export interface DraftRound {
 
 export interface DraftCategoryResult {
   score: number
-  grade: string
+  grade: LetterGrade
+}
+
+export type LetterGrade = 'F' | 'D' | 'C' | 'C+' | 'B-' | 'B' | 'B+' | 'A-' | 'A' | 'A+' | 'S'
+export type ScoringCategoryKey = 'offense' | 'power' | 'contact' | 'speed' | 'defense' | 'startingPitching' | 'reliefPitching' | 'rosterBalance' | 'overall'
+
+export interface BestPlayerValue {
+  playerId: string
+  playerName: string
+  slotId: RosterSlotId
+  position: Position
+  value: number
 }
 
 export interface DraftResult {
   wins: number
   losses: number
-  letterGrade: string
+  overallScore: number
+  overallGrade: LetterGrade
   tierLabel: string
-  overallTeamStrength: number
-  offense: DraftCategoryResult
-  defense: DraftCategoryResult
-  pitching: DraftCategoryResult
-  startingPitching: DraftCategoryResult
-  reliefPitching: DraftCategoryResult
-  speed: DraftCategoryResult
-  rosterBalance: DraftCategoryResult
+  categoryScores: Record<ScoringCategoryKey, number>
+  categoryGrades: Record<ScoringCategoryKey, LetterGrade>
+  roster: Roster
+  strongestCategory: Exclude<ScoringCategoryKey, 'overall'>
+  weakestCategory: Exclude<ScoringCategoryKey, 'overall'>
+  bestPlayerValue: BestPlayerValue | null
+  scoringVersion: '1.0'
 }

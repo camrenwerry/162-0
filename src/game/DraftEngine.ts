@@ -1,7 +1,7 @@
 import { getAvailablePositions, isPlayerSelectable, resolveAssignmentSlot } from './Eligibility'
 import { createGameState, type GameState, type RollMode } from './GameState'
 import { Randomizer } from './Randomizer'
-import { BetaScoring, type Scoring } from './Scoring'
+import { DiamondDraftScoring, type Scoring } from './ScoringEngine'
 import { TeamPool, type SortOption, type TeamPoolSource } from './TeamPool'
 import { ROSTER_SLOTS, type DraftPlayerView, type DraftResult, type Player, type Position, type PositionFilter, type Roster, type RosterSlotId, type SortKey, type TeamDecade } from '../types/draft'
 
@@ -72,7 +72,7 @@ export class DraftEngine {
   constructor(options: DraftEngineOptions = {}) {
     this.pool = options.pool ?? new TeamPool()
     this.randomizer = options.randomizer ?? new Randomizer(this.pool)
-    this.scoring = options.scoring ?? new BetaScoring()
+    this.scoring = options.scoring ?? new DiamondDraftScoring()
     this.reducedMotion = options.reducedMotion ?? (() => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
     this.timings = { ...DEFAULT_TIMINGS, ...options.timings }
     const supportedCombinations = this.pool.getCombinations()

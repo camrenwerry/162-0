@@ -1,6 +1,6 @@
 import DiamondDraftLogo from '../DiamondDraftLogo'
 import GameMenu from '../GameMenu'
-import { ROSTER_SLOTS, type DraftResult, type Roster } from '../../types/draft'
+import { ROSTER_SLOTS, type DraftResult, type Roster, type ScoringCategoryKey } from '../../types/draft'
 
 interface ResultsScreenProps {
   roster: Roster
@@ -10,14 +10,17 @@ interface ResultsScreenProps {
 }
 
 export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: ResultsScreenProps) {
+  const categoryLabel: Record<ScoringCategoryKey, string> = {
+    offense: 'Offense', power: 'Power', contact: 'Contact & OBP', speed: 'Speed', defense: 'Defense',
+    startingPitching: 'Starting Pitching', reliefPitching: 'Relief Pitching', rosterBalance: 'Roster Balance', overall: 'Overall',
+  }
   const grades = [
-    ['Offense', result.offense],
-    ['Defense', result.defense],
-    ['Starting', result.startingPitching],
-    ['Relief', result.reliefPitching],
-    ['Pitching', result.pitching],
-    ['Speed', result.speed],
-    ['Balance', result.rosterBalance],
+    ['Offense', 'offense'],
+    ['Defense', 'defense'],
+    ['Speed', 'speed'],
+    ['Starting', 'startingPitching'],
+    ['Relief', 'reliefPitching'],
+    ['Balance', 'rosterBalance'],
   ] as const
 
   return (
@@ -37,16 +40,20 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
           <small>Projected record</small>
           <strong>{result.wins}–{result.losses}</strong>
           <b>{result.tierLabel}</b>
-          <span>Overall grade {result.letterGrade}</span>
+          <span>Overall grade {result.overallGrade} · Team strength {result.overallScore}</span>
         </section>
         <section className="results-grades" aria-label="Team category grades">
-          {grades.map(([label, value]) => (
+          {grades.map(([label, key]) => (
             <div key={label}>
               <span>{label}</span>
-              <strong>{value.grade}</strong>
-              <small>{value.score}</small>
+              <strong>{result.categoryGrades[key]}</strong>
+              <small>{result.categoryScores[key]}</small>
             </div>
           ))}
+        </section>
+        <section className="results-highlights" aria-label="Team scoring highlights">
+          <p><span>Strongest category</span><strong>{categoryLabel[result.strongestCategory]}</strong></p>
+          <p><span>Weakest category</span><strong>{categoryLabel[result.weakestCategory]}</strong></p>
         </section>
         <section className="results-roster">
           <div className="results-roster__heading"><h1>Completed roster</h1><span>14 / 14</span></div>

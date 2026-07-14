@@ -170,6 +170,10 @@
 .results-grades span { width: 100%; overflow: hidden; color: #8995a2; font-size: clamp(0.46rem, 1.8vw, 0.62rem); letter-spacing: 0.05em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
 .results-grades strong { color: #f5c542; font-family: 'Bebas Neue', var(--font-display); font-size: clamp(1.2rem, 5vw, 1.65rem); font-weight: 400; line-height: 1; }
 .results-grades small { color: #667484; font-size: 0.5rem; }
+.results-highlights { display: grid; margin-top: 0.55rem; grid-template-columns: 1fr 1fr; gap: 0.35rem; text-align: left; }
+.results-highlights p { min-width: 0; padding: 0.65rem 0.75rem; border: 1px solid rgb(130 166 188 / 18%); border-radius: 0.5rem; background: rgb(8 18 28 / 68%); }
+.results-highlights span { display: block; color: #667484; font-size: 0.48rem; letter-spacing: 0.07em; text-transform: uppercase; }
+.results-highlights strong { display: block; margin-top: 0.18rem; overflow: hidden; color: #d7dee5; font-family: var(--font-display); font-size: 0.66rem; letter-spacing: 0.04em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
 .results-trophy { position: absolute; top: 50%; right: 4%; width: 4.6rem; height: 4.6rem; opacity: 0.45; transform: translateY(-50%); }
 .results-trophy svg { width: 100%; fill: none; stroke: #f5c542; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
 .results-trophy span { position: absolute; top: 0.8rem; left: 50%; font-size: 1.4rem; transform: translateX(-50%); }
@@ -225,7 +229,7 @@
   .results-roster__list { grid-template-columns: repeat(3, 1fr); }
   .results-roster__list > div:nth-child(even) { border-right: 1px solid #24313e; }
   .results-roster__list > div:nth-child(3n) { border-right: 0; }
-  .results-grades { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .results-grades { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,8 +1,8 @@
 # Diamond Draft
 
-Diamond Draft is a mobile-first baseball roster-building game. Classic Mode presents one MLB franchise/decade pool in each of 14 rounds. The player fills C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP slots, and two RP slots, then receives the current placeholder 162-game projection.
+Diamond Draft is a mobile-first baseball roster-building game. Classic Mode presents one MLB franchise/decade pool in each of 14 rounds. The player fills C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP slots, and two RP slots, then receives a deterministic 162-game projection.
 
-Version 0.7.0 is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API calls, or database server.
+Version 0.8.0 is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API calls, or database server.
 
 ## Official card definition
 
@@ -69,7 +69,7 @@ npm run data:report     # print the last generated report grouped by pool
 npm run test:data       # season selection and validation unit checks
 ```
 
-Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, full 14-slot roster feasibility, at least three SP and two RP options, and missing verified modern WAR/OPS+/ERA+/WHIP fields. The v0.7.0 build also requires at least 20 supported pools and writes generated runtime pools only after validation succeeds. The audit additionally checks every displayed hitter and pitcher statistic and records every card's verification state. Missing-data reports summarize WAR, OPS+, and ERA+ counts and classify gaps as source-column, import-mapping, unverified-card, historical-source, or manual-review issues.
+Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, full 14-slot roster feasibility, at least three SP and two RP options, and missing verified modern WAR/OPS+/ERA+/WHIP fields. The data build also requires at least 20 supported pools and writes generated runtime pools only after validation succeeds. The audit additionally checks every displayed hitter and pitcher statistic and records every card's verification state. Missing-data reports summarize WAR, OPS+, and ERA+ counts and classify gaps as source-column, import-mapping, unverified-card, historical-source, or manual-review issues.
 
 Coverage targets are at least three choices at C, 1B, 2B, 3B, SS, LF, CF, and RF, five SP choices, and three RP choices. Falling short of a target is a warning when the pool can still complete the roster; inability to assign 14 distinct players across all slots is blocking. Validation uses a matching algorithm, so one multi-position player cannot be counted as several simultaneous selections. DH is derived from any hitter under the game rule. Heavy dependence on one multi-position card is reported as a warning.
 
@@ -100,7 +100,7 @@ Every generated card includes internal `sourceMetadata` with verification state,
 
 ## Supported combinations
 
-The v0.7.0 index contains **48 playable pools and 1,371 verified cards**. Each listed franchise supports all four listed decades:
+The current index contains **48 playable pools and 1,371 verified cards**. Each listed franchise supports all four listed decades:
 
 | Franchise | Abbreviation | Supported decades |
 | --- | --- | --- |
@@ -119,6 +119,18 @@ The v0.7.0 index contains **48 playable pools and 1,371 verified cards**. Each l
 
 Pools contain 24–36 selected cards and are validated for complete-roster play. Every current pool has at least five SP and three RP choices. Coverage targets remain warnings rather than a reason to invent players, positions, seasons, or statistics. Run `npm run data:report` for exact per-pool counts, position coverage, pitching depth, verification totals, missing advanced fields, blocking errors, and warnings.
 
+## Scoring engine v1.0
+
+The v0.8.0 scoring engine runs only after a roster is complete. It uses each card's featured-season statistics, rolled franchise and decade, and assigned roster position. It never uses career totals, reputation, name recognition, another franchise's season, or randomness. The same roster therefore always produces the same category scores, grades, and projected record.
+
+The engine evaluates offense, power, contact/on-base ability, speed, defense, starting pitching, relief pitching, and roster balance. SP and RP use separate role-specific normalization. Defense excludes DH and applies only a modest assignment-position adjustment. Overall strength combines offense, defense, rotation, bullpen, speed, and balance while applying capped depth penalties and balance bonuses. A perfect season requires an exceptional overall score, exceptional major categories, exceptional balance, and no weak roster slot; otherwise the deterministic win curve is capped below 162.
+
+All inputs come from the featured season. Era-adjusted OPS+ and ERA+ carry the most context, while rate and workload statistics provide supporting signals. When a metric is genuinely `null`, it is omitted rather than treated as zero. Available metric weights are redistributed proportionally, and low-coverage calculations blend toward a neutral baseline instead of fabricating a value. Internal player confidence is `high`, `medium`, or `low`, but confidence and hidden player values are not exposed during drafting or on the production Results screen.
+
+Scoring code is isolated under `src/game/scoring/`. Tune normalization ranges, player weights, positional adjustments, category weights, grade thresholds, record-curve points, and perfect-season safeguards in `src/game/scoring/scoringConfig.ts`. The structured result payload is versioned as `1.0` for future balancing migrations.
+
+Development diagnostics are disabled by default. Start the development server with `VITE_SCORING_DIAGNOSTICS=true npm run dev` to log per-player normalized components, redistributed weights, confidence, category calculations, overall adjustments, and projected-win mapping after a completed draft. Diagnostics are not rendered in the UI or enabled in production builds.
+
 ## Run and test
 
 ```bash
@@ -132,6 +144,7 @@ npm run data:report
 npm run test:data
 npm run test:game
 npm run test:engine
+npm run test:scoring
 npm run lint
 npm run build
 ```
@@ -140,7 +153,7 @@ npm run build
 
 ## Engine boundary and limitations
 
-`DraftEngine` owns transitions, `Randomizer` owns combination selection, `Eligibility` owns roster rules, `TeamPool` owns data access and queries, and `Scoring` remains a replaceable placeholder. Components render immutable snapshots.
+`DraftEngine` owns transitions, `Randomizer` owns combination selection, `Eligibility` owns roster rules, `TeamPool` owns data access and queries, and `DiamondDraftScoring` owns the deterministic v1.0 projection behind the replaceable `Scoring` interface. Components render immutable snapshots and never calculate scores.
 
 Known limitations:
 
@@ -148,7 +161,7 @@ Known limitations:
 - Baseball-Reference WAR, OPS+, and ERA+ are imported for the supported modern seasons. Other unavailable advanced scoring inputs remain `null`; the UI keeps its `—` fallback and nulls sort last.
 - Some pools use lower-playing-time but still threshold-qualified real seasons to preserve historical position coverage; these are called out in the report.
 - Exact position depth varies by franchise history. For example, a playable pool may warn below the three-player target rather than assign an unsupported secondary position.
-- The projection remains a game placeholder, not a final simulation or a claim of predictive accuracy.
+- The v1.0 projection is a tunable game model, not a plate-appearance simulation or a claim of real-world predictive accuracy.
 - Drafts are not persisted.
 
 At runtime, `TeamPool` exposes only generated indexed pools that contain cards. `DraftEngine` refuses to start without capacity for all 14 rounds and both one-time rerolls, and `Randomizer` reserves enough unused combinations to finish the draft without repetition. These checks produce developer-facing errors before a game starts rather than allowing a mid-draft dead end.
