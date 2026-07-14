@@ -1,1053 +1,74 @@
 [
   {
-    "id": "atl-2000s-chipper-jones-2001",
-    "playerId": "jonesch06",
-    "playerSlug": "chipper-jones",
-    "name": "Chipper Jones",
+    "id": "atl-2000s-chris-hammond-2002",
+    "playerId": "hammoch01",
+    "playerSlug": "chris-hammond",
+    "name": "Chris Hammond",
     "franchiseId": "atl",
     "teamAbbreviation": "ATL",
     "teamDisplayName": "Atlanta Braves",
     "team": "ATL",
     "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 2002,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 38,
-      "avg": 0.33,
-      "obp": 0.427,
-      "slg": 0.605,
-      "rbi": 102,
-      "sb": 9
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 38,
-      "avg": 0.33,
-      "obp": 0.427,
-      "slg": 0.605,
-      "rbi": 102,
-      "sb": 9
-    },
-    "scoringStats": {
-      "games": 159,
-      "plateAppearances": 677,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.427,
-      "slg": 0.605,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "jonesch06"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 122.54285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-gary-sheffield-2003",
-    "playerId": "sheffga01",
-    "playerSlug": "gary-sheffield",
-    "name": "Gary Sheffield",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 39,
-      "avg": 0.33,
-      "obp": 0.419,
-      "slg": 0.604,
-      "rbi": 132,
-      "sb": 18
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 39,
-      "avg": 0.33,
-      "obp": 0.419,
-      "slg": 0.604,
-      "rbi": 132,
-      "sb": 18
-    },
-    "scoringStats": {
-      "games": 155,
-      "plateAppearances": 678,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.419,
-      "slg": 0.604,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "sheffga01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 121.67142857142856,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-javy-lopez-2003",
-    "playerId": "lopezja01",
-    "playerSlug": "javy-lopez",
-    "name": "Javy Lopez",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 43,
-      "avg": 0.328,
-      "obp": 0.378,
-      "slg": 0.687,
-      "rbi": 109,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 43,
-      "avg": 0.328,
-      "obp": 0.378,
-      "slg": 0.687,
-      "rbi": 109,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 129,
-      "plateAppearances": 495,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.378,
-      "slg": 0.687,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "lopezja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 120.64285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-j-d-drew-2004",
-    "playerId": "drewjd01",
-    "playerSlug": "j-d-drew",
-    "name": "J. D. Drew",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.305,
-      "obp": 0.436,
-      "slg": 0.569,
-      "rbi": 93,
-      "sb": 12
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.305,
-      "obp": 0.436,
-      "slg": 0.569,
-      "rbi": 93,
-      "sb": 12
-    },
-    "scoringStats": {
-      "games": 145,
-      "plateAppearances": 644,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.436,
-      "slg": 0.569,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "drewjd01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 118.89999999999998,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-andruw-jones-2000",
-    "playerId": "jonesan01",
-    "playerSlug": "andruw-jones",
-    "name": "Andruw Jones",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 36,
-      "avg": 0.303,
-      "obp": 0.366,
-      "slg": 0.541,
-      "rbi": 104,
-      "sb": 21
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 36,
-      "avg": 0.303,
-      "obp": 0.366,
-      "slg": 0.541,
-      "rbi": 104,
-      "sb": 21
-    },
-    "scoringStats": {
-      "games": 161,
-      "plateAppearances": 729,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.366,
-      "slg": 0.541,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "jonesan01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 111.52857142857144,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-brian-mccann-2006",
-    "playerId": "mccanbr01",
-    "playerSlug": "brian-mccann",
-    "name": "Brian McCann",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2006,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.333,
-      "obp": 0.388,
-      "slg": 0.572,
-      "rbi": 93,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.333,
-      "obp": 0.388,
-      "slg": 0.572,
-      "rbi": 93,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 130,
-      "plateAppearances": 492,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.388,
-      "slg": 0.572,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "mccanbr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 110.05714285714285,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-marcus-giles-2003",
-    "playerId": "gilesma01",
-    "playerSlug": "marcus-giles",
-    "name": "Marcus Giles",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.316,
-      "obp": 0.39,
-      "slg": 0.526,
-      "rbi": 69,
-      "sb": 14
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.316,
-      "obp": 0.39,
-      "slg": 0.526,
-      "rbi": 69,
-      "sb": 14
-    },
-    "scoringStats": {
-      "games": 145,
-      "plateAppearances": 625,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.39,
-      "slg": 0.526,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "gilesma01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 109.45714285714287,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-mark-teixeira-2007",
-    "playerId": "teixema01",
-    "playerSlug": "mark-teixeira",
-    "name": "Mark Teixeira",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.317,
-      "obp": 0.404,
-      "slg": 0.615,
-      "rbi": 56,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.317,
-      "obp": 0.404,
-      "slg": 0.615,
-      "rbi": 56,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 54,
-      "plateAppearances": 240,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.404,
-      "slg": 0.615,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "teixema01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 108.75714285714287,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-adam-laroche-2006",
-    "playerId": "larocad01",
-    "playerSlug": "adam-laroche",
-    "name": "Adam LaRoche",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2006,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
+      "RP"
     ],
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 32,
-      "avg": 0.285,
-      "obp": 0.354,
-      "slg": 0.561,
-      "rbi": 90,
-      "sb": 0
+      "war": 2.7,
+      "eraPlus": 441,
+      "era": 0.95,
+      "whip": 1.105,
+      "so": 63,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 32,
-      "avg": 0.285,
-      "obp": 0.354,
-      "slg": 0.561,
-      "rbi": 90,
-      "sb": 0
+      "war": 2.7,
+      "eraPlus": 441,
+      "era": 0.95,
+      "whip": 1.105,
+      "so": 63,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 149,
-      "plateAppearances": 556,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.354,
-      "slg": 0.561,
-      "wrcPlus": null
+      "whip": 1.105,
+      "fip": null,
+      "inningsPitched": 76,
+      "strikeoutRate": 7.4605263157894735,
+      "walkRate": 3.6710526315789473,
+      "starts": 0,
+      "reliefAppearances": 63
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
-      "sourcePlayerId": "larocad01"
+      "sourcePlayerId": "hammoch01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 107.38571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-andres-galarraga-2000",
-    "playerId": "galaran01",
-    "playerSlug": "andres-galarraga",
-    "name": "Andres Galarraga",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.302,
-      "obp": 0.369,
-      "slg": 0.526,
-      "rbi": 100,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.302,
-      "obp": 0.369,
-      "slg": 0.526,
-      "rbi": 100,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 141,
-      "plateAppearances": 548,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.369,
-      "slg": 0.526,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "galaran01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 105.15714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-edgar-renteria-2007",
-    "playerId": "renteed01",
-    "playerSlug": "edgar-renteria",
-    "name": "Edgar Renteria",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.332,
-      "obp": 0.39,
-      "slg": 0.47,
-      "rbi": 57,
-      "sb": 11
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.332,
-      "obp": 0.39,
-      "slg": 0.47,
-      "rbi": 57,
-      "sb": 11
-    },
-    "scoringStats": {
-      "games": 124,
-      "plateAppearances": 541,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.39,
-      "slg": 0.47,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "renteed01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.45714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-kelly-johnson-2007",
-    "playerId": "johnske05",
-    "playerSlug": "kelly-johnson",
-    "name": "Kelly Johnson",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.276,
-      "obp": 0.375,
-      "slg": 0.457,
-      "rbi": 68,
-      "sb": 9
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.276,
-      "obp": 0.375,
-      "slg": 0.457,
-      "rbi": 68,
-      "sb": 9
-    },
-    "scoringStats": {
-      "games": 147,
-      "plateAppearances": 606,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.375,
-      "slg": 0.457,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "johnske05"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 100.51428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-rafael-furcal-2003",
-    "playerId": "furcara01",
-    "playerSlug": "rafael-furcal",
-    "name": "Rafael Furcal",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.292,
-      "obp": 0.352,
-      "slg": 0.443,
-      "rbi": 61,
-      "sb": 25
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.292,
-      "obp": 0.352,
-      "slg": 0.443,
-      "rbi": 61,
-      "sb": 25
-    },
-    "scoringStats": {
-      "games": 156,
-      "plateAppearances": 731,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.352,
-      "slg": 0.443,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "furcara01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 100.38571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-brian-jordan-2001",
-    "playerId": "jordabr01",
-    "playerSlug": "brian-jordan",
-    "name": "Brian Jordan",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.295,
-      "obp": 0.334,
-      "slg": 0.496,
-      "rbi": 97,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.295,
-      "obp": 0.334,
-      "slg": 0.496,
-      "rbi": 97,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 148,
-      "plateAppearances": 605,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.334,
-      "slg": 0.496,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "jordabr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 100.28571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-matt-diaz-2009",
-    "playerId": "diazma02",
-    "playerSlug": "matt-diaz",
-    "name": "Matt Diaz",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF",
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.313,
-      "obp": 0.39,
-      "slg": 0.488,
-      "rbi": 58,
-      "sb": 12
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.313,
-      "obp": 0.39,
-      "slg": 0.488,
-      "rbi": 58,
-      "sb": 12
-    },
-    "scoringStats": {
-      "games": 125,
-      "plateAppearances": 420,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.39,
-      "slg": 0.488,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "diazma02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 99.8,
-      "formulaVersion": "season-selection-v1"
+      "score": 160.75,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1071,8 +92,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 3.3,
+      "eraPlus": 385,
       "era": 1.12,
       "whip": 0.87,
       "so": 73,
@@ -1082,8 +103,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 3.3,
+      "eraPlus": 385,
       "era": 1.12,
       "whip": 0.87,
       "so": 73,
@@ -1103,20 +124,1185 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
       "sourcePlayerId": "smoltjo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.80696734059097,
-      "formulaVersion": "season-selection-v1"
+      "score": 148.20714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-j-d-drew-2004",
+    "playerId": "drewjd01",
+    "playerSlug": "j-d-drew",
+    "name": "J. D. Drew",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 8.3,
+      "opsPlus": 157,
+      "hr": 31,
+      "avg": 0.305,
+      "obp": 0.436,
+      "slg": 0.569,
+      "rbi": 93,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 8.3,
+      "opsPlus": 157,
+      "hr": 31,
+      "avg": 0.305,
+      "obp": 0.436,
+      "slg": 0.569,
+      "rbi": 93,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 644,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.436,
+      "slg": 0.569,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "drewjd01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 134.54000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-chipper-jones-2008",
+    "playerId": "jonesch06",
+    "playerSlug": "chipper-jones",
+    "name": "Chipper Jones",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7.3,
+      "opsPlus": 176,
+      "hr": 22,
+      "avg": 0.364,
+      "obp": 0.47,
+      "slg": 0.574,
+      "rbi": 75,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.3,
+      "opsPlus": 176,
+      "hr": 22,
+      "avg": 0.364,
+      "obp": 0.47,
+      "slg": 0.574,
+      "rbi": 75,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 128,
+      "plateAppearances": 534,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.47,
+      "slg": 0.574,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jonesch06"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 130.94,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-javy-lopez-2003",
+    "playerId": "lopezja01",
+    "playerSlug": "javy-lopez",
+    "name": "Javy Lopez",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.8,
+      "opsPlus": 169,
+      "hr": 43,
+      "avg": 0.328,
+      "obp": 0.378,
+      "slg": 0.687,
+      "rbi": 109,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.8,
+      "opsPlus": 169,
+      "hr": 43,
+      "avg": 0.328,
+      "obp": 0.378,
+      "slg": 0.687,
+      "rbi": 109,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 129,
+      "plateAppearances": 495,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.378,
+      "slg": 0.687,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "lopezja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 121.05,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-gary-sheffield-2003",
+    "playerId": "sheffga01",
+    "playerSlug": "gary-sheffield",
+    "name": "Gary Sheffield",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.8,
+      "opsPlus": 162,
+      "hr": 39,
+      "avg": 0.33,
+      "obp": 0.419,
+      "slg": 0.604,
+      "rbi": 132,
+      "sb": 18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.8,
+      "opsPlus": 162,
+      "hr": 39,
+      "avg": 0.33,
+      "obp": 0.419,
+      "slg": 0.604,
+      "rbi": 132,
+      "sb": 18
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 678,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.419,
+      "slg": 0.604,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "sheffga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 119.38,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-andruw-jones-2000",
+    "playerId": "jonesan01",
+    "playerSlug": "andruw-jones",
+    "name": "Andruw Jones",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 8.2,
+      "opsPlus": 126,
+      "hr": 36,
+      "avg": 0.303,
+      "obp": 0.366,
+      "slg": 0.541,
+      "rbi": 104,
+      "sb": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 8.2,
+      "opsPlus": 126,
+      "hr": 36,
+      "avg": 0.303,
+      "obp": 0.366,
+      "slg": 0.541,
+      "rbi": 104,
+      "sb": 21
+    },
+    "scoringStats": {
+      "games": 161,
+      "plateAppearances": 729,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.366,
+      "slg": 0.541,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jonesan01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 118.69,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-marcus-giles-2003",
+    "playerId": "gilesma01",
+    "playerSlug": "marcus-giles",
+    "name": "Marcus Giles",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7.8,
+      "opsPlus": 136,
+      "hr": 21,
+      "avg": 0.316,
+      "obp": 0.39,
+      "slg": 0.526,
+      "rbi": 69,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.8,
+      "opsPlus": 136,
+      "hr": 21,
+      "avg": 0.316,
+      "obp": 0.39,
+      "slg": 0.526,
+      "rbi": 69,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 625,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.39,
+      "slg": 0.526,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "gilesma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.85,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-jair-jurrjens-2009",
+    "playerId": "jurrjja01",
+    "playerSlug": "jair-jurrjens",
+    "name": "Jair Jurrjens",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.5,
+      "eraPlus": 159,
+      "era": 2.6,
+      "whip": 1.214,
+      "so": 152,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.5,
+      "eraPlus": 159,
+      "era": 2.6,
+      "whip": 1.214,
+      "so": 152,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.214,
+      "fip": null,
+      "inningsPitched": 215,
+      "strikeoutRate": 6.362790697674418,
+      "walkRate": 3.13953488372093,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jurrjja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-greg-maddux-2000",
+    "playerId": "maddugr01",
+    "playerSlug": "greg-maddux",
+    "name": "Greg Maddux",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.5,
+      "eraPlus": 153,
+      "era": 3,
+      "whip": 1.071,
+      "so": 190,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.5,
+      "eraPlus": 153,
+      "era": 3,
+      "whip": 1.071,
+      "so": 190,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.071,
+      "fip": null,
+      "inningsPitched": 249.3,
+      "strikeoutRate": 6.859205776173285,
+      "walkRate": 1.516245487364621,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "maddugr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.55,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-javier-vazquez-2009",
+    "playerId": "vazquja01",
+    "playerSlug": "javier-vazquez",
+    "name": "Javier Vazquez",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.2,
+      "eraPlus": 143,
+      "era": 2.87,
+      "whip": 1.026,
+      "so": 238,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.2,
+      "eraPlus": 143,
+      "era": 2.87,
+      "whip": 1.026,
+      "so": 238,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.026,
+      "fip": null,
+      "inningsPitched": 219.3,
+      "strikeoutRate": 9.767441860465116,
+      "walkRate": 1.8057455540355676,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "vazquja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.45,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-brian-mccann-2008",
+    "playerId": "mccanbr01",
+    "playerSlug": "brian-mccann",
+    "name": "Brian McCann",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.5,
+      "opsPlus": 135,
+      "hr": 23,
+      "avg": 0.301,
+      "obp": 0.373,
+      "slg": 0.523,
+      "rbi": 87,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.5,
+      "opsPlus": 135,
+      "hr": 23,
+      "avg": 0.301,
+      "obp": 0.373,
+      "slg": 0.523,
+      "rbi": 87,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 573,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.373,
+      "slg": 0.523,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "mccanbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.23,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-rafael-furcal-2005",
+    "playerId": "furcara01",
+    "playerSlug": "rafael-furcal",
+    "name": "Rafael Furcal",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.5,
+      "opsPlus": 102,
+      "hr": 12,
+      "avg": 0.284,
+      "obp": 0.348,
+      "slg": 0.429,
+      "rbi": 58,
+      "sb": 46
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.5,
+      "opsPlus": 102,
+      "hr": 12,
+      "avg": 0.284,
+      "obp": 0.348,
+      "slg": 0.429,
+      "rbi": 58,
+      "sb": 46
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 684,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.429,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "furcara01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.84,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-john-burkett-2001",
+    "playerId": "burkejo03",
+    "playerSlug": "john-burkett",
+    "name": "John Burkett",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.8,
+      "eraPlus": 147,
+      "era": 3.04,
+      "whip": 1.172,
+      "so": 187,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.8,
+      "eraPlus": 147,
+      "era": 3.04,
+      "whip": 1.172,
+      "so": 187,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.172,
+      "fip": null,
+      "inningsPitched": 219.3,
+      "strikeoutRate": 7.674418604651162,
+      "walkRate": 2.8727770177838576,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "burkejo03"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.05,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-peter-moylan-2007",
+    "playerId": "moylape01",
+    "playerSlug": "peter-moylan",
+    "name": "Peter Moylan",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.9,
+      "eraPlus": 242,
+      "era": 1.8,
+      "whip": 1.067,
+      "so": 63,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.9,
+      "eraPlus": 242,
+      "era": 1.8,
+      "whip": 1.067,
+      "so": 63,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.067,
+      "fip": null,
+      "inningsPitched": 90,
+      "strikeoutRate": 6.3,
+      "walkRate": 3.1,
+      "starts": 0,
+      "reliefAppearances": 80
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "moylape01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82.5,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-tom-glavine-2000",
+    "playerId": "glavito02",
+    "playerSlug": "tom-glavine",
+    "name": "Tom Glavine",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.9,
+      "eraPlus": 135,
+      "era": 3.4,
+      "whip": 1.191,
+      "so": 152,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.9,
+      "eraPlus": 135,
+      "era": 3.4,
+      "whip": 1.191,
+      "so": 152,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.191,
+      "fip": null,
+      "inningsPitched": 241,
+      "strikeoutRate": 5.676348547717843,
+      "walkRate": 2.4273858921161824,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "glavito02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 81.05000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-mark-teixeira-2008",
+    "playerId": "teixema01",
+    "playerSlug": "mark-teixeira",
+    "name": "Mark Teixeira",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.1,
+      "opsPlus": 137,
+      "hr": 20,
+      "avg": 0.283,
+      "obp": 0.39,
+      "slg": 0.512,
+      "rbi": 78,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.1,
+      "opsPlus": 137,
+      "hr": 20,
+      "avg": 0.283,
+      "obp": 0.39,
+      "slg": 0.512,
+      "rbi": 78,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 103,
+      "plateAppearances": 451,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.39,
+      "slg": 0.512,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "teixema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.21,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-edgar-renteria-2007",
+    "playerId": "renteed01",
+    "playerSlug": "edgar-renteria",
+    "name": "Edgar Renteria",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.1,
+      "opsPlus": 124,
+      "hr": 12,
+      "avg": 0.332,
+      "obp": 0.39,
+      "slg": 0.47,
+      "rbi": 57,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.1,
+      "opsPlus": 124,
+      "hr": 12,
+      "avg": 0.332,
+      "obp": 0.39,
+      "slg": 0.47,
+      "rbi": 57,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 124,
+      "plateAppearances": 541,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.39,
+      "slg": 0.47,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "renteed01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.61,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1140,8 +1326,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 115,
       "hr": 14,
       "avg": 0.299,
       "obp": 0.377,
@@ -1151,8 +1337,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 115,
       "hr": 14,
       "avg": 0.299,
       "obp": 0.377,
@@ -1173,161 +1359,242 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
       "sourcePlayerId": "escobyu01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.35714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 65.07,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "atl-2000s-johnny-estrada-2004",
-    "playerId": "estrajo01",
-    "playerSlug": "johnny-estrada",
-    "name": "Johnny Estrada",
+    "id": "atl-2000s-brian-jordan-2001",
+    "playerId": "jordabr01",
+    "playerSlug": "brian-jordan",
+    "name": "Brian Jordan",
     "franchiseId": "atl",
     "teamAbbreviation": "ATL",
     "teamDisplayName": "Atlanta Braves",
     "team": "ATL",
     "decade": "2000s",
-    "featuredSeason": 2004,
+    "featuredSeason": 2001,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "C"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.314,
-      "obp": 0.378,
-      "slg": 0.45,
-      "rbi": 76,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.314,
-      "obp": 0.378,
-      "slg": 0.45,
-      "rbi": 76,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 134,
-      "plateAppearances": 516,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.378,
-      "slg": 0.45,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "estrajo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.54285714285716,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-eli-marrero-2004",
-    "playerId": "marreel01",
-    "playerSlug": "eli-marrero",
-    "name": "Eli Marrero",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF",
       "RF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.32,
-      "obp": 0.374,
-      "slg": 0.52,
-      "rbi": 40,
-      "sb": 4
+      "war": 4.4,
+      "opsPlus": 109,
+      "hr": 25,
+      "avg": 0.295,
+      "obp": 0.334,
+      "slg": 0.496,
+      "rbi": 97,
+      "sb": 3
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.32,
-      "obp": 0.374,
-      "slg": 0.52,
-      "rbi": 40,
-      "sb": 4
+      "war": 4.4,
+      "opsPlus": 109,
+      "hr": 25,
+      "avg": 0.295,
+      "obp": 0.334,
+      "slg": 0.496,
+      "rbi": 97,
+      "sb": 3
     },
     "scoringStats": {
-      "games": 90,
-      "plateAppearances": 278,
+      "games": 148,
+      "plateAppearances": 605,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.374,
-      "slg": 0.52,
+      "obp": 0.334,
+      "slg": 0.496,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
-      "sourcePlayerId": "marreel01"
+      "sourcePlayerId": "jordabr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 97.34285714285716,
-      "formulaVersion": "season-selection-v1"
+      "score": 63.35,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-kelly-johnson-2007",
+    "playerId": "johnske05",
+    "playerSlug": "kelly-johnson",
+    "name": "Kelly Johnson",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "opsPlus": 116,
+      "hr": 16,
+      "avg": 0.276,
+      "obp": 0.375,
+      "slg": 0.457,
+      "rbi": 68,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "opsPlus": 116,
+      "hr": 16,
+      "avg": 0.276,
+      "obp": 0.375,
+      "slg": 0.457,
+      "rbi": 68,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 147,
+      "plateAppearances": 606,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.375,
+      "slg": 0.457,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "johnske05"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.46000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "atl-2000s-adam-laroche-2009",
+    "playerId": "larocad01",
+    "playerSlug": "adam-laroche",
+    "name": "Adam LaRoche",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2,
+      "opsPlus": 151,
+      "hr": 12,
+      "avg": 0.325,
+      "obp": 0.401,
+      "slg": 0.557,
+      "rbi": 40,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2,
+      "opsPlus": 151,
+      "hr": 12,
+      "avg": 0.325,
+      "obp": 0.401,
+      "slg": 0.557,
+      "rbi": 40,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 57,
+      "plateAppearances": 242,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.401,
+      "slg": 0.557,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "larocad01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.92,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1353,8 +1620,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3,
+      "opsPlus": 117,
       "hr": 11,
       "avg": 0.307,
       "obp": 0.358,
@@ -1364,8 +1631,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3,
+      "opsPlus": 117,
       "hr": 11,
       "avg": 0.307,
       "obp": 0.358,
@@ -1386,97 +1653,103 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
       "sourcePlayerId": "pradoma01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 96.25714285714287,
-      "formulaVersion": "season-selection-v1"
+      "score": 49.42,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "atl-2000s-vinny-castilla-2003",
-    "playerId": "castivi02",
-    "playerSlug": "vinny-castilla",
-    "name": "Vinny Castilla",
+    "id": "atl-2000s-matt-diaz-2007",
+    "playerId": "diazma02",
+    "playerSlug": "matt-diaz",
+    "name": "Matt Diaz",
     "franchiseId": "atl",
     "teamAbbreviation": "ATL",
     "teamDisplayName": "Atlanta Braves",
     "team": "ATL",
     "decade": "2000s",
-    "featuredSeason": 2003,
+    "featuredSeason": 2007,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "3B"
+      "LF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.277,
-      "obp": 0.31,
-      "slg": 0.461,
-      "rbi": 76,
-      "sb": 1
+      "war": 2.6,
+      "opsPlus": 124,
+      "hr": 12,
+      "avg": 0.338,
+      "obp": 0.368,
+      "slg": 0.497,
+      "rbi": 45,
+      "sb": 4
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.277,
-      "obp": 0.31,
-      "slg": 0.461,
-      "rbi": 76,
-      "sb": 1
+      "war": 2.6,
+      "opsPlus": 124,
+      "hr": 12,
+      "avg": 0.338,
+      "obp": 0.368,
+      "slg": 0.497,
+      "rbi": 45,
+      "sb": 4
     },
     "scoringStats": {
-      "games": 147,
-      "plateAppearances": 577,
+      "games": 135,
+      "plateAppearances": 383,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.31,
-      "slg": 0.461,
+      "obp": 0.368,
+      "slg": 0.497,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
-      "sourcePlayerId": "castivi02"
+      "sourcePlayerId": "diazma02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.58571428571429,
-      "formulaVersion": "season-selection-v1"
+      "score": 47.03,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "atl-2000s-charles-thomas-2004",
-    "playerId": "thomach01",
-    "playerSlug": "charles-thomas",
-    "name": "Charles Thomas",
+    "id": "atl-2000s-eli-marrero-2004",
+    "playerId": "marreel01",
+    "playerSlug": "eli-marrero",
+    "name": "Eli Marrero",
     "franchiseId": "atl",
     "teamAbbreviation": "ATL",
     "teamDisplayName": "Atlanta Braves",
@@ -1488,65 +1761,69 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "RF"
     ],
-    "bats": "L",
-    "throws": "L",
+    "bats": "R",
+    "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.288,
-      "obp": 0.368,
-      "slg": 0.445,
-      "rbi": 31,
-      "sb": 3
+      "war": 2.3,
+      "opsPlus": 128,
+      "hr": 10,
+      "avg": 0.32,
+      "obp": 0.374,
+      "slg": 0.52,
+      "rbi": 40,
+      "sb": 4
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.288,
-      "obp": 0.368,
-      "slg": 0.445,
-      "rbi": 31,
-      "sb": 3
+      "war": 2.3,
+      "opsPlus": 128,
+      "hr": 10,
+      "avg": 0.32,
+      "obp": 0.374,
+      "slg": 0.52,
+      "rbi": 40,
+      "sb": 4
     },
     "scoringStats": {
-      "games": 83,
-      "plateAppearances": 266,
+      "games": 90,
+      "plateAppearances": 278,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.368,
-      "slg": 0.445,
+      "obp": 0.374,
+      "slg": 0.52,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
-      "sourcePlayerId": "thomach01"
+      "sourcePlayerId": "marreel01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88.89999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 44.379999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "atl-2000s-nate-mclouth-2009",
-    "playerId": "mclouna01",
-    "playerSlug": "nate-mclouth",
-    "name": "Nate McLouth",
+    "id": "atl-2000s-david-ross-2009",
+    "playerId": "rossda01",
+    "playerSlug": "david-ross",
+    "name": "David Ross",
     "franchiseId": "atl",
     "teamAbbreviation": "ATL",
     "teamDisplayName": "Atlanta Braves",
@@ -1558,127 +1835,61 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "CF"
+      "C"
     ],
-    "bats": "L",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.257,
-      "obp": 0.354,
-      "slg": 0.419,
-      "rbi": 36,
-      "sb": 12
+      "war": 2,
+      "opsPlus": 133,
+      "hr": 7,
+      "avg": 0.273,
+      "obp": 0.38,
+      "slg": 0.508,
+      "rbi": 20,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.257,
-      "obp": 0.354,
-      "slg": 0.419,
-      "rbi": 36,
-      "sb": 12
+      "war": 2,
+      "opsPlus": 133,
+      "hr": 7,
+      "avg": 0.273,
+      "obp": 0.38,
+      "slg": 0.508,
+      "rbi": 20,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 84,
-      "plateAppearances": 393,
+      "games": 54,
+      "plateAppearances": 150,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.354,
-      "slg": 0.419,
+      "obp": 0.38,
+      "slg": 0.508,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
-      "sourcePlayerId": "mclouna01"
+      "sourcePlayerId": "rossda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88.52857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-chris-hammond-2002",
-    "playerId": "hammoch01",
-    "playerSlug": "chris-hammond",
-    "name": "Chris Hammond",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 0.95,
-      "whip": 1.105,
-      "so": 63,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 0.95,
-      "whip": 1.105,
-      "so": 63,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.105,
-      "fip": null,
-      "inningsPitched": 76,
-      "strikeoutRate": 7.4605263157894735,
-      "walkRate": 3.6710526315789473,
-      "starts": 0,
-      "reliefAppearances": 63
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "hammoch01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.1842105263158,
-      "formulaVersion": "season-selection-v1"
+      "score": 42,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1704,8 +1915,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.5,
+      "opsPlus": 101,
       "hr": 8,
       "avg": 0.267,
       "obp": 0.348,
@@ -1715,8 +1926,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.5,
+      "opsPlus": 101,
       "hr": 8,
       "avg": 0.267,
       "obp": 0.348,
@@ -1737,434 +1948,172 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
       "sourcePlayerId": "langery01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88,
-      "formulaVersion": "season-selection-v1"
+      "score": 34.21,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "atl-2000s-darren-holmes-2002",
-    "playerId": "holmeda01",
-    "playerSlug": "darren-holmes",
-    "name": "Darren Holmes",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.81,
-      "whip": 0.97,
-      "so": 47,
-      "wins": 2,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.81,
-      "whip": 0.97,
-      "so": 47,
-      "wins": 2,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 0.97,
-      "fip": null,
-      "inningsPitched": 54.7,
-      "strikeoutRate": 7.7330895795246795,
-      "walkRate": 1.9744058500914077,
-      "starts": 0,
-      "reliefAppearances": 55
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "holmeda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 82.5180255941499,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-javier-vazquez-2009",
-    "playerId": "vazquja01",
-    "playerSlug": "javier-vazquez",
-    "name": "Javier Vazquez",
+    "id": "atl-2000s-nate-mclouth-2009",
+    "playerId": "mclouna01",
+    "playerSlug": "nate-mclouth",
+    "name": "Nate McLouth",
     "franchiseId": "atl",
     "teamAbbreviation": "ATL",
     "teamDisplayName": "Atlanta Braves",
     "team": "ATL",
     "decade": "2000s",
     "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "CF"
     ],
-    "bats": "R",
+    "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.87,
-      "whip": 1.026,
-      "so": 238,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
+      "war": 1.8,
+      "opsPlus": 104,
+      "hr": 11,
+      "avg": 0.257,
+      "obp": 0.354,
+      "slg": 0.419,
+      "rbi": 36,
+      "sb": 12
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.87,
-      "whip": 1.026,
-      "so": 238,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
+      "war": 1.8,
+      "opsPlus": 104,
+      "hr": 11,
+      "avg": 0.257,
+      "obp": 0.354,
+      "slg": 0.419,
+      "rbi": 36,
+      "sb": 12
     },
     "scoringStats": {
-      "whip": 1.026,
-      "fip": null,
-      "inningsPitched": 219.3,
-      "strikeoutRate": 9.767441860465116,
-      "walkRate": 1.8057455540355676,
-      "starts": 32,
-      "reliefAppearances": 0
+      "games": 84,
+      "plateAppearances": 393,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.354,
+      "slg": 0.419,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
-      "sourcePlayerId": "vazquja01"
+      "sourcePlayerId": "mclouna01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 72.98254445964433,
-      "formulaVersion": "season-selection-v1"
+      "score": 27.53,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "atl-2000s-greg-maddux-2001",
-    "playerId": "maddugr01",
-    "playerSlug": "greg-maddux",
-    "name": "Greg Maddux",
+    "id": "atl-2000s-omar-infante-2008",
+    "playerId": "infanom01",
+    "playerSlug": "omar-infante",
+    "name": "Omar Infante",
     "franchiseId": "atl",
     "teamAbbreviation": "ATL",
     "teamDisplayName": "Atlanta Braves",
     "team": "ATL",
     "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "2B",
+      "3B",
+      "SS",
+      "LF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.05,
-      "whip": 1.06,
-      "so": 173,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
+      "war": 2,
+      "opsPlus": 99,
+      "hr": 3,
+      "avg": 0.293,
+      "obp": 0.338,
+      "slg": 0.416,
+      "rbi": 40,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.05,
-      "whip": 1.06,
-      "so": 173,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
+      "war": 2,
+      "opsPlus": 99,
+      "hr": 3,
+      "avg": 0.293,
+      "obp": 0.338,
+      "slg": 0.416,
+      "rbi": 40,
+      "sb": 0
     },
     "scoringStats": {
-      "whip": 1.06,
-      "fip": null,
-      "inningsPitched": 233,
-      "strikeoutRate": 6.682403433476395,
-      "walkRate": 1.0429184549356223,
-      "starts": 34,
-      "reliefAppearances": 0
+      "games": 96,
+      "plateAppearances": 346,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.338,
+      "slg": 0.416,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ATL"
       ],
-      "sourcePlayerId": "maddugr01"
+      "sourcePlayerId": "infanom01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 66.65922746781116,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-jair-jurrjens-2009",
-    "playerId": "jurrjja01",
-    "playerSlug": "jair-jurrjens",
-    "name": "Jair Jurrjens",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.6,
-      "whip": 1.214,
-      "so": 152,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.6,
-      "whip": 1.214,
-      "so": 152,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.214,
-      "fip": null,
-      "inningsPitched": 215,
-      "strikeoutRate": 6.362790697674418,
-      "walkRate": 3.13953488372093,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "jurrjja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 65.29932816537467,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-john-burkett-2001",
-    "playerId": "burkejo03",
-    "playerSlug": "john-burkett",
-    "name": "John Burkett",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.04,
-      "whip": 1.172,
-      "so": 187,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.04,
-      "whip": 1.172,
-      "so": 187,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.172,
-      "fip": null,
-      "inningsPitched": 219.3,
-      "strikeoutRate": 7.674418604651162,
-      "walkRate": 2.8727770177838576,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "burkejo03"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 63.282462380300956,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "atl-2000s-kevin-millwood-2002",
-    "playerId": "millwke01",
-    "playerSlug": "kevin-millwood",
-    "name": "Kevin Millwood",
-    "franchiseId": "atl",
-    "teamAbbreviation": "ATL",
-    "teamDisplayName": "Atlanta Braves",
-    "team": "ATL",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.24,
-      "whip": 1.157,
-      "so": 178,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.24,
-      "whip": 1.157,
-      "so": 178,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.157,
-      "fip": null,
-      "inningsPitched": 217,
-      "strikeoutRate": 7.382488479262673,
-      "walkRate": 2.695852534562212,
-      "starts": 34,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATL"
-      ],
-      "sourcePlayerId": "millwke01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 61.00995391705069,
-      "formulaVersion": "season-selection-v1"
+      "score": 26.96,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

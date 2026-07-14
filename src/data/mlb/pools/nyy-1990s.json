@@ -1,5 +1,77 @@
 [
   {
+    "id": "nyy-1990s-andy-pettitte-1997",
+    "playerId": "pettian01",
+    "playerSlug": "andy-pettitte",
+    "name": "Andy Pettitte",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 8.4,
+      "eraPlus": 156,
+      "era": 2.88,
+      "whip": 1.24,
+      "so": 166,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 8.4,
+      "eraPlus": 156,
+      "era": 2.88,
+      "whip": 1.24,
+      "so": 166,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.24,
+      "fip": null,
+      "inningsPitched": 240.3,
+      "strikeoutRate": 6.217228464419476,
+      "walkRate": 2.434456928838951,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "pettian01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 130.4,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
     "id": "nyy-1990s-derek-jeter-1999",
     "playerId": "jeterde01",
     "playerSlug": "derek-jeter",
@@ -20,8 +92,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8,
+      "opsPlus": 153,
       "hr": 24,
       "avg": 0.349,
       "obp": 0.438,
@@ -31,8 +103,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8,
+      "opsPlus": 153,
       "hr": 24,
       "avg": 0.349,
       "obp": 0.438,
@@ -53,20 +125,312 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "jeterde01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 120.02857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 129.86,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-mariano-rivera-1996",
+    "playerId": "riverma01",
+    "playerSlug": "mariano-rivera",
+    "name": "Mariano Rivera",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5,
+      "eraPlus": 240,
+      "era": 2.09,
+      "whip": 0.994,
+      "so": 130,
+      "wins": 8,
+      "saves": 5,
+      "sv": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5,
+      "eraPlus": 240,
+      "era": 2.09,
+      "whip": 0.994,
+      "so": 130,
+      "wins": 8,
+      "saves": 5,
+      "sv": 5
+    },
+    "scoringStats": {
+      "whip": 0.994,
+      "fip": null,
+      "inningsPitched": 107.7,
+      "strikeoutRate": 10.86350974930362,
+      "walkRate": 2.841225626740947,
+      "starts": 0,
+      "reliefAppearances": 61
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "riverma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.71428571428571,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-david-cone-1997",
+    "playerId": "coneda01",
+    "playerSlug": "david-cone",
+    "name": "David Cone",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.7,
+      "eraPlus": 159,
+      "era": 2.82,
+      "whip": 1.236,
+      "so": 222,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.7,
+      "eraPlus": 159,
+      "era": 2.82,
+      "whip": 1.236,
+      "so": 222,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.236,
+      "fip": null,
+      "inningsPitched": 195,
+      "strikeoutRate": 10.246153846153845,
+      "walkRate": 3.9692307692307693,
+      "starts": 29,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "coneda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.80000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-bernie-williams-1998",
+    "playerId": "willibe02",
+    "playerSlug": "bernie-williams",
+    "name": "Bernie Williams",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.3,
+      "opsPlus": 160,
+      "hr": 26,
+      "avg": 0.339,
+      "obp": 0.422,
+      "slg": 0.575,
+      "rbi": 97,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.3,
+      "opsPlus": 160,
+      "hr": 26,
+      "avg": 0.339,
+      "obp": 0.422,
+      "slg": 0.575,
+      "rbi": 97,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 128,
+      "plateAppearances": 578,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.422,
+      "slg": 0.575,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "willibe02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.38,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-jimmy-key-1993",
+    "playerId": "keyji01",
+    "playerSlug": "jimmy-key",
+    "name": "Jimmy Key",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 6.3,
+      "eraPlus": 139,
+      "era": 3,
+      "whip": 1.107,
+      "so": 173,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.3,
+      "eraPlus": 139,
+      "era": 3,
+      "whip": 1.107,
+      "so": 173,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.107,
+      "fip": null,
+      "inningsPitched": 236.7,
+      "strikeoutRate": 6.577946768060837,
+      "walkRate": 1.6349809885931559,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "keyji01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.25,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -91,8 +455,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 177,
       "hr": 21,
       "avg": 0.359,
       "obp": 0.46,
@@ -102,8 +466,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 177,
       "hr": 21,
       "avg": 0.359,
       "obp": 0.46,
@@ -124,90 +488,167 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "oneilpa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1994.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 118.95714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 94.53,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-1990s-bernie-williams-1999",
-    "playerId": "willibe02",
-    "playerSlug": "bernie-williams",
-    "name": "Bernie Williams",
+    "id": "nyy-1990s-melido-perez-1992",
+    "playerId": "perezme01",
+    "playerSlug": "melido-perez",
+    "name": "Melido Perez",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1992,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "CF"
+      "SP"
     ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.342,
-      "obp": 0.435,
-      "slg": 0.536,
-      "rbi": 115,
-      "sb": 9
+      "war": 5.9,
+      "eraPlus": 136,
+      "era": 2.87,
+      "whip": 1.231,
+      "so": 218,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.342,
-      "obp": 0.435,
-      "slg": 0.536,
-      "rbi": 115,
-      "sb": 9
+      "war": 5.9,
+      "eraPlus": 136,
+      "era": 2.87,
+      "whip": 1.231,
+      "so": 218,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 158,
-      "plateAppearances": 697,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.435,
-      "slg": 0.536,
-      "wrcPlus": null
+      "whip": 1.231,
+      "fip": null,
+      "inningsPitched": 247.7,
+      "strikeoutRate": 7.920872022607994,
+      "walkRate": 3.37908760597497,
+      "starts": 33,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "willibe02"
+      "sourcePlayerId": "perezme01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 117.01428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 93.4,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-steve-farr-1992",
+    "playerId": "farrst01",
+    "playerSlug": "steve-farr",
+    "name": "Steve Farr",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.6,
+      "eraPlus": 253,
+      "era": 1.56,
+      "whip": 1.019,
+      "so": 37,
+      "wins": 2,
+      "saves": 30,
+      "sv": 30
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "eraPlus": 253,
+      "era": 1.56,
+      "whip": 1.019,
+      "so": 37,
+      "wins": 2,
+      "saves": 30,
+      "sv": 30
+    },
+    "scoringStats": {
+      "whip": 1.019,
+      "fip": null,
+      "inningsPitched": 52,
+      "strikeoutRate": 6.403846153846154,
+      "walkRate": 3.2884615384615383,
+      "starts": 0,
+      "reliefAppearances": 50
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "farrst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.89285714285714,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -231,8 +672,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.1,
+      "opsPlus": 143,
       "hr": 44,
       "avg": 0.296,
       "obp": 0.371,
@@ -242,8 +683,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.1,
+      "opsPlus": 143,
       "hr": 44,
       "avg": 0.296,
       "obp": 0.371,
@@ -264,20 +705,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "martiti02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 114.37142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 89.54999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -301,8 +745,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.8,
+      "opsPlus": 150,
       "hr": 26,
       "avg": 0.305,
       "obp": 0.389,
@@ -312,8 +756,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.8,
+      "opsPlus": 150,
       "hr": 26,
       "avg": 0.305,
       "obp": 0.389,
@@ -334,90 +778,168 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "stanlmi02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 106.32857142857144,
-      "formulaVersion": "season-selection-v1"
+      "score": 87.50999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-1990s-chuck-knoblauch-1999",
-    "playerId": "knoblch01",
-    "playerSlug": "chuck-knoblauch",
-    "name": "Chuck Knoblauch",
+    "id": "nyy-1990s-steve-howe-1994",
+    "playerId": "howest01",
+    "playerSlug": "steve-howe",
+    "name": "Steve Howe",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "1990s",
-    "featuredSeason": 1999,
+    "featuredSeason": 1994,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.2,
+      "eraPlus": 256,
+      "era": 1.8,
+      "whip": 0.875,
+      "so": 18,
+      "wins": 3,
+      "saves": 15,
+      "sv": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "eraPlus": 256,
+      "era": 1.8,
+      "whip": 0.875,
+      "so": 18,
+      "wins": 3,
+      "saves": 15,
+      "sv": 15
+    },
+    "scoringStats": {
+      "whip": 0.875,
+      "fip": null,
+      "inningsPitched": 40,
+      "strikeoutRate": 4.05,
+      "walkRate": 1.575,
+      "starts": 0,
+      "reliefAppearances": 40
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "howest01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1994.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.71428571428571,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-jesse-barfield-1990",
+    "playerId": "barfije01",
+    "playerSlug": "jesse-barfield",
+    "name": "Jesse Barfield",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1990,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "2B"
+      "RF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.292,
-      "obp": 0.393,
-      "slg": 0.454,
-      "rbi": 68,
-      "sb": 28
+      "war": 5.2,
+      "opsPlus": 127,
+      "hr": 25,
+      "avg": 0.246,
+      "obp": 0.359,
+      "slg": 0.456,
+      "rbi": 78,
+      "sb": 4
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.292,
-      "obp": 0.393,
-      "slg": 0.454,
-      "rbi": 68,
-      "sb": 28
+      "war": 5.2,
+      "opsPlus": 127,
+      "hr": 25,
+      "avg": 0.246,
+      "obp": 0.359,
+      "slg": 0.456,
+      "rbi": 78,
+      "sb": 4
     },
     "scoringStats": {
-      "games": 150,
-      "plateAppearances": 712,
+      "games": 153,
+      "plateAppearances": 568,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.393,
-      "slg": 0.454,
+      "obp": 0.359,
+      "slg": 0.456,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "knoblch01"
+      "sourcePlayerId": "barfije01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.04285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 81.58000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -441,8 +963,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.1,
+      "opsPlus": 153,
       "hr": 25,
       "avg": 0.266,
       "obp": 0.409,
@@ -452,8 +974,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.1,
+      "opsPlus": 153,
       "hr": 25,
       "avg": 0.266,
       "obp": 0.409,
@@ -474,20 +996,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "tartada01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 104.82857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 80.96,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-scott-brosius-1998",
+    "playerId": "brosisc01",
+    "playerSlug": "scott-brosius",
+    "name": "Scott Brosius",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.3,
+      "opsPlus": 121,
+      "hr": 19,
+      "avg": 0.3,
+      "obp": 0.371,
+      "slg": 0.472,
+      "rbi": 98,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.3,
+      "opsPlus": 121,
+      "hr": 19,
+      "avg": 0.3,
+      "obp": 0.371,
+      "slg": 0.472,
+      "rbi": 98,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 595,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.371,
+      "slg": 0.472,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "brosisc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.05,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -511,8 +1109,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.5,
+      "opsPlus": 142,
       "hr": 11,
       "avg": 0.342,
       "obp": 0.433,
@@ -522,8 +1120,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.5,
+      "opsPlus": 142,
       "hr": 11,
       "avg": 0.342,
       "obp": 0.433,
@@ -544,20 +1142,313 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "boggswa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1994.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 104.54285714285713,
-      "formulaVersion": "season-selection-v1"
+      "score": 79.32,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-graeme-lloyd-1998",
+    "playerId": "lloydgr01",
+    "playerSlug": "graeme-lloyd",
+    "name": "Graeme Lloyd",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 1.1,
+      "eraPlus": 267,
+      "era": 1.67,
+      "whip": 0.85,
+      "so": 20,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.1,
+      "eraPlus": 267,
+      "era": 1.67,
+      "whip": 0.85,
+      "so": 20,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.85,
+      "fip": null,
+      "inningsPitched": 37.7,
+      "strikeoutRate": 4.774535809018567,
+      "walkRate": 1.4323607427055702,
+      "starts": 0,
+      "reliefAppearances": 50
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "lloydgr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.79285714285713,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-david-wells-1998",
+    "playerId": "wellsda01",
+    "playerSlug": "david-wells",
+    "name": "David Wells",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.8,
+      "eraPlus": 127,
+      "era": 3.49,
+      "whip": 1.045,
+      "so": 163,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.8,
+      "eraPlus": 127,
+      "era": 3.49,
+      "whip": 1.045,
+      "so": 163,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.045,
+      "fip": null,
+      "inningsPitched": 214.3,
+      "strikeoutRate": 6.845543630424638,
+      "walkRate": 1.2179188054129724,
+      "starts": 30,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "wellsda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.05,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-roberto-kelly-1990",
+    "playerId": "kellyro01",
+    "playerSlug": "roberto-kelly",
+    "name": "Roberto Kelly",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.5,
+      "opsPlus": 106,
+      "hr": 15,
+      "avg": 0.285,
+      "obp": 0.323,
+      "slg": 0.418,
+      "rbi": 61,
+      "sb": 42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.5,
+      "opsPlus": 106,
+      "hr": 15,
+      "avg": 0.285,
+      "obp": 0.323,
+      "slg": 0.418,
+      "rbi": 61,
+      "sb": 42
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 682,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.323,
+      "slg": 0.418,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "kellyro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.82,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-john-habyan-1991",
+    "playerId": "habyajo01",
+    "playerSlug": "john-habyan",
+    "name": "John Habyan",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 181,
+      "era": 2.3,
+      "whip": 1.033,
+      "so": 70,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 181,
+      "era": 2.3,
+      "whip": 1.033,
+      "so": 70,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2
+    },
+    "scoringStats": {
+      "whip": 1.033,
+      "fip": null,
+      "inningsPitched": 90,
+      "strikeoutRate": 7,
+      "walkRate": 2,
+      "starts": 0,
+      "reliefAppearances": 66
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "habyajo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.57857142857142,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -583,8 +1474,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.2,
+      "opsPlus": 154,
       "hr": 14,
       "avg": 0.309,
       "obp": 0.41,
@@ -594,8 +1485,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.2,
+      "opsPlus": 154,
       "hr": 14,
       "avg": 0.309,
       "obp": 0.41,
@@ -616,652 +1507,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "leyriji01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.21428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-scott-brosius-1998",
-    "playerId": "brosisc01",
-    "playerSlug": "scott-brosius",
-    "name": "Scott Brosius",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.3,
-      "obp": 0.371,
-      "slg": 0.472,
-      "rbi": 98,
-      "sb": 11
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.3,
-      "obp": 0.371,
-      "slg": 0.472,
-      "rbi": 98,
-      "sb": 11
-    },
-    "scoringStats": {
-      "games": 152,
-      "plateAppearances": 595,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.371,
-      "slg": 0.472,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "brosisc01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.3,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-darryl-strawberry-1998",
-    "playerId": "strawda01",
-    "playerSlug": "darryl-strawberry",
-    "name": "Darryl Strawberry",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.247,
-      "obp": 0.354,
-      "slg": 0.542,
-      "rbi": 57,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.247,
-      "obp": 0.354,
-      "slg": 0.542,
-      "rbi": 57,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 101,
-      "plateAppearances": 345,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.354,
-      "slg": 0.542,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "strawda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 99.45714285714287,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-kevin-maas-1990",
-    "playerId": "maaske01",
-    "playerSlug": "kevin-maas",
-    "name": "Kevin Maas",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.252,
-      "obp": 0.367,
-      "slg": 0.535,
-      "rbi": 41,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.252,
-      "obp": 0.367,
-      "slg": 0.535,
-      "rbi": 41,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 79,
-      "plateAppearances": 300,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.367,
-      "slg": 0.535,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "maaske01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 98.77142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-don-mattingly-1993",
-    "playerId": "mattido01",
-    "playerSlug": "don-mattingly",
-    "name": "Don Mattingly",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.291,
-      "obp": 0.364,
-      "slg": 0.445,
-      "rbi": 86,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.291,
-      "obp": 0.364,
-      "slg": 0.445,
-      "rbi": 86,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 134,
-      "plateAppearances": 596,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.364,
-      "slg": 0.445,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "mattido01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.92857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-mariano-duncan-1996",
-    "playerId": "duncama01",
-    "playerSlug": "mariano-duncan",
-    "name": "Mariano Duncan",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1996,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.34,
-      "obp": 0.352,
-      "slg": 0.5,
-      "rbi": 56,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.34,
-      "obp": 0.352,
-      "slg": 0.5,
-      "rbi": 56,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 109,
-      "plateAppearances": 415,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.352,
-      "slg": 0.5,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "duncama01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.05714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-dion-james-1993",
-    "playerId": "jamesdi01",
-    "playerSlug": "dion-james",
-    "name": "Dion James",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.332,
-      "obp": 0.39,
-      "slg": 0.466,
-      "rbi": 36,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.332,
-      "obp": 0.39,
-      "slg": 0.466,
-      "rbi": 36,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 115,
-      "plateAppearances": 377,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.39,
-      "slg": 0.466,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "jamesdi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.37142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-steve-sax-1991",
-    "playerId": "saxst01",
-    "playerSlug": "steve-sax",
-    "name": "Steve Sax",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.304,
-      "obp": 0.345,
-      "slg": 0.414,
-      "rbi": 56,
-      "sb": 31
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.304,
-      "obp": 0.345,
-      "slg": 0.414,
-      "rbi": 56,
-      "sb": 31
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 702,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.345,
-      "slg": 0.414,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "saxst01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95.95714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-chad-curtis-1997",
-    "playerId": "curtich01",
-    "playerSlug": "chad-curtis",
-    "name": "Chad Curtis",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.291,
-      "obp": 0.362,
-      "slg": 0.475,
-      "rbi": 50,
-      "sb": 12
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.291,
-      "obp": 0.362,
-      "slg": 0.475,
-      "rbi": 50,
-      "sb": 12
-    },
-    "scoringStats": {
-      "games": 93,
-      "plateAppearances": 370,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.362,
-      "slg": 0.475,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "curtich01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.27142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-jorge-posada-1998",
-    "playerId": "posadjo01",
-    "playerSlug": "jorge-posada",
-    "name": "Jorge Posada",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.268,
-      "obp": 0.35,
-      "slg": 0.475,
-      "rbi": 63,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.268,
-      "obp": 0.35,
-      "slg": 0.475,
-      "rbi": 63,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 111,
-      "plateAppearances": 409,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.35,
-      "slg": 0.475,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "posadjo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.18571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 68.45,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1287,8 +1549,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.5,
+      "opsPlus": 112,
       "hr": 10,
       "avg": 0.283,
       "obp": 0.364,
@@ -1298,8 +1560,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.5,
+      "opsPlus": 112,
       "hr": 10,
       "avg": 0.283,
       "obp": 0.364,
@@ -1320,27 +1582,176 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "gallemi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.80000000000001,
-      "formulaVersion": "season-selection-v1"
+      "score": 64.62,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-1990s-randy-velarde-1993",
-    "playerId": "velarra01",
-    "playerSlug": "randy-velarde",
-    "name": "Randy Velarde",
+    "id": "nyy-1990s-steve-sax-1991",
+    "playerId": "saxst01",
+    "playerSlug": "steve-sax",
+    "name": "Steve Sax",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.2,
+      "opsPlus": 110,
+      "hr": 10,
+      "avg": 0.304,
+      "obp": 0.345,
+      "slg": 0.414,
+      "rbi": 56,
+      "sb": 31
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.2,
+      "opsPlus": 110,
+      "hr": 10,
+      "avg": 0.304,
+      "obp": 0.345,
+      "slg": 0.414,
+      "rbi": 56,
+      "sb": 31
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 702,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.345,
+      "slg": 0.414,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "saxst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 62.42,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-chuck-knoblauch-1999",
+    "playerId": "knoblch01",
+    "playerSlug": "chuck-knoblauch",
+    "name": "Chuck Knoblauch",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.5,
+      "opsPlus": 118,
+      "hr": 18,
+      "avg": 0.292,
+      "obp": 0.393,
+      "slg": 0.454,
+      "rbi": 68,
+      "sb": 28
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "opsPlus": 118,
+      "hr": 18,
+      "avg": 0.292,
+      "obp": 0.393,
+      "slg": 0.454,
+      "rbi": 68,
+      "sb": 28
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 712,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.393,
+      "slg": 0.454,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "knoblch01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.12,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-don-mattingly-1993",
+    "playerId": "mattido01",
+    "playerSlug": "don-mattingly",
+    "name": "Don Mattingly",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
@@ -1352,6 +1763,80 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.7,
+      "opsPlus": 120,
+      "hr": 17,
+      "avg": 0.291,
+      "obp": 0.364,
+      "slg": 0.445,
+      "rbi": 86,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.7,
+      "opsPlus": 120,
+      "hr": 17,
+      "avg": 0.291,
+      "obp": 0.364,
+      "slg": 0.445,
+      "rbi": 86,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 596,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.364,
+      "slg": 0.445,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "mattido01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.36000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-1990s-randy-velarde-1995",
+    "playerId": "velarra01",
+    "playerSlug": "randy-velarde",
+    "name": "Randy Velarde",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
       "3B",
       "SS",
       "LF"
@@ -1359,605 +1844,203 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.5,
+      "opsPlus": 102,
       "hr": 7,
-      "avg": 0.301,
-      "obp": 0.36,
-      "slg": 0.469,
-      "rbi": 24,
-      "sb": 2
+      "avg": 0.278,
+      "obp": 0.375,
+      "slg": 0.392,
+      "rbi": 46,
+      "sb": 5
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.5,
+      "opsPlus": 102,
       "hr": 7,
-      "avg": 0.301,
-      "obp": 0.36,
-      "slg": 0.469,
-      "rbi": 24,
-      "sb": 2
+      "avg": 0.278,
+      "obp": 0.375,
+      "slg": 0.392,
+      "rbi": 46,
+      "sb": 5
     },
     "scoringStats": {
-      "games": 85,
-      "plateAppearances": 250,
+      "games": 111,
+      "plateAppearances": 429,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.36,
-      "slg": 0.469,
+      "obp": 0.375,
+      "slg": 0.392,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "velarra01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.04285714285713,
-      "formulaVersion": "season-selection-v1"
+      "score": 47.29,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-1990s-mariano-rivera-1996",
-    "playerId": "riverma01",
-    "playerSlug": "mariano-rivera",
-    "name": "Mariano Rivera",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1996,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.09,
-      "whip": 0.994,
-      "so": 130,
-      "wins": 8,
-      "saves": 5,
-      "sv": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.09,
-      "whip": 0.994,
-      "so": 130,
-      "wins": 8,
-      "saves": 5,
-      "sv": 5
-    },
-    "scoringStats": {
-      "whip": 0.994,
-      "fip": null,
-      "inningsPitched": 107.7,
-      "strikeoutRate": 10.86350974930362,
-      "walkRate": 2.841225626740947,
-      "starts": 0,
-      "reliefAppearances": 61
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "riverma01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 83.07342618384402,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-graeme-lloyd-1998",
-    "playerId": "lloydgr01",
-    "playerSlug": "graeme-lloyd",
-    "name": "Graeme Lloyd",
+    "id": "nyy-1990s-jorge-posada-1998",
+    "playerId": "posadjo01",
+    "playerSlug": "jorge-posada",
+    "name": "Jorge Posada",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "1990s",
     "featuredSeason": 1998,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "C"
     ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.67,
-      "whip": 0.85,
-      "so": 20,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.67,
-      "whip": 0.85,
-      "so": 20,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.85,
-      "fip": null,
-      "inningsPitched": 37.7,
-      "strikeoutRate": 4.774535809018567,
-      "walkRate": 1.4323607427055702,
-      "starts": 0,
-      "reliefAppearances": 50
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "lloydgr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 81.9732625994695,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-steve-howe-1991",
-    "playerId": "howest01",
-    "playerSlug": "steve-howe",
-    "name": "Steve Howe",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.68,
-      "whip": 0.952,
-      "so": 34,
-      "wins": 3,
-      "saves": 3,
-      "sv": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.68,
-      "whip": 0.952,
-      "so": 34,
-      "wins": 3,
-      "saves": 3,
-      "sv": 3
-    },
-    "scoringStats": {
-      "whip": 0.952,
-      "fip": null,
-      "inningsPitched": 48.3,
-      "strikeoutRate": 6.3354037267080745,
-      "walkRate": 1.3043478260869565,
-      "starts": 0,
-      "reliefAppearances": 37
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "howest01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 79.7465838509317,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-david-cone-1997",
-    "playerId": "coneda01",
-    "playerSlug": "david-cone",
-    "name": "David Cone",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.82,
-      "whip": 1.236,
-      "so": 222,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
+      "war": 2.9,
+      "opsPlus": 115,
+      "hr": 17,
+      "avg": 0.268,
+      "obp": 0.35,
+      "slg": 0.475,
+      "rbi": 63,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.82,
-      "whip": 1.236,
-      "so": 222,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
+      "war": 2.9,
+      "opsPlus": 115,
+      "hr": 17,
+      "avg": 0.268,
+      "obp": 0.35,
+      "slg": 0.475,
+      "rbi": 63,
+      "sb": 0
     },
     "scoringStats": {
-      "whip": 1.236,
-      "fip": null,
-      "inningsPitched": 195,
-      "strikeoutRate": 10.246153846153845,
-      "walkRate": 3.9692307692307693,
-      "starts": 29,
-      "reliefAppearances": 0
+      "games": 111,
+      "plateAppearances": 409,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.35,
+      "slg": 0.475,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "coneda01"
+      "sourcePlayerId": "posadjo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 65.68871794871795,
-      "formulaVersion": "season-selection-v1"
+      "score": 46.39,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-1990s-jimmy-key-1993",
-    "playerId": "keyji01",
-    "playerSlug": "jimmy-key",
-    "name": "Jimmy Key",
+    "id": "nyy-1990s-dion-james-1993",
+    "playerId": "jamesdi01",
+    "playerSlug": "dion-james",
+    "name": "Dion James",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "1990s",
     "featuredSeason": 1993,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 1.107,
-      "so": 173,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 1.107,
-      "so": 173,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.107,
-      "fip": null,
-      "inningsPitched": 236.7,
-      "strikeoutRate": 6.577946768060837,
-      "walkRate": 1.6349809885931559,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "keyji01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 65.27444866920152,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-melido-perez-1992",
-    "playerId": "perezme01",
-    "playerSlug": "melido-perez",
-    "name": "Melido Perez",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1992,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.87,
-      "whip": 1.231,
-      "so": 218,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.87,
-      "whip": 1.231,
-      "so": 218,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.231,
-      "fip": null,
-      "inningsPitched": 247.7,
-      "strikeoutRate": 7.920872022607994,
-      "walkRate": 3.37908760597497,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "perezme01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 63.752676624949544,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-andy-pettitte-1997",
-    "playerId": "pettian01",
-    "playerSlug": "andy-pettitte",
-    "name": "Andy Pettitte",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
+      "CF",
+      "LF"
     ],
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.88,
-      "whip": 1.24,
-      "so": 166,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
+      "war": 1.4,
+      "opsPlus": 133,
+      "hr": 7,
+      "avg": 0.332,
+      "obp": 0.39,
+      "slg": 0.466,
+      "rbi": 36,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.88,
-      "whip": 1.24,
-      "so": 166,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
+      "war": 1.4,
+      "opsPlus": 133,
+      "hr": 7,
+      "avg": 0.332,
+      "obp": 0.39,
+      "slg": 0.466,
+      "rbi": 36,
+      "sb": 0
     },
     "scoringStats": {
-      "whip": 1.24,
-      "fip": null,
-      "inningsPitched": 240.3,
-      "strikeoutRate": 6.217228464419476,
-      "walkRate": 2.434456928838951,
-      "starts": 35,
-      "reliefAppearances": 0
+      "games": 115,
+      "plateAppearances": 377,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.39,
+      "slg": 0.466,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "pettian01"
+      "sourcePlayerId": "jamesdi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 62.31415730337079,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-1990s-david-wells-1998",
-    "playerId": "wellsda01",
-    "playerSlug": "david-wells",
-    "name": "David Wells",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.49,
-      "whip": 1.045,
-      "so": 163,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.49,
-      "whip": 1.045,
-      "so": 163,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.045,
-      "fip": null,
-      "inningsPitched": 214.3,
-      "strikeoutRate": 6.845543630424638,
-      "walkRate": 1.2179188054129724,
-      "starts": 30,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "wellsda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 61.566992793073055,
-      "formulaVersion": "season-selection-v1"
+      "score": 37.07,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

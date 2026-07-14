@@ -20,8 +20,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.7,
+      "opsPlus": 185,
       "hr": 40,
       "avg": 0.362,
       "obp": 0.431,
@@ -31,8 +31,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.7,
+      "opsPlus": 185,
       "hr": 40,
       "avg": 0.362,
       "obp": 0.431,
@@ -53,1978 +53,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "piazzmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 124.98571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-gary-sheffield-1999",
-    "playerId": "sheffga01",
-    "playerSlug": "gary-sheffield",
-    "name": "Gary Sheffield",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.301,
-      "obp": 0.407,
-      "slg": 0.523,
-      "rbi": 101,
-      "sb": 11
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.301,
-      "obp": 0.407,
-      "slg": 0.523,
-      "rbi": 101,
-      "sb": 11
-    },
-    "scoringStats": {
-      "games": 152,
-      "plateAppearances": 663,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.407,
-      "slg": 0.523,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "sheffga01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 111.94285714285715,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-eddie-murray-1990",
-    "playerId": "murraed02",
-    "playerSlug": "eddie-murray",
-    "name": "Eddie Murray",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 26,
-      "avg": 0.33,
-      "obp": 0.414,
-      "slg": 0.52,
-      "rbi": 95,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 26,
-      "avg": 0.33,
-      "obp": 0.414,
-      "slg": 0.52,
-      "rbi": 95,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 155,
-      "plateAppearances": 645,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.414,
-      "slg": 0.52,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "murraed02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 111.82857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-eric-karros-1999",
-    "playerId": "karroer01",
-    "playerSlug": "eric-karros",
-    "name": "Eric Karros",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.304,
-      "obp": 0.362,
-      "slg": 0.55,
-      "rbi": 112,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.304,
-      "obp": 0.362,
-      "slg": 0.55,
-      "rbi": 112,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 153,
-      "plateAppearances": 639,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.362,
-      "slg": 0.55,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "karroer01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 109.45714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-raul-mondesi-1997",
-    "playerId": "mondera01",
-    "playerSlug": "raul-mondesi",
-    "name": "Raul Mondesi",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.31,
-      "obp": 0.36,
-      "slg": 0.541,
-      "rbi": 87,
-      "sb": 32
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.31,
-      "obp": 0.36,
-      "slg": 0.541,
-      "rbi": 87,
-      "sb": 32
-    },
-    "scoringStats": {
-      "games": 159,
-      "plateAppearances": 669,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.36,
-      "slg": 0.541,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "mondera01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 109.21428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-kal-daniels-1990",
-    "playerId": "danieka01",
-    "playerSlug": "kal-daniels",
-    "name": "Kal Daniels",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.296,
-      "obp": 0.389,
-      "slg": 0.531,
-      "rbi": 94,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.296,
-      "obp": 0.389,
-      "slg": 0.531,
-      "rbi": 94,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 130,
-      "plateAppearances": 524,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.389,
-      "slg": 0.531,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "danieka01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 106.97142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-darryl-strawberry-1991",
-    "playerId": "strawda01",
-    "playerSlug": "darryl-strawberry",
-    "name": "Darryl Strawberry",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.265,
-      "obp": 0.361,
-      "slg": 0.491,
-      "rbi": 99,
-      "sb": 10
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.265,
-      "obp": 0.361,
-      "slg": 0.491,
-      "rbi": 99,
-      "sb": 10
-    },
-    "scoringStats": {
-      "games": 139,
-      "plateAppearances": 588,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.361,
-      "slg": 0.491,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "strawda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-todd-zeile-1997",
-    "playerId": "zeileto01",
-    "playerSlug": "todd-zeile",
-    "name": "Todd Zeile",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.268,
-      "obp": 0.365,
-      "slg": 0.459,
-      "rbi": 90,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.268,
-      "obp": 0.365,
-      "slg": 0.459,
-      "rbi": 90,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 160,
-      "plateAppearances": 672,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.365,
-      "slg": 0.459,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "zeileto01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.60000000000001,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-dave-hansen-1993",
-    "playerId": "hanseda01",
-    "playerSlug": "dave-hansen",
-    "name": "Dave Hansen",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.362,
-      "obp": 0.465,
-      "slg": 0.505,
-      "rbi": 30,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.362,
-      "obp": 0.465,
-      "slg": 0.505,
-      "rbi": 30,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 84,
-      "plateAppearances": 127,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.465,
-      "slg": 0.505,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "hanseda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 100.62857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-brett-butler-1994",
-    "playerId": "butlebr01",
-    "playerSlug": "brett-butler",
-    "name": "Brett Butler",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1994,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.314,
-      "obp": 0.411,
-      "slg": 0.446,
-      "rbi": 33,
-      "sb": 27
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.314,
-      "obp": 0.411,
-      "slg": 0.446,
-      "rbi": 33,
-      "sb": 27
-    },
-    "scoringStats": {
-      "games": 111,
-      "plateAppearances": 489,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.411,
-      "slg": 0.446,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "butlebr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 99.67142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-tim-wallach-1994",
-    "playerId": "wallati01",
-    "playerSlug": "tim-wallach",
-    "name": "Tim Wallach",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1994,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.28,
-      "obp": 0.356,
-      "slg": 0.502,
-      "rbi": 78,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.28,
-      "obp": 0.356,
-      "slg": 0.502,
-      "rbi": 78,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 113,
-      "plateAppearances": 466,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.356,
-      "slg": 0.502,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "wallati01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 99.11428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-mark-grudzielanek-1999",
-    "playerId": "grudzma01",
-    "playerSlug": "mark-grudzielanek",
-    "name": "Mark Grudzielanek",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.326,
-      "obp": 0.376,
-      "slg": 0.436,
-      "rbi": 46,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.326,
-      "obp": 0.376,
-      "slg": 0.436,
-      "rbi": 46,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 123,
-      "plateAppearances": 532,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.376,
-      "slg": 0.436,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "grudzma01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.4,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-todd-hollandsworth-1996",
-    "playerId": "hollato01",
-    "playerSlug": "todd-hollandsworth",
-    "name": "Todd Hollandsworth",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1996,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.291,
-      "obp": 0.348,
-      "slg": 0.437,
-      "rbi": 59,
-      "sb": 21
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.291,
-      "obp": 0.348,
-      "slg": 0.437,
-      "rbi": 59,
-      "sb": 21
-    },
-    "scoringStats": {
-      "games": 149,
-      "plateAppearances": 523,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.348,
-      "slg": 0.437,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "hollato01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.44285714285712,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-hubie-brooks-1990",
-    "playerId": "brookhu01",
-    "playerSlug": "hubie-brooks",
-    "name": "Hubie Brooks",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.266,
-      "obp": 0.307,
-      "slg": 0.424,
-      "rbi": 91,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.266,
-      "obp": 0.307,
-      "slg": 0.424,
-      "rbi": 91,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 153,
-      "plateAppearances": 618,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.307,
-      "slg": 0.424,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "brookhu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.75714285714285,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-jose-offerman-1995",
-    "playerId": "offerjo01",
-    "playerSlug": "jose-offerman",
-    "name": "Jose Offerman",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.287,
-      "obp": 0.389,
-      "slg": 0.375,
-      "rbi": 33,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.287,
-      "obp": 0.389,
-      "slg": 0.375,
-      "rbi": 33,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 119,
-      "plateAppearances": 501,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.389,
-      "slg": 0.375,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "offerjo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.71428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-juan-samuel-1991",
-    "playerId": "samueju01",
-    "playerSlug": "juan-samuel",
-    "name": "Juan Samuel",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.271,
-      "obp": 0.328,
-      "slg": 0.389,
-      "rbi": 58,
-      "sb": 23
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.271,
-      "obp": 0.328,
-      "slg": 0.389,
-      "rbi": 58,
-      "sb": 23
-    },
-    "scoringStats": {
-      "games": 153,
-      "plateAppearances": 649,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.328,
-      "slg": 0.389,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "samueju01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.24285714285715,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-eric-young-1998",
-    "playerId": "younger01",
-    "playerSlug": "eric-young",
-    "name": "Eric Young",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.285,
-      "obp": 0.355,
-      "slg": 0.396,
-      "rbi": 43,
-      "sb": 42
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.285,
-      "obp": 0.355,
-      "slg": 0.396,
-      "rbi": 43,
-      "sb": 42
-    },
-    "scoringStats": {
-      "games": 117,
-      "plateAppearances": 504,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.355,
-      "slg": 0.396,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "younger01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.5,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-mike-scioscia-1990",
-    "playerId": "sciosmi01",
-    "playerSlug": "mike-scioscia",
-    "name": "Mike Scioscia",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.264,
-      "obp": 0.348,
-      "slg": 0.405,
-      "rbi": 66,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.264,
-      "obp": 0.348,
-      "slg": 0.405,
-      "rbi": 66,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 135,
-      "plateAppearances": 497,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.348,
-      "slg": 0.405,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "sciosmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.5,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-devon-white-1999",
-    "playerId": "whitede03",
-    "playerSlug": "devon-white",
-    "name": "Devon White",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.268,
-      "obp": 0.337,
-      "slg": 0.407,
-      "rbi": 68,
-      "sb": 19
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.268,
-      "obp": 0.337,
-      "slg": 0.407,
-      "rbi": 68,
-      "sb": 19
-    },
-    "scoringStats": {
-      "games": 134,
-      "plateAppearances": 526,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.337,
-      "slg": 0.407,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "whitede03"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.42857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-cory-snyder-1993",
-    "playerId": "snydeco02",
-    "playerSlug": "cory-snyder",
-    "name": "Cory Snyder",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "3B",
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.266,
-      "obp": 0.331,
-      "slg": 0.397,
-      "rbi": 56,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.266,
-      "obp": 0.331,
-      "slg": 0.397,
-      "rbi": 56,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 143,
-      "plateAppearances": 568,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.331,
-      "slg": 0.397,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "snydeco02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.02857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-mike-sharperson-1992",
-    "playerId": "sharpmi01",
-    "playerSlug": "mike-sharperson",
-    "name": "Mike Sharperson",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1992,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.3,
-      "obp": 0.387,
-      "slg": 0.394,
-      "rbi": 36,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.3,
-      "obp": 0.387,
-      "slg": 0.394,
-      "rbi": 36,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 128,
-      "plateAppearances": 367,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.387,
-      "slg": 0.394,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "sharpmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.58571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-todd-hundley-1999",
-    "playerId": "hundlto01",
-    "playerSlug": "todd-hundley",
-    "name": "Todd Hundley",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.207,
-      "obp": 0.295,
-      "slg": 0.436,
-      "rbi": 55,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.207,
-      "obp": 0.295,
-      "slg": 0.436,
-      "rbi": 55,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 114,
-      "plateAppearances": 427,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.295,
-      "slg": 0.436,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "hundlto01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 85.3,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-greg-gagne-1996",
-    "playerId": "gagnegr01",
-    "playerSlug": "greg-gagne",
-    "name": "Greg Gagne",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1996,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.255,
-      "obp": 0.333,
-      "slg": 0.364,
-      "rbi": 55,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.255,
-      "obp": 0.333,
-      "slg": 0.364,
-      "rbi": 55,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 128,
-      "plateAppearances": 483,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.333,
-      "slg": 0.364,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "gagnegr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 83.5,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-todd-worrell-1995",
-    "playerId": "worreto01",
-    "playerSlug": "todd-worrell",
-    "name": "Todd Worrell",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.02,
-      "whip": 1.107,
-      "so": 61,
-      "wins": 4,
-      "saves": 32,
-      "sv": 32
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.02,
-      "whip": 1.107,
-      "so": 61,
-      "wins": 4,
-      "saves": 32,
-      "sv": 32
-    },
-    "scoringStats": {
-      "whip": 1.107,
-      "fip": null,
-      "inningsPitched": 62.3,
-      "strikeoutRate": 8.81219903691814,
-      "walkRate": 2.7447833065810596,
-      "starts": 0,
-      "reliefAppearances": 59
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "worreto01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 78.52112359550561,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-antonio-osuna-1997",
-    "playerId": "osunaan01",
-    "playerSlug": "antonio-osuna",
-    "name": "Antonio Osuna",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.19,
-      "whip": 1.054,
-      "so": 68,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.19,
-      "whip": 1.054,
-      "so": 68,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.054,
-      "fip": null,
-      "inningsPitched": 61.7,
-      "strikeoutRate": 9.918962722852513,
-      "walkRate": 2.771474878444084,
-      "starts": 0,
-      "reliefAppearances": 48
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "osunaan01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 76.96123176661264,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-jim-gott-1993",
-    "playerId": "gottji01",
-    "playerSlug": "jim-gott",
-    "name": "Jim Gott",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.32,
-      "whip": 1.133,
-      "so": 67,
-      "wins": 4,
-      "saves": 25,
-      "sv": 25
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.32,
-      "whip": 1.133,
-      "so": 67,
-      "wins": 4,
-      "saves": 25,
-      "sv": 25
-    },
-    "scoringStats": {
-      "whip": 1.133,
-      "fip": null,
-      "inningsPitched": 77.7,
-      "strikeoutRate": 7.760617760617761,
-      "walkRate": 1.969111969111969,
-      "starts": 0,
-      "reliefAppearances": 62
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "gottji01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 74.18725868725869,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-hideo-nomo-1995",
-    "playerId": "nomohi01",
-    "playerSlug": "hideo-nomo",
-    "name": "Hideo Nomo",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.54,
-      "whip": 1.056,
-      "so": 236,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.54,
-      "whip": 1.056,
-      "so": 236,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.056,
-      "fip": null,
-      "inningsPitched": 191.3,
-      "strikeoutRate": 11.102979613173027,
-      "walkRate": 3.669628855201254,
-      "starts": 28,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "nomohi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 74.17780391473543,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-ramon-martinez-1990",
-    "playerId": "martira02",
-    "playerSlug": "ramon-martinez",
-    "name": "Ramon Martinez",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.92,
-      "whip": 1.101,
-      "so": 223,
-      "wins": 20,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.92,
-      "whip": 1.101,
-      "so": 223,
-      "wins": 20,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.101,
-      "fip": null,
-      "inningsPitched": 234.3,
-      "strikeoutRate": 8.565941101152369,
-      "walkRate": 2.5736235595390524,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "martira02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.92847631241997,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-1990s-ismael-valdez-1997",
-    "playerId": "valdeis01",
-    "playerSlug": "ismael-valdez",
-    "name": "Ismael Valdez",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.65,
-      "whip": 1.108,
-      "so": 140,
-      "wins": 10,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.65,
-      "whip": 1.108,
-      "so": 140,
-      "wins": 10,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.108,
-      "fip": null,
-      "inningsPitched": 196.7,
-      "strikeoutRate": 6.405693950177937,
-      "walkRate": 2.150482968988307,
-      "starts": 30,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "valdeis01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.35059424956222,
-      "formulaVersion": "season-selection-v1"
+      "score": 153.23,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -2048,8 +93,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 6.2,
+      "eraPlus": 143,
       "era": 3,
       "whip": 1.066,
       "so": 221,
@@ -2059,8 +104,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 6.2,
+      "eraPlus": 143,
       "era": 3,
       "whip": 1.066,
       "so": 221,
@@ -2080,20 +125,386 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "brownke01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 67.34825208085613,
-      "formulaVersion": "season-selection-v1"
+      "score": 99.45,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-eddie-murray-1990",
+    "playerId": "murraed02",
+    "playerSlug": "eddie-murray",
+    "name": "Eddie Murray",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.2,
+      "opsPlus": 159,
+      "hr": 26,
+      "avg": 0.33,
+      "obp": 0.414,
+      "slg": 0.52,
+      "rbi": 95,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.2,
+      "opsPlus": 159,
+      "hr": 26,
+      "avg": 0.33,
+      "obp": 0.414,
+      "slg": 0.52,
+      "rbi": 95,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 645,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.414,
+      "slg": 0.52,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "murraed02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.35000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-raul-mondesi-1997",
+    "playerId": "mondera01",
+    "playerSlug": "raul-mondesi",
+    "name": "Raul Mondesi",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.7,
+      "opsPlus": 140,
+      "hr": 30,
+      "avg": 0.31,
+      "obp": 0.36,
+      "slg": 0.541,
+      "rbi": 87,
+      "sb": 32
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.7,
+      "opsPlus": 140,
+      "hr": 30,
+      "avg": 0.31,
+      "obp": 0.36,
+      "slg": 0.541,
+      "rbi": 87,
+      "sb": 32
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 669,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.36,
+      "slg": 0.541,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "mondera01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.09,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-ismael-valdez-1997",
+    "playerId": "valdeis01",
+    "playerSlug": "ismael-valdez",
+    "name": "Ismael Valdez",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.3,
+      "eraPlus": 146,
+      "era": 2.65,
+      "whip": 1.108,
+      "so": 140,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.3,
+      "eraPlus": 146,
+      "era": 2.65,
+      "whip": 1.108,
+      "so": 140,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.108,
+      "fip": null,
+      "inningsPitched": 196.7,
+      "strikeoutRate": 6.405693950177937,
+      "walkRate": 2.150482968988307,
+      "starts": 30,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "valdeis01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.53499999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-kal-daniels-1990",
+    "playerId": "danieka01",
+    "playerSlug": "kal-daniels",
+    "name": "Kal Daniels",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.3,
+      "opsPlus": 155,
+      "hr": 27,
+      "avg": 0.296,
+      "obp": 0.389,
+      "slg": 0.531,
+      "rbi": 94,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.3,
+      "opsPlus": 155,
+      "hr": 27,
+      "avg": 0.296,
+      "obp": 0.389,
+      "slg": 0.531,
+      "rbi": 94,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 130,
+      "plateAppearances": 524,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.389,
+      "slg": 0.531,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "danieka01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.33999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-hideo-nomo-1995",
+    "playerId": "nomohi01",
+    "playerSlug": "hideo-nomo",
+    "name": "Hideo Nomo",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.7,
+      "eraPlus": 149,
+      "era": 2.54,
+      "whip": 1.056,
+      "so": 236,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "eraPlus": 149,
+      "era": 2.54,
+      "whip": 1.056,
+      "so": 236,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.056,
+      "fip": null,
+      "inningsPitched": 191.3,
+      "strikeoutRate": 11.102979613173027,
+      "walkRate": 3.669628855201254,
+      "starts": 28,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "nomohi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.11500000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -2117,8 +528,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 5.1,
+      "eraPlus": 129,
       "era": 2.78,
       "whip": 1.092,
       "so": 140,
@@ -2128,8 +539,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 5.1,
+      "eraPlus": 129,
       "era": 2.78,
       "whip": 1.092,
       "so": 140,
@@ -2149,20 +560,1557 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "morgami01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 65.31333051206093,
-      "formulaVersion": "season-selection-v1"
+      "score": 81.35,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-brett-butler-1992",
+    "playerId": "butlebr01",
+    "playerSlug": "brett-butler",
+    "name": "Brett Butler",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.9,
+      "opsPlus": 130,
+      "hr": 3,
+      "avg": 0.309,
+      "obp": 0.413,
+      "slg": 0.391,
+      "rbi": 39,
+      "sb": 41
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.9,
+      "opsPlus": 130,
+      "hr": 3,
+      "avg": 0.309,
+      "obp": 0.413,
+      "slg": 0.391,
+      "rbi": 39,
+      "sb": 41
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 652,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.413,
+      "slg": 0.391,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "butlebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.32000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-jay-howell-1992",
+    "playerId": "howelja01",
+    "playerSlug": "jay-howell",
+    "name": "Jay Howell",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.3,
+      "eraPlus": 227,
+      "era": 1.54,
+      "whip": 1.264,
+      "so": 36,
+      "wins": 1,
+      "saves": 4,
+      "sv": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "eraPlus": 227,
+      "era": 1.54,
+      "whip": 1.264,
+      "so": 36,
+      "wins": 1,
+      "saves": 4,
+      "sv": 4
+    },
+    "scoringStats": {
+      "whip": 1.264,
+      "fip": null,
+      "inningsPitched": 46.7,
+      "strikeoutRate": 6.937901498929336,
+      "walkRate": 3.468950749464668,
+      "starts": 0,
+      "reliefAppearances": 41
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "howelja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.90714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-tom-candiotti-1993",
+    "playerId": "candito01",
+    "playerSlug": "tom-candiotti",
+    "name": "Tom Candiotti",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.9,
+      "eraPlus": 122,
+      "era": 3.12,
+      "whip": 1.231,
+      "so": 155,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.9,
+      "eraPlus": 122,
+      "era": 3.12,
+      "whip": 1.231,
+      "so": 155,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.231,
+      "fip": null,
+      "inningsPitched": 213.7,
+      "strikeoutRate": 6.527842770238653,
+      "walkRate": 2.99017313991577,
+      "starts": 32,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "candito01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 76.5,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-gary-sheffield-1998",
+    "playerId": "sheffga01",
+    "playerSlug": "gary-sheffield",
+    "name": "Gary Sheffield",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.4,
+      "opsPlus": 162,
+      "hr": 16,
+      "avg": 0.316,
+      "obp": 0.444,
+      "slg": 0.535,
+      "rbi": 57,
+      "sb": 18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "opsPlus": 162,
+      "hr": 16,
+      "avg": 0.316,
+      "obp": 0.444,
+      "slg": 0.535,
+      "rbi": 57,
+      "sb": 18
+    },
+    "scoringStats": {
+      "games": 90,
+      "plateAppearances": 383,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.444,
+      "slg": 0.535,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "sheffga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.63,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-eric-karros-1995",
+    "playerId": "karroer01",
+    "playerSlug": "eric-karros",
+    "name": "Eric Karros",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.9,
+      "opsPlus": 145,
+      "hr": 32,
+      "avg": 0.298,
+      "obp": 0.369,
+      "slg": 0.535,
+      "rbi": 105,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.9,
+      "opsPlus": 145,
+      "hr": 32,
+      "avg": 0.298,
+      "obp": 0.369,
+      "slg": 0.535,
+      "rbi": 105,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 143,
+      "plateAppearances": 620,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.535,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "karroer01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.5,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-darryl-strawberry-1991",
+    "playerId": "strawda01",
+    "playerSlug": "darryl-strawberry",
+    "name": "Darryl Strawberry",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.6,
+      "opsPlus": 140,
+      "hr": 28,
+      "avg": 0.265,
+      "obp": 0.361,
+      "slg": 0.491,
+      "rbi": 99,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "opsPlus": 140,
+      "hr": 28,
+      "avg": 0.265,
+      "obp": 0.361,
+      "slg": 0.491,
+      "rbi": 99,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 139,
+      "plateAppearances": 588,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.491,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "strawda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 69.08,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-jim-gott-1993",
+    "playerId": "gottji01",
+    "playerSlug": "jim-gott",
+    "name": "Jim Gott",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 165,
+      "era": 2.32,
+      "whip": 1.133,
+      "so": 67,
+      "wins": 4,
+      "saves": 25,
+      "sv": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 165,
+      "era": 2.32,
+      "whip": 1.133,
+      "so": 67,
+      "wins": 4,
+      "saves": 25,
+      "sv": 25
+    },
+    "scoringStats": {
+      "whip": 1.133,
+      "fip": null,
+      "inningsPitched": 77.7,
+      "strikeoutRate": 7.760617760617761,
+      "walkRate": 1.969111969111969,
+      "starts": 0,
+      "reliefAppearances": 62
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "gottji01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.40714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-todd-worrell-1995",
+    "playerId": "worreto01",
+    "playerSlug": "todd-worrell",
+    "name": "Todd Worrell",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.2,
+      "eraPlus": 188,
+      "era": 2.02,
+      "whip": 1.107,
+      "so": 61,
+      "wins": 4,
+      "saves": 32,
+      "sv": 32
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "eraPlus": 188,
+      "era": 2.02,
+      "whip": 1.107,
+      "so": 61,
+      "wins": 4,
+      "saves": 32,
+      "sv": 32
+    },
+    "scoringStats": {
+      "whip": 1.107,
+      "fip": null,
+      "inningsPitched": 62.3,
+      "strikeoutRate": 8.81219903691814,
+      "walkRate": 2.7447833065810596,
+      "starts": 0,
+      "reliefAppearances": 59
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "worreto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 65.62857142857143,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-stan-javier-1990",
+    "playerId": "javiest01",
+    "playerSlug": "stan-javier",
+    "name": "Stan Javier",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "opsPlus": 119,
+      "hr": 3,
+      "avg": 0.304,
+      "obp": 0.384,
+      "slg": 0.399,
+      "rbi": 24,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "opsPlus": 119,
+      "hr": 3,
+      "avg": 0.304,
+      "obp": 0.384,
+      "slg": 0.399,
+      "rbi": 24,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 104,
+      "plateAppearances": 315,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.399,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "javiest01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-mark-grudzielanek-1999",
+    "playerId": "grudzma01",
+    "playerSlug": "mark-grudzielanek",
+    "name": "Mark Grudzielanek",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "opsPlus": 111,
+      "hr": 7,
+      "avg": 0.326,
+      "obp": 0.376,
+      "slg": 0.436,
+      "rbi": 46,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "opsPlus": 111,
+      "hr": 7,
+      "avg": 0.326,
+      "obp": 0.376,
+      "slg": 0.436,
+      "rbi": 46,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 123,
+      "plateAppearances": 532,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.376,
+      "slg": 0.436,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "grudzma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.02,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-adrian-beltre-1999",
+    "playerId": "beltrad01",
+    "playerSlug": "adrian-beltre",
+    "name": "Adrian Beltre",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.9,
+      "opsPlus": 102,
+      "hr": 15,
+      "avg": 0.275,
+      "obp": 0.352,
+      "slg": 0.428,
+      "rbi": 67,
+      "sb": 18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.9,
+      "opsPlus": 102,
+      "hr": 15,
+      "avg": 0.275,
+      "obp": 0.352,
+      "slg": 0.428,
+      "rbi": 67,
+      "sb": 18
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 610,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.428,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "beltrad01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.9,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-dave-hansen-1993",
+    "playerId": "hanseda01",
+    "playerSlug": "dave-hansen",
+    "name": "Dave Hansen",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.3,
+      "opsPlus": 167,
+      "hr": 4,
+      "avg": 0.362,
+      "obp": 0.465,
+      "slg": 0.505,
+      "rbi": 30,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.3,
+      "opsPlus": 167,
+      "hr": 4,
+      "avg": 0.362,
+      "obp": 0.465,
+      "slg": 0.505,
+      "rbi": 30,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 84,
+      "plateAppearances": 127,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.465,
+      "slg": 0.505,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "hanseda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.370000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-lenny-harris-1990",
+    "playerId": "harrile01",
+    "playerSlug": "lenny-harris",
+    "name": "Lenny Harris",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.1,
+      "opsPlus": 102,
+      "hr": 2,
+      "avg": 0.304,
+      "obp": 0.348,
+      "slg": 0.374,
+      "rbi": 29,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "opsPlus": 102,
+      "hr": 2,
+      "avg": 0.304,
+      "obp": 0.348,
+      "slg": 0.374,
+      "rbi": 29,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 462,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.374,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "harrile01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.82,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-mike-scioscia-1990",
+    "playerId": "sciosmi01",
+    "playerSlug": "mike-scioscia",
+    "name": "Mike Scioscia",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.7,
+      "opsPlus": 110,
+      "hr": 12,
+      "avg": 0.264,
+      "obp": 0.348,
+      "slg": 0.405,
+      "rbi": 66,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.7,
+      "opsPlus": 110,
+      "hr": 12,
+      "avg": 0.264,
+      "obp": 0.348,
+      "slg": 0.405,
+      "rbi": 66,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 135,
+      "plateAppearances": 497,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.405,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "sciosmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.370000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-jose-offerman-1995",
+    "playerId": "offerjo01",
+    "playerSlug": "jose-offerman",
+    "name": "Jose Offerman",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.6,
+      "opsPlus": 112,
+      "hr": 4,
+      "avg": 0.287,
+      "obp": 0.389,
+      "slg": 0.375,
+      "rbi": 33,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "opsPlus": 112,
+      "hr": 4,
+      "avg": 0.287,
+      "obp": 0.389,
+      "slg": 0.375,
+      "rbi": 33,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 119,
+      "plateAppearances": 501,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.389,
+      "slg": 0.375,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "offerjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.21,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-delino-deshields-1995",
+    "playerId": "deshide01",
+    "playerSlug": "delino-deshields",
+    "name": "Delino DeShields",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3,
+      "opsPlus": 99,
+      "hr": 8,
+      "avg": 0.256,
+      "obp": 0.353,
+      "slg": 0.369,
+      "rbi": 37,
+      "sb": 39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "opsPlus": 99,
+      "hr": 8,
+      "avg": 0.256,
+      "obp": 0.353,
+      "slg": 0.369,
+      "rbi": 37,
+      "sb": 39
+    },
+    "scoringStats": {
+      "games": 127,
+      "plateAppearances": 490,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.353,
+      "slg": 0.369,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "deshide01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.4,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-juan-samuel-1991",
+    "playerId": "samueju01",
+    "playerSlug": "juan-samuel",
+    "name": "Juan Samuel",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.6,
+      "opsPlus": 103,
+      "hr": 12,
+      "avg": 0.271,
+      "obp": 0.328,
+      "slg": 0.389,
+      "rbi": 58,
+      "sb": 23
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "opsPlus": 103,
+      "hr": 12,
+      "avg": 0.271,
+      "obp": 0.328,
+      "slg": 0.389,
+      "rbi": 58,
+      "sb": 23
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 649,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.328,
+      "slg": 0.389,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "samueju01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.190000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-kirk-gibson-1990",
+    "playerId": "gibsoki01",
+    "playerSlug": "kirk-gibson",
+    "name": "Kirk Gibson",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.5,
+      "opsPlus": 108,
+      "hr": 8,
+      "avg": 0.26,
+      "obp": 0.345,
+      "slg": 0.4,
+      "rbi": 38,
+      "sb": 26
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "opsPlus": 108,
+      "hr": 8,
+      "avg": 0.26,
+      "obp": 0.345,
+      "slg": 0.4,
+      "rbi": 38,
+      "sb": 26
+    },
+    "scoringStats": {
+      "games": 89,
+      "plateAppearances": 359,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.345,
+      "slg": 0.4,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "gibsoki01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.59,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-mitch-webster-1992",
+    "playerId": "webstmi01",
+    "playerSlug": "mitch-webster",
+    "name": "Mitch Webster",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": 1.4,
+      "opsPlus": 114,
+      "hr": 6,
+      "avg": 0.267,
+      "obp": 0.334,
+      "slg": 0.42,
+      "rbi": 35,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.4,
+      "opsPlus": 114,
+      "hr": 6,
+      "avg": 0.267,
+      "obp": 0.334,
+      "slg": 0.42,
+      "rbi": 35,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 135,
+      "plateAppearances": 296,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.334,
+      "slg": 0.42,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "webstmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 26.759999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-greg-gagne-1996",
+    "playerId": "gagnegr01",
+    "playerSlug": "greg-gagne",
+    "name": "Greg Gagne",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.2,
+      "opsPlus": 90,
+      "hr": 10,
+      "avg": 0.255,
+      "obp": 0.333,
+      "slg": 0.364,
+      "rbi": 55,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "opsPlus": 90,
+      "hr": 10,
+      "avg": 0.255,
+      "obp": 0.333,
+      "slg": 0.364,
+      "rbi": 55,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 128,
+      "plateAppearances": 483,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.333,
+      "slg": 0.364,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "gagnegr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 26.230000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-1990s-gary-carter-1991",
+    "playerId": "cartega01",
+    "playerSlug": "gary-carter",
+    "name": "Gary Carter",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.2,
+      "opsPlus": 98,
+      "hr": 6,
+      "avg": 0.246,
+      "obp": 0.323,
+      "slg": 0.375,
+      "rbi": 26,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.2,
+      "opsPlus": 98,
+      "hr": 6,
+      "avg": 0.246,
+      "obp": 0.323,
+      "slg": 0.375,
+      "rbi": 26,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 101,
+      "plateAppearances": 279,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.323,
+      "slg": 0.375,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "cartega01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 16.189999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

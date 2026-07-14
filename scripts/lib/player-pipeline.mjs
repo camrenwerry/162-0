@@ -57,13 +57,25 @@ export function normalizeFieldingRow(row) {
   return { ...row, season: Number(row.season), games: Number(row.games), gamesStarted: nullableNumber(row.gamesStarted) }
 }
 
+export function normalizeAdvancedRow(row) {
+  return {
+    ...row,
+    season: Number(row.season),
+    battingWar: nullableNumber(row.battingWar),
+    opsPlus: nullableNumber(row.opsPlus),
+    pitchingWar: nullableNumber(row.pitchingWar),
+    eraPlus: nullableNumber(row.eraPlus),
+  }
+}
+
 function hitterSeasonScore(row) {
   if ((row.plateAppearances ?? 0) < THRESHOLDS.hitterPlateAppearances) return null
   const ops = row.obp !== null && row.slg !== null ? row.obp + row.slg : null
   if (ops === null) return null
-  // OPS supplies quality; PA rewards a full-season sample without allowing raw
-  // counting volume to overwhelm rate performance. WAR/OPS+ can be added when
-  // licensed/imported and the formula remains isolated here.
+  if (row.battingWar != null && row.opsPlus != null) {
+    return row.battingWar * 12 + (row.opsPlus - 100) * .5 + Math.min(row.plateAppearances, 750) / 100
+  }
+  // Retained only for unverified imports that predate advanced-stat enrichment.
   return ops * 100 + Math.min(row.plateAppearances, 750) / 35
 }
 
@@ -75,6 +87,10 @@ function pitcherSeasonScore(row) {
   if (!starter && !reliever) return null
   const k9 = row.inningsPitched ? (row.strikeouts ?? 0) * 9 / row.inningsPitched : 0
   const bb9 = row.inningsPitched ? (row.walksAllowed ?? 0) * 9 / row.inningsPitched : 0
+  if (row.pitchingWar != null && row.eraPlus != null) {
+    const workload = starter ? Math.min(row.inningsPitched / 20, 10) : Math.min(reliefAppearances / 7, 10)
+    return row.pitchingWar * 12 + (row.eraPlus - 100) * .35 + workload
+  }
   const prevention = row.era === null ? 0 : (6 - row.era) * 12
   const traffic = row.whip === null ? 0 : (1.6 - row.whip) * 20
   const workload = starter ? Math.min(row.inningsPitched / 18, 12) : Math.min(reliefAppearances / 5, 12)
@@ -140,11 +156,11 @@ export function selectBestSeason(rows, fieldingBySeason, overrides = {}) {
 }
 
 function makeHitterStats(row) {
-  return { war: null, opsPlus: null, hr: row.homeRuns, avg: row.avg, obp: row.obp, slg: row.slg, rbi: row.rbi, sb: row.stolenBases }
+  return { war: row.battingWar ?? null, opsPlus: row.opsPlus ?? null, hr: row.homeRuns ?? null, avg: row.avg ?? null, obp: row.obp ?? null, slg: row.slg ?? null, rbi: row.rbi ?? null, sb: row.stolenBases ?? null }
 }
 
 function makePitcherStats(row) {
-  return { war: null, eraPlus: null, era: row.era, whip: row.whip, so: row.strikeouts, wins: row.wins, saves: row.saves, sv: row.saves }
+  return { war: row.pitchingWar ?? null, eraPlus: row.eraPlus ?? null, era: row.era ?? null, whip: row.whip ?? null, so: row.strikeouts ?? null, wins: row.wins ?? null, saves: row.saves ?? null, sv: row.saves ?? null }
 }
 
 function makePitchingScoring(row) {
@@ -168,6 +184,9 @@ export function candidateToCard(candidate, overrides = {}, verifiedAt = '2026-07
   const isPitcher = candidate.playerType === 'pitcher'
   const hitterStats = makeHitterStats(row)
   const pitcherStats = makePitcherStats(row)
+  const advancedStatsSourceUrls = candidate.playerType === 'twoWay'
+    ? [row.battingAdvancedSourceUrl, row.pitchingAdvancedSourceUrl]
+    : [isPitcher ? row.pitchingAdvancedSourceUrl : row.battingAdvancedSourceUrl]
   const hitterScoring = {
     games: row.hitterGames,
     plateAppearances: row.plateAppearances,
@@ -212,16 +231,17 @@ export function candidateToCard(candidate, overrides = {}, verifiedAt = '2026-07
     pitchingScoringStats: candidate.playerType === 'twoWay' ? pitcherScoring : null,
     sourceMetadata: {
       verified: true,
-      sourceLabel: 'SABR Lahman Baseball Database 2025',
+      sourceLabel: 'SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data',
       sourceUrl: 'https://sabr.org/lahman-database/',
+      advancedStatsSourceUrls: advancedStatsSourceUrls.filter(Boolean),
       verifiedAt,
       lahmanTeamIds: row.lahmanTeamIds,
       sourcePlayerId: row.playerId,
     },
-    sourceNotes: `SABR Lahman 2025 season record for ${row.season}; advanced metrics unavailable in source are null.`,
+    sourceNotes: `SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for ${row.season}.`,
     notes: overrides.notes?.[key] ?? null,
     manualPositionOverride: candidate.manualPositionOverride,
-    selectionMetadata: { score: candidate.selectionScore, formulaVersion: 'season-selection-v1' },
+    selectionMetadata: { score: candidate.selectionScore, formulaVersion: 'advanced-season-selection-v2' },
   }
 }
 
@@ -248,8 +268,17 @@ function selectPoolCards(cards) {
   return byScore.filter((card) => selected.has(card.id))
 }
 
-export function buildPools({ seasonRows, fieldingRows, config, overrides }) {
-  const normalizedSeasons = seasonRows.map(normalizeSeasonRow)
+export function buildPools({ seasonRows, fieldingRows, advancedRows = [], config, overrides }) {
+  const advancedBySeason = new Map(advancedRows.map(normalizeAdvancedRow).map((row) => [fieldKey(row.franchiseId, row.season, row.playerId), row]))
+  const normalizedSeasons = seasonRows.map(normalizeSeasonRow).map((row) => ({
+    ...row,
+    battingWar: advancedBySeason.get(fieldKey(row.franchiseId, row.season, row.playerId))?.battingWar ?? null,
+    opsPlus: advancedBySeason.get(fieldKey(row.franchiseId, row.season, row.playerId))?.opsPlus ?? null,
+    pitchingWar: advancedBySeason.get(fieldKey(row.franchiseId, row.season, row.playerId))?.pitchingWar ?? null,
+    eraPlus: advancedBySeason.get(fieldKey(row.franchiseId, row.season, row.playerId))?.eraPlus ?? null,
+    battingAdvancedSourceUrl: advancedBySeason.get(fieldKey(row.franchiseId, row.season, row.playerId))?.battingSourceUrl ?? null,
+    pitchingAdvancedSourceUrl: advancedBySeason.get(fieldKey(row.franchiseId, row.season, row.playerId))?.pitchingSourceUrl ?? null,
+  }))
   const normalizedFielding = fieldingRows.map(normalizeFieldingRow)
   const fieldingBySeason = new Map()
   for (const row of normalizedFielding) {
@@ -321,12 +350,23 @@ export function validateBuiltData({ pools, combinations }, config) {
       if (!card.visibleStats || !card.scoringStats) errors.push({ pool: combination.id, card: card.id, message: 'Missing required stat object' })
       if (card.playerType === 'hitter' && 'era' in card.visibleStats) errors.push({ pool: combination.id, card: card.id, message: 'Hitter has pitcher-only stat shape' })
       if (card.playerType === 'pitcher' && 'avg' in card.visibleStats) errors.push({ pool: combination.id, card: card.id, message: 'Pitcher has hitter-only stat shape' })
+      if (card.sourceMetadata?.verified) {
+        const hitterStats = card.playerType === 'pitcher' ? null : card.visibleStats
+        const pitcherStats = card.playerType === 'pitcher' ? card.visibleStats : card.playerType === 'twoWay' ? card.pitchingVisibleStats : null
+        for (const key of hitterStats ? ['war', 'opsPlus', 'hr', 'avg'] : []) {
+          if (hitterStats[key] === null || hitterStats[key] === undefined) errors.push({ pool: combination.id, card: card.id, message: `Verified modern hitter missing required ${key}` })
+        }
+        for (const key of pitcherStats ? ['war', 'eraPlus', 'era', 'whip'] : []) {
+          if (pitcherStats[key] === null || pitcherStats[key] === undefined) errors.push({ pool: combination.id, card: card.id, message: `Verified modern pitcher missing required ${key}` })
+        }
+        if (!card.sourceMetadata.advancedStatsSourceUrls?.length) errors.push({ pool: combination.id, card: card.id, message: 'Verified modern card missing advanced-stat source metadata' })
+      }
       if (!card.sourceMetadata?.verified) warnings.push({ pool: combination.id, card: card.id, message: 'Unverified card' })
       if (card.manualPositionOverride) warnings.push({ pool: combination.id, card: card.id, message: 'Manual position override' })
       if (card.playerType !== 'pitcher' && (card.scoringStats.plateAppearances ?? 0) < THRESHOLDS.veryLowHitterPlateAppearances) warnings.push({ pool: combination.id, card: card.id, message: 'Very low hitter playing time' })
       if (card.playerType === 'pitcher' && (card.scoringStats.inningsPitched ?? 0) < THRESHOLDS.veryLowPitcherInnings) warnings.push({ pool: combination.id, card: card.id, message: 'Very low pitcher playing time' })
-      const optional = card.playerType === 'pitcher' ? ['war', 'eraPlus'] : ['war', 'opsPlus']
-      optional.filter((key) => card.visibleStats[key] === null).forEach((key) => warnings.push({ pool: combination.id, card: card.id, message: `Missing optional ${key}` }))
+      const secondary = card.playerType === 'pitcher' ? ['so', 'wins', 'sv'] : ['obp', 'slg', 'rbi', 'sb']
+      secondary.filter((key) => card.visibleStats[key] === null).forEach((key) => warnings.push({ pool: combination.id, card: card.id, message: `Missing secondary ${key}` }))
     }
     for (const position of FIELD_POSITIONS) {
       const count = cards.filter((card) => card.eligiblePositions.includes(position)).length
@@ -347,6 +387,7 @@ export function readInputs(root) {
   return {
     seasonRows: parseCsv(readFileSync(join(root, 'data-import/season-stats.csv'), 'utf8')),
     fieldingRows: parseCsv(readFileSync(join(root, 'data-import/fielding-appearances.csv'), 'utf8')),
+    advancedRows: parseCsv(readFileSync(join(root, 'data-import/advanced-season-stats.csv'), 'utf8')),
     config: JSON.parse(readFileSync(join(root, 'data-import/pool-config.json'), 'utf8')),
     overrides: JSON.parse(readFileSync(join(root, 'data-import/manual-overrides.json'), 'utf8')),
   }

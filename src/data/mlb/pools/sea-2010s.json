@@ -1,72 +1,146 @@
 [
   {
-    "id": "sea-2010s-nelson-cruz-2015",
-    "playerId": "cruzne02",
-    "playerSlug": "nelson-cruz",
-    "name": "Nelson Cruz",
+    "id": "sea-2010s-mark-lowe-2015",
+    "playerId": "lowema01",
+    "playerSlug": "mark-lowe",
+    "name": "Mark Lowe",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
     "team": "SEA",
     "decade": "2010s",
     "featuredSeason": 2015,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "RF"
+      "RP"
     ],
-    "bats": "R",
+    "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 44,
-      "avg": 0.302,
-      "obp": 0.369,
-      "slg": 0.566,
-      "rbi": 93,
-      "sb": 3
+      "war": 1.6,
+      "eraPlus": 385,
+      "era": 1,
+      "whip": 1.167,
+      "so": 47,
+      "wins": 0,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 44,
-      "avg": 0.302,
-      "obp": 0.369,
-      "slg": 0.566,
-      "rbi": 93,
-      "sb": 3
+      "war": 1.6,
+      "eraPlus": 385,
+      "era": 1,
+      "whip": 1.167,
+      "so": 47,
+      "wins": 0,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 152,
-      "plateAppearances": 655,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.369,
-      "slg": 0.566,
-      "wrcPlus": null
+      "whip": 1.167,
+      "fip": null,
+      "inningsPitched": 36,
+      "strikeoutRate": 11.75,
+      "walkRate": 2.75,
+      "starts": 0,
+      "reliefAppearances": 34
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "cruzne02"
+      "sourcePlayerId": "lowema01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 112.21428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 123.80714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-felix-hernandez-2010",
+    "playerId": "hernafe02",
+    "playerSlug": "felix-hernandez",
+    "name": "Felix Hernandez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7.2,
+      "eraPlus": 174,
+      "era": 2.27,
+      "whip": 1.057,
+      "so": 232,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.2,
+      "eraPlus": 174,
+      "era": 2.27,
+      "whip": 1.057,
+      "so": 232,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.057,
+      "fip": null,
+      "inningsPitched": 249.7,
+      "strikeoutRate": 8.362034441329596,
+      "walkRate": 2.523027633159792,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "hernafe02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 122.30000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -90,8 +164,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.3,
+      "opsPlus": 138,
       "hr": 39,
       "avg": 0.298,
       "obp": 0.35,
@@ -101,8 +175,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.3,
+      "opsPlus": 138,
       "hr": 39,
       "avg": 0.298,
       "obp": 0.35,
@@ -123,20 +197,168 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "canoro01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 108.72857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 113.75,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-hisashi-iwakuma-2013",
+    "playerId": "iwakuhi01",
+    "playerSlug": "hisashi-iwakuma",
+    "name": "Hisashi Iwakuma",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7,
+      "eraPlus": 138,
+      "era": 2.66,
+      "whip": 1.006,
+      "so": 185,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7,
+      "eraPlus": 138,
+      "era": 2.66,
+      "whip": 1.006,
+      "so": 185,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.006,
+      "fip": null,
+      "inningsPitched": 219.7,
+      "strikeoutRate": 7.578516158397815,
+      "walkRate": 1.720527992717342,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "iwakuhi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.3,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-kyle-seager-2016",
+    "playerId": "seageky01",
+    "playerSlug": "kyle-seager",
+    "name": "Kyle Seager",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.8,
+      "opsPlus": 133,
+      "hr": 30,
+      "avg": 0.278,
+      "obp": 0.359,
+      "slg": 0.499,
+      "rbi": 99,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.8,
+      "opsPlus": 133,
+      "hr": 30,
+      "avg": 0.278,
+      "obp": 0.359,
+      "slg": 0.499,
+      "rbi": 99,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 676,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.499,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "seageky01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.86,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -161,8 +383,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.5,
+      "opsPlus": 139,
       "hr": 26,
       "avg": 0.285,
       "obp": 0.366,
@@ -172,8 +394,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.5,
+      "opsPlus": 139,
       "hr": 26,
       "avg": 0.285,
       "obp": 0.366,
@@ -194,97 +416,30 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "hanigmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.41428571428573,
-      "formulaVersion": "season-selection-v1"
+      "score": 104.33,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-2010s-kyle-seager-2016",
-    "playerId": "seageky01",
-    "playerSlug": "kyle-seager",
-    "name": "Kyle Seager",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.278,
-      "obp": 0.359,
-      "slg": 0.499,
-      "rbi": 99,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.278,
-      "obp": 0.359,
-      "slg": 0.499,
-      "rbi": 99,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 676,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.499,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "seageky01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 105.11428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-franklin-gutierrez-2015",
-    "playerId": "gutiefr01",
-    "playerSlug": "franklin-gutierrez",
-    "name": "Franklin Gutierrez",
+    "id": "sea-2010s-nelson-cruz-2015",
+    "playerId": "cruzne02",
+    "playerSlug": "nelson-cruz",
+    "name": "Nelson Cruz",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
@@ -296,268 +451,61 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "LF"
+      "RF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.292,
-      "obp": 0.354,
-      "slg": 0.62,
-      "rbi": 35,
-      "sb": 0
+      "war": 5,
+      "opsPlus": 159,
+      "hr": 44,
+      "avg": 0.302,
+      "obp": 0.369,
+      "slg": 0.566,
+      "rbi": 93,
+      "sb": 3
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.292,
-      "obp": 0.354,
-      "slg": 0.62,
-      "rbi": 35,
-      "sb": 0
+      "war": 5,
+      "opsPlus": 159,
+      "hr": 44,
+      "avg": 0.302,
+      "obp": 0.369,
+      "slg": 0.566,
+      "rbi": 93,
+      "sb": 3
     },
     "scoringStats": {
-      "games": 59,
-      "plateAppearances": 189,
+      "games": 152,
+      "plateAppearances": 655,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.354,
-      "slg": 0.62,
+      "obp": 0.369,
+      "slg": 0.566,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "gutiefr01"
+      "sourcePlayerId": "cruzne02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.8,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-kendrys-morales-2013",
-    "playerId": "moralke01",
-    "playerSlug": "kendrys-morales",
-    "name": "Kendrys Morales",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.277,
-      "obp": 0.336,
-      "slg": 0.449,
-      "rbi": 80,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.277,
-      "obp": 0.336,
-      "slg": 0.449,
-      "rbi": 80,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 156,
-      "plateAppearances": 657,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.336,
-      "slg": 0.449,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "moralke01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.27142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-edwin-encarnacion-2019",
-    "playerId": "encared01",
-    "playerSlug": "edwin-encarnacion",
-    "name": "Edwin Encarnacion",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.241,
-      "obp": 0.356,
-      "slg": 0.531,
-      "rbi": 49,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.241,
-      "obp": 0.356,
-      "slg": 0.531,
-      "rbi": 49,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 65,
-      "plateAppearances": 289,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.356,
-      "slg": 0.531,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "encared01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.95714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-mike-zunino-2017",
-    "playerId": "zuninmi01",
-    "playerSlug": "mike-zunino",
-    "name": "Mike Zunino",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.251,
-      "obp": 0.331,
-      "slg": 0.509,
-      "rbi": 64,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.251,
-      "obp": 0.331,
-      "slg": 0.509,
-      "rbi": 64,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 124,
-      "plateAppearances": 435,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.331,
-      "slg": 0.509,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "zuninmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.42857142857144,
-      "formulaVersion": "season-selection-v1"
+      "score": 96.05,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -581,8 +529,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 3.1,
+      "eraPlus": 208,
       "era": 1.96,
       "whip": 0.791,
       "so": 124,
@@ -592,8 +540,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 3.1,
+      "eraPlus": 208,
       "era": 1.96,
       "whip": 0.791,
       "so": 124,
@@ -613,90 +561,168 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "diazed04"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 96.36668485675307,
-      "formulaVersion": "season-selection-v1"
+      "score": 85,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-2010s-ichiro-suzuki-2010",
-    "playerId": "suzukic01",
-    "playerSlug": "ichiro-suzuki",
-    "name": "Ichiro Suzuki",
+    "id": "sea-2010s-cliff-lee-2010",
+    "playerId": "leecl02",
+    "playerSlug": "cliff-lee",
+    "name": "Cliff Lee",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
     "team": "SEA",
     "decade": "2010s",
     "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.5,
+      "eraPlus": 168,
+      "era": 2.34,
+      "whip": 0.945,
+      "so": 89,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "eraPlus": 168,
+      "era": 2.34,
+      "whip": 0.945,
+      "so": 89,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.945,
+      "fip": null,
+      "inningsPitched": 103.7,
+      "strikeoutRate": 7.72420443587271,
+      "walkRate": 0.5207328833172613,
+      "starts": 13,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "leecl02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.985,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-franklin-gutierrez-2015",
+    "playerId": "gutiefr01",
+    "playerSlug": "franklin-gutierrez",
+    "name": "Franklin Gutierrez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2015,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "RF"
+      "LF"
     ],
-    "bats": "L",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.315,
-      "obp": 0.359,
-      "slg": 0.394,
-      "rbi": 43,
-      "sb": 42
+      "war": 2.7,
+      "opsPlus": 167,
+      "hr": 15,
+      "avg": 0.292,
+      "obp": 0.354,
+      "slg": 0.62,
+      "rbi": 35,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.315,
-      "obp": 0.359,
-      "slg": 0.394,
-      "rbi": 43,
-      "sb": 42
+      "war": 2.7,
+      "opsPlus": 167,
+      "hr": 15,
+      "avg": 0.292,
+      "obp": 0.354,
+      "slg": 0.62,
+      "rbi": 35,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 162,
-      "plateAppearances": 729,
+      "games": 59,
+      "plateAppearances": 189,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.394,
+      "obp": 0.354,
+      "slg": 0.62,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "suzukic01"
+      "sourcePlayerId": "gutiefr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 96.12857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 67.79,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -720,8 +746,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 142,
       "hr": 10,
       "avg": 0.276,
       "obp": 0.394,
@@ -731,8 +757,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 142,
       "hr": 10,
       "avg": 0.276,
       "obp": 0.394,
@@ -753,449 +779,102 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "jasojo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.2857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 65.39999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-2010s-omar-narvaez-2019",
-    "playerId": "narvaom01",
-    "playerSlug": "omar-narvaez",
-    "name": "Omar Narvaez",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.278,
-      "obp": 0.353,
-      "slg": 0.46,
-      "rbi": 55,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.278,
-      "obp": 0.353,
-      "slg": 0.46,
-      "rbi": 55,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 132,
-      "plateAppearances": 482,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.353,
-      "slg": 0.46,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "narvaom01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95.07142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-dan-vogelbach-2019",
-    "playerId": "vogelda01",
-    "playerSlug": "dan-vogelbach",
-    "name": "Dan Vogelbach",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.208,
-      "obp": 0.341,
-      "slg": 0.439,
-      "rbi": 76,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.208,
-      "obp": 0.341,
-      "slg": 0.439,
-      "rbi": 76,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 144,
-      "plateAppearances": 558,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.341,
-      "slg": 0.439,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "vogelda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.94285714285715,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-jean-segura-2017",
-    "playerId": "segurje01",
-    "playerSlug": "jean-segura",
-    "name": "Jean Segura",
+    "id": "sea-2010s-james-paxton-2017",
+    "playerId": "paxtoja01",
+    "playerSlug": "james-paxton",
+    "name": "James Paxton",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
     "team": "SEA",
     "decade": "2010s",
     "featuredSeason": 2017,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.3,
-      "obp": 0.349,
-      "slg": 0.427,
-      "rbi": 45,
-      "sb": 22
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.3,
-      "obp": 0.349,
-      "slg": 0.427,
-      "rbi": 45,
-      "sb": 22
-    },
-    "scoringStats": {
-      "games": 125,
-      "plateAppearances": 565,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.349,
-      "slg": 0.427,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "segurje01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.74285714285715,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-raul-ibanez-2013",
-    "playerId": "ibanera01",
-    "playerSlug": "raul-ibanez",
-    "name": "Raul Ibanez",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
+      "SP"
     ],
     "bats": "L",
-    "throws": "R",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.242,
-      "obp": 0.306,
-      "slg": 0.487,
-      "rbi": 65,
-      "sb": 0
+      "war": 3.6,
+      "eraPlus": 140,
+      "era": 2.98,
+      "whip": 1.103,
+      "so": 156,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.242,
-      "obp": 0.306,
-      "slg": 0.487,
-      "rbi": 65,
-      "sb": 0
+      "war": 3.6,
+      "eraPlus": 140,
+      "era": 2.98,
+      "whip": 1.103,
+      "so": 156,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 124,
-      "plateAppearances": 496,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.306,
-      "slg": 0.487,
-      "wrcPlus": null
+      "whip": 1.103,
+      "fip": null,
+      "inningsPitched": 136,
+      "strikeoutRate": 10.323529411764707,
+      "walkRate": 2.448529411764706,
+      "starts": 24,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "ibanera01"
+      "sourcePlayerId": "paxtoja01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.47142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 64,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-2010s-domingo-santana-2019",
-    "playerId": "santado01",
-    "playerSlug": "domingo-santana",
-    "name": "Domingo Santana",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF",
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.253,
-      "obp": 0.329,
-      "slg": 0.441,
-      "rbi": 69,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.253,
-      "obp": 0.329,
-      "slg": 0.441,
-      "rbi": 69,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 121,
-      "plateAppearances": 505,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.329,
-      "slg": 0.441,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "santado01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 91.42857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-michael-saunders-2012",
-    "playerId": "saundmi01",
-    "playerSlug": "michael-saunders",
-    "name": "Michael Saunders",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2012,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.247,
-      "obp": 0.306,
-      "slg": 0.432,
-      "rbi": 57,
-      "sb": 21
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.247,
-      "obp": 0.306,
-      "slg": 0.432,
-      "rbi": 57,
-      "sb": 21
-    },
-    "scoringStats": {
-      "games": 139,
-      "plateAppearances": 552,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.306,
-      "slg": 0.432,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "saundmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.57142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-mark-lowe-2015",
-    "playerId": "lowema01",
-    "playerSlug": "mark-lowe",
-    "name": "Mark Lowe",
+    "id": "sea-2010s-carson-smith-2015",
+    "playerId": "smithca02",
+    "playerSlug": "carson-smith",
+    "name": "Carson Smith",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
@@ -1209,55 +888,131 @@
     "eligiblePositions": [
       "RP"
     ],
-    "bats": "L",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1,
-      "whip": 1.167,
-      "so": 47,
-      "wins": 0,
-      "saves": 0,
-      "sv": 0
+      "war": 2.4,
+      "eraPlus": 166,
+      "era": 2.31,
+      "whip": 1.014,
+      "so": 92,
+      "wins": 2,
+      "saves": 13,
+      "sv": 13
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1,
-      "whip": 1.167,
-      "so": 47,
-      "wins": 0,
-      "saves": 0,
-      "sv": 0
+      "war": 2.4,
+      "eraPlus": 166,
+      "era": 2.31,
+      "whip": 1.014,
+      "so": 92,
+      "wins": 2,
+      "saves": 13,
+      "sv": 13
     },
     "scoringStats": {
-      "whip": 1.167,
+      "whip": 1.014,
       "fip": null,
-      "inningsPitched": 36,
-      "strikeoutRate": 11.75,
-      "walkRate": 2.75,
+      "inningsPitched": 70,
+      "strikeoutRate": 11.82857142857143,
+      "walkRate": 2.8285714285714287,
       "starts": 0,
-      "reliefAppearances": 34
+      "reliefAppearances": 70
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "lowema01"
+      "sourcePlayerId": "smithca02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88.96,
-      "formulaVersion": "season-selection-v1"
+      "score": 61.89999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-ichiro-suzuki-2010",
+    "playerId": "suzukic01",
+    "playerSlug": "ichiro-suzuki",
+    "name": "Ichiro Suzuki",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "opsPlus": 113,
+      "hr": 6,
+      "avg": 0.315,
+      "obp": 0.359,
+      "slg": 0.394,
+      "rbi": 43,
+      "sb": 42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "opsPlus": 113,
+      "hr": 6,
+      "avg": 0.315,
+      "obp": 0.359,
+      "slg": 0.394,
+      "rbi": 43,
+      "sb": 42
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 729,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.394,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "suzukic01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.190000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1281,8 +1036,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.7,
+      "opsPlus": 120,
       "hr": 6,
       "avg": 0.273,
       "obp": 0.348,
@@ -1292,8 +1047,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.7,
+      "opsPlus": 120,
       "hr": 6,
       "avg": 0.273,
       "obp": 0.348,
@@ -1314,27 +1069,394 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "ackledu01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 87.24285714285713,
-      "formulaVersion": "season-selection-v1"
+      "score": 58.160000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-2010s-austin-nola-2019",
-    "playerId": "nolaau01",
-    "playerSlug": "austin-nola",
-    "name": "Austin Nola",
+    "id": "sea-2010s-mike-zunino-2017",
+    "playerId": "zuninmi01",
+    "playerSlug": "mike-zunino",
+    "name": "Mike Zunino",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.4,
+      "opsPlus": 125,
+      "hr": 25,
+      "avg": 0.251,
+      "obp": 0.331,
+      "slg": 0.509,
+      "rbi": 64,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "opsPlus": 125,
+      "hr": 25,
+      "avg": 0.251,
+      "obp": 0.331,
+      "slg": 0.509,
+      "rbi": 64,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 124,
+      "plateAppearances": 435,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.331,
+      "slg": 0.509,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "zuninmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-jean-segura-2017",
+    "playerId": "segurje01",
+    "playerSlug": "jean-segura",
+    "name": "Jean Segura",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "opsPlus": 111,
+      "hr": 11,
+      "avg": 0.3,
+      "obp": 0.349,
+      "slg": 0.427,
+      "rbi": 45,
+      "sb": 22
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "opsPlus": 111,
+      "hr": 11,
+      "avg": 0.3,
+      "obp": 0.349,
+      "slg": 0.427,
+      "rbi": 45,
+      "sb": 22
+    },
+    "scoringStats": {
+      "games": 125,
+      "plateAppearances": 565,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.349,
+      "slg": 0.427,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "segurje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.35,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-kendrys-morales-2013",
+    "playerId": "moralke01",
+    "playerSlug": "kendrys-morales",
+    "name": "Kendrys Morales",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "opsPlus": 123,
+      "hr": 23,
+      "avg": 0.277,
+      "obp": 0.336,
+      "slg": 0.449,
+      "rbi": 80,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "opsPlus": 123,
+      "hr": 23,
+      "avg": 0.277,
+      "obp": 0.336,
+      "slg": 0.449,
+      "rbi": 80,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 657,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.336,
+      "slg": 0.449,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "moralke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.87,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-jason-vargas-2012",
+    "playerId": "vargaja01",
+    "playerSlug": "jason-vargas",
+    "name": "Jason Vargas",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.5,
+      "eraPlus": 99,
+      "era": 3.85,
+      "whip": 1.178,
+      "so": 141,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "eraPlus": 99,
+      "era": 3.85,
+      "whip": 1.178,
+      "so": 141,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.178,
+      "fip": null,
+      "inningsPitched": 217.3,
+      "strikeoutRate": 5.8398527381500225,
+      "walkRate": 2.277956741831569,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "vargaja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-brendan-ryan-2011",
+    "playerId": "ryanbr01",
+    "playerSlug": "brendan-ryan",
+    "name": "Brendan Ryan",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.2,
+      "opsPlus": 85,
+      "hr": 3,
+      "avg": 0.248,
+      "obp": 0.313,
+      "slg": 0.326,
+      "rbi": 39,
+      "sb": 13
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.2,
+      "opsPlus": 85,
+      "hr": 3,
+      "avg": 0.248,
+      "obp": 0.313,
+      "slg": 0.326,
+      "rbi": 39,
+      "sb": 13
+    },
+    "scoringStats": {
+      "games": 123,
+      "plateAppearances": 485,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.313,
+      "slg": 0.326,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "ryanbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.75000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-tom-murphy-2019",
+    "playerId": "murphto04",
+    "playerSlug": "tom-murphy",
+    "name": "Tom Murphy",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
@@ -1346,66 +1468,215 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "1B",
-      "2B"
+      "C"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.269,
-      "obp": 0.342,
-      "slg": 0.454,
-      "rbi": 31,
-      "sb": 1
+      "war": 2.5,
+      "opsPlus": 128,
+      "hr": 18,
+      "avg": 0.273,
+      "obp": 0.324,
+      "slg": 0.535,
+      "rbi": 40,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.269,
-      "obp": 0.342,
-      "slg": 0.454,
-      "rbi": 31,
-      "sb": 1
+      "war": 2.5,
+      "opsPlus": 128,
+      "hr": 18,
+      "avg": 0.273,
+      "obp": 0.324,
+      "slg": 0.535,
+      "rbi": 40,
+      "sb": 2
     },
     "scoringStats": {
-      "games": 79,
-      "plateAppearances": 266,
+      "games": 76,
+      "plateAppearances": 281,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.342,
-      "slg": 0.454,
+      "obp": 0.324,
+      "slg": 0.535,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "nolaau01"
+      "sourcePlayerId": "murphto04"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 87.2,
-      "formulaVersion": "season-selection-v1"
+      "score": 46.81,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-2010s-brad-miller-2015",
-    "playerId": "millebr02",
-    "playerSlug": "brad-miller",
-    "name": "Brad Miller",
+    "id": "sea-2010s-michael-saunders-2014",
+    "playerId": "saundmi01",
+    "playerSlug": "michael-saunders",
+    "name": "Michael Saunders",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "opsPlus": 128,
+      "hr": 8,
+      "avg": 0.273,
+      "obp": 0.341,
+      "slg": 0.45,
+      "rbi": 34,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "opsPlus": 128,
+      "hr": 8,
+      "avg": 0.273,
+      "obp": 0.341,
+      "slg": 0.45,
+      "rbi": 34,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 78,
+      "plateAppearances": 261,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.341,
+      "slg": 0.45,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "saundmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2014.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.61,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-edwin-encarnacion-2019",
+    "playerId": "encared01",
+    "playerSlug": "edwin-encarnacion",
+    "name": "Edwin Encarnacion",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.1,
+      "opsPlus": 137,
+      "hr": 21,
+      "avg": 0.241,
+      "obp": 0.356,
+      "slg": 0.531,
+      "rbi": 49,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.1,
+      "opsPlus": 137,
+      "hr": 21,
+      "avg": 0.241,
+      "obp": 0.356,
+      "slg": 0.531,
+      "rbi": 49,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 65,
+      "plateAppearances": 289,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.356,
+      "slg": 0.531,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "encared01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.59,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-ketel-marte-2015",
+    "playerId": "marteke01",
+    "playerSlug": "ketel-marte",
+    "name": "Ketel Marte",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
@@ -1417,61 +1688,356 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "2B",
-      "SS",
-      "CF",
-      "LF"
+      "SS"
     ],
-    "bats": "L",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.258,
-      "obp": 0.329,
+      "war": 2.2,
+      "opsPlus": 112,
+      "hr": 2,
+      "avg": 0.283,
+      "obp": 0.351,
       "slg": 0.402,
-      "rbi": 46,
-      "sb": 13
+      "rbi": 17,
+      "sb": 8
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.258,
-      "obp": 0.329,
+      "war": 2.2,
+      "opsPlus": 112,
+      "hr": 2,
+      "avg": 0.283,
+      "obp": 0.351,
       "slg": 0.402,
-      "rbi": 46,
-      "sb": 13
+      "rbi": 17,
+      "sb": 8
     },
     "scoringStats": {
-      "games": 144,
-      "plateAppearances": 493,
+      "games": 57,
+      "plateAppearances": 245,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.329,
+      "obp": 0.351,
       "slg": 0.402,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "marteke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 34.85000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-brad-miller-2013",
+    "playerId": "millebr02",
+    "playerSlug": "brad-miller",
+    "name": "Brad Miller",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.1,
+      "opsPlus": 110,
+      "hr": 8,
+      "avg": 0.265,
+      "obp": 0.318,
+      "slg": 0.418,
+      "rbi": 36,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.1,
+      "opsPlus": 110,
+      "hr": 8,
+      "avg": 0.265,
+      "obp": 0.318,
+      "slg": 0.418,
+      "rbi": 36,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 76,
+      "plateAppearances": 333,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.318,
+      "slg": 0.418,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "millebr02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 87.1857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 33.53,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-seth-smith-2015",
+    "playerId": "smithse01",
+    "playerSlug": "seth-smith",
+    "name": "Seth Smith",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 1.7,
+      "opsPlus": 116,
+      "hr": 12,
+      "avg": 0.248,
+      "obp": 0.33,
+      "slg": 0.443,
+      "rbi": 42,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.7,
+      "opsPlus": 116,
+      "hr": 12,
+      "avg": 0.248,
+      "obp": 0.33,
+      "slg": 0.443,
+      "rbi": 42,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 451,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.33,
+      "slg": 0.443,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "smithse01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 32.91,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-jarrod-dyson-2017",
+    "playerId": "dysonja01",
+    "playerSlug": "jarrod-dyson",
+    "name": "Jarrod Dyson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.7,
+      "opsPlus": 85,
+      "hr": 5,
+      "avg": 0.251,
+      "obp": 0.324,
+      "slg": 0.35,
+      "rbi": 30,
+      "sb": 28
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.7,
+      "opsPlus": 85,
+      "hr": 5,
+      "avg": 0.251,
+      "obp": 0.324,
+      "slg": 0.35,
+      "rbi": 30,
+      "sb": 28
+    },
+    "scoringStats": {
+      "games": 111,
+      "plateAppearances": 386,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.324,
+      "slg": 0.35,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "dysonja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 28.760000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-2010s-logan-morrison-2014",
+    "playerId": "morrilo01",
+    "playerSlug": "logan-morrison",
+    "name": "Logan Morrison",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 1.4,
+      "opsPlus": 111,
+      "hr": 11,
+      "avg": 0.262,
+      "obp": 0.315,
+      "slg": 0.42,
+      "rbi": 38,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.4,
+      "opsPlus": 111,
+      "hr": 11,
+      "avg": 0.262,
+      "obp": 0.315,
+      "slg": 0.42,
+      "rbi": 38,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 99,
+      "plateAppearances": 365,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.315,
+      "slg": 0.42,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "morrilo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2014.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 25.949999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1497,8 +2063,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.6,
+      "opsPlus": 100,
       "hr": 15,
       "avg": 0.237,
       "obp": 0.293,
@@ -1508,8 +2074,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.6,
+      "opsPlus": 100,
       "hr": 15,
       "avg": 0.237,
       "obp": 0.293,
@@ -1530,504 +2096,97 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "beckhti01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 84.77142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 10.479999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-2010s-felix-hernandez-2014",
-    "playerId": "hernafe02",
-    "playerSlug": "felix-hernandez",
-    "name": "Felix Hernandez",
+    "id": "sea-2010s-ryon-healy-2019",
+    "playerId": "healyry01",
+    "playerSlug": "ryon-healy",
+    "name": "Ryon Healy",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
     "team": "SEA",
     "decade": "2010s",
-    "featuredSeason": 2014,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.14,
-      "whip": 0.915,
-      "so": 248,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.14,
-      "whip": 0.915,
-      "so": 248,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.915,
-      "fip": null,
-      "inningsPitched": 236,
-      "strikeoutRate": 9.457627118644067,
-      "walkRate": 1.7542372881355932,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "hernafe02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 83.57508474576271,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-carson-smith-2015",
-    "playerId": "smithca02",
-    "playerSlug": "carson-smith",
-    "name": "Carson Smith",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2015,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.31,
-      "whip": 1.014,
-      "so": 92,
-      "wins": 2,
-      "saves": 13,
-      "sv": 13
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.31,
-      "whip": 1.014,
-      "so": 92,
-      "wins": 2,
-      "saves": 13,
-      "sv": 13
-    },
-    "scoringStats": {
-      "whip": 1.014,
-      "fip": null,
-      "inningsPitched": 70,
-      "strikeoutRate": 11.82857142857143,
-      "walkRate": 2.8285714285714287,
-      "starts": 0,
-      "reliefAppearances": 70
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "smithca02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 81.5,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-jose-lopez-2010",
-    "playerId": "lopezjo01",
-    "playerSlug": "jose-lopez",
-    "name": "Jose Lopez",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2010,
+    "featuredSeason": 2019,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
+      "1B",
       "3B"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.239,
-      "obp": 0.27,
-      "slg": 0.339,
-      "rbi": 58,
-      "sb": 3
+      "war": 0.2,
+      "opsPlus": 98,
+      "hr": 7,
+      "avg": 0.237,
+      "obp": 0.289,
+      "slg": 0.456,
+      "rbi": 26,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.239,
-      "obp": 0.27,
-      "slg": 0.339,
-      "rbi": 58,
-      "sb": 3
+      "war": 0.2,
+      "opsPlus": 98,
+      "hr": 7,
+      "avg": 0.237,
+      "obp": 0.289,
+      "slg": 0.456,
+      "rbi": 26,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 150,
-      "plateAppearances": 622,
+      "games": 47,
+      "plateAppearances": 187,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.27,
-      "slg": 0.339,
+      "obp": 0.289,
+      "slg": 0.456,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "lopezjo01"
+      "sourcePlayerId": "healyry01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 78.67142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-cliff-lee-2010",
-    "playerId": "leecl02",
-    "playerSlug": "cliff-lee",
-    "name": "Cliff Lee",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.34,
-      "whip": 0.945,
-      "so": 89,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.34,
-      "whip": 0.945,
-      "so": 89,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.945,
-      "fip": null,
-      "inningsPitched": 103.7,
-      "strikeoutRate": 7.72420443587271,
-      "walkRate": 0.5207328833172613,
-      "starts": 13,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "leecl02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 73.58631843994428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-hisashi-iwakuma-2013",
-    "playerId": "iwakuhi01",
-    "playerSlug": "hisashi-iwakuma",
-    "name": "Hisashi Iwakuma",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.66,
-      "whip": 1.006,
-      "so": 185,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.66,
-      "whip": 1.006,
-      "so": 185,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.006,
-      "fip": null,
-      "inningsPitched": 219.7,
-      "strikeoutRate": 7.578516158397815,
-      "walkRate": 1.720527992717342,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "iwakuhi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 72.74698224852071,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-james-paxton-2017",
-    "playerId": "paxtoja01",
-    "playerSlug": "james-paxton",
-    "name": "James Paxton",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.98,
-      "whip": 1.103,
-      "so": 156,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.98,
-      "whip": 1.103,
-      "so": 156,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.103,
-      "fip": null,
-      "inningsPitched": 136,
-      "strikeoutRate": 10.323529411764707,
-      "walkRate": 2.448529411764706,
-      "starts": 24,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "paxtoja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 65.54805555555556,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-2010s-michael-pineda-2011",
-    "playerId": "pinedmi01",
-    "playerSlug": "michael-pineda",
-    "name": "Michael Pineda",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "2010s",
-    "featuredSeason": 2011,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.74,
-      "whip": 1.099,
-      "so": 173,
-      "wins": 9,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.74,
-      "whip": 1.099,
-      "so": 173,
-      "wins": 9,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.099,
-      "fip": null,
-      "inningsPitched": 171,
-      "strikeoutRate": 9.105263157894736,
-      "walkRate": 2.8947368421052633,
-      "starts": 28,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "pinedmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 55.955789473684206,
-      "formulaVersion": "season-selection-v1"
+      "score": 3.2700000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

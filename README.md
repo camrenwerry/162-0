@@ -8,18 +8,18 @@ Version 0.6.0 is a static React + TypeScript + Vite application. It has no accou
 
 Every card is one **player + franchise + decade + best eligible single season**. The featured season must belong to that franchise and fall inside that decade. Cards never use career totals, combined decade totals, a different club's season, or an out-of-decade season.
 
-The checked-in pools are generated from season-level records in the [SABR Lahman Baseball Database 2025](https://sabr.org/lahman-database/). Unavailable values are `null`; the pipeline does not manufacture WAR, OPS+, ERA+, wRC+, FIP, defensive, or baserunning values.
+The checked-in pools combine season-level counting and fielding records from the [SABR Lahman Baseball Database 2025](https://sabr.org/lahman-database/) with Baseball-Reference's public season/team WAR exports. Unavailable values are `null`; the pipeline does not manufacture wRC+, FIP, defensive, or baserunning values.
 
 ### Featured-season selection
 
 The formula is isolated in `scripts/lib/player-pipeline.mjs` and is used only to select a featured season—no overall rating is shown in the game.
 
-- A hitter season needs at least 100 PA. Its score is `OPS × 100 + min(PA, 750) / 35`, balancing rate performance and a meaningful full-season sample.
-- A pitcher season needs at least 30 IP and must satisfy the SP or RP usage threshold. Its score combines ERA run prevention, WHIP, K/9 minus BB/9, and role-specific workload.
+- A hitter season needs at least 100 PA. Its primary score is `WAR × 12 + (OPS+ − 100) × 0.5 + min(PA, 750) / 100`.
+- A pitcher season needs at least 30 IP and must satisfy the SP or RP usage threshold. Its primary score is `WAR × 12 + (ERA+ − 100) × 0.35 + role workload`.
 - A two-way season must satisfy the pitching rules and have at least 200 PA. Its selection score blends both sides.
 - Records are filtered to the requested franchise and decade before they are scored. A manual featured-season override is allowed, but only when that season exists in the already eligible group.
 
-These fallbacks are transparent because Lahman does not contain the preferred advanced metrics. The selection module can incorporate verified WAR/OPS+/ERA+/FIP later without changing the UI or game engine.
+The legacy OPS/ERA/WHIP fallback remains available only for explicitly unverified imports missing enrichment. Verified current cards must contain the supported advanced fields or validation fails.
 
 ### Position eligibility
 
@@ -39,8 +39,10 @@ data-import/
   pool-config.json            franchise/source-team and decade definitions
   season-stats.csv            one player/franchise/season batting-pitching row
   fielding-appearances.csv    one player/franchise/season/position row
+  advanced-season-stats.csv   Baseball-Reference WAR/OPS+/ERA+ enrichment
   manual-overrides.json       reviewed name, season, position, and note overrides
   validation-report.json      generated machine-readable report
+  stat-completeness-report.json generated per-card visible-stat audit
 src/data/mlb/
   franchises.ts
   decades.ts
@@ -49,7 +51,7 @@ src/data/mlb/
   index.ts                    generated TeamPool-facing registry
 ```
 
-The season import includes player/team identity, season, batting totals and rates, pitching totals and rates, handedness, and source team IDs. The fielding import includes player/team identity, season, position, games, and starts. `scripts/export-lahman-seasons.py` documents and reproduces both CSV schemas from the official Lahman RData files.
+The season import includes Lahman and Baseball-Reference identities, franchise/team identity, season, batting and pitching values, handedness, and source team IDs. The fielding import includes player/team identity, season, position, games, and starts. The advanced import joins only exact Baseball-Reference player/team/season rows and carries source URLs and a verification date.
 
 React never imports pool JSON. `TeamPool` is the only runtime adapter; unsupported combinations return no cards, and the randomizer sees only combinations in the generated index. This boundary can later become lazy or remote without changing components.
 
@@ -60,17 +62,21 @@ The generated JSON is committed, so Python is not required to run the app.
 ```bash
 npm run data:build      # transform raw CSVs into pools and generate a report
 npm run data:validate   # strictly validate the checked-in generated pools
+npm run data:audit      # write and check every card's visible-stat completeness
 npm run data:report     # print the last generated report grouped by pool
 npm run test:data       # season selection and validation unit checks
 ```
 
-Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, and full 14-slot roster feasibility. It requires at least three SP and two RP options. Coverage, missing optional metrics, unverified data, overrides, and low playing time are warnings.
+Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, full 14-slot roster feasibility, and missing verified modern WAR/OPS+/ERA+/WHIP fields. The audit additionally checks every displayed hitter and pitcher statistic and records every card's verification state. It requires at least three SP and two RP options. Coverage, unverified data, overrides, and low playing time are warnings.
 
 To reproduce the raw import from an official Lahman checkout:
 
 ```bash
 PYTHONPATH=/path/to/python/packages python3 scripts/export-lahman-seasons.py \
   --lahman-dir /path/to/Lahman/data
+node scripts/import-baseball-reference.mjs \
+  --batting /path/to/war_daily_bat.txt \
+  --pitching /path/to/war_daily_pitch.txt
 npm run data:build
 ```
 
@@ -102,6 +108,7 @@ npm run dev
 
 npm run data:build
 npm run data:validate
+npm run data:audit
 npm run data:report
 npm run test:data
 npm run test:game
@@ -119,7 +126,7 @@ npm run build
 Known limitations:
 
 - The pool covers 12 franchises and four decades, not all MLB history.
-- Lahman does not supply the optional advanced metrics listed above, so those values display as `—` and sort after real values.
+- Baseball-Reference WAR, OPS+, and ERA+ are imported for the supported modern seasons. Other unavailable advanced scoring inputs remain `null`; the UI keeps its `—` fallback and nulls sort last.
 - Some pools use lower-playing-time but still threshold-qualified real seasons to preserve historical position coverage; these are called out in the report.
 - The projection remains a game placeholder, not a final simulation or a claim of predictive accuracy.
 - Drafts are not persisted.

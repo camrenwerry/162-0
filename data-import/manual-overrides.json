@@ -2,7 +2,11 @@
   "names": {
     "griffke02": "Ken Griffey Jr."
   },
-  "featuredSeasons": {},
+  "featuredSeasons": {
+    "nyy-2000s-soriaal01": 2002
+  },
   "positionOverrides": {},
-  "notes": {}
+  "notes": {
+    "nyy-2000s-soriaal01": "Reviewed featured-season selection: retain the established 2002 Yankees card (4.9 Baseball-Reference WAR, 129 OPS+) for its 39 HR/41 SB season."
+  }
 }

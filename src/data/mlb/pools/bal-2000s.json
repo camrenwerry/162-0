@@ -1,72 +1,148 @@
 [
   {
-    "id": "bal-2000s-melvin-mora-2004",
-    "playerId": "morame01",
-    "playerSlug": "melvin-mora",
-    "name": "Melvin Mora",
+    "id": "bal-2000s-nick-markakis-2008",
+    "playerId": "markani01",
+    "playerSlug": "nick-markakis",
+    "name": "Nick Markakis",
     "franchiseId": "bal",
     "teamAbbreviation": "BAL",
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "2000s",
-    "featuredSeason": 2004,
+    "featuredSeason": 2008,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "3B"
+      "RF"
     ],
-    "bats": "R",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.34,
-      "obp": 0.419,
-      "slg": 0.562,
-      "rbi": 104,
-      "sb": 11
+      "war": 7.4,
+      "opsPlus": 136,
+      "hr": 20,
+      "avg": 0.306,
+      "obp": 0.406,
+      "slg": 0.491,
+      "rbi": 87,
+      "sb": 10
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.34,
-      "obp": 0.419,
-      "slg": 0.562,
-      "rbi": 104,
-      "sb": 11
+      "war": 7.4,
+      "opsPlus": 136,
+      "hr": 20,
+      "avg": 0.306,
+      "obp": 0.406,
+      "slg": 0.491,
+      "rbi": 87,
+      "sb": 10
     },
     "scoringStats": {
-      "games": 140,
-      "plateAppearances": 630,
+      "games": 157,
+      "plateAppearances": 697,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.419,
-      "slg": 0.562,
+      "obp": 0.406,
+      "slg": 0.491,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
-      "sourcePlayerId": "morame01"
+      "sourcePlayerId": "markani01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 116.10000000000001,
-      "formulaVersion": "season-selection-v1"
+      "score": 113.77000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-brian-roberts-2005",
+    "playerId": "roberbr01",
+    "playerSlug": "brian-roberts",
+    "name": "Brian Roberts",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7.3,
+      "opsPlus": 139,
+      "hr": 18,
+      "avg": 0.314,
+      "obp": 0.387,
+      "slg": 0.515,
+      "rbi": 73,
+      "sb": 27
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.3,
+      "opsPlus": 139,
+      "hr": 18,
+      "avg": 0.314,
+      "obp": 0.387,
+      "slg": 0.515,
+      "rbi": 73,
+      "sb": 27
+    },
+    "scoringStats": {
+      "games": 143,
+      "plateAppearances": 635,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.387,
+      "slg": 0.515,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "roberbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 113.44999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -90,8 +166,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.4,
+      "opsPlus": 131,
       "hr": 34,
       "avg": 0.311,
       "obp": 0.36,
@@ -101,8 +177,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.4,
+      "opsPlus": 131,
       "hr": 34,
       "avg": 0.311,
       "obp": 0.36,
@@ -123,20 +199,529 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "tejadmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 110.11428571428573,
-      "formulaVersion": "season-selection-v1"
+      "score": 111.55000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-buddy-groom-2002",
+    "playerId": "groombu01",
+    "playerSlug": "buddy-groom",
+    "name": "Buddy Groom",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.8,
+      "eraPlus": 270,
+      "era": 1.6,
+      "whip": 0.903,
+      "so": 48,
+      "wins": 3,
+      "saves": 2,
+      "sv": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.8,
+      "eraPlus": 270,
+      "era": 1.6,
+      "whip": 0.903,
+      "so": 48,
+      "wins": 3,
+      "saves": 2,
+      "sv": 2
+    },
+    "scoringStats": {
+      "whip": 0.903,
+      "fip": null,
+      "inningsPitched": 62,
+      "strikeoutRate": 6.967741935483871,
+      "walkRate": 1.7419354838709677,
+      "starts": 0,
+      "reliefAppearances": 70
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "groombu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.1,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-melvin-mora-2004",
+    "playerId": "morame01",
+    "playerSlug": "melvin-mora",
+    "name": "Melvin Mora",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.6,
+      "opsPlus": 155,
+      "hr": 27,
+      "avg": 0.34,
+      "obp": 0.419,
+      "slg": 0.562,
+      "rbi": 104,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.6,
+      "opsPlus": 155,
+      "hr": 27,
+      "avg": 0.34,
+      "obp": 0.419,
+      "slg": 0.562,
+      "rbi": 104,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 630,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.419,
+      "slg": 0.562,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "morame01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.99999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-erik-bedard-2007",
+    "playerId": "bedarer01",
+    "playerSlug": "erik-bedard",
+    "name": "Erik Bedard",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.7,
+      "eraPlus": 146,
+      "era": 3.16,
+      "whip": 1.088,
+      "so": 221,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.7,
+      "eraPlus": 146,
+      "era": 3.16,
+      "whip": 1.088,
+      "so": 221,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.088,
+      "fip": null,
+      "inningsPitched": 182,
+      "strikeoutRate": 10.928571428571429,
+      "walkRate": 2.818681318681319,
+      "starts": 28,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "bedarer01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.6,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-mike-mussina-2000",
+    "playerId": "mussimi01",
+    "playerSlug": "mike-mussina",
+    "name": "Mike Mussina",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.7,
+      "eraPlus": 125,
+      "era": 3.79,
+      "whip": 1.187,
+      "so": 210,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.7,
+      "eraPlus": 125,
+      "era": 3.79,
+      "whip": 1.187,
+      "so": 210,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.187,
+      "fip": null,
+      "inningsPitched": 237.7,
+      "strikeoutRate": 7.951198990323938,
+      "walkRate": 1.7416912074042912,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "mussimi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.15,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-b-j-ryan-2004",
+    "playerId": "ryanbj01",
+    "playerSlug": "b-j-ryan",
+    "name": "B. J. Ryan",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.4,
+      "eraPlus": 200,
+      "era": 2.28,
+      "whip": 1.138,
+      "so": 122,
+      "wins": 4,
+      "saves": 3,
+      "sv": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "eraPlus": 200,
+      "era": 2.28,
+      "whip": 1.138,
+      "so": 122,
+      "wins": 4,
+      "saves": 3,
+      "sv": 3
+    },
+    "scoringStats": {
+      "whip": 1.138,
+      "fip": null,
+      "inningsPitched": 87,
+      "strikeoutRate": 12.620689655172415,
+      "walkRate": 3.6206896551724137,
+      "starts": 0,
+      "reliefAppearances": 76
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "ryanbj01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.8,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-javy-lopez-2004",
+    "playerId": "lopezja01",
+    "playerSlug": "javy-lopez",
+    "name": "Javy Lopez",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.8,
+      "opsPlus": 127,
+      "hr": 23,
+      "avg": 0.316,
+      "obp": 0.37,
+      "slg": 0.503,
+      "rbi": 86,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.8,
+      "opsPlus": 127,
+      "hr": 23,
+      "avg": 0.316,
+      "obp": 0.37,
+      "slg": 0.503,
+      "rbi": 86,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 638,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.37,
+      "slg": 0.503,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "lopezja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.47999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-rodrigo-lopez-2004",
+    "playerId": "lopezro01",
+    "playerSlug": "rodrigo-lopez",
+    "name": "Rodrigo Lopez",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.8,
+      "eraPlus": 127,
+      "era": 3.59,
+      "whip": 1.277,
+      "so": 121,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.8,
+      "eraPlus": 127,
+      "era": 3.59,
+      "whip": 1.277,
+      "so": 121,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.277,
+      "fip": null,
+      "inningsPitched": 170.7,
+      "strikeoutRate": 6.379613356766257,
+      "walkRate": 2.8471001757469248,
+      "starts": 23,
+      "reliefAppearances": 14
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "lopezro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.585,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -161,8 +746,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.1,
+      "opsPlus": 137,
       "hr": 32,
       "avg": 0.304,
       "obp": 0.36,
@@ -172,8 +757,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.1,
+      "opsPlus": 137,
       "hr": 32,
       "avg": 0.304,
       "obp": 0.36,
@@ -194,173 +779,252 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "huffau01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 110.08571428571429,
-      "formulaVersion": "season-selection-v1"
+      "score": 74.30999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bal-2000s-nick-markakis-2008",
-    "playerId": "markani01",
-    "playerSlug": "nick-markakis",
-    "name": "Nick Markakis",
+    "id": "bal-2000s-jorge-julio-2002",
+    "playerId": "juliojo01",
+    "playerSlug": "jorge-julio",
+    "name": "Jorge Julio",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.8,
+      "eraPlus": 217,
+      "era": 1.99,
+      "whip": 1.206,
+      "so": 55,
+      "wins": 5,
+      "saves": 25,
+      "sv": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.8,
+      "eraPlus": 217,
+      "era": 1.99,
+      "whip": 1.206,
+      "so": 55,
+      "wins": 5,
+      "saves": 25,
+      "sv": 25
+    },
+    "scoringStats": {
+      "whip": 1.206,
+      "fip": null,
+      "inningsPitched": 68,
+      "strikeoutRate": 7.279411764705882,
+      "walkRate": 3.573529411764706,
+      "starts": 0,
+      "reliefAppearances": 67
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "juliojo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.12142857142857,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-jim-johnson-2008",
+    "playerId": "johnsji04",
+    "playerSlug": "jim-johnson",
+    "name": "Jim Johnson",
     "franchiseId": "bal",
     "teamAbbreviation": "BAL",
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "2000s",
     "featuredSeason": 2008,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "RF"
+      "RP"
     ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.306,
-      "obp": 0.406,
-      "slg": 0.491,
-      "rbi": 87,
-      "sb": 10
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.306,
-      "obp": 0.406,
-      "slg": 0.491,
-      "rbi": 87,
-      "sb": 10
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 697,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.406,
-      "slg": 0.491,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "markani01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 109.61428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-brian-roberts-2005",
-    "playerId": "roberbr01",
-    "playerSlug": "brian-roberts",
-    "name": "Brian Roberts",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2005,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.314,
-      "obp": 0.387,
-      "slg": 0.515,
-      "rbi": 73,
-      "sb": 27
+      "war": 2.3,
+      "eraPlus": 200,
+      "era": 2.23,
+      "whip": 1.194,
+      "so": 38,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.314,
-      "obp": 0.387,
-      "slg": 0.515,
-      "rbi": 73,
-      "sb": 27
+      "war": 2.3,
+      "eraPlus": 200,
+      "era": 2.23,
+      "whip": 1.194,
+      "so": 38,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
     },
     "scoringStats": {
-      "games": 143,
-      "plateAppearances": 635,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.387,
-      "slg": 0.515,
-      "wrcPlus": null
+      "whip": 1.194,
+      "fip": null,
+      "inningsPitched": 68.7,
+      "strikeoutRate": 4.978165938864628,
+      "walkRate": 3.6681222707423577,
+      "starts": 0,
+      "reliefAppearances": 54
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
-      "sourcePlayerId": "roberbr01"
+      "sourcePlayerId": "johnsji04"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 108.34285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 70.3142857142857,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bal-2000s-javy-lopez-2004",
-    "playerId": "lopezja01",
-    "playerSlug": "javy-lopez",
-    "name": "Javy Lopez",
+    "id": "bal-2000s-jeremy-guthrie-2008",
+    "playerId": "guthrje01",
+    "playerSlug": "jeremy-guthrie",
+    "name": "Jeremy Guthrie",
     "franchiseId": "bal",
     "teamAbbreviation": "BAL",
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "2000s",
-    "featuredSeason": 2004,
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.1,
+      "eraPlus": 122,
+      "era": 3.63,
+      "whip": 1.227,
+      "so": 120,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.1,
+      "eraPlus": 122,
+      "era": 3.63,
+      "whip": 1.227,
+      "so": 120,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.227,
+      "fip": null,
+      "inningsPitched": 190.7,
+      "strikeoutRate": 5.663345568956476,
+      "walkRate": 2.737283691662297,
+      "starts": 30,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "guthrje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.43499999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-ramon-hernandez-2006",
+    "playerId": "hernara02",
+    "playerSlug": "ramon-hernandez",
+    "name": "Ramon Hernandez",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2006,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -371,53 +1035,129 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.2,
+      "opsPlus": 111,
       "hr": 23,
-      "avg": 0.316,
-      "obp": 0.37,
-      "slg": 0.503,
-      "rbi": 86,
-      "sb": 0
+      "avg": 0.275,
+      "obp": 0.343,
+      "slg": 0.479,
+      "rbi": 91,
+      "sb": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.2,
+      "opsPlus": 111,
       "hr": 23,
-      "avg": 0.316,
-      "obp": 0.37,
-      "slg": 0.503,
-      "rbi": 86,
-      "sb": 0
+      "avg": 0.275,
+      "obp": 0.343,
+      "slg": 0.479,
+      "rbi": 91,
+      "sb": 1
     },
     "scoringStats": {
-      "games": 150,
-      "plateAppearances": 638,
+      "games": 144,
+      "plateAppearances": 560,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.37,
-      "slg": 0.503,
+      "obp": 0.343,
+      "slg": 0.479,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
-      "sourcePlayerId": "lopezja01"
+      "sourcePlayerId": "hernara02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2006.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.52857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 61.50000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-luis-matos-2003",
+    "playerId": "matoslu01",
+    "playerSlug": "luis-matos",
+    "name": "Luis Matos",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "opsPlus": 113,
+      "hr": 13,
+      "avg": 0.303,
+      "obp": 0.353,
+      "slg": 0.458,
+      "rbi": 45,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "opsPlus": 113,
+      "hr": 13,
+      "avg": 0.303,
+      "obp": 0.353,
+      "slg": 0.458,
+      "rbi": 45,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 109,
+      "plateAppearances": 476,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.353,
+      "slg": 0.458,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "matoslu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.26,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -441,8 +1181,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 137,
       "hr": 21,
       "avg": 0.294,
       "obp": 0.364,
@@ -452,8 +1192,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 137,
       "hr": 21,
       "avg": 0.294,
       "obp": 0.364,
@@ -474,20 +1214,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "johnsch04"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.5142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 58.89,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-brad-bergesen-2009",
+    "playerId": "bergebr02",
+    "playerSlug": "brad-bergesen",
+    "name": "Brad Bergesen",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.1,
+      "eraPlus": 133,
+      "era": 3.43,
+      "whip": 1.281,
+      "so": 65,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "eraPlus": 133,
+      "era": 3.43,
+      "whip": 1.281,
+      "so": 65,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.281,
+      "fip": null,
+      "inningsPitched": 123.3,
+      "strikeoutRate": 4.744525547445256,
+      "walkRate": 2.3357664233576645,
+      "starts": 19,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "bergebr02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.915,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -514,8 +1329,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 123,
       "hr": 14,
       "avg": 0.311,
       "obp": 0.386,
@@ -525,8 +1340,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 123,
       "hr": 14,
       "avg": 0.311,
       "obp": 0.386,
@@ -547,20 +1362,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "coninje01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.07142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 52.309999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-corey-patterson-2006",
+    "playerId": "patteco01",
+    "playerSlug": "corey-patterson",
+    "name": "Corey Patterson",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.2,
+      "opsPlus": 94,
+      "hr": 16,
+      "avg": 0.276,
+      "obp": 0.314,
+      "slg": 0.443,
+      "rbi": 53,
+      "sb": 45
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.2,
+      "opsPlus": 94,
+      "hr": 16,
+      "avg": 0.276,
+      "obp": 0.314,
+      "slg": 0.443,
+      "rbi": 53,
+      "sb": 45
+    },
+    "scoringStats": {
+      "games": 135,
+      "plateAppearances": 490,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.314,
+      "slg": 0.443,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "patteco01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2006.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.300000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -585,8 +1476,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 110,
       "hr": 10,
       "avg": 0.296,
       "obp": 0.369,
@@ -596,8 +1487,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 110,
       "hr": 10,
       "avg": 0.296,
       "obp": 0.369,
@@ -618,27 +1509,176 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "deshide01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.58571428571429,
-      "formulaVersion": "season-selection-v1"
+      "score": 48.6,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bal-2000s-albert-belle-2000",
-    "playerId": "belleal01",
-    "playerSlug": "albert-belle",
-    "name": "Albert Belle",
+    "id": "bal-2000s-david-segui-2001",
+    "playerId": "seguida01",
+    "playerSlug": "david-segui",
+    "name": "David Segui",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.1,
+      "opsPlus": 137,
+      "hr": 10,
+      "avg": 0.301,
+      "obp": 0.406,
+      "slg": 0.473,
+      "rbi": 46,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.1,
+      "opsPlus": 137,
+      "hr": 10,
+      "avg": 0.301,
+      "obp": 0.406,
+      "slg": 0.473,
+      "rbi": 46,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 82,
+      "plateAppearances": 347,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.406,
+      "slg": 0.473,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "seguida01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.17,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-nolan-reimold-2009",
+    "playerId": "reimono01",
+    "playerSlug": "nolan-reimold",
+    "name": "Nolan Reimold",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.6,
+      "opsPlus": 116,
+      "hr": 15,
+      "avg": 0.279,
+      "obp": 0.365,
+      "slg": 0.466,
+      "rbi": 45,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "opsPlus": 116,
+      "hr": 15,
+      "avg": 0.279,
+      "obp": 0.365,
+      "slg": 0.466,
+      "rbi": 45,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 104,
+      "plateAppearances": 411,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.365,
+      "slg": 0.466,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "reimono01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.31,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-2000s-mike-bordick-2000",
+    "playerId": "bordimi01",
+    "playerSlug": "mike-bordick",
+    "name": "Mike Bordick",
     "franchiseId": "bal",
     "teamAbbreviation": "BAL",
     "teamDisplayName": "Baltimore Orioles",
@@ -650,128 +1690,61 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "RF"
+      "SS"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.281,
-      "obp": 0.342,
-      "slg": 0.474,
-      "rbi": 103,
-      "sb": 0
+      "war": 2.6,
+      "opsPlus": 113,
+      "hr": 16,
+      "avg": 0.297,
+      "obp": 0.35,
+      "slg": 0.481,
+      "rbi": 59,
+      "sb": 6
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.281,
-      "obp": 0.342,
-      "slg": 0.474,
-      "rbi": 103,
-      "sb": 0
+      "war": 2.6,
+      "opsPlus": 113,
+      "hr": 16,
+      "avg": 0.297,
+      "obp": 0.35,
+      "slg": 0.481,
+      "rbi": 59,
+      "sb": 6
     },
     "scoringStats": {
-      "games": 141,
-      "plateAppearances": 622,
+      "games": 100,
+      "plateAppearances": 431,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.342,
-      "slg": 0.474,
+      "obp": 0.35,
+      "slg": 0.481,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
-      "sourcePlayerId": "belleal01"
+      "sourcePlayerId": "bordimi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.37142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-ramon-hernandez-2006",
-    "playerId": "hernara02",
-    "playerSlug": "ramon-hernandez",
-    "name": "Ramon Hernandez",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2006,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.275,
-      "obp": 0.343,
-      "slg": 0.479,
-      "rbi": 91,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.275,
-      "obp": 0.343,
-      "slg": 0.479,
-      "rbi": 91,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 144,
-      "plateAppearances": 560,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.343,
-      "slg": 0.479,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "hernara02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 98.2,
-      "formulaVersion": "season-selection-v1"
+      "score": 42.010000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -796,8 +1769,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.2,
+      "opsPlus": 118,
       "hr": 26,
       "avg": 0.277,
       "obp": 0.317,
@@ -807,8 +1780,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.2,
+      "opsPlus": 118,
       "hr": 26,
       "avg": 0.277,
       "obp": 0.317,
@@ -829,373 +1802,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "gibboja01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.1,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-rafael-palmeiro-2004",
-    "playerId": "palmera01",
-    "playerSlug": "rafael-palmeiro",
-    "name": "Rafael Palmeiro",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.258,
-      "obp": 0.359,
-      "slg": 0.436,
-      "rbi": 88,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.258,
-      "obp": 0.359,
-      "slg": 0.436,
-      "rbi": 88,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 154,
-      "plateAppearances": 651,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.436,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "palmera01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 98.1,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-luke-scott-2009",
-    "playerId": "scottlu01",
-    "playerSlug": "luke-scott",
-    "name": "Luke Scott",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.258,
-      "obp": 0.34,
-      "slg": 0.488,
-      "rbi": 77,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.258,
-      "obp": 0.34,
-      "slg": 0.488,
-      "rbi": 77,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 128,
-      "plateAppearances": 506,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.34,
-      "slg": 0.488,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "scottlu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.25714285714287,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-brady-anderson-2000",
-    "playerId": "anderbr01",
-    "playerSlug": "brady-anderson",
-    "name": "Brady Anderson",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "LF",
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.257,
-      "obp": 0.375,
-      "slg": 0.421,
-      "rbi": 50,
-      "sb": 16
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.257,
-      "obp": 0.375,
-      "slg": 0.421,
-      "rbi": 50,
-      "sb": 16
-    },
-    "scoringStats": {
-      "games": 141,
-      "plateAppearances": 613,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.375,
-      "slg": 0.421,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "anderbr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.11428571428573,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-mike-bordick-2000",
-    "playerId": "bordimi01",
-    "playerSlug": "mike-bordick",
-    "name": "Mike Bordick",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.297,
-      "obp": 0.35,
-      "slg": 0.481,
-      "rbi": 59,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.297,
-      "obp": 0.35,
-      "slg": 0.481,
-      "rbi": 59,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 100,
-      "plateAppearances": 431,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.35,
-      "slg": 0.481,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "bordimi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95.41428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-luis-matos-2003",
-    "playerId": "matoslu01",
-    "playerSlug": "luis-matos",
-    "name": "Luis Matos",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.303,
-      "obp": 0.353,
-      "slg": 0.458,
-      "rbi": 45,
-      "sb": 15
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.303,
-      "obp": 0.353,
-      "slg": 0.458,
-      "rbi": 45,
-      "sb": 15
-    },
-    "scoringStats": {
-      "games": 109,
-      "plateAppearances": 476,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.353,
-      "slg": 0.458,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "matoslu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.69999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 40.580000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1219,8 +1842,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.6,
+      "opsPlus": 105,
       "hr": 19,
       "avg": 0.277,
       "obp": 0.335,
@@ -1230,8 +1853,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.6,
+      "opsPlus": 105,
       "hr": 19,
       "avg": 0.277,
       "obp": 0.335,
@@ -1252,24 +1875,27 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "jonesad01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.02857142857144,
-      "formulaVersion": "season-selection-v1"
+      "score": 38.89,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bal-2000s-jerry-hairston-2004",
+    "id": "bal-2000s-jerry-hairston-2002",
     "playerId": "hairsje02",
     "playerSlug": "jerry-hairston",
     "name": "Jerry Hairston",
@@ -1278,136 +1904,67 @@
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "2000s",
-    "featuredSeason": 2004,
+    "featuredSeason": 2002,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "2B",
-      "CF",
-      "LF",
-      "RF"
+      "2B"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 2,
-      "avg": 0.303,
-      "obp": 0.378,
-      "slg": 0.397,
-      "rbi": 24,
-      "sb": 13
+      "war": 2.6,
+      "opsPlus": 92,
+      "hr": 5,
+      "avg": 0.268,
+      "obp": 0.329,
+      "slg": 0.376,
+      "rbi": 32,
+      "sb": 21
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 2,
-      "avg": 0.303,
-      "obp": 0.378,
-      "slg": 0.397,
-      "rbi": 24,
-      "sb": 13
+      "war": 2.6,
+      "opsPlus": 92,
+      "hr": 5,
+      "avg": 0.268,
+      "obp": 0.329,
+      "slg": 0.376,
+      "rbi": 32,
+      "sb": 21
     },
     "scoringStats": {
-      "games": 86,
-      "plateAppearances": 328,
+      "games": 122,
+      "plateAppearances": 471,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.378,
-      "slg": 0.397,
+      "obp": 0.329,
+      "slg": 0.376,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "hairsje02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 86.87142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-buddy-groom-2002",
-    "playerId": "groombu01",
-    "playerSlug": "buddy-groom",
-    "name": "Buddy Groom",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.6,
-      "whip": 0.903,
-      "so": 48,
-      "wins": 3,
-      "saves": 2,
-      "sv": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.6,
-      "whip": 0.903,
-      "so": 48,
-      "wins": 3,
-      "saves": 2,
-      "sv": 2
-    },
-    "scoringStats": {
-      "whip": 0.903,
-      "fip": null,
-      "inningsPitched": 62,
-      "strikeoutRate": 6.967741935483871,
-      "walkRate": 1.7419354838709677,
-      "starts": 0,
-      "reliefAppearances": 70
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "groombu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 86.57870967741937,
-      "formulaVersion": "season-selection-v1"
+      "score": 31.910000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1431,8 +1988,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 69,
       "hr": 14,
       "avg": 0.25,
       "obp": 0.269,
@@ -1442,8 +1999,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 69,
       "hr": 14,
       "avg": 0.25,
       "obp": 0.269,
@@ -1464,503 +2021,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "cruzde01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 80.84285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-b-j-ryan-2004",
-    "playerId": "ryanbj01",
-    "playerSlug": "b-j-ryan",
-    "name": "B. J. Ryan",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.28,
-      "whip": 1.138,
-      "so": 122,
-      "wins": 4,
-      "saves": 3,
-      "sv": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.28,
-      "whip": 1.138,
-      "so": 122,
-      "wins": 4,
-      "saves": 3,
-      "sv": 3
-    },
-    "scoringStats": {
-      "whip": 1.138,
-      "fip": null,
-      "inningsPitched": 87,
-      "strikeoutRate": 12.620689655172415,
-      "walkRate": 3.6206896551724137,
-      "starts": 0,
-      "reliefAppearances": 76
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "ryanbj01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 79.38,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-jorge-julio-2002",
-    "playerId": "juliojo01",
-    "playerSlug": "jorge-julio",
-    "name": "Jorge Julio",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.99,
-      "whip": 1.206,
-      "so": 55,
-      "wins": 5,
-      "saves": 25,
-      "sv": 25
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.99,
-      "whip": 1.206,
-      "so": 55,
-      "wins": 5,
-      "saves": 25,
-      "sv": 25
-    },
-    "scoringStats": {
-      "whip": 1.206,
-      "fip": null,
-      "inningsPitched": 68,
-      "strikeoutRate": 7.279411764705882,
-      "walkRate": 3.573529411764706,
-      "starts": 0,
-      "reliefAppearances": 67
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "juliojo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 73.55882352941177,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-erik-bedard-2007",
-    "playerId": "bedarer01",
-    "playerSlug": "erik-bedard",
-    "name": "Erik Bedard",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.16,
-      "whip": 1.088,
-      "so": 221,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.16,
-      "whip": 1.088,
-      "so": 221,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.088,
-      "fip": null,
-      "inningsPitched": 182,
-      "strikeoutRate": 10.928571428571429,
-      "walkRate": 2.818681318681319,
-      "starts": 28,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "bedarer01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 66.59594627594628,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-mike-mussina-2000",
-    "playerId": "mussimi01",
-    "playerSlug": "mike-mussina",
-    "name": "Mike Mussina",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.79,
-      "whip": 1.187,
-      "so": 210,
-      "wins": 11,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.79,
-      "whip": 1.187,
-      "so": 210,
-      "wins": 11,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.187,
-      "fip": null,
-      "inningsPitched": 237.7,
-      "strikeoutRate": 7.951198990323938,
-      "walkRate": 1.7416912074042912,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "mussimi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 56.09426167437947,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-rodrigo-lopez-2002",
-    "playerId": "lopezro01",
-    "playerSlug": "rodrigo-lopez",
-    "name": "Rodrigo Lopez",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.57,
-      "whip": 1.19,
-      "so": 136,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.57,
-      "whip": 1.19,
-      "so": 136,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.19,
-      "fip": null,
-      "inningsPitched": 196.7,
-      "strikeoutRate": 6.222674123029996,
-      "walkRate": 2.836807320793086,
-      "starts": 28,
-      "reliefAppearances": 5
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "lopezro01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 53.36657798113315,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-jeremy-guthrie-2007",
-    "playerId": "guthrje01",
-    "playerSlug": "jeremy-guthrie",
-    "name": "Jeremy Guthrie",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.7,
-      "whip": 1.209,
-      "so": 123,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.7,
-      "whip": 1.209,
-      "so": 123,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.209,
-      "fip": null,
-      "inningsPitched": 175.3,
-      "strikeoutRate": 6.314888762122076,
-      "walkRate": 2.413006274957216,
-      "starts": 26,
-      "reliefAppearances": 6
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "guthrje01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 51.01171261963618,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-2000s-bruce-chen-2005",
-    "playerId": "chenbr01",
-    "playerSlug": "bruce-chen",
-    "name": "Bruce Chen",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2000s",
-    "featuredSeason": 2005,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.83,
-      "whip": 1.267,
-      "so": 133,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.83,
-      "whip": 1.267,
-      "so": 133,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.267,
-      "fip": null,
-      "inningsPitched": 197.3,
-      "strikeoutRate": 6.066903193106944,
-      "walkRate": 2.873796249366447,
-      "starts": 32,
-      "reliefAppearances": 2
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "chenbr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 48.450771526721866,
-      "formulaVersion": "season-selection-v1"
+      "score": 3.3500000000000014,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

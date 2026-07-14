@@ -1,5 +1,77 @@
 [
   {
+    "id": "nyy-2010s-david-robertson-2011",
+    "playerId": "roberda08",
+    "playerSlug": "david-robertson",
+    "name": "David Robertson",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "eraPlus": 399,
+      "era": 1.08,
+      "whip": 1.125,
+      "so": 100,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "eraPlus": 399,
+      "era": 1.08,
+      "whip": 1.125,
+      "so": 100,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.125,
+      "fip": null,
+      "inningsPitched": 66.7,
+      "strikeoutRate": 13.493253373313342,
+      "walkRate": 4.72263868065967,
+      "starts": 0,
+      "reliefAppearances": 70
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "roberda08"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 159.05,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
     "id": "nyy-2010s-aaron-judge-2017",
     "playerId": "judgeaa01",
     "playerSlug": "aaron-judge",
@@ -20,8 +92,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.1,
+      "opsPlus": 171,
       "hr": 52,
       "avg": 0.284,
       "obp": 0.422,
@@ -31,8 +103,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.1,
+      "opsPlus": 171,
       "hr": 52,
       "avg": 0.284,
       "obp": 0.422,
@@ -53,90 +125,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "judgeaa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 124.27142857142856,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-luke-voit-2018",
-    "playerId": "voitlu01",
-    "playerSlug": "luke-voit",
-    "name": "Luke Voit",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.333,
-      "obp": 0.405,
-      "slg": 0.689,
-      "rbi": 33,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.333,
-      "obp": 0.405,
-      "slg": 0.689,
-      "rbi": 33,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 39,
-      "plateAppearances": 148,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.405,
-      "slg": 0.689,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "voitlu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 113.62857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 139.48,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -160,8 +165,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.4,
+      "opsPlus": 148,
       "hr": 33,
       "avg": 0.313,
       "obp": 0.379,
@@ -171,8 +176,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.4,
+      "opsPlus": 148,
       "hr": 33,
       "avg": 0.313,
       "obp": 0.379,
@@ -193,20 +198,239 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "canoro01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 112.81428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 131.77,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-dellin-betances-2015",
+    "playerId": "betande01",
+    "playerSlug": "dellin-betances",
+    "name": "Dellin Betances",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.9,
+      "eraPlus": 271,
+      "era": 1.5,
+      "whip": 1.012,
+      "so": 131,
+      "wins": 6,
+      "saves": 9,
+      "sv": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.9,
+      "eraPlus": 271,
+      "era": 1.5,
+      "whip": 1.012,
+      "so": 131,
+      "wins": 6,
+      "saves": 9,
+      "sv": 9
+    },
+    "scoringStats": {
+      "whip": 1.012,
+      "fip": null,
+      "inningsPitched": 84,
+      "strikeoutRate": 14.035714285714286,
+      "walkRate": 4.285714285714286,
+      "starts": 0,
+      "reliefAppearances": 74
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "betande01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 116.64999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-andrew-miller-2016",
+    "playerId": "millean01",
+    "playerSlug": "andrew-miller",
+    "name": "Andrew Miller",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.3,
+      "eraPlus": 311,
+      "era": 1.39,
+      "whip": 0.772,
+      "so": 77,
+      "wins": 6,
+      "saves": 9,
+      "sv": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "eraPlus": 311,
+      "era": 1.39,
+      "whip": 0.772,
+      "so": 77,
+      "wins": 6,
+      "saves": 9,
+      "sv": 9
+    },
+    "scoringStats": {
+      "whip": 0.772,
+      "fip": null,
+      "inningsPitched": 45.3,
+      "strikeoutRate": 15.298013245033113,
+      "walkRate": 1.390728476821192,
+      "starts": 0,
+      "reliefAppearances": 44
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "millean01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.73571428571428,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-cc-sabathia-2011",
+    "playerId": "sabatcc01",
+    "playerSlug": "cc-sabathia",
+    "name": "CC Sabathia",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 6.4,
+      "eraPlus": 143,
+      "era": 3,
+      "whip": 1.226,
+      "so": 230,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.4,
+      "eraPlus": 143,
+      "era": 3,
+      "whip": 1.226,
+      "so": 230,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.226,
+      "fip": null,
+      "inningsPitched": 237.3,
+      "strikeoutRate": 8.723135271807838,
+      "walkRate": 2.313527180783818,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "sabatcc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.85000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -230,8 +454,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.1,
+      "opsPlus": 142,
       "hr": 41,
       "avg": 0.262,
       "obp": 0.364,
@@ -241,8 +465,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.1,
+      "opsPlus": 142,
       "hr": 41,
       "avg": 0.262,
       "obp": 0.364,
@@ -263,90 +487,97 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "grandcu01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 111.22857142857144,
-      "formulaVersion": "season-selection-v1"
+      "score": 101.07,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-2010s-gary-sanchez-2016",
-    "playerId": "sanchga02",
-    "playerSlug": "gary-sanchez",
-    "name": "Gary Sanchez",
+    "id": "nyy-2010s-brett-gardner-2010",
+    "playerId": "gardnbr01",
+    "playerSlug": "brett-gardner",
+    "name": "Brett Gardner",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "2010s",
-    "featuredSeason": 2016,
+    "featuredSeason": 2010,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "C"
+      "CF",
+      "LF"
     ],
-    "bats": "R",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.299,
-      "obp": 0.376,
-      "slg": 0.657,
-      "rbi": 42,
-      "sb": 1
+      "war": 7.3,
+      "opsPlus": 105,
+      "hr": 5,
+      "avg": 0.277,
+      "obp": 0.383,
+      "slg": 0.379,
+      "rbi": 47,
+      "sb": 47
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.299,
-      "obp": 0.376,
-      "slg": 0.657,
-      "rbi": 42,
-      "sb": 1
+      "war": 7.3,
+      "opsPlus": 105,
+      "hr": 5,
+      "avg": 0.277,
+      "obp": 0.383,
+      "slg": 0.379,
+      "rbi": 47,
+      "sb": 47
     },
     "scoringStats": {
-      "games": 53,
-      "plateAppearances": 229,
+      "games": 150,
+      "plateAppearances": 564,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.376,
-      "slg": 0.657,
+      "obp": 0.383,
+      "slg": 0.379,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "sanchga02"
+      "sourcePlayerId": "gardnbr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 109.84285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 95.74,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -372,8 +603,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.6,
+      "opsPlus": 136,
       "hr": 26,
       "avg": 0.327,
       "obp": 0.375,
@@ -383,8 +614,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.6,
+      "opsPlus": 136,
       "hr": 26,
       "avg": 0.327,
       "obp": 0.375,
@@ -405,20 +636,456 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "lemahdj01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 107.98571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 91.74,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-luis-severino-2017",
+    "playerId": "severlu01",
+    "playerSlug": "luis-severino",
+    "name": "Luis Severino",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.2,
+      "eraPlus": 152,
+      "era": 2.98,
+      "whip": 1.04,
+      "so": 230,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.2,
+      "eraPlus": 152,
+      "era": 2.98,
+      "whip": 1.04,
+      "so": 230,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.04,
+      "fip": null,
+      "inningsPitched": 193.3,
+      "strikeoutRate": 10.708742886704604,
+      "walkRate": 2.3745473357475424,
+      "starts": 31,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "severlu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.26500000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-chad-green-2017",
+    "playerId": "greench03",
+    "playerSlug": "chad-green",
+    "name": "Chad Green",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.7,
+      "eraPlus": 248,
+      "era": 1.83,
+      "whip": 0.739,
+      "so": 103,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.7,
+      "eraPlus": 248,
+      "era": 1.83,
+      "whip": 0.739,
+      "so": 103,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.739,
+      "fip": null,
+      "inningsPitched": 69,
+      "strikeoutRate": 13.434782608695652,
+      "walkRate": 2.217391304347826,
+      "starts": 1,
+      "reliefAppearances": 39
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "greench03"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.77142857142857,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-mariano-rivera-2011",
+    "playerId": "riverma01",
+    "playerSlug": "mariano-rivera",
+    "name": "Mariano Rivera",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 226,
+      "era": 1.91,
+      "whip": 0.897,
+      "so": 60,
+      "wins": 1,
+      "saves": 44,
+      "sv": 44
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 226,
+      "era": 1.91,
+      "whip": 0.897,
+      "so": 60,
+      "wins": 1,
+      "saves": 44,
+      "sv": 44
+    },
+    "scoringStats": {
+      "whip": 0.897,
+      "fip": null,
+      "inningsPitched": 61.3,
+      "strikeoutRate": 8.809135399673735,
+      "walkRate": 1.1745513866231647,
+      "starts": 0,
+      "reliefAppearances": 64
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "riverma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.04285714285713,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-masahiro-tanaka-2016",
+    "playerId": "tanakma01",
+    "playerSlug": "masahiro-tanaka",
+    "name": "Masahiro Tanaka",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.2,
+      "eraPlus": 140,
+      "era": 3.07,
+      "whip": 1.077,
+      "so": 165,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.2,
+      "eraPlus": 140,
+      "era": 3.07,
+      "whip": 1.077,
+      "so": 165,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.077,
+      "fip": null,
+      "inningsPitched": 199.7,
+      "strikeoutRate": 7.436154231347021,
+      "walkRate": 1.6224336504757138,
+      "starts": 31,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "tanakma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.385,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-hiroki-kuroda-2012",
+    "playerId": "kurodhi01",
+    "playerSlug": "hiroki-kuroda",
+    "name": "Hiroki Kuroda",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.3,
+      "eraPlus": 127,
+      "era": 3.32,
+      "whip": 1.165,
+      "so": 167,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.3,
+      "eraPlus": 127,
+      "era": 3.32,
+      "whip": 1.165,
+      "so": 167,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.165,
+      "fip": null,
+      "inningsPitched": 219.7,
+      "strikeoutRate": 6.841147018661812,
+      "walkRate": 2.089212562585344,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "kurodhi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.05,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-didi-gregorius-2018",
+    "playerId": "gregodi01",
+    "playerSlug": "didi-gregorius",
+    "name": "Didi Gregorius",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.1,
+      "opsPlus": 124,
+      "hr": 27,
+      "avg": 0.268,
+      "obp": 0.335,
+      "slg": 0.494,
+      "rbi": 86,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.1,
+      "opsPlus": 124,
+      "hr": 27,
+      "avg": 0.268,
+      "obp": 0.335,
+      "slg": 0.494,
+      "rbi": 86,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 568,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.335,
+      "slg": 0.494,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "gregodi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.88,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -443,8 +1110,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.4,
+      "opsPlus": 130,
       "hr": 38,
       "avg": 0.266,
       "obp": 0.343,
@@ -454,8 +1121,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.4,
+      "opsPlus": 130,
       "hr": 38,
       "avg": 0.266,
       "obp": 0.343,
@@ -476,515 +1143,30 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "stantmi03"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.34285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 74.85000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-2010s-nick-swisher-2010",
-    "playerId": "swishni01",
-    "playerSlug": "nick-swisher",
-    "name": "Nick Swisher",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "B",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.288,
-      "obp": 0.359,
-      "slg": 0.511,
-      "rbi": 89,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.288,
-      "obp": 0.359,
-      "slg": 0.511,
-      "rbi": 89,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 150,
-      "plateAppearances": 632,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.511,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "swishni01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 105.05714285714285,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-mark-teixeira-2010",
-    "playerId": "teixema01",
-    "playerSlug": "mark-teixeira",
-    "name": "Mark Teixeira",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.256,
-      "obp": 0.365,
-      "slg": 0.481,
-      "rbi": 108,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.256,
-      "obp": 0.365,
-      "slg": 0.481,
-      "rbi": 108,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 712,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.365,
-      "slg": 0.481,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "teixema01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 104.94285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-gleyber-torres-2019",
-    "playerId": "torregl01",
-    "playerSlug": "gleyber-torres",
-    "name": "Gleyber Torres",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 38,
-      "avg": 0.278,
-      "obp": 0.337,
-      "slg": 0.535,
-      "rbi": 90,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 38,
-      "avg": 0.278,
-      "obp": 0.337,
-      "slg": 0.535,
-      "rbi": 90,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 144,
-      "plateAppearances": 603,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.337,
-      "slg": 0.535,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "torregl01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 104.42857142857144,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-miguel-andujar-2018",
-    "playerId": "andujmi01",
-    "playerSlug": "miguel-andujar",
-    "name": "Miguel Andujar",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.297,
-      "obp": 0.328,
-      "slg": 0.527,
-      "rbi": 92,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.297,
-      "obp": 0.328,
-      "slg": 0.527,
-      "rbi": 92,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 149,
-      "plateAppearances": 606,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.328,
-      "slg": 0.527,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "andujmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.81428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-gio-urshela-2019",
-    "playerId": "urshegi01",
-    "playerSlug": "gio-urshela",
-    "name": "Gio Urshela",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.314,
-      "obp": 0.355,
-      "slg": 0.534,
-      "rbi": 74,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.314,
-      "obp": 0.355,
-      "slg": 0.534,
-      "rbi": 74,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 132,
-      "plateAppearances": 476,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.355,
-      "slg": 0.534,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "urshegi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.5,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-alex-rodriguez-2015",
-    "playerId": "rodrial01",
-    "playerSlug": "alex-rodriguez",
-    "name": "Alex Rodriguez",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2015,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.25,
-      "obp": 0.356,
-      "slg": 0.486,
-      "rbi": 86,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.25,
-      "obp": 0.356,
-      "slg": 0.486,
-      "rbi": 86,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 151,
-      "plateAppearances": 620,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.356,
-      "slg": 0.486,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "rodrial01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.91428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-andrew-miller-2016",
-    "playerId": "millean01",
-    "playerSlug": "andrew-miller",
-    "name": "Andrew Miller",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.39,
-      "whip": 0.772,
-      "so": 77,
-      "wins": 6,
-      "saves": 9,
-      "sv": 9
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.39,
-      "whip": 0.772,
-      "so": 77,
-      "wins": 6,
-      "saves": 9,
-      "sv": 9
-    },
-    "scoringStats": {
-      "whip": 0.772,
-      "fip": null,
-      "inningsPitched": 45.3,
-      "strikeoutRate": 15.298013245033113,
-      "walkRate": 1.390728476821192,
-      "starts": 0,
-      "reliefAppearances": 44
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "millean01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.54092715231789,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-dellin-betances-2014",
-    "playerId": "betande01",
-    "playerSlug": "dellin-betances",
-    "name": "Dellin Betances",
+    "id": "nyy-2010s-michael-pineda-2014",
+    "playerId": "pinedmi01",
+    "playerSlug": "michael-pineda",
+    "name": "Michael Pineda",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
@@ -994,129 +1176,135 @@
     "playerType": "pitcher",
     "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "RP"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.4,
-      "whip": 0.778,
-      "so": 135,
+      "war": 2.7,
+      "eraPlus": 204,
+      "era": 1.89,
+      "whip": 0.825,
+      "so": 59,
       "wins": 5,
-      "saves": 1,
-      "sv": 1
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.4,
-      "whip": 0.778,
-      "so": 135,
+      "war": 2.7,
+      "eraPlus": 204,
+      "era": 1.89,
+      "whip": 0.825,
+      "so": 59,
       "wins": 5,
-      "saves": 1,
-      "sv": 1
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "whip": 0.778,
+      "whip": 0.825,
       "fip": null,
-      "inningsPitched": 90,
-      "strikeoutRate": 13.5,
-      "walkRate": 2.4,
-      "starts": 0,
-      "reliefAppearances": 70
+      "inningsPitched": 76.3,
+      "strikeoutRate": 6.959370904325033,
+      "walkRate": 0.8256880733944955,
+      "starts": 13,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "betande01"
+      "sourcePlayerId": "pinedmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2014.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.28999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 72.61500000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-2010s-derek-jeter-2012",
-    "playerId": "jeterde01",
-    "playerSlug": "derek-jeter",
-    "name": "Derek Jeter",
+    "id": "nyy-2010s-gary-sanchez-2016",
+    "playerId": "sanchga02",
+    "playerSlug": "gary-sanchez",
+    "name": "Gary Sanchez",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "2010s",
-    "featuredSeason": 2012,
+    "featuredSeason": 2016,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "SS"
+      "C"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.316,
-      "obp": 0.362,
-      "slg": 0.429,
-      "rbi": 58,
-      "sb": 9
+      "war": 3,
+      "opsPlus": 168,
+      "hr": 20,
+      "avg": 0.299,
+      "obp": 0.376,
+      "slg": 0.657,
+      "rbi": 42,
+      "sb": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.316,
-      "obp": 0.362,
-      "slg": 0.429,
-      "rbi": 58,
-      "sb": 9
+      "war": 3,
+      "opsPlus": 168,
+      "hr": 20,
+      "avg": 0.299,
+      "obp": 0.376,
+      "slg": 0.657,
+      "rbi": 42,
+      "sb": 1
     },
     "scoringStats": {
-      "games": 159,
-      "plateAppearances": 734,
+      "games": 53,
+      "plateAppearances": 229,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.362,
-      "slg": 0.429,
+      "obp": 0.376,
+      "slg": 0.657,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "jeterde01"
+      "sourcePlayerId": "sanchga02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.07142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 72.29,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1140,8 +1328,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 127,
       "hr": 27,
       "avg": 0.248,
       "obp": 0.366,
@@ -1151,8 +1339,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 127,
       "hr": 27,
       "avg": 0.248,
       "obp": 0.366,
@@ -1173,97 +1361,176 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "hicksaa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.84285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 70.89,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-2010s-didi-gregorius-2018",
-    "playerId": "gregodi01",
-    "playerSlug": "didi-gregorius",
-    "name": "Didi Gregorius",
+    "id": "nyy-2010s-mark-teixeira-2010",
+    "playerId": "teixema01",
+    "playerSlug": "mark-teixeira",
+    "name": "Mark Teixeira",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "2010s",
-    "featuredSeason": 2018,
+    "featuredSeason": 2010,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "SS"
+      "1B"
     ],
-    "bats": "L",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.268,
-      "obp": 0.335,
-      "slg": 0.494,
-      "rbi": 86,
-      "sb": 10
+      "war": 4.1,
+      "opsPlus": 124,
+      "hr": 33,
+      "avg": 0.256,
+      "obp": 0.365,
+      "slg": 0.481,
+      "rbi": 108,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.268,
-      "obp": 0.335,
-      "slg": 0.494,
-      "rbi": 86,
-      "sb": 10
+      "war": 4.1,
+      "opsPlus": 124,
+      "hr": 33,
+      "avg": 0.256,
+      "obp": 0.365,
+      "slg": 0.481,
+      "rbi": 108,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 134,
-      "plateAppearances": 568,
+      "games": 158,
+      "plateAppearances": 712,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.335,
-      "slg": 0.494,
+      "obp": 0.365,
+      "slg": 0.481,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "gregodi01"
+      "sourcePlayerId": "teixema01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.12857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 68.32,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-2010s-brett-gardner-2019",
-    "playerId": "gardnbr01",
-    "playerSlug": "brett-gardner",
-    "name": "Brett Gardner",
+    "id": "nyy-2010s-alex-rodriguez-2010",
+    "playerId": "rodrial01",
+    "playerSlug": "alex-rodriguez",
+    "name": "Alex Rodriguez",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.2,
+      "opsPlus": 123,
+      "hr": 30,
+      "avg": 0.27,
+      "obp": 0.341,
+      "slg": 0.506,
+      "rbi": 125,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.2,
+      "opsPlus": 123,
+      "hr": 30,
+      "avg": 0.27,
+      "obp": 0.341,
+      "slg": 0.506,
+      "rbi": 125,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 595,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.341,
+      "slg": 0.506,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "rodrial01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.85000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-gio-urshela-2019",
+    "playerId": "urshegi01",
+    "playerSlug": "gio-urshela",
+    "name": "Gio Urshela",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
@@ -1275,128 +1542,135 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "CF",
-      "LF"
+      "3B"
     ],
-    "bats": "L",
-    "throws": "L",
+    "bats": "R",
+    "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.251,
-      "obp": 0.325,
-      "slg": 0.503,
+      "war": 3.8,
+      "opsPlus": 133,
+      "hr": 21,
+      "avg": 0.314,
+      "obp": 0.355,
+      "slg": 0.534,
       "rbi": 74,
-      "sb": 10
+      "sb": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.251,
-      "obp": 0.325,
-      "slg": 0.503,
+      "war": 3.8,
+      "opsPlus": 133,
+      "hr": 21,
+      "avg": 0.314,
+      "obp": 0.355,
+      "slg": 0.534,
       "rbi": 74,
-      "sb": 10
+      "sb": 1
     },
     "scoringStats": {
-      "games": 141,
-      "plateAppearances": 550,
+      "games": 132,
+      "plateAppearances": 476,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.325,
-      "slg": 0.503,
+      "obp": 0.355,
+      "slg": 0.534,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "gardnbr01"
+      "sourcePlayerId": "urshegi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.51428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 66.86,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-2010s-david-robertson-2017",
-    "playerId": "roberda08",
-    "playerSlug": "david-robertson",
-    "name": "David Robertson",
+    "id": "nyy-2010s-nick-swisher-2012",
+    "playerId": "swishni01",
+    "playerSlug": "nick-swisher",
+    "name": "Nick Swisher",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "1B",
+      "RF"
     ],
-    "bats": "R",
-    "throws": "R",
+    "bats": "B",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.03,
-      "whip": 0.743,
-      "so": 51,
-      "wins": 5,
-      "saves": 1,
-      "sv": 1
+      "war": 4,
+      "opsPlus": 125,
+      "hr": 24,
+      "avg": 0.272,
+      "obp": 0.364,
+      "slg": 0.473,
+      "rbi": 93,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.03,
-      "whip": 0.743,
-      "so": 51,
-      "wins": 5,
-      "saves": 1,
-      "sv": 1
+      "war": 4,
+      "opsPlus": 125,
+      "hr": 24,
+      "avg": 0.272,
+      "obp": 0.364,
+      "slg": 0.473,
+      "rbi": 93,
+      "sb": 2
     },
     "scoringStats": {
-      "whip": 0.743,
-      "fip": null,
-      "inningsPitched": 35,
-      "strikeoutRate": 13.114285714285714,
-      "walkRate": 3.085714285714286,
-      "starts": 0,
-      "reliefAppearances": 30
+      "games": 148,
+      "plateAppearances": 623,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.364,
+      "slg": 0.473,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "roberda08"
+      "sourcePlayerId": "swishni01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 97.82285714285715,
-      "formulaVersion": "season-selection-v1"
+      "score": 66.73,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1422,8 +1696,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.9,
+      "opsPlus": 128,
       "hr": 13,
       "avg": 0.277,
       "obp": 0.361,
@@ -1433,8 +1707,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.9,
+      "opsPlus": 128,
       "hr": 13,
       "avg": 0.277,
       "obp": 0.361,
@@ -1455,90 +1729,170 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "tauchmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.95714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 63.76,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-2010s-jorge-posada-2010",
-    "playerId": "posadjo01",
-    "playerSlug": "jorge-posada",
-    "name": "Jorge Posada",
+    "id": "nyy-2010s-gleyber-torres-2018",
+    "playerId": "torregl01",
+    "playerSlug": "gleyber-torres",
+    "name": "Gleyber Torres",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "2010s",
-    "featuredSeason": 2010,
+    "featuredSeason": 2018,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "C"
+      "2B",
+      "SS"
     ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.248,
-      "obp": 0.357,
-      "slg": 0.454,
-      "rbi": 57,
-      "sb": 3
+      "war": 3.4,
+      "opsPlus": 122,
+      "hr": 24,
+      "avg": 0.271,
+      "obp": 0.34,
+      "slg": 0.48,
+      "rbi": 77,
+      "sb": 6
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.248,
-      "obp": 0.357,
-      "slg": 0.454,
-      "rbi": 57,
-      "sb": 3
+      "war": 3.4,
+      "opsPlus": 122,
+      "hr": 24,
+      "avg": 0.271,
+      "obp": 0.34,
+      "slg": 0.48,
+      "rbi": 77,
+      "sb": 6
     },
     "scoringStats": {
-      "games": 120,
-      "plateAppearances": 451,
+      "games": 123,
+      "plateAppearances": 483,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.357,
-      "slg": 0.454,
+      "obp": 0.34,
+      "slg": 0.48,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "posadjo01"
+      "sourcePlayerId": "torregl01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.98571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 56.629999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "nyy-2010s-derek-jeter-2012",
+    "playerId": "jeterde01",
+    "playerSlug": "derek-jeter",
+    "name": "Derek Jeter",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.2,
+      "opsPlus": 114,
+      "hr": 15,
+      "avg": 0.316,
+      "obp": 0.362,
+      "slg": 0.429,
+      "rbi": 58,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "opsPlus": 114,
+      "hr": 15,
+      "avg": 0.316,
+      "obp": 0.362,
+      "slg": 0.429,
+      "rbi": 58,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 734,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.362,
+      "slg": 0.429,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "jeterde01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.74000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1563,8 +1917,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.6,
+      "opsPlus": 105,
       "hr": 26,
       "avg": 0.232,
       "obp": 0.32,
@@ -1574,8 +1928,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.6,
+      "opsPlus": 105,
       "hr": 26,
       "avg": 0.232,
       "obp": 0.32,
@@ -1596,365 +1950,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
       "sourcePlayerId": "mccanbr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.9857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 39.050000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "nyy-2010s-michael-pineda-2014",
-    "playerId": "pinedmi01",
-    "playerSlug": "michael-pineda",
-    "name": "Michael Pineda",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2014,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.89,
-      "whip": 0.825,
-      "so": 59,
-      "wins": 5,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.89,
-      "whip": 0.825,
-      "so": 59,
-      "wins": 5,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.825,
-      "fip": null,
-      "inningsPitched": 76.3,
-      "strikeoutRate": 6.959370904325033,
-      "walkRate": 0.8256880733944955,
-      "starts": 13,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "pinedmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 78.2594131352847,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-luis-severino-2017",
-    "playerId": "severlu01",
-    "playerSlug": "luis-severino",
-    "name": "Luis Severino",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.98,
-      "whip": 1.04,
-      "so": 230,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.98,
-      "whip": 1.04,
-      "so": 230,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.04,
-      "fip": null,
-      "inningsPitched": 193.3,
-      "strikeoutRate": 10.708742886704604,
-      "walkRate": 2.3745473357475424,
-      "starts": 31,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "severlu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 70.68018221532449,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-masahiro-tanaka-2014",
-    "playerId": "tanakma01",
-    "playerSlug": "masahiro-tanaka",
-    "name": "Masahiro Tanaka",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2014,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.77,
-      "whip": 1.056,
-      "so": 141,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.77,
-      "whip": 1.056,
-      "so": 141,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.056,
-      "fip": null,
-      "inningsPitched": 136.3,
-      "strikeoutRate": 9.310344827586206,
-      "walkRate": 1.3866471019809243,
-      "starts": 20,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "tanakma01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 69.09776881063014,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-cc-sabathia-2011",
-    "playerId": "sabatcc01",
-    "playerSlug": "cc-sabathia",
-    "name": "CC Sabathia",
+    "id": "nyy-2010s-russell-martin-2011",
+    "playerId": "martiru01",
+    "playerSlug": "russell-martin",
+    "name": "Russell Martin",
     "franchiseId": "nyy",
     "teamAbbreviation": "NYY",
     "teamDisplayName": "New York Yankees",
     "team": "NYY",
     "decade": "2010s",
     "featuredSeason": 2011,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "C"
     ],
-    "bats": "L",
-    "throws": "L",
+    "bats": "R",
+    "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 1.226,
-      "so": 230,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
+      "war": 2.4,
+      "opsPlus": 95,
+      "hr": 18,
+      "avg": 0.237,
+      "obp": 0.324,
+      "slg": 0.408,
+      "rbi": 65,
+      "sb": 8
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 1.226,
-      "so": 230,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
+      "war": 2.4,
+      "opsPlus": 95,
+      "hr": 18,
+      "avg": 0.237,
+      "obp": 0.324,
+      "slg": 0.408,
+      "rbi": 65,
+      "sb": 8
     },
     "scoringStats": {
-      "whip": 1.226,
-      "fip": null,
-      "inningsPitched": 237.3,
-      "strikeoutRate": 8.723135271807838,
-      "walkRate": 2.313527180783818,
-      "starts": 33,
-      "reliefAppearances": 0
+      "games": 125,
+      "plateAppearances": 475,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.324,
+      "slg": 0.408,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "NYA"
       ],
-      "sourcePlayerId": "sabatcc01"
+      "sourcePlayerId": "martiru01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 65.09441213653604,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "nyy-2010s-j-a-happ-2018",
-    "playerId": "happja01",
-    "playerSlug": "j-a-happ",
-    "name": "J. A. Happ",
-    "franchiseId": "nyy",
-    "teamAbbreviation": "NYY",
-    "teamDisplayName": "New York Yankees",
-    "team": "NYY",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.69,
-      "whip": 1.052,
-      "so": 63,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.69,
-      "whip": 1.052,
-      "so": 63,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.052,
-      "fip": null,
-      "inningsPitched": 63.7,
-      "strikeoutRate": 8.901098901098901,
-      "walkRate": 2.2605965463108317,
-      "starts": 11,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "NYA"
-      ],
-      "sourcePlayerId": "happja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 64.179642421071,
-      "formulaVersion": "season-selection-v1"
+      "score": 31.049999999999997,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

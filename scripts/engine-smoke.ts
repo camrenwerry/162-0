@@ -14,6 +14,15 @@ assert(pool.getPlayers(supported).every((player) => (
   && String(player.featuredSeason).startsWith(supported.decade.slice(0, 3))
 )))
 assert.deepEqual(pool.getPlayers({ ...supported, id: 'unsupported-pool' }), [])
+const yankees2000s = pool.getCombinations().find(({ id }) => id === 'nyy-2000s')
+assert(yankees2000s)
+const warSorted = pool.query({ combination: yankees2000s, excludedIds: new Set(), filter: 'ALL', sort: 'war', search: '' })
+assert(warSorted.every(({ stats }) => stats.war !== null))
+for (let index = 1; index < warSorted.length; index += 1) assert((warSorted[index - 1].stats.war ?? -Infinity) >= (warSorted[index].stats.war ?? -Infinity))
+const opsSorted = pool.query({ combination: yankees2000s, excludedIds: new Set(), filter: 'ALL', sort: 'opsPlus', search: '' })
+const opsValue = (player: (typeof opsSorted)[number]) => player.playerType === 'pitcher' ? null : player.stats.opsPlus
+assert(opsSorted.every((player) => player.playerType !== 'pitcher' && opsValue(player) !== null))
+for (let index = 1; index < opsSorted.length; index += 1) assert((opsValue(opsSorted[index - 1]) ?? -Infinity) >= (opsValue(opsSorted[index]) ?? -Infinity))
 let randomIndex = 0
 const randomizer = new Randomizer(pool, () => ((randomIndex++ * 17) % 97) / 97)
 const engine = new DraftEngine({

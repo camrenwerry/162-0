@@ -1,146 +1,6 @@
 [
   {
-    "id": "bal-1980s-john-lowenstein-1982",
-    "playerId": "lowenjo01",
-    "playerSlug": "john-lowenstein",
-    "name": "John Lowenstein",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.32,
-      "obp": 0.415,
-      "slg": 0.602,
-      "rbi": 66,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.32,
-      "obp": 0.415,
-      "slg": 0.602,
-      "rbi": 66,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 122,
-      "plateAppearances": 381,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.415,
-      "slg": 0.602,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "lowenjo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 112.58571428571427,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-eddie-murray-1983",
-    "playerId": "murraed02",
-    "playerSlug": "eddie-murray",
-    "name": "Eddie Murray",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.306,
-      "obp": 0.393,
-      "slg": 0.538,
-      "rbi": 111,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.306,
-      "obp": 0.393,
-      "slg": 0.538,
-      "rbi": 111,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 156,
-      "plateAppearances": 680,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.393,
-      "slg": 0.538,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "murraed02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 112.52857142857144,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-cal-ripken-1983",
+    "id": "bal-1980s-cal-ripken-1984",
     "playerId": "ripkeca01",
     "playerSlug": "cal-ripken",
     "name": "Cal Ripken",
@@ -149,7 +9,7 @@
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "1980s",
-    "featuredSeason": 1983,
+    "featuredSeason": 1984,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -160,194 +20,129 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 10,
+      "opsPlus": 146,
       "hr": 27,
-      "avg": 0.318,
-      "obp": 0.371,
-      "slg": 0.517,
-      "rbi": 102,
-      "sb": 0
+      "avg": 0.304,
+      "obp": 0.374,
+      "slg": 0.51,
+      "rbi": 86,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 10,
+      "opsPlus": 146,
       "hr": 27,
-      "avg": 0.318,
-      "obp": 0.371,
-      "slg": 0.517,
-      "rbi": 102,
-      "sb": 0
+      "avg": 0.304,
+      "obp": 0.374,
+      "slg": 0.51,
+      "rbi": 86,
+      "sb": 2
     },
     "scoringStats": {
       "games": 162,
-      "plateAppearances": 726,
+      "plateAppearances": 716,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.371,
-      "slg": 0.517,
+      "obp": 0.374,
+      "slg": 0.51,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "ripkeca01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 109.54285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 150.16,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bal-1980s-ken-singleton-1980",
-    "playerId": "singlke01",
-    "playerSlug": "ken-singleton",
-    "name": "Ken Singleton",
+    "id": "bal-1980s-eddie-murray-1984",
+    "playerId": "murraed02",
+    "playerSlug": "eddie-murray",
+    "name": "Eddie Murray",
     "franchiseId": "bal",
     "teamAbbreviation": "BAL",
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "1980s",
-    "featuredSeason": 1980,
+    "featuredSeason": 1984,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "RF"
+      "1B"
     ],
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.304,
-      "obp": 0.397,
-      "slg": 0.485,
-      "rbi": 104,
-      "sb": 0
+      "war": 7.1,
+      "opsPlus": 157,
+      "hr": 29,
+      "avg": 0.306,
+      "obp": 0.41,
+      "slg": 0.509,
+      "rbi": 110,
+      "sb": 10
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.304,
-      "obp": 0.397,
-      "slg": 0.485,
-      "rbi": 104,
-      "sb": 0
+      "war": 7.1,
+      "opsPlus": 157,
+      "hr": 29,
+      "avg": 0.306,
+      "obp": 0.41,
+      "slg": 0.509,
+      "rbi": 110,
+      "sb": 10
     },
     "scoringStats": {
-      "games": 156,
-      "plateAppearances": 680,
+      "games": 162,
+      "plateAppearances": 705,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.397,
-      "slg": 0.485,
+      "obp": 0.41,
+      "slg": 0.509,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
-      "sourcePlayerId": "singlke01"
+      "sourcePlayerId": "murraed02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 107.62857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-larry-sheets-1987",
-    "playerId": "sheetla01",
-    "playerSlug": "larry-sheets",
-    "name": "Larry Sheets",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1987,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF",
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.316,
-      "obp": 0.358,
-      "slg": 0.563,
-      "rbi": 94,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.316,
-      "obp": 0.358,
-      "slg": 0.563,
-      "rbi": 94,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 135,
-      "plateAppearances": 508,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.358,
-      "slg": 0.563,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "sheetla01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 106.61428571428571,
-      "formulaVersion": "season-selection-v1"
+      "score": 120.74999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -371,8 +166,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.1,
+      "opsPlus": 128,
       "hr": 9,
       "avg": 0.318,
       "obp": 0.392,
@@ -382,8 +177,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.1,
+      "opsPlus": 128,
       "hr": 9,
       "avg": 0.318,
       "obp": 0.392,
@@ -404,20 +199,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "bumbral01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.32857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 94.49,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-gregg-olson-1989",
+    "playerId": "olsongr01",
+    "playerSlug": "gregg-olson",
+    "name": "Gregg Olson",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.3,
+      "eraPlus": 224,
+      "era": 1.69,
+      "whip": 1.212,
+      "so": 90,
+      "wins": 5,
+      "saves": 27,
+      "sv": 27
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.3,
+      "eraPlus": 224,
+      "era": 1.69,
+      "whip": 1.212,
+      "so": 90,
+      "wins": 5,
+      "saves": 27,
+      "sv": 27
+    },
+    "scoringStats": {
+      "whip": 1.212,
+      "fip": null,
+      "inningsPitched": 85,
+      "strikeoutRate": 9.529411764705882,
+      "walkRate": 4.870588235294117,
+      "starts": 0,
+      "reliefAppearances": 64
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "olsongr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.14285714285714,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -444,8 +314,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.1,
+      "opsPlus": 144,
       "hr": 21,
       "avg": 0.27,
       "obp": 0.392,
@@ -455,8 +325,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.1,
+      "opsPlus": 144,
       "hr": 21,
       "avg": 0.27,
       "obp": 0.392,
@@ -477,20 +347,168 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "roeniga01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.58571428571427,
-      "formulaVersion": "season-selection-v1"
+      "score": 87.91999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-mike-boddicker-1984",
+    "playerId": "boddimi01",
+    "playerSlug": "mike-boddicker",
+    "name": "Mike Boddicker",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.2,
+      "eraPlus": 139,
+      "era": 2.79,
+      "whip": 1.144,
+      "so": 128,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.2,
+      "eraPlus": 139,
+      "era": 2.79,
+      "whip": 1.144,
+      "so": 128,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.144,
+      "fip": null,
+      "inningsPitched": 261.3,
+      "strikeoutRate": 4.408725602755453,
+      "walkRate": 2.789896670493685,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "boddimi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.05000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-john-lowenstein-1982",
+    "playerId": "lowenjo01",
+    "playerSlug": "john-lowenstein",
+    "name": "John Lowenstein",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "opsPlus": 176,
+      "hr": 24,
+      "avg": 0.32,
+      "obp": 0.415,
+      "slg": 0.602,
+      "rbi": 66,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "opsPlus": 176,
+      "hr": 24,
+      "avg": 0.32,
+      "obp": 0.415,
+      "slg": 0.602,
+      "rbi": 66,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 122,
+      "plateAppearances": 381,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.415,
+      "slg": 0.602,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "lowenjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.01,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -514,8 +532,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.4,
+      "opsPlus": 150,
       "hr": 26,
       "avg": 0.258,
       "obp": 0.369,
@@ -525,8 +543,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.4,
+      "opsPlus": 150,
       "hr": 26,
       "avg": 0.258,
       "obp": 0.369,
@@ -547,20 +565,601 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "tettlmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 101.74285714285713,
-      "formulaVersion": "season-selection-v1"
+      "score": 82.68,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-scott-mcgregor-1983",
+    "playerId": "mcgresc01",
+    "playerSlug": "scott-mcgregor",
+    "name": "Scott McGregor",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.3,
+      "eraPlus": 124,
+      "era": 3.18,
+      "whip": 1.215,
+      "so": 86,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.3,
+      "eraPlus": 124,
+      "era": 3.18,
+      "whip": 1.215,
+      "so": 86,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.215,
+      "fip": null,
+      "inningsPitched": 260,
+      "strikeoutRate": 2.976923076923077,
+      "walkRate": 1.5576923076923077,
+      "starts": 36,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "mcgresc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-jim-palmer-1982",
+    "playerId": "palmeji01",
+    "playerSlug": "jim-palmer",
+    "name": "Jim Palmer",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.8,
+      "eraPlus": 129,
+      "era": 3.13,
+      "whip": 1.137,
+      "so": 103,
+      "wins": 15,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.8,
+      "eraPlus": 129,
+      "era": 3.13,
+      "whip": 1.137,
+      "so": 103,
+      "wins": 15,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.137,
+      "fip": null,
+      "inningsPitched": 227,
+      "strikeoutRate": 4.083700440528634,
+      "walkRate": 2.497797356828194,
+      "starts": 32,
+      "reliefAppearances": 4
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "palmeji01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.75,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-ken-singleton-1980",
+    "playerId": "singlke01",
+    "playerSlug": "ken-singleton",
+    "name": "Ken Singleton",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "opsPlus": 142,
+      "hr": 24,
+      "avg": 0.304,
+      "obp": 0.397,
+      "slg": 0.485,
+      "rbi": 104,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "opsPlus": 142,
+      "hr": 24,
+      "avg": 0.304,
+      "obp": 0.397,
+      "slg": 0.485,
+      "rbi": 104,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 680,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.397,
+      "slg": 0.485,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "singlke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.8,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-tippy-martinez-1983",
+    "playerId": "martiti01",
+    "playerSlug": "tippy-martinez",
+    "name": "Tippy Martinez",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.3,
+      "eraPlus": 169,
+      "era": 2.35,
+      "whip": 1.094,
+      "so": 81,
+      "wins": 9,
+      "saves": 21,
+      "sv": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.3,
+      "eraPlus": 169,
+      "era": 2.35,
+      "whip": 1.094,
+      "so": 81,
+      "wins": 9,
+      "saves": 21,
+      "sv": 21
+    },
+    "scoringStats": {
+      "whip": 1.094,
+      "fip": null,
+      "inningsPitched": 103.3,
+      "strikeoutRate": 7.057115198451114,
+      "walkRate": 3.223620522749274,
+      "starts": 0,
+      "reliefAppearances": 65
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "martiti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 73.03571428571428,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-randy-milligan-1989",
+    "playerId": "millira01",
+    "playerSlug": "randy-milligan",
+    "name": "Randy Milligan",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "opsPlus": 144,
+      "hr": 12,
+      "avg": 0.268,
+      "obp": 0.394,
+      "slg": 0.458,
+      "rbi": 45,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "opsPlus": 144,
+      "hr": 12,
+      "avg": 0.268,
+      "obp": 0.394,
+      "slg": 0.458,
+      "rbi": 45,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 124,
+      "plateAppearances": 444,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.394,
+      "slg": 0.458,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "millira01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.84,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-steve-stone-1980",
+    "playerId": "stonest01",
+    "playerSlug": "steve-stone",
+    "name": "Steve Stone",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "eraPlus": 123,
+      "era": 3.23,
+      "whip": 1.297,
+      "so": 149,
+      "wins": 25,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "eraPlus": 123,
+      "era": 3.23,
+      "whip": 1.297,
+      "so": 149,
+      "wins": 25,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.297,
+      "fip": null,
+      "inningsPitched": 250.7,
+      "strikeoutRate": 5.349022736338253,
+      "walkRate": 3.625847626645393,
+      "starts": 37,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "stonest01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.05,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-storm-davis-1984",
+    "playerId": "davisst02",
+    "playerSlug": "storm-davis",
+    "name": "Storm Davis",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.8,
+      "eraPlus": 125,
+      "era": 3.12,
+      "whip": 1.227,
+      "so": 105,
+      "wins": 14,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.8,
+      "eraPlus": 125,
+      "era": 3.12,
+      "whip": 1.227,
+      "so": 105,
+      "wins": 14,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.227,
+      "fip": null,
+      "inningsPitched": 225,
+      "strikeoutRate": 4.2,
+      "walkRate": 2.84,
+      "starts": 31,
+      "reliefAppearances": 4
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "davisst02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 64.35,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-sammy-stewart-1981",
+    "playerId": "stewasa01",
+    "playerSlug": "sammy-stewart",
+    "name": "Sammy Stewart",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.3,
+      "eraPlus": 157,
+      "era": 2.32,
+      "whip": 1.3,
+      "so": 57,
+      "wins": 4,
+      "saves": 4,
+      "sv": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.3,
+      "eraPlus": 157,
+      "era": 2.32,
+      "whip": 1.3,
+      "so": 57,
+      "wins": 4,
+      "saves": 4,
+      "sv": 4
+    },
+    "scoringStats": {
+      "whip": 1.3,
+      "fip": null,
+      "inningsPitched": 112.3,
+      "strikeoutRate": 4.568121104185218,
+      "walkRate": 4.568121104185218,
+      "starts": 3,
+      "reliefAppearances": 26
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "stewasa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1981.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 63.26428571428571,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -585,8 +1184,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.2,
+      "opsPlus": 136,
       "hr": 28,
       "avg": 0.273,
       "obp": 0.348,
@@ -596,8 +1195,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.2,
+      "opsPlus": 136,
       "hr": 28,
       "avg": 0.273,
       "obp": 0.348,
@@ -618,20 +1217,169 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "youngmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.47142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 61.43000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-tim-stoddard-1980",
+    "playerId": "stoddti01",
+    "playerSlug": "tim-stoddard",
+    "name": "Tim Stoddard",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.3,
+      "eraPlus": 158,
+      "era": 2.51,
+      "whip": 1.279,
+      "so": 64,
+      "wins": 5,
+      "saves": 26,
+      "sv": 26
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "eraPlus": 158,
+      "era": 2.51,
+      "whip": 1.279,
+      "so": 64,
+      "wins": 5,
+      "saves": 26,
+      "sv": 26
+    },
+    "scoringStats": {
+      "whip": 1.279,
+      "fip": null,
+      "inningsPitched": 86,
+      "strikeoutRate": 6.6976744186046515,
+      "walkRate": 3.9767441860465116,
+      "starts": 0,
+      "reliefAppearances": 64
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "stoddti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.04285714285713,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bal-1980s-larry-sheets-1987",
+    "playerId": "sheetla01",
+    "playerSlug": "larry-sheets",
+    "name": "Larry Sheets",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "opsPlus": 143,
+      "hr": 31,
+      "avg": 0.316,
+      "obp": 0.358,
+      "slg": 0.563,
+      "rbi": 94,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "opsPlus": 143,
+      "hr": 31,
+      "avg": 0.316,
+      "obp": 0.358,
+      "slg": 0.563,
+      "rbi": 94,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 135,
+      "plateAppearances": 508,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.358,
+      "slg": 0.563,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "sheetla01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.58,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -655,8 +1403,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.6,
+      "opsPlus": 137,
       "hr": 23,
       "avg": 0.287,
       "obp": 0.371,
@@ -666,8 +1414,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.6,
+      "opsPlus": 137,
       "hr": 23,
       "avg": 0.287,
       "obp": 0.371,
@@ -688,160 +1436,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "lynnfr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.02857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-randy-milligan-1989",
-    "playerId": "millira01",
-    "playerSlug": "randy-milligan",
-    "name": "Randy Milligan",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.268,
-      "obp": 0.394,
-      "slg": 0.458,
-      "rbi": 45,
-      "sb": 9
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.268,
-      "obp": 0.394,
-      "slg": 0.458,
-      "rbi": 45,
-      "sb": 9
-    },
-    "scoringStats": {
-      "games": 124,
-      "plateAppearances": 444,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.394,
-      "slg": 0.458,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "millira01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.88571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-phil-bradley-1989",
-    "playerId": "bradlph01",
-    "playerSlug": "phil-bradley",
-    "name": "Phil Bradley",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.277,
-      "obp": 0.364,
-      "slg": 0.417,
-      "rbi": 55,
-      "sb": 20
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.277,
-      "obp": 0.364,
-      "slg": 0.417,
-      "rbi": 55,
-      "sb": 20
-    },
-    "scoringStats": {
-      "games": 144,
-      "plateAppearances": 626,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.364,
-      "slg": 0.417,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "bradlph01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95.98571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 54.260000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -866,8 +1477,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 131,
       "hr": 18,
       "avg": 0.306,
       "obp": 0.324,
@@ -877,8 +1488,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 131,
       "hr": 18,
       "avg": 0.306,
       "obp": 0.324,
@@ -899,24 +1510,27 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "rayfofl01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.07142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 54,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bal-1980s-doug-decinces-1981",
+    "id": "bal-1980s-doug-decinces-1980",
     "playerId": "decindo01",
     "playerSlug": "doug-decinces",
     "name": "Doug DeCinces",
@@ -925,7 +1539,7 @@
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "1980s",
-    "featuredSeason": 1981,
+    "featuredSeason": 1980,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -936,53 +1550,56 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.263,
-      "obp": 0.341,
-      "slg": 0.454,
-      "rbi": 55,
-      "sb": 0
+      "war": 3.9,
+      "opsPlus": 98,
+      "hr": 16,
+      "avg": 0.249,
+      "obp": 0.319,
+      "slg": 0.403,
+      "rbi": 64,
+      "sb": 11
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.263,
-      "obp": 0.341,
-      "slg": 0.454,
-      "rbi": 55,
-      "sb": 0
+      "war": 3.9,
+      "opsPlus": 98,
+      "hr": 16,
+      "avg": 0.249,
+      "obp": 0.319,
+      "slg": 0.403,
+      "rbi": 64,
+      "sb": 11
     },
     "scoringStats": {
-      "games": 100,
-      "plateAppearances": 390,
+      "games": 145,
+      "plateAppearances": 545,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.341,
-      "slg": 0.454,
+      "obp": 0.319,
+      "slg": 0.403,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "decindo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.64285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 51.25,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1006,8 +1623,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.7,
+      "opsPlus": 120,
       "hr": 22,
       "avg": 0.216,
       "obp": 0.346,
@@ -1017,8 +1634,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.7,
+      "opsPlus": 120,
       "hr": 22,
       "avg": 0.216,
       "obp": 0.346,
@@ -1039,91 +1656,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "grosswa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.6,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-rich-dauer-1982",
-    "playerId": "dauerri01",
-    "playerSlug": "rich-dauer",
-    "name": "Rich Dauer",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.28,
-      "obp": 0.337,
-      "slg": 0.373,
-      "rbi": 57,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.28,
-      "obp": 0.337,
-      "slg": 0.373,
-      "rbi": 57,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 615,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.337,
-      "slg": 0.373,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "dauerri01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.57142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 46.53000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1147,8 +1696,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 108,
       "hr": 9,
       "avg": 0.262,
       "obp": 0.333,
@@ -1158,8 +1707,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 108,
       "hr": 9,
       "avg": 0.262,
       "obp": 0.333,
@@ -1180,90 +1729,97 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "dempsri01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 87.28571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 45.22,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bal-1980s-billy-ripken-1987",
-    "playerId": "ripkebi01",
-    "playerSlug": "billy-ripken",
-    "name": "Billy Ripken",
+    "id": "bal-1980s-rich-dauer-1980",
+    "playerId": "dauerri01",
+    "playerSlug": "rich-dauer",
+    "name": "Rich Dauer",
     "franchiseId": "bal",
     "teamAbbreviation": "BAL",
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "1980s",
-    "featuredSeason": 1987,
+    "featuredSeason": 1980,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "3B"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 91,
       "hr": 2,
-      "avg": 0.308,
-      "obp": 0.363,
-      "slg": 0.372,
-      "rbi": 20,
-      "sb": 4
+      "avg": 0.284,
+      "obp": 0.338,
+      "slg": 0.352,
+      "rbi": 63,
+      "sb": 3
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 91,
       "hr": 2,
-      "avg": 0.308,
-      "obp": 0.363,
-      "slg": 0.372,
-      "rbi": 20,
-      "sb": 4
+      "avg": 0.284,
+      "obp": 0.338,
+      "slg": 0.352,
+      "rbi": 63,
+      "sb": 3
     },
     "scoringStats": {
-      "games": 58,
-      "plateAppearances": 256,
+      "games": 152,
+      "plateAppearances": 612,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.363,
-      "slg": 0.372,
+      "obp": 0.338,
+      "slg": 0.352,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
-      "sourcePlayerId": "ripkebi01"
+      "sourcePlayerId": "dauerri01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 80.81428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 36.419999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1288,8 +1844,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.1,
+      "opsPlus": 90,
       "hr": 6,
       "avg": 0.259,
       "obp": 0.323,
@@ -1299,8 +1855,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.1,
+      "opsPlus": 90,
       "hr": 6,
       "avg": 0.259,
       "obp": 0.323,
@@ -1321,296 +1877,97 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "sakatle01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 80.1857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 24.01,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bal-1980s-gregg-olson-1989",
-    "playerId": "olsongr01",
-    "playerSlug": "gregg-olson",
-    "name": "Gregg Olson",
+    "id": "bal-1980s-tim-hulett-1989",
+    "playerId": "huletti01",
+    "playerSlug": "tim-hulett",
+    "name": "Tim Hulett",
     "franchiseId": "bal",
     "teamAbbreviation": "BAL",
     "teamDisplayName": "Baltimore Orioles",
     "team": "BAL",
     "decade": "1980s",
     "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "2B",
+      "3B"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.69,
-      "whip": 1.212,
-      "so": 90,
-      "wins": 5,
-      "saves": 27,
-      "sv": 27
+      "war": 0.5,
+      "opsPlus": 119,
+      "hr": 3,
+      "avg": 0.278,
+      "obp": 0.343,
+      "slg": 0.423,
+      "rbi": 18,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.69,
-      "whip": 1.212,
-      "so": 90,
-      "wins": 5,
-      "saves": 27,
-      "sv": 27
+      "war": 0.5,
+      "opsPlus": 119,
+      "hr": 3,
+      "avg": 0.278,
+      "obp": 0.343,
+      "slg": 0.423,
+      "rbi": 18,
+      "sb": 0
     },
     "scoringStats": {
-      "whip": 1.212,
-      "fip": null,
-      "inningsPitched": 85,
-      "strikeoutRate": 9.529411764705882,
-      "walkRate": 4.870588235294117,
-      "starts": 0,
-      "reliefAppearances": 64
+      "games": 33,
+      "plateAppearances": 108,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.343,
+      "slg": 0.423,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
-      "sourcePlayerId": "olsongr01"
+      "sourcePlayerId": "huletti01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 78.46823529411766,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-tippy-martinez-1983",
-    "playerId": "martiti01",
-    "playerSlug": "tippy-martinez",
-    "name": "Tippy Martinez",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.35,
-      "whip": 1.094,
-      "so": 81,
-      "wins": 9,
-      "saves": 21,
-      "sv": 21
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.35,
-      "whip": 1.094,
-      "so": 81,
-      "wins": 9,
-      "saves": 21,
-      "sv": 21
-    },
-    "scoringStats": {
-      "whip": 1.094,
-      "fip": null,
-      "inningsPitched": 103.3,
-      "strikeoutRate": 7.057115198451114,
-      "walkRate": 3.223620522749274,
-      "starts": 0,
-      "reliefAppearances": 65
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "martiti01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 71.67024201355275,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-tim-stoddard-1980",
-    "playerId": "stoddti01",
-    "playerSlug": "tim-stoddard",
-    "name": "Tim Stoddard",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.51,
-      "whip": 1.279,
-      "so": 64,
-      "wins": 5,
-      "saves": 26,
-      "sv": 26
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.51,
-      "whip": 1.279,
-      "so": 64,
-      "wins": 5,
-      "saves": 26,
-      "sv": 26
-    },
-    "scoringStats": {
-      "whip": 1.279,
-      "fip": null,
-      "inningsPitched": 86,
-      "strikeoutRate": 6.6976744186046515,
-      "walkRate": 3.9767441860465116,
-      "starts": 0,
-      "reliefAppearances": 64
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "stoddti01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 64.38139534883722,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-mike-boddicker-1983",
-    "playerId": "boddimi01",
-    "playerSlug": "mike-boddicker",
-    "name": "Mike Boddicker",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.77,
-      "whip": 1.078,
-      "so": 120,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.77,
-      "whip": 1.078,
-      "so": 120,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.078,
-      "fip": null,
-      "inningsPitched": 179,
-      "strikeoutRate": 6.033519553072626,
-      "walkRate": 2.6145251396648046,
-      "starts": 26,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "boddimi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 64.27293606455618,
-      "formulaVersion": "season-selection-v1"
+      "score": 16.58,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1634,8 +1991,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.5,
+      "opsPlus": 48,
       "hr": 0,
       "avg": 0.228,
       "obp": 0.261,
@@ -1645,8 +2002,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.5,
+      "opsPlus": 48,
       "hr": 0,
       "avg": 0.228,
       "obp": 0.261,
@@ -1667,296 +2024,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BAL"
       ],
       "sourcePlayerId": "belanma01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 61.7,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-jim-palmer-1982",
-    "playerId": "palmeji01",
-    "playerSlug": "jim-palmer",
-    "name": "Jim Palmer",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.13,
-      "whip": 1.137,
-      "so": 103,
-      "wins": 15,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.13,
-      "whip": 1.137,
-      "so": 103,
-      "wins": 15,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 1.137,
-      "fip": null,
-      "inningsPitched": 227,
-      "strikeoutRate": 4.083700440528634,
-      "walkRate": 2.497797356828194,
-      "starts": 32,
-      "reliefAppearances": 4
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "palmeji01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 58.07885462555066,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-storm-davis-1984",
-    "playerId": "davisst02",
-    "playerSlug": "storm-davis",
-    "name": "Storm Davis",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1984,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.12,
-      "whip": 1.227,
-      "so": 105,
-      "wins": 14,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.12,
-      "whip": 1.227,
-      "so": 105,
-      "wins": 14,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 1.227,
-      "fip": null,
-      "inningsPitched": 225,
-      "strikeoutRate": 4.2,
-      "walkRate": 2.84,
-      "starts": 31,
-      "reliefAppearances": 4
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "davisst02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 56.06,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-scott-mcgregor-1983",
-    "playerId": "mcgresc01",
-    "playerSlug": "scott-mcgregor",
-    "name": "Scott McGregor",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "B",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.18,
-      "whip": 1.215,
-      "so": 86,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.18,
-      "whip": 1.215,
-      "so": 86,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.215,
-      "fip": null,
-      "inningsPitched": 260,
-      "strikeoutRate": 2.976923076923077,
-      "walkRate": 1.5576923076923077,
-      "starts": 36,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "mcgresc01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 55.668846153846154,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bal-1980s-steve-stone-1980",
-    "playerId": "stonest01",
-    "playerSlug": "steve-stone",
-    "name": "Steve Stone",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.23,
-      "whip": 1.297,
-      "so": 149,
-      "wins": 25,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.23,
-      "whip": 1.297,
-      "so": 149,
-      "wins": 25,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.297,
-      "fip": null,
-      "inningsPitched": 250.7,
-      "strikeoutRate": 5.349022736338253,
-      "walkRate": 3.625847626645393,
-      "starts": 37,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "stonest01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 53.884762664539295,
-      "formulaVersion": "season-selection-v1"
+      "score": -17.2,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

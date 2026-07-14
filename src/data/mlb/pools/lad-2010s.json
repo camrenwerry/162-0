@@ -1,5 +1,77 @@
 [
   {
+    "id": "lad-2010s-zack-greinke-2015",
+    "playerId": "greinza01",
+    "playerSlug": "zack-greinke",
+    "name": "Zack Greinke",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 8.8,
+      "eraPlus": 222,
+      "era": 1.66,
+      "whip": 0.844,
+      "so": 200,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 8.8,
+      "eraPlus": 222,
+      "era": 1.66,
+      "whip": 0.844,
+      "so": 200,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.844,
+      "fip": null,
+      "inningsPitched": 222.7,
+      "strikeoutRate": 8.08262236192187,
+      "walkRate": 1.6165244723843737,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "greinza01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 158.3,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
     "id": "lad-2010s-cody-bellinger-2019",
     "playerId": "bellico01",
     "playerSlug": "cody-bellinger",
@@ -22,8 +94,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.7,
+      "opsPlus": 167,
       "hr": 47,
       "avg": 0.305,
       "obp": 0.406,
@@ -33,8 +105,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.7,
+      "opsPlus": 167,
       "hr": 47,
       "avg": 0.305,
       "obp": 0.406,
@@ -55,20 +127,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "bellico01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 122.35714285714288,
-      "formulaVersion": "season-selection-v1"
+      "score": 144.49999999999997,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-clayton-kershaw-2013",
+    "playerId": "kershcl01",
+    "playerSlug": "clayton-kershaw",
+    "name": "Clayton Kershaw",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 8.1,
+      "eraPlus": 194,
+      "era": 1.83,
+      "whip": 0.915,
+      "so": 232,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 8.1,
+      "eraPlus": 194,
+      "era": 1.83,
+      "whip": 0.915,
+      "so": 232,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.915,
+      "fip": null,
+      "inningsPitched": 236,
+      "strikeoutRate": 8.847457627118644,
+      "walkRate": 1.9830508474576272,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "kershcl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 140.1,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -92,8 +239,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8,
+      "opsPlus": 172,
       "hr": 39,
       "avg": 0.324,
       "obp": 0.399,
@@ -103,8 +250,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8,
+      "opsPlus": 172,
       "hr": 39,
       "avg": 0.324,
       "obp": 0.399,
@@ -125,20 +272,167 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "kempma01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 118.18571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 138.89,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-hung-chih-kuo-2010",
+    "playerId": "kuoho01",
+    "playerSlug": "hung-chih-kuo",
+    "name": "Hung-Chih Kuo",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.2,
+      "eraPlus": 324,
+      "era": 1.2,
+      "whip": 0.783,
+      "so": 73,
+      "wins": 3,
+      "saves": 12,
+      "sv": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.2,
+      "eraPlus": 324,
+      "era": 1.2,
+      "whip": 0.783,
+      "so": 73,
+      "wins": 3,
+      "saves": 12,
+      "sv": 12
+    },
+    "scoringStats": {
+      "whip": 0.783,
+      "fip": null,
+      "inningsPitched": 60,
+      "strikeoutRate": 10.95,
+      "walkRate": 2.7,
+      "starts": 0,
+      "reliefAppearances": 56
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "kuoho01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 124.8,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-kenley-jansen-2017",
+    "playerId": "janseke01",
+    "playerSlug": "kenley-jansen",
+    "name": "Kenley Jansen",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3,
+      "eraPlus": 315,
+      "era": 1.32,
+      "whip": 0.746,
+      "so": 109,
+      "wins": 5,
+      "saves": 41,
+      "sv": 41
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "eraPlus": 315,
+      "era": 1.32,
+      "whip": 0.746,
+      "so": 109,
+      "wins": 5,
+      "saves": 41,
+      "sv": 41
+    },
+    "scoringStats": {
+      "whip": 0.746,
+      "fip": null,
+      "inningsPitched": 68.3,
+      "strikeoutRate": 14.363103953147878,
+      "walkRate": 0.9224011713030748,
+      "starts": 0,
+      "reliefAppearances": 65
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "janseke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 120.53571428571429,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -162,8 +456,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.2,
+      "opsPlus": 189,
       "hr": 20,
       "avg": 0.345,
       "obp": 0.402,
@@ -173,8 +467,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.2,
+      "opsPlus": 189,
       "hr": 20,
       "avg": 0.345,
       "obp": 0.402,
@@ -195,20 +489,315 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "ramirha01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 113.6,
-      "formulaVersion": "season-selection-v1"
+      "score": 110.26,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-justin-turner-2017",
+    "playerId": "turneju01",
+    "playerSlug": "justin-turner",
+    "name": "Justin Turner",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.8,
+      "opsPlus": 150,
+      "hr": 21,
+      "avg": 0.322,
+      "obp": 0.415,
+      "slg": 0.53,
+      "rbi": 71,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.8,
+      "opsPlus": 150,
+      "hr": 21,
+      "avg": 0.322,
+      "obp": 0.415,
+      "slg": 0.53,
+      "rbi": 71,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 130,
+      "plateAppearances": 542,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.415,
+      "slg": 0.53,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "turneju01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.02,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-hyun-jin-ryu-2019",
+    "playerId": "ryuhy01",
+    "playerSlug": "hyun-jin-ryu",
+    "name": "Hyun Jin Ryu",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.1,
+      "eraPlus": 179,
+      "era": 2.32,
+      "whip": 1.007,
+      "so": 163,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.1,
+      "eraPlus": 179,
+      "era": 2.32,
+      "whip": 1.007,
+      "so": 163,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.007,
+      "fip": null,
+      "inningsPitched": 182.7,
+      "strikeoutRate": 8.029556650246306,
+      "walkRate": 1.1822660098522169,
+      "starts": 29,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "ryuhy01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.985,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-yasiel-puig-2013",
+    "playerId": "puigya01",
+    "playerSlug": "yasiel-puig",
+    "name": "Yasiel Puig",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.7,
+      "opsPlus": 159,
+      "hr": 19,
+      "avg": 0.319,
+      "obp": 0.391,
+      "slg": 0.534,
+      "rbi": 42,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "opsPlus": 159,
+      "hr": 19,
+      "avg": 0.319,
+      "obp": 0.391,
+      "slg": 0.534,
+      "rbi": 42,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 104,
+      "plateAppearances": 432,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.391,
+      "slg": 0.534,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "puigya01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.22,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-corey-seager-2016",
+    "playerId": "seageco01",
+    "playerSlug": "corey-seager",
+    "name": "Corey Seager",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.3,
+      "opsPlus": 134,
+      "hr": 26,
+      "avg": 0.308,
+      "obp": 0.365,
+      "slg": 0.512,
+      "rbi": 72,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.3,
+      "opsPlus": 134,
+      "hr": 26,
+      "avg": 0.308,
+      "obp": 0.365,
+      "slg": 0.512,
+      "rbi": 72,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 687,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.365,
+      "slg": 0.512,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "seageco01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.47,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -234,8 +823,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 161,
       "hr": 35,
       "avg": 0.263,
       "obp": 0.391,
@@ -245,8 +834,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 161,
       "hr": 35,
       "avg": 0.263,
       "obp": 0.391,
@@ -267,243 +856,36 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "muncyma01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 111.04285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 86.91,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2010s-justin-turner-2017",
-    "playerId": "turneju01",
-    "playerSlug": "justin-turner",
-    "name": "Justin Turner",
+    "id": "lad-2010s-j-p-howell-2015",
+    "playerId": "howeljp01",
+    "playerSlug": "j-p-howell",
+    "name": "J. P. Howell",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.322,
-      "obp": 0.415,
-      "slg": 0.53,
-      "rbi": 71,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.322,
-      "obp": 0.415,
-      "slg": 0.53,
-      "rbi": 71,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 130,
-      "plateAppearances": 542,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.415,
-      "slg": 0.53,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "turneju01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 109.98571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-corey-seager-2016",
-    "playerId": "seageco01",
-    "playerSlug": "corey-seager",
-    "name": "Corey Seager",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 26,
-      "avg": 0.308,
-      "obp": 0.365,
-      "slg": 0.512,
-      "rbi": 72,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 26,
-      "avg": 0.308,
-      "obp": 0.365,
-      "slg": 0.512,
-      "rbi": 72,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 687,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.365,
-      "slg": 0.512,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "seageco01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 107.32857142857144,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-david-freese-2019",
-    "playerId": "freesda01",
-    "playerSlug": "david-freese",
-    "name": "David Freese",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.315,
-      "obp": 0.403,
-      "slg": 0.599,
-      "rbi": 29,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.315,
-      "obp": 0.403,
-      "slg": 0.599,
-      "rbi": 29,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 79,
-      "plateAppearances": 186,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.403,
-      "slg": 0.599,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "freesda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 105.51428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-kenley-jansen-2017",
-    "playerId": "janseke01",
-    "playerSlug": "kenley-jansen",
-    "name": "Kenley Jansen",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2017,
+    "featuredSeason": 2015,
     "playerType": "pitcher",
     "type": "pitcher",
     "isTwoWay": false,
@@ -511,268 +893,58 @@
     "eligiblePositions": [
       "RP"
     ],
-    "bats": "B",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.32,
-      "whip": 0.746,
-      "so": 109,
-      "wins": 5,
-      "saves": 41,
-      "sv": 41
+      "war": 1.5,
+      "eraPlus": 259,
+      "era": 1.43,
+      "whip": 1.386,
+      "so": 39,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.32,
-      "whip": 0.746,
-      "so": 109,
-      "wins": 5,
-      "saves": 41,
-      "sv": 41
+      "war": 1.5,
+      "eraPlus": 259,
+      "era": 1.43,
+      "whip": 1.386,
+      "so": 39,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1
     },
     "scoringStats": {
-      "whip": 0.746,
+      "whip": 1.386,
       "fip": null,
-      "inningsPitched": 68.3,
-      "strikeoutRate": 14.363103953147878,
-      "walkRate": 0.9224011713030748,
+      "inningsPitched": 44,
+      "strikeoutRate": 7.9772727272727275,
+      "walkRate": 2.8636363636363638,
       "starts": 0,
       "reliefAppearances": 65
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "janseke01"
+      "sourcePlayerId": "howeljp01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.4010541727672,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-yasiel-puig-2013",
-    "playerId": "puigya01",
-    "playerSlug": "yasiel-puig",
-    "name": "Yasiel Puig",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.319,
-      "obp": 0.391,
-      "slg": 0.534,
-      "rbi": 42,
-      "sb": 11
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.319,
-      "obp": 0.391,
-      "slg": 0.534,
-      "rbi": 42,
-      "sb": 11
-    },
-    "scoringStats": {
-      "games": 104,
-      "plateAppearances": 432,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.391,
-      "slg": 0.534,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "puigya01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 104.84285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-andre-ethier-2010",
-    "playerId": "ethiean01",
-    "playerSlug": "andre-ethier",
-    "name": "Andre Ethier",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.292,
-      "obp": 0.364,
-      "slg": 0.493,
-      "rbi": 82,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.292,
-      "obp": 0.364,
-      "slg": 0.493,
-      "rbi": 82,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 139,
-      "plateAppearances": 585,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.364,
-      "slg": 0.493,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "ethiean01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.41428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-joc-pederson-2019",
-    "playerId": "pederjo01",
-    "playerSlug": "joc-pederson",
-    "name": "Joc Pederson",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "LF",
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 36,
-      "avg": 0.249,
-      "obp": 0.339,
-      "slg": 0.538,
-      "rbi": 74,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 36,
-      "avg": 0.249,
-      "obp": 0.339,
-      "slg": 0.538,
-      "rbi": 74,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 149,
-      "plateAppearances": 514,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.339,
-      "slg": 0.538,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "pederjo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.38571428571429,
-      "formulaVersion": "season-selection-v1"
+      "score": 82.9357142857143,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -796,8 +968,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.7,
+      "opsPlus": 130,
       "hr": 28,
       "avg": 0.275,
       "obp": 0.35,
@@ -807,8 +979,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.7,
+      "opsPlus": 130,
       "hr": 28,
       "avg": 0.275,
       "obp": 0.35,
@@ -829,20 +1001,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "gonzaad01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 101.34285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 77.82000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -869,8 +1044,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.5,
+      "opsPlus": 123,
       "hr": 21,
       "avg": 0.288,
       "obp": 0.354,
@@ -880,8 +1055,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.5,
+      "opsPlus": 123,
       "hr": 21,
       "avg": 0.288,
       "obp": 0.354,
@@ -902,27 +1077,102 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "tayloch03"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 101.22857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 71.18,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2010s-manny-ramirez-2010",
-    "playerId": "ramirma02",
-    "playerSlug": "manny-ramirez",
-    "name": "Manny Ramirez",
+    "id": "lad-2010s-alex-wood-2017",
+    "playerId": "woodal02",
+    "playerSlug": "alex-wood",
+    "name": "Alex Wood",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.5,
+      "eraPlus": 152,
+      "era": 2.72,
+      "whip": 1.057,
+      "so": 151,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "eraPlus": 152,
+      "era": 2.72,
+      "whip": 1.057,
+      "so": 151,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.057,
+      "fip": null,
+      "inningsPitched": 152.3,
+      "strikeoutRate": 8.92317793827971,
+      "walkRate": 2.2455679579776753,
+      "starts": 25,
+      "reliefAppearances": 2
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "woodal02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.815,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-rafael-furcal-2010",
+    "playerId": "furcara01",
+    "playerSlug": "rafael-furcal",
+    "name": "Rafael Furcal",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
@@ -934,58 +1184,133 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "LF"
+      "SS"
     ],
-    "bats": "R",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.2,
+      "opsPlus": 125,
       "hr": 8,
-      "avg": 0.311,
-      "obp": 0.405,
-      "slg": 0.51,
-      "rbi": 40,
-      "sb": 1
+      "avg": 0.3,
+      "obp": 0.366,
+      "slg": 0.46,
+      "rbi": 43,
+      "sb": 22
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.2,
+      "opsPlus": 125,
       "hr": 8,
-      "avg": 0.311,
-      "obp": 0.405,
-      "slg": 0.51,
-      "rbi": 40,
-      "sb": 1
+      "avg": 0.3,
+      "obp": 0.366,
+      "slg": 0.46,
+      "rbi": 43,
+      "sb": 22
     },
     "scoringStats": {
-      "games": 66,
-      "plateAppearances": 232,
+      "games": 97,
+      "plateAppearances": 426,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.405,
-      "slg": 0.51,
+      "obp": 0.366,
+      "slg": 0.46,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "ramirma02"
+      "sourcePlayerId": "furcara01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.12857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 67.16000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-walker-buehler-2018",
+    "playerId": "buehlwa01",
+    "playerSlug": "walker-buehler",
+    "name": "Walker Buehler",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "eraPlus": 148,
+      "era": 2.62,
+      "whip": 0.961,
+      "so": 151,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "eraPlus": 148,
+      "era": 2.62,
+      "whip": 0.961,
+      "so": 151,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.961,
+      "fip": null,
+      "inningsPitched": 137.3,
+      "strikeoutRate": 9.898033503277494,
+      "walkRate": 2.4253459577567367,
+      "starts": 23,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "buehlwa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.865,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1012,8 +1337,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.7,
+      "opsPlus": 157,
       "hr": 11,
       "avg": 0.297,
       "obp": 0.386,
@@ -1023,8 +1348,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.7,
+      "opsPlus": 157,
       "hr": 11,
       "avg": 0.297,
       "obp": 0.386,
@@ -1045,230 +1370,241 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "vanslsc01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2014.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.02857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 63.36000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2010s-hung-chih-kuo-2010",
-    "playerId": "kuoho01",
-    "playerSlug": "hung-chih-kuo",
-    "name": "Hung-Chih Kuo",
+    "id": "lad-2010s-juan-uribe-2014",
+    "playerId": "uribeju01",
+    "playerSlug": "juan-uribe",
+    "name": "Juan Uribe",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 2014,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "opsPlus": 120,
+      "hr": 9,
+      "avg": 0.311,
+      "obp": 0.337,
+      "slg": 0.44,
+      "rbi": 54,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "opsPlus": 120,
+      "hr": 9,
+      "avg": 0.311,
+      "obp": 0.337,
+      "slg": 0.44,
+      "rbi": 54,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 103,
+      "plateAppearances": 404,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.337,
+      "slg": 0.44,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "uribeju01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2014.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 62.04,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-andre-ethier-2012",
+    "playerId": "ethiean01",
+    "playerSlug": "andre-ethier",
+    "name": "Andre Ethier",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
     ],
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.2,
-      "whip": 0.783,
-      "so": 73,
-      "wins": 3,
-      "saves": 12,
-      "sv": 12
+      "war": 3.5,
+      "opsPlus": 123,
+      "hr": 20,
+      "avg": 0.284,
+      "obp": 0.351,
+      "slg": 0.46,
+      "rbi": 89,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.2,
-      "whip": 0.783,
-      "so": 73,
-      "wins": 3,
-      "saves": 12,
-      "sv": 12
+      "war": 3.5,
+      "opsPlus": 123,
+      "hr": 20,
+      "avg": 0.284,
+      "obp": 0.351,
+      "slg": 0.46,
+      "rbi": 89,
+      "sb": 2
     },
     "scoringStats": {
-      "whip": 0.783,
+      "games": 149,
+      "plateAppearances": 618,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.351,
+      "slg": 0.46,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "ethiean01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.68,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-hiroki-kuroda-2011",
+    "playerId": "kurodhi01",
+    "playerSlug": "hiroki-kuroda",
+    "name": "Hiroki Kuroda",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.4,
+      "eraPlus": 120,
+      "era": 3.07,
+      "whip": 1.213,
+      "so": 161,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "eraPlus": 120,
+      "era": 3.07,
+      "whip": 1.213,
+      "so": 161,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.213,
       "fip": null,
-      "inningsPitched": 60,
-      "strikeoutRate": 10.95,
-      "walkRate": 2.7,
-      "starts": 0,
-      "reliefAppearances": 56
+      "inningsPitched": 202,
+      "strikeoutRate": 7.173267326732673,
+      "walkRate": 2.1831683168316833,
+      "starts": 32,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "kuoho01"
+      "sourcePlayerId": "kurodhi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 97.515,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-austin-barnes-2017",
-    "playerId": "barneau01",
-    "playerSlug": "austin-barnes",
-    "name": "Austin Barnes",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.289,
-      "obp": 0.408,
-      "slg": 0.486,
-      "rbi": 38,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.289,
-      "obp": 0.408,
-      "slg": 0.486,
-      "rbi": 38,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 102,
-      "plateAppearances": 262,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.408,
-      "slg": 0.486,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "barneau01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.88571428571427,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-will-smith-2019",
-    "playerId": "smithwi05",
-    "playerSlug": "will-smith",
-    "name": "Will Smith",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.253,
-      "obp": 0.337,
-      "slg": 0.571,
-      "rbi": 42,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.253,
-      "obp": 0.337,
-      "slg": 0.571,
-      "rbi": 42,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 54,
-      "plateAppearances": 196,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.337,
-      "slg": 0.571,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "smithwi05"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.39999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 57.8,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1292,8 +1628,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.5,
+      "opsPlus": 121,
       "hr": 24,
       "avg": 0.241,
       "obp": 0.349,
@@ -1303,8 +1639,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.5,
+      "opsPlus": 121,
       "hr": 24,
       "avg": 0.241,
       "obp": 0.349,
@@ -1325,90 +1661,241 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "grandya01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 96.3,
-      "formulaVersion": "season-selection-v1"
+      "score": 57.68,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2010s-rafael-furcal-2010",
-    "playerId": "furcara01",
-    "playerSlug": "rafael-furcal",
-    "name": "Rafael Furcal",
+    "id": "lad-2010s-joc-pederson-2016",
+    "playerId": "pederjo01",
+    "playerSlug": "joc-pederson",
+    "name": "Joc Pederson",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.3,
+      "opsPlus": 126,
+      "hr": 25,
+      "avg": 0.246,
+      "obp": 0.352,
+      "slg": 0.495,
+      "rbi": 68,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.3,
+      "opsPlus": 126,
+      "hr": 25,
+      "avg": 0.246,
+      "obp": 0.352,
+      "slg": 0.495,
+      "rbi": 68,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 475,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.495,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "pederjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.349999999999994,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-chad-billingsley-2010",
+    "playerId": "billich01",
+    "playerSlug": "chad-billingsley",
+    "name": "Chad Billingsley",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2010s",
     "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "eraPlus": 109,
+      "era": 3.57,
+      "whip": 1.278,
+      "so": 171,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "eraPlus": 109,
+      "era": 3.57,
+      "whip": 1.278,
+      "so": 171,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.278,
+      "fip": null,
+      "inningsPitched": 191.7,
+      "strikeoutRate": 8.028169014084508,
+      "walkRate": 3.23943661971831,
+      "starts": 31,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "billich01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 55.935,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2010s-a-j-ellis-2012",
+    "playerId": "ellisaj01",
+    "playerSlug": "a-j-ellis",
+    "name": "A. J. Ellis",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2010s",
+    "featuredSeason": 2012,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "SS"
+      "C"
     ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.3,
-      "obp": 0.366,
-      "slg": 0.46,
-      "rbi": 43,
-      "sb": 22
+      "war": 3.4,
+      "opsPlus": 118,
+      "hr": 13,
+      "avg": 0.27,
+      "obp": 0.373,
+      "slg": 0.414,
+      "rbi": 52,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.3,
-      "obp": 0.366,
-      "slg": 0.46,
-      "rbi": 43,
-      "sb": 22
+      "war": 3.4,
+      "opsPlus": 118,
+      "hr": 13,
+      "avg": 0.27,
+      "obp": 0.373,
+      "slg": 0.414,
+      "rbi": 52,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 97,
-      "plateAppearances": 426,
+      "games": 133,
+      "plateAppearances": 499,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.366,
-      "slg": 0.46,
+      "obp": 0.373,
+      "slg": 0.414,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "furcara01"
+      "sourcePlayerId": "ellisaj01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.77142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 54.79,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1436,8 +1923,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 117,
       "hr": 21,
       "avg": 0.256,
       "obp": 0.336,
@@ -1447,8 +1934,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 117,
       "hr": 21,
       "avg": 0.256,
       "obp": 0.336,
@@ -1469,505 +1956,97 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "hernaen02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.6857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 53.879999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2010s-clayton-kershaw-2016",
-    "playerId": "kershcl01",
-    "playerSlug": "clayton-kershaw",
-    "name": "Clayton Kershaw",
+    "id": "lad-2010s-austin-barnes-2017",
+    "playerId": "barneau01",
+    "playerSlug": "austin-barnes",
+    "name": "Austin Barnes",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.69,
-      "whip": 0.725,
-      "so": 172,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.69,
-      "whip": 0.725,
-      "so": 172,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.725,
-      "fip": null,
-      "inningsPitched": 149,
-      "strikeoutRate": 10.389261744966444,
-      "walkRate": 0.6644295302013423,
-      "starts": 21,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "kershcl01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 92.08502609992544,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-manny-machado-2018",
-    "playerId": "machama01",
-    "playerSlug": "manny-machado",
-    "name": "Manny Machado",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2018,
+    "featuredSeason": 2017,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "3B",
-      "SS"
+      "2B",
+      "C"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.273,
-      "obp": 0.338,
-      "slg": 0.487,
-      "rbi": 42,
-      "sb": 6
+      "war": 2.5,
+      "opsPlus": 138,
+      "hr": 8,
+      "avg": 0.289,
+      "obp": 0.408,
+      "slg": 0.486,
+      "rbi": 38,
+      "sb": 4
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.273,
-      "obp": 0.338,
-      "slg": 0.487,
-      "rbi": 42,
-      "sb": 6
+      "war": 2.5,
+      "opsPlus": 138,
+      "hr": 8,
+      "avg": 0.289,
+      "obp": 0.408,
+      "slg": 0.486,
+      "rbi": 38,
+      "sb": 4
     },
     "scoringStats": {
-      "games": 66,
-      "plateAppearances": 296,
+      "games": 102,
+      "plateAppearances": 262,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.338,
-      "slg": 0.487,
+      "obp": 0.408,
+      "slg": 0.486,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "machama01"
+      "sourcePlayerId": "barneau01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.95714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-zack-greinke-2015",
-    "playerId": "greinza01",
-    "playerSlug": "zack-greinke",
-    "name": "Zack Greinke",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2015,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.66,
-      "whip": 0.844,
-      "so": 200,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.66,
-      "whip": 0.844,
-      "so": 200,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.844,
-      "fip": null,
-      "inningsPitched": 222.7,
-      "strikeoutRate": 8.08262236192187,
-      "walkRate": 1.6165244723843737,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "greinza01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.89914683430625,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-brandon-morrow-2017",
-    "playerId": "morrobr01",
-    "playerSlug": "brandon-morrow",
-    "name": "Brandon Morrow",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.06,
-      "whip": 0.916,
-      "so": 50,
-      "wins": 6,
-      "saves": 2,
-      "sv": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.06,
-      "whip": 0.916,
-      "so": 50,
-      "wins": 6,
-      "saves": 2,
-      "sv": 2
-    },
-    "scoringStats": {
-      "whip": 0.916,
-      "fip": null,
-      "inningsPitched": 43.7,
-      "strikeoutRate": 10.297482837528603,
-      "walkRate": 1.8535469107551485,
-      "starts": 0,
-      "reliefAppearances": 45
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "morrobr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 82.62590389016017,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-hyun-jin-ryu-2018",
-    "playerId": "ryuhy01",
-    "playerSlug": "hyun-jin-ryu",
-    "name": "Hyun Jin Ryu",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.97,
-      "whip": 1.008,
-      "so": 89,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.97,
-      "whip": 1.008,
-      "so": 89,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.008,
-      "fip": null,
-      "inningsPitched": 82.3,
-      "strikeoutRate": 9.732685297691374,
-      "walkRate": 1.6403402187120293,
-      "starts": 15,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "ryuhy01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 76.91073984069124,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-walker-buehler-2018",
-    "playerId": "buehlwa01",
-    "playerSlug": "walker-buehler",
-    "name": "Walker Buehler",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.62,
-      "whip": 0.961,
-      "so": 151,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.62,
-      "whip": 0.961,
-      "so": 151,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.961,
-      "fip": null,
-      "inningsPitched": 137.3,
-      "strikeoutRate": 9.898033503277494,
-      "walkRate": 2.4253459577567367,
-      "starts": 23,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "buehlwa01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 72.17680909605892,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2010s-alex-wood-2017",
-    "playerId": "woodal02",
-    "playerSlug": "alex-wood",
-    "name": "Alex Wood",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.72,
-      "whip": 1.057,
-      "so": 151,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.72,
-      "whip": 1.057,
-      "so": 151,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.057,
-      "fip": null,
-      "inningsPitched": 152.3,
-      "strikeoutRate": 8.92317793827971,
-      "walkRate": 2.2455679579776753,
-      "starts": 25,
-      "reliefAppearances": 2
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "woodal02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 68.69752608156416,
-      "formulaVersion": "season-selection-v1"
+      "score": 51.62,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

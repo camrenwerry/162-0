@@ -1,5 +1,77 @@
 [
   {
+    "id": "stl-2010s-kevin-siegrist-2013",
+    "playerId": "siegrke01",
+    "playerSlug": "kevin-siegrist",
+    "name": "Kevin Siegrist",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2,
+      "eraPlus": 832,
+      "era": 0.45,
+      "whip": 0.882,
+      "so": 50,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2,
+      "eraPlus": 832,
+      "era": 0.45,
+      "whip": 0.882,
+      "so": 50,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.882,
+      "fip": null,
+      "inningsPitched": 39.7,
+      "strikeoutRate": 11.335012594458437,
+      "walkRate": 4.080604534005038,
+      "starts": 0,
+      "reliefAppearances": 45
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "siegrke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 286.62857142857143,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
     "id": "stl-2010s-albert-pujols-2010",
     "playerId": "pujolal01",
     "playerSlug": "albert-pujols",
@@ -20,8 +92,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.5,
+      "opsPlus": 173,
       "hr": 42,
       "avg": 0.312,
       "obp": 0.414,
@@ -31,8 +103,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.5,
+      "opsPlus": 173,
       "hr": 42,
       "avg": 0.312,
       "obp": 0.414,
@@ -53,20 +125,824 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "pujolal01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 121,
-      "formulaVersion": "season-selection-v1"
+      "score": 133.5,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-yadier-molina-2012",
+    "playerId": "molinya01",
+    "playerSlug": "yadier-molina",
+    "name": "Yadier Molina",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7.2,
+      "opsPlus": 137,
+      "hr": 22,
+      "avg": 0.315,
+      "obp": 0.373,
+      "slg": 0.501,
+      "rbi": 76,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.2,
+      "opsPlus": 137,
+      "hr": 22,
+      "avg": 0.315,
+      "obp": 0.373,
+      "slg": 0.501,
+      "rbi": 76,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 138,
+      "plateAppearances": 560,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.373,
+      "slg": 0.501,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "molinya01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.5,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-matt-carpenter-2013",
+    "playerId": "carpema01",
+    "playerSlug": "matt-carpenter",
+    "name": "Matt Carpenter",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.6,
+      "opsPlus": 140,
+      "hr": 11,
+      "avg": 0.318,
+      "obp": 0.392,
+      "slg": 0.481,
+      "rbi": 78,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.6,
+      "opsPlus": 140,
+      "hr": 11,
+      "avg": 0.318,
+      "obp": 0.392,
+      "slg": 0.481,
+      "rbi": 78,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 714,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.392,
+      "slg": 0.481,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "carpema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.33999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-adam-wainwright-2010",
+    "playerId": "wainwad01",
+    "playerSlug": "adam-wainwright",
+    "name": "Adam Wainwright",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.2,
+      "eraPlus": 160,
+      "era": 2.42,
+      "whip": 1.051,
+      "so": 213,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.2,
+      "eraPlus": 160,
+      "era": 2.42,
+      "whip": 1.051,
+      "so": 213,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.051,
+      "fip": null,
+      "inningsPitched": 230.3,
+      "strikeoutRate": 8.323925314806774,
+      "walkRate": 2.188449848024316,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "wainwad01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.4,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-tommy-pham-2017",
+    "playerId": "phamth01",
+    "playerSlug": "tommy-pham",
+    "name": "Tommy Pham",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.3,
+      "opsPlus": 144,
+      "hr": 23,
+      "avg": 0.306,
+      "obp": 0.411,
+      "slg": 0.52,
+      "rbi": 73,
+      "sb": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.3,
+      "opsPlus": 144,
+      "hr": 23,
+      "avg": 0.306,
+      "obp": 0.411,
+      "slg": 0.52,
+      "rbi": 73,
+      "sb": 25
+    },
+    "scoringStats": {
+      "games": 128,
+      "plateAppearances": 528,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.411,
+      "slg": 0.52,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "phamth01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.88,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-matt-holliday-2010",
+    "playerId": "hollima01",
+    "playerSlug": "matt-holliday",
+    "name": "Matt Holliday",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.9,
+      "opsPlus": 149,
+      "hr": 28,
+      "avg": 0.312,
+      "obp": 0.39,
+      "slg": 0.532,
+      "rbi": 103,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.9,
+      "opsPlus": 149,
+      "hr": 28,
+      "avg": 0.312,
+      "obp": 0.39,
+      "slg": 0.532,
+      "rbi": 103,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 675,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.39,
+      "slg": 0.532,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "hollima01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.05000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-jason-heyward-2015",
+    "playerId": "heywaja01",
+    "playerSlug": "jason-heyward",
+    "name": "Jason Heyward",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 7,
+      "opsPlus": 117,
+      "hr": 13,
+      "avg": 0.293,
+      "obp": 0.359,
+      "slg": 0.439,
+      "rbi": 60,
+      "sb": 23
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7,
+      "opsPlus": 117,
+      "hr": 13,
+      "avg": 0.293,
+      "obp": 0.359,
+      "slg": 0.439,
+      "rbi": 60,
+      "sb": 23
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 608,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.439,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "heywaja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.58,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-jack-flaherty-2019",
+    "playerId": "flaheja01",
+    "playerSlug": "jack-flaherty",
+    "name": "Jack Flaherty",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.7,
+      "eraPlus": 152,
+      "era": 2.75,
+      "whip": 0.968,
+      "so": 231,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.7,
+      "eraPlus": 152,
+      "era": 2.75,
+      "whip": 0.968,
+      "so": 231,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.968,
+      "fip": null,
+      "inningsPitched": 196.3,
+      "strikeoutRate": 10.590932246561385,
+      "walkRate": 2.521650534895568,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "flaheja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.415,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-john-lackey-2015",
+    "playerId": "lackejo01",
+    "playerSlug": "john-lackey",
+    "name": "John Lackey",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.8,
+      "eraPlus": 142,
+      "era": 2.77,
+      "whip": 1.211,
+      "so": 175,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.8,
+      "eraPlus": 142,
+      "era": 2.77,
+      "whip": 1.211,
+      "so": 175,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.211,
+      "fip": null,
+      "inningsPitched": 218,
+      "strikeoutRate": 7.224770642201835,
+      "walkRate": 2.188073394495413,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "lackejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.3,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-carlos-martinez-2016",
+    "playerId": "martica04",
+    "playerSlug": "carlos-martinez",
+    "name": "Carlos Martinez",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.7,
+      "eraPlus": 133,
+      "era": 3.04,
+      "whip": 1.224,
+      "so": 174,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.7,
+      "eraPlus": 133,
+      "era": 3.04,
+      "whip": 1.224,
+      "so": 174,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.224,
+      "fip": null,
+      "inningsPitched": 195.3,
+      "strikeoutRate": 8.018433179723502,
+      "walkRate": 3.225806451612903,
+      "starts": 31,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "martica04"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.715,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-jhonny-peralta-2014",
+    "playerId": "peraljh01",
+    "playerSlug": "jhonny-peralta",
+    "name": "Jhonny Peralta",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.8,
+      "opsPlus": 117,
+      "hr": 21,
+      "avg": 0.263,
+      "obp": 0.336,
+      "slg": 0.443,
+      "rbi": 75,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.8,
+      "opsPlus": 117,
+      "hr": 21,
+      "avg": 0.263,
+      "obp": 0.336,
+      "slg": 0.443,
+      "rbi": 75,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 628,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.336,
+      "slg": 0.443,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "peraljh01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2014.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.38,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-seunghwan-oh-2016",
+    "playerId": "ohse01",
+    "playerSlug": "seunghwan-oh",
+    "name": "Seunghwan Oh",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 212,
+      "era": 1.92,
+      "whip": 0.916,
+      "so": 103,
+      "wins": 6,
+      "saves": 19,
+      "sv": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 212,
+      "era": 1.92,
+      "whip": 0.916,
+      "so": 103,
+      "wins": 6,
+      "saves": 19,
+      "sv": 19
+    },
+    "scoringStats": {
+      "whip": 0.916,
+      "fip": null,
+      "inningsPitched": 79.7,
+      "strikeoutRate": 11.63111668757842,
+      "walkRate": 2.032622333751568,
+      "starts": 0,
+      "reliefAppearances": 76
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "ohse01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -92,8 +968,8 @@
     "bats": "B",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.8,
+      "opsPlus": 164,
       "hr": 31,
       "avg": 0.301,
       "obp": 0.412,
@@ -103,8 +979,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.8,
+      "opsPlus": 164,
       "hr": 31,
       "avg": 0.301,
       "obp": 0.412,
@@ -125,374 +1001,457 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "berkmla01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 112.67142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 83.47,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2010s-matt-holliday-2010",
-    "playerId": "hollima01",
-    "playerSlug": "matt-holliday",
-    "name": "Matt Holliday",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.312,
-      "obp": 0.39,
-      "slg": 0.532,
-      "rbi": 103,
-      "sb": 9
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.312,
-      "obp": 0.39,
-      "slg": 0.532,
-      "rbi": 103,
-      "sb": 9
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 675,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.39,
-      "slg": 0.532,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "hollima01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 111.4857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-matt-carpenter-2018",
-    "playerId": "carpema01",
-    "playerSlug": "matt-carpenter",
-    "name": "Matt Carpenter",
+    "id": "stl-2010s-miles-mikolas-2018",
+    "playerId": "mikolmi01",
+    "playerSlug": "miles-mikolas",
+    "name": "Miles Mikolas",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2010s",
     "featuredSeason": 2018,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5,
+      "eraPlus": 137,
+      "era": 2.83,
+      "whip": 1.071,
+      "so": 146,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5,
+      "eraPlus": 137,
+      "era": 2.83,
+      "whip": 1.071,
+      "so": 146,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.071,
+      "fip": null,
+      "inningsPitched": 200.7,
+      "strikeoutRate": 6.547085201793722,
+      "walkRate": 1.3004484304932735,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "mikolmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82.95,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-jaime-garcia-2015",
+    "playerId": "garcija02",
+    "playerSlug": "jaime-garcia",
+    "name": "Jaime Garcia",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4,
+      "eraPlus": 161,
+      "era": 2.43,
+      "whip": 1.049,
+      "so": 97,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "eraPlus": 161,
+      "era": 2.43,
+      "whip": 1.049,
+      "so": 97,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.049,
+      "fip": null,
+      "inningsPitched": 129.7,
+      "strikeoutRate": 6.730917501927526,
+      "walkRate": 2.081727062451812,
+      "starts": 20,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "garcija02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.835,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-kolten-wong-2019",
+    "playerId": "wongko01",
+    "playerSlug": "kolten-wong",
+    "name": "Kolten Wong",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2019,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "1B",
-      "2B",
-      "3B"
+      "2B"
     ],
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 36,
-      "avg": 0.257,
-      "obp": 0.374,
-      "slg": 0.523,
-      "rbi": 81,
-      "sb": 4
+      "war": 5.4,
+      "opsPlus": 108,
+      "hr": 11,
+      "avg": 0.285,
+      "obp": 0.361,
+      "slg": 0.423,
+      "rbi": 59,
+      "sb": 24
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 36,
-      "avg": 0.257,
-      "obp": 0.374,
-      "slg": 0.523,
-      "rbi": 81,
-      "sb": 4
+      "war": 5.4,
+      "opsPlus": 108,
+      "hr": 11,
+      "avg": 0.285,
+      "obp": 0.361,
+      "slg": 0.423,
+      "rbi": 59,
+      "sb": 24
     },
     "scoringStats": {
-      "games": 156,
-      "plateAppearances": 676,
+      "games": 148,
+      "plateAppearances": 543,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.374,
-      "slg": 0.523,
+      "obp": 0.361,
+      "slg": 0.423,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
-      "sourcePlayerId": "carpema01"
+      "sourcePlayerId": "wongko01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 109.01428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 74.23000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2010s-tommy-pham-2017",
-    "playerId": "phamth01",
-    "playerSlug": "tommy-pham",
-    "name": "Tommy Pham",
+    "id": "stl-2010s-trevor-rosenthal-2015",
+    "playerId": "rosentr01",
+    "playerSlug": "trevor-rosenthal",
+    "name": "Trevor Rosenthal",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 2015,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "CF",
-      "LF"
+      "RP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.306,
-      "obp": 0.411,
-      "slg": 0.52,
-      "rbi": 73,
-      "sb": 25
+      "war": 2.6,
+      "eraPlus": 188,
+      "era": 2.1,
+      "whip": 1.267,
+      "so": 83,
+      "wins": 2,
+      "saves": 48,
+      "sv": 48
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.306,
-      "obp": 0.411,
-      "slg": 0.52,
-      "rbi": 73,
-      "sb": 25
+      "war": 2.6,
+      "eraPlus": 188,
+      "era": 2.1,
+      "whip": 1.267,
+      "so": 83,
+      "wins": 2,
+      "saves": 48,
+      "sv": 48
     },
     "scoringStats": {
-      "games": 128,
-      "plateAppearances": 528,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.411,
-      "slg": 0.52,
-      "wrcPlus": null
+      "whip": 1.267,
+      "fip": null,
+      "inningsPitched": 68.7,
+      "strikeoutRate": 10.873362445414847,
+      "walkRate": 3.2751091703056767,
+      "starts": 0,
+      "reliefAppearances": 68
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
-      "sourcePlayerId": "phamth01"
+      "sourcePlayerId": "rosentr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 108.1857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 71.71428571428571,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2010s-yadier-molina-2012",
-    "playerId": "molinya01",
-    "playerSlug": "yadier-molina",
-    "name": "Yadier Molina",
+    "id": "stl-2010s-pat-neshek-2014",
+    "playerId": "neshepa01",
+    "playerSlug": "pat-neshek",
+    "name": "Pat Neshek",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2010s",
-    "featuredSeason": 2012,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "C"
+      "RP"
     ],
-    "bats": "R",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.315,
-      "obp": 0.373,
-      "slg": 0.501,
-      "rbi": 76,
-      "sb": 12
+      "war": 2.3,
+      "eraPlus": 195,
+      "era": 1.87,
+      "whip": 0.787,
+      "so": 68,
+      "wins": 7,
+      "saves": 6,
+      "sv": 6
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.315,
-      "obp": 0.373,
-      "slg": 0.501,
-      "rbi": 76,
-      "sb": 12
+      "war": 2.3,
+      "eraPlus": 195,
+      "era": 1.87,
+      "whip": 0.787,
+      "so": 68,
+      "wins": 7,
+      "saves": 6,
+      "sv": 6
     },
     "scoringStats": {
-      "games": 138,
-      "plateAppearances": 560,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.373,
-      "slg": 0.501,
-      "wrcPlus": null
+      "whip": 0.787,
+      "fip": null,
+      "inningsPitched": 67.3,
+      "strikeoutRate": 9.093610698365527,
+      "walkRate": 1.2035661218424962,
+      "starts": 0,
+      "reliefAppearances": 71
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
-      "sourcePlayerId": "molinya01"
+      "sourcePlayerId": "neshepa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2014.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.4,
-      "formulaVersion": "season-selection-v1"
+      "score": 70.85,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2010s-allen-craig-2012",
-    "playerId": "craigal01",
-    "playerSlug": "allen-craig",
-    "name": "Allen Craig",
+    "id": "stl-2010s-paul-dejong-2019",
+    "playerId": "dejonpa01",
+    "playerSlug": "paul-dejong",
+    "name": "Paul DeJong",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2010s",
-    "featuredSeason": 2012,
+    "featuredSeason": 2019,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "1B",
-      "RF"
+      "SS"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.307,
-      "obp": 0.354,
-      "slg": 0.522,
-      "rbi": 92,
-      "sb": 2
+      "war": 5.2,
+      "opsPlus": 99,
+      "hr": 30,
+      "avg": 0.233,
+      "obp": 0.318,
+      "slg": 0.444,
+      "rbi": 78,
+      "sb": 9
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.307,
-      "obp": 0.354,
-      "slg": 0.522,
-      "rbi": 92,
-      "sb": 2
+      "war": 5.2,
+      "opsPlus": 99,
+      "hr": 30,
+      "avg": 0.233,
+      "obp": 0.318,
+      "slg": 0.444,
+      "rbi": 78,
+      "sb": 9
     },
     "scoringStats": {
-      "games": 119,
-      "plateAppearances": 514,
+      "games": 159,
+      "plateAppearances": 664,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.354,
-      "slg": 0.522,
+      "obp": 0.318,
+      "slg": 0.444,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
-      "sourcePlayerId": "craigal01"
+      "sourcePlayerId": "dejonpa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.28571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 68.54,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -516,8 +1475,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.9,
+      "opsPlus": 128,
       "hr": 32,
       "avg": 0.269,
       "obp": 0.346,
@@ -527,8 +1486,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.9,
+      "opsPlus": 128,
       "hr": 32,
       "avg": 0.269,
       "obp": 0.346,
@@ -549,299 +1508,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "beltrca01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 101.75714285714285,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-paul-goldschmidt-2019",
-    "playerId": "goldspa01",
-    "playerSlug": "paul-goldschmidt",
-    "name": "Paul Goldschmidt",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.26,
-      "obp": 0.346,
-      "slg": 0.476,
-      "rbi": 97,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.26,
-      "obp": 0.346,
-      "slg": 0.476,
-      "rbi": 97,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 161,
-      "plateAppearances": 680,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.346,
-      "slg": 0.476,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "goldspa01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.62857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-colby-rasmus-2010",
-    "playerId": "rasmuco01",
-    "playerSlug": "colby-rasmus",
-    "name": "Colby Rasmus",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.276,
-      "obp": 0.361,
-      "slg": 0.498,
-      "rbi": 66,
-      "sb": 12
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.276,
-      "obp": 0.361,
-      "slg": 0.498,
-      "rbi": 66,
-      "sb": 12
-    },
-    "scoringStats": {
-      "games": 144,
-      "plateAppearances": 532,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.361,
-      "slg": 0.498,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "rasmuco01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.10000000000001,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-aledmys-diaz-2016",
-    "playerId": "diazal02",
-    "playerSlug": "aledmys-diaz",
-    "name": "Aledmys Diaz",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.3,
-      "obp": 0.369,
-      "slg": 0.51,
-      "rbi": 65,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.3,
-      "obp": 0.369,
-      "slg": 0.51,
-      "rbi": 65,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 111,
-      "plateAppearances": 458,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.369,
-      "slg": 0.51,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "diazal02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 100.9857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-kevin-siegrist-2013",
-    "playerId": "siegrke01",
-    "playerSlug": "kevin-siegrist",
-    "name": "Kevin Siegrist",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 0.45,
-      "whip": 0.882,
-      "so": 50,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 0.45,
-      "whip": 0.882,
-      "so": 50,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.882,
-      "fip": null,
-      "inningsPitched": 39.7,
-      "strikeoutRate": 11.335012594458437,
-      "walkRate": 4.080604534005038,
-      "starts": 0,
-      "reliefAppearances": 45
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "siegrke01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 100.84161209068009,
-      "formulaVersion": "season-selection-v1"
+      "score": 66.97999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -865,8 +1548,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.8,
+      "opsPlus": 129,
       "hr": 20,
       "avg": 0.293,
       "obp": 0.372,
@@ -876,8 +1559,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.8,
+      "opsPlus": 129,
       "hr": 20,
       "avg": 0.293,
       "obp": 0.372,
@@ -898,33 +1581,36 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "freesda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.1,
-      "formulaVersion": "season-selection-v1"
+      "score": 65.77,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2010s-dexter-fowler-2017",
-    "playerId": "fowlede01",
-    "playerSlug": "dexter-fowler",
-    "name": "Dexter Fowler",
+    "id": "stl-2010s-colby-rasmus-2010",
+    "playerId": "rasmuco01",
+    "playerSlug": "colby-rasmus",
+    "name": "Colby Rasmus",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2010s",
-    "featuredSeason": 2017,
+    "featuredSeason": 2010,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -932,339 +1618,59 @@
     "eligiblePositions": [
       "CF"
     ],
-    "bats": "B",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.264,
-      "obp": 0.363,
-      "slg": 0.488,
-      "rbi": 64,
-      "sb": 7
+      "war": 3.6,
+      "opsPlus": 132,
+      "hr": 23,
+      "avg": 0.276,
+      "obp": 0.361,
+      "slg": 0.498,
+      "rbi": 66,
+      "sb": 12
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.264,
-      "obp": 0.363,
-      "slg": 0.488,
-      "rbi": 64,
-      "sb": 7
+      "war": 3.6,
+      "opsPlus": 132,
+      "hr": 23,
+      "avg": 0.276,
+      "obp": 0.361,
+      "slg": 0.498,
+      "rbi": 66,
+      "sb": 12
     },
     "scoringStats": {
-      "games": 118,
-      "plateAppearances": 491,
+      "games": 144,
+      "plateAppearances": 532,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.363,
-      "slg": 0.488,
+      "obp": 0.361,
+      "slg": 0.498,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
-      "sourcePlayerId": "fowlede01"
+      "sourcePlayerId": "rasmuco01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.12857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-jose-martinez-2018",
-    "playerId": "martijo08",
-    "playerSlug": "jose-martinez",
-    "name": "Jose Martinez",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.305,
-      "obp": 0.364,
-      "slg": 0.457,
-      "rbi": 83,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.305,
-      "obp": 0.364,
-      "slg": 0.457,
-      "rbi": 83,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 152,
-      "plateAppearances": 588,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.364,
-      "slg": 0.457,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "martijo08"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 98.89999999999999,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-paul-dejong-2017",
-    "playerId": "dejonpa01",
-    "playerSlug": "paul-dejong",
-    "name": "Paul DeJong",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.285,
-      "obp": 0.325,
-      "slg": 0.532,
-      "rbi": 65,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 25,
-      "avg": 0.285,
-      "obp": 0.325,
-      "slg": 0.532,
-      "rbi": 65,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 108,
-      "plateAppearances": 443,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.325,
-      "slg": 0.532,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "dejonpa01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 98.35714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-jhonny-peralta-2014",
-    "playerId": "peraljh01",
-    "playerSlug": "jhonny-peralta",
-    "name": "Jhonny Peralta",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2014,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.263,
-      "obp": 0.336,
-      "slg": 0.443,
-      "rbi": 75,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.263,
-      "obp": 0.336,
-      "slg": 0.443,
-      "rbi": 75,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 628,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.336,
-      "slg": 0.443,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "peraljh01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95.84285714285716,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-jedd-gyorko-2017",
-    "playerId": "gyorkje01",
-    "playerSlug": "jedd-gyorko",
-    "name": "Jedd Gyorko",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.272,
-      "obp": 0.341,
-      "slg": 0.472,
-      "rbi": 67,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.272,
-      "obp": 0.341,
-      "slg": 0.472,
-      "rbi": 67,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 125,
-      "plateAppearances": 481,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.341,
-      "slg": 0.472,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "gyorkje01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95.04285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 64.52000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1290,8 +1696,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4,
+      "opsPlus": 122,
       "hr": 11,
       "avg": 0.304,
       "obp": 0.35,
@@ -1301,8 +1707,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4,
+      "opsPlus": 122,
       "hr": 11,
       "avg": 0.304,
       "obp": 0.35,
@@ -1323,158 +1729,170 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "edmanto01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.97142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 62.49,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2010s-pat-neshek-2014",
-    "playerId": "neshepa01",
-    "playerSlug": "pat-neshek",
-    "name": "Pat Neshek",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2014,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.87,
-      "whip": 0.787,
-      "so": 68,
-      "wins": 7,
-      "saves": 6,
-      "sv": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.87,
-      "whip": 0.787,
-      "so": 68,
-      "wins": 7,
-      "saves": 6,
-      "sv": 6
-    },
-    "scoringStats": {
-      "whip": 0.787,
-      "fip": null,
-      "inningsPitched": 67.3,
-      "strikeoutRate": 9.093610698365527,
-      "walkRate": 1.2035661218424962,
-      "starts": 0,
-      "reliefAppearances": 71
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "neshepa01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.65506686478456,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-seunghwan-oh-2016",
-    "playerId": "ohse01",
-    "playerSlug": "seunghwan-oh",
-    "name": "Seunghwan Oh",
+    "id": "stl-2010s-aledmys-diaz-2016",
+    "playerId": "diazal02",
+    "playerSlug": "aledmys-diaz",
+    "name": "Aledmys Diaz",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2010s",
     "featuredSeason": 2016,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "SS"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.92,
-      "whip": 0.916,
-      "so": 103,
-      "wins": 6,
-      "saves": 19,
-      "sv": 19
+      "war": 2.9,
+      "opsPlus": 134,
+      "hr": 17,
+      "avg": 0.3,
+      "obp": 0.369,
+      "slg": 0.51,
+      "rbi": 65,
+      "sb": 4
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.92,
-      "whip": 0.916,
-      "so": 103,
-      "wins": 6,
-      "saves": 19,
-      "sv": 19
+      "war": 2.9,
+      "opsPlus": 134,
+      "hr": 17,
+      "avg": 0.3,
+      "obp": 0.369,
+      "slg": 0.51,
+      "rbi": 65,
+      "sb": 4
     },
     "scoringStats": {
-      "whip": 0.916,
-      "fip": null,
-      "inningsPitched": 79.7,
-      "strikeoutRate": 11.63111668757842,
-      "walkRate": 2.032622333751568,
-      "starts": 0,
-      "reliefAppearances": 76
+      "games": 111,
+      "plateAppearances": 458,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.51,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
-      "sourcePlayerId": "ohse01"
+      "sourcePlayerId": "diazal02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 89.03774153074028,
-      "formulaVersion": "season-selection-v1"
+      "score": 56.379999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2010s-jedd-gyorko-2017",
+    "playerId": "gyorkje01",
+    "playerSlug": "jedd-gyorko",
+    "name": "Jedd Gyorko",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3,
+      "opsPlus": 112,
+      "hr": 20,
+      "avg": 0.272,
+      "obp": 0.341,
+      "slg": 0.472,
+      "rbi": 67,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "opsPlus": 112,
+      "hr": 20,
+      "avg": 0.272,
+      "obp": 0.341,
+      "slg": 0.472,
+      "rbi": 67,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 125,
+      "plateAppearances": 481,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.341,
+      "slg": 0.472,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "gyorkje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.81,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1498,8 +1916,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.5,
+      "opsPlus": 82,
       "hr": 11,
       "avg": 0.214,
       "obp": 0.268,
@@ -1509,8 +1927,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.5,
+      "opsPlus": 82,
       "hr": 11,
       "avg": 0.214,
       "obp": 0.268,
@@ -1531,158 +1949,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "wietema01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 75.52857142857144,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-adam-wainwright-2010",
-    "playerId": "wainwad01",
-    "playerSlug": "adam-wainwright",
-    "name": "Adam Wainwright",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.42,
-      "whip": 1.051,
-      "so": 213,
-      "wins": 20,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.42,
-      "whip": 1.051,
-      "so": 213,
-      "wins": 20,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.051,
-      "fip": null,
-      "inningsPitched": 230.3,
-      "strikeoutRate": 8.323925314806774,
-      "walkRate": 2.188449848024316,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "wainwad01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 75.14321320017369,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-jack-flaherty-2019",
-    "playerId": "flaheja01",
-    "playerSlug": "jack-flaherty",
-    "name": "Jack Flaherty",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.75,
-      "whip": 0.968,
-      "so": 231,
-      "wins": 11,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.75,
-      "whip": 0.968,
-      "so": 231,
-      "wins": 11,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.968,
-      "fip": null,
-      "inningsPitched": 196.3,
-      "strikeoutRate": 10.590932246561385,
-      "walkRate": 2.521650534895568,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "flaheja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 74.64947812305428,
-      "formulaVersion": "season-selection-v1"
+      "score": -1.17,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1706,8 +1989,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": -0.3,
+      "opsPlus": 83,
       "hr": 1,
       "avg": 0.232,
       "obp": 0.302,
@@ -1717,8 +2000,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": -0.3,
+      "opsPlus": 83,
       "hr": 1,
       "avg": 0.232,
       "obp": 0.302,
@@ -1739,227 +2022,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "lairdge01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 69.02857142857141,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-jaime-garcia-2015",
-    "playerId": "garcija02",
-    "playerSlug": "jaime-garcia",
-    "name": "Jaime Garcia",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2015,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.43,
-      "whip": 1.049,
-      "so": 97,
-      "wins": 10,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.43,
-      "whip": 1.049,
-      "so": 97,
-      "wins": 10,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.049,
-      "fip": null,
-      "inningsPitched": 129.7,
-      "strikeoutRate": 6.730917501927526,
-      "walkRate": 2.081727062451812,
-      "starts": 20,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "garcija02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 68.03934121476912,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-miles-mikolas-2018",
-    "playerId": "mikolmi01",
-    "playerSlug": "miles-mikolas",
-    "name": "Miles Mikolas",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.83,
-      "whip": 1.071,
-      "so": 146,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.83,
-      "whip": 1.071,
-      "so": 146,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.071,
-      "fip": null,
-      "inningsPitched": 200.7,
-      "strikeoutRate": 6.547085201793722,
-      "walkRate": 1.3004484304932735,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "mikolmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.63995515695068,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2010s-kyle-lohse-2012",
-    "playerId": "lohseky01",
-    "playerSlug": "kyle-lohse",
-    "name": "Kyle Lohse",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2010s",
-    "featuredSeason": 2012,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.86,
-      "whip": 1.09,
-      "so": 143,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.86,
-      "whip": 1.09,
-      "so": 143,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.09,
-      "fip": null,
-      "inningsPitched": 211,
-      "strikeoutRate": 6.099526066350711,
-      "walkRate": 1.6208530805687205,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "lohseky01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 66.32023170089519,
-      "formulaVersion": "season-selection-v1"
+      "score": -11.04,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

@@ -83,14 +83,18 @@ const inputs = readInputs(root)
 const built = readBuiltData(root)
 const validReport = validateBuiltData(built, inputs.config)
 assert.equal(validReport.errors.length, 0, 'checked-in pools must pass blocking validation')
-assert(validReport.warnings.some(({ message }) => message.startsWith('Missing optional')), 'missing optional stats should warn')
+assert(validReport.warnings.some(({ message }) => message.startsWith('Very low') || message.startsWith('Only ')), 'non-blocking coverage concerns should warn')
 
 const invalid = structuredClone(built)
 const firstPool = invalid.combinations[0].id
 invalid.pools[firstPool][0].featuredSeason = 1901
 invalid.pools[firstPool].push(structuredClone(invalid.pools[firstPool][1]))
+const verifiedHitter = invalid.pools[firstPool].find(({ playerType }) => playerType !== 'pitcher')
+verifiedHitter.visibleStats.war = null
+verifiedHitter.stats.war = null
 const invalidReport = validateBuiltData(invalid, inputs.config)
 assert(invalidReport.errors.some(({ message }) => message === 'Featured season outside decade'))
 assert(invalidReport.errors.some(({ message }) => message === 'Duplicate card ID'))
+assert(invalidReport.errors.some(({ message }) => message === 'Verified modern hitter missing required war'))
 
 console.log('Player pipeline tests passed: eligible-season selection, season-only positions, pitching thresholds, multi-position/two-way cards, nulls, and validation.')

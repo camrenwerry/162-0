@@ -20,8 +20,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.6,
+      "opsPlus": 149,
       "hr": 30,
       "avg": 0.301,
       "obp": 0.369,
@@ -31,8 +31,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.6,
+      "opsPlus": 149,
       "hr": 30,
       "avg": 0.301,
       "obp": 0.369,
@@ -53,370 +53,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "decindo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 110.30000000000001,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-brian-downing-1987",
-    "playerId": "downibr01",
-    "playerSlug": "brian-downing",
-    "name": "Brian Downing",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1987,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.272,
-      "obp": 0.4,
-      "slg": 0.487,
-      "rbi": 77,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.272,
-      "obp": 0.4,
-      "slg": 0.487,
-      "rbi": 77,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 155,
-      "plateAppearances": 693,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.4,
-      "slg": 0.487,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "downibr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 108.5,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-reggie-jackson-1982",
-    "playerId": "jacksre01",
-    "playerSlug": "reggie-jackson",
-    "name": "Reggie Jackson",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 39,
-      "avg": 0.275,
-      "obp": 0.375,
-      "slg": 0.532,
-      "rbi": 101,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 39,
-      "avg": 0.275,
-      "obp": 0.375,
-      "slg": 0.532,
-      "rbi": 101,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 153,
-      "plateAppearances": 621,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.375,
-      "slg": 0.532,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "jacksre01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 108.44285714285715,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-wally-joyner-1987",
-    "playerId": "joynewa01",
-    "playerSlug": "wally-joyner",
-    "name": "Wally Joyner",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1987,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.285,
-      "obp": 0.366,
-      "slg": 0.528,
-      "rbi": 117,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.285,
-      "obp": 0.366,
-      "slg": 0.528,
-      "rbi": 117,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 149,
-      "plateAppearances": 651,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.366,
-      "slg": 0.528,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "joynewa01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 108,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-jason-thompson-1980",
-    "playerId": "thompja01",
-    "playerSlug": "jason-thompson",
-    "name": "Jason Thompson",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.317,
-      "obp": 0.439,
-      "slg": 0.526,
-      "rbi": 70,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.317,
-      "obp": 0.439,
-      "slg": 0.526,
-      "rbi": 70,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 102,
-      "plateAppearances": 385,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.439,
-      "slg": 0.526,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "thompja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 107.50000000000001,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-fred-lynn-1982",
-    "playerId": "lynnfr01",
-    "playerSlug": "fred-lynn",
-    "name": "Fred Lynn",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.299,
-      "obp": 0.374,
-      "slg": 0.517,
-      "rbi": 86,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.299,
-      "obp": 0.374,
-      "slg": 0.517,
-      "rbi": 86,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 138,
-      "plateAppearances": 540,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.374,
-      "slg": 0.517,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "lynnfr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 104.52857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 122.21,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -440,8 +93,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.5,
+      "opsPlus": 165,
       "hr": 22,
       "avg": 0.304,
       "obp": 0.378,
@@ -451,8 +104,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.5,
+      "opsPlus": 165,
       "hr": 22,
       "avg": 0.304,
       "obp": 0.378,
@@ -473,27 +126,464 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "grichbo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1981.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.50000000000001,
-      "formulaVersion": "season-selection-v1"
+      "score": 102.49,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1980s-rod-carew-1980",
-    "playerId": "carewro01",
-    "playerSlug": "rod-carew",
-    "name": "Rod Carew",
+    "id": "laa-1980s-mike-witt-1986",
+    "playerId": "wittmi01",
+    "playerSlug": "mike-witt",
+    "name": "Mike Witt",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.1,
+      "eraPlus": 144,
+      "era": 2.84,
+      "whip": 1.082,
+      "so": 208,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.1,
+      "eraPlus": 144,
+      "era": 2.84,
+      "whip": 1.082,
+      "so": 208,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.082,
+      "fip": null,
+      "inningsPitched": 269,
+      "strikeoutRate": 6.95910780669145,
+      "walkRate": 2.442379182156134,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "wittmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.6,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-bert-blyleven-1989",
+    "playerId": "blylebe01",
+    "playerSlug": "bert-blyleven",
+    "name": "Bert Blyleven",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6,
+      "eraPlus": 140,
+      "era": 2.73,
+      "whip": 1.116,
+      "so": 131,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6,
+      "eraPlus": 140,
+      "era": 2.73,
+      "whip": 1.116,
+      "so": 131,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.116,
+      "fip": null,
+      "inningsPitched": 241,
+      "strikeoutRate": 4.8921161825726145,
+      "walkRate": 1.6431535269709543,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "blylebe01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-donnie-moore-1985",
+    "playerId": "mooredo01",
+    "playerSlug": "donnie-moore",
+    "name": "Donnie Moore",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "eraPlus": 217,
+      "era": 1.92,
+      "whip": 1.087,
+      "so": 72,
+      "wins": 8,
+      "saves": 31,
+      "sv": 31
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "eraPlus": 217,
+      "era": 1.92,
+      "whip": 1.087,
+      "so": 72,
+      "wins": 8,
+      "saves": 31,
+      "sv": 31
+    },
+    "scoringStats": {
+      "whip": 1.087,
+      "fip": null,
+      "inningsPitched": 103,
+      "strikeoutRate": 6.29126213592233,
+      "walkRate": 1.8349514563106797,
+      "starts": 0,
+      "reliefAppearances": 65
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "mooredo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.4357142857143,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-brian-downing-1982",
+    "playerId": "downibr01",
+    "playerSlug": "brian-downing",
+    "name": "Brian Downing",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.6,
+      "opsPlus": 132,
+      "hr": 28,
+      "avg": 0.281,
+      "obp": 0.368,
+      "slg": 0.482,
+      "rbi": 84,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.6,
+      "opsPlus": 132,
+      "hr": 28,
+      "avg": 0.281,
+      "obp": 0.368,
+      "slg": 0.482,
+      "rbi": 84,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 722,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.368,
+      "slg": 0.482,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "downibr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.41999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-chuck-finley-1989",
+    "playerId": "finlech01",
+    "playerSlug": "chuck-finley",
+    "name": "Chuck Finley",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.9,
+      "eraPlus": 149,
+      "era": 2.57,
+      "whip": 1.267,
+      "so": 156,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.9,
+      "eraPlus": 149,
+      "era": 2.57,
+      "whip": 1.267,
+      "so": 156,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.267,
+      "fip": null,
+      "inningsPitched": 199.7,
+      "strikeoutRate": 7.0305458187280925,
+      "walkRate": 3.695543314972459,
+      "starts": 29,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "finlech01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.935,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-fred-lynn-1982",
+    "playerId": "lynnfr01",
+    "playerSlug": "fred-lynn",
+    "name": "Fred Lynn",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.7,
+      "opsPlus": 143,
+      "hr": 21,
+      "avg": 0.299,
+      "obp": 0.374,
+      "slg": 0.517,
+      "rbi": 86,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "opsPlus": 143,
+      "hr": 21,
+      "avg": 0.299,
+      "obp": 0.374,
+      "slg": 0.517,
+      "rbi": 86,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 138,
+      "plateAppearances": 540,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.374,
+      "slg": 0.517,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "lynnfr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.30000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-jason-thompson-1980",
+    "playerId": "thompja01",
+    "playerSlug": "jason-thompson",
+    "name": "Jason Thompson",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
@@ -508,196 +598,347 @@
       "1B"
     ],
     "bats": "L",
-    "throws": "R",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.331,
-      "obp": 0.396,
-      "slg": 0.437,
-      "rbi": 59,
-      "sb": 23
+      "war": 3.6,
+      "opsPlus": 168,
+      "hr": 17,
+      "avg": 0.317,
+      "obp": 0.439,
+      "slg": 0.526,
+      "rbi": 70,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.331,
-      "obp": 0.396,
-      "slg": 0.437,
-      "rbi": 59,
-      "sb": 23
+      "war": 3.6,
+      "opsPlus": 168,
+      "hr": 17,
+      "avg": 0.317,
+      "obp": 0.439,
+      "slg": 0.526,
+      "rbi": 70,
+      "sb": 2
     },
     "scoringStats": {
-      "games": 144,
-      "plateAppearances": 603,
+      "games": 102,
+      "plateAppearances": 385,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.396,
-      "slg": 0.437,
+      "obp": 0.439,
+      "slg": 0.526,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
-      "sourcePlayerId": "carewro01"
+      "sourcePlayerId": "thompja01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.52857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 81.05,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1980s-johnny-ray-1988",
-    "playerId": "rayjo01",
-    "playerSlug": "johnny-ray",
-    "name": "Johnny Ray",
+    "id": "laa-1980s-don-aase-1984",
+    "playerId": "aasedo01",
+    "playerSlug": "don-aase",
+    "name": "Don Aase",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
     "team": "LAA",
     "decade": "1980s",
-    "featuredSeason": 1988,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1984,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "2B",
-      "LF"
+      "RP"
     ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.306,
-      "obp": 0.345,
-      "slg": 0.429,
-      "rbi": 83,
-      "sb": 4
+      "war": 2.1,
+      "eraPlus": 250,
+      "era": 1.62,
+      "whip": 1.256,
+      "so": 28,
+      "wins": 4,
+      "saves": 8,
+      "sv": 8
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.306,
-      "obp": 0.345,
-      "slg": 0.429,
-      "rbi": 83,
-      "sb": 4
+      "war": 2.1,
+      "eraPlus": 250,
+      "era": 1.62,
+      "whip": 1.256,
+      "so": 28,
+      "wins": 4,
+      "saves": 8,
+      "sv": 8
     },
     "scoringStats": {
-      "games": 153,
-      "plateAppearances": 650,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.345,
-      "slg": 0.429,
-      "wrcPlus": null
+      "whip": 1.256,
+      "fip": null,
+      "inningsPitched": 39,
+      "strikeoutRate": 6.461538461538462,
+      "walkRate": 4.384615384615385,
+      "starts": 0,
+      "reliefAppearances": 23
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
-      "sourcePlayerId": "rayjo01"
+      "sourcePlayerId": "aasedo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.97142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 80.9857142857143,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1980s-chili-davis-1989",
-    "playerId": "davisch01",
-    "playerSlug": "chili-davis",
-    "name": "Chili Davis",
+    "id": "laa-1980s-stew-cliburn-1985",
+    "playerId": "clibust02",
+    "playerSlug": "stew-cliburn",
+    "name": "Stew Cliburn",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.1,
+      "eraPlus": 199,
+      "era": 2.09,
+      "whip": 1.141,
+      "so": 48,
+      "wins": 9,
+      "saves": 6,
+      "sv": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "eraPlus": 199,
+      "era": 2.09,
+      "whip": 1.141,
+      "so": 48,
+      "wins": 9,
+      "saves": 6,
+      "sv": 6
+    },
+    "scoringStats": {
+      "whip": 1.141,
+      "fip": null,
+      "inningsPitched": 99,
+      "strikeoutRate": 4.363636363636363,
+      "walkRate": 2.3636363636363638,
+      "starts": 0,
+      "reliefAppearances": 44
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "clibust02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.13571428571429,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-kirk-mccaskill-1989",
+    "playerId": "mccaski01",
+    "playerSlug": "kirk-mccaskill",
+    "name": "Kirk McCaskill",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
     "team": "LAA",
     "decade": "1980s",
     "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.6,
+      "eraPlus": 130,
+      "era": 2.93,
+      "whip": 1.231,
+      "so": 107,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.6,
+      "eraPlus": 130,
+      "era": 2.93,
+      "whip": 1.231,
+      "so": 107,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.231,
+      "fip": null,
+      "inningsPitched": 212,
+      "strikeoutRate": 4.5424528301886795,
+      "walkRate": 2.5047169811320753,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "mccaski01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.69999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-wally-joyner-1987",
+    "playerId": "joynewa01",
+    "playerSlug": "wally-joyner",
+    "name": "Wally Joyner",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1987,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "LF"
+      "1B"
     ],
-    "bats": "B",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.271,
-      "obp": 0.34,
-      "slg": 0.436,
-      "rbi": 90,
-      "sb": 3
+      "war": 4.1,
+      "opsPlus": 137,
+      "hr": 34,
+      "avg": 0.285,
+      "obp": 0.366,
+      "slg": 0.528,
+      "rbi": 117,
+      "sb": 8
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.271,
-      "obp": 0.34,
-      "slg": 0.436,
-      "rbi": 90,
-      "sb": 3
+      "war": 4.1,
+      "opsPlus": 137,
+      "hr": 34,
+      "avg": 0.285,
+      "obp": 0.366,
+      "slg": 0.528,
+      "rbi": 117,
+      "sb": 8
     },
     "scoringStats": {
-      "games": 154,
-      "plateAppearances": 627,
+      "games": 149,
+      "plateAppearances": 651,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.34,
-      "slg": 0.436,
+      "obp": 0.366,
+      "slg": 0.528,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
-      "sourcePlayerId": "davisch01"
+      "sourcePlayerId": "joynewa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.51428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 74.21,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -722,8 +963,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.6,
+      "opsPlus": 99,
       "hr": 24,
       "avg": 0.263,
       "obp": 0.306,
@@ -733,8 +974,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.6,
+      "opsPlus": 99,
       "hr": 24,
       "avg": 0.263,
       "obp": 0.306,
@@ -755,20 +996,754 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "whitede03"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.38571428571429,
-      "formulaVersion": "season-selection-v1"
+      "score": 73.51999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-rod-carew-1982",
+    "playerId": "carewro01",
+    "playerSlug": "rod-carew",
+    "name": "Rod Carew",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.7,
+      "opsPlus": 121,
+      "hr": 3,
+      "avg": 0.319,
+      "obp": 0.396,
+      "slg": 0.403,
+      "rbi": 44,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "opsPlus": 121,
+      "hr": 3,
+      "avg": 0.319,
+      "obp": 0.396,
+      "slg": 0.403,
+      "rbi": 44,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 138,
+      "plateAppearances": 596,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.396,
+      "slg": 0.403,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "carewro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.86,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-geoff-zahn-1984",
+    "playerId": "zahnge01",
+    "playerSlug": "geoff-zahn",
+    "name": "Geoff Zahn",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.2,
+      "eraPlus": 129,
+      "era": 3.12,
+      "whip": 1.244,
+      "so": 61,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.2,
+      "eraPlus": 129,
+      "era": 3.12,
+      "whip": 1.244,
+      "so": 61,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.244,
+      "fip": null,
+      "inningsPitched": 199.3,
+      "strikeoutRate": 2.754641244355243,
+      "walkRate": 2.167586552935273,
+      "starts": 27,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "zahnge01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.515,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-reggie-jackson-1982",
+    "playerId": "jacksre01",
+    "playerSlug": "reggie-jackson",
+    "name": "Reggie Jackson",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.1,
+      "opsPlus": 147,
+      "hr": 39,
+      "avg": 0.275,
+      "obp": 0.375,
+      "slg": 0.532,
+      "rbi": 101,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "opsPlus": 147,
+      "hr": 39,
+      "avg": 0.275,
+      "obp": 0.375,
+      "slg": 0.532,
+      "rbi": 101,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 621,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.375,
+      "slg": 0.532,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "jacksre01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.91,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-rick-burleson-1981",
+    "playerId": "burleri01",
+    "playerSlug": "rick-burleson",
+    "name": "Rick Burleson",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "opsPlus": 112,
+      "hr": 5,
+      "avg": 0.293,
+      "obp": 0.357,
+      "slg": 0.372,
+      "rbi": 33,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "opsPlus": 112,
+      "hr": 5,
+      "avg": 0.293,
+      "obp": 0.357,
+      "slg": 0.372,
+      "rbi": 33,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 109,
+      "plateAppearances": 479,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.372,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "burleri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1981.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 64.79,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-gary-pettis-1986",
+    "playerId": "pettiga01",
+    "playerSlug": "gary-pettis",
+    "name": "Gary Pettis",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.1,
+      "opsPlus": 88,
+      "hr": 5,
+      "avg": 0.258,
+      "obp": 0.339,
+      "slg": 0.343,
+      "rbi": 58,
+      "sb": 50
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.1,
+      "opsPlus": 88,
+      "hr": 5,
+      "avg": 0.258,
+      "obp": 0.339,
+      "slg": 0.343,
+      "rbi": 58,
+      "sb": 50
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 613,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.339,
+      "slg": 0.343,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "pettiga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 61.33,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-dick-schofield-1986",
+    "playerId": "schofdi02",
+    "playerSlug": "dick-schofield",
+    "name": "Dick Schofield",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.2,
+      "opsPlus": 96,
+      "hr": 13,
+      "avg": 0.249,
+      "obp": 0.321,
+      "slg": 0.397,
+      "rbi": 57,
+      "sb": 23
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.2,
+      "opsPlus": 96,
+      "hr": 13,
+      "avg": 0.249,
+      "obp": 0.321,
+      "slg": 0.397,
+      "rbi": 57,
+      "sb": 23
+    },
+    "scoringStats": {
+      "games": 139,
+      "plateAppearances": 520,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.321,
+      "slg": 0.397,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "schofdi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.60000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-chili-davis-1989",
+    "playerId": "davisch01",
+    "playerSlug": "chili-davis",
+    "name": "Chili Davis",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "opsPlus": 120,
+      "hr": 22,
+      "avg": 0.271,
+      "obp": 0.34,
+      "slg": 0.436,
+      "rbi": 90,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "opsPlus": 120,
+      "hr": 22,
+      "avg": 0.271,
+      "obp": 0.34,
+      "slg": 0.436,
+      "rbi": 90,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 627,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.34,
+      "slg": 0.436,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "davisch01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.06999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-bob-boone-1988",
+    "playerId": "boonebo01",
+    "playerSlug": "bob-boone",
+    "name": "Bob Boone",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.1,
+      "opsPlus": 110,
+      "hr": 5,
+      "avg": 0.295,
+      "obp": 0.352,
+      "slg": 0.386,
+      "rbi": 39,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "opsPlus": 110,
+      "hr": 5,
+      "avg": 0.295,
+      "obp": 0.352,
+      "slg": 0.386,
+      "rbi": 39,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 122,
+      "plateAppearances": 383,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.386,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "boonebo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.03,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-johnny-ray-1988",
+    "playerId": "rayjo01",
+    "playerSlug": "johnny-ray",
+    "name": "Johnny Ray",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "opsPlus": 119,
+      "hr": 6,
+      "avg": 0.306,
+      "obp": 0.345,
+      "slg": 0.429,
+      "rbi": 83,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "opsPlus": 119,
+      "hr": 6,
+      "avg": 0.306,
+      "obp": 0.345,
+      "slg": 0.429,
+      "rbi": 83,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 650,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.345,
+      "slg": 0.429,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "rayjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1980s-juan-beniquez-1984",
+    "playerId": "beniqju01",
+    "playerSlug": "juan-beniquez",
+    "name": "Juan Beniquez",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.1,
+      "opsPlus": 128,
+      "hr": 8,
+      "avg": 0.336,
+      "obp": 0.37,
+      "slg": 0.452,
+      "rbi": 39,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.1,
+      "opsPlus": 128,
+      "hr": 8,
+      "avg": 0.336,
+      "obp": 0.37,
+      "slg": 0.452,
+      "rbi": 39,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 110,
+      "plateAppearances": 378,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.37,
+      "slg": 0.452,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "beniqju01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.980000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -795,8 +1770,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.4,
+      "opsPlus": 110,
       "hr": 23,
       "avg": 0.245,
       "obp": 0.331,
@@ -806,8 +1781,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.4,
+      "opsPlus": 110,
       "hr": 23,
       "avg": 0.245,
       "obp": 0.331,
@@ -828,372 +1803,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "howelja02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.77142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-ruppert-jones-1985",
-    "playerId": "jonesru01",
-    "playerSlug": "ruppert-jones",
-    "name": "Ruppert Jones",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1985,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "LF",
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.231,
-      "obp": 0.328,
-      "slg": 0.447,
-      "rbi": 67,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.231,
-      "obp": 0.328,
-      "slg": 0.447,
-      "rbi": 67,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 125,
-      "plateAppearances": 448,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.328,
-      "slg": 0.447,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "jonesru01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.3,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-carney-lansford-1980",
-    "playerId": "lansfca01",
-    "playerSlug": "carney-lansford",
-    "name": "Carney Lansford",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.261,
-      "obp": 0.312,
-      "slg": 0.39,
-      "rbi": 80,
-      "sb": 14
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.261,
-      "obp": 0.312,
-      "slg": 0.39,
-      "rbi": 80,
-      "sb": 14
-    },
-    "scoringStats": {
-      "games": 151,
-      "plateAppearances": 663,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.312,
-      "slg": 0.39,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "lansfca01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.14285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-dick-schofield-1986",
-    "playerId": "schofdi02",
-    "playerSlug": "dick-schofield",
-    "name": "Dick Schofield",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.249,
-      "obp": 0.321,
-      "slg": 0.397,
-      "rbi": 57,
-      "sb": 23
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.249,
-      "obp": 0.321,
-      "slg": 0.397,
-      "rbi": 57,
-      "sb": 23
-    },
-    "scoringStats": {
-      "games": 139,
-      "plateAppearances": 520,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.321,
-      "slg": 0.397,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "schofdi02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 86.65714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-rick-burleson-1981",
-    "playerId": "burleri01",
-    "playerSlug": "rick-burleson",
-    "name": "Rick Burleson",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1981,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.293,
-      "obp": 0.357,
-      "slg": 0.372,
-      "rbi": 33,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.293,
-      "obp": 0.357,
-      "slg": 0.372,
-      "rbi": 33,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 109,
-      "plateAppearances": 479,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.357,
-      "slg": 0.372,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "burleri01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 86.58571428571427,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-bob-boone-1988",
-    "playerId": "boonebo01",
-    "playerSlug": "bob-boone",
-    "name": "Bob Boone",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1988,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.295,
-      "obp": 0.352,
-      "slg": 0.386,
-      "rbi": 39,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.295,
-      "obp": 0.352,
-      "slg": 0.386,
-      "rbi": 39,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 122,
-      "plateAppearances": 383,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.352,
-      "slg": 0.386,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "boonebo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 84.74285714285713,
-      "formulaVersion": "season-selection-v1"
+      "score": 38.9,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1217,8 +1843,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.7,
+      "opsPlus": 97,
       "hr": 17,
       "avg": 0.238,
       "obp": 0.306,
@@ -1228,8 +1854,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.7,
+      "opsPlus": 97,
       "hr": 17,
       "avg": 0.238,
       "obp": 0.306,
@@ -1250,158 +1876,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "parrila02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 83.14285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 23.709999999999997,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1980s-bob-mcclure-1989",
-    "playerId": "mcclubo01",
-    "playerSlug": "bob-mcclure",
-    "name": "Bob McClure",
+    "id": "laa-1980s-carney-lansford-1980",
+    "playerId": "lansfca01",
+    "playerSlug": "carney-lansford",
+    "name": "Carney Lansford",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
     "team": "LAA",
     "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "3B"
     ],
     "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.55,
-      "whip": 1.032,
-      "so": 36,
-      "wins": 6,
-      "saves": 3,
-      "sv": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.55,
-      "whip": 1.032,
-      "so": 36,
-      "wins": 6,
-      "saves": 3,
-      "sv": 3
-    },
-    "scoringStats": {
-      "whip": 1.032,
-      "fip": null,
-      "inningsPitched": 52.3,
-      "strikeoutRate": 6.195028680688337,
-      "walkRate": 2.581261950286807,
-      "starts": 0,
-      "reliefAppearances": 48
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "mcclubo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 79.7806500956023,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-donnie-moore-1985",
-    "playerId": "mooredo01",
-    "playerSlug": "donnie-moore",
-    "name": "Donnie Moore",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1985,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.92,
-      "whip": 1.087,
-      "so": 72,
-      "wins": 8,
-      "saves": 31,
-      "sv": 31
+      "war": 0.7,
+      "opsPlus": 94,
+      "hr": 15,
+      "avg": 0.261,
+      "obp": 0.312,
+      "slg": 0.39,
+      "rbi": 80,
+      "sb": 14
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.92,
-      "whip": 1.087,
-      "so": 72,
-      "wins": 8,
-      "saves": 31,
-      "sv": 31
+      "war": 0.7,
+      "opsPlus": 94,
+      "hr": 15,
+      "avg": 0.261,
+      "obp": 0.312,
+      "slg": 0.39,
+      "rbi": 80,
+      "sb": 14
     },
     "scoringStats": {
-      "whip": 1.087,
-      "fip": null,
-      "inningsPitched": 103,
-      "strikeoutRate": 6.29126213592233,
-      "walkRate": 1.8349514563106797,
-      "starts": 0,
-      "reliefAppearances": 65
+      "games": 151,
+      "plateAppearances": 663,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.312,
+      "slg": 0.39,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
-      "sourcePlayerId": "mooredo01"
+      "sourcePlayerId": "lansfca01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 77.90446601941747,
-      "formulaVersion": "season-selection-v1"
+      "score": 12.029999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1425,8 +1989,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.5,
+      "opsPlus": 92,
       "hr": 5,
       "avg": 0.264,
       "obp": 0.302,
@@ -1436,8 +2000,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.5,
+      "opsPlus": 92,
       "hr": 5,
       "avg": 0.264,
       "obp": 0.302,
@@ -1458,89 +2022,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "patekfr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 77.71428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-bryan-harvey-1988",
-    "playerId": "harvebr01",
-    "playerSlug": "bryan-harvey",
-    "name": "Bryan Harvey",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1988,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.13,
-      "whip": 1.039,
-      "so": 67,
-      "wins": 7,
-      "saves": 17,
-      "sv": 17
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.13,
-      "whip": 1.039,
-      "so": 67,
-      "wins": 7,
-      "saves": 17,
-      "sv": 17
-    },
-    "scoringStats": {
-      "whip": 1.039,
-      "fip": null,
-      "inningsPitched": 76,
-      "strikeoutRate": 7.934210526315789,
-      "walkRate": 2.3684210526315788,
-      "starts": 0,
-      "reliefAppearances": 50
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "harvebr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 76.00868421052631,
-      "formulaVersion": "season-selection-v1"
+      "score": 4.91,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1565,8 +2063,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.4,
+      "opsPlus": 87,
       "hr": 4,
       "avg": 0.241,
       "obp": 0.303,
@@ -1576,8 +2074,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.4,
+      "opsPlus": 87,
       "hr": 4,
       "avg": 0.241,
       "obp": 0.303,
@@ -1598,365 +2096,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "milleda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 73.58571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-mike-witt-1986",
-    "playerId": "wittmi01",
-    "playerSlug": "mike-witt",
-    "name": "Mike Witt",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.84,
-      "whip": 1.082,
-      "so": 208,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.84,
-      "whip": 1.082,
-      "so": 208,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.082,
-      "fip": null,
-      "inningsPitched": 269,
-      "strikeoutRate": 6.95910780669145,
-      "walkRate": 2.442379182156134,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "wittmi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.05509293680298,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-john-candelaria-1986",
-    "playerId": "candejo01",
-    "playerSlug": "john-candelaria",
-    "name": "John Candelaria",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.55,
-      "whip": 1.025,
-      "so": 81,
-      "wins": 10,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.55,
-      "whip": 1.025,
-      "so": 81,
-      "wins": 10,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.025,
-      "fip": null,
-      "inningsPitched": 91.7,
-      "strikeoutRate": 7.949836423118866,
-      "walkRate": 2.5517993456924755,
-      "starts": 16,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "candejo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 66.09150006058404,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-bert-blyleven-1989",
-    "playerId": "blylebe01",
-    "playerSlug": "bert-blyleven",
-    "name": "Bert Blyleven",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.73,
-      "whip": 1.116,
-      "so": 131,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.73,
-      "whip": 1.116,
-      "so": 131,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.116,
-      "fip": null,
-      "inningsPitched": 241,
-      "strikeoutRate": 4.8921161825726145,
-      "walkRate": 1.6431535269709543,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "blylebe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 65.79344398340248,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-chuck-finley-1989",
-    "playerId": "finlech01",
-    "playerSlug": "chuck-finley",
-    "name": "Chuck Finley",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.57,
-      "whip": 1.267,
-      "so": 156,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.57,
-      "whip": 1.267,
-      "so": 156,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.267,
-      "fip": null,
-      "inningsPitched": 199.7,
-      "strikeoutRate": 7.0305458187280925,
-      "walkRate": 3.695543314972459,
-      "starts": 29,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "finlech01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 63.9169482000779,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1980s-kirk-mccaskill-1989",
-    "playerId": "mccaski01",
-    "playerSlug": "kirk-mccaskill",
-    "name": "Kirk McCaskill",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.93,
-      "whip": 1.231,
-      "so": 107,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.93,
-      "whip": 1.231,
-      "so": 107,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.231,
-      "fip": null,
-      "inningsPitched": 212,
-      "strikeoutRate": 4.5424528301886795,
-      "walkRate": 2.5047169811320753,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "mccaski01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 59.05438155136268,
-      "formulaVersion": "season-selection-v1"
+      "score": -0.4799999999999993,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

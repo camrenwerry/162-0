@@ -37,6 +37,7 @@ export interface SourceMetadata {
   verified: boolean
   sourceLabel: string
   sourceUrl: string
+  advancedStatsSourceUrls: string[]
   verifiedAt: string
   lahmanTeamIds: string[]
   sourcePlayerId: string

@@ -96,6 +96,7 @@ def main() -> None:
 
                 seasons.append({
                     "playerId": player_id,
+                    "baseballReferenceId": text(getattr(bio, "bbrefID", "")),
                     "name": name,
                     "franchiseId": franchise["id"],
                     "teamAbbreviation": franchise["abbreviation"],
@@ -153,10 +154,12 @@ def main() -> None:
     season_path = args.output_dir / "season-stats.csv"
     fielding_path = args.output_dir / "fielding-appearances.csv"
     with season_path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(seasons[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(seasons[0]), lineterminator="\n")
         writer.writeheader(); writer.writerows(seasons)
     with fielding_path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(appearances[0]))
+        # Preserve the historical checked-in fielding CSV line endings. The
+        # season file intentionally moved to LF when its schema was extended.
+        writer = csv.DictWriter(handle, fieldnames=list(appearances[0]), lineterminator="\r\n")
         writer.writeheader(); writer.writerows(appearances)
     print(f"Exported {len(seasons)} season rows and {len(appearances)} fielding rows.")
 

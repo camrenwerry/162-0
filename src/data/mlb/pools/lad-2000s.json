@@ -1,145 +1,5 @@
 [
   {
-    "id": "lad-2000s-manny-ramirez-2008",
-    "playerId": "ramirma02",
-    "playerSlug": "manny-ramirez",
-    "name": "Manny Ramirez",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2008,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.396,
-      "obp": 0.489,
-      "slg": 0.743,
-      "rbi": 53,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.396,
-      "obp": 0.489,
-      "slg": 0.743,
-      "rbi": 53,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 53,
-      "plateAppearances": 229,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.489,
-      "slg": 0.743,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "ramirma02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 129.74285714285713,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-gary-sheffield-2000",
-    "playerId": "sheffga01",
-    "playerSlug": "gary-sheffield",
-    "name": "Gary Sheffield",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 43,
-      "avg": 0.325,
-      "obp": 0.438,
-      "slg": 0.643,
-      "rbi": 109,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 43,
-      "avg": 0.325,
-      "obp": 0.438,
-      "slg": 0.643,
-      "rbi": 109,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 141,
-      "plateAppearances": 612,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.438,
-      "slg": 0.643,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "sheffga01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 125.58571428571427,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
     "id": "lad-2000s-adrian-beltre-2004",
     "playerId": "beltrad01",
     "playerSlug": "adrian-beltre",
@@ -160,8 +20,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.6,
+      "opsPlus": 163,
       "hr": 48,
       "avg": 0.334,
       "obp": 0.388,
@@ -171,8 +31,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.6,
+      "opsPlus": 163,
       "hr": 48,
       "avg": 0.334,
       "obp": 0.388,
@@ -193,161 +53,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "beltrad01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 120.47142857142856,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-shawn-green-2001",
-    "playerId": "greensh01",
-    "playerSlug": "shawn-green",
-    "name": "Shawn Green",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 49,
-      "avg": 0.297,
-      "obp": 0.372,
-      "slg": 0.598,
-      "rbi": 125,
-      "sb": 20
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 49,
-      "avg": 0.297,
-      "obp": 0.372,
-      "slg": 0.598,
-      "rbi": 125,
-      "sb": 20
-    },
-    "scoringStats": {
-      "games": 161,
-      "plateAppearances": 701,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.372,
-      "slg": 0.598,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "greensh01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 117.02857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-jeff-kent-2005",
-    "playerId": "kentje01",
-    "playerSlug": "jeff-kent",
-    "name": "Jeff Kent",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2005,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "2B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.289,
-      "obp": 0.377,
-      "slg": 0.512,
-      "rbi": 105,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.289,
-      "obp": 0.377,
-      "slg": 0.512,
-      "rbi": 105,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 149,
-      "plateAppearances": 637,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.377,
-      "slg": 0.512,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "kentje01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 107.10000000000001,
-      "formulaVersion": "season-selection-v1"
+      "score": 153.26999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -371,8 +93,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 3.7,
+      "eraPlus": 337,
       "era": 1.2,
       "whip": 0.692,
       "so": 137,
@@ -382,8 +104,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 3.7,
+      "eraPlus": 337,
       "era": 1.2,
       "whip": 0.692,
       "so": 137,
@@ -403,33 +125,108 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "gagneer01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 106.95198055893073,
-      "formulaVersion": "season-selection-v1"
+      "score": 137.35,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2000s-andre-ethier-2009",
-    "playerId": "ethiean01",
-    "playerSlug": "andre-ethier",
-    "name": "Andre Ethier",
+    "id": "lad-2000s-takashi-saito-2007",
+    "playerId": "saitota01",
+    "playerSlug": "takashi-saito",
+    "name": "Takashi Saito",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2000s",
-    "featuredSeason": 2009,
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.5,
+      "eraPlus": 319,
+      "era": 1.4,
+      "whip": 0.715,
+      "so": 78,
+      "wins": 2,
+      "saves": 39,
+      "sv": 39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "eraPlus": 319,
+      "era": 1.4,
+      "whip": 0.715,
+      "so": 78,
+      "wins": 2,
+      "saves": 39,
+      "sv": 39
+    },
+    "scoringStats": {
+      "whip": 0.715,
+      "fip": null,
+      "inningsPitched": 64.3,
+      "strikeoutRate": 10.917573872472785,
+      "walkRate": 1.8195956454121307,
+      "starts": 0,
+      "reliefAppearances": 63
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "saitota01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 127.64999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-shawn-green-2001",
+    "playerId": "greensh01",
+    "playerSlug": "shawn-green",
+    "name": "Shawn Green",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2001,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -440,53 +237,491 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.272,
-      "obp": 0.361,
-      "slg": 0.508,
-      "rbi": 106,
-      "sb": 6
+      "war": 7,
+      "opsPlus": 154,
+      "hr": 49,
+      "avg": 0.297,
+      "obp": 0.372,
+      "slg": 0.598,
+      "rbi": 125,
+      "sb": 20
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.272,
-      "obp": 0.361,
-      "slg": 0.508,
-      "rbi": 106,
-      "sb": 6
+      "war": 7,
+      "opsPlus": 154,
+      "hr": 49,
+      "avg": 0.297,
+      "obp": 0.372,
+      "slg": 0.598,
+      "rbi": 125,
+      "sb": 20
     },
     "scoringStats": {
-      "games": 160,
-      "plateAppearances": 685,
+      "games": 161,
+      "plateAppearances": 701,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.361,
-      "slg": 0.508,
+      "obp": 0.372,
+      "slg": 0.598,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "ethiean01"
+      "sourcePlayerId": "greensh01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 106.47142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 118.01,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-kevin-brown-2000",
+    "playerId": "brownke01",
+    "playerSlug": "kevin-brown",
+    "name": "Kevin Brown",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7,
+      "eraPlus": 167,
+      "era": 2.58,
+      "whip": 0.991,
+      "so": 216,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7,
+      "eraPlus": 167,
+      "era": 2.58,
+      "whip": 0.991,
+      "so": 216,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.991,
+      "fip": null,
+      "inningsPitched": 230,
+      "strikeoutRate": 8.452173913043477,
+      "walkRate": 1.8391304347826087,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "brownke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.45,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-gary-sheffield-2000",
+    "playerId": "sheffga01",
+    "playerSlug": "gary-sheffield",
+    "name": "Gary Sheffield",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.1,
+      "opsPlus": 176,
+      "hr": 43,
+      "avg": 0.325,
+      "obp": 0.438,
+      "slg": 0.643,
+      "rbi": 109,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.1,
+      "opsPlus": 176,
+      "hr": 43,
+      "avg": 0.325,
+      "obp": 0.438,
+      "slg": 0.643,
+      "rbi": 109,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 612,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.438,
+      "slg": 0.643,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "sheffga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.32,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-manny-ramirez-2008",
+    "playerId": "ramirma02",
+    "playerSlug": "manny-ramirez",
+    "name": "Manny Ramirez",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.5,
+      "opsPlus": 221,
+      "hr": 17,
+      "avg": 0.396,
+      "obp": 0.489,
+      "slg": 0.743,
+      "rbi": 53,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "opsPlus": 221,
+      "hr": 17,
+      "avg": 0.396,
+      "obp": 0.489,
+      "slg": 0.743,
+      "rbi": 53,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 53,
+      "plateAppearances": 229,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.489,
+      "slg": 0.743,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "ramirma02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.79,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-brad-penny-2007",
+    "playerId": "pennybr01",
+    "playerSlug": "brad-penny",
+    "name": "Brad Penny",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.9,
+      "eraPlus": 147,
+      "era": 3.03,
+      "whip": 1.308,
+      "so": 135,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.9,
+      "eraPlus": 147,
+      "era": 3.03,
+      "whip": 1.308,
+      "so": 135,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.308,
+      "fip": null,
+      "inningsPitched": 208,
+      "strikeoutRate": 5.841346153846154,
+      "walkRate": 3.1586538461538463,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "pennybr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.25000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-paul-quantrill-2003",
+    "playerId": "quantpa01",
+    "playerSlug": "paul-quantrill",
+    "name": "Paul Quantrill",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.3,
+      "eraPlus": 232,
+      "era": 1.75,
+      "whip": 0.983,
+      "so": 44,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "eraPlus": 232,
+      "era": 1.75,
+      "whip": 0.983,
+      "so": 44,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.983,
+      "fip": null,
+      "inningsPitched": 77.3,
+      "strikeoutRate": 5.1228978007761965,
+      "walkRate": 1.7464424320827945,
+      "starts": 0,
+      "reliefAppearances": 89
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "quantpa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.8,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-russell-martin-2007",
+    "playerId": "martiru01",
+    "playerSlug": "russell-martin",
+    "name": "Russell Martin",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.6,
+      "opsPlus": 116,
+      "hr": 19,
+      "avg": 0.293,
+      "obp": 0.374,
+      "slg": 0.469,
+      "rbi": 87,
+      "sb": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.6,
+      "opsPlus": 116,
+      "hr": 19,
+      "avg": 0.293,
+      "obp": 0.374,
+      "slg": 0.469,
+      "rbi": 87,
+      "sb": 21
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 620,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.374,
+      "slg": 0.469,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "martiru01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 81.39999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -511,8 +746,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.6,
+      "opsPlus": 142,
       "hr": 25,
       "avg": 0.32,
       "obp": 0.374,
@@ -522,8 +757,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.6,
+      "opsPlus": 142,
       "hr": 25,
       "avg": 0.32,
       "obp": 0.374,
@@ -544,230 +779,239 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "loducpa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 106.38571428571429,
-      "formulaVersion": "season-selection-v1"
+      "score": 81.33999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2000s-j-d-drew-2006",
-    "playerId": "drewjd01",
-    "playerSlug": "j-d-drew",
-    "name": "J. D. Drew",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2006,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.283,
-      "obp": 0.393,
-      "slg": 0.498,
-      "rbi": 100,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.283,
-      "obp": 0.393,
-      "slg": 0.498,
-      "rbi": 100,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 146,
-      "plateAppearances": 593,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.393,
-      "slg": 0.498,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "drewjd01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 106.04285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-rafael-furcal-2008",
-    "playerId": "furcara01",
-    "playerSlug": "rafael-furcal",
-    "name": "Rafael Furcal",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2008,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.357,
-      "obp": 0.439,
-      "slg": 0.573,
-      "rbi": 16,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.357,
-      "obp": 0.439,
-      "slg": 0.573,
-      "rbi": 16,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 36,
-      "plateAppearances": 164,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.439,
-      "slg": 0.573,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "furcara01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 105.88571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-todd-hundley-2000",
-    "playerId": "hundlto01",
-    "playerSlug": "todd-hundley",
-    "name": "Todd Hundley",
+    "id": "lad-2000s-chan-ho-park-2000",
+    "playerId": "parkch01",
+    "playerSlug": "chan-ho-park",
+    "name": "Chan Ho Park",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2000s",
     "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "C"
+      "SP"
     ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.284,
-      "obp": 0.375,
-      "slg": 0.579,
-      "rbi": 70,
-      "sb": 0
+      "war": 4.9,
+      "eraPlus": 132,
+      "era": 3.27,
+      "whip": 1.314,
+      "so": 217,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.284,
-      "obp": 0.375,
-      "slg": 0.579,
-      "rbi": 70,
-      "sb": 0
+      "war": 4.9,
+      "eraPlus": 132,
+      "era": 3.27,
+      "whip": 1.314,
+      "so": 217,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 90,
-      "plateAppearances": 352,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.375,
-      "slg": 0.579,
-      "wrcPlus": null
+      "whip": 1.314,
+      "fip": null,
+      "inningsPitched": 226,
+      "strikeoutRate": 8.641592920353983,
+      "walkRate": 4.938053097345133,
+      "starts": 34,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "hundlto01"
+      "sourcePlayerId": "parkch01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.45714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 80,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-clayton-kershaw-2009",
+    "playerId": "kershcl01",
+    "playerSlug": "clayton-kershaw",
+    "name": "Clayton Kershaw",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.7,
+      "eraPlus": 143,
+      "era": 2.79,
+      "whip": 1.228,
+      "so": 185,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "eraPlus": 143,
+      "era": 2.79,
+      "whip": 1.228,
+      "so": 185,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.228,
+      "fip": null,
+      "inningsPitched": 171,
+      "strikeoutRate": 9.736842105263158,
+      "walkRate": 4.7894736842105265,
+      "starts": 30,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "kershcl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-chad-billingsley-2008",
+    "playerId": "billich01",
+    "playerSlug": "chad-billingsley",
+    "name": "Chad Billingsley",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.8,
+      "eraPlus": 133,
+      "era": 3.14,
+      "whip": 1.336,
+      "so": 201,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.8,
+      "eraPlus": 133,
+      "era": 3.14,
+      "whip": 1.336,
+      "so": 201,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.336,
+      "fip": null,
+      "inningsPitched": 200.7,
+      "strikeoutRate": 9.013452914798206,
+      "walkRate": 3.587443946188341,
+      "starts": 32,
+      "reliefAppearances": 3
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "billich01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 79.14999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -791,8 +1035,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.9,
+      "opsPlus": 125,
       "hr": 26,
       "avg": 0.297,
       "obp": 0.352,
@@ -802,8 +1046,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.9,
+      "opsPlus": 125,
       "hr": 26,
       "avg": 0.297,
       "obp": 0.352,
@@ -824,231 +1068,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "kempma01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.25714285714287,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-dave-hansen-2000",
-    "playerId": "hanseda01",
-    "playerSlug": "dave-hansen",
-    "name": "Dave Hansen",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "3B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.289,
-      "obp": 0.415,
-      "slg": 0.57,
-      "rbi": 26,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.289,
-      "obp": 0.415,
-      "slg": 0.57,
-      "rbi": 26,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 102,
-      "plateAppearances": 147,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.415,
-      "slg": 0.57,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "hanseda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.69999999999999,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-james-loney-2007",
-    "playerId": "loneyja01",
-    "playerSlug": "james-loney",
-    "name": "James Loney",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.331,
-      "obp": 0.381,
-      "slg": 0.538,
-      "rbi": 67,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.331,
-      "obp": 0.381,
-      "slg": 0.538,
-      "rbi": 67,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 96,
-      "plateAppearances": 375,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.381,
-      "slg": 0.538,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "loneyja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.61428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-russell-martin-2007",
-    "playerId": "martiru01",
-    "playerSlug": "russell-martin",
-    "name": "Russell Martin",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.293,
-      "obp": 0.374,
-      "slg": 0.469,
-      "rbi": 87,
-      "sb": 21
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.293,
-      "obp": 0.374,
-      "slg": 0.469,
-      "rbi": 87,
-      "sb": 21
-    },
-    "scoringStats": {
-      "games": 151,
-      "plateAppearances": 620,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.374,
-      "slg": 0.469,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "martiru01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.0142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 77.97000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1072,8 +1108,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.6,
+      "opsPlus": 123,
       "hr": 18,
       "avg": 0.28,
       "obp": 0.363,
@@ -1083,8 +1119,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.6,
+      "opsPlus": 123,
       "hr": 18,
       "avg": 0.28,
       "obp": 0.363,
@@ -1105,161 +1141,682 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "blakeca01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.21428571428571,
-      "formulaVersion": "season-selection-v1"
+      "score": 72.33999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2000s-takashi-saito-2007",
-    "playerId": "saitota01",
-    "playerSlug": "takashi-saito",
-    "name": "Takashi Saito",
+    "id": "lad-2000s-jeff-kent-2005",
+    "playerId": "kentje01",
+    "playerSlug": "jeff-kent",
+    "name": "Jeff Kent",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "1B",
+      "2B"
     ],
-    "bats": "L",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.4,
-      "whip": 0.715,
-      "so": 78,
-      "wins": 2,
-      "saves": 39,
-      "sv": 39
+      "war": 3.8,
+      "opsPlus": 133,
+      "hr": 29,
+      "avg": 0.289,
+      "obp": 0.377,
+      "slg": 0.512,
+      "rbi": 105,
+      "sb": 6
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.4,
-      "whip": 0.715,
-      "so": 78,
-      "wins": 2,
-      "saves": 39,
-      "sv": 39
+      "war": 3.8,
+      "opsPlus": 133,
+      "hr": 29,
+      "avg": 0.289,
+      "obp": 0.377,
+      "slg": 0.512,
+      "rbi": 105,
+      "sb": 6
     },
     "scoringStats": {
-      "whip": 0.715,
-      "fip": null,
-      "inningsPitched": 64.3,
-      "strikeoutRate": 10.917573872472785,
-      "walkRate": 1.8195956454121307,
-      "starts": 0,
-      "reliefAppearances": 63
+      "games": 149,
+      "plateAppearances": 637,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.377,
+      "slg": 0.512,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "saitota01"
+      "sourcePlayerId": "kentje01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.54696734059098,
-      "formulaVersion": "season-selection-v1"
+      "score": 68.47,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2000s-jose-hernandez-2004",
-    "playerId": "hernajo01",
-    "playerSlug": "jose-hernandez",
-    "name": "Jose Hernandez",
+    "id": "lad-2000s-j-d-drew-2006",
+    "playerId": "drewjd01",
+    "playerSlug": "j-d-drew",
+    "name": "J. D. Drew",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2000s",
-    "featuredSeason": 2004,
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "opsPlus": 126,
+      "hr": 20,
+      "avg": 0.283,
+      "obp": 0.393,
+      "slg": 0.498,
+      "rbi": 100,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "opsPlus": 126,
+      "hr": 20,
+      "avg": 0.283,
+      "obp": 0.393,
+      "slg": 0.498,
+      "rbi": 100,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 146,
+      "plateAppearances": 593,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.393,
+      "slg": 0.498,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "drewjd01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2006.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.93,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-rafael-furcal-2006",
+    "playerId": "furcara01",
+    "playerSlug": "rafael-furcal",
+    "name": "Rafael Furcal",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.3,
+      "opsPlus": 107,
+      "hr": 15,
+      "avg": 0.3,
+      "obp": 0.369,
+      "slg": 0.445,
+      "rbi": 63,
+      "sb": 37
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.3,
+      "opsPlus": 107,
+      "hr": 15,
+      "avg": 0.3,
+      "obp": 0.369,
+      "slg": 0.445,
+      "rbi": 63,
+      "sb": 37
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 731,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.445,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "furcara01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2006.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 62.41,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-orlando-hudson-2009",
+    "playerId": "hudsoor01",
+    "playerSlug": "orlando-hudson",
+    "name": "Orlando Hudson",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.1,
+      "opsPlus": 109,
+      "hr": 9,
+      "avg": 0.283,
+      "obp": 0.357,
+      "slg": 0.417,
+      "rbi": 62,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.1,
+      "opsPlus": 109,
+      "hr": 9,
+      "avg": 0.283,
+      "obp": 0.357,
+      "slg": 0.417,
+      "rbi": 62,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 149,
+      "plateAppearances": 622,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.417,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "hudsoor01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.919999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-andre-ethier-2009",
+    "playerId": "ethiean01",
+    "playerSlug": "andre-ethier",
+    "name": "Andre Ethier",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3,
+      "opsPlus": 132,
+      "hr": 31,
+      "avg": 0.272,
+      "obp": 0.361,
+      "slg": 0.508,
+      "rbi": 106,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "opsPlus": 132,
+      "hr": 31,
+      "avg": 0.272,
+      "obp": 0.361,
+      "slg": 0.508,
+      "rbi": 106,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 160,
+      "plateAppearances": 685,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.508,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "ethiean01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.85,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-todd-hundley-2000",
+    "playerId": "hundlto01",
+    "playerSlug": "todd-hundley",
+    "name": "Todd Hundley",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "opsPlus": 143,
+      "hr": 24,
+      "avg": 0.284,
+      "obp": 0.375,
+      "slg": 0.579,
+      "rbi": 70,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "opsPlus": 143,
+      "hr": 24,
+      "avg": 0.284,
+      "obp": 0.375,
+      "slg": 0.579,
+      "rbi": 70,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 90,
+      "plateAppearances": 352,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.375,
+      "slg": 0.579,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "hundlto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 55.02,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-brian-jordan-2002",
+    "playerId": "jordabr01",
+    "playerSlug": "brian-jordan",
+    "name": "Brian Jordan",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3,
+      "opsPlus": 118,
+      "hr": 18,
+      "avg": 0.285,
+      "obp": 0.338,
+      "slg": 0.469,
+      "rbi": 80,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "opsPlus": 118,
+      "hr": 18,
+      "avg": 0.285,
+      "obp": 0.338,
+      "slg": 0.469,
+      "rbi": 80,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 128,
+      "plateAppearances": 515,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.338,
+      "slg": 0.469,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "jordabr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.15,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-alex-cora-2002",
+    "playerId": "coraal01",
+    "playerSlug": "alex-cora",
+    "name": "Alex Cora",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2002,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
       "2B",
-      "3B",
       "SS"
     ],
-    "bats": "R",
+    "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.289,
-      "obp": 0.37,
-      "slg": 0.54,
-      "rbi": 29,
-      "sb": 3
+      "war": 3,
+      "opsPlus": 119,
+      "hr": 5,
+      "avg": 0.291,
+      "obp": 0.371,
+      "slg": 0.434,
+      "rbi": 28,
+      "sb": 7
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.289,
-      "obp": 0.37,
-      "slg": 0.54,
-      "rbi": 29,
-      "sb": 3
+      "war": 3,
+      "opsPlus": 119,
+      "hr": 5,
+      "avg": 0.291,
+      "obp": 0.371,
+      "slg": 0.434,
+      "rbi": 28,
+      "sb": 7
     },
     "scoringStats": {
-      "games": 95,
-      "plateAppearances": 238,
+      "games": 115,
+      "plateAppearances": 291,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.37,
-      "slg": 0.54,
+      "obp": 0.371,
+      "slg": 0.434,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "hernajo01"
+      "sourcePlayerId": "coraal01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 97.8,
-      "formulaVersion": "season-selection-v1"
+      "score": 48.41,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-james-loney-2007",
+    "playerId": "loneyja01",
+    "playerSlug": "james-loney",
+    "name": "James Loney",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.2,
+      "opsPlus": 134,
+      "hr": 15,
+      "avg": 0.331,
+      "obp": 0.381,
+      "slg": 0.538,
+      "rbi": 67,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "opsPlus": 134,
+      "hr": 15,
+      "avg": 0.331,
+      "obp": 0.381,
+      "slg": 0.538,
+      "rbi": 67,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 96,
+      "plateAppearances": 375,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.381,
+      "slg": 0.538,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "loneyja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.150000000000006,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1285,8 +1842,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 108,
       "hr": 19,
       "avg": 0.267,
       "obp": 0.362,
@@ -1296,8 +1853,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 108,
       "hr": 19,
       "avg": 0.267,
       "obp": 0.362,
@@ -1318,90 +1875,171 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "bradlmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.57142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 47.14,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "lad-2000s-orlando-hudson-2009",
-    "playerId": "hudsoor01",
-    "playerSlug": "orlando-hudson",
-    "name": "Orlando Hudson",
+    "id": "lad-2000s-cesar-izturis-2004",
+    "playerId": "izturce01",
+    "playerSlug": "cesar-izturis",
+    "name": "Cesar Izturis",
     "franchiseId": "lad",
     "teamAbbreviation": "LAD",
     "teamDisplayName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2000s",
-    "featuredSeason": 2009,
+    "featuredSeason": 2004,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "2B"
+      "SS"
     ],
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.283,
-      "obp": 0.357,
-      "slg": 0.417,
+      "war": 3.8,
+      "opsPlus": 88,
+      "hr": 4,
+      "avg": 0.288,
+      "obp": 0.33,
+      "slg": 0.381,
       "rbi": 62,
-      "sb": 8
+      "sb": 25
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.283,
-      "obp": 0.357,
-      "slg": 0.417,
+      "war": 3.8,
+      "opsPlus": 88,
+      "hr": 4,
+      "avg": 0.288,
+      "obp": 0.33,
+      "slg": 0.381,
       "rbi": 62,
-      "sb": 8
+      "sb": 25
     },
     "scoringStats": {
-      "games": 149,
-      "plateAppearances": 622,
+      "games": 159,
+      "plateAppearances": 716,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.357,
-      "slg": 0.417,
+      "obp": 0.33,
+      "slg": 0.381,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
-      "sourcePlayerId": "hudsoor01"
+      "sourcePlayerId": "izturce01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.17142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 46.75999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "lad-2000s-jose-hernandez-2004",
+    "playerId": "hernajo01",
+    "playerSlug": "jose-hernandez",
+    "name": "Jose Hernandez",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.9,
+      "opsPlus": 137,
+      "hr": 13,
+      "avg": 0.289,
+      "obp": 0.37,
+      "slg": 0.54,
+      "rbi": 29,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.9,
+      "opsPlus": 137,
+      "hr": 13,
+      "avg": 0.289,
+      "obp": 0.37,
+      "slg": 0.54,
+      "rbi": 29,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 95,
+      "plateAppearances": 238,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.37,
+      "slg": 0.54,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "hernajo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.68,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1426,8 +2064,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.1,
+      "opsPlus": 123,
       "hr": 17,
       "avg": 0.277,
       "obp": 0.321,
@@ -1437,8 +2075,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.1,
+      "opsPlus": 123,
       "hr": 17,
       "avg": 0.277,
       "obp": 0.321,
@@ -1459,504 +2097,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "LAN"
       ],
       "sourcePlayerId": "grissma02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.69999999999999,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-cesar-izturis-2004",
-    "playerId": "izturce01",
-    "playerSlug": "cesar-izturis",
-    "name": "Cesar Izturis",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.288,
-      "obp": 0.33,
-      "slg": 0.381,
-      "rbi": 62,
-      "sb": 25
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.288,
-      "obp": 0.33,
-      "slg": 0.381,
-      "rbi": 62,
-      "sb": 25
-    },
-    "scoringStats": {
-      "games": 159,
-      "plateAppearances": 716,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.33,
-      "slg": 0.381,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "izturce01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 91.55714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-guillermo-mota-2003",
-    "playerId": "motagu01",
-    "playerSlug": "guillermo-mota",
-    "name": "Guillermo Mota",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.97,
-      "whip": 0.99,
-      "so": 99,
-      "wins": 6,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.97,
-      "whip": 0.99,
-      "so": 99,
-      "wins": 6,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 0.99,
-      "fip": null,
-      "inningsPitched": 105,
-      "strikeoutRate": 8.485714285714286,
-      "walkRate": 2.2285714285714286,
-      "starts": 0,
-      "reliefAppearances": 76
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "motagu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 81.94571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-kevin-brown-2000",
-    "playerId": "brownke01",
-    "playerSlug": "kevin-brown",
-    "name": "Kevin Brown",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.58,
-      "whip": 0.991,
-      "so": 216,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.58,
-      "whip": 0.991,
-      "so": 216,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.991,
-      "fip": null,
-      "inningsPitched": 230,
-      "strikeoutRate": 8.452173913043477,
-      "walkRate": 1.8391304347826087,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "brownke01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 75.1395652173913,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-wilson-alvarez-2003",
-    "playerId": "alvarwi01",
-    "playerSlug": "wilson-alvarez",
-    "name": "Wilson Alvarez",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.37,
-      "whip": 1.084,
-      "so": 82,
-      "wins": 6,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.37,
-      "whip": 1.084,
-      "so": 82,
-      "wins": 6,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 1.084,
-      "fip": null,
-      "inningsPitched": 95,
-      "strikeoutRate": 7.768421052631579,
-      "walkRate": 2.1789473684210527,
-      "starts": 12,
-      "reliefAppearances": 9
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "alvarwi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.54198830409356,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-odalis-perez-2002",
-    "playerId": "perezod01",
-    "playerSlug": "odalis-perez",
-    "name": "Odalis Perez",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 0.99,
-      "so": 155,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 0.99,
-      "so": 155,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.99,
-      "fip": null,
-      "inningsPitched": 222.3,
-      "strikeoutRate": 6.275303643724696,
-      "walkRate": 1.5384615384615383,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "perezod01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.30526315789474,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-clayton-kershaw-2009",
-    "playerId": "kershcl01",
-    "playerSlug": "clayton-kershaw",
-    "name": "Clayton Kershaw",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.79,
-      "whip": 1.228,
-      "so": 185,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.79,
-      "whip": 1.228,
-      "so": 185,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.228,
-      "fip": null,
-      "inningsPitched": 171,
-      "strikeoutRate": 9.736842105263158,
-      "walkRate": 4.7894736842105265,
-      "starts": 30,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "kershcl01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 62.881052631578946,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "lad-2000s-randy-wolf-2009",
-    "playerId": "wolfra02",
-    "playerSlug": "randy-wolf",
-    "name": "Randy Wolf",
-    "franchiseId": "lad",
-    "teamAbbreviation": "LAD",
-    "teamDisplayName": "Los Angeles Dodgers",
-    "team": "LAD",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.23,
-      "whip": 1.101,
-      "so": 160,
-      "wins": 11,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.23,
-      "whip": 1.101,
-      "so": 160,
-      "wins": 11,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.101,
-      "fip": null,
-      "inningsPitched": 214.3,
-      "strikeoutRate": 6.719552029864675,
-      "walkRate": 2.4358376108259447,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "LAN"
-      ],
-      "sourcePlayerId": "wolfra02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 61.55112718411366,
-      "formulaVersion": "season-selection-v1"
+      "score": 40.410000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

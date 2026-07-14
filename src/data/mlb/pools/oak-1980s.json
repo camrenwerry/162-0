@@ -1,72 +1,75 @@
 [
   {
-    "id": "oak-1980s-mark-mcgwire-1987",
-    "playerId": "mcgwima01",
-    "playerSlug": "mark-mcgwire",
-    "name": "Mark McGwire",
+    "id": "oak-1980s-rickey-henderson-1980",
+    "playerId": "henderi01",
+    "playerSlug": "rickey-henderson",
+    "name": "Rickey Henderson",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "1980s",
-    "featuredSeason": 1987,
+    "featuredSeason": 1980,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "1B"
+      "LF"
     ],
     "bats": "R",
-    "throws": "R",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 49,
-      "avg": 0.289,
-      "obp": 0.37,
-      "slg": 0.618,
-      "rbi": 118,
-      "sb": 1
+      "war": 8.8,
+      "opsPlus": 135,
+      "hr": 9,
+      "avg": 0.303,
+      "obp": 0.42,
+      "slg": 0.399,
+      "rbi": 53,
+      "sb": 100
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 49,
-      "avg": 0.289,
-      "obp": 0.37,
-      "slg": 0.618,
-      "rbi": 118,
-      "sb": 1
+      "war": 8.8,
+      "opsPlus": 135,
+      "hr": 9,
+      "avg": 0.303,
+      "obp": 0.42,
+      "slg": 0.399,
+      "rbi": 53,
+      "sb": 100
     },
     "scoringStats": {
-      "games": 151,
-      "plateAppearances": 641,
+      "games": 158,
+      "plateAppearances": 716,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.37,
-      "slg": 0.618,
+      "obp": 0.42,
+      "slg": 0.399,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "mcgwima01"
+      "sourcePlayerId": "henderi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 117.11428571428571,
-      "formulaVersion": "season-selection-v1"
+      "score": 130.26000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -90,8 +93,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.3,
+      "opsPlus": 170,
       "hr": 42,
       "avg": 0.307,
       "obp": 0.391,
@@ -101,8 +104,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.3,
+      "opsPlus": 170,
       "hr": 42,
       "avg": 0.307,
       "obp": 0.391,
@@ -123,20 +126,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "cansejo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 116.11428571428571,
-      "formulaVersion": "season-selection-v1"
+      "score": 129.64,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -160,8 +166,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.3,
+      "opsPlus": 149,
       "hr": 24,
       "avg": 0.304,
       "obp": 0.363,
@@ -171,8 +177,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.3,
+      "opsPlus": 149,
       "hr": 24,
       "avg": 0.304,
       "obp": 0.363,
@@ -193,168 +199,30 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "hendeda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 104.94285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 105.75,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-1980s-rickey-henderson-1984",
-    "playerId": "henderi01",
-    "playerSlug": "rickey-henderson",
-    "name": "Rickey Henderson",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1984,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.293,
-      "obp": 0.399,
-      "slg": 0.458,
-      "rbi": 58,
-      "sb": 66
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.293,
-      "obp": 0.399,
-      "slg": 0.458,
-      "rbi": 58,
-      "sb": 66
-    },
-    "scoringStats": {
-      "games": 142,
-      "plateAppearances": 596,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.399,
-      "slg": 0.458,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "henderi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.72857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-mike-davis-1985",
-    "playerId": "davismi02",
-    "playerSlug": "mike-davis",
-    "name": "Mike Davis",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1985,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.287,
-      "obp": 0.348,
-      "slg": 0.484,
-      "rbi": 82,
-      "sb": 24
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.287,
-      "obp": 0.348,
-      "slg": 0.484,
-      "rbi": 82,
-      "sb": 24
-    },
-    "scoringStats": {
-      "games": 154,
-      "plateAppearances": 601,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.348,
-      "slg": 0.484,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "davismi02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 100.37142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-carney-lansford-1987",
-    "playerId": "lansfca01",
-    "playerSlug": "carney-lansford",
-    "name": "Carney Lansford",
+    "id": "oak-1980s-mark-mcgwire-1987",
+    "playerId": "mcgwima01",
+    "playerSlug": "mark-mcgwire",
+    "name": "Mark McGwire",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
@@ -366,59 +234,206 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "1B",
-      "3B"
+      "1B"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
+      "war": 5.1,
+      "opsPlus": 164,
+      "hr": 49,
       "avg": 0.289,
-      "obp": 0.366,
-      "slg": 0.455,
-      "rbi": 76,
-      "sb": 27
+      "obp": 0.37,
+      "slg": 0.618,
+      "rbi": 118,
+      "sb": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
+      "war": 5.1,
+      "opsPlus": 164,
+      "hr": 49,
       "avg": 0.289,
-      "obp": 0.366,
-      "slg": 0.455,
-      "rbi": 76,
-      "sb": 27
+      "obp": 0.37,
+      "slg": 0.618,
+      "rbi": 118,
+      "sb": 1
     },
     "scoringStats": {
       "games": 151,
-      "plateAppearances": 626,
+      "plateAppearances": 641,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.366,
-      "slg": 0.455,
+      "obp": 0.37,
+      "slg": 0.618,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "lansfca01"
+      "sourcePlayerId": "mcgwima01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.98571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 99.60999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-dwayne-murphy-1980",
+    "playerId": "murphdw01",
+    "playerSlug": "dwayne-murphy",
+    "name": "Dwayne Murphy",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.9,
+      "opsPlus": 119,
+      "hr": 13,
+      "avg": 0.274,
+      "obp": 0.384,
+      "slg": 0.38,
+      "rbi": 68,
+      "sb": 26
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.9,
+      "opsPlus": 119,
+      "hr": 13,
+      "avg": 0.274,
+      "obp": 0.384,
+      "slg": 0.38,
+      "rbi": 68,
+      "sb": 26
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 680,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.38,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "murphdw01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.10000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-mike-norris-1980",
+    "playerId": "norrimi01",
+    "playerSlug": "mike-norris",
+    "name": "Mike Norris",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.9,
+      "eraPlus": 149,
+      "era": 2.53,
+      "whip": 1.048,
+      "so": 180,
+      "wins": 22,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.9,
+      "eraPlus": 149,
+      "era": 2.53,
+      "whip": 1.048,
+      "so": 180,
+      "wins": 22,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.048,
+      "fip": null,
+      "inningsPitched": 284.3,
+      "strikeoutRate": 5.698206120295462,
+      "walkRate": 2.6275061554695744,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "norrimi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.95000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -443,8 +458,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.9,
+      "opsPlus": 127,
       "hr": 35,
       "avg": 0.279,
       "obp": 0.31,
@@ -454,8 +469,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.9,
+      "opsPlus": 127,
       "hr": 35,
       "avg": 0.279,
       "obp": 0.31,
@@ -476,91 +491,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "armasto01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.97142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 90.94000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-1980s-jeff-burroughs-1982",
-    "playerId": "burroje01",
-    "playerSlug": "jeff-burroughs",
-    "name": "Jeff Burroughs",
+    "id": "oak-1980s-mike-moore-1989",
+    "playerId": "mooremi01",
+    "playerSlug": "mike-moore",
+    "name": "Mike Moore",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "LF",
-      "RF"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.277,
-      "obp": 0.372,
-      "slg": 0.505,
-      "rbi": 48,
-      "sb": 1
+      "war": 5.4,
+      "eraPlus": 142,
+      "era": 2.61,
+      "whip": 1.142,
+      "so": 172,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.277,
-      "obp": 0.372,
-      "slg": 0.505,
-      "rbi": 48,
-      "sb": 1
+      "war": 5.4,
+      "eraPlus": 142,
+      "era": 2.61,
+      "whip": 1.142,
+      "so": 172,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 113,
-      "plateAppearances": 333,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.372,
-      "slg": 0.505,
-      "wrcPlus": null
+      "whip": 1.142,
+      "fip": null,
+      "inningsPitched": 241.7,
+      "strikeoutRate": 6.404633843607779,
+      "walkRate": 3.090608191973521,
+      "starts": 35,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "burroje01"
+      "sourcePlayerId": "mooremi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 97.21428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 89.50000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -584,8 +603,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 2.5,
+      "eraPlus": 239,
       "era": 1.56,
       "whip": 0.607,
       "so": 55,
@@ -595,8 +614,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
+      "war": 2.5,
+      "eraPlus": 239,
       "era": 1.56,
       "whip": 0.607,
       "so": 55,
@@ -616,20 +635,387 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "eckerde01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.50637781629116,
-      "formulaVersion": "season-selection-v1"
+      "score": 85.9357142857143,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-carney-lansford-1987",
+    "playerId": "lansfca01",
+    "playerSlug": "carney-lansford",
+    "name": "Carney Lansford",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.2,
+      "opsPlus": 123,
+      "hr": 19,
+      "avg": 0.289,
+      "obp": 0.366,
+      "slg": 0.455,
+      "rbi": 76,
+      "sb": 27
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.2,
+      "opsPlus": 123,
+      "hr": 19,
+      "avg": 0.289,
+      "obp": 0.366,
+      "slg": 0.455,
+      "rbi": 76,
+      "sb": 27
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 626,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.366,
+      "slg": 0.455,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "lansfca01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.16000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-steve-mccatty-1981",
+    "playerId": "mccatst01",
+    "playerSlug": "steve-mccatty",
+    "name": "Steve McCatty",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "eraPlus": 148,
+      "era": 2.33,
+      "whip": 1.083,
+      "so": 91,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "eraPlus": 148,
+      "era": 2.33,
+      "whip": 1.083,
+      "so": 91,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.083,
+      "fip": null,
+      "inningsPitched": 185.7,
+      "strikeoutRate": 4.410339256865913,
+      "walkRate": 2.9563812600969306,
+      "starts": 22,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "mccatst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1981.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.085,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-mike-davis-1985",
+    "playerId": "davismi02",
+    "playerSlug": "mike-davis",
+    "name": "Mike Davis",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.7,
+      "opsPlus": 134,
+      "hr": 24,
+      "avg": 0.287,
+      "obp": 0.348,
+      "slg": 0.484,
+      "rbi": 82,
+      "sb": 24
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "opsPlus": 134,
+      "hr": 24,
+      "avg": 0.287,
+      "obp": 0.348,
+      "slg": 0.484,
+      "rbi": 82,
+      "sb": 24
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 601,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.484,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "davismi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 79.41000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-dave-stewart-1988",
+    "playerId": "stewada01",
+    "playerSlug": "dave-stewart",
+    "name": "Dave Stewart",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "eraPlus": 118,
+      "era": 3.23,
+      "whip": 1.27,
+      "so": 192,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "eraPlus": 118,
+      "era": 3.23,
+      "whip": 1.27,
+      "so": 192,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.27,
+      "fip": null,
+      "inningsPitched": 275.7,
+      "strikeoutRate": 6.267682263329706,
+      "walkRate": 3.5908596300326443,
+      "starts": 37,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "stewada01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.3,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-steve-ontiveros-1985",
+    "playerId": "ontivst02",
+    "playerSlug": "steve-ontiveros",
+    "name": "Steve Ontiveros",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "eraPlus": 199,
+      "era": 1.93,
+      "whip": 0.857,
+      "so": 36,
+      "wins": 1,
+      "saves": 8,
+      "sv": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "eraPlus": 199,
+      "era": 1.93,
+      "whip": 0.857,
+      "so": 36,
+      "wins": 1,
+      "saves": 8,
+      "sv": 8
+    },
+    "scoringStats": {
+      "whip": 0.857,
+      "fip": null,
+      "inningsPitched": 74.7,
+      "strikeoutRate": 4.337349397590361,
+      "walkRate": 2.289156626506024,
+      "starts": 0,
+      "reliefAppearances": 39
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "ontivst02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.22142857142858,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -653,8 +1039,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.6,
+      "opsPlus": 135,
       "hr": 15,
       "avg": 0.29,
       "obp": 0.344,
@@ -664,8 +1050,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.6,
+      "opsPlus": 135,
       "hr": 15,
       "avg": 0.29,
       "obp": 0.344,
@@ -686,373 +1072,167 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "reverda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.3142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 64.8,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-1980s-wayne-gross-1980",
-    "playerId": "grosswa01",
-    "playerSlug": "wayne-gross",
-    "name": "Wayne Gross",
+    "id": "oak-1980s-todd-burns-1989",
+    "playerId": "burnsto02",
+    "playerSlug": "todd-burns",
+    "name": "Todd Burns",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "1B",
-      "3B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.281,
-      "obp": 0.355,
-      "slg": 0.467,
-      "rbi": 61,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.281,
-      "obp": 0.355,
-      "slg": 0.467,
-      "rbi": 61,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 113,
-      "plateAppearances": 417,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.355,
-      "slg": 0.467,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "grosswa01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.11428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-terry-steinbach-1987",
-    "playerId": "steinte01",
-    "playerSlug": "terry-steinbach",
-    "name": "Terry Steinbach",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1987,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B",
-      "C"
+      "RP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.284,
-      "obp": 0.349,
-      "slg": 0.463,
-      "rbi": 56,
-      "sb": 1
+      "war": 2.6,
+      "eraPlus": 166,
+      "era": 2.24,
+      "whip": 0.976,
+      "so": 49,
+      "wins": 6,
+      "saves": 8,
+      "sv": 8
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.284,
-      "obp": 0.349,
-      "slg": 0.463,
-      "rbi": 56,
-      "sb": 1
+      "war": 2.6,
+      "eraPlus": 166,
+      "era": 2.24,
+      "whip": 0.976,
+      "so": 49,
+      "wins": 6,
+      "saves": 8,
+      "sv": 8
     },
     "scoringStats": {
-      "games": 122,
-      "plateAppearances": 435,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.349,
-      "slg": 0.463,
-      "wrcPlus": null
+      "whip": 0.976,
+      "fip": null,
+      "inningsPitched": 96.3,
+      "strikeoutRate": 4.579439252336448,
+      "walkRate": 2.6168224299065423,
+      "starts": 2,
+      "reliefAppearances": 48
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "steinte01"
+      "sourcePlayerId": "burnsto02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.62857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 61.15714285714285,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-1980s-davey-lopes-1983",
-    "playerId": "lopesda01",
-    "playerSlug": "davey-lopes",
-    "name": "Davey Lopes",
+    "id": "oak-1980s-ray-burris-1984",
+    "playerId": "burrira01",
+    "playerSlug": "ray-burris",
+    "name": "Ray Burris",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1984,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "2B"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.277,
-      "obp": 0.341,
-      "slg": 0.423,
-      "rbi": 67,
-      "sb": 22
+      "war": 3.7,
+      "eraPlus": 118,
+      "era": 3.15,
+      "whip": 1.337,
+      "so": 93,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.277,
-      "obp": 0.341,
-      "slg": 0.423,
-      "rbi": 67,
-      "sb": 22
+      "war": 3.7,
+      "eraPlus": 118,
+      "era": 3.15,
+      "whip": 1.337,
+      "so": 93,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 147,
-      "plateAppearances": 557,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.341,
-      "slg": 0.423,
-      "wrcPlus": null
+      "whip": 1.337,
+      "fip": null,
+      "inningsPitched": 211.7,
+      "strikeoutRate": 3.9537080774681153,
+      "walkRate": 3.8261691072272086,
+      "starts": 28,
+      "reliefAppearances": 6
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "lopesda01"
+      "sourcePlayerId": "burrira01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 92.31428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-dusty-baker-1985",
-    "playerId": "bakerdu01",
-    "playerSlug": "dusty-baker",
-    "name": "Dusty Baker",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1985,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.268,
-      "obp": 0.359,
-      "slg": 0.44,
-      "rbi": 52,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.268,
-      "obp": 0.359,
-      "slg": 0.44,
-      "rbi": 52,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 111,
-      "plateAppearances": 396,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.44,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "bakerdu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 91.21428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-alfredo-griffin-1986",
-    "playerId": "griffal01",
-    "playerSlug": "alfredo-griffin",
-    "name": "Alfredo Griffin",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.285,
-      "obp": 0.323,
-      "slg": 0.364,
-      "rbi": 51,
-      "sb": 33
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.285,
-      "obp": 0.323,
-      "slg": 0.364,
-      "rbi": 51,
-      "sb": 33
-    },
-    "scoringStats": {
-      "games": 162,
-      "plateAppearances": 637,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.323,
-      "slg": 0.364,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "griffal01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 86.9,
-      "formulaVersion": "season-selection-v1"
+      "score": 60.7,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1077,8 +1257,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.4,
+      "opsPlus": 103,
       "hr": 5,
       "avg": 0.256,
       "obp": 0.367,
@@ -1088,8 +1268,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.4,
+      "opsPlus": 103,
       "hr": 5,
       "avg": 0.256,
       "obp": 0.367,
@@ -1110,20 +1290,465 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "phillto02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 86.14285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 59.53,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-wayne-gross-1980",
+    "playerId": "grosswa01",
+    "playerSlug": "wayne-gross",
+    "name": "Wayne Gross",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.2,
+      "opsPlus": 132,
+      "hr": 14,
+      "avg": 0.281,
+      "obp": 0.355,
+      "slg": 0.467,
+      "rbi": 61,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.2,
+      "opsPlus": 132,
+      "hr": 14,
+      "avg": 0.281,
+      "obp": 0.355,
+      "slg": 0.467,
+      "rbi": 61,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 113,
+      "plateAppearances": 417,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.467,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "grosswa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.57000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-terry-steinbach-1987",
+    "playerId": "steinte01",
+    "playerSlug": "terry-steinbach",
+    "name": "Terry Steinbach",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B",
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.5,
+      "opsPlus": 120,
+      "hr": 16,
+      "avg": 0.284,
+      "obp": 0.349,
+      "slg": 0.463,
+      "rbi": 56,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "opsPlus": 120,
+      "hr": 16,
+      "avg": 0.284,
+      "obp": 0.349,
+      "slg": 0.463,
+      "rbi": 56,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 122,
+      "plateAppearances": 435,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.349,
+      "slg": 0.463,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "steinte01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.35,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-davey-lopes-1983",
+    "playerId": "lopesda01",
+    "playerSlug": "davey-lopes",
+    "name": "Davey Lopes",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.8,
+      "opsPlus": 116,
+      "hr": 17,
+      "avg": 0.277,
+      "obp": 0.341,
+      "slg": 0.423,
+      "rbi": 67,
+      "sb": 22
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.8,
+      "opsPlus": 116,
+      "hr": 17,
+      "avg": 0.277,
+      "obp": 0.341,
+      "slg": 0.423,
+      "rbi": 67,
+      "sb": 22
+    },
+    "scoringStats": {
+      "games": 147,
+      "plateAppearances": 557,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.341,
+      "slg": 0.423,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "lopesda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.169999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-jeff-burroughs-1982",
+    "playerId": "burroje01",
+    "playerSlug": "jeff-burroughs",
+    "name": "Jeff Burroughs",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.6,
+      "opsPlus": 145,
+      "hr": 16,
+      "avg": 0.277,
+      "obp": 0.372,
+      "slg": 0.505,
+      "rbi": 48,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.6,
+      "opsPlus": 145,
+      "hr": 16,
+      "avg": 0.277,
+      "obp": 0.372,
+      "slg": 0.505,
+      "rbi": 48,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 113,
+      "plateAppearances": 333,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.372,
+      "slg": 0.505,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "burroje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.03,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-alfredo-griffin-1986",
+    "playerId": "griffal01",
+    "playerSlug": "alfredo-griffin",
+    "name": "Alfredo Griffin",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.4,
+      "opsPlus": 94,
+      "hr": 4,
+      "avg": 0.285,
+      "obp": 0.323,
+      "slg": 0.364,
+      "rbi": 51,
+      "sb": 33
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "opsPlus": 94,
+      "hr": 4,
+      "avg": 0.285,
+      "obp": 0.323,
+      "slg": 0.364,
+      "rbi": 51,
+      "sb": 33
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 637,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.323,
+      "slg": 0.364,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "griffal01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.169999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-1980s-dusty-baker-1985",
+    "playerId": "bakerdu01",
+    "playerSlug": "dusty-baker",
+    "name": "Dusty Baker",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.2,
+      "opsPlus": 126,
+      "hr": 14,
+      "avg": 0.268,
+      "obp": 0.359,
+      "slg": 0.44,
+      "rbi": 52,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "opsPlus": 126,
+      "hr": 14,
+      "avg": 0.268,
+      "obp": 0.359,
+      "slg": 0.44,
+      "rbi": 52,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 111,
+      "plateAppearances": 396,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.44,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "bakerdu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.36000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1150,8 +1775,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 103,
       "hr": 13,
       "avg": 0.25,
       "obp": 0.313,
@@ -1161,8 +1786,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 103,
       "hr": 13,
       "avg": 0.25,
       "obp": 0.313,
@@ -1183,233 +1808,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "heathmi02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 85.87142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-joe-morgan-1984",
-    "playerId": "morgajo02",
-    "playerSlug": "joe-morgan",
-    "name": "Joe Morgan",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1984,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.244,
-      "obp": 0.356,
-      "slg": 0.351,
-      "rbi": 43,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.244,
-      "obp": 0.356,
-      "slg": 0.351,
-      "rbi": 43,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 116,
-      "plateAppearances": 438,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.356,
-      "slg": 0.351,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "morgajo02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 83.21428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-bill-almon-1983",
-    "playerId": "almonbi01",
-    "playerSlug": "bill-almon",
-    "name": "Bill Almon",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "3B",
-      "SS",
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.266,
-      "obp": 0.302,
-      "slg": 0.361,
-      "rbi": 63,
-      "sb": 26
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.266,
-      "obp": 0.302,
-      "slg": 0.361,
-      "rbi": 63,
-      "sb": 26
-    },
-    "scoringStats": {
-      "games": 143,
-      "plateAppearances": 490,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.302,
-      "slg": 0.361,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "almonbi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 80.3,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-ron-hassey-1988",
-    "playerId": "hassero01",
-    "playerSlug": "ron-hassey",
-    "name": "Ron Hassey",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1988,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.257,
-      "obp": 0.323,
-      "slg": 0.368,
-      "rbi": 45,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.257,
-      "obp": 0.323,
-      "slg": 0.368,
-      "rbi": 45,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 107,
-      "plateAppearances": 362,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.323,
-      "slg": 0.368,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "hassero01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 79.44285714285715,
-      "formulaVersion": "season-selection-v1"
+      "score": 41.12,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1433,8 +1848,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.8,
+      "opsPlus": 81,
       "hr": 3,
       "avg": 0.25,
       "obp": 0.312,
@@ -1444,8 +1859,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.8,
+      "opsPlus": 81,
       "hr": 3,
       "avg": 0.25,
       "obp": 0.312,
@@ -1466,503 +1881,243 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "weisswa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 77.67142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 29.129999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-1980s-steve-ontiveros-1985",
-    "playerId": "ontivst02",
-    "playerSlug": "steve-ontiveros",
-    "name": "Steve Ontiveros",
+    "id": "oak-1980s-joe-morgan-1984",
+    "playerId": "morgajo02",
+    "playerSlug": "joe-morgan",
+    "name": "Joe Morgan",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "1980s",
-    "featuredSeason": 1985,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 1984,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.93,
-      "whip": 0.857,
-      "so": 36,
-      "wins": 1,
-      "saves": 8,
-      "sv": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.93,
-      "whip": 0.857,
-      "so": 36,
-      "wins": 1,
-      "saves": 8,
-      "sv": 8
-    },
-    "scoringStats": {
-      "whip": 0.857,
-      "fip": null,
-      "inningsPitched": 74.7,
-      "strikeoutRate": 4.337349397590361,
-      "walkRate": 2.289156626506024,
-      "starts": 0,
-      "reliefAppearances": 39
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "ontivst02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 74.57228915662651,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-rick-honeycutt-1989",
-    "playerId": "honeyri01",
-    "playerSlug": "rick-honeycutt",
-    "name": "Rick Honeycutt",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
+      "2B"
     ],
     "bats": "L",
-    "throws": "L",
+    "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.35,
-      "whip": 1.07,
-      "so": 52,
-      "wins": 2,
-      "saves": 12,
-      "sv": 12
+      "war": 1.6,
+      "opsPlus": 104,
+      "hr": 6,
+      "avg": 0.244,
+      "obp": 0.356,
+      "slg": 0.351,
+      "rbi": 43,
+      "sb": 8
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.35,
-      "whip": 1.07,
-      "so": 52,
-      "wins": 2,
-      "saves": 12,
-      "sv": 12
+      "war": 1.6,
+      "opsPlus": 104,
+      "hr": 6,
+      "avg": 0.244,
+      "obp": 0.356,
+      "slg": 0.351,
+      "rbi": 43,
+      "sb": 8
     },
     "scoringStats": {
-      "whip": 1.07,
-      "fip": null,
-      "inningsPitched": 76.7,
-      "strikeoutRate": 6.101694915254237,
-      "walkRate": 3.0508474576271185,
-      "starts": 0,
-      "reliefAppearances": 64
+      "games": 116,
+      "plateAppearances": 438,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.356,
+      "slg": 0.351,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "honeyri01"
+      "sourcePlayerId": "morgajo02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 70.97627118644067,
-      "formulaVersion": "season-selection-v1"
+      "score": 25.580000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-1980s-mike-norris-1980",
-    "playerId": "norrimi01",
-    "playerSlug": "mike-norris",
-    "name": "Mike Norris",
+    "id": "oak-1980s-ron-hassey-1988",
+    "playerId": "hassero01",
+    "playerSlug": "ron-hassey",
+    "name": "Ron Hassey",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "C"
     ],
-    "bats": "R",
+    "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.53,
-      "whip": 1.048,
-      "so": 180,
-      "wins": 22,
-      "saves": 0,
-      "sv": 0
+      "war": 1.7,
+      "opsPlus": 96,
+      "hr": 7,
+      "avg": 0.257,
+      "obp": 0.323,
+      "slg": 0.368,
+      "rbi": 45,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.53,
-      "whip": 1.048,
-      "so": 180,
-      "wins": 22,
-      "saves": 0,
-      "sv": 0
+      "war": 1.7,
+      "opsPlus": 96,
+      "hr": 7,
+      "avg": 0.257,
+      "obp": 0.323,
+      "slg": 0.368,
+      "rbi": 45,
+      "sb": 2
     },
     "scoringStats": {
-      "whip": 1.048,
-      "fip": null,
-      "inningsPitched": 284.3,
-      "strikeoutRate": 5.698206120295462,
-      "walkRate": 2.6275061554695744,
-      "starts": 33,
-      "reliefAppearances": 0
+      "games": 107,
+      "plateAppearances": 362,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.323,
+      "slg": 0.368,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "norrimi01"
+      "sourcePlayerId": "hassero01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 69.28604994723884,
-      "formulaVersion": "season-selection-v1"
+      "score": 22.02,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-1980s-steve-mccatty-1981",
-    "playerId": "mccatst01",
-    "playerSlug": "steve-mccatty",
-    "name": "Steve McCatty",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1981,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.33,
-      "whip": 1.083,
-      "so": 91,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.33,
-      "whip": 1.083,
-      "so": 91,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.083,
-      "fip": null,
-      "inningsPitched": 185.7,
-      "strikeoutRate": 4.410339256865913,
-      "walkRate": 2.9563812600969306,
-      "starts": 22,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "mccatst01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 66.87760366182015,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-mike-moore-1989",
-    "playerId": "mooremi01",
-    "playerSlug": "mike-moore",
-    "name": "Mike Moore",
+    "id": "oak-1980s-mike-gallego-1989",
+    "playerId": "gallemi01",
+    "playerSlug": "mike-gallego",
+    "name": "Mike Gallego",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "1980s",
     "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "2B",
+      "SS"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.61,
-      "whip": 1.142,
-      "so": 172,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
+      "war": 2,
+      "opsPlus": 88,
+      "hr": 3,
+      "avg": 0.252,
+      "obp": 0.327,
+      "slg": 0.328,
+      "rbi": 30,
+      "sb": 7
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.61,
-      "whip": 1.142,
-      "so": 172,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
+      "war": 2,
+      "opsPlus": 88,
+      "hr": 3,
+      "avg": 0.252,
+      "obp": 0.327,
+      "slg": 0.328,
+      "rbi": 30,
+      "sb": 7
     },
     "scoringStats": {
-      "whip": 1.142,
-      "fip": null,
-      "inningsPitched": 241.7,
-      "strikeoutRate": 6.404633843607779,
-      "walkRate": 3.090608191973521,
-      "starts": 35,
-      "reliefAppearances": 0
+      "games": 133,
+      "plateAppearances": 401,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.327,
+      "slg": 0.328,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "mooremi01"
+      "sourcePlayerId": "gallemi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 66.81103847745139,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-bob-welch-1989",
-    "playerId": "welchbo01",
-    "playerSlug": "bob-welch",
-    "name": "Bob Welch",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 1.283,
-      "so": 137,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 1.283,
-      "so": 137,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.283,
-      "fip": null,
-      "inningsPitched": 209.7,
-      "strikeoutRate": 5.879828326180258,
-      "walkRate": 3.347639484978541,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "welchbo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 57.788283261802576,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-1980s-moose-haas-1986",
-    "playerId": "haasmo01",
-    "playerSlug": "moose-haas",
-    "name": "Moose Haas",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.74,
-      "whip": 1.065,
-      "so": 40,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.74,
-      "whip": 1.065,
-      "so": 40,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.065,
-      "fip": null,
-      "inningsPitched": 72.3,
-      "strikeoutRate": 4.979253112033195,
-      "walkRate": 2.3651452282157677,
-      "starts": 12,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "haasmo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 57.757828492392804,
-      "formulaVersion": "season-selection-v1"
+      "score": 22.009999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

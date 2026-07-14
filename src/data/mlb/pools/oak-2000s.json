@@ -1,5 +1,77 @@
 [
   {
+    "id": "oak-2000s-joey-devine-2008",
+    "playerId": "devinjo01",
+    "playerSlug": "joey-devine",
+    "name": "Joey Devine",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.9,
+      "eraPlus": 698,
+      "era": 0.59,
+      "whip": 0.832,
+      "so": 49,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.9,
+      "eraPlus": 698,
+      "era": 0.59,
+      "whip": 0.832,
+      "so": 49,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.832,
+      "fip": null,
+      "inningsPitched": 45.7,
+      "strikeoutRate": 9.649890590809628,
+      "walkRate": 2.9540481400437635,
+      "starts": 0,
+      "reliefAppearances": 42
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "devinjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 238.09999999999997,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
     "id": "oak-2000s-jason-giambi-2001",
     "playerId": "giambja01",
     "playerSlug": "jason-giambi",
@@ -20,8 +92,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.2,
+      "opsPlus": 199,
       "hr": 38,
       "avg": 0.342,
       "obp": 0.477,
@@ -31,8 +103,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.2,
+      "opsPlus": 199,
       "hr": 38,
       "avg": 0.342,
       "obp": 0.477,
@@ -53,20 +125,528 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "giambja01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 132.87142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 166.60999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-brad-ziegler-2008",
+    "playerId": "zieglbr01",
+    "playerSlug": "brad-ziegler",
+    "name": "Brad Ziegler",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.8,
+      "eraPlus": 390,
+      "era": 1.06,
+      "whip": 1.156,
+      "so": 30,
+      "wins": 3,
+      "saves": 11,
+      "sv": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.8,
+      "eraPlus": 390,
+      "era": 1.06,
+      "whip": 1.156,
+      "so": 30,
+      "wins": 3,
+      "saves": 11,
+      "sv": 11
+    },
+    "scoringStats": {
+      "whip": 1.156,
+      "fip": null,
+      "inningsPitched": 59.7,
+      "strikeoutRate": 4.522613065326633,
+      "walkRate": 3.316582914572864,
+      "starts": 0,
+      "reliefAppearances": 47
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "zieglbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 141.81428571428572,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-tim-hudson-2003",
+    "playerId": "hudsoti01",
+    "playerSlug": "tim-hudson",
+    "name": "Tim Hudson",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7.4,
+      "eraPlus": 165,
+      "era": 2.7,
+      "whip": 1.075,
+      "so": 162,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.4,
+      "eraPlus": 165,
+      "era": 2.7,
+      "whip": 1.075,
+      "so": 162,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.075,
+      "fip": null,
+      "inningsPitched": 240,
+      "strikeoutRate": 6.075,
+      "walkRate": 2.2875,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "hudsoti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 121.55000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-barry-zito-2002",
+    "playerId": "zitoba01",
+    "playerSlug": "barry-zito",
+    "name": "Barry Zito",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 7.2,
+      "eraPlus": 158,
+      "era": 2.75,
+      "whip": 1.134,
+      "so": 182,
+      "wins": 23,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.2,
+      "eraPlus": 158,
+      "era": 2.75,
+      "whip": 1.134,
+      "so": 182,
+      "wins": 23,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.134,
+      "fip": null,
+      "inningsPitched": 229.3,
+      "strikeoutRate": 7.143480156999564,
+      "walkRate": 3.0614914958569557,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "zitoba01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 116.7,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-andrew-bailey-2009",
+    "playerId": "bailean01",
+    "playerSlug": "andrew-bailey",
+    "name": "Andrew Bailey",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "eraPlus": 239,
+      "era": 1.84,
+      "whip": 0.876,
+      "so": 91,
+      "wins": 6,
+      "saves": 26,
+      "sv": 26
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "eraPlus": 239,
+      "era": 1.84,
+      "whip": 0.876,
+      "so": 91,
+      "wins": 6,
+      "saves": 26,
+      "sv": 26
+    },
+    "scoringStats": {
+      "whip": 0.876,
+      "fip": null,
+      "inningsPitched": 83.3,
+      "strikeoutRate": 9.831932773109244,
+      "walkRate": 2.5930372148859546,
+      "starts": 0,
+      "reliefAppearances": 68
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "bailean01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.76428571428572,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-huston-street-2005",
+    "playerId": "streehu01",
+    "playerSlug": "huston-street",
+    "name": "Huston Street",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 254,
+      "era": 1.72,
+      "whip": 1.009,
+      "so": 72,
+      "wins": 5,
+      "saves": 23,
+      "sv": 23
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 254,
+      "era": 1.72,
+      "whip": 1.009,
+      "so": 72,
+      "wins": 5,
+      "saves": 23,
+      "sv": 23
+    },
+    "scoringStats": {
+      "whip": 1.009,
+      "fip": null,
+      "inningsPitched": 78.3,
+      "strikeoutRate": 8.275862068965518,
+      "walkRate": 2.9885057471264367,
+      "starts": 0,
+      "reliefAppearances": 67
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "streehu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.27142857142856,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-mark-mulder-2003",
+    "playerId": "muldema01",
+    "playerSlug": "mark-mulder",
+    "name": "Mark Mulder",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.8,
+      "eraPlus": 142,
+      "era": 3.13,
+      "whip": 1.179,
+      "so": 128,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.8,
+      "eraPlus": 142,
+      "era": 3.13,
+      "whip": 1.179,
+      "so": 128,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.179,
+      "fip": null,
+      "inningsPitched": 186.7,
+      "strikeoutRate": 6.170326727370113,
+      "walkRate": 1.9282271023031603,
+      "starts": 26,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "muldema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.63499999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-eric-chavez-2001",
+    "playerId": "chaveer01",
+    "playerSlug": "eric-chavez",
+    "name": "Eric Chavez",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6,
+      "opsPlus": 129,
+      "hr": 32,
+      "avg": 0.288,
+      "obp": 0.338,
+      "slg": 0.54,
+      "rbi": 114,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6,
+      "opsPlus": 129,
+      "hr": 32,
+      "avg": 0.288,
+      "obp": 0.338,
+      "slg": 0.54,
+      "rbi": 114,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 604,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.338,
+      "slg": 0.54,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "chaveer01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.54,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -90,8 +670,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.7,
+      "opsPlus": 128,
       "hr": 34,
       "avg": 0.308,
       "obp": 0.354,
@@ -101,8 +681,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.7,
+      "opsPlus": 128,
       "hr": 34,
       "avg": 0.308,
       "obp": 0.354,
@@ -123,27 +703,322 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "tejadmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 106.62857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 89.55000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-2000s-eric-chavez-2004",
-    "playerId": "chaveer01",
-    "playerSlug": "eric-chavez",
-    "name": "Eric Chavez",
+    "id": "oak-2000s-dan-haren-2007",
+    "playerId": "harenda01",
+    "playerSlug": "dan-haren",
+    "name": "Dan Haren",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "eraPlus": 138,
+      "era": 3.07,
+      "whip": 1.208,
+      "so": 192,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "eraPlus": 138,
+      "era": 3.07,
+      "whip": 1.208,
+      "so": 192,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.208,
+      "fip": null,
+      "inningsPitched": 222.7,
+      "strikeoutRate": 7.759317467444994,
+      "walkRate": 2.222721149528514,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "harenda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.3,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-rich-harden-2005",
+    "playerId": "harderi01",
+    "playerSlug": "rich-harden",
+    "name": "Rich Harden",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "eraPlus": 173,
+      "era": 2.53,
+      "whip": 1.062,
+      "so": 121,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "eraPlus": 173,
+      "era": 2.53,
+      "whip": 1.062,
+      "so": 121,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.062,
+      "fip": null,
+      "inningsPitched": 128,
+      "strikeoutRate": 8.5078125,
+      "walkRate": 3.0234375,
+      "starts": 19,
+      "reliefAppearances": 3
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "harderi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 76.35000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-mark-ellis-2005",
+    "playerId": "ellisma01",
+    "playerSlug": "mark-ellis",
+    "name": "Mark Ellis",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.7,
+      "opsPlus": 128,
+      "hr": 13,
+      "avg": 0.316,
+      "obp": 0.384,
+      "slg": 0.477,
+      "rbi": 52,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "opsPlus": 128,
+      "hr": 13,
+      "avg": 0.316,
+      "obp": 0.384,
+      "slg": 0.477,
+      "rbi": 52,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 122,
+      "plateAppearances": 482,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.477,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "ellisma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.22,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-nick-swisher-2007",
+    "playerId": "swishni01",
+    "playerSlug": "nick-swisher",
+    "name": "Nick Swisher",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "CF",
+      "RF"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.3,
+      "opsPlus": 126,
+      "hr": 22,
+      "avg": 0.262,
+      "obp": 0.381,
+      "slg": 0.455,
+      "rbi": 78,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.3,
+      "opsPlus": 126,
+      "hr": 22,
+      "avg": 0.262,
+      "obp": 0.381,
+      "slg": 0.455,
+      "rbi": 78,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 658,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.381,
+      "slg": 0.455,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "swishni01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.17999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-mark-kotsay-2004",
+    "playerId": "kotsama01",
+    "playerSlug": "mark-kotsay",
+    "name": "Mark Kotsay",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
@@ -155,58 +1030,61 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "3B"
+      "CF"
     ],
     "bats": "L",
-    "throws": "R",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.276,
-      "obp": 0.397,
-      "slg": 0.501,
-      "rbi": 77,
-      "sb": 6
+      "war": 4.6,
+      "opsPlus": 116,
+      "hr": 15,
+      "avg": 0.314,
+      "obp": 0.37,
+      "slg": 0.459,
+      "rbi": 63,
+      "sb": 8
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.276,
-      "obp": 0.397,
-      "slg": 0.501,
-      "rbi": 77,
-      "sb": 6
+      "war": 4.6,
+      "opsPlus": 116,
+      "hr": 15,
+      "avg": 0.314,
+      "obp": 0.37,
+      "slg": 0.459,
+      "rbi": 63,
+      "sb": 8
     },
     "scoringStats": {
-      "games": 125,
-      "plateAppearances": 577,
+      "games": 148,
+      "plateAppearances": 668,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.397,
-      "slg": 0.501,
+      "obp": 0.37,
+      "slg": 0.459,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "chaveer01"
+      "sourcePlayerId": "kotsama01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 106.28571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 69.88,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -231,8 +1109,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.3,
+      "opsPlus": 146,
       "hr": 26,
       "avg": 0.256,
       "obp": 0.408,
@@ -242,8 +1120,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.3,
+      "opsPlus": 146,
       "hr": 26,
       "avg": 0.256,
       "obp": 0.408,
@@ -264,238 +1142,30 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "custja01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.68571428571427,
-      "formulaVersion": "season-selection-v1"
+      "score": 67.66999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-2000s-nick-swisher-2006",
-    "playerId": "swishni01",
-    "playerSlug": "nick-swisher",
-    "name": "Nick Swisher",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2006,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "LF"
-    ],
-    "bats": "B",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 35,
-      "avg": 0.254,
-      "obp": 0.372,
-      "slg": 0.493,
-      "rbi": 95,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 35,
-      "avg": 0.254,
-      "obp": 0.372,
-      "slg": 0.493,
-      "rbi": 95,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 670,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.372,
-      "slg": 0.493,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "swishni01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 105.64285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-ben-grieve-2000",
-    "playerId": "grievbe01",
-    "playerSlug": "ben-grieve",
-    "name": "Ben Grieve",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.279,
-      "obp": 0.359,
-      "slg": 0.487,
-      "rbi": 104,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.279,
-      "obp": 0.359,
-      "slg": 0.487,
-      "rbi": 104,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 675,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.487,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "grievbe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 103.88571428571427,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-mark-kotsay-2004",
-    "playerId": "kotsama01",
-    "playerSlug": "mark-kotsay",
-    "name": "Mark Kotsay",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.314,
-      "obp": 0.37,
-      "slg": 0.459,
-      "rbi": 63,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.314,
-      "obp": 0.37,
-      "slg": 0.459,
-      "rbi": 63,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 148,
-      "plateAppearances": 668,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.37,
-      "slg": 0.459,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "kotsama01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.98571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-mark-ellis-2005",
-    "playerId": "ellisma01",
-    "playerSlug": "mark-ellis",
-    "name": "Mark Ellis",
+    "id": "oak-2000s-bobby-crosby-2005",
+    "playerId": "crosbbo01",
+    "playerSlug": "bobby-crosby",
+    "name": "Bobby Crosby",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
@@ -507,58 +1177,134 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "2B"
+      "SS"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.316,
-      "obp": 0.384,
-      "slg": 0.477,
-      "rbi": 52,
-      "sb": 1
+      "war": 3.7,
+      "opsPlus": 112,
+      "hr": 9,
+      "avg": 0.276,
+      "obp": 0.346,
+      "slg": 0.456,
+      "rbi": 38,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.316,
-      "obp": 0.384,
-      "slg": 0.477,
-      "rbi": 52,
-      "sb": 1
+      "war": 3.7,
+      "opsPlus": 112,
+      "hr": 9,
+      "avg": 0.276,
+      "obp": 0.346,
+      "slg": 0.456,
+      "rbi": 38,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 122,
-      "plateAppearances": 482,
+      "games": 84,
+      "plateAppearances": 370,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.384,
-      "slg": 0.477,
+      "obp": 0.346,
+      "slg": 0.456,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "ellisma01"
+      "sourcePlayerId": "crosbbo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.87142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 54.10000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-scott-hatteberg-2002",
+    "playerId": "hattesc01",
+    "playerSlug": "scott-hatteberg",
+    "name": "Scott Hatteberg",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.3,
+      "opsPlus": 116,
+      "hr": 15,
+      "avg": 0.28,
+      "obp": 0.374,
+      "slg": 0.433,
+      "rbi": 61,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.3,
+      "opsPlus": 116,
+      "hr": 15,
+      "avg": 0.28,
+      "obp": 0.374,
+      "slg": 0.433,
+      "rbi": 61,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 567,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.374,
+      "slg": 0.433,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "hattesc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.269999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -584,8 +1330,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 111,
       "hr": 20,
       "avg": 0.283,
       "obp": 0.347,
@@ -595,8 +1341,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 111,
       "hr": 20,
       "avg": 0.283,
       "obp": 0.347,
@@ -617,27 +1363,249 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "byrneer01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.45714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 52.62,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-2000s-jermaine-dye-2001",
-    "playerId": "dyeje01",
-    "playerSlug": "jermaine-dye",
-    "name": "Jermaine Dye",
+    "id": "oak-2000s-matt-holliday-2009",
+    "playerId": "hollima01",
+    "playerSlug": "matt-holliday",
+    "name": "Matt Holliday",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3,
+      "opsPlus": 120,
+      "hr": 11,
+      "avg": 0.286,
+      "obp": 0.378,
+      "slg": 0.454,
+      "rbi": 54,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "opsPlus": 120,
+      "hr": 11,
+      "avg": 0.286,
+      "obp": 0.378,
+      "slg": 0.454,
+      "rbi": 54,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 93,
+      "plateAppearances": 400,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.378,
+      "slg": 0.454,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "hollima01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-ramon-hernandez-2003",
+    "playerId": "hernara02",
+    "playerSlug": "ramon-hernandez",
+    "name": "Ramon Hernandez",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.4,
+      "opsPlus": 107,
+      "hr": 21,
+      "avg": 0.273,
+      "obp": 0.331,
+      "slg": 0.458,
+      "rbi": 78,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "opsPlus": 107,
+      "hr": 21,
+      "avg": 0.273,
+      "obp": 0.331,
+      "slg": 0.458,
+      "rbi": 78,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 534,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.331,
+      "slg": 0.458,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "hernara02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.64,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-kurt-suzuki-2008",
+    "playerId": "suzukku01",
+    "playerSlug": "kurt-suzuki",
+    "name": "Kurt Suzuki",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.8,
+      "opsPlus": 96,
+      "hr": 7,
+      "avg": 0.279,
+      "obp": 0.346,
+      "slg": 0.37,
+      "rbi": 42,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.8,
+      "opsPlus": 96,
+      "hr": 7,
+      "avg": 0.279,
+      "obp": 0.346,
+      "slg": 0.37,
+      "rbi": 42,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 148,
+      "plateAppearances": 586,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.346,
+      "slg": 0.37,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "suzukku01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.459999999999994,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "oak-2000s-frank-menechino-2001",
+    "playerId": "menecfr01",
+    "playerSlug": "frank-menechino",
+    "name": "Frank Menechino",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
@@ -649,127 +1617,134 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "RF"
+      "2B"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.297,
-      "obp": 0.366,
-      "slg": 0.547,
-      "rbi": 59,
+      "war": 3.3,
+      "opsPlus": 99,
+      "hr": 12,
+      "avg": 0.242,
+      "obp": 0.369,
+      "slg": 0.374,
+      "rbi": 60,
       "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.297,
-      "obp": 0.366,
-      "slg": 0.547,
-      "rbi": 59,
+      "war": 3.3,
+      "opsPlus": 99,
+      "hr": 12,
+      "avg": 0.242,
+      "obp": 0.369,
+      "slg": 0.374,
+      "rbi": 60,
       "sb": 2
     },
     "scoringStats": {
-      "games": 61,
-      "plateAppearances": 265,
+      "games": 139,
+      "plateAppearances": 575,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.366,
-      "slg": 0.547,
+      "obp": 0.369,
+      "slg": 0.374,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "dyeje01"
+      "sourcePlayerId": "menecfr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.87142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 44.849999999999994,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-2000s-joey-devine-2008",
-    "playerId": "devinjo01",
-    "playerSlug": "joey-devine",
-    "name": "Joey Devine",
+    "id": "oak-2000s-jason-kendall-2006",
+    "playerId": "kendaja01",
+    "playerSlug": "jason-kendall",
+    "name": "Jason Kendall",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "2000s",
-    "featuredSeason": 2008,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "C"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 0.59,
-      "whip": 0.832,
-      "so": 49,
-      "wins": 6,
-      "saves": 1,
-      "sv": 1
+      "war": 3.7,
+      "opsPlus": 88,
+      "hr": 1,
+      "avg": 0.295,
+      "obp": 0.367,
+      "slg": 0.342,
+      "rbi": 50,
+      "sb": 11
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 0.59,
-      "whip": 0.832,
-      "so": 49,
-      "wins": 6,
-      "saves": 1,
-      "sv": 1
+      "war": 3.7,
+      "opsPlus": 88,
+      "hr": 1,
+      "avg": 0.295,
+      "obp": 0.367,
+      "slg": 0.342,
+      "rbi": 50,
+      "sb": 11
     },
     "scoringStats": {
-      "whip": 0.832,
-      "fip": null,
-      "inningsPitched": 45.7,
-      "strikeoutRate": 9.649890590809628,
-      "walkRate": 2.9540481400437635,
-      "starts": 0,
-      "reliefAppearances": 42
+      "games": 143,
+      "plateAppearances": 622,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.367,
+      "slg": 0.342,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "devinjo01"
+      "sourcePlayerId": "kendaja01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2006.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.7237636761488,
-      "formulaVersion": "season-selection-v1"
+      "score": 44.620000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -794,8 +1769,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.9,
+      "opsPlus": 134,
       "hr": 9,
       "avg": 0.313,
       "obp": 0.401,
@@ -805,8 +1780,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.9,
+      "opsPlus": 134,
       "hr": 9,
       "avg": 0.313,
       "obp": 0.401,
@@ -827,27 +1802,30 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "saenzol01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.55714285714285,
-      "formulaVersion": "season-selection-v1"
+      "score": 42.269999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-2000s-terrence-long-2000",
-    "playerId": "longte01",
-    "playerSlug": "terrence-long",
-    "name": "Terrence Long",
+    "id": "oak-2000s-randy-velarde-2000",
+    "playerId": "velarra01",
+    "playerSlug": "randy-velarde",
+    "name": "Randy Velarde",
     "franchiseId": "oak",
     "teamAbbreviation": "OAK",
     "teamDisplayName": "Oakland Athletics",
@@ -859,128 +1837,61 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.288,
-      "obp": 0.336,
-      "slg": 0.452,
-      "rbi": 80,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.288,
-      "obp": 0.336,
-      "slg": 0.452,
-      "rbi": 80,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 138,
-      "plateAppearances": 631,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.336,
-      "slg": 0.452,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "longte01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.82857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-ramon-hernandez-2003",
-    "playerId": "hernara02",
-    "playerSlug": "ramon-hernandez",
-    "name": "Ramon Hernandez",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
+      "2B"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.273,
-      "obp": 0.331,
-      "slg": 0.458,
-      "rbi": 78,
-      "sb": 0
+      "war": 2.3,
+      "opsPlus": 95,
+      "hr": 12,
+      "avg": 0.278,
+      "obp": 0.354,
+      "slg": 0.4,
+      "rbi": 41,
+      "sb": 9
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.273,
-      "obp": 0.331,
-      "slg": 0.458,
-      "rbi": 78,
-      "sb": 0
+      "war": 2.3,
+      "opsPlus": 95,
+      "hr": 12,
+      "avg": 0.278,
+      "obp": 0.354,
+      "slg": 0.4,
+      "rbi": 41,
+      "sb": 9
     },
     "scoringStats": {
-      "games": 140,
-      "plateAppearances": 534,
+      "games": 122,
+      "plateAppearances": 543,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.331,
-      "slg": 0.458,
+      "obp": 0.354,
+      "slg": 0.4,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
-      "sourcePlayerId": "hernara02"
+      "sourcePlayerId": "velarra01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.15714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 30.529999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1005,8 +1916,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.8,
+      "opsPlus": 126,
       "hr": 5,
       "avg": 0.299,
       "obp": 0.392,
@@ -1016,8 +1927,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.8,
+      "opsPlus": 126,
       "hr": 5,
       "avg": 0.299,
       "obp": 0.392,
@@ -1038,444 +1949,27 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "piattad01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.37142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 24.41,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "oak-2000s-adam-kennedy-2009",
-    "playerId": "kennead01",
-    "playerSlug": "adam-kennedy",
-    "name": "Adam Kennedy",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "3B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.289,
-      "obp": 0.348,
-      "slg": 0.41,
-      "rbi": 63,
-      "sb": 20
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.289,
-      "obp": 0.348,
-      "slg": 0.41,
-      "rbi": 63,
-      "sb": 20
-    },
-    "scoringStats": {
-      "games": 129,
-      "plateAppearances": 581,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.348,
-      "slg": 0.41,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "kennead01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 92.4,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-bobby-crosby-2004",
-    "playerId": "crosbbo01",
-    "playerSlug": "bobby-crosby",
-    "name": "Bobby Crosby",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.239,
-      "obp": 0.319,
-      "slg": 0.426,
-      "rbi": 64,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.239,
-      "obp": 0.319,
-      "slg": 0.426,
-      "rbi": 64,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 151,
-      "plateAppearances": 618,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.319,
-      "slg": 0.426,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "crosbbo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 92.15714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-kurt-suzuki-2009",
-    "playerId": "suzukku01",
-    "playerSlug": "kurt-suzuki",
-    "name": "Kurt Suzuki",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.274,
-      "obp": 0.313,
-      "slg": 0.421,
-      "rbi": 88,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.274,
-      "obp": 0.313,
-      "slg": 0.421,
-      "rbi": 88,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 147,
-      "plateAppearances": 613,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.313,
-      "slg": 0.421,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "suzukku01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.91428571428573,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-randy-velarde-2000",
-    "playerId": "velarra01",
-    "playerSlug": "randy-velarde",
-    "name": "Randy Velarde",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.278,
-      "obp": 0.354,
-      "slg": 0.4,
-      "rbi": 41,
-      "sb": 9
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.278,
-      "obp": 0.354,
-      "slg": 0.4,
-      "rbi": 41,
-      "sb": 9
-    },
-    "scoringStats": {
-      "games": 122,
-      "plateAppearances": 543,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.354,
-      "slg": 0.4,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "velarra01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.91428571428573,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-jason-kendall-2006",
-    "playerId": "kendaja01",
-    "playerSlug": "jason-kendall",
-    "name": "Jason Kendall",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2006,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 1,
-      "avg": 0.295,
-      "obp": 0.367,
-      "slg": 0.342,
-      "rbi": 50,
-      "sb": 11
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 1,
-      "avg": 0.295,
-      "obp": 0.367,
-      "slg": 0.342,
-      "rbi": 50,
-      "sb": 11
-    },
-    "scoringStats": {
-      "games": 143,
-      "plateAppearances": 622,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.367,
-      "slg": 0.342,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "kendaja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.67142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-andrew-bailey-2009",
-    "playerId": "bailean01",
-    "playerSlug": "andrew-bailey",
-    "name": "Andrew Bailey",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.84,
-      "whip": 0.876,
-      "so": 91,
-      "wins": 6,
-      "saves": 26,
-      "sv": 26
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.84,
-      "whip": 0.876,
-      "so": 91,
-      "wins": 6,
-      "saves": 26,
-      "sv": 26
-    },
-    "scoringStats": {
-      "whip": 0.876,
-      "fip": null,
-      "inningsPitched": 83.3,
-      "strikeoutRate": 9.831932773109244,
-      "walkRate": 2.5930372148859546,
-      "starts": 0,
-      "reliefAppearances": 68
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "bailean01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 87.25834333733494,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-marco-scutaro-2006",
+    "id": "oak-2000s-marco-scutaro-2005",
     "playerId": "scutama01",
     "playerSlug": "marco-scutaro",
     "name": "Marco Scutaro",
@@ -1484,480 +1978,68 @@
     "teamDisplayName": "Oakland Athletics",
     "team": "OAK",
     "decade": "2000s",
-    "featuredSeason": 2006,
+    "featuredSeason": 2005,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
       "2B",
-      "3B",
       "SS"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.266,
-      "obp": 0.35,
-      "slg": 0.397,
-      "rbi": 41,
+      "war": 1.6,
+      "opsPlus": 86,
+      "hr": 9,
+      "avg": 0.247,
+      "obp": 0.31,
+      "slg": 0.391,
+      "rbi": 37,
       "sb": 5
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.266,
-      "obp": 0.35,
-      "slg": 0.397,
-      "rbi": 41,
+      "war": 1.6,
+      "opsPlus": 86,
+      "hr": 9,
+      "avg": 0.247,
+      "obp": 0.31,
+      "slg": 0.391,
+      "rbi": 37,
       "sb": 5
     },
     "scoringStats": {
-      "games": 117,
-      "plateAppearances": 420,
+      "games": 118,
+      "plateAppearances": 419,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.35,
-      "slg": 0.397,
+      "obp": 0.31,
+      "slg": 0.391,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "OAK"
       ],
       "sourcePlayerId": "scutama01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 86.7,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-keith-foulke-2003",
-    "playerId": "foulkke01",
-    "playerSlug": "keith-foulke",
-    "name": "Keith Foulke",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.08,
-      "whip": 0.888,
-      "so": 88,
-      "wins": 9,
-      "saves": 43,
-      "sv": 43
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.08,
-      "whip": 0.888,
-      "so": 88,
-      "wins": 9,
-      "saves": 43,
-      "sv": 43
-    },
-    "scoringStats": {
-      "whip": 0.888,
-      "fip": null,
-      "inningsPitched": 86.7,
-      "strikeoutRate": 9.134948096885813,
-      "walkRate": 2.0761245674740483,
-      "starts": 0,
-      "reliefAppearances": 72
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "foulkke01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 83.86823529411765,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-rich-harden-2008",
-    "playerId": "harderi01",
-    "playerSlug": "rich-harden",
-    "name": "Rich Harden",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2008,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.34,
-      "whip": 1.143,
-      "so": 92,
-      "wins": 5,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.34,
-      "whip": 1.143,
-      "so": 92,
-      "wins": 5,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.143,
-      "fip": null,
-      "inningsPitched": 77,
-      "strikeoutRate": 10.753246753246753,
-      "walkRate": 3.6233766233766236,
-      "starts": 13,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "harderi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 68.03258297258297,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-tim-hudson-2003",
-    "playerId": "hudsoti01",
-    "playerSlug": "tim-hudson",
-    "name": "Tim Hudson",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.7,
-      "whip": 1.075,
-      "so": 162,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.7,
-      "whip": 1.075,
-      "so": 162,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.075,
-      "fip": null,
-      "inningsPitched": 240,
-      "strikeoutRate": 6.075,
-      "walkRate": 2.2875,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "hudsoti01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.78125,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-barry-zito-2002",
-    "playerId": "zitoba01",
-    "playerSlug": "barry-zito",
-    "name": "Barry Zito",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.75,
-      "whip": 1.134,
-      "so": 182,
-      "wins": 23,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.75,
-      "whip": 1.134,
-      "so": 182,
-      "wins": 23,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.134,
-      "fip": null,
-      "inningsPitched": 229.3,
-      "strikeoutRate": 7.143480156999564,
-      "walkRate": 3.0614914958569557,
-      "starts": 35,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "zitoba01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 66.44298299171392,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-dan-haren-2007",
-    "playerId": "harenda01",
-    "playerSlug": "dan-haren",
-    "name": "Dan Haren",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.07,
-      "whip": 1.208,
-      "so": 192,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.07,
-      "whip": 1.208,
-      "so": 192,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.208,
-      "fip": null,
-      "inningsPitched": 222.7,
-      "strikeoutRate": 7.759317467444994,
-      "walkRate": 2.222721149528514,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "harenda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 63.30489447687473,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "oak-2000s-mark-mulder-2003",
-    "playerId": "muldema01",
-    "playerSlug": "mark-mulder",
-    "name": "Mark Mulder",
-    "franchiseId": "oak",
-    "teamAbbreviation": "OAK",
-    "teamDisplayName": "Oakland Athletics",
-    "team": "OAK",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.13,
-      "whip": 1.179,
-      "so": 128,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.13,
-      "whip": 1.179,
-      "so": 128,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.179,
-      "fip": null,
-      "inningsPitched": 186.7,
-      "strikeoutRate": 6.170326727370113,
-      "walkRate": 1.9282271023031603,
-      "starts": 26,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "OAK"
-      ],
-      "sourcePlayerId": "muldema01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 59.595371659822646,
-      "formulaVersion": "season-selection-v1"
+      "score": 16.390000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

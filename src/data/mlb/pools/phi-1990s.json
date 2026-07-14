@@ -1,146 +1,6 @@
 [
   {
-    "id": "phi-1990s-bobby-abreu-1999",
-    "playerId": "abreubo01",
-    "playerSlug": "bobby-abreu",
-    "name": "Bobby Abreu",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.335,
-      "obp": 0.446,
-      "slg": 0.549,
-      "rbi": 93,
-      "sb": 27
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.335,
-      "obp": 0.446,
-      "slg": 0.549,
-      "rbi": 93,
-      "sb": 27
-    },
-    "scoringStats": {
-      "games": 152,
-      "plateAppearances": 662,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.446,
-      "slg": 0.549,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "abreubo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 118.41428571428573,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-scott-rolen-1998",
-    "playerId": "rolensc01",
-    "playerSlug": "scott-rolen",
-    "name": "Scott Rolen",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.29,
-      "obp": 0.391,
-      "slg": 0.532,
-      "rbi": 110,
-      "sb": 14
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.29,
-      "obp": 0.391,
-      "slg": 0.532,
-      "rbi": 110,
-      "sb": 14
-    },
-    "scoringStats": {
-      "games": 160,
-      "plateAppearances": 711,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.391,
-      "slg": 0.532,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "rolensc01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 112.61428571428573,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-lenny-dykstra-1993",
+    "id": "phi-1990s-lenny-dykstra-1990",
     "playerId": "dykstle01",
     "playerSlug": "lenny-dykstra",
     "name": "Lenny Dykstra",
@@ -149,7 +9,7 @@
     "teamDisplayName": "Philadelphia Phillies",
     "team": "PHI",
     "decade": "1990s",
-    "featuredSeason": 1993,
+    "featuredSeason": 1990,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -160,193 +20,56 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.305,
-      "obp": 0.42,
-      "slg": 0.482,
-      "rbi": 66,
-      "sb": 37
+      "war": 8.9,
+      "opsPlus": 138,
+      "hr": 9,
+      "avg": 0.325,
+      "obp": 0.418,
+      "slg": 0.441,
+      "rbi": 60,
+      "sb": 33
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.305,
-      "obp": 0.42,
-      "slg": 0.482,
-      "rbi": 66,
-      "sb": 37
+      "war": 8.9,
+      "opsPlus": 138,
+      "hr": 9,
+      "avg": 0.325,
+      "obp": 0.418,
+      "slg": 0.441,
+      "rbi": 60,
+      "sb": 33
     },
     "scoringStats": {
-      "games": 161,
-      "plateAppearances": 773,
+      "games": 149,
+      "plateAppearances": 689,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.42,
-      "slg": 0.482,
+      "obp": 0.418,
+      "slg": 0.441,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "dykstle01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 111.62857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-john-kruk-1993",
-    "playerId": "krukjo01",
-    "playerSlug": "john-kruk",
-    "name": "John Kruk",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.316,
-      "obp": 0.43,
-      "slg": 0.475,
-      "rbi": 85,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.316,
-      "obp": 0.43,
-      "slg": 0.475,
-      "rbi": 85,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 150,
-      "plateAppearances": 651,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.43,
-      "slg": 0.475,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "krukjo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 109.1,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-mike-lieberthal-1999",
-    "playerId": "liebemi01",
-    "playerSlug": "mike-lieberthal",
-    "name": "Mike Lieberthal",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.3,
-      "obp": 0.363,
-      "slg": 0.551,
-      "rbi": 96,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.3,
-      "obp": 0.363,
-      "slg": 0.551,
-      "rbi": 96,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 145,
-      "plateAppearances": 573,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.363,
-      "slg": 0.551,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "liebemi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 107.77142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 132.69,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -370,8 +93,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.9,
+      "opsPlus": 156,
       "hr": 27,
       "avg": 0.27,
       "obp": 0.385,
@@ -381,8 +104,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.9,
+      "opsPlus": 156,
       "hr": 27,
       "avg": 0.27,
       "obp": 0.385,
@@ -403,20 +126,241 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "daultda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 107.61428571428573,
-      "formulaVersion": "season-selection-v1"
+      "score": 116.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-scott-rolen-1998",
+    "playerId": "rolensc01",
+    "playerSlug": "scott-rolen",
+    "name": "Scott Rolen",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.7,
+      "opsPlus": 139,
+      "hr": 31,
+      "avg": 0.29,
+      "obp": 0.391,
+      "slg": 0.532,
+      "rbi": 110,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.7,
+      "opsPlus": 139,
+      "hr": 31,
+      "avg": 0.29,
+      "obp": 0.391,
+      "slg": 0.532,
+      "rbi": 110,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 160,
+      "plateAppearances": 711,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.391,
+      "slg": 0.532,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "rolensc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.01,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-bobby-abreu-1999",
+    "playerId": "abreubo01",
+    "playerSlug": "bobby-abreu",
+    "name": "Bobby Abreu",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.1,
+      "opsPlus": 147,
+      "hr": 20,
+      "avg": 0.335,
+      "obp": 0.446,
+      "slg": 0.549,
+      "rbi": 93,
+      "sb": 27
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.1,
+      "opsPlus": 147,
+      "hr": 20,
+      "avg": 0.335,
+      "obp": 0.446,
+      "slg": 0.549,
+      "rbi": 93,
+      "sb": 27
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 662,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.446,
+      "slg": 0.549,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "abreubo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.32,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-curt-schilling-1997",
+    "playerId": "schilcu01",
+    "playerSlug": "curt-schilling",
+    "name": "Curt Schilling",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.3,
+      "eraPlus": 143,
+      "era": 2.97,
+      "whip": 1.046,
+      "so": 319,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.3,
+      "eraPlus": 143,
+      "era": 2.97,
+      "whip": 1.046,
+      "so": 319,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.046,
+      "fip": null,
+      "inningsPitched": 254.3,
+      "strikeoutRate": 11.289815178922533,
+      "walkRate": 2.0526936688950057,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "schilcu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.64999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -440,8 +384,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.1,
+      "opsPlus": 137,
       "hr": 27,
       "avg": 0.27,
       "obp": 0.369,
@@ -451,8 +395,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.1,
+      "opsPlus": 137,
       "hr": 27,
       "avg": 0.27,
       "obp": 0.369,
@@ -473,20 +417,528 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "hollida01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.37142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 98.54999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-john-kruk-1993",
+    "playerId": "krukjo01",
+    "playerSlug": "john-kruk",
+    "name": "John Kruk",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.7,
+      "opsPlus": 145,
+      "hr": 14,
+      "avg": 0.316,
+      "obp": 0.43,
+      "slg": 0.475,
+      "rbi": 85,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "opsPlus": 145,
+      "hr": 14,
+      "avg": 0.316,
+      "obp": 0.43,
+      "slg": 0.475,
+      "rbi": 85,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 651,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.43,
+      "slg": 0.475,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "krukjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.41000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-danny-jackson-1994",
+    "playerId": "jacksda02",
+    "playerSlug": "danny-jackson",
+    "name": "Danny Jackson",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.7,
+      "eraPlus": 132,
+      "era": 3.26,
+      "whip": 1.277,
+      "so": 129,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "eraPlus": 132,
+      "era": 3.26,
+      "whip": 1.277,
+      "so": 129,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.277,
+      "fip": null,
+      "inningsPitched": 179.3,
+      "strikeoutRate": 6.475181260457334,
+      "walkRate": 2.308979364194088,
+      "starts": 25,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "jacksda02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1994.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 76.56500000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-ricky-bottalico-1995",
+    "playerId": "bottari01",
+    "playerSlug": "ricky-bottalico",
+    "name": "Ricky Bottalico",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3,
+      "eraPlus": 171,
+      "era": 2.46,
+      "whip": 1.049,
+      "so": 87,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "eraPlus": 171,
+      "era": 2.46,
+      "whip": 1.049,
+      "so": 87,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.049,
+      "fip": null,
+      "inningsPitched": 87.7,
+      "strikeoutRate": 8.928164196123147,
+      "walkRate": 4.310148232611175,
+      "starts": 0,
+      "reliefAppearances": 62
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "bottari01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 69.70714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-doug-jones-1994",
+    "playerId": "jonesdo01",
+    "playerSlug": "doug-jones",
+    "name": "Doug Jones",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.3,
+      "eraPlus": 200,
+      "era": 2.17,
+      "whip": 1.13,
+      "so": 38,
+      "wins": 2,
+      "saves": 27,
+      "sv": 27
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "eraPlus": 200,
+      "era": 2.17,
+      "whip": 1.13,
+      "so": 38,
+      "wins": 2,
+      "saves": 27,
+      "sv": 27
+    },
+    "scoringStats": {
+      "whip": 1.13,
+      "fip": null,
+      "inningsPitched": 54,
+      "strikeoutRate": 6.333333333333333,
+      "walkRate": 1,
+      "starts": 0,
+      "reliefAppearances": 47
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "jonesdo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1994.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 69.3142857142857,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-mitch-williams-1991",
+    "playerId": "willimi02",
+    "playerSlug": "mitch-williams",
+    "name": "Mitch Williams",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 157,
+      "era": 2.34,
+      "whip": 1.336,
+      "so": 84,
+      "wins": 12,
+      "saves": 30,
+      "sv": 30
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 157,
+      "era": 2.34,
+      "whip": 1.336,
+      "so": 84,
+      "wins": 12,
+      "saves": 30,
+      "sv": 30
+    },
+    "scoringStats": {
+      "whip": 1.336,
+      "fip": null,
+      "inningsPitched": 88.3,
+      "strikeoutRate": 8.561721404303512,
+      "walkRate": 6.319365798414497,
+      "starts": 0,
+      "reliefAppearances": 69
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "willimi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 64.60714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-terry-mulholland-1993",
+    "playerId": "mulhote01",
+    "playerSlug": "terry-mulholland",
+    "name": "Terry Mulholland",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.7,
+      "eraPlus": 122,
+      "era": 3.25,
+      "whip": 1.136,
+      "so": 116,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "eraPlus": 122,
+      "era": 3.25,
+      "whip": 1.136,
+      "so": 116,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.136,
+      "fip": null,
+      "inningsPitched": 191,
+      "strikeoutRate": 5.465968586387435,
+      "walkRate": 1.8848167539267016,
+      "starts": 28,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "mulhote01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 61.650000000000006,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-bobby-munoz-1994",
+    "playerId": "munozbo01",
+    "playerSlug": "bobby-munoz",
+    "name": "Bobby Munoz",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.8,
+      "eraPlus": 161,
+      "era": 2.67,
+      "whip": 1.304,
+      "so": 59,
+      "wins": 7,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.8,
+      "eraPlus": 161,
+      "era": 2.67,
+      "whip": 1.304,
+      "so": 59,
+      "wins": 7,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.304,
+      "fip": null,
+      "inningsPitched": 104.3,
+      "strikeoutRate": 5.091083413231065,
+      "walkRate": 3.0201342281879198,
+      "starts": 14,
+      "reliefAppearances": 7
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "munozbo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1994.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.16499999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -510,8 +962,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.1,
+      "opsPlus": 107,
       "hr": 11,
       "avg": 0.325,
       "obp": 0.376,
@@ -521,8 +973,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.1,
+      "opsPlus": 107,
       "hr": 11,
       "avg": 0.325,
       "obp": 0.376,
@@ -543,20 +995,168 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "glanvdo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.92857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 59.56999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-tommy-greene-1993",
+    "playerId": "greento01",
+    "playerSlug": "tommy-greene",
+    "name": "Tommy Greene",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "eraPlus": 116,
+      "era": 3.42,
+      "whip": 1.185,
+      "so": 167,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "eraPlus": 116,
+      "era": 3.42,
+      "whip": 1.185,
+      "so": 167,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.185,
+      "fip": null,
+      "inningsPitched": 200,
+      "strikeoutRate": 7.515,
+      "walkRate": 2.79,
+      "starts": 30,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "greento01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.800000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-mike-lieberthal-1999",
+    "playerId": "liebemi01",
+    "playerSlug": "mike-lieberthal",
+    "name": "Mike Lieberthal",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.4,
+      "opsPlus": 124,
+      "hr": 31,
+      "avg": 0.3,
+      "obp": 0.363,
+      "slg": 0.551,
+      "rbi": 96,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "opsPlus": 124,
+      "hr": 31,
+      "avg": 0.3,
+      "obp": 0.363,
+      "slg": 0.551,
+      "rbi": 96,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 573,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.363,
+      "slg": 0.551,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "liebemi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.53,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -581,8 +1181,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 136,
       "hr": 3,
       "avg": 0.361,
       "obp": 0.413,
@@ -592,8 +1192,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 136,
       "hr": 3,
       "avg": 0.361,
       "obp": 0.413,
@@ -614,231 +1214,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "eisenji01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.55714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-benito-santiago-1996",
-    "playerId": "santibe01",
-    "playerSlug": "benito-santiago",
-    "name": "Benito Santiago",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1996,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.264,
-      "obp": 0.332,
-      "slg": 0.503,
-      "rbi": 85,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.264,
-      "obp": 0.332,
-      "slg": 0.503,
-      "rbi": 85,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 136,
-      "plateAppearances": 533,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.332,
-      "slg": 0.503,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "santibe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 98.72857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-rico-brogna-1999",
-    "playerId": "brognri01",
-    "playerSlug": "rico-brogna",
-    "name": "Rico Brogna",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.278,
-      "obp": 0.336,
-      "slg": 0.454,
-      "rbi": 102,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.278,
-      "obp": 0.336,
-      "slg": 0.454,
-      "rbi": 102,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 679,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.336,
-      "slg": 0.454,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "brognri01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 98.4,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-ron-gant-1999",
-    "playerId": "gantro01",
-    "playerSlug": "ron-gant",
-    "name": "Ron Gant",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.26,
-      "obp": 0.364,
-      "slg": 0.43,
-      "rbi": 77,
-      "sb": 13
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.26,
-      "obp": 0.364,
-      "slg": 0.43,
-      "rbi": 77,
-      "sb": 13
-    },
-    "scoringStats": {
-      "games": 138,
-      "plateAppearances": 605,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.364,
-      "slg": 0.43,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "gantro01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.68571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 56.529999999999994,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -862,8 +1254,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3,
+      "opsPlus": 125,
       "hr": 24,
       "avg": 0.274,
       "obp": 0.318,
@@ -873,8 +1265,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3,
+      "opsPlus": 125,
       "hr": 24,
       "avg": 0.274,
       "obp": 0.318,
@@ -895,91 +1287,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "incavpe01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 96.28571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-todd-zeile-1996",
-    "playerId": "zeileto01",
-    "playerSlug": "todd-zeile",
-    "name": "Todd Zeile",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1996,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.268,
-      "obp": 0.353,
-      "slg": 0.436,
-      "rbi": 80,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.268,
-      "obp": 0.353,
-      "slg": 0.436,
-      "rbi": 80,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 134,
-      "plateAppearances": 572,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.353,
-      "slg": 0.436,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "zeileto01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95.24285714285713,
-      "formulaVersion": "season-selection-v1"
+      "score": 52.519999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1004,8 +1328,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 118,
       "hr": 17,
       "avg": 0.261,
       "obp": 0.375,
@@ -1015,8 +1339,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 118,
       "hr": 17,
       "avg": 0.261,
       "obp": 0.375,
@@ -1037,24 +1361,101 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "hayesvo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.02857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 51.88,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "phi-1990s-mickey-morandini-1997",
+    "id": "phi-1990s-benito-santiago-1996",
+    "playerId": "santibe01",
+    "playerSlug": "benito-santiago",
+    "name": "Benito Santiago",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "opsPlus": 118,
+      "hr": 30,
+      "avg": 0.264,
+      "obp": 0.332,
+      "slg": 0.503,
+      "rbi": 85,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "opsPlus": 118,
+      "hr": 30,
+      "avg": 0.264,
+      "obp": 0.332,
+      "slg": 0.503,
+      "rbi": 85,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 533,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.332,
+      "slg": 0.503,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "santibe01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.129999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-mickey-morandini-1995",
     "playerId": "moranmi01",
     "playerSlug": "mickey-morandini",
     "name": "Mickey Morandini",
@@ -1063,7 +1464,7 @@
     "teamDisplayName": "Philadelphia Phillies",
     "team": "PHI",
     "decade": "1990s",
-    "featuredSeason": 1997,
+    "featuredSeason": 1995,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -1074,53 +1475,56 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 1,
-      "avg": 0.295,
-      "obp": 0.371,
-      "slg": 0.38,
-      "rbi": 39,
-      "sb": 16
+      "war": 2.5,
+      "opsPlus": 103,
+      "hr": 6,
+      "avg": 0.283,
+      "obp": 0.35,
+      "slg": 0.417,
+      "rbi": 49,
+      "sb": 9
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 1,
-      "avg": 0.295,
-      "obp": 0.371,
-      "slg": 0.38,
-      "rbi": 39,
-      "sb": 16
+      "war": 2.5,
+      "opsPlus": 103,
+      "hr": 6,
+      "avg": 0.283,
+      "obp": 0.35,
+      "slg": 0.417,
+      "rbi": 49,
+      "sb": 9
     },
     "scoringStats": {
-      "games": 150,
-      "plateAppearances": 628,
+      "games": 127,
+      "plateAppearances": 546,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.371,
-      "slg": 0.38,
+      "obp": 0.35,
+      "slg": 0.417,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "moranmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.04285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 36.96,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1144,8 +1548,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.4,
+      "opsPlus": 125,
       "hr": 2,
       "avg": 0.324,
       "obp": 0.409,
@@ -1155,8 +1559,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.4,
+      "opsPlus": 125,
       "hr": 2,
       "avg": 0.324,
       "obp": 0.409,
@@ -1177,90 +1581,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "stockke01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.11428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-alex-arias-1999",
-    "playerId": "ariasal01",
-    "playerSlug": "alex-arias",
-    "name": "Alex Arias",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.303,
-      "obp": 0.373,
-      "slg": 0.401,
-      "rbi": 48,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.303,
-      "obp": 0.373,
-      "slg": 0.401,
-      "rbi": 48,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 118,
-      "plateAppearances": 389,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.373,
-      "slg": 0.401,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "ariasal01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.51428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 32.279999999999994,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1284,8 +1621,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.8,
+      "opsPlus": 110,
       "hr": 1,
       "avg": 0.303,
       "obp": 0.369,
@@ -1295,8 +1632,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.8,
+      "opsPlus": 110,
       "hr": 1,
       "avg": 0.303,
       "obp": 0.369,
@@ -1317,24 +1654,320 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "cummimi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 86.85714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 28.93,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "phi-1990s-mariano-duncan-1993",
+    "id": "phi-1990s-charlie-hayes-1995",
+    "playerId": "hayesch01",
+    "playerSlug": "charlie-hayes",
+    "name": "Charlie Hayes",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.9,
+      "opsPlus": 97,
+      "hr": 11,
+      "avg": 0.276,
+      "obp": 0.34,
+      "slg": 0.406,
+      "rbi": 85,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.9,
+      "opsPlus": 97,
+      "hr": 11,
+      "avg": 0.276,
+      "obp": 0.34,
+      "slg": 0.406,
+      "rbi": 85,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 589,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.34,
+      "slg": 0.406,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "hayesch01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 27.189999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-gregg-jefferies-1995",
+    "playerId": "jeffegr01",
+    "playerSlug": "gregg-jefferies",
+    "name": "Gregg Jefferies",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.3,
+      "opsPlus": 110,
+      "hr": 11,
+      "avg": 0.306,
+      "obp": 0.349,
+      "slg": 0.448,
+      "rbi": 56,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.3,
+      "opsPlus": 110,
+      "hr": 11,
+      "avg": 0.306,
+      "obp": 0.349,
+      "slg": 0.448,
+      "rbi": 56,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 114,
+      "plateAppearances": 521,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.349,
+      "slg": 0.448,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "jeffegr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 25.810000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-randy-ready-1991",
+    "playerId": "readyra01",
+    "playerSlug": "randy-ready",
+    "name": "Randy Ready",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.3,
+      "opsPlus": 103,
+      "hr": 1,
+      "avg": 0.249,
+      "obp": 0.385,
+      "slg": 0.322,
+      "rbi": 20,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.3,
+      "opsPlus": 103,
+      "hr": 1,
+      "avg": 0.249,
+      "obp": 0.385,
+      "slg": 0.322,
+      "rbi": 20,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 76,
+      "plateAppearances": 257,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.385,
+      "slg": 0.322,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "readyra01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 19.67,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-dickie-thon-1990",
+    "playerId": "thondi01",
+    "playerSlug": "dickie-thon",
+    "name": "Dickie Thon",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.6,
+      "opsPlus": 81,
+      "hr": 8,
+      "avg": 0.255,
+      "obp": 0.305,
+      "slg": 0.35,
+      "rbi": 48,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.6,
+      "opsPlus": 81,
+      "hr": 8,
+      "avg": 0.255,
+      "obp": 0.305,
+      "slg": 0.35,
+      "rbi": 48,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 149,
+      "plateAppearances": 594,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.305,
+      "slg": 0.35,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "thondi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 15.640000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1990s-mariano-duncan-1992",
     "playerId": "duncama01",
     "playerSlug": "mariano-duncan",
     "name": "Mariano Duncan",
@@ -1343,689 +1976,69 @@
     "teamDisplayName": "Philadelphia Phillies",
     "team": "PHI",
     "decade": "1990s",
-    "featuredSeason": 1993,
+    "featuredSeason": 1992,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
       "2B",
-      "SS"
+      "SS",
+      "LF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.282,
-      "obp": 0.304,
-      "slg": 0.417,
-      "rbi": 73,
-      "sb": 6
+      "war": 1.1,
+      "opsPlus": 92,
+      "hr": 8,
+      "avg": 0.267,
+      "obp": 0.292,
+      "slg": 0.389,
+      "rbi": 50,
+      "sb": 23
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.282,
-      "obp": 0.304,
-      "slg": 0.417,
-      "rbi": 73,
-      "sb": 6
+      "war": 1.1,
+      "opsPlus": 92,
+      "hr": 8,
+      "avg": 0.267,
+      "obp": 0.292,
+      "slg": 0.389,
+      "rbi": 50,
+      "sb": 23
     },
     "scoringStats": {
-      "games": 124,
-      "plateAppearances": 514,
+      "games": 142,
+      "plateAppearances": 600,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.304,
-      "slg": 0.417,
+      "obp": 0.292,
+      "slg": 0.389,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "duncama01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 86.78571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-kevin-jordan-1999",
-    "playerId": "jordake01",
-    "playerSlug": "kevin-jordan",
-    "name": "Kevin Jordan",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "2B",
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.285,
-      "obp": 0.339,
-      "slg": 0.386,
-      "rbi": 51,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.285,
-      "obp": 0.339,
-      "slg": 0.386,
-      "rbi": 51,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 120,
-      "plateAppearances": 380,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.339,
-      "slg": 0.386,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "jordake01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 83.35714285714288,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-curt-schilling-1997",
-    "playerId": "schilcu01",
-    "playerSlug": "curt-schilling",
-    "name": "Curt Schilling",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.97,
-      "whip": 1.046,
-      "so": 319,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.97,
-      "whip": 1.046,
-      "so": 319,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.046,
-      "fip": null,
-      "inningsPitched": 254.3,
-      "strikeoutRate": 11.289815178922533,
-      "walkRate": 2.0526936688950057,
-      "starts": 35,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "schilcu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 73.2956822650413,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-doug-jones-1994",
-    "playerId": "jonesdo01",
-    "playerSlug": "doug-jones",
-    "name": "Doug Jones",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1994,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.17,
-      "whip": 1.13,
-      "so": 38,
-      "wins": 2,
-      "saves": 27,
-      "sv": 27
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.17,
-      "whip": 1.13,
-      "so": 38,
-      "wins": 2,
-      "saves": 27,
-      "sv": 27
-    },
-    "scoringStats": {
-      "whip": 1.13,
-      "fip": null,
-      "inningsPitched": 54,
-      "strikeoutRate": 6.333333333333333,
-      "walkRate": 1,
-      "starts": 0,
-      "reliefAppearances": 47
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "jonesdo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 72.76,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-ricky-bottalico-1995",
-    "playerId": "bottari01",
-    "playerSlug": "ricky-bottalico",
-    "name": "Ricky Bottalico",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.46,
-      "whip": 1.049,
-      "so": 87,
-      "wins": 5,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.46,
-      "whip": 1.049,
-      "so": 87,
-      "wins": 5,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 1.049,
-      "fip": null,
-      "inningsPitched": 87.7,
-      "strikeoutRate": 8.928164196123147,
-      "walkRate": 4.310148232611175,
-      "starts": 0,
-      "reliefAppearances": 62
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "bottari01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 72.42702394526796,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-joe-boever-1990",
-    "playerId": "boevejo01",
-    "playerSlug": "joe-boever",
-    "name": "Joe Boever",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.15,
-      "whip": 1.152,
-      "so": 40,
-      "wins": 2,
-      "saves": 6,
-      "sv": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.15,
-      "whip": 1.152,
-      "so": 40,
-      "wins": 2,
-      "saves": 6,
-      "sv": 6
-    },
-    "scoringStats": {
-      "whip": 1.152,
-      "fip": null,
-      "inningsPitched": 46,
-      "strikeoutRate": 7.826086956521739,
-      "walkRate": 3.130434782608696,
-      "starts": 0,
-      "reliefAppearances": 34
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "boevejo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 69.00347826086957,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-ben-rivera-1992",
-    "playerId": "riverbe01",
-    "playerSlug": "ben-rivera",
-    "name": "Ben Rivera",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1992,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.82,
-      "whip": 1.078,
-      "so": 66,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.82,
-      "whip": 1.078,
-      "so": 66,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.078,
-      "fip": null,
-      "inningsPitched": 102,
-      "strikeoutRate": 5.823529411764706,
-      "walkRate": 2.823529411764706,
-      "starts": 14,
-      "reliefAppearances": 6
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "riverbe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 58.76666666666667,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-sid-fernandez-1995",
-    "playerId": "fernasi01",
-    "playerSlug": "sid-fernandez",
-    "name": "Sid Fernandez",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.34,
-      "whip": 1.067,
-      "so": 79,
-      "wins": 6,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.34,
-      "whip": 1.067,
-      "so": 79,
-      "wins": 6,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.067,
-      "fip": null,
-      "inningsPitched": 64.7,
-      "strikeoutRate": 10.98918083462133,
-      "walkRate": 2.921174652241113,
-      "starts": 11,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "fernasi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 58.27645371801477,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-terry-mulholland-1993",
-    "playerId": "mulhote01",
-    "playerSlug": "terry-mulholland",
-    "name": "Terry Mulholland",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.25,
-      "whip": 1.136,
-      "so": 116,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.25,
-      "whip": 1.136,
-      "so": 116,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.136,
-      "fip": null,
-      "inningsPitched": 191,
-      "strikeoutRate": 5.465968586387435,
-      "walkRate": 1.8848167539267016,
-      "starts": 28,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "mulhote01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 58.262838859802216,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1990s-tommy-greene-1993",
-    "playerId": "greento01",
-    "playerSlug": "tommy-greene",
-    "name": "Tommy Greene",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.42,
-      "whip": 1.185,
-      "so": 167,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.42,
-      "whip": 1.185,
-      "so": 167,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.185,
-      "fip": null,
-      "inningsPitched": 200,
-      "strikeoutRate": 7.515,
-      "walkRate": 2.79,
-      "starts": 30,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "greento01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 57.45861111111111,
-      "formulaVersion": "season-selection-v1"
+      "score": 15.200000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

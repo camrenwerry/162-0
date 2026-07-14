@@ -21,8 +21,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 10.7,
+      "opsPlus": 186,
       "hr": 32,
       "avg": 0.346,
       "obp": 0.438,
@@ -32,8 +32,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 10.7,
+      "opsPlus": 186,
       "hr": 32,
       "avg": 0.346,
       "obp": 0.438,
@@ -54,20 +54,312 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "bettsmo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 125.34285714285716,
-      "formulaVersion": "season-selection-v1"
+      "score": 177.53999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-koji-uehara-2013",
+    "playerId": "ueharko01",
+    "playerSlug": "koji-uehara",
+    "name": "Koji Uehara",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.5,
+      "eraPlus": 379,
+      "era": 1.09,
+      "whip": 0.565,
+      "so": 101,
+      "wins": 4,
+      "saves": 21,
+      "sv": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "eraPlus": 379,
+      "era": 1.09,
+      "whip": 0.565,
+      "so": 101,
+      "wins": 4,
+      "saves": 21,
+      "sv": 21
+    },
+    "scoringStats": {
+      "whip": 0.565,
+      "fip": null,
+      "inningsPitched": 74.3,
+      "strikeoutRate": 12.234185733512787,
+      "walkRate": 1.0901749663526246,
+      "starts": 0,
+      "reliefAppearances": 73
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "ueharko01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 149.64999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-jacoby-ellsbury-2011",
+    "playerId": "ellsbja01",
+    "playerSlug": "jacoby-ellsbury",
+    "name": "Jacoby Ellsbury",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 8.3,
+      "opsPlus": 146,
+      "hr": 32,
+      "avg": 0.321,
+      "obp": 0.376,
+      "slg": 0.552,
+      "rbi": 105,
+      "sb": 39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 8.3,
+      "opsPlus": 146,
+      "hr": 32,
+      "avg": 0.321,
+      "obp": 0.376,
+      "slg": 0.552,
+      "rbi": 105,
+      "sb": 39
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 726,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.376,
+      "slg": 0.552,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "ellsbja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 129.86,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-craig-kimbrel-2017",
+    "playerId": "kimbrcr01",
+    "playerSlug": "craig-kimbrel",
+    "name": "Craig Kimbrel",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "eraPlus": 319,
+      "era": 1.43,
+      "whip": 0.681,
+      "so": 126,
+      "wins": 5,
+      "saves": 35,
+      "sv": 35
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "eraPlus": 319,
+      "era": 1.43,
+      "whip": 0.681,
+      "so": 126,
+      "wins": 5,
+      "saves": 35,
+      "sv": 35
+    },
+    "scoringStats": {
+      "whip": 0.681,
+      "fip": null,
+      "inningsPitched": 69,
+      "strikeoutRate": 16.434782608695652,
+      "walkRate": 1.826086956521739,
+      "starts": 0,
+      "reliefAppearances": 67
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "kimbrcr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 129.42142857142858,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-chris-sale-2018",
+    "playerId": "salech01",
+    "playerSlug": "chris-sale",
+    "name": "Chris Sale",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 6.5,
+      "eraPlus": 209,
+      "era": 2.11,
+      "whip": 0.861,
+      "so": 237,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.5,
+      "eraPlus": 209,
+      "era": 2.11,
+      "whip": 0.861,
+      "so": 237,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.861,
+      "fip": null,
+      "inningsPitched": 158,
+      "strikeoutRate": 13.5,
+      "walkRate": 1.9367088607594938,
+      "starts": 27,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "salech01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 124.05000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -92,8 +384,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.7,
+      "opsPlus": 173,
       "hr": 43,
       "avg": 0.33,
       "obp": 0.402,
@@ -103,8 +395,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.7,
+      "opsPlus": 173,
       "hr": 43,
       "avg": 0.33,
       "obp": 0.402,
@@ -125,368 +417,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "martijd02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 121.64285714285715,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-david-ortiz-2016",
-    "playerId": "ortizda01",
-    "playerSlug": "david-ortiz",
-    "name": "David Ortiz",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 38,
-      "avg": 0.315,
-      "obp": 0.401,
-      "slg": 0.62,
-      "rbi": 127,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 38,
-      "avg": 0.315,
-      "obp": 0.401,
-      "slg": 0.62,
-      "rbi": 127,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 151,
-      "plateAppearances": 626,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.401,
-      "slg": 0.62,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "ortizda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 119.98571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-adrian-gonzalez-2011",
-    "playerId": "gonzaad01",
-    "playerSlug": "adrian-gonzalez",
-    "name": "Adrian Gonzalez",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2011,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.338,
-      "obp": 0.41,
-      "slg": 0.548,
-      "rbi": 117,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.338,
-      "obp": 0.41,
-      "slg": 0.548,
-      "rbi": 117,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 159,
-      "plateAppearances": 715,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.41,
-      "slg": 0.548,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "gonzaad01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 116.22857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-xander-bogaerts-2019",
-    "playerId": "bogaexa01",
-    "playerSlug": "xander-bogaerts",
-    "name": "Xander Bogaerts",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.309,
-      "obp": 0.384,
-      "slg": 0.555,
-      "rbi": 117,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.309,
-      "obp": 0.384,
-      "slg": 0.555,
-      "rbi": 117,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 155,
-      "plateAppearances": 698,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.384,
-      "slg": 0.555,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "bogaexa01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 113.84285714285716,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-jacoby-ellsbury-2011",
-    "playerId": "ellsbja01",
-    "playerSlug": "jacoby-ellsbury",
-    "name": "Jacoby Ellsbury",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2011,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 32,
-      "avg": 0.321,
-      "obp": 0.376,
-      "slg": 0.552,
-      "rbi": 105,
-      "sb": 39
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 32,
-      "avg": 0.321,
-      "obp": 0.376,
-      "slg": 0.552,
-      "rbi": 105,
-      "sb": 39
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 726,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.376,
-      "slg": 0.552,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "ellsbja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 113.54285714285716,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-rafael-devers-2019",
-    "playerId": "deverra01",
-    "playerSlug": "rafael-devers",
-    "name": "Rafael Devers",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 32,
-      "avg": 0.311,
-      "obp": 0.361,
-      "slg": 0.555,
-      "rbi": 115,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 32,
-      "avg": 0.311,
-      "obp": 0.361,
-      "slg": 0.555,
-      "rbi": 115,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 156,
-      "plateAppearances": 701,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.361,
-      "slg": 0.555,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "deverra01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 111.62857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 123.39,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -510,8 +457,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.8,
+      "opsPlus": 141,
       "hr": 28,
       "avg": 0.321,
       "obp": 0.365,
@@ -521,8 +468,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.8,
+      "opsPlus": 141,
       "hr": 28,
       "avg": 0.321,
       "obp": 0.365,
@@ -543,228 +490,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "beltrad01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 110.11428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-kevin-youkilis-2010",
-    "playerId": "youklke01",
-    "playerSlug": "kevin-youkilis",
-    "name": "Kevin Youkilis",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.307,
-      "obp": 0.411,
-      "slg": 0.564,
-      "rbi": 62,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.307,
-      "obp": 0.411,
-      "slg": 0.564,
-      "rbi": 62,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 102,
-      "plateAppearances": 435,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.411,
-      "slg": 0.564,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "youklke01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 109.92857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-koji-uehara-2013",
-    "playerId": "ueharko01",
-    "playerSlug": "koji-uehara",
-    "name": "Koji Uehara",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.09,
-      "whip": 0.565,
-      "so": 101,
-      "wins": 4,
-      "saves": 21,
-      "sv": 21
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.09,
-      "whip": 0.565,
-      "so": 101,
-      "wins": 4,
-      "saves": 21,
-      "sv": 21
-    },
-    "scoringStats": {
-      "whip": 0.565,
-      "fip": null,
-      "inningsPitched": 74.3,
-      "strikeoutRate": 12.234185733512787,
-      "walkRate": 1.0901749663526246,
-      "starts": 0,
-      "reliefAppearances": 73
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "ueharko01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 108.33601615074025,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-craig-kimbrel-2017",
-    "playerId": "kimbrcr01",
-    "playerSlug": "craig-kimbrel",
-    "name": "Craig Kimbrel",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.43,
-      "whip": 0.681,
-      "so": 126,
-      "wins": 5,
-      "saves": 35,
-      "sv": 35
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.43,
-      "whip": 0.681,
-      "so": 126,
-      "wins": 5,
-      "saves": 35,
-      "sv": 35
-    },
-    "scoringStats": {
-      "whip": 0.681,
-      "fip": null,
-      "inningsPitched": 69,
-      "strikeoutRate": 16.434782608695652,
-      "walkRate": 1.826086956521739,
-      "starts": 0,
-      "reliefAppearances": 67
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "kimbrcr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 107.13304347826087,
-      "formulaVersion": "season-selection-v1"
+      "score": 120.50999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -788,8 +530,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8,
+      "opsPlus": 131,
       "hr": 21,
       "avg": 0.307,
       "obp": 0.387,
@@ -799,8 +541,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8,
+      "opsPlus": 131,
       "hr": 21,
       "avg": 0.307,
       "obp": 0.387,
@@ -821,27 +563,320 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "pedrodu01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 106.92857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 118.79,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bos-2010s-hanley-ramirez-2016",
-    "playerId": "ramirha01",
-    "playerSlug": "hanley-ramirez",
-    "name": "Hanley Ramirez",
+    "id": "bos-2010s-adrian-gonzalez-2011",
+    "playerId": "gonzaad01",
+    "playerSlug": "adrian-gonzalez",
+    "name": "Adrian Gonzalez",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 6.9,
+      "opsPlus": 155,
+      "hr": 27,
+      "avg": 0.338,
+      "obp": 0.41,
+      "slg": 0.548,
+      "rbi": 117,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.9,
+      "opsPlus": 155,
+      "hr": 27,
+      "avg": 0.338,
+      "obp": 0.41,
+      "slg": 0.548,
+      "rbi": 117,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 715,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.41,
+      "slg": 0.548,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "gonzaad01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.45000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-clay-buchholz-2010",
+    "playerId": "buchhcl01",
+    "playerSlug": "clay-buchholz",
+    "name": "Clay Buchholz",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.6,
+      "eraPlus": 187,
+      "era": 2.33,
+      "whip": 1.203,
+      "so": 120,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.6,
+      "eraPlus": 187,
+      "era": 2.33,
+      "whip": 1.203,
+      "so": 120,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.203,
+      "fip": null,
+      "inningsPitched": 173.7,
+      "strikeoutRate": 6.217616580310882,
+      "walkRate": 3.4715025906735755,
+      "starts": 28,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "buchhcl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.335,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-brandon-workman-2019",
+    "playerId": "workmbr01",
+    "playerSlug": "brandon-workman",
+    "name": "Brandon Workman",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.1,
+      "eraPlus": 258,
+      "era": 1.88,
+      "whip": 1.033,
+      "so": 104,
+      "wins": 10,
+      "saves": 16,
+      "sv": 16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "eraPlus": 258,
+      "era": 1.88,
+      "whip": 1.033,
+      "so": 104,
+      "wins": 10,
+      "saves": 16,
+      "sv": 16
+    },
+    "scoringStats": {
+      "whip": 1.033,
+      "fip": null,
+      "inningsPitched": 71.7,
+      "strikeoutRate": 13.05439330543933,
+      "walkRate": 5.648535564853557,
+      "starts": 0,
+      "reliefAppearances": 73
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "workmbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.5,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-xander-bogaerts-2019",
+    "playerId": "bogaexa01",
+    "playerSlug": "xander-bogaerts",
+    "name": "Xander Bogaerts",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.3,
+      "opsPlus": 139,
+      "hr": 33,
+      "avg": 0.309,
+      "obp": 0.384,
+      "slg": 0.555,
+      "rbi": 117,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.3,
+      "opsPlus": 139,
+      "hr": 33,
+      "avg": 0.309,
+      "obp": 0.384,
+      "slg": 0.555,
+      "rbi": 117,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 698,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.555,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "bogaexa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.08,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-david-ortiz-2016",
+    "playerId": "ortizda01",
+    "playerSlug": "david-ortiz",
+    "name": "David Ortiz",
     "franchiseId": "bos",
     "teamAbbreviation": "BOS",
     "teamDisplayName": "Boston Red Sox",
@@ -852,59 +887,496 @@
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
+    "eligiblePositions": [],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.1,
+      "opsPlus": 164,
+      "hr": 38,
+      "avg": 0.315,
+      "obp": 0.401,
+      "slg": 0.62,
+      "rbi": 127,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.1,
+      "opsPlus": 164,
+      "hr": 38,
+      "avg": 0.315,
+      "obp": 0.401,
+      "slg": 0.62,
+      "rbi": 127,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 626,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.401,
+      "slg": 0.62,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "ortizda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.46,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-kevin-youkilis-2010",
+    "playerId": "youklke01",
+    "playerSlug": "kevin-youkilis",
+    "name": "Kevin Youkilis",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
     "eligiblePositions": [
       "1B"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.286,
-      "obp": 0.361,
-      "slg": 0.505,
-      "rbi": 111,
-      "sb": 9
+      "war": 5.4,
+      "opsPlus": 157,
+      "hr": 19,
+      "avg": 0.307,
+      "obp": 0.411,
+      "slg": 0.564,
+      "rbi": 62,
+      "sb": 4
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.286,
-      "obp": 0.361,
-      "slg": 0.505,
-      "rbi": 111,
-      "sb": 9
+      "war": 5.4,
+      "opsPlus": 157,
+      "hr": 19,
+      "avg": 0.307,
+      "obp": 0.411,
+      "slg": 0.564,
+      "rbi": 62,
+      "sb": 4
     },
     "scoringStats": {
-      "games": 147,
-      "plateAppearances": 620,
+      "games": 102,
+      "plateAppearances": 435,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.361,
-      "slg": 0.505,
+      "obp": 0.411,
+      "slg": 0.564,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
-      "sourcePlayerId": "ramirha01"
+      "sourcePlayerId": "youklke01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 104.31428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 97.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-josh-beckett-2011",
+    "playerId": "beckejo02",
+    "playerSlug": "josh-beckett",
+    "name": "Josh Beckett",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.8,
+      "eraPlus": 149,
+      "era": 2.89,
+      "whip": 1.026,
+      "so": 175,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.8,
+      "eraPlus": 149,
+      "era": 2.89,
+      "whip": 1.026,
+      "so": 175,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.026,
+      "fip": null,
+      "inningsPitched": 193,
+      "strikeoutRate": 8.160621761658032,
+      "walkRate": 2.4248704663212437,
+      "starts": 30,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "beckejo02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.4,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-rafael-devers-2019",
+    "playerId": "deverra01",
+    "playerSlug": "rafael-devers",
+    "name": "Rafael Devers",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.4,
+      "opsPlus": 132,
+      "hr": 32,
+      "avg": 0.311,
+      "obp": 0.361,
+      "slg": 0.555,
+      "rbi": 115,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.4,
+      "opsPlus": 132,
+      "hr": 32,
+      "avg": 0.311,
+      "obp": 0.361,
+      "slg": 0.555,
+      "rbi": 115,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 701,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.555,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "deverra01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.81000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-shane-victorino-2013",
+    "playerId": "victosh01",
+    "playerSlug": "shane-victorino",
+    "name": "Shane Victorino",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6,
+      "opsPlus": 118,
+      "hr": 15,
+      "avg": 0.294,
+      "obp": 0.351,
+      "slg": 0.451,
+      "rbi": 61,
+      "sb": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6,
+      "opsPlus": 118,
+      "hr": 15,
+      "avg": 0.294,
+      "obp": 0.351,
+      "slg": 0.451,
+      "rbi": 61,
+      "sb": 21
+    },
+    "scoringStats": {
+      "games": 122,
+      "plateAppearances": 522,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.351,
+      "slg": 0.451,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "victosh01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.22,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-eduardo-rodriguez-2019",
+    "playerId": "rodried05",
+    "playerSlug": "eduardo-rodriguez",
+    "name": "Eduardo Rodriguez",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.5,
+      "eraPlus": 128,
+      "era": 3.81,
+      "whip": 1.328,
+      "so": 213,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.5,
+      "eraPlus": 128,
+      "era": 3.81,
+      "whip": 1.328,
+      "so": 213,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.328,
+      "fip": null,
+      "inningsPitched": 203.3,
+      "strikeoutRate": 9.429414658140677,
+      "walkRate": 3.320216428922774,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "rodried05"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.8,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-jon-lester-2010",
+    "playerId": "lestejo01",
+    "playerSlug": "jon-lester",
+    "name": "Jon Lester",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.2,
+      "eraPlus": 134,
+      "era": 3.25,
+      "whip": 1.202,
+      "so": 225,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.2,
+      "eraPlus": 134,
+      "era": 3.25,
+      "whip": 1.202,
+      "so": 225,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.202,
+      "fip": null,
+      "inningsPitched": 208,
+      "strikeoutRate": 9.735576923076923,
+      "walkRate": 3.5913461538461537,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "lestejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.30000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -929,8 +1401,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.8,
+      "opsPlus": 123,
       "hr": 16,
       "avg": 0.29,
       "obp": 0.366,
@@ -940,8 +1412,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.8,
+      "opsPlus": 123,
       "hr": 16,
       "avg": 0.29,
       "obp": 0.366,
@@ -962,20 +1434,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "beninan01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2018.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 101.92857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 75.69,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-mike-napoli-2013",
+    "playerId": "napolmi01",
+    "playerSlug": "mike-napoli",
+    "name": "Mike Napoli",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "opsPlus": 128,
+      "hr": 23,
+      "avg": 0.259,
+      "obp": 0.36,
+      "slg": 0.482,
+      "rbi": 92,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "opsPlus": 128,
+      "hr": 23,
+      "avg": 0.259,
+      "obp": 0.36,
+      "slg": 0.482,
+      "rbi": 92,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 139,
+      "plateAppearances": 578,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.36,
+      "slg": 0.482,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "napolmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 64.18,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1000,8 +1548,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.6,
+      "opsPlus": 122,
       "hr": 20,
       "avg": 0.302,
       "obp": 0.351,
@@ -1011,8 +1559,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.6,
+      "opsPlus": 122,
       "hr": 20,
       "avg": 0.302,
       "obp": 0.351,
@@ -1033,20 +1581,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "martivi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.77142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 59.580000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1072,8 +1623,8 @@
     "bats": "B",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 127,
       "hr": 12,
       "avg": 0.303,
       "obp": 0.385,
@@ -1083,8 +1634,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 127,
       "hr": 12,
       "avg": 0.303,
       "obp": 0.385,
@@ -1105,20 +1656,242 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "navada01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.2,
-      "formulaVersion": "season-selection-v1"
+      "score": 53.62,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-jarrod-saltalamacchia-2013",
+    "playerId": "saltaja01",
+    "playerSlug": "jarrod-saltalamacchia",
+    "name": "Jarrod Saltalamacchia",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "opsPlus": 118,
+      "hr": 14,
+      "avg": 0.273,
+      "obp": 0.338,
+      "slg": 0.466,
+      "rbi": 65,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "opsPlus": 118,
+      "hr": 14,
+      "avg": 0.273,
+      "obp": 0.338,
+      "slg": 0.466,
+      "rbi": 65,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 121,
+      "plateAppearances": 470,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.338,
+      "slg": 0.466,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "saltaja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.5,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-sandy-leon-2016",
+    "playerId": "leonsa01",
+    "playerSlug": "sandy-leon",
+    "name": "Sandy Leon",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.8,
+      "opsPlus": 122,
+      "hr": 7,
+      "avg": 0.31,
+      "obp": 0.369,
+      "slg": 0.476,
+      "rbi": 35,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.8,
+      "opsPlus": 122,
+      "hr": 7,
+      "avg": 0.31,
+      "obp": 0.369,
+      "slg": 0.476,
+      "rbi": 35,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 78,
+      "plateAppearances": 279,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.476,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "leonsa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.38999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-2010s-stephen-drew-2013",
+    "playerId": "drewst01",
+    "playerSlug": "stephen-drew",
+    "name": "Stephen Drew",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.6,
+      "opsPlus": 111,
+      "hr": 13,
+      "avg": 0.253,
+      "obp": 0.333,
+      "slg": 0.443,
+      "rbi": 67,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "opsPlus": 111,
+      "hr": 13,
+      "avg": 0.253,
+      "obp": 0.333,
+      "slg": 0.443,
+      "rbi": 67,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 124,
+      "plateAppearances": 501,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.333,
+      "slg": 0.443,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "drewst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.71,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1143,8 +1916,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.6,
+      "opsPlus": 139,
       "hr": 9,
       "avg": 0.287,
       "obp": 0.381,
@@ -1154,8 +1927,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.6,
+      "opsPlus": 139,
       "hr": 9,
       "avg": 0.287,
       "obp": 0.381,
@@ -1176,785 +1949,100 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "lowrije01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 96.32857142857144,
-      "formulaVersion": "season-selection-v1"
+      "score": 40.67,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bos-2010s-christian-vazquez-2019",
-    "playerId": "vazquch01",
-    "playerSlug": "christian-vazquez",
-    "name": "Christian Vazquez",
+    "id": "bos-2010s-brock-holt-2015",
+    "playerId": "holtbr01",
+    "playerSlug": "brock-holt",
+    "name": "Brock Holt",
     "franchiseId": "bos",
     "teamAbbreviation": "BOS",
     "teamDisplayName": "Boston Red Sox",
     "team": "BOS",
     "decade": "2010s",
-    "featuredSeason": 2019,
+    "featuredSeason": 2015,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "1B",
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.276,
-      "obp": 0.32,
-      "slg": 0.477,
-      "rbi": 72,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.276,
-      "obp": 0.32,
-      "slg": 0.477,
-      "rbi": 72,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 138,
-      "plateAppearances": 518,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.32,
-      "slg": 0.477,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "vazquch01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.49999999999999,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-eduardo-nunez-2017",
-    "playerId": "nunezed02",
-    "playerSlug": "eduardo-nunez",
-    "name": "Eduardo Nunez",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2017,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.321,
-      "obp": 0.353,
-      "slg": 0.539,
-      "rbi": 27,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.321,
-      "obp": 0.353,
-      "slg": 0.539,
-      "rbi": 27,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 38,
-      "plateAppearances": 173,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.353,
-      "slg": 0.539,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "nunezed02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.14285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-jarrod-saltalamacchia-2013",
-    "playerId": "saltaja01",
-    "playerSlug": "jarrod-saltalamacchia",
-    "name": "Jarrod Saltalamacchia",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.273,
-      "obp": 0.338,
-      "slg": 0.466,
-      "rbi": 65,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.273,
-      "obp": 0.338,
-      "slg": 0.466,
-      "rbi": 65,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 121,
-      "plateAppearances": 470,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.338,
-      "slg": 0.466,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "saltaja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.82857142857144,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-stephen-drew-2013",
-    "playerId": "drewst01",
-    "playerSlug": "stephen-drew",
-    "name": "Stephen Drew",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
+      "2B",
+      "3B",
+      "SS",
+      "LF",
+      "RF"
     ],
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.253,
-      "obp": 0.333,
-      "slg": 0.443,
-      "rbi": 67,
-      "sb": 6
+      "war": 2.8,
+      "opsPlus": 96,
+      "hr": 2,
+      "avg": 0.28,
+      "obp": 0.349,
+      "slg": 0.379,
+      "rbi": 45,
+      "sb": 8
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.253,
-      "obp": 0.333,
-      "slg": 0.443,
-      "rbi": 67,
-      "sb": 6
+      "war": 2.8,
+      "opsPlus": 96,
+      "hr": 2,
+      "avg": 0.28,
+      "obp": 0.349,
+      "slg": 0.379,
+      "rbi": 45,
+      "sb": 8
     },
     "scoringStats": {
-      "games": 124,
-      "plateAppearances": 501,
+      "games": 129,
+      "plateAppearances": 505,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.333,
-      "slg": 0.443,
+      "obp": 0.349,
+      "slg": 0.379,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
-      "sourcePlayerId": "drewst01"
+      "sourcePlayerId": "holtbr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.91428571428573,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-will-middlebrooks-2012",
-    "playerId": "middlwi01",
-    "playerSlug": "will-middlebrooks",
-    "name": "Will Middlebrooks",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2012,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.288,
-      "obp": 0.325,
-      "slg": 0.509,
-      "rbi": 54,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.288,
-      "obp": 0.325,
-      "slg": 0.509,
-      "rbi": 54,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 75,
-      "plateAppearances": 286,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.325,
-      "slg": 0.509,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "middlwi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 91.57142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-chris-sale-2018",
-    "playerId": "salech01",
-    "playerSlug": "chris-sale",
-    "name": "Chris Sale",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.11,
-      "whip": 0.861,
-      "so": 237,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.11,
-      "whip": 0.861,
-      "so": 237,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.861,
-      "fip": null,
-      "inningsPitched": 158,
-      "strikeoutRate": 13.5,
-      "walkRate": 1.9367088607594938,
-      "starts": 27,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "salech01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 87.58271448663854,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-junichi-tazawa-2012",
-    "playerId": "tazawju01",
-    "playerSlug": "junichi-tazawa",
-    "name": "Junichi Tazawa",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2012,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.43,
-      "whip": 0.955,
-      "so": 45,
-      "wins": 1,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.43,
-      "whip": 0.955,
-      "so": 45,
-      "wins": 1,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 0.955,
-      "fip": null,
-      "inningsPitched": 44,
-      "strikeoutRate": 9.204545454545455,
-      "walkRate": 1.0227272727272727,
-      "starts": 0,
-      "reliefAppearances": 37
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "tazawju01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 87.4127272727273,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-clay-buchholz-2013",
-    "playerId": "buchhcl01",
-    "playerSlug": "clay-buchholz",
-    "name": "Clay Buchholz",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2013,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.74,
-      "whip": 1.025,
-      "so": 96,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.74,
-      "whip": 1.025,
-      "so": 96,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.025,
-      "fip": null,
-      "inningsPitched": 108.3,
-      "strikeoutRate": 7.977839335180056,
-      "walkRate": 2.9916897506925206,
-      "starts": 16,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "buchhcl01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 76.11589104339798,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-jon-lester-2014",
-    "playerId": "lestejo01",
-    "playerSlug": "jon-lester",
-    "name": "Jon Lester",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2014,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.52,
-      "whip": 1.119,
-      "so": 149,
-      "wins": 10,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.52,
-      "whip": 1.119,
-      "so": 149,
-      "wins": 10,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.119,
-      "fip": null,
-      "inningsPitched": 143,
-      "strikeoutRate": 9.377622377622378,
-      "walkRate": 2.013986013986014,
-      "starts": 21,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "lestejo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 70.36989898989899,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-josh-beckett-2011",
-    "playerId": "beckejo02",
-    "playerSlug": "josh-beckett",
-    "name": "Josh Beckett",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2011,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.89,
-      "whip": 1.026,
-      "so": 175,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.89,
-      "whip": 1.026,
-      "so": 175,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.026,
-      "fip": null,
-      "inningsPitched": 193,
-      "strikeoutRate": 8.160621761658032,
-      "walkRate": 2.4248704663212437,
-      "starts": 30,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "beckejo02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 68.12584916522741,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-2010s-rick-porcello-2016",
-    "playerId": "porceri01",
-    "playerSlug": "rick-porcello",
-    "name": "Rick Porcello",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.15,
-      "whip": 1.009,
-      "so": 189,
-      "wins": 22,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.15,
-      "whip": 1.009,
-      "so": 189,
-      "wins": 22,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.009,
-      "fip": null,
-      "inningsPitched": 223,
-      "strikeoutRate": 7.62780269058296,
-      "walkRate": 1.2914798206278026,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "porceri01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.52448430493274,
-      "formulaVersion": "season-selection-v1"
+      "score": 36.64999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

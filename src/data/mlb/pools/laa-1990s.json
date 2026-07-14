@@ -1,5 +1,149 @@
 [
   {
+    "id": "laa-1990s-mark-langston-1993",
+    "playerId": "langsma01",
+    "playerSlug": "mark-langston",
+    "name": "Mark Langston",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 8.5,
+      "eraPlus": 140,
+      "era": 3.2,
+      "whip": 1.19,
+      "so": 196,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 8.5,
+      "eraPlus": 140,
+      "era": 3.2,
+      "whip": 1.19,
+      "so": 196,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.19,
+      "fip": null,
+      "inningsPitched": 256.3,
+      "strikeoutRate": 6.882559500585251,
+      "walkRate": 2.984783456886461,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "langsma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 126,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-chuck-finley-1990",
+    "playerId": "finlech01",
+    "playerSlug": "chuck-finley",
+    "name": "Chuck Finley",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 7.7,
+      "eraPlus": 158,
+      "era": 2.4,
+      "whip": 1.233,
+      "so": 177,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.7,
+      "eraPlus": 158,
+      "era": 2.4,
+      "whip": 1.233,
+      "so": 177,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.233,
+      "fip": null,
+      "inningsPitched": 236,
+      "strikeoutRate": 6.75,
+      "walkRate": 3.0889830508474576,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "finlech01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 122.7,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
     "id": "laa-1990s-tim-salmon-1995",
     "playerId": "salmoti01",
     "playerSlug": "tim-salmon",
@@ -20,8 +164,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.6,
+      "opsPlus": 165,
       "hr": 34,
       "avg": 0.33,
       "obp": 0.429,
@@ -31,8 +175,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.6,
+      "opsPlus": 165,
       "hr": 34,
       "avg": 0.33,
       "obp": 0.429,
@@ -53,92 +197,243 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "salmoti01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 120.52857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 118.07999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1990s-chili-davis-1994",
-    "playerId": "davisch01",
-    "playerSlug": "chili-davis",
-    "name": "Chili Davis",
+    "id": "laa-1990s-jim-abbott-1991",
+    "playerId": "abbotji01",
+    "playerSlug": "jim-abbott",
+    "name": "Jim Abbott",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
     "team": "LAA",
     "decade": "1990s",
-    "featuredSeason": 1994,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [],
-    "bats": "B",
-    "throws": "R",
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 26,
-      "avg": 0.311,
-      "obp": 0.41,
-      "slg": 0.561,
-      "rbi": 84,
-      "sb": 3
+      "war": 7.6,
+      "eraPlus": 142,
+      "era": 2.89,
+      "whip": 1.214,
+      "so": 158,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 26,
-      "avg": 0.311,
-      "obp": 0.41,
-      "slg": 0.561,
-      "rbi": 84,
-      "sb": 3
+      "war": 7.6,
+      "eraPlus": 142,
+      "era": 2.89,
+      "whip": 1.214,
+      "so": 158,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 108,
-      "plateAppearances": 468,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.41,
-      "slg": 0.561,
-      "wrcPlus": null
+      "whip": 1.214,
+      "fip": null,
+      "inningsPitched": 243,
+      "strikeoutRate": 5.851851851851852,
+      "walkRate": 2.7037037037037037,
+      "starts": 34,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
-      "sourcePlayerId": "davisch01"
+      "sourcePlayerId": "abbotji01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 110.47142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 115.89999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1990s-jim-edmonds-1996",
+    "id": "laa-1990s-bryan-harvey-1991",
+    "playerId": "harvebr01",
+    "playerSlug": "bryan-harvey",
+    "name": "Bryan Harvey",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.4,
+      "eraPlus": 257,
+      "era": 1.6,
+      "whip": 0.864,
+      "so": 101,
+      "wins": 2,
+      "saves": 46,
+      "sv": 46
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "eraPlus": 257,
+      "era": 1.6,
+      "whip": 0.864,
+      "so": 101,
+      "wins": 2,
+      "saves": 46,
+      "sv": 46
+    },
+    "scoringStats": {
+      "whip": 0.864,
+      "fip": null,
+      "inningsPitched": 78.7,
+      "strikeoutRate": 11.550190597204574,
+      "walkRate": 1.9440914866581955,
+      "starts": 0,
+      "reliefAppearances": 67
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "harvebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.32142857142857,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-troy-percival-1995",
+    "playerId": "percitr01",
+    "playerSlug": "troy-percival",
+    "name": "Troy Percival",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.1,
+      "eraPlus": 241,
+      "era": 1.95,
+      "whip": 0.851,
+      "so": 94,
+      "wins": 3,
+      "saves": 3,
+      "sv": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "eraPlus": 241,
+      "era": 1.95,
+      "whip": 0.851,
+      "so": 94,
+      "wins": 3,
+      "saves": 3,
+      "sv": 3
+    },
+    "scoringStats": {
+      "whip": 0.851,
+      "fip": null,
+      "inningsPitched": 74,
+      "strikeoutRate": 11.432432432432432,
+      "walkRate": 3.1621621621621623,
+      "starts": 0,
+      "reliefAppearances": 62
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "percitr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.40714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-jim-edmonds-1995",
     "playerId": "edmonji01",
     "playerSlug": "jim-edmonds",
     "name": "Jim Edmonds",
@@ -147,7 +442,7 @@
     "teamDisplayName": "Los Angeles Angels",
     "team": "LAA",
     "decade": "1990s",
-    "featuredSeason": 1996,
+    "featuredSeason": 1995,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -158,53 +453,201 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.304,
-      "obp": 0.375,
-      "slg": 0.571,
-      "rbi": 66,
-      "sb": 4
+      "war": 5.6,
+      "opsPlus": 129,
+      "hr": 33,
+      "avg": 0.29,
+      "obp": 0.352,
+      "slg": 0.536,
+      "rbi": 107,
+      "sb": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.304,
-      "obp": 0.375,
-      "slg": 0.571,
-      "rbi": 66,
-      "sb": 4
+      "war": 5.6,
+      "opsPlus": 129,
+      "hr": 33,
+      "avg": 0.29,
+      "obp": 0.352,
+      "slg": 0.536,
+      "rbi": 107,
+      "sb": 1
     },
     "scoringStats": {
-      "games": 114,
-      "plateAppearances": 483,
+      "games": 141,
+      "plateAppearances": 619,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.375,
-      "slg": 0.571,
+      "obp": 0.352,
+      "slg": 0.536,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "edmonji01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 108.39999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 87.88999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-mark-eichhorn-1991",
+    "playerId": "eichhma01",
+    "playerSlug": "mark-eichhorn",
+    "name": "Mark Eichhorn",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 208,
+      "era": 1.98,
+      "whip": 0.931,
+      "so": 49,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 208,
+      "era": 1.98,
+      "whip": 0.931,
+      "so": 49,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.931,
+      "fip": null,
+      "inningsPitched": 81.7,
+      "strikeoutRate": 5.3977968176254585,
+      "walkRate": 1.4320685434516522,
+      "starts": 0,
+      "reliefAppearances": 70
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "eichhma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82.6,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-lance-parrish-1990",
+    "playerId": "parrila02",
+    "playerSlug": "lance-parrish",
+    "name": "Lance Parrish",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "opsPlus": 123,
+      "hr": 24,
+      "avg": 0.268,
+      "obp": 0.338,
+      "slg": 0.451,
+      "rbi": 70,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "opsPlus": 123,
+      "hr": 24,
+      "avg": 0.268,
+      "obp": 0.338,
+      "slg": 0.451,
+      "rbi": 70,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 133,
+      "plateAppearances": 523,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.338,
+      "slg": 0.451,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "parrila02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.73,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -229,8 +672,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.4,
+      "opsPlus": 123,
       "hr": 27,
       "avg": 0.261,
       "obp": 0.394,
@@ -240,8 +683,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.4,
+      "opsPlus": 123,
       "hr": 27,
       "avg": 0.261,
       "obp": 0.394,
@@ -262,90 +705,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "phillto02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.64285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-mo-vaughn-1999",
-    "playerId": "vaughmo01",
-    "playerSlug": "mo-vaughn",
-    "name": "Mo Vaughn",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.281,
-      "obp": 0.358,
-      "slg": 0.508,
-      "rbi": 108,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 33,
-      "avg": 0.281,
-      "obp": 0.358,
-      "slg": 0.508,
-      "rbi": 108,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 139,
-      "plateAppearances": 592,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.358,
-      "slg": 0.508,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ANA"
-      ],
-      "sourcePlayerId": "vaughmo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 103.5142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 70.72000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -369,8 +745,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.8,
+      "opsPlus": 134,
       "hr": 21,
       "avg": 0.301,
       "obp": 0.36,
@@ -380,8 +756,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.8,
+      "opsPlus": 134,
       "hr": 21,
       "avg": 0.301,
       "obp": 0.36,
@@ -402,98 +778,102 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "joynewa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.19999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 68.69,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1990s-darin-erstad-1998",
-    "playerId": "erstada01",
-    "playerSlug": "darin-erstad",
-    "name": "Darin Erstad",
+    "id": "laa-1990s-omar-olivares-1998",
+    "playerId": "olivaom01",
+    "playerSlug": "omar-olivares",
+    "name": "Omar Olivares",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
     "team": "LAA",
     "decade": "1990s",
     "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "1B",
-      "LF"
+      "SP"
     ],
-    "bats": "L",
-    "throws": "L",
+    "bats": "R",
+    "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.296,
-      "obp": 0.353,
-      "slg": 0.486,
-      "rbi": 82,
-      "sb": 20
+      "war": 3.9,
+      "eraPlus": 118,
+      "era": 4.03,
+      "whip": 1.53,
+      "so": 112,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.296,
-      "obp": 0.353,
-      "slg": 0.486,
-      "rbi": 82,
-      "sb": 20
+      "war": 3.9,
+      "eraPlus": 118,
+      "era": 4.03,
+      "whip": 1.53,
+      "so": 112,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 133,
-      "plateAppearances": 589,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.353,
-      "slg": 0.486,
-      "wrcPlus": null
+      "whip": 1.53,
+      "fip": null,
+      "inningsPitched": 183,
+      "strikeoutRate": 5.508196721311475,
+      "walkRate": 4.475409836065574,
+      "starts": 26,
+      "reliefAppearances": 11
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ANA"
       ],
-      "sourcePlayerId": "erstada01"
+      "sourcePlayerId": "olivaom01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.72857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 62.24999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1990s-garret-anderson-1999",
-    "playerId": "anderga01",
-    "playerSlug": "garret-anderson",
-    "name": "Garret Anderson",
+    "id": "laa-1990s-randy-velarde-1999",
+    "playerId": "velarra01",
+    "playerSlug": "randy-velarde",
+    "name": "Randy Velarde",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
@@ -505,200 +885,134 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "CF",
-      "LF"
+      "2B"
     ],
-    "bats": "L",
-    "throws": "L",
+    "bats": "R",
+    "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.303,
-      "obp": 0.336,
-      "slg": 0.469,
-      "rbi": 80,
-      "sb": 3
+      "war": 4.2,
+      "opsPlus": 111,
+      "hr": 9,
+      "avg": 0.306,
+      "obp": 0.383,
+      "slg": 0.439,
+      "rbi": 48,
+      "sb": 13
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.303,
-      "obp": 0.336,
-      "slg": 0.469,
-      "rbi": 80,
-      "sb": 3
+      "war": 4.2,
+      "opsPlus": 111,
+      "hr": 9,
+      "avg": 0.306,
+      "obp": 0.383,
+      "slg": 0.439,
+      "rbi": 48,
+      "sb": 13
     },
     "scoringStats": {
-      "games": 157,
-      "plateAppearances": 660,
+      "games": 95,
+      "plateAppearances": 423,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.336,
-      "slg": 0.469,
+      "obp": 0.383,
+      "slg": 0.439,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ANA"
       ],
-      "sourcePlayerId": "anderga01"
+      "sourcePlayerId": "velarra01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.35714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 60.13000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1990s-rex-hudler-1996",
-    "playerId": "hudlere01",
-    "playerSlug": "rex-hudler",
-    "name": "Rex Hudler",
+    "id": "laa-1990s-darin-erstad-1997",
+    "playerId": "erstada01",
+    "playerSlug": "darin-erstad",
+    "name": "Darin Erstad",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
     "team": "LAA",
     "decade": "1990s",
-    "featuredSeason": 1996,
+    "featuredSeason": 1997,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "2B",
-      "CF"
+      "1B"
     ],
-    "bats": "R",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.3,
+      "opsPlus": 112,
       "hr": 16,
-      "avg": 0.311,
-      "obp": 0.337,
-      "slg": 0.556,
-      "rbi": 40,
-      "sb": 14
+      "avg": 0.299,
+      "obp": 0.36,
+      "slg": 0.466,
+      "rbi": 77,
+      "sb": 23
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.3,
+      "opsPlus": 112,
       "hr": 16,
-      "avg": 0.311,
-      "obp": 0.337,
-      "slg": 0.556,
-      "rbi": 40,
-      "sb": 14
+      "avg": 0.299,
+      "obp": 0.36,
+      "slg": 0.466,
+      "rbi": 77,
+      "sb": 23
     },
     "scoringStats": {
-      "games": 92,
-      "plateAppearances": 315,
+      "games": 139,
+      "plateAppearances": 600,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.337,
-      "slg": 0.556,
+      "obp": 0.36,
+      "slg": 0.466,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
-        "CAL"
+        "ANA"
       ],
-      "sourcePlayerId": "hudlere01"
+      "sourcePlayerId": "erstada01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.3,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-dave-winfield-1991",
-    "playerId": "winfida01",
-    "playerSlug": "dave-winfield",
-    "name": "Dave Winfield",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.262,
-      "obp": 0.326,
-      "slg": 0.472,
-      "rbi": 86,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.262,
-      "obp": 0.326,
-      "slg": 0.472,
-      "rbi": 86,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 150,
-      "plateAppearances": 631,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.326,
-      "slg": 0.472,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "winfida01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.82857142857144,
-      "formulaVersion": "season-selection-v1"
+      "score": 51.599999999999994,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -723,8 +1037,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.5,
+      "opsPlus": 105,
       "hr": 16,
       "avg": 0.288,
       "obp": 0.363,
@@ -734,8 +1048,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.5,
+      "opsPlus": 105,
       "hr": 16,
       "avg": 0.288,
       "obp": 0.363,
@@ -756,27 +1070,175 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "ANA"
       ],
       "sourcePlayerId": "hollida01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 97.78571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 50.97,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1990s-randy-velarde-1996",
-    "playerId": "velarra01",
-    "playerSlug": "randy-velarde",
-    "name": "Randy Velarde",
+    "id": "laa-1990s-kirk-mccaskill-1990",
+    "playerId": "mccaski01",
+    "playerSlug": "kirk-mccaskill",
+    "name": "Kirk McCaskill",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3,
+      "eraPlus": 117,
+      "era": 3.25,
+      "whip": 1.337,
+      "so": 78,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "eraPlus": 117,
+      "era": 3.25,
+      "whip": 1.337,
+      "so": 78,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.337,
+      "fip": null,
+      "inningsPitched": 174.3,
+      "strikeoutRate": 4.027538726333907,
+      "walkRate": 3.7177280550774525,
+      "starts": 29,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "mccaski01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.665000000000006,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-garret-anderson-1995",
+    "playerId": "anderga01",
+    "playerSlug": "garret-anderson",
+    "name": "Garret Anderson",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3,
+      "opsPlus": 121,
+      "hr": 16,
+      "avg": 0.321,
+      "obp": 0.352,
+      "slg": 0.505,
+      "rbi": 69,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3,
+      "opsPlus": 121,
+      "hr": 16,
+      "avg": 0.321,
+      "obp": 0.352,
+      "slg": 0.505,
+      "rbi": 69,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 106,
+      "plateAppearances": 398,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.505,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "anderga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.48,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-rex-hudler-1996",
+    "playerId": "hudlere01",
+    "playerSlug": "rex-hudler",
+    "name": "Rex Hudler",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
@@ -789,267 +1251,61 @@
     "pitchingRole": null,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "CF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.285,
-      "obp": 0.372,
-      "slg": 0.426,
-      "rbi": 54,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.285,
-      "obp": 0.372,
-      "slg": 0.426,
-      "rbi": 54,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 136,
-      "plateAppearances": 607,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.372,
-      "slg": 0.426,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "velarra01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.14285714285715,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-bryan-harvey-1991",
-    "playerId": "harvebr01",
-    "playerSlug": "bryan-harvey",
-    "name": "Bryan Harvey",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.6,
-      "whip": 0.864,
-      "so": 101,
-      "wins": 2,
-      "saves": 46,
-      "sv": 46
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.6,
-      "whip": 0.864,
-      "so": 101,
-      "wins": 2,
-      "saves": 46,
-      "sv": 46
-    },
-    "scoringStats": {
-      "whip": 0.864,
-      "fip": null,
-      "inningsPitched": 78.7,
-      "strikeoutRate": 11.550190597204574,
-      "walkRate": 1.9440914866581955,
-      "starts": 0,
-      "reliefAppearances": 67
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "harvebr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.92914866581958,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-lance-parrish-1990",
-    "playerId": "parrila02",
-    "playerSlug": "lance-parrish",
-    "name": "Lance Parrish",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.268,
-      "obp": 0.338,
-      "slg": 0.451,
-      "rbi": 70,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.268,
-      "obp": 0.338,
-      "slg": 0.451,
-      "rbi": 70,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 133,
-      "plateAppearances": 523,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.338,
-      "slg": 0.451,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "parrila02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.84285714285716,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-todd-greene-1997",
-    "playerId": "greento02",
-    "playerSlug": "todd-greene",
-    "name": "Todd Greene",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.29,
-      "obp": 0.328,
+      "war": 2.6,
+      "opsPlus": 123,
+      "hr": 16,
+      "avg": 0.311,
+      "obp": 0.337,
       "slg": 0.556,
-      "rbi": 24,
-      "sb": 2
+      "rbi": 40,
+      "sb": 14
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.29,
-      "obp": 0.328,
+      "war": 2.6,
+      "opsPlus": 123,
+      "hr": 16,
+      "avg": 0.311,
+      "obp": 0.337,
       "slg": 0.556,
-      "rbi": 24,
-      "sb": 2
+      "rbi": 40,
+      "sb": 14
     },
     "scoringStats": {
-      "games": 34,
-      "plateAppearances": 131,
+      "games": 92,
+      "plateAppearances": 315,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.328,
+      "obp": 0.337,
       "slg": 0.556,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
-        "ANA"
+        "CAL"
       ],
-      "sourcePlayerId": "greento02"
+      "sourcePlayerId": "hudlere01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 92.14285714285715,
-      "formulaVersion": "season-selection-v1"
+      "score": 45.85,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1073,8 +1329,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 108,
       "hr": 5,
       "avg": 0.307,
       "obp": 0.344,
@@ -1084,8 +1340,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 108,
       "hr": 5,
       "avg": 0.307,
       "obp": 0.344,
@@ -1106,33 +1362,551 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "disarga01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.35714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 45.07,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "laa-1990s-don-slaught-1996",
-    "playerId": "slaugdo01",
-    "playerSlug": "don-slaught",
-    "name": "Don Slaught",
+    "id": "laa-1990s-rene-gonzales-1992",
+    "playerId": "gonzare01",
+    "playerSlug": "rene-gonzales",
+    "name": "Rene Gonzales",
     "franchiseId": "laa",
     "teamAbbreviation": "LAA",
     "teamDisplayName": "Los Angeles Angels",
     "team": "LAA",
     "decade": "1990s",
-    "featuredSeason": 1996,
+    "featuredSeason": 1992,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "2B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.7,
+      "opsPlus": 114,
+      "hr": 7,
+      "avg": 0.277,
+      "obp": 0.363,
+      "slg": 0.398,
+      "rbi": 38,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.7,
+      "opsPlus": 114,
+      "hr": 7,
+      "avg": 0.277,
+      "obp": 0.363,
+      "slg": 0.398,
+      "rbi": 38,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 104,
+      "plateAppearances": 375,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.363,
+      "slg": 0.398,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "gonzare01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.150000000000006,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-luis-polonia-1991",
+    "playerId": "polonlu01",
+    "playerSlug": "luis-polonia",
+    "name": "Luis Polonia",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.3,
+      "opsPlus": 104,
+      "hr": 2,
+      "avg": 0.296,
+      "obp": 0.352,
+      "slg": 0.379,
+      "rbi": 50,
+      "sb": 48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "opsPlus": 104,
+      "hr": 2,
+      "avg": 0.296,
+      "obp": 0.352,
+      "slg": 0.379,
+      "rbi": 50,
+      "sb": 48
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 660,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.379,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "polonlu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.199999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-chad-curtis-1993",
+    "playerId": "curtich01",
+    "playerSlug": "chad-curtis",
+    "name": "Chad Curtis",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "opsPlus": 96,
+      "hr": 6,
+      "avg": 0.285,
+      "obp": 0.361,
+      "slg": 0.369,
+      "rbi": 59,
+      "sb": 48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "opsPlus": 96,
+      "hr": 6,
+      "avg": 0.285,
+      "obp": 0.361,
+      "slg": 0.369,
+      "rbi": 59,
+      "sb": 48
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 664,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.369,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "curtich01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 34.64,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-dave-winfield-1990",
+    "playerId": "winfida01",
+    "playerSlug": "dave-winfield",
+    "name": "Dave Winfield",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.1,
+      "opsPlus": 129,
+      "hr": 19,
+      "avg": 0.275,
+      "obp": 0.348,
+      "slg": 0.466,
+      "rbi": 72,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.1,
+      "opsPlus": 129,
+      "hr": 19,
+      "avg": 0.275,
+      "obp": 0.348,
+      "slg": 0.466,
+      "rbi": 72,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 112,
+      "plateAppearances": 469,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.466,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "winfida01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 32.39,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-dick-schofield-1990",
+    "playerId": "schofdi02",
+    "playerSlug": "dick-schofield",
+    "name": "Dick Schofield",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "opsPlus": 90,
+      "hr": 1,
+      "avg": 0.255,
+      "obp": 0.363,
+      "slg": 0.297,
+      "rbi": 18,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "opsPlus": 90,
+      "hr": 1,
+      "avg": 0.255,
+      "obp": 0.363,
+      "slg": 0.297,
+      "rbi": 18,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 99,
+      "plateAppearances": 366,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.363,
+      "slg": 0.297,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "schofdi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 28.66,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-jim-leyritz-1997",
+    "playerId": "leyriji01",
+    "playerSlug": "jim-leyritz",
+    "name": "Jim Leyritz",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2,
+      "opsPlus": 99,
+      "hr": 11,
+      "avg": 0.276,
+      "obp": 0.357,
+      "slg": 0.412,
+      "rbi": 50,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2,
+      "opsPlus": 99,
+      "hr": 11,
+      "avg": 0.276,
+      "obp": 0.357,
+      "slg": 0.412,
+      "rbi": 50,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 84,
+      "plateAppearances": 339,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.412,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "leyriji01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 26.89,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-dave-gallagher-1991",
+    "playerId": "gallada01",
+    "playerSlug": "dave-gallagher",
+    "name": "Dave Gallagher",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.7,
+      "opsPlus": 102,
+      "hr": 1,
+      "avg": 0.293,
+      "obp": 0.355,
+      "slg": 0.367,
+      "rbi": 30,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.7,
+      "opsPlus": 102,
+      "hr": 1,
+      "avg": 0.293,
+      "obp": 0.355,
+      "slg": 0.367,
+      "rbi": 30,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 90,
+      "plateAppearances": 296,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.367,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CAL"
+      ],
+      "sourcePlayerId": "gallada01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 24.36,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "laa-1990s-todd-greene-1997",
+    "playerId": "greento02",
+    "playerSlug": "todd-greene",
+    "name": "Todd Greene",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "1990s",
+    "featuredSeason": 1997,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -1143,266 +1917,56 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.324,
-      "obp": 0.366,
-      "slg": 0.454,
-      "rbi": 32,
-      "sb": 0
+      "war": 0.8,
+      "opsPlus": 124,
+      "hr": 9,
+      "avg": 0.29,
+      "obp": 0.328,
+      "slg": 0.556,
+      "rbi": 24,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.324,
-      "obp": 0.366,
-      "slg": 0.454,
-      "rbi": 32,
-      "sb": 0
+      "war": 0.8,
+      "opsPlus": 124,
+      "hr": 9,
+      "avg": 0.29,
+      "obp": 0.328,
+      "slg": 0.556,
+      "rbi": 24,
+      "sb": 2
     },
     "scoringStats": {
-      "games": 62,
-      "plateAppearances": 224,
+      "games": 34,
+      "plateAppearances": 131,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.366,
-      "slg": 0.454,
+      "obp": 0.328,
+      "slg": 0.556,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
-        "CAL"
+        "ANA"
       ],
-      "sourcePlayerId": "slaugdo01"
+      "sourcePlayerId": "greento02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88.4,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-damion-easley-1993",
-    "playerId": "easleda01",
-    "playerSlug": "damion-easley",
-    "name": "Damion Easley",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 2,
-      "avg": 0.313,
-      "obp": 0.392,
-      "slg": 0.413,
-      "rbi": 22,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 2,
-      "avg": 0.313,
-      "obp": 0.392,
-      "slg": 0.413,
-      "rbi": 22,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 73,
-      "plateAppearances": 263,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.392,
-      "slg": 0.413,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "easleda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.01428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-troy-percival-1995",
-    "playerId": "percitr01",
-    "playerSlug": "troy-percival",
-    "name": "Troy Percival",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.95,
-      "whip": 0.851,
-      "so": 94,
-      "wins": 3,
-      "saves": 3,
-      "sv": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.95,
-      "whip": 0.851,
-      "so": 94,
-      "wins": 3,
-      "saves": 3,
-      "sv": 3
-    },
-    "scoringStats": {
-      "whip": 0.851,
-      "fip": null,
-      "inningsPitched": 74,
-      "strikeoutRate": 11.432432432432432,
-      "walkRate": 3.1621621621621623,
-      "starts": 0,
-      "reliefAppearances": 62
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "percitr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 87.9854054054054,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-stan-javier-1993",
-    "playerId": "javiest01",
-    "playerSlug": "stan-javier",
-    "name": "Stan Javier",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "CF",
-      "LF",
-      "RF"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.291,
-      "obp": 0.362,
-      "slg": 0.405,
-      "rbi": 28,
-      "sb": 12
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.291,
-      "obp": 0.362,
-      "slg": 0.405,
-      "rbi": 28,
-      "sb": 12
-    },
-    "scoringStats": {
-      "games": 92,
-      "plateAppearances": 268,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.362,
-      "slg": 0.405,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "javiest01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 84.35714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 22.91,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1427,8 +1991,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.6,
+      "opsPlus": 115,
       "hr": 1,
       "avg": 0.308,
       "obp": 0.369,
@@ -1438,8 +2002,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.6,
+      "opsPlus": 115,
       "hr": 1,
       "avg": 0.308,
       "obp": 0.369,
@@ -1460,506 +2024,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "CAL"
       ],
       "sourcePlayerId": "anderke01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 79.88571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-mark-eichhorn-1991",
-    "playerId": "eichhma01",
-    "playerSlug": "mark-eichhorn",
-    "name": "Mark Eichhorn",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.98,
-      "whip": 0.931,
-      "so": 49,
-      "wins": 3,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.98,
-      "whip": 0.931,
-      "so": 49,
-      "wins": 3,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 0.931,
-      "fip": null,
-      "inningsPitched": 81.7,
-      "strikeoutRate": 5.3977968176254585,
-      "walkRate": 1.4320685434516522,
-      "starts": 0,
-      "reliefAppearances": 70
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "eichhma01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 79.56859241126071,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-donnie-hill-1990",
-    "playerId": "hilldo01",
-    "playerSlug": "donnie-hill",
-    "name": "Donnie Hill",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "3B",
-      "SS"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.264,
-      "obp": 0.319,
-      "slg": 0.352,
-      "rbi": 32,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.264,
-      "obp": 0.319,
-      "slg": 0.352,
-      "rbi": 32,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 103,
-      "plateAppearances": 386,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.319,
-      "slg": 0.352,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "hilldo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 78.12857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-chuck-finley-1990",
-    "playerId": "finlech01",
-    "playerSlug": "chuck-finley",
-    "name": "Chuck Finley",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.4,
-      "whip": 1.233,
-      "so": 177,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.4,
-      "whip": 1.233,
-      "so": 177,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.233,
-      "fip": null,
-      "inningsPitched": 236,
-      "strikeoutRate": 6.75,
-      "walkRate": 3.0889830508474576,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "finlech01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 68.03152542372882,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-jim-abbott-1991",
-    "playerId": "abbotji01",
-    "playerSlug": "jim-abbott",
-    "name": "Jim Abbott",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.89,
-      "whip": 1.214,
-      "so": 158,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.89,
-      "whip": 1.214,
-      "so": 158,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.214,
-      "fip": null,
-      "inningsPitched": 243,
-      "strikeoutRate": 5.851851851851852,
-      "walkRate": 2.7037037037037037,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "abbotji01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 61.76222222222223,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-mark-langston-1991",
-    "playerId": "langsma01",
-    "playerSlug": "mark-langston",
-    "name": "Mark Langston",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 1.161,
-      "so": 183,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3,
-      "whip": 1.161,
-      "so": 183,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.161,
-      "fip": null,
-      "inningsPitched": 246.3,
-      "strikeoutRate": 6.686967113276491,
-      "walkRate": 3.5079171741778317,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "langsma01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 61.54857490864799,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-kirk-mccaskill-1990",
-    "playerId": "mccaski01",
-    "playerSlug": "kirk-mccaskill",
-    "name": "Kirk McCaskill",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.25,
-      "whip": 1.337,
-      "so": 78,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.25,
-      "whip": 1.337,
-      "so": 78,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.337,
-      "fip": null,
-      "inningsPitched": 174.3,
-      "strikeoutRate": 4.027538726333907,
-      "walkRate": 3.7177280550774525,
-      "starts": 29,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "mccaski01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 48.408049340218014,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "laa-1990s-julio-valera-1992",
-    "playerId": "valerju01",
-    "playerSlug": "julio-valera",
-    "name": "Julio Valera",
-    "franchiseId": "laa",
-    "teamAbbreviation": "LAA",
-    "teamDisplayName": "Los Angeles Angels",
-    "team": "LAA",
-    "decade": "1990s",
-    "featuredSeason": 1992,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.73,
-      "whip": 1.34,
-      "so": 113,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.73,
-      "whip": 1.34,
-      "so": 113,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.34,
-      "fip": null,
-      "inningsPitched": 188,
-      "strikeoutRate": 5.409574468085107,
-      "walkRate": 3.0638297872340425,
-      "starts": 28,
-      "reliefAppearances": 2
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "valerju01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 46.403061465721045,
-      "formulaVersion": "season-selection-v1"
+      "score": 16.27,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

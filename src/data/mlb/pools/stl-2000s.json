@@ -1,15 +1,15 @@
 [
   {
-    "id": "stl-2000s-mark-mcgwire-2000",
-    "playerId": "mcgwima01",
-    "playerSlug": "mark-mcgwire",
-    "name": "Mark McGwire",
+    "id": "stl-2000s-albert-pujols-2009",
+    "playerId": "pujolal01",
+    "playerSlug": "albert-pujols",
+    "name": "Albert Pujols",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2000s",
-    "featuredSeason": 2000,
+    "featuredSeason": 2009,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -20,194 +20,56 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 32,
-      "avg": 0.305,
-      "obp": 0.483,
-      "slg": 0.746,
-      "rbi": 73,
-      "sb": 1
+      "war": 9.7,
+      "opsPlus": 189,
+      "hr": 47,
+      "avg": 0.327,
+      "obp": 0.443,
+      "slg": 0.658,
+      "rbi": 135,
+      "sb": 16
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 32,
-      "avg": 0.305,
-      "obp": 0.483,
-      "slg": 0.746,
-      "rbi": 73,
-      "sb": 1
+      "war": 9.7,
+      "opsPlus": 189,
+      "hr": 47,
+      "avg": 0.327,
+      "obp": 0.443,
+      "slg": 0.658,
+      "rbi": 135,
+      "sb": 16
     },
     "scoringStats": {
-      "games": 89,
-      "plateAppearances": 321,
+      "games": 160,
+      "plateAppearances": 700,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.483,
-      "slg": 0.746,
+      "obp": 0.443,
+      "slg": 0.658,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
       ],
-      "sourcePlayerId": "mcgwima01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 132.07142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-albert-pujols-2003",
-    "playerId": "pujolal01",
-    "playerSlug": "albert-pujols",
-    "name": "Albert Pujols",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 43,
-      "avg": 0.359,
-      "obp": 0.439,
-      "slg": 0.667,
-      "rbi": 124,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 43,
-      "avg": 0.359,
-      "obp": 0.439,
-      "slg": 0.667,
-      "rbi": 124,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 685,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.439,
-      "slg": 0.667,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "pujolal01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 130.17142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-jim-edmonds-2004",
-    "playerId": "edmonji01",
-    "playerSlug": "jim-edmonds",
-    "name": "Jim Edmonds",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 42,
-      "avg": 0.301,
-      "obp": 0.418,
-      "slg": 0.643,
-      "rbi": 111,
-      "sb": 8
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 42,
-      "avg": 0.301,
-      "obp": 0.418,
-      "slg": 0.643,
-      "rbi": 111,
-      "sb": 8
-    },
-    "scoringStats": {
-      "games": 153,
-      "plateAppearances": 612,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.418,
-      "slg": 0.643,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "edmonji01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 123.58571428571427,
-      "formulaVersion": "season-selection-v1"
+      "score": 167.89999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -231,8 +93,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.2,
+      "opsPlus": 158,
       "hr": 34,
       "avg": 0.314,
       "obp": 0.409,
@@ -242,8 +104,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.2,
+      "opsPlus": 158,
       "hr": 34,
       "avg": 0.314,
       "obp": 0.409,
@@ -264,20 +126,313 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "rolensc01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 117.6142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 145.31999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-jim-edmonds-2004",
+    "playerId": "edmonji01",
+    "playerSlug": "jim-edmonds",
+    "name": "Jim Edmonds",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 7.2,
+      "opsPlus": 171,
+      "hr": 42,
+      "avg": 0.301,
+      "obp": 0.418,
+      "slg": 0.643,
+      "rbi": 111,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.2,
+      "opsPlus": 171,
+      "hr": 42,
+      "avg": 0.301,
+      "obp": 0.418,
+      "slg": 0.643,
+      "rbi": 111,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 612,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.418,
+      "slg": 0.643,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "edmonji01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 128.02,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-chris-carpenter-2009",
+    "playerId": "carpech01",
+    "playerSlug": "chris-carpenter",
+    "name": "Chris Carpenter",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.5,
+      "eraPlus": 182,
+      "era": 2.24,
+      "whip": 1.007,
+      "so": 144,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.5,
+      "eraPlus": 182,
+      "era": 2.24,
+      "whip": 1.007,
+      "so": 144,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.007,
+      "fip": null,
+      "inningsPitched": 192.7,
+      "strikeoutRate": 6.725480020757654,
+      "walkRate": 1.774779449922159,
+      "starts": 28,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "carpech01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 116.33500000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-mark-mcgwire-2000",
+    "playerId": "mcgwima01",
+    "playerSlug": "mark-mcgwire",
+    "name": "Mark McGwire",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.2,
+      "opsPlus": 203,
+      "hr": 32,
+      "avg": 0.305,
+      "obp": 0.483,
+      "slg": 0.746,
+      "rbi": 73,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.2,
+      "opsPlus": 203,
+      "hr": 32,
+      "avg": 0.305,
+      "obp": 0.483,
+      "slg": 0.746,
+      "rbi": 73,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 89,
+      "plateAppearances": 321,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.483,
+      "slg": 0.746,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "mcgwima01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.11,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-adam-wainwright-2009",
+    "playerId": "wainwad01",
+    "playerSlug": "adam-wainwright",
+    "name": "Adam Wainwright",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.3,
+      "eraPlus": 155,
+      "era": 2.63,
+      "whip": 1.21,
+      "so": 212,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.3,
+      "eraPlus": 155,
+      "era": 2.63,
+      "whip": 1.21,
+      "so": 212,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.21,
+      "fip": null,
+      "inningsPitched": 233,
+      "strikeoutRate": 8.188841201716738,
+      "walkRate": 2.5493562231759657,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "wainwad01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.85,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -302,8 +457,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.5,
+      "opsPlus": 161,
       "hr": 27,
       "avg": 0.323,
       "obp": 0.414,
@@ -313,8 +468,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.5,
+      "opsPlus": 161,
       "hr": 27,
       "avg": 0.323,
       "obp": 0.414,
@@ -335,20 +490,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "drewjd01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 115.27142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 100.9,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -374,8 +532,8 @@
     "bats": "R",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.5,
+      "opsPlus": 151,
       "hr": 37,
       "avg": 0.299,
       "obp": 0.375,
@@ -385,8 +543,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.5,
+      "opsPlus": 151,
       "hr": 37,
       "avg": 0.299,
       "obp": 0.375,
@@ -407,160 +565,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "ludwiry01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 114.19999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 97.66,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2000s-will-clark-2000",
-    "playerId": "clarkwi02",
-    "playerSlug": "will-clark",
-    "name": "Will Clark",
+    "id": "stl-2000s-steve-kline-2001",
+    "playerId": "klinest02",
+    "playerSlug": "steve-kline",
+    "name": "Steve Kline",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "1B"
+      "RP"
     ],
-    "bats": "L",
+    "bats": "B",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.345,
-      "obp": 0.426,
-      "slg": 0.655,
-      "rbi": 42,
-      "sb": 1
+      "war": 2.7,
+      "eraPlus": 241,
+      "era": 1.8,
+      "whip": 1.093,
+      "so": 54,
+      "wins": 3,
+      "saves": 9,
+      "sv": 9
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.345,
-      "obp": 0.426,
-      "slg": 0.655,
-      "rbi": 42,
-      "sb": 1
+      "war": 2.7,
+      "eraPlus": 241,
+      "era": 1.8,
+      "whip": 1.093,
+      "so": 54,
+      "wins": 3,
+      "saves": 9,
+      "sv": 9
     },
     "scoringStats": {
-      "games": 51,
-      "plateAppearances": 197,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.426,
-      "slg": 0.655,
-      "wrcPlus": null
+      "whip": 1.093,
+      "fip": null,
+      "inningsPitched": 75,
+      "strikeoutRate": 6.48,
+      "walkRate": 3.48,
+      "starts": 0,
+      "reliefAppearances": 89
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
-      "sourcePlayerId": "clarkwi02"
+      "sourcePlayerId": "klinest02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 113.72857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-matt-holliday-2009",
-    "playerId": "hollima01",
-    "playerSlug": "matt-holliday",
-    "name": "Matt Holliday",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.353,
-      "obp": 0.419,
-      "slg": 0.604,
-      "rbi": 55,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.353,
-      "obp": 0.419,
-      "slg": 0.604,
-      "rbi": 55,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 63,
-      "plateAppearances": 270,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.419,
-      "slg": 0.604,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "hollima01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 110.0142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 91.75,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -584,8 +677,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.5,
+      "opsPlus": 130,
       "hr": 13,
       "avg": 0.33,
       "obp": 0.394,
@@ -595,8 +688,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.5,
+      "opsPlus": 130,
       "hr": 13,
       "avg": 0.33,
       "obp": 0.394,
@@ -617,20 +710,1041 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "renteed01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 106.25714285714287,
-      "formulaVersion": "season-selection-v1"
+      "score": 87.6,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-darryl-kile-2001",
+    "playerId": "kileda01",
+    "playerSlug": "darryl-kile",
+    "name": "Darryl Kile",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.9,
+      "eraPlus": 140,
+      "era": 3.09,
+      "whip": 1.289,
+      "so": 179,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.9,
+      "eraPlus": 140,
+      "era": 3.09,
+      "whip": 1.289,
+      "so": 179,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.289,
+      "fip": null,
+      "inningsPitched": 227.3,
+      "strikeoutRate": 7.087549494060712,
+      "walkRate": 2.5736911570611527,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "kileda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82.80000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-ryan-franklin-2009",
+    "playerId": "frankry01",
+    "playerSlug": "ryan-franklin",
+    "name": "Ryan Franklin",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.2,
+      "eraPlus": 214,
+      "era": 1.92,
+      "whip": 1.197,
+      "so": 44,
+      "wins": 4,
+      "saves": 38,
+      "sv": 38
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "eraPlus": 214,
+      "era": 1.92,
+      "whip": 1.197,
+      "so": 44,
+      "wins": 4,
+      "saves": 38,
+      "sv": 38
+    },
+    "scoringStats": {
+      "whip": 1.197,
+      "fip": null,
+      "inningsPitched": 61,
+      "strikeoutRate": 6.491803278688525,
+      "walkRate": 3.540983606557377,
+      "starts": 0,
+      "reliefAppearances": 62
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "frankry01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.15714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-matt-morris-2001",
+    "playerId": "morrima01",
+    "playerSlug": "matt-morris",
+    "name": "Matt Morris",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.1,
+      "eraPlus": 137,
+      "era": 3.16,
+      "whip": 1.257,
+      "so": 185,
+      "wins": 22,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.1,
+      "eraPlus": 137,
+      "era": 3.16,
+      "whip": 1.257,
+      "so": 185,
+      "wins": 22,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.257,
+      "fip": null,
+      "inningsPitched": 216.3,
+      "strikeoutRate": 7.69764216366158,
+      "walkRate": 2.246879334257975,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "morrima01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.14999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-troy-glaus-2008",
+    "playerId": "glaustr01",
+    "playerSlug": "troy-glaus",
+    "name": "Troy Glaus",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.4,
+      "opsPlus": 125,
+      "hr": 27,
+      "avg": 0.27,
+      "obp": 0.372,
+      "slg": 0.483,
+      "rbi": 99,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.4,
+      "opsPlus": 125,
+      "hr": 27,
+      "avg": 0.27,
+      "obp": 0.372,
+      "slg": 0.483,
+      "rbi": 99,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 637,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.372,
+      "slg": 0.483,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "glaustr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.67000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-troy-percival-2007",
+    "playerId": "percitr01",
+    "playerSlug": "troy-percival",
+    "name": "Troy Percival",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.2,
+      "eraPlus": 246,
+      "era": 1.8,
+      "whip": 0.85,
+      "so": 36,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.2,
+      "eraPlus": 246,
+      "era": 1.8,
+      "whip": 0.85,
+      "so": 36,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.85,
+      "fip": null,
+      "inningsPitched": 40,
+      "strikeoutRate": 8.1,
+      "walkRate": 2.25,
+      "starts": 1,
+      "reliefAppearances": 33
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "percitr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2007.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.21428571428571,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-jason-isringhausen-2005",
+    "playerId": "isrinja01",
+    "playerSlug": "jason-isringhausen",
+    "name": "Jason Isringhausen",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2,
+      "eraPlus": 199,
+      "era": 2.14,
+      "whip": 1.186,
+      "so": 51,
+      "wins": 1,
+      "saves": 39,
+      "sv": 39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2,
+      "eraPlus": 199,
+      "era": 2.14,
+      "whip": 1.186,
+      "so": 51,
+      "wins": 1,
+      "saves": 39,
+      "sv": 39
+    },
+    "scoringStats": {
+      "whip": 1.186,
+      "fip": null,
+      "inningsPitched": 59,
+      "strikeoutRate": 7.779661016949152,
+      "walkRate": 4.11864406779661,
+      "starts": 0,
+      "reliefAppearances": 63
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "isrinja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-alberto-reyes-2005",
+    "playerId": "reyesal01",
+    "playerSlug": "alberto-reyes",
+    "name": "Alberto Reyes",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2,
+      "eraPlus": 197,
+      "era": 2.15,
+      "whip": 0.926,
+      "so": 67,
+      "wins": 4,
+      "saves": 3,
+      "sv": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2,
+      "eraPlus": 197,
+      "era": 2.15,
+      "whip": 0.926,
+      "so": 67,
+      "wins": 4,
+      "saves": 3,
+      "sv": 3
+    },
+    "scoringStats": {
+      "whip": 0.926,
+      "fip": null,
+      "inningsPitched": 62.7,
+      "strikeoutRate": 9.617224880382775,
+      "walkRate": 2.8708133971291865,
+      "starts": 0,
+      "reliefAppearances": 65
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "reyesal01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.23571428571428,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-matt-holliday-2009",
+    "playerId": "hollima01",
+    "playerSlug": "matt-holliday",
+    "name": "Matt Holliday",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.3,
+      "opsPlus": 169,
+      "hr": 13,
+      "avg": 0.353,
+      "obp": 0.419,
+      "slg": 0.604,
+      "rbi": 55,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "opsPlus": 169,
+      "hr": 13,
+      "avg": 0.353,
+      "obp": 0.419,
+      "slg": 0.604,
+      "rbi": 55,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 63,
+      "plateAppearances": 270,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.419,
+      "slg": 0.604,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "hollima01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 64.8,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-woody-williams-2001",
+    "playerId": "williwo02",
+    "playerSlug": "woody-williams",
+    "name": "Woody Williams",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.2,
+      "eraPlus": 190,
+      "era": 2.28,
+      "whip": 0.973,
+      "so": 52,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "eraPlus": 190,
+      "era": 2.28,
+      "whip": 0.973,
+      "so": 52,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.973,
+      "fip": null,
+      "inningsPitched": 75,
+      "strikeoutRate": 6.24,
+      "walkRate": 2.28,
+      "starts": 11,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "williwo02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 61.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-will-clark-2000",
+    "playerId": "clarkwi02",
+    "playerSlug": "will-clark",
+    "name": "Will Clark",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.1,
+      "opsPlus": 167,
+      "hr": 12,
+      "avg": 0.345,
+      "obp": 0.426,
+      "slg": 0.655,
+      "rbi": 42,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.1,
+      "opsPlus": 167,
+      "hr": 12,
+      "avg": 0.345,
+      "obp": 0.426,
+      "slg": 0.655,
+      "rbi": 42,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 51,
+      "plateAppearances": 197,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.426,
+      "slg": 0.655,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "clarkwi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.67,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-brendan-ryan-2009",
+    "playerId": "ryanbr01",
+    "playerSlug": "brendan-ryan",
+    "name": "Brendan Ryan",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "opsPlus": 97,
+      "hr": 3,
+      "avg": 0.292,
+      "obp": 0.34,
+      "slg": 0.4,
+      "rbi": 37,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "opsPlus": 97,
+      "hr": 3,
+      "avg": 0.292,
+      "obp": 0.34,
+      "slg": 0.4,
+      "rbi": 37,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 129,
+      "plateAppearances": 423,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.34,
+      "slg": 0.4,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "ryanbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.730000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-placido-polanco-2001",
+    "playerId": "polanpl01",
+    "playerSlug": "placido-polanco",
+    "name": "Placido Polanco",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "opsPlus": 88,
+      "hr": 3,
+      "avg": 0.307,
+      "obp": 0.342,
+      "slg": 0.383,
+      "rbi": 38,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "opsPlus": 88,
+      "hr": 3,
+      "avg": 0.307,
+      "obp": 0.342,
+      "slg": 0.383,
+      "rbi": 38,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 144,
+      "plateAppearances": 596,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.342,
+      "slg": 0.383,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "polanpl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.96,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-mark-grudzielanek-2005",
+    "playerId": "grudzma01",
+    "playerSlug": "mark-grudzielanek",
+    "name": "Mark Grudzielanek",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.1,
+      "opsPlus": 93,
+      "hr": 8,
+      "avg": 0.294,
+      "obp": 0.334,
+      "slg": 0.407,
+      "rbi": 59,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.1,
+      "opsPlus": 93,
+      "hr": 8,
+      "avg": 0.294,
+      "obp": 0.334,
+      "slg": 0.407,
+      "rbi": 59,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 563,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.334,
+      "slg": 0.407,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "grudzma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.33,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "stl-2000s-larry-walker-2005",
+    "playerId": "walkela01",
+    "playerSlug": "larry-walker",
+    "name": "Larry Walker",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.4,
+      "opsPlus": 130,
+      "hr": 15,
+      "avg": 0.289,
+      "obp": 0.384,
+      "slg": 0.502,
+      "rbi": 52,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.4,
+      "opsPlus": 130,
+      "hr": 15,
+      "avg": 0.289,
+      "obp": 0.384,
+      "slg": 0.502,
+      "rbi": 52,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 100,
+      "plateAppearances": 367,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.502,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "walkela01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.47,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -656,8 +1770,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.8,
+      "opsPlus": 140,
       "hr": 22,
       "avg": 0.293,
       "obp": 0.363,
@@ -667,8 +1781,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.8,
+      "opsPlus": 140,
       "hr": 22,
       "avg": 0.293,
       "obp": 0.363,
@@ -689,441 +1803,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "duncach01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2006.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 104.17142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 44.74,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2000s-troy-glaus-2008",
-    "playerId": "glaustr01",
-    "playerSlug": "troy-glaus",
-    "name": "Troy Glaus",
+    "id": "stl-2000s-yadier-molina-2009",
+    "playerId": "molinya01",
+    "playerSlug": "yadier-molina",
+    "name": "Yadier Molina",
     "franchiseId": "stl",
     "teamAbbreviation": "STL",
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2000s",
-    "featuredSeason": 2008,
+    "featuredSeason": 2009,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "3B"
+      "C"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.27,
-      "obp": 0.372,
-      "slg": 0.483,
-      "rbi": 99,
-      "sb": 0
+      "war": 3.1,
+      "opsPlus": 100,
+      "hr": 6,
+      "avg": 0.293,
+      "obp": 0.366,
+      "slg": 0.383,
+      "rbi": 54,
+      "sb": 9
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.27,
-      "obp": 0.372,
-      "slg": 0.483,
-      "rbi": 99,
-      "sb": 0
+      "war": 3.1,
+      "opsPlus": 100,
+      "hr": 6,
+      "avg": 0.293,
+      "obp": 0.366,
+      "slg": 0.383,
+      "rbi": 54,
+      "sb": 9
     },
     "scoringStats": {
-      "games": 151,
-      "plateAppearances": 637,
+      "games": 140,
+      "plateAppearances": 538,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.372,
-      "slg": 0.483,
+      "obp": 0.366,
+      "slg": 0.383,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
-      "sourcePlayerId": "glaustr01"
+      "sourcePlayerId": "molinya01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.7,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-felipe-lopez-2008",
-    "playerId": "lopezfe01",
-    "playerSlug": "felipe-lopez",
-    "name": "Felipe Lopez",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2008,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "3B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.385,
-      "obp": 0.426,
-      "slg": 0.538,
-      "rbi": 21,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.385,
-      "obp": 0.426,
-      "slg": 0.538,
-      "rbi": 21,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 43,
-      "plateAppearances": 169,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.426,
-      "slg": 0.538,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "lopezfe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 101.22857142857141,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-ray-lankford-2000",
-    "playerId": "lankfra01",
-    "playerSlug": "ray-lankford",
-    "name": "Ray Lankford",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 26,
-      "avg": 0.253,
-      "obp": 0.367,
-      "slg": 0.508,
-      "rbi": 65,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 26,
-      "avg": 0.253,
-      "obp": 0.367,
-      "slg": 0.508,
-      "rbi": 65,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 128,
-      "plateAppearances": 472,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.367,
-      "slg": 0.508,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "lankfra01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 100.98571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-fernando-vina-2001",
-    "playerId": "vinafe01",
-    "playerSlug": "fernando-vina",
-    "name": "Fernando Vina",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.303,
-      "obp": 0.357,
-      "slg": 0.418,
-      "rbi": 56,
-      "sb": 17
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.303,
-      "obp": 0.357,
-      "slg": 0.418,
-      "rbi": 56,
-      "sb": 17
-    },
-    "scoringStats": {
-      "games": 154,
-      "plateAppearances": 687,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.357,
-      "slg": 0.418,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "vinafe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.12857142857142,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-david-eckstein-2005",
-    "playerId": "eckstda01",
-    "playerSlug": "david-eckstein",
-    "name": "David Eckstein",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2005,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.294,
-      "obp": 0.363,
-      "slg": 0.395,
-      "rbi": 61,
-      "sb": 11
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.294,
-      "obp": 0.363,
-      "slg": 0.395,
-      "rbi": 61,
-      "sb": 11
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 705,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.363,
-      "slg": 0.395,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "eckstda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95.94285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-tony-womack-2004",
-    "playerId": "womacto01",
-    "playerSlug": "tony-womack",
-    "name": "Tony Womack",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.307,
-      "obp": 0.349,
-      "slg": 0.385,
-      "rbi": 38,
-      "sb": 26
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.307,
-      "obp": 0.349,
-      "slg": 0.385,
-      "rbi": 38,
-      "sb": 26
-    },
-    "scoringStats": {
-      "games": 145,
-      "plateAppearances": 598,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.349,
-      "slg": 0.385,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "womacto01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.4857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 42.580000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1150,8 +1919,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.7,
+      "opsPlus": 104,
       "hr": 18,
       "avg": 0.262,
       "obp": 0.327,
@@ -1161,8 +1930,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.7,
+      "opsPlus": 104,
       "hr": 18,
       "avg": 0.262,
       "obp": 0.327,
@@ -1183,304 +1952,27 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "marreel01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.39999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 26.81,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "stl-2000s-yadier-molina-2009",
-    "playerId": "molinya01",
-    "playerSlug": "yadier-molina",
-    "name": "Yadier Molina",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.293,
-      "obp": 0.366,
-      "slg": 0.383,
-      "rbi": 54,
-      "sb": 9
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.293,
-      "obp": 0.366,
-      "slg": 0.383,
-      "rbi": 54,
-      "sb": 9
-    },
-    "scoringStats": {
-      "games": 140,
-      "plateAppearances": 538,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.366,
-      "slg": 0.383,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "molinya01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.27142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-placido-polanco-2001",
-    "playerId": "polanpl01",
-    "playerSlug": "placido-polanco",
-    "name": "Placido Polanco",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "3B",
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.307,
-      "obp": 0.342,
-      "slg": 0.383,
-      "rbi": 38,
-      "sb": 12
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 3,
-      "avg": 0.307,
-      "obp": 0.342,
-      "slg": 0.383,
-      "rbi": 38,
-      "sb": 12
-    },
-    "scoringStats": {
-      "games": 144,
-      "plateAppearances": 596,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.342,
-      "slg": 0.383,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "polanpl01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.52857142857144,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-trever-miller-2009",
-    "playerId": "milletr02",
-    "playerSlug": "trever-miller",
-    "name": "Trever Miller",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.06,
-      "whip": 0.962,
-      "so": 46,
-      "wins": 4,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.06,
-      "whip": 0.962,
-      "so": 46,
-      "wins": 4,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.962,
-      "fip": null,
-      "inningsPitched": 43.7,
-      "strikeoutRate": 9.473684210526315,
-      "walkRate": 2.265446224256293,
-      "starts": 0,
-      "reliefAppearances": 70
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "milletr02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 82.85235697940504,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-alberto-reyes-2005",
-    "playerId": "reyesal01",
-    "playerSlug": "alberto-reyes",
-    "name": "Alberto Reyes",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2005,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.15,
-      "whip": 0.926,
-      "so": 67,
-      "wins": 4,
-      "saves": 3,
-      "sv": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.15,
-      "whip": 0.926,
-      "so": 67,
-      "wins": 4,
-      "saves": 3,
-      "sv": 3
-    },
-    "scoringStats": {
-      "whip": 0.926,
-      "fip": null,
-      "inningsPitched": 62.7,
-      "strikeoutRate": 9.617224880382775,
-      "walkRate": 2.8708133971291865,
-      "starts": 0,
-      "reliefAppearances": 65
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "reyesal01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 81.7996172248804,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-mike-matheny-2003",
+    "id": "stl-2000s-mike-matheny-2000",
     "playerId": "mathemi01",
     "playerSlug": "mike-matheny",
     "name": "Mike Matheny",
@@ -1489,7 +1981,7 @@
     "teamDisplayName": "St. Louis Cardinals",
     "team": "STL",
     "decade": "2000s",
-    "featuredSeason": 2003,
+    "featuredSeason": 2000,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -1500,467 +1992,56 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.252,
-      "obp": 0.32,
-      "slg": 0.356,
+      "war": 1.8,
+      "opsPlus": 71,
+      "hr": 6,
+      "avg": 0.261,
+      "obp": 0.317,
+      "slg": 0.362,
       "rbi": 47,
-      "sb": 1
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.252,
-      "obp": 0.32,
-      "slg": 0.356,
+      "war": 1.8,
+      "opsPlus": 71,
+      "hr": 6,
+      "avg": 0.261,
+      "obp": 0.317,
+      "slg": 0.362,
       "rbi": 47,
-      "sb": 1
+      "sb": 0
     },
     "scoringStats": {
-      "games": 141,
-      "plateAppearances": 490,
+      "games": 128,
+      "plateAppearances": 457,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.32,
-      "slg": 0.356,
+      "obp": 0.317,
+      "slg": 0.362,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SLN"
       ],
       "sourcePlayerId": "mathemi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 81.6,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-russ-springer-2007",
-    "playerId": "sprinru01",
-    "playerSlug": "russ-springer",
-    "name": "Russ Springer",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2007,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.18,
-      "whip": 0.909,
-      "so": 66,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.18,
-      "whip": 0.909,
-      "so": 66,
-      "wins": 8,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.909,
-      "fip": null,
-      "inningsPitched": 66,
-      "strikeoutRate": 9,
-      "walkRate": 2.590909090909091,
-      "starts": 0,
-      "reliefAppearances": 76
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "sprinru01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 81.27363636363636,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-chris-carpenter-2009",
-    "playerId": "carpech01",
-    "playerSlug": "chris-carpenter",
-    "name": "Chris Carpenter",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.24,
-      "whip": 1.007,
-      "so": 144,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.24,
-      "whip": 1.007,
-      "so": 144,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.007,
-      "fip": null,
-      "inningsPitched": 192.7,
-      "strikeoutRate": 6.725480020757654,
-      "walkRate": 1.774779449922159,
-      "starts": 28,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "carpech01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 75.1116064118088,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-adam-wainwright-2009",
-    "playerId": "wainwad01",
-    "playerSlug": "adam-wainwright",
-    "name": "Adam Wainwright",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.63,
-      "whip": 1.21,
-      "so": 212,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.63,
-      "whip": 1.21,
-      "so": 212,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.21,
-      "fip": null,
-      "inningsPitched": 233,
-      "strikeoutRate": 8.188841201716738,
-      "walkRate": 2.5493562231759657,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "wainwad01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 68.69922746781116,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-woody-williams-2001",
-    "playerId": "williwo02",
-    "playerSlug": "woody-williams",
-    "name": "Woody Williams",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.28,
-      "whip": 0.973,
-      "so": 52,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.28,
-      "whip": 0.973,
-      "so": 52,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.973,
-      "fip": null,
-      "inningsPitched": 75,
-      "strikeoutRate": 6.24,
-      "walkRate": 2.28,
-      "starts": 11,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "williwo02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.28666666666668,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-matt-morris-2001",
-    "playerId": "morrima01",
-    "playerSlug": "matt-morris",
-    "name": "Matt Morris",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.16,
-      "whip": 1.257,
-      "so": 185,
-      "wins": 22,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.16,
-      "whip": 1.257,
-      "so": 185,
-      "wins": 22,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.257,
-      "fip": null,
-      "inningsPitched": 216.3,
-      "strikeoutRate": 7.69764216366158,
-      "walkRate": 2.246879334257975,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "morrima01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 61.11614424410541,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "stl-2000s-darryl-kile-2001",
-    "playerId": "kileda01",
-    "playerSlug": "darryl-kile",
-    "name": "Darryl Kile",
-    "franchiseId": "stl",
-    "teamAbbreviation": "STL",
-    "teamDisplayName": "St. Louis Cardinals",
-    "team": "STL",
-    "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.09,
-      "whip": 1.289,
-      "so": 179,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.09,
-      "whip": 1.289,
-      "so": 179,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.289,
-      "fip": null,
-      "inningsPitched": 227.3,
-      "strikeoutRate": 7.087549494060712,
-      "walkRate": 2.5736911570611527,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SLN"
-      ],
-      "sourcePlayerId": "kileda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 59.91078750549935,
-      "formulaVersion": "season-selection-v1"
+      "score": 11.670000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

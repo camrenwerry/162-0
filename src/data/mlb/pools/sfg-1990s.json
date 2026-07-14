@@ -20,8 +20,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.9,
+      "opsPlus": 206,
       "hr": 46,
       "avg": 0.336,
       "obp": 0.458,
@@ -31,8 +31,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.9,
+      "opsPlus": 206,
       "hr": 46,
       "avg": 0.336,
       "obp": 0.458,
@@ -53,440 +53,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "bondsba01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 132.75714285714287,
-      "formulaVersion": "season-selection-v1"
+      "score": 178.54000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-matt-williams-1995",
-    "playerId": "willima04",
-    "playerSlug": "matt-williams",
-    "name": "Matt Williams",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.336,
-      "obp": 0.399,
-      "slg": 0.647,
-      "rbi": 65,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.336,
-      "obp": 0.399,
-      "slg": 0.647,
-      "rbi": 65,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 76,
-      "plateAppearances": 318,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.399,
-      "slg": 0.647,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "willima04"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 113.6857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-ellis-burks-1999",
-    "playerId": "burksel01",
-    "playerSlug": "ellis-burks",
-    "name": "Ellis Burks",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.282,
-      "obp": 0.394,
-      "slg": 0.569,
-      "rbi": 96,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.282,
-      "obp": 0.394,
-      "slg": 0.569,
-      "rbi": 96,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 120,
-      "plateAppearances": 469,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.394,
-      "slg": 0.569,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "burksel01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 109.7,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-jeff-kent-1998",
-    "playerId": "kentje01",
-    "playerSlug": "jeff-kent",
-    "name": "Jeff Kent",
+    "id": "sfg-1990s-robb-nen-1998",
+    "playerId": "nenro01",
+    "playerSlug": "robb-nen",
+    "name": "Robb Nen",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
     "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "2B"
+      "RP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.297,
-      "obp": 0.359,
-      "slg": 0.555,
-      "rbi": 128,
-      "sb": 9
+      "war": 3.4,
+      "eraPlus": 266,
+      "era": 1.52,
+      "whip": 0.947,
+      "so": 110,
+      "wins": 7,
+      "saves": 40,
+      "sv": 40
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.297,
-      "obp": 0.359,
-      "slg": 0.555,
-      "rbi": 128,
-      "sb": 9
+      "war": 3.4,
+      "eraPlus": 266,
+      "era": 1.52,
+      "whip": 0.947,
+      "so": 110,
+      "wins": 7,
+      "saves": 40,
+      "sv": 40
     },
     "scoringStats": {
-      "games": 137,
-      "plateAppearances": 593,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.555,
-      "wrcPlus": null
+      "whip": 0.947,
+      "fip": null,
+      "inningsPitched": 88.7,
+      "strikeoutRate": 11.161217587373168,
+      "walkRate": 2.536640360766629,
+      "starts": 0,
+      "reliefAppearances": 78
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "kentje01"
+      "sourcePlayerId": "nenro01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 108.34285714285716,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-j-t-snow-1997",
-    "playerId": "snowjt01",
-    "playerSlug": "j-t-snow",
-    "name": "J. T. Snow",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.281,
-      "obp": 0.387,
-      "slg": 0.51,
-      "rbi": 104,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 28,
-      "avg": 0.281,
-      "obp": 0.387,
-      "slg": 0.51,
-      "rbi": 104,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 635,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.387,
-      "slg": 0.51,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "snowjt01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 107.84285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-will-clark-1991",
-    "playerId": "clarkwi02",
-    "playerSlug": "will-clark",
-    "name": "Will Clark",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.301,
-      "obp": 0.359,
-      "slg": 0.536,
-      "rbi": 116,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 29,
-      "avg": 0.301,
-      "obp": 0.359,
-      "slg": 0.536,
-      "rbi": 116,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 148,
-      "plateAppearances": 622,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.536,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "clarkwi02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 107.27142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-kevin-mitchell-1990",
-    "playerId": "mitchke01",
-    "playerSlug": "kevin-mitchell",
-    "name": "Kevin Mitchell",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 35,
-      "avg": 0.29,
-      "obp": 0.36,
-      "slg": 0.544,
-      "rbi": 93,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 35,
-      "avg": 0.29,
-      "obp": 0.36,
-      "slg": 0.544,
-      "rbi": 93,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 140,
-      "plateAppearances": 589,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.36,
-      "slg": 0.544,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "mitchke01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 107.22857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 108.89999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -510,8 +165,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.3,
+      "opsPlus": 136,
       "hr": 19,
       "avg": 0.312,
       "obp": 0.375,
@@ -521,8 +176,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.3,
+      "opsPlus": 136,
       "hr": 19,
       "avg": 0.312,
       "obp": 0.375,
@@ -543,162 +198,531 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "thompro01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.8142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 99.1,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-armando-rios-1999",
-    "playerId": "riosar01",
-    "playerSlug": "armando-rios",
-    "name": "Armando Rios",
+    "id": "sfg-1990s-jeff-brantley-1990",
+    "playerId": "brantje01",
+    "playerSlug": "jeff-brantley",
+    "name": "Jeff Brantley",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "LF",
-      "RF"
+      "RP"
     ],
-    "bats": "L",
-    "throws": "L",
+    "bats": "R",
+    "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.327,
-      "obp": 0.42,
-      "slg": 0.527,
-      "rbi": 29,
-      "sb": 7
+      "war": 3.6,
+      "eraPlus": 235,
+      "era": 1.56,
+      "whip": 1.269,
+      "so": 61,
+      "wins": 5,
+      "saves": 19,
+      "sv": 19
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.327,
-      "obp": 0.42,
-      "slg": 0.527,
-      "rbi": 29,
-      "sb": 7
+      "war": 3.6,
+      "eraPlus": 235,
+      "era": 1.56,
+      "whip": 1.269,
+      "so": 61,
+      "wins": 5,
+      "saves": 19,
+      "sv": 19
     },
     "scoringStats": {
-      "games": 72,
-      "plateAppearances": 176,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.42,
-      "slg": 0.527,
-      "wrcPlus": null
+      "whip": 1.269,
+      "fip": null,
+      "inningsPitched": 86.7,
+      "strikeoutRate": 6.3321799307958475,
+      "walkRate": 3.42560553633218,
+      "starts": 0,
+      "reliefAppearances": 55
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "riosar01"
+      "sourcePlayerId": "brantje01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.72857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 98.30714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-marvin-benard-1999",
-    "playerId": "benarma01",
-    "playerSlug": "marvin-benard",
-    "name": "Marvin Benard",
+    "id": "sfg-1990s-matt-williams-1995",
+    "playerId": "willima04",
+    "playerSlug": "matt-williams",
+    "name": "Matt Williams",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1999,
+    "featuredSeason": 1995,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "CF",
-      "RF"
+      "3B"
     ],
-    "bats": "L",
-    "throws": "L",
+    "bats": "R",
+    "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.29,
-      "obp": 0.359,
-      "slg": 0.457,
-      "rbi": 64,
-      "sb": 27
+      "war": 4.6,
+      "opsPlus": 177,
+      "hr": 23,
+      "avg": 0.336,
+      "obp": 0.399,
+      "slg": 0.647,
+      "rbi": 65,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.29,
-      "obp": 0.359,
-      "slg": 0.457,
-      "rbi": 64,
-      "sb": 27
+      "war": 4.6,
+      "opsPlus": 177,
+      "hr": 23,
+      "avg": 0.336,
+      "obp": 0.399,
+      "slg": 0.647,
+      "rbi": 65,
+      "sb": 2
     },
     "scoringStats": {
-      "games": 149,
-      "plateAppearances": 624,
+      "games": 76,
+      "plateAppearances": 318,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.457,
+      "obp": 0.399,
+      "slg": 0.647,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "benarma01"
+      "sourcePlayerId": "willima04"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.42857142857144,
-      "formulaVersion": "season-selection-v1"
+      "score": 96.88,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-steve-reed-1998",
+    "playerId": "reedst01",
+    "playerSlug": "steve-reed",
+    "name": "Steve Reed",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.3,
+      "eraPlus": 274,
+      "era": 1.48,
+      "whip": 0.896,
+      "so": 50,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "eraPlus": 274,
+      "era": 1.48,
+      "whip": 0.896,
+      "so": 50,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.896,
+      "fip": null,
+      "inningsPitched": 54.7,
+      "strikeoutRate": 8.226691042047532,
+      "walkRate": 3.126142595978062,
+      "starts": 0,
+      "reliefAppearances": 50
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "reedst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.64285714285714,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-will-clark-1991",
+    "playerId": "clarkwi02",
+    "playerSlug": "will-clark",
+    "name": "Will Clark",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.2,
+      "opsPlus": 154,
+      "hr": 29,
+      "avg": 0.301,
+      "obp": 0.359,
+      "slg": 0.536,
+      "rbi": 116,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.2,
+      "opsPlus": 154,
+      "hr": 29,
+      "avg": 0.301,
+      "obp": 0.359,
+      "slg": 0.536,
+      "rbi": 116,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 148,
+      "plateAppearances": 622,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.536,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "clarkwi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.62,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-bill-swift-1992",
+    "playerId": "swiftbi02",
+    "playerSlug": "bill-swift",
+    "name": "Bill Swift",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.4,
+      "eraPlus": 161,
+      "era": 2.08,
+      "whip": 1.136,
+      "so": 77,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.4,
+      "eraPlus": 161,
+      "era": 2.08,
+      "whip": 1.136,
+      "so": 77,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.136,
+      "fip": null,
+      "inningsPitched": 164.7,
+      "strikeoutRate": 4.207650273224044,
+      "walkRate": 2.349726775956284,
+      "starts": 22,
+      "reliefAppearances": 8
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "swiftbi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82.385,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-jeff-kent-1998",
+    "playerId": "kentje01",
+    "playerSlug": "jeff-kent",
+    "name": "Jeff Kent",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "opsPlus": 142,
+      "hr": 31,
+      "avg": 0.297,
+      "obp": 0.359,
+      "slg": 0.555,
+      "rbi": 128,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "opsPlus": 142,
+      "hr": 31,
+      "avg": 0.297,
+      "obp": 0.359,
+      "slg": 0.555,
+      "rbi": 128,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 593,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.555,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "kentje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.93,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-kevin-mitchell-1990",
+    "playerId": "mitchke01",
+    "playerSlug": "kevin-mitchell",
+    "name": "Kevin Mitchell",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.1,
+      "opsPlus": 150,
+      "hr": 35,
+      "avg": 0.29,
+      "obp": 0.36,
+      "slg": 0.544,
+      "rbi": 93,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.1,
+      "opsPlus": 150,
+      "hr": 35,
+      "avg": 0.29,
+      "obp": 0.36,
+      "slg": 0.544,
+      "rbi": 93,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 589,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.36,
+      "slg": 0.544,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "mitchke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.08999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -722,8 +746,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5,
+      "opsPlus": 121,
       "hr": 3,
       "avg": 0.309,
       "obp": 0.397,
@@ -733,8 +757,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5,
+      "opsPlus": 121,
       "hr": 3,
       "avg": 0.309,
       "obp": 0.397,
@@ -755,98 +779,102 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "butlebr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.81428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 77.75,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-bill-mueller-1998",
-    "playerId": "muellbi02",
-    "playerSlug": "bill-mueller",
-    "name": "Bill Mueller",
+    "id": "sfg-1990s-shawn-estes-1997",
+    "playerId": "estessh01",
+    "playerSlug": "shawn-estes",
+    "name": "Shawn Estes",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1997,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "2B",
-      "3B"
+      "SP"
     ],
-    "bats": "B",
-    "throws": "R",
+    "bats": "R",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.294,
-      "obp": 0.383,
-      "slg": 0.395,
-      "rbi": 59,
-      "sb": 3
+      "war": 3.8,
+      "eraPlus": 130,
+      "era": 3.18,
+      "whip": 1.303,
+      "so": 181,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.294,
-      "obp": 0.383,
-      "slg": 0.395,
-      "rbi": 59,
-      "sb": 3
+      "war": 3.8,
+      "eraPlus": 130,
+      "era": 3.18,
+      "whip": 1.303,
+      "so": 181,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 145,
-      "plateAppearances": 619,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.383,
-      "slg": 0.395,
-      "wrcPlus": null
+      "whip": 1.303,
+      "fip": null,
+      "inningsPitched": 201,
+      "strikeoutRate": 8.104477611940299,
+      "walkRate": 4.477611940298507,
+      "starts": 32,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "muellbi02"
+      "sourcePlayerId": "estessh01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.48571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 66.1,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-rich-aurilia-1999",
-    "playerId": "aurilri01",
-    "playerSlug": "rich-aurilia",
-    "name": "Rich Aurilia",
+    "id": "sfg-1990s-ellis-burks-1999",
+    "playerId": "burksel01",
+    "playerSlug": "ellis-burks",
+    "name": "Ellis Burks",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
@@ -858,128 +886,208 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "SS"
+      "RF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.281,
-      "obp": 0.336,
-      "slg": 0.444,
-      "rbi": 80,
-      "sb": 2
+      "war": 2.9,
+      "opsPlus": 147,
+      "hr": 31,
+      "avg": 0.282,
+      "obp": 0.394,
+      "slg": 0.569,
+      "rbi": 96,
+      "sb": 7
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.281,
-      "obp": 0.336,
-      "slg": 0.444,
-      "rbi": 80,
-      "sb": 2
+      "war": 2.9,
+      "opsPlus": 147,
+      "hr": 31,
+      "avg": 0.282,
+      "obp": 0.394,
+      "slg": 0.569,
+      "rbi": 96,
+      "sb": 7
     },
     "scoringStats": {
-      "games": 152,
-      "plateAppearances": 611,
+      "games": 120,
+      "plateAppearances": 469,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.336,
-      "slg": 0.444,
+      "obp": 0.394,
+      "slg": 0.569,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "aurilri01"
+      "sourcePlayerId": "burksel01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.45714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 62.989999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-rick-wilkins-1996",
-    "playerId": "wilkiri01",
-    "playerSlug": "rick-wilkins",
-    "name": "Rick Wilkins",
+    "id": "sfg-1990s-j-t-snow-1997",
+    "playerId": "snowjt01",
+    "playerSlug": "j-t-snow",
+    "name": "J. T. Snow",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1996,
+    "featuredSeason": 1997,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "C"
+      "1B"
     ],
     "bats": "L",
-    "throws": "R",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.293,
-      "obp": 0.366,
+      "war": 2.9,
+      "opsPlus": 135,
+      "hr": 28,
+      "avg": 0.281,
+      "obp": 0.387,
       "slg": 0.51,
-      "rbi": 36,
-      "sb": 0
+      "rbi": 104,
+      "sb": 6
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.293,
-      "obp": 0.366,
+      "war": 2.9,
+      "opsPlus": 135,
+      "hr": 28,
+      "avg": 0.281,
+      "obp": 0.387,
       "slg": 0.51,
-      "rbi": 36,
-      "sb": 0
+      "rbi": 104,
+      "sb": 6
     },
     "scoringStats": {
-      "games": 52,
-      "plateAppearances": 183,
+      "games": 157,
+      "plateAppearances": 635,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.366,
+      "obp": 0.387,
       "slg": 0.51,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "wilkiri01"
+      "sourcePlayerId": "snowjt01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 92.82857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 58.65,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-mark-carreon-1995",
+    "playerId": "carrema01",
+    "playerSlug": "mark-carreon",
+    "name": "Mark Carreon",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.9,
+      "opsPlus": 122,
+      "hr": 17,
+      "avg": 0.301,
+      "obp": 0.343,
+      "slg": 0.49,
+      "rbi": 65,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "opsPlus": 122,
+      "hr": 17,
+      "avg": 0.301,
+      "obp": 0.343,
+      "slg": 0.49,
+      "rbi": 65,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 117,
+      "plateAppearances": 426,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.343,
+      "slg": 0.49,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "carrema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.059999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1004,8 +1112,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 119,
       "hr": 4,
       "avg": 0.312,
       "obp": 0.357,
@@ -1015,8 +1123,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 119,
       "hr": 4,
       "avg": 0.312,
       "obp": 0.357,
@@ -1037,96 +1145,102 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "mcgeewi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.78571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 49.65,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-robb-nen-1998",
-    "playerId": "nenro01",
-    "playerSlug": "robb-nen",
-    "name": "Robb Nen",
+    "id": "sfg-1990s-kirk-rueter-1997",
+    "playerId": "rueteki01",
+    "playerSlug": "kirk-rueter",
+    "name": "Kirk Rueter",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1998,
+    "featuredSeason": 1997,
     "playerType": "pitcher",
     "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "RP"
+      "SP"
     ],
-    "bats": "R",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.52,
-      "whip": 0.947,
-      "so": 110,
-      "wins": 7,
-      "saves": 40,
-      "sv": 40
+      "war": 2.7,
+      "eraPlus": 120,
+      "era": 3.45,
+      "whip": 1.285,
+      "so": 115,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.52,
-      "whip": 0.947,
-      "so": 110,
-      "wins": 7,
-      "saves": 40,
-      "sv": 40
+      "war": 2.7,
+      "eraPlus": 120,
+      "era": 3.45,
+      "whip": 1.285,
+      "so": 115,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "whip": 0.947,
+      "whip": 1.285,
       "fip": null,
-      "inningsPitched": 88.7,
-      "strikeoutRate": 11.161217587373168,
-      "walkRate": 2.536640360766629,
-      "starts": 0,
-      "reliefAppearances": 78
+      "inningsPitched": 190.7,
+      "strikeoutRate": 5.427372836916623,
+      "walkRate": 2.4069218668065027,
+      "starts": 32,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "nenro01"
+      "sourcePlayerId": "rueteki01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.7568658399098,
-      "formulaVersion": "season-selection-v1"
+      "score": 48.935,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-joe-carter-1998",
-    "playerId": "cartejo01",
-    "playerSlug": "joe-carter",
-    "name": "Joe Carter",
+    "id": "sfg-1990s-bill-mueller-1998",
+    "playerId": "muellbi02",
+    "playerSlug": "bill-mueller",
+    "name": "Bill Mueller",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
@@ -1138,136 +1252,69 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "1B",
-      "RF"
+      "2B",
+      "3B"
     ],
-    "bats": "R",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.295,
-      "obp": 0.322,
-      "slg": 0.562,
-      "rbi": 29,
-      "sb": 1
+      "war": 3.1,
+      "opsPlus": 110,
+      "hr": 9,
+      "avg": 0.294,
+      "obp": 0.383,
+      "slg": 0.395,
+      "rbi": 59,
+      "sb": 3
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.295,
-      "obp": 0.322,
-      "slg": 0.562,
-      "rbi": 29,
-      "sb": 1
+      "war": 3.1,
+      "opsPlus": 110,
+      "hr": 9,
+      "avg": 0.294,
+      "obp": 0.383,
+      "slg": 0.395,
+      "rbi": 59,
+      "sb": 3
     },
     "scoringStats": {
-      "games": 41,
-      "plateAppearances": 115,
+      "games": 145,
+      "plateAppearances": 619,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.322,
-      "slg": 0.562,
+      "obp": 0.383,
+      "slg": 0.395,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "cartejo01"
+      "sourcePlayerId": "muellbi02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.6857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 48.39,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-brent-mayne-1999",
-    "playerId": "maynebr01",
-    "playerSlug": "brent-mayne",
-    "name": "Brent Mayne",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 2,
-      "avg": 0.301,
-      "obp": 0.389,
-      "slg": 0.419,
-      "rbi": 39,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 2,
-      "avg": 0.301,
-      "obp": 0.389,
-      "slg": 0.419,
-      "rbi": 39,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 117,
-      "plateAppearances": 373,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.389,
-      "slg": 0.419,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "maynebr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 91.45714285714287,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-brian-johnson-1997",
-    "playerId": "johnsbr01",
-    "playerSlug": "brian-johnson",
-    "name": "Brian Johnson",
+    "id": "sfg-1990s-stan-javier-1997",
+    "playerId": "javiest01",
+    "playerSlug": "stan-javier",
+    "name": "Stan Javier",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
@@ -1279,196 +1326,280 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "C"
+      "CF",
+      "RF"
     ],
-    "bats": "R",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.279,
-      "obp": 0.333,
-      "slg": 0.525,
-      "rbi": 27,
-      "sb": 0
+      "war": 3.5,
+      "opsPlus": 102,
+      "hr": 8,
+      "avg": 0.286,
+      "obp": 0.368,
+      "slg": 0.395,
+      "rbi": 50,
+      "sb": 25
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.279,
-      "obp": 0.333,
-      "slg": 0.525,
-      "rbi": 27,
-      "sb": 0
+      "war": 3.5,
+      "opsPlus": 102,
+      "hr": 8,
+      "avg": 0.286,
+      "obp": 0.368,
+      "slg": 0.395,
+      "rbi": 50,
+      "sb": 25
     },
     "scoringStats": {
-      "games": 56,
-      "plateAppearances": 198,
+      "games": 142,
+      "plateAppearances": 508,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.333,
-      "slg": 0.525,
+      "obp": 0.368,
+      "slg": 0.395,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "johnsbr01"
+      "sourcePlayerId": "javiest01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.45714285714287,
-      "formulaVersion": "season-selection-v1"
+      "score": 48.08,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-michael-jackson-1994",
-    "playerId": "jacksmi02",
-    "playerSlug": "michael-jackson",
-    "name": "Michael Jackson",
+    "id": "sfg-1990s-russ-ortiz-1999",
+    "playerId": "ortizru01",
+    "playerSlug": "russ-ortiz",
+    "name": "Russ Ortiz",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1994,
+    "featuredSeason": 1999,
     "playerType": "pitcher",
     "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "RP"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.49,
-      "whip": 0.803,
-      "so": 51,
-      "wins": 3,
-      "saves": 4,
-      "sv": 4
+      "war": 2.5,
+      "eraPlus": 113,
+      "era": 3.81,
+      "whip": 1.512,
+      "so": 164,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.49,
-      "whip": 0.803,
-      "so": 51,
-      "wins": 3,
-      "saves": 4,
-      "sv": 4
+      "war": 2.5,
+      "eraPlus": 113,
+      "era": 3.81,
+      "whip": 1.512,
+      "so": 164,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "whip": 0.803,
+      "whip": 1.512,
       "fip": null,
-      "inningsPitched": 42.3,
-      "strikeoutRate": 10.851063829787234,
-      "walkRate": 2.3404255319148937,
-      "starts": 0,
-      "reliefAppearances": 36
+      "inningsPitched": 207.7,
+      "strikeoutRate": 7.106403466538277,
+      "walkRate": 5.416466056812711,
+      "starts": 33,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "jacksmi02"
+      "sourcePlayerId": "ortizru01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.02595744680852,
-      "formulaVersion": "season-selection-v1"
+      "score": 44.55,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-rod-beck-1992",
-    "playerId": "beckro01",
-    "playerSlug": "rod-beck",
-    "name": "Rod Beck",
+    "id": "sfg-1990s-john-burkett-1993",
+    "playerId": "burkejo03",
+    "playerSlug": "john-burkett",
+    "name": "John Burkett",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1992,
+    "featuredSeason": 1993,
     "playerType": "pitcher",
     "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "RP"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.76,
-      "whip": 0.837,
-      "so": 87,
-      "wins": 3,
-      "saves": 17,
-      "sv": 17
+      "war": 2.6,
+      "eraPlus": 107,
+      "era": 3.65,
+      "whip": 1.14,
+      "so": 145,
+      "wins": 22,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.76,
-      "whip": 0.837,
-      "so": 87,
-      "wins": 3,
-      "saves": 17,
-      "sv": 17
+      "war": 2.6,
+      "eraPlus": 107,
+      "era": 3.65,
+      "whip": 1.14,
+      "so": 145,
+      "wins": 22,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "whip": 0.837,
+      "whip": 1.14,
       "fip": null,
-      "inningsPitched": 92,
-      "strikeoutRate": 8.51086956521739,
-      "walkRate": 1.4673913043478262,
-      "starts": 0,
-      "reliefAppearances": 65
+      "inningsPitched": 231.7,
+      "strikeoutRate": 5.632283124730255,
+      "walkRate": 1.5537332757876565,
+      "starts": 34,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "beckro01"
+      "sourcePlayerId": "burkejo03"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88.70521739130434,
-      "formulaVersion": "season-selection-v1"
+      "score": 43.650000000000006,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-armando-rios-1999",
+    "playerId": "riosar01",
+    "playerSlug": "armando-rios",
+    "name": "Armando Rios",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 1.6,
+      "opsPlus": 145,
+      "hr": 7,
+      "avg": 0.327,
+      "obp": 0.42,
+      "slg": 0.527,
+      "rbi": 29,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.6,
+      "opsPlus": 145,
+      "hr": 7,
+      "avg": 0.327,
+      "obp": 0.42,
+      "slg": 0.527,
+      "rbi": 29,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 72,
+      "plateAppearances": 176,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.42,
+      "slg": 0.527,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "riosar01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.46,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1494,8 +1625,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.1,
+      "opsPlus": 116,
       "hr": 11,
       "avg": 0.266,
       "obp": 0.333,
@@ -1505,8 +1636,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.1,
+      "opsPlus": 116,
       "hr": 11,
       "avg": 0.266,
       "obp": 0.333,
@@ -1527,20 +1658,316 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "scarsst01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88.27142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 35.78,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-brent-mayne-1999",
+    "playerId": "maynebr01",
+    "playerSlug": "brent-mayne",
+    "name": "Brent Mayne",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.2,
+      "opsPlus": 111,
+      "hr": 2,
+      "avg": 0.301,
+      "obp": 0.389,
+      "slg": 0.419,
+      "rbi": 39,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "opsPlus": 111,
+      "hr": 2,
+      "avg": 0.301,
+      "obp": 0.389,
+      "slg": 0.419,
+      "rbi": 39,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 117,
+      "plateAppearances": 373,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.389,
+      "slg": 0.419,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "maynebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.63,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-rick-wilkins-1996",
+    "playerId": "wilkiri01",
+    "playerSlug": "rick-wilkins",
+    "name": "Rick Wilkins",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.4,
+      "opsPlus": 134,
+      "hr": 8,
+      "avg": 0.293,
+      "obp": 0.366,
+      "slg": 0.51,
+      "rbi": 36,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.4,
+      "opsPlus": 134,
+      "hr": 8,
+      "avg": 0.293,
+      "obp": 0.366,
+      "slg": 0.51,
+      "rbi": 36,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 52,
+      "plateAppearances": 183,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.366,
+      "slg": 0.51,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "wilkiri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.629999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-kirt-manwaring-1992",
+    "playerId": "manwaki01",
+    "playerSlug": "kirt-manwaring",
+    "name": "Kirt Manwaring",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.1,
+      "opsPlus": 88,
+      "hr": 4,
+      "avg": 0.244,
+      "obp": 0.311,
+      "slg": 0.335,
+      "rbi": 26,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "opsPlus": 88,
+      "hr": 4,
+      "avg": 0.244,
+      "obp": 0.311,
+      "slg": 0.335,
+      "rbi": 26,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 109,
+      "plateAppearances": 383,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.311,
+      "slg": 0.335,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "manwaki01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.03,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-1990s-dave-anderson-1990",
+    "playerId": "anderda02",
+    "playerSlug": "dave-anderson",
+    "name": "Dave Anderson",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.3,
+      "opsPlus": 129,
+      "hr": 1,
+      "avg": 0.35,
+      "obp": 0.369,
+      "slg": 0.45,
+      "rbi": 6,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.3,
+      "opsPlus": 129,
+      "hr": 1,
+      "avg": 0.35,
+      "obp": 0.369,
+      "slg": 0.45,
+      "rbi": 6,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 60,
+      "plateAppearances": 103,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.45,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "anderda02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 31.130000000000003,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1564,8 +1991,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.4,
+      "opsPlus": 92,
       "hr": 6,
       "avg": 0.282,
       "obp": 0.331,
@@ -1575,8 +2002,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.4,
+      "opsPlus": 92,
       "hr": 6,
       "avg": 0.282,
       "obp": 0.331,
@@ -1597,33 +2024,36 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "claytro01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 87.41428571428573,
-      "formulaVersion": "season-selection-v1"
+      "score": 30.79,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-1990s-jose-vizcaino-1997",
-    "playerId": "vizcajo01",
-    "playerSlug": "jose-vizcaino",
-    "name": "Jose Vizcaino",
+    "id": "sfg-1990s-rich-aurilia-1999",
+    "playerId": "aurilri01",
+    "playerSlug": "rich-aurilia",
+    "name": "Rich Aurilia",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1997,
+    "featuredSeason": 1999,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -1631,402 +2061,59 @@
     "eligiblePositions": [
       "SS"
     ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.266,
-      "obp": 0.323,
-      "slg": 0.35,
-      "rbi": 50,
-      "sb": 8
+      "war": 1.6,
+      "opsPlus": 101,
+      "hr": 22,
+      "avg": 0.281,
+      "obp": 0.336,
+      "slg": 0.444,
+      "rbi": 80,
+      "sb": 2
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.266,
-      "obp": 0.323,
-      "slg": 0.35,
-      "rbi": 50,
-      "sb": 8
+      "war": 1.6,
+      "opsPlus": 101,
+      "hr": 22,
+      "avg": 0.281,
+      "obp": 0.336,
+      "slg": 0.444,
+      "rbi": 80,
+      "sb": 2
     },
     "scoringStats": {
-      "games": 151,
-      "plateAppearances": 617,
+      "games": 152,
+      "plateAppearances": 611,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.323,
-      "slg": 0.35,
+      "obp": 0.336,
+      "slg": 0.444,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "vizcajo01"
+      "sourcePlayerId": "aurilri01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 84.92857142857144,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-bill-swift-1992",
-    "playerId": "swiftbi02",
-    "playerSlug": "bill-swift",
-    "name": "Bill Swift",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1992,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.08,
-      "whip": 1.136,
-      "so": 77,
-      "wins": 10,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.08,
-      "whip": 1.136,
-      "so": 77,
-      "wins": 10,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 1.136,
-      "fip": null,
-      "inningsPitched": 164.7,
-      "strikeoutRate": 4.207650273224044,
-      "walkRate": 2.349726775956284,
-      "starts": 22,
-      "reliefAppearances": 8
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "swiftbi02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 68.25688524590166,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-shawn-estes-1997",
-    "playerId": "estessh01",
-    "playerSlug": "shawn-estes",
-    "name": "Shawn Estes",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.18,
-      "whip": 1.303,
-      "so": 181,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.18,
-      "whip": 1.303,
-      "so": 181,
-      "wins": 19,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.303,
-      "fip": null,
-      "inningsPitched": 201,
-      "strikeoutRate": 8.104477611940299,
-      "walkRate": 4.477611940298507,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "estessh01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 56.38696517412935,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-john-burkett-1993",
-    "playerId": "burkejo03",
-    "playerSlug": "john-burkett",
-    "name": "John Burkett",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.65,
-      "whip": 1.14,
-      "so": 145,
-      "wins": 22,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.65,
-      "whip": 1.14,
-      "so": 145,
-      "wins": 22,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.14,
-      "fip": null,
-      "inningsPitched": 231.7,
-      "strikeoutRate": 5.632283124730255,
-      "walkRate": 1.5537332757876565,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "burkejo03"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 55.517824773413906,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-kirk-rueter-1997",
-    "playerId": "rueteki01",
-    "playerSlug": "kirk-rueter",
-    "name": "Kirk Rueter",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.45,
-      "whip": 1.285,
-      "so": 115,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.45,
-      "whip": 1.285,
-      "so": 115,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.285,
-      "fip": null,
-      "inningsPitched": 190.7,
-      "strikeoutRate": 5.427372836916623,
-      "walkRate": 2.4069218668065027,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "rueteki01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 52.02512089960962,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-1990s-trevor-wilson-1991",
-    "playerId": "wilsotr01",
-    "playerSlug": "trevor-wilson",
-    "name": "Trevor Wilson",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP",
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.56,
-      "whip": 1.238,
-      "so": 139,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.56,
-      "whip": 1.238,
-      "so": 139,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.238,
-      "fip": null,
-      "inningsPitched": 202,
-      "strikeoutRate": 6.193069306930693,
-      "walkRate": 3.4306930693069306,
-      "starts": 29,
-      "reliefAppearances": 15
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "wilsotr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 51.885786578657864,
-      "formulaVersion": "season-selection-v1"
+      "score": 25.810000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

@@ -21,8 +21,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.6,
+      "opsPlus": 171,
       "hr": 24,
       "avg": 0.336,
       "obp": 0.408,
@@ -32,8 +32,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.6,
+      "opsPlus": 171,
       "hr": 24,
       "avg": 0.336,
       "obp": 0.408,
@@ -54,20 +54,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "poseybu01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 113.12857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 132.79999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-pablo-sandoval-2011",
+    "playerId": "sandopa01",
+    "playerSlug": "pablo-sandoval",
+    "name": "Pablo Sandoval",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6,
+      "opsPlus": 155,
+      "hr": 23,
+      "avg": 0.315,
+      "obp": 0.357,
+      "slg": 0.552,
+      "rbi": 70,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6,
+      "opsPlus": 155,
+      "hr": 23,
+      "avg": 0.315,
+      "obp": 0.357,
+      "slg": 0.552,
+      "rbi": 70,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 117,
+      "plateAppearances": 465,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.552,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "sandopa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.15,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -93,8 +169,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.7,
+      "opsPlus": 142,
       "hr": 26,
       "avg": 0.29,
       "obp": 0.385,
@@ -104,8 +180,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.7,
+      "opsPlus": 142,
       "hr": 26,
       "avg": 0.29,
       "obp": 0.385,
@@ -126,90 +202,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "huffau01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 108.18571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-brandon-belt-2016",
-    "playerId": "beltbr01",
-    "playerSlug": "brandon-belt",
-    "name": "Brandon Belt",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.275,
-      "obp": 0.394,
-      "slg": 0.474,
-      "rbi": 82,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 17,
-      "avg": 0.275,
-      "obp": 0.394,
-      "slg": 0.474,
-      "rbi": 82,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 156,
-      "plateAppearances": 655,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.394,
-      "slg": 0.474,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "beltbr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 105.5142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 96.08000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -234,8 +243,8 @@
     "bats": "B",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.8,
+      "opsPlus": 157,
       "hr": 11,
       "avg": 0.346,
       "obp": 0.39,
@@ -245,8 +254,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.8,
+      "opsPlus": 157,
       "hr": 11,
       "avg": 0.346,
       "obp": 0.39,
@@ -267,103 +276,108 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "cabreme01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 104.8857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 91.1,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2010s-pablo-sandoval-2011",
-    "playerId": "sandopa01",
-    "playerSlug": "pablo-sandoval",
-    "name": "Pablo Sandoval",
+    "id": "sfg-2010s-johnny-cueto-2016",
+    "playerId": "cuetojo01",
+    "playerSlug": "johnny-cueto",
+    "name": "Johnny Cueto",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2010s",
-    "featuredSeason": 2011,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 2016,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "3B"
+      "SP"
     ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.315,
-      "obp": 0.357,
-      "slg": 0.552,
-      "rbi": 70,
-      "sb": 2
+      "war": 5.4,
+      "eraPlus": 144,
+      "era": 2.79,
+      "whip": 1.093,
+      "so": 198,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.315,
-      "obp": 0.357,
-      "slg": 0.552,
-      "rbi": 70,
-      "sb": 2
+      "war": 5.4,
+      "eraPlus": 144,
+      "era": 2.79,
+      "whip": 1.093,
+      "so": 198,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 117,
-      "plateAppearances": 465,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.357,
-      "slg": 0.552,
-      "wrcPlus": null
+      "whip": 1.093,
+      "fip": null,
+      "inningsPitched": 219.7,
+      "strikeoutRate": 8.11106053709604,
+      "walkRate": 1.843422849340009,
+      "starts": 32,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "sandopa01"
+      "sourcePlayerId": "cuetojo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 104.1857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 90.20000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2010s-sergio-romo-2011",
-    "playerId": "romose01",
-    "playerSlug": "sergio-romo",
-    "name": "Sergio Romo",
+    "id": "sfg-2010s-brian-wilson-2010",
+    "playerId": "wilsobr01",
+    "playerSlug": "brian-wilson",
+    "name": "Brian Wilson",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2010s",
-    "featuredSeason": 2011,
+    "featuredSeason": 2010,
     "playerType": "pitcher",
     "type": "pitcher",
     "isTwoWay": false,
@@ -374,122 +388,200 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.5,
-      "whip": 0.708,
-      "so": 70,
+      "war": 2.8,
+      "eraPlus": 217,
+      "era": 1.81,
+      "whip": 1.179,
+      "so": 93,
       "wins": 3,
-      "saves": 1,
-      "sv": 1
+      "saves": 48,
+      "sv": 48
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.5,
-      "whip": 0.708,
-      "so": 70,
+      "war": 2.8,
+      "eraPlus": 217,
+      "era": 1.81,
+      "whip": 1.179,
+      "so": 93,
       "wins": 3,
-      "saves": 1,
-      "sv": 1
+      "saves": 48,
+      "sv": 48
     },
     "scoringStats": {
-      "whip": 0.708,
+      "whip": 1.179,
       "fip": null,
-      "inningsPitched": 48,
-      "strikeoutRate": 13.125,
-      "walkRate": 0.9375,
+      "inningsPitched": 74.7,
+      "strikeoutRate": 11.204819277108433,
+      "walkRate": 3.1325301204819276,
       "starts": 0,
-      "reliefAppearances": 65
+      "reliefAppearances": 70
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "romose01"
+      "sourcePlayerId": "wilsobr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.12125,
-      "formulaVersion": "season-selection-v1"
+      "score": 84.54999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2010s-hunter-pence-2013",
-    "playerId": "pencehu01",
-    "playerSlug": "hunter-pence",
-    "name": "Hunter Pence",
+    "id": "sfg-2010s-brandon-crawford-2015",
+    "playerId": "crawfbr01",
+    "playerSlug": "brandon-crawford",
+    "name": "Brandon Crawford",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2010s",
-    "featuredSeason": 2013,
+    "featuredSeason": 2015,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "RF"
+      "SS"
     ],
-    "bats": "R",
+    "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.283,
-      "obp": 0.339,
-      "slg": 0.483,
-      "rbi": 99,
-      "sb": 22
+      "war": 6,
+      "opsPlus": 113,
+      "hr": 21,
+      "avg": 0.256,
+      "obp": 0.321,
+      "slg": 0.462,
+      "rbi": 84,
+      "sb": 6
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.283,
-      "obp": 0.339,
-      "slg": 0.483,
-      "rbi": 99,
-      "sb": 22
+      "war": 6,
+      "opsPlus": 113,
+      "hr": 21,
+      "avg": 0.256,
+      "obp": 0.321,
+      "slg": 0.462,
+      "rbi": 84,
+      "sb": 6
     },
     "scoringStats": {
-      "games": 162,
-      "plateAppearances": 687,
+      "games": 143,
+      "plateAppearances": 561,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.339,
-      "slg": 0.483,
+      "obp": 0.321,
+      "slg": 0.462,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "pencehu01"
+      "sourcePlayerId": "crawfbr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 101.82857142857144,
-      "formulaVersion": "season-selection-v1"
+      "score": 84.11,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-madison-bumgarner-2016",
+    "playerId": "bumgama01",
+    "playerSlug": "madison-bumgarner",
+    "name": "Madison Bumgarner",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.8,
+      "eraPlus": 146,
+      "era": 2.74,
+      "whip": 1.028,
+      "so": 251,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.8,
+      "eraPlus": 146,
+      "era": 2.74,
+      "whip": 1.028,
+      "so": 251,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.028,
+      "fip": null,
+      "inningsPitched": 226.7,
+      "strikeoutRate": 9.964711071901192,
+      "walkRate": 2.143802382002647,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "bumgama01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2016.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.69999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -515,8 +607,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.3,
+      "opsPlus": 122,
       "hr": 16,
       "avg": 0.268,
       "obp": 0.343,
@@ -526,8 +618,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.3,
+      "opsPlus": 122,
       "hr": 16,
       "avg": 0.268,
       "obp": 0.343,
@@ -548,231 +640,385 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "torrean02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.34285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 80.25,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2010s-carlos-beltran-2011",
-    "playerId": "beltrca01",
-    "playerSlug": "carlos-beltran",
-    "name": "Carlos Beltran",
+    "id": "sfg-2010s-cory-gearrin-2017",
+    "playerId": "gearrco01",
+    "playerSlug": "cory-gearrin",
+    "name": "Cory Gearrin",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.4,
+      "eraPlus": 215,
+      "era": 1.99,
+      "whip": 1.25,
+      "so": 64,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.4,
+      "eraPlus": 215,
+      "era": 1.99,
+      "whip": 1.25,
+      "so": 64,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.25,
+      "fip": null,
+      "inningsPitched": 68,
+      "strikeoutRate": 8.470588235294118,
+      "walkRate": 4.632352941176471,
+      "starts": 0,
+      "reliefAppearances": 68
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "gearrco01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2017.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.7642857142857,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-sergio-romo-2011",
+    "playerId": "romose01",
+    "playerSlug": "sergio-romo",
+    "name": "Sergio Romo",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2010s",
     "featuredSeason": 2011,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "RP",
     "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.323,
-      "obp": 0.369,
-      "slg": 0.551,
-      "rbi": 18,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.323,
-      "obp": 0.369,
-      "slg": 0.551,
-      "rbi": 18,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 44,
-      "plateAppearances": 179,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.369,
-      "slg": 0.551,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "beltrca01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.11428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-pat-burrell-2010",
-    "playerId": "burrepa01",
-    "playerSlug": "pat-burrell",
-    "name": "Pat Burrell",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
+      "RP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.266,
-      "obp": 0.364,
-      "slg": 0.509,
-      "rbi": 51,
-      "sb": 0
+      "war": 1.7,
+      "eraPlus": 234,
+      "era": 1.5,
+      "whip": 0.708,
+      "so": 70,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.266,
-      "obp": 0.364,
-      "slg": 0.509,
-      "rbi": 51,
-      "sb": 0
+      "war": 1.7,
+      "eraPlus": 234,
+      "era": 1.5,
+      "whip": 0.708,
+      "so": 70,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
     },
     "scoringStats": {
-      "games": 96,
-      "plateAppearances": 341,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.364,
-      "slg": 0.509,
-      "wrcPlus": null
+      "whip": 0.708,
+      "fip": null,
+      "inningsPitched": 48,
+      "strikeoutRate": 13.125,
+      "walkRate": 0.9375,
+      "starts": 0,
+      "reliefAppearances": 65
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "burrepa01"
+      "sourcePlayerId": "romose01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 97.04285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 76.58571428571429,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2010s-mike-yastrzemski-2019",
-    "playerId": "yastrmi01",
-    "playerSlug": "mike-yastrzemski",
-    "name": "Mike Yastrzemski",
+    "id": "sfg-2010s-javier-lopez-2015",
+    "playerId": "lopezja02",
+    "playerSlug": "javier-lopez",
+    "name": "Javier Lopez",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2010s",
-    "featuredSeason": 2019,
+    "featuredSeason": 2015,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 1.4,
+      "eraPlus": 242,
+      "era": 1.6,
+      "whip": 0.89,
+      "so": 26,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.4,
+      "eraPlus": 242,
+      "era": 1.6,
+      "whip": 0.89,
+      "so": 26,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.89,
+      "fip": null,
+      "inningsPitched": 39.3,
+      "strikeoutRate": 5.954198473282443,
+      "walkRate": 3.6641221374045805,
+      "starts": 0,
+      "reliefAppearances": 77
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "lopezja02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 76.5,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-brandon-belt-2013",
+    "playerId": "beltbr01",
+    "playerSlug": "brandon-belt",
+    "name": "Brandon Belt",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2013,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "LF",
-      "RF"
+      "1B"
     ],
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.272,
-      "obp": 0.334,
-      "slg": 0.518,
-      "rbi": 55,
-      "sb": 2
+      "war": 4.1,
+      "opsPlus": 139,
+      "hr": 17,
+      "avg": 0.289,
+      "obp": 0.36,
+      "slg": 0.481,
+      "rbi": 67,
+      "sb": 5
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.272,
-      "obp": 0.334,
-      "slg": 0.518,
-      "rbi": 55,
-      "sb": 2
+      "war": 4.1,
+      "opsPlus": 139,
+      "hr": 17,
+      "avg": 0.289,
+      "obp": 0.36,
+      "slg": 0.481,
+      "rbi": 67,
+      "sb": 5
     },
     "scoringStats": {
-      "games": 107,
-      "plateAppearances": 410,
+      "games": 150,
+      "plateAppearances": 570,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.334,
-      "slg": 0.518,
+      "obp": 0.36,
+      "slg": 0.481,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "yastrmi01"
+      "sourcePlayerId": "beltbr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 96.91428571428571,
-      "formulaVersion": "season-selection-v1"
+      "score": 74.39999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-hunter-pence-2013",
+    "playerId": "pencehu01",
+    "playerSlug": "hunter-pence",
+    "name": "Hunter Pence",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.8,
+      "opsPlus": 133,
+      "hr": 27,
+      "avg": 0.283,
+      "obp": 0.339,
+      "slg": 0.483,
+      "rbi": 99,
+      "sb": 22
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.8,
+      "opsPlus": 133,
+      "hr": 27,
+      "avg": 0.283,
+      "obp": 0.339,
+      "slg": 0.483,
+      "rbi": 99,
+      "sb": 22
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 687,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.339,
+      "slg": 0.483,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "pencehu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 68.97,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -796,8 +1042,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.2,
+      "opsPlus": 120,
       "hr": 8,
       "avg": 0.288,
       "obp": 0.338,
@@ -807,8 +1053,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.2,
+      "opsPlus": 120,
       "hr": 8,
       "avg": 0.288,
       "obp": 0.338,
@@ -829,20 +1075,239 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "paganan01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 96.57142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 66.97,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-santiago-casilla-2014",
+    "playerId": "garcija01",
+    "playerSlug": "santiago-casilla",
+    "name": "Santiago Casilla",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.9,
+      "eraPlus": 204,
+      "era": 1.7,
+      "whip": 0.857,
+      "so": 45,
+      "wins": 3,
+      "saves": 19,
+      "sv": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.9,
+      "eraPlus": 204,
+      "era": 1.7,
+      "whip": 0.857,
+      "so": 45,
+      "wins": 3,
+      "saves": 19,
+      "sv": 19
+    },
+    "scoringStats": {
+      "whip": 0.857,
+      "fip": null,
+      "inningsPitched": 58.3,
+      "strikeoutRate": 6.946826758147513,
+      "walkRate": 2.3156089193825045,
+      "starts": 0,
+      "reliefAppearances": 54
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "garcija01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2014.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.91428571428571,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-matt-cain-2010",
+    "playerId": "cainma01",
+    "playerSlug": "matt-cain",
+    "name": "Matt Cain",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "eraPlus": 124,
+      "era": 3.14,
+      "whip": 1.084,
+      "so": 177,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "eraPlus": 124,
+      "era": 3.14,
+      "whip": 1.084,
+      "so": 177,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.084,
+      "fip": null,
+      "inningsPitched": 223.3,
+      "strikeoutRate": 7.133900582176444,
+      "walkRate": 2.458575906851769,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "cainma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.4,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-tim-lincecum-2011",
+    "playerId": "linceti01",
+    "playerSlug": "tim-lincecum",
+    "name": "Tim Lincecum",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "eraPlus": 127,
+      "era": 2.74,
+      "whip": 1.207,
+      "so": 220,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "eraPlus": 127,
+      "era": 2.74,
+      "whip": 1.207,
+      "so": 220,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.207,
+      "fip": null,
+      "inningsPitched": 217,
+      "strikeoutRate": 9.12442396313364,
+      "walkRate": 3.5668202764976957,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "linceti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2011.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 63.85000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -866,8 +1331,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.7,
+      "opsPlus": 129,
       "hr": 8,
       "avg": 0.312,
       "obp": 0.378,
@@ -877,8 +1342,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.7,
+      "opsPlus": 129,
       "hr": 8,
       "avg": 0.312,
       "obp": 0.378,
@@ -899,90 +1364,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "panikjo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.55714285714285,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-brandon-crawford-2016",
-    "playerId": "crawfbr01",
-    "playerSlug": "brandon-crawford",
-    "name": "Brandon Crawford",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.275,
-      "obp": 0.342,
-      "slg": 0.43,
-      "rbi": 84,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.275,
-      "obp": 0.342,
-      "slg": 0.43,
-      "rbi": 84,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 155,
-      "plateAppearances": 623,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.342,
-      "slg": 0.43,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "crawfbr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 95,
-      "formulaVersion": "season-selection-v1"
+      "score": 63.190000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1006,8 +1404,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4,
+      "opsPlus": 108,
       "hr": 12,
       "avg": 0.295,
       "obp": 0.334,
@@ -1017,8 +1415,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4,
+      "opsPlus": 108,
       "hr": 12,
       "avg": 0.295,
       "obp": 0.334,
@@ -1039,20 +1437,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "duffyma01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2015.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.62857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 58.1,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-jonathan-sanchez-2010",
+    "playerId": "sanchjo01",
+    "playerSlug": "jonathan-sanchez",
+    "name": "Jonathan Sanchez",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.2,
+      "eraPlus": 127,
+      "era": 3.07,
+      "whip": 1.231,
+      "so": 205,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.2,
+      "eraPlus": 127,
+      "era": 3.07,
+      "whip": 1.231,
+      "so": 205,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.231,
+      "fip": null,
+      "inningsPitched": 193.3,
+      "strikeoutRate": 9.544749094671495,
+      "walkRate": 4.4697361614071385,
+      "starts": 33,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "sanchjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.51500000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1077,8 +1550,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.1,
+      "opsPlus": 144,
       "hr": 3,
       "avg": 0.362,
       "obp": 0.385,
@@ -1088,8 +1561,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.1,
+      "opsPlus": 144,
       "hr": 3,
       "avg": 0.362,
       "obp": 0.385,
@@ -1110,27 +1583,177 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "scutama01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.28571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 49.82,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2010s-kevin-pillar-2019",
-    "playerId": "pillake01",
-    "playerSlug": "kevin-pillar",
-    "name": "Kevin Pillar",
+    "id": "sfg-2010s-gregor-blanco-2013",
+    "playerId": "blancgr01",
+    "playerSlug": "gregor-blanco",
+    "name": "Gregor Blanco",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.6,
+      "opsPlus": 99,
+      "hr": 3,
+      "avg": 0.265,
+      "obp": 0.341,
+      "slg": 0.35,
+      "rbi": 41,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "opsPlus": 99,
+      "hr": 3,
+      "avg": 0.265,
+      "obp": 0.341,
+      "slg": 0.35,
+      "rbi": 41,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 508,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.341,
+      "slg": 0.35,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "blancgr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2013.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.78,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-freddy-sanchez-2010",
+    "playerId": "sanchfr01",
+    "playerSlug": "freddy-sanchez",
+    "name": "Freddy Sanchez",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.9,
+      "opsPlus": 102,
+      "hr": 7,
+      "avg": 0.292,
+      "obp": 0.342,
+      "slg": 0.397,
+      "rbi": 47,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.9,
+      "opsPlus": 102,
+      "hr": 7,
+      "avg": 0.292,
+      "obp": 0.342,
+      "slg": 0.397,
+      "rbi": 47,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 111,
+      "plateAppearances": 471,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.342,
+      "slg": 0.397,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "sanchfr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 28.509999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2010s-donovan-solano-2019",
+    "playerId": "solando01",
+    "playerSlug": "donovan-solano",
+    "name": "Donovan Solano",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
@@ -1142,59 +1765,62 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "CF",
-      "RF"
+      "2B",
+      "SS"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.264,
-      "obp": 0.293,
-      "slg": 0.442,
-      "rbi": 87,
-      "sb": 14
+      "war": 1.5,
+      "opsPlus": 116,
+      "hr": 4,
+      "avg": 0.33,
+      "obp": 0.36,
+      "slg": 0.456,
+      "rbi": 23,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.264,
-      "obp": 0.293,
-      "slg": 0.442,
-      "rbi": 87,
-      "sb": 14
+      "war": 1.5,
+      "opsPlus": 116,
+      "hr": 4,
+      "avg": 0.33,
+      "obp": 0.36,
+      "slg": 0.456,
+      "rbi": 23,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 156,
-      "plateAppearances": 628,
+      "games": 81,
+      "plateAppearances": 228,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.293,
-      "slg": 0.442,
+      "obp": 0.36,
+      "slg": 0.456,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "pillake01"
+      "sourcePlayerId": "solando01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.44285714285715,
-      "formulaVersion": "season-selection-v1"
+      "score": 28.28,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1220,8 +1846,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.5,
+      "opsPlus": 102,
       "hr": 24,
       "avg": 0.248,
       "obp": 0.31,
@@ -1231,8 +1857,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.5,
+      "opsPlus": 102,
       "hr": 24,
       "avg": 0.248,
       "obp": 0.31,
@@ -1253,20 +1879,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "uribeju01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2010.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.42857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 24.75,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1290,8 +1919,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 110,
       "hr": 10,
       "avg": 0.263,
       "obp": 0.314,
@@ -1301,8 +1930,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 110,
       "hr": 10,
       "avg": 0.263,
       "obp": 0.314,
@@ -1323,242 +1952,36 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "vogtst01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2019.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88.4,
-      "formulaVersion": "season-selection-v1"
+      "score": 21.000000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2010s-donovan-solano-2019",
-    "playerId": "solando01",
-    "playerSlug": "donovan-solano",
-    "name": "Donovan Solano",
+    "id": "sfg-2010s-hector-sanchez-2012",
+    "playerId": "sanchhe01",
+    "playerSlug": "hector-sanchez",
+    "name": "Hector Sanchez",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2010s",
-    "featuredSeason": 2019,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.33,
-      "obp": 0.36,
-      "slg": 0.456,
-      "rbi": 23,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.33,
-      "obp": 0.36,
-      "slg": 0.456,
-      "rbi": 23,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 81,
-      "plateAppearances": 228,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.36,
-      "slg": 0.456,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "solando01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.11428571428573,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-santiago-casilla-2014",
-    "playerId": "garcija01",
-    "playerSlug": "santiago-casilla",
-    "name": "Santiago Casilla",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2014,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.7,
-      "whip": 0.857,
-      "so": 45,
-      "wins": 3,
-      "saves": 19,
-      "sv": 19
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.7,
-      "whip": 0.857,
-      "so": 45,
-      "wins": 3,
-      "saves": 19,
-      "sv": 19
-    },
-    "scoringStats": {
-      "whip": 0.857,
-      "fip": null,
-      "inningsPitched": 58.3,
-      "strikeoutRate": 6.946826758147513,
-      "walkRate": 2.3156089193825045,
-      "starts": 0,
-      "reliefAppearances": 54
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "garcija01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 84.2068267581475,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-brian-wilson-2010",
-    "playerId": "wilsobr01",
-    "playerSlug": "brian-wilson",
-    "name": "Brian Wilson",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2010,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.81,
-      "whip": 1.179,
-      "so": 93,
-      "wins": 3,
-      "saves": 48,
-      "sv": 48
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.81,
-      "whip": 1.179,
-      "so": 93,
-      "wins": 3,
-      "saves": 48,
-      "sv": 48
-    },
-    "scoringStats": {
-      "whip": 1.179,
-      "fip": null,
-      "inningsPitched": 74.7,
-      "strikeoutRate": 11.204819277108433,
-      "walkRate": 3.1325301204819276,
-      "starts": 0,
-      "reliefAppearances": 70
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "wilsobr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 82.80843373493975,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-nick-hundley-2018",
-    "playerId": "hundlni01",
-    "playerSlug": "nick-hundley",
-    "name": "Nick Hundley",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2018,
+    "featuredSeason": 2012,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -1566,401 +1989,59 @@
     "eligiblePositions": [
       "C"
     ],
-    "bats": "R",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.241,
-      "obp": 0.298,
-      "slg": 0.408,
-      "rbi": 31,
-      "sb": 2
+      "war": 0.8,
+      "opsPlus": 94,
+      "hr": 3,
+      "avg": 0.28,
+      "obp": 0.295,
+      "slg": 0.39,
+      "rbi": 34,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 10,
-      "avg": 0.241,
-      "obp": 0.298,
-      "slg": 0.408,
-      "rbi": 31,
-      "sb": 2
+      "war": 0.8,
+      "opsPlus": 94,
+      "hr": 3,
+      "avg": 0.28,
+      "obp": 0.295,
+      "slg": 0.39,
+      "rbi": 34,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 96,
-      "plateAppearances": 305,
+      "games": 74,
+      "plateAppearances": 227,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.298,
-      "slg": 0.408,
+      "obp": 0.295,
+      "slg": 0.39,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "hundlni01"
+      "sourcePlayerId": "sanchhe01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2012.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 79.3142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-madison-bumgarner-2016",
-    "playerId": "bumgama01",
-    "playerSlug": "madison-bumgarner",
-    "name": "Madison Bumgarner",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.74,
-      "whip": 1.028,
-      "so": 251,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.74,
-      "whip": 1.028,
-      "so": 251,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.028,
-      "fip": null,
-      "inningsPitched": 226.7,
-      "strikeoutRate": 9.964711071901192,
-      "walkRate": 2.143802382002647,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "bumgama01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 74.29136303484782,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-matt-cain-2012",
-    "playerId": "cainma01",
-    "playerSlug": "matt-cain",
-    "name": "Matt Cain",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2012,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.79,
-      "whip": 1.04,
-      "so": 193,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.79,
-      "whip": 1.04,
-      "so": 193,
-      "wins": 16,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.04,
-      "fip": null,
-      "inningsPitched": 219.3,
-      "strikeoutRate": 7.920656634746922,
-      "walkRate": 2.093023255813953,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "cainma01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 70.46145006839944,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-johnny-cueto-2016",
-    "playerId": "cuetojo01",
-    "playerSlug": "johnny-cueto",
-    "name": "Johnny Cueto",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.79,
-      "whip": 1.093,
-      "so": 198,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.79,
-      "whip": 1.093,
-      "so": 198,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.093,
-      "fip": null,
-      "inningsPitched": 219.7,
-      "strikeoutRate": 8.11106053709604,
-      "walkRate": 1.843422849340009,
-      "starts": 32,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "cuetojo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 70.06145653163404,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-jake-peavy-2014",
-    "playerId": "peavyja01",
-    "playerSlug": "jake-peavy",
-    "name": "Jake Peavy",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2014,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.17,
-      "whip": 1.042,
-      "so": 58,
-      "wins": 6,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.17,
-      "whip": 1.042,
-      "so": 58,
-      "wins": 6,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.042,
-      "fip": null,
-      "inningsPitched": 78.7,
-      "strikeoutRate": 6.632782719186785,
-      "walkRate": 1.9440914866581955,
-      "starts": 12,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "peavyja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 68.52525907101511,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2010s-tim-lincecum-2011",
-    "playerId": "linceti01",
-    "playerSlug": "tim-lincecum",
-    "name": "Tim Lincecum",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2010s",
-    "featuredSeason": 2011,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.74,
-      "whip": 1.207,
-      "so": 220,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.74,
-      "whip": 1.207,
-      "so": 220,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.207,
-      "fip": null,
-      "inningsPitched": 217,
-      "strikeoutRate": 9.12442396313364,
-      "walkRate": 3.5668202764976957,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "linceti01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 67.31640552995391,
-      "formulaVersion": "season-selection-v1"
+      "score": 8.870000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

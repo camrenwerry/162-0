@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "data:build": "node scripts/build-player-pools.mjs",
+    "data:audit": "node scripts/audit-player-stats.mjs",
     "data:report": "node scripts/report-player-pools.mjs",
     "data:validate": "node scripts/validate-player-pools.mjs",
     "dev": "vite",
@@ -14,7 +15,7 @@
     "test:data": "node scripts/player-pipeline.test.mjs",
     "test:engine": "vite build --ssr scripts/engine-smoke.ts --outDir /tmp/diamond-draft-engine-smoke --emptyOutDir && node /tmp/diamond-draft-engine-smoke/engine-smoke.js",
     "test:game": "node scripts/smoke-game.mjs",
-    "validate:data": "npm run data:validate"
+    "validate:data": "npm run data:validate && npm run data:audit"
   },
   "dependencies": {
     "react": "^19.2.7",

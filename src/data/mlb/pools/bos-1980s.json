@@ -20,8 +20,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.3,
+      "opsPlus": 174,
       "hr": 24,
       "avg": 0.363,
       "obp": 0.461,
@@ -31,8 +31,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 8.3,
+      "opsPlus": 174,
       "hr": 24,
       "avg": 0.363,
       "obp": 0.461,
@@ -53,91 +53,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "boggswa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 123.92857142857142,
-      "formulaVersion": "season-selection-v1"
+      "score": 143.26000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bos-1980s-dwight-evans-1987",
-    "playerId": "evansdw01",
-    "playerSlug": "dwight-evans",
-    "name": "Dwight Evans",
+    "id": "bos-1980s-roger-clemens-1987",
+    "playerId": "clemero02",
+    "playerSlug": "roger-clemens",
+    "name": "Roger Clemens",
     "franchiseId": "bos",
     "teamAbbreviation": "BOS",
     "teamDisplayName": "Boston Red Sox",
     "team": "BOS",
     "decade": "1980s",
     "featuredSeason": 1987,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "1B",
-      "RF"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.305,
-      "obp": 0.417,
-      "slg": 0.569,
-      "rbi": 123,
-      "sb": 4
+      "war": 9.4,
+      "eraPlus": 154,
+      "era": 2.97,
+      "whip": 1.175,
+      "so": 256,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 34,
-      "avg": 0.305,
-      "obp": 0.417,
-      "slg": 0.569,
-      "rbi": 123,
-      "sb": 4
+      "war": 9.4,
+      "eraPlus": 154,
+      "era": 2.97,
+      "whip": 1.175,
+      "so": 256,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 154,
-      "plateAppearances": 657,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.417,
-      "slg": 0.569,
-      "wrcPlus": null
+      "whip": 1.175,
+      "fip": null,
+      "inningsPitched": 281.7,
+      "strikeoutRate": 8.178913738019169,
+      "walkRate": 2.6517571884984026,
+      "starts": 36,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
-      "sourcePlayerId": "evansdw01"
+      "sourcePlayerId": "clemero02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 117.37142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 141.70000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -161,8 +165,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.5,
+      "opsPlus": 160,
       "hr": 22,
       "avg": 0.325,
       "obp": 0.416,
@@ -172,8 +176,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.5,
+      "opsPlus": 160,
       "hr": 22,
       "avg": 0.325,
       "obp": 0.416,
@@ -194,20 +198,240 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "greenmi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 114.5,
-      "formulaVersion": "season-selection-v1"
+      "score": 126.93,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-dwight-evans-1981",
+    "playerId": "evansdw01",
+    "playerSlug": "dwight-evans",
+    "name": "Dwight Evans",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.7,
+      "opsPlus": 163,
+      "hr": 22,
+      "avg": 0.296,
+      "obp": 0.415,
+      "slg": 0.522,
+      "rbi": 71,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.7,
+      "opsPlus": 163,
+      "hr": 22,
+      "avg": 0.296,
+      "obp": 0.415,
+      "slg": 0.522,
+      "rbi": 71,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 108,
+      "plateAppearances": 501,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.415,
+      "slg": 0.522,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "evansdw01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1981.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 116.91000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-calvin-schiraldi-1986",
+    "playerId": "schirca01",
+    "playerSlug": "calvin-schiraldi",
+    "name": "Calvin Schiraldi",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 299,
+      "era": 1.41,
+      "whip": 1,
+      "so": 55,
+      "wins": 4,
+      "saves": 9,
+      "sv": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 299,
+      "era": 1.41,
+      "whip": 1,
+      "so": 55,
+      "wins": 4,
+      "saves": 9,
+      "sv": 9
+    },
+    "scoringStats": {
+      "whip": 1,
+      "fip": null,
+      "inningsPitched": 51,
+      "strikeoutRate": 9.705882352941176,
+      "walkRate": 2.6470588235294117,
+      "starts": 0,
+      "reliefAppearances": 25
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "schirca01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.02142857142856,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-tom-burgmeier-1980",
+    "playerId": "burgmto01",
+    "playerSlug": "tom-burgmeier",
+    "name": "Tom Burgmeier",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4,
+      "eraPlus": 213,
+      "era": 2,
+      "whip": 1.081,
+      "so": 54,
+      "wins": 5,
+      "saves": 24,
+      "sv": 24
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "eraPlus": 213,
+      "era": 2,
+      "whip": 1.081,
+      "so": 54,
+      "wins": 5,
+      "saves": 24,
+      "sv": 24
+    },
+    "scoringStats": {
+      "whip": 1.081,
+      "fip": null,
+      "inningsPitched": 99,
+      "strikeoutRate": 4.909090909090909,
+      "walkRate": 1.8181818181818181,
+      "starts": 0,
+      "reliefAppearances": 62
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "burgmto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.40714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -231,8 +455,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.7,
+      "opsPlus": 141,
       "hr": 39,
       "avg": 0.305,
       "obp": 0.361,
@@ -242,8 +466,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.7,
+      "opsPlus": 141,
       "hr": 39,
       "avg": 0.305,
       "obp": 0.361,
@@ -264,230 +488,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "riceji01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 110.78571428571429,
-      "formulaVersion": "season-selection-v1"
+      "score": 95.79,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bos-1980s-mike-easler-1984",
-    "playerId": "easlemi01",
-    "playerSlug": "mike-easler",
-    "name": "Mike Easler",
+    "id": "bos-1980s-oil-can-boyd-1985",
+    "playerId": "boydoi01",
+    "playerSlug": "oil-can-boyd",
+    "name": "Oil Can Boyd",
     "franchiseId": "bos",
     "teamAbbreviation": "BOS",
     "teamDisplayName": "Boston Red Sox",
     "team": "BOS",
     "decade": "1980s",
-    "featuredSeason": 1984,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.313,
-      "obp": 0.376,
-      "slg": 0.516,
-      "rbi": 91,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 27,
-      "avg": 0.313,
-      "obp": 0.376,
-      "slg": 0.516,
-      "rbi": 91,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 156,
-      "plateAppearances": 665,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.376,
-      "slg": 0.516,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "easlemi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 108.2,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-nick-esasky-1989",
-    "playerId": "esaskni01",
-    "playerSlug": "nick-esasky",
-    "name": "Nick Esasky",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.277,
-      "obp": 0.355,
-      "slg": 0.5,
-      "rbi": 108,
-      "sb": 1
+      "war": 6,
+      "eraPlus": 116,
+      "era": 3.7,
+      "whip": 1.248,
+      "so": 154,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 30,
-      "avg": 0.277,
-      "obp": 0.355,
-      "slg": 0.5,
-      "rbi": 108,
-      "sb": 1
+      "war": 6,
+      "eraPlus": 116,
+      "era": 3.7,
+      "whip": 1.248,
+      "so": 154,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 154,
-      "plateAppearances": 633,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.355,
-      "slg": 0.5,
-      "wrcPlus": null
+      "whip": 1.248,
+      "fip": null,
+      "inningsPitched": 272.3,
+      "strikeoutRate": 5.089974293059126,
+      "walkRate": 2.214469335291957,
+      "starts": 35,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
-      "sourcePlayerId": "esaskni01"
+      "sourcePlayerId": "boydoi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.58571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-tony-armas-1984",
-    "playerId": "armasto01",
-    "playerSlug": "tony-armas",
-    "name": "Tony Armas",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1984,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 43,
-      "avg": 0.268,
-      "obp": 0.3,
-      "slg": 0.531,
-      "rbi": 123,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 43,
-      "avg": 0.268,
-      "obp": 0.3,
-      "slg": 0.531,
-      "rbi": 123,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 679,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.3,
-      "slg": 0.531,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "armasto01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 102.5,
-      "formulaVersion": "season-selection-v1"
+      "score": 87.6,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -511,8 +600,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.3,
+      "opsPlus": 132,
       "hr": 18,
       "avg": 0.294,
       "obp": 0.367,
@@ -522,8 +611,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.3,
+      "opsPlus": 132,
       "hr": 18,
       "avg": 0.294,
       "obp": 0.367,
@@ -544,20 +633,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "burksel01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 102.25714285714285,
-      "formulaVersion": "season-selection-v1"
+      "score": 85.71,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -581,8 +673,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.4,
+      "opsPlus": 126,
       "hr": 18,
       "avg": 0.295,
       "obp": 0.362,
@@ -592,8 +684,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 5.4,
+      "opsPlus": 126,
       "hr": 18,
       "avg": 0.295,
       "obp": 0.362,
@@ -614,20 +706,167 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "gedmari01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 100.39999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 83.33000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-bruce-hurst-1986",
+    "playerId": "hurstbr01",
+    "playerSlug": "bruce-hurst",
+    "name": "Bruce Hurst",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.6,
+      "eraPlus": 140,
+      "era": 2.99,
+      "whip": 1.256,
+      "so": 167,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.6,
+      "eraPlus": 140,
+      "era": 2.99,
+      "whip": 1.256,
+      "so": 167,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.256,
+      "fip": null,
+      "inningsPitched": 174.3,
+      "strikeoutRate": 8.623063683304647,
+      "walkRate": 2.5817555938037864,
+      "starts": 25,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "hurstbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.91499999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-bob-stanley-1982",
+    "playerId": "stanlbo01",
+    "playerSlug": "bob-stanley",
+    "name": "Bob Stanley",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.7,
+      "eraPlus": 140,
+      "era": 3.1,
+      "whip": 1.253,
+      "so": 83,
+      "wins": 12,
+      "saves": 14,
+      "sv": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.7,
+      "eraPlus": 140,
+      "era": 3.1,
+      "whip": 1.253,
+      "so": 83,
+      "wins": 12,
+      "saves": 14,
+      "sv": 14
+    },
+    "scoringStats": {
+      "whip": 1.253,
+      "fip": null,
+      "inningsPitched": 168.3,
+      "strikeoutRate": 4.438502673796791,
+      "walkRate": 2.6737967914438503,
+      "starts": 0,
+      "reliefAppearances": 48
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "stanlbo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.25714285714287,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -651,8 +890,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.7,
+      "opsPlus": 130,
       "hr": 12,
       "avg": 0.301,
       "obp": 0.383,
@@ -662,8 +901,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.7,
+      "opsPlus": 130,
       "hr": 12,
       "avg": 0.301,
       "obp": 0.383,
@@ -684,20 +923,314 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "lynnfr01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.95714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 76.18,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-mike-easler-1984",
+    "playerId": "easlemi01",
+    "playerSlug": "mike-easler",
+    "name": "Mike Easler",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "opsPlus": 140,
+      "hr": 27,
+      "avg": 0.313,
+      "obp": 0.376,
+      "slg": 0.516,
+      "rbi": 91,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "opsPlus": 140,
+      "hr": 27,
+      "avg": 0.313,
+      "obp": 0.376,
+      "slg": 0.516,
+      "rbi": 91,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 665,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.376,
+      "slg": 0.516,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "easlemi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.05000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-nick-esasky-1989",
+    "playerId": "esaskni01",
+    "playerSlug": "nick-esasky",
+    "name": "Nick Esasky",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.9,
+      "opsPlus": 133,
+      "hr": 30,
+      "avg": 0.277,
+      "obp": 0.355,
+      "slg": 0.5,
+      "rbi": 108,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.9,
+      "opsPlus": 133,
+      "hr": 30,
+      "avg": 0.277,
+      "obp": 0.355,
+      "slg": 0.5,
+      "rbi": 108,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 633,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.5,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "esaskni01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 69.63,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-dennis-eckersley-1982",
+    "playerId": "eckerde01",
+    "playerSlug": "dennis-eckersley",
+    "name": "Dennis Eckersley",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.5,
+      "eraPlus": 116,
+      "era": 3.73,
+      "whip": 1.208,
+      "so": 127,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.5,
+      "eraPlus": 116,
+      "era": 3.73,
+      "whip": 1.208,
+      "so": 127,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.208,
+      "fip": null,
+      "inningsPitched": 224.3,
+      "strikeoutRate": 5.09585376727597,
+      "walkRate": 1.7253678109674542,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "eckerde01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 69.6,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-carney-lansford-1981",
+    "playerId": "lansfca01",
+    "playerSlug": "carney-lansford",
+    "name": "Carney Lansford",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "opsPlus": 133,
+      "hr": 4,
+      "avg": 0.336,
+      "obp": 0.389,
+      "slg": 0.439,
+      "rbi": 52,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "opsPlus": 133,
+      "hr": 4,
+      "avg": 0.336,
+      "obp": 0.389,
+      "slg": 0.439,
+      "rbi": 52,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 102,
+      "plateAppearances": 437,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.389,
+      "slg": 0.439,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "lansfca01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1981.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 65.27000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -721,8 +1254,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.9,
+      "opsPlus": 118,
       "hr": 18,
       "avg": 0.289,
       "obp": 0.353,
@@ -732,8 +1265,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.9,
+      "opsPlus": 118,
       "hr": 18,
       "avg": 0.289,
       "obp": 0.353,
@@ -754,90 +1287,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "fiskca01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 97.14285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 61.099999999999994,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "bos-1980s-carney-lansford-1982",
-    "playerId": "lansfca01",
-    "playerSlug": "carney-lansford",
-    "name": "Carney Lansford",
+    "id": "bos-1980s-john-tudor-1982",
+    "playerId": "tudorjo01",
+    "playerSlug": "john-tudor",
+    "name": "John Tudor",
     "franchiseId": "bos",
     "teamAbbreviation": "BOS",
     "teamDisplayName": "Boston Red Sox",
     "team": "BOS",
     "decade": "1980s",
     "featuredSeason": 1982,
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "3B"
+      "SP"
     ],
-    "bats": "R",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.301,
-      "obp": 0.359,
-      "slg": 0.444,
-      "rbi": 63,
-      "sb": 9
+      "war": 3.7,
+      "eraPlus": 119,
+      "era": 3.63,
+      "whip": 1.4,
+      "so": 146,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.301,
-      "obp": 0.359,
-      "slg": 0.444,
-      "rbi": 63,
-      "sb": 9
+      "war": 3.7,
+      "eraPlus": 119,
+      "era": 3.63,
+      "whip": 1.4,
+      "so": 146,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 128,
-      "plateAppearances": 538,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.444,
-      "wrcPlus": null
+      "whip": 1.4,
+      "fip": null,
+      "inningsPitched": 195.7,
+      "strikeoutRate": 6.714358712314768,
+      "walkRate": 2.713336739908023,
+      "starts": 30,
+      "reliefAppearances": 2
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
-      "sourcePlayerId": "lansfca01"
+      "sourcePlayerId": "tudorjo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.67142857142856,
-      "formulaVersion": "season-selection-v1"
+      "score": 60.83500000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -862,8 +1400,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.3,
+      "opsPlus": 112,
       "hr": 3,
       "avg": 0.288,
       "obp": 0.376,
@@ -873,8 +1411,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.3,
+      "opsPlus": 112,
       "hr": 3,
       "avg": 0.288,
       "obp": 0.376,
@@ -895,20 +1433,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "reedjo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.21428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 51.66,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-tony-armas-1984",
+    "playerId": "armasto01",
+    "playerSlug": "tony-armas",
+    "name": "Tony Armas",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.6,
+      "opsPlus": 121,
+      "hr": 43,
+      "avg": 0.268,
+      "obp": 0.3,
+      "slg": 0.531,
+      "rbi": 123,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "opsPlus": 121,
+      "hr": 43,
+      "avg": 0.268,
+      "obp": 0.3,
+      "slg": 0.531,
+      "rbi": 123,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 679,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.3,
+      "slg": 0.531,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "armasto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.49,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -932,8 +1546,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3,
+      "opsPlus": 113,
       "hr": 7,
       "avg": 0.321,
       "obp": 0.338,
@@ -943,8 +1557,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3,
+      "opsPlus": 113,
       "hr": 7,
       "avg": 0.321,
       "obp": 0.338,
@@ -965,20 +1579,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "staplda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.44285714285715,
-      "formulaVersion": "season-selection-v1"
+      "score": 47.17,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1002,8 +1619,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 100,
       "hr": 4,
       "avg": 0.286,
       "obp": 0.353,
@@ -1013,8 +1630,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.9,
+      "opsPlus": 100,
       "hr": 4,
       "avg": 0.286,
       "obp": 0.353,
@@ -1035,20 +1652,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "barrema02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.25714285714287,
-      "formulaVersion": "season-selection-v1"
+      "score": 41.75,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-don-baylor-1986",
+    "playerId": "baylodo01",
+    "playerSlug": "don-baylor",
+    "name": "Don Baylor",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.6,
+      "opsPlus": 112,
+      "hr": 31,
+      "avg": 0.238,
+      "obp": 0.344,
+      "slg": 0.439,
+      "rbi": 94,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.6,
+      "opsPlus": 112,
+      "hr": 31,
+      "avg": 0.238,
+      "obp": 0.344,
+      "slg": 0.439,
+      "rbi": 94,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 160,
+      "plateAppearances": 687,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.344,
+      "slg": 0.439,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "baylodo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 32.07,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1072,8 +1765,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.4,
+      "opsPlus": 90,
       "hr": 8,
       "avg": 0.278,
       "obp": 0.341,
@@ -1083,8 +1776,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.4,
+      "opsPlus": 90,
       "hr": 8,
       "avg": 0.278,
       "obp": 0.341,
@@ -1105,20 +1798,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "burleri01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.04285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 30.919999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1142,8 +1838,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 130,
       "hr": 3,
       "avg": 0.328,
       "obp": 0.388,
@@ -1153,8 +1849,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 130,
       "hr": 3,
       "avg": 0.328,
       "obp": 0.388,
@@ -1175,20 +1871,244 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "raderda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.54285714285714,
-      "formulaVersion": "season-selection-v1"
+      "score": 29.720000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-glenn-hoffman-1985",
+    "playerId": "hoffmgl01",
+    "playerSlug": "glenn-hoffman",
+    "name": "Glenn Hoffman",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.8,
+      "opsPlus": 104,
+      "hr": 6,
+      "avg": 0.276,
+      "obp": 0.343,
+      "slg": 0.416,
+      "rbi": 34,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.8,
+      "opsPlus": 104,
+      "hr": 6,
+      "avg": 0.276,
+      "obp": 0.343,
+      "slg": 0.416,
+      "rbi": 34,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 96,
+      "plateAppearances": 312,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.343,
+      "slg": 0.416,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "hoffmgl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 26.720000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-reid-nichols-1982",
+    "playerId": "nichore01",
+    "playerSlug": "reid-nichols",
+    "name": "Reid Nichols",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.1,
+      "opsPlus": 113,
+      "hr": 7,
+      "avg": 0.302,
+      "obp": 0.341,
+      "slg": 0.461,
+      "rbi": 33,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.1,
+      "opsPlus": 113,
+      "hr": 7,
+      "avg": 0.302,
+      "obp": 0.341,
+      "slg": 0.461,
+      "rbi": 33,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 92,
+      "plateAppearances": 261,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.341,
+      "slg": 0.461,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "nichore01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 22.310000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "bos-1980s-todd-benzinger-1987",
+    "playerId": "benzito01",
+    "playerSlug": "todd-benzinger",
+    "name": "Todd Benzinger",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.2,
+      "opsPlus": 106,
+      "hr": 8,
+      "avg": 0.278,
+      "obp": 0.344,
+      "slg": 0.444,
+      "rbi": 43,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.2,
+      "opsPlus": 106,
+      "hr": 8,
+      "avg": 0.278,
+      "obp": 0.344,
+      "slg": 0.444,
+      "rbi": 43,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 73,
+      "plateAppearances": 250,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.344,
+      "slg": 0.444,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "benzito01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 19.9,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1214,8 +2134,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.6,
+      "opsPlus": 112,
       "hr": 9,
       "avg": 0.285,
       "obp": 0.357,
@@ -1225,8 +2145,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.6,
+      "opsPlus": 112,
       "hr": 9,
       "avg": 0.285,
       "obp": 0.357,
@@ -1247,231 +2167,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "dwyerji01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 87.81428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-reid-nichols-1983",
-    "playerId": "nichore01",
-    "playerSlug": "reid-nichols",
-    "name": "Reid Nichols",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "LF",
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.285,
-      "obp": 0.352,
-      "slg": 0.438,
-      "rbi": 22,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.285,
-      "obp": 0.352,
-      "slg": 0.438,
-      "rbi": 22,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 100,
-      "plateAppearances": 304,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.352,
-      "slg": 0.438,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "nichore01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 87.68571428571428,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-glenn-hoffman-1985",
-    "playerId": "hoffmgl01",
-    "playerSlug": "glenn-hoffman",
-    "name": "Glenn Hoffman",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1985,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.276,
-      "obp": 0.343,
-      "slg": 0.416,
-      "rbi": 34,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 6,
-      "avg": 0.276,
-      "obp": 0.343,
-      "slg": 0.416,
-      "rbi": 34,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 96,
-      "plateAppearances": 312,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.343,
-      "slg": 0.416,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "hoffmgl01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 84.81428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-calvin-schiraldi-1986",
-    "playerId": "schirca01",
-    "playerSlug": "calvin-schiraldi",
-    "name": "Calvin Schiraldi",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.41,
-      "whip": 1,
-      "so": 55,
-      "wins": 4,
-      "saves": 9,
-      "sv": 9
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.41,
-      "whip": 1,
-      "so": 55,
-      "wins": 4,
-      "saves": 9,
-      "sv": 9
-    },
-    "scoringStats": {
-      "whip": 1,
-      "fip": null,
-      "inningsPitched": 51,
-      "strikeoutRate": 9.705882352941176,
-      "walkRate": 2.6470588235294117,
-      "starts": 0,
-      "reliefAppearances": 25
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "schirca01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 82.66823529411765,
-      "formulaVersion": "season-selection-v1"
+      "score": 16.11,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1497,8 +2209,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.9,
+      "opsPlus": 95,
       "hr": 0,
       "avg": 0.277,
       "obp": 0.35,
@@ -1508,8 +2220,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.9,
+      "opsPlus": 95,
       "hr": 0,
       "avg": 0.277,
       "obp": 0.35,
@@ -1530,503 +2242,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "BOS"
       ],
       "sourcePlayerId": "juraked01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 77.84285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-roger-clemens-1986",
-    "playerId": "clemero02",
-    "playerSlug": "roger-clemens",
-    "name": "Roger Clemens",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.48,
-      "whip": 0.969,
-      "so": 238,
-      "wins": 24,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.48,
-      "whip": 0.969,
-      "so": 238,
-      "wins": 24,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.969,
-      "fip": null,
-      "inningsPitched": 254,
-      "strikeoutRate": 8.433070866141732,
-      "walkRate": 2.374015748031496,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "clemero02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 75.94858267716536,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-tom-burgmeier-1980",
-    "playerId": "burgmto01",
-    "playerSlug": "tom-burgmeier",
-    "name": "Tom Burgmeier",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2,
-      "whip": 1.081,
-      "so": 54,
-      "wins": 5,
-      "saves": 24,
-      "sv": 24
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2,
-      "whip": 1.081,
-      "so": 54,
-      "wins": 5,
-      "saves": 24,
-      "sv": 24
-    },
-    "scoringStats": {
-      "whip": 1.081,
-      "fip": null,
-      "inningsPitched": 99,
-      "strikeoutRate": 4.909090909090909,
-      "walkRate": 1.8181818181818181,
-      "starts": 0,
-      "reliefAppearances": 62
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "burgmto01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 75.01636363636364,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-dennis-lamp-1989",
-    "playerId": "lampde01",
-    "playerSlug": "dennis-lamp",
-    "name": "Dennis Lamp",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.32,
-      "whip": 1.095,
-      "so": 61,
-      "wins": 4,
-      "saves": 2,
-      "sv": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.32,
-      "whip": 1.095,
-      "so": 61,
-      "wins": 4,
-      "saves": 2,
-      "sv": 2
-    },
-    "scoringStats": {
-      "whip": 1.095,
-      "fip": null,
-      "inningsPitched": 112.3,
-      "strikeoutRate": 4.888691006233304,
-      "walkRate": 2.1638468388245773,
-      "starts": 0,
-      "reliefAppearances": 42
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "lampde01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 66.7472662511131,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-bruce-hurst-1986",
-    "playerId": "hurstbr01",
-    "playerSlug": "bruce-hurst",
-    "name": "Bruce Hurst",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.99,
-      "whip": 1.256,
-      "so": 167,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.99,
-      "whip": 1.256,
-      "so": 167,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.256,
-      "fip": null,
-      "inningsPitched": 174.3,
-      "strikeoutRate": 8.623063683304647,
-      "walkRate": 2.5817555938037864,
-      "starts": 25,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "hurstbr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 61.745295467584626,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-mike-boddicker-1988",
-    "playerId": "boddimi01",
-    "playerSlug": "mike-boddicker",
-    "name": "Mike Boddicker",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1988,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.63,
-      "whip": 1.247,
-      "so": 56,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.63,
-      "whip": 1.247,
-      "so": 56,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.247,
-      "fip": null,
-      "inningsPitched": 89,
-      "strikeoutRate": 5.662921348314606,
-      "walkRate": 2.6292134831460676,
-      "starts": 14,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "boddimi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 56.99500624219725,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-dennis-eckersley-1982",
-    "playerId": "eckerde01",
-    "playerSlug": "dennis-eckersley",
-    "name": "Dennis Eckersley",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.73,
-      "whip": 1.208,
-      "so": 127,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.73,
-      "whip": 1.208,
-      "so": 127,
-      "wins": 13,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.208,
-      "fip": null,
-      "inningsPitched": 224.3,
-      "strikeoutRate": 5.09585376727597,
-      "walkRate": 1.7253678109674542,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "eckerde01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 52.135728934462776,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "bos-1980s-oil-can-boyd-1985",
-    "playerId": "boydoi01",
-    "playerSlug": "oil-can-boyd",
-    "name": "Oil Can Boyd",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1980s",
-    "featuredSeason": 1985,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.7,
-      "whip": 1.248,
-      "so": 154,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.7,
-      "whip": 1.248,
-      "so": 154,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.248,
-      "fip": null,
-      "inningsPitched": 272.3,
-      "strikeoutRate": 5.089974293059126,
-      "walkRate": 2.214469335291957,
-      "starts": 35,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "boydoi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 50.95325743665075,
-      "formulaVersion": "season-selection-v1"
+      "score": 10.100000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

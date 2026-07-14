@@ -1,6 +1,6 @@
 [
   {
-    "id": "sfg-2000s-barry-bonds-2004",
+    "id": "sfg-2000s-barry-bonds-2002",
     "playerId": "bondsba01",
     "playerSlug": "barry-bonds",
     "name": "Barry Bonds",
@@ -9,7 +9,7 @@
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2000s",
-    "featuredSeason": 2004,
+    "featuredSeason": 2002,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -20,53 +20,128 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 45,
-      "avg": 0.362,
-      "obp": 0.609,
-      "slg": 0.812,
-      "rbi": 101,
-      "sb": 6
+      "war": 11.7,
+      "opsPlus": 268,
+      "hr": 46,
+      "avg": 0.37,
+      "obp": 0.582,
+      "slg": 0.799,
+      "rbi": 110,
+      "sb": 9
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 45,
-      "avg": 0.362,
-      "obp": 0.609,
-      "slg": 0.812,
-      "rbi": 101,
-      "sb": 6
+      "war": 11.7,
+      "opsPlus": 268,
+      "hr": 46,
+      "avg": 0.37,
+      "obp": 0.582,
+      "slg": 0.799,
+      "rbi": 110,
+      "sb": 9
     },
     "scoringStats": {
-      "games": 147,
-      "plateAppearances": 617,
+      "games": 143,
+      "plateAppearances": 612,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.609,
-      "slg": 0.812,
+      "obp": 0.582,
+      "slg": 0.799,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "bondsba01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 159.72857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 230.51999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-tim-lincecum-2008",
+    "playerId": "linceti01",
+    "playerSlug": "tim-lincecum",
+    "name": "Tim Lincecum",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7.8,
+      "eraPlus": 168,
+      "era": 2.62,
+      "whip": 1.172,
+      "so": 265,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.8,
+      "eraPlus": 168,
+      "era": 2.62,
+      "whip": 1.172,
+      "so": 265,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.172,
+      "fip": null,
+      "inningsPitched": 227,
+      "strikeoutRate": 10.506607929515418,
+      "walkRate": 3.3303964757709252,
+      "starts": 33,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "linceti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 127.39999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -91,8 +166,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.2,
+      "opsPlus": 162,
       "hr": 33,
       "avg": 0.334,
       "obp": 0.424,
@@ -102,8 +177,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 7.2,
+      "opsPlus": 162,
       "hr": 33,
       "avg": 0.334,
       "obp": 0.424,
@@ -124,160 +199,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "kentje01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 121.85714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 124.35000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2000s-ellis-burks-2000",
-    "playerId": "burksel01",
-    "playerSlug": "ellis-burks",
-    "name": "Ellis Burks",
+    "id": "sfg-2000s-jason-schmidt-2003",
+    "playerId": "schmija01",
+    "playerSlug": "jason-schmidt",
+    "name": "Jason Schmidt",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
+    "featuredSeason": 2003,
+    "playerType": "pitcher",
+    "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": null,
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "RF"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.344,
-      "obp": 0.419,
-      "slg": 0.606,
-      "rbi": 96,
-      "sb": 5
+      "war": 6.7,
+      "eraPlus": 180,
+      "era": 2.34,
+      "whip": 0.953,
+      "so": 208,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 24,
-      "avg": 0.344,
-      "obp": 0.419,
-      "slg": 0.606,
-      "rbi": 96,
-      "sb": 5
+      "war": 6.7,
+      "eraPlus": 180,
+      "era": 2.34,
+      "whip": 0.953,
+      "so": 208,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "games": 122,
-      "plateAppearances": 458,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.419,
-      "slg": 0.606,
-      "wrcPlus": null
+      "whip": 0.953,
+      "fip": null,
+      "inningsPitched": 207.7,
+      "strikeoutRate": 9.01299951853635,
+      "walkRate": 1.9932595089070777,
+      "starts": 29,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "burksel01"
+      "sourcePlayerId": "schmija01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 115.58571428571427,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-randy-winn-2005",
-    "playerId": "winnra01",
-    "playerSlug": "randy-winn",
-    "name": "Randy Winn",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2005,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.359,
-      "obp": 0.391,
-      "slg": 0.68,
-      "rbi": 26,
-      "sb": 7
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.359,
-      "obp": 0.391,
-      "slg": 0.68,
-      "rbi": 26,
-      "sb": 7
-    },
-    "scoringStats": {
-      "games": 58,
-      "plateAppearances": 243,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.391,
-      "slg": 0.68,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "winnra01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 114.04285714285717,
-      "formulaVersion": "season-selection-v1"
+      "score": 118.4,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -301,8 +311,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.7,
+      "opsPlus": 146,
       "hr": 37,
       "avg": 0.324,
       "obp": 0.369,
@@ -312,8 +322,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 6.7,
+      "opsPlus": 146,
       "hr": 37,
       "avg": 0.324,
       "obp": 0.369,
@@ -334,20 +344,384 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "aurilri01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 113.69999999999999,
-      "formulaVersion": "season-selection-v1"
+      "score": 110.26,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-robb-nen-2000",
+    "playerId": "nenro01",
+    "playerSlug": "robb-nen",
+    "name": "Robb Nen",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "eraPlus": 286,
+      "era": 1.5,
+      "whip": 0.848,
+      "so": 92,
+      "wins": 4,
+      "saves": 41,
+      "sv": 41
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "eraPlus": 286,
+      "era": 1.5,
+      "whip": 0.848,
+      "so": 92,
+      "wins": 4,
+      "saves": 41,
+      "sv": 41
+    },
+    "scoringStats": {
+      "whip": 0.848,
+      "fip": null,
+      "inningsPitched": 66,
+      "strikeoutRate": 12.545454545454545,
+      "walkRate": 2.590909090909091,
+      "starts": 0,
+      "reliefAppearances": 68
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "nenro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.8142857142857,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-matt-cain-2009",
+    "playerId": "cainma01",
+    "playerSlug": "matt-cain",
+    "name": "Matt Cain",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 6.1,
+      "eraPlus": 147,
+      "era": 2.89,
+      "whip": 1.181,
+      "so": 171,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.1,
+      "eraPlus": 147,
+      "era": 2.89,
+      "whip": 1.181,
+      "so": 171,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.181,
+      "fip": null,
+      "inningsPitched": 217.7,
+      "strikeoutRate": 7.069361506660543,
+      "walkRate": 3.0179145613229217,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "cainma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.64999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-felix-rodriguez-2001",
+    "playerId": "rodrife01",
+    "playerSlug": "felix-rodriguez",
+    "name": "Felix Rodriguez",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.2,
+      "eraPlus": 237,
+      "era": 1.68,
+      "whip": 0.996,
+      "so": 91,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.2,
+      "eraPlus": 237,
+      "era": 1.68,
+      "whip": 0.996,
+      "so": 91,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.996,
+      "fip": null,
+      "inningsPitched": 80.3,
+      "strikeoutRate": 10.199252801992529,
+      "walkRate": 3.0261519302615194,
+      "starts": 0,
+      "reliefAppearances": 80
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "rodrife01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.35,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-ellis-burks-2000",
+    "playerId": "burksel01",
+    "playerSlug": "ellis-burks",
+    "name": "Ellis Burks",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5,
+      "opsPlus": 163,
+      "hr": 24,
+      "avg": 0.344,
+      "obp": 0.419,
+      "slg": 0.606,
+      "rbi": 96,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5,
+      "opsPlus": 163,
+      "hr": 24,
+      "avg": 0.344,
+      "obp": 0.419,
+      "slg": 0.606,
+      "rbi": 96,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 122,
+      "plateAppearances": 458,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.419,
+      "slg": 0.606,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "burksel01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.08,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-jeremy-affeldt-2009",
+    "playerId": "affelje01",
+    "playerSlug": "jeremy-affeldt",
+    "name": "Jeremy Affeldt",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.6,
+      "eraPlus": 246,
+      "era": 1.73,
+      "whip": 1.171,
+      "so": 55,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "eraPlus": 246,
+      "era": 1.73,
+      "whip": 1.171,
+      "so": 55,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.171,
+      "fip": null,
+      "inningsPitched": 62.3,
+      "strikeoutRate": 7.945425361155698,
+      "walkRate": 4.478330658105939,
+      "starts": 0,
+      "reliefAppearances": 74
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "affelje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.3,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -372,8 +746,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 144,
       "hr": 25,
       "avg": 0.33,
       "obp": 0.387,
@@ -383,8 +757,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.3,
+      "opsPlus": 144,
       "hr": 25,
       "avg": 0.33,
       "obp": 0.387,
@@ -405,20 +779,96 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "sandopa01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 112.3857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 79.92999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-randy-winn-2005",
+    "playerId": "winnra01",
+    "playerSlug": "randy-winn",
+    "name": "Randy Winn",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.6,
+      "opsPlus": 173,
+      "hr": 14,
+      "avg": 0.359,
+      "obp": 0.391,
+      "slg": 0.68,
+      "rbi": 26,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "opsPlus": 173,
+      "hr": 14,
+      "avg": 0.359,
+      "obp": 0.391,
+      "slg": 0.68,
+      "rbi": 26,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 58,
+      "plateAppearances": 243,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.391,
+      "slg": 0.68,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "winnra01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.13000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -442,8 +892,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.3,
+      "opsPlus": 146,
       "hr": 12,
       "avg": 0.327,
       "obp": 0.429,
@@ -453,8 +903,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.3,
+      "opsPlus": 146,
       "hr": 12,
       "avg": 0.327,
       "obp": 0.429,
@@ -475,20 +925,95 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "snowjt01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2004.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 107.65714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 66.75,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-russ-ortiz-2001",
+    "playerId": "ortizru01",
+    "playerSlug": "russ-ortiz",
+    "name": "Russ Ortiz",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.1,
+      "eraPlus": 121,
+      "era": 3.29,
+      "whip": 1.271,
+      "so": 169,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.1,
+      "eraPlus": 121,
+      "era": 3.29,
+      "whip": 1.271,
+      "so": 169,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.271,
+      "fip": null,
+      "inningsPitched": 218.7,
+      "strikeoutRate": 6.954732510288066,
+      "walkRate": 3.7448559670781894,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "ortizru01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2001.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.55,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -513,8 +1038,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 138,
       "hr": 19,
       "avg": 0.321,
       "obp": 0.4,
@@ -524,8 +1049,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 138,
       "hr": 19,
       "avg": 0.321,
       "obp": 0.4,
@@ -546,20 +1071,167 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "aloumo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.8,
-      "formulaVersion": "season-selection-v1"
+      "score": 64.7,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-noah-lowry-2005",
+    "playerId": "lowryno01",
+    "playerSlug": "noah-lowry",
+    "name": "Noah Lowry",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4,
+      "eraPlus": 113,
+      "era": 3.78,
+      "whip": 1.314,
+      "so": 172,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "eraPlus": 113,
+      "era": 3.78,
+      "whip": 1.314,
+      "so": 172,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.314,
+      "fip": null,
+      "inningsPitched": 204.7,
+      "strikeoutRate": 7.56228627259404,
+      "walkRate": 3.341475329750855,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "lowryno01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 62.55,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-scott-eyre-2005",
+    "playerId": "eyresc01",
+    "playerSlug": "scott-eyre",
+    "name": "Scott Eyre",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.3,
+      "eraPlus": 163,
+      "era": 2.63,
+      "whip": 1.083,
+      "so": 65,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.3,
+      "eraPlus": 163,
+      "era": 2.63,
+      "whip": 1.083,
+      "so": 65,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.083,
+      "fip": null,
+      "inningsPitched": 68.3,
+      "strikeoutRate": 8.56515373352855,
+      "walkRate": 3.4260614934114204,
+      "starts": 0,
+      "reliefAppearances": 86
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "eyresc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2005.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.64999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -583,8 +1255,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 127,
       "hr": 26,
       "avg": 0.293,
       "obp": 0.36,
@@ -594,8 +1266,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 127,
       "hr": 26,
       "avg": 0.293,
       "obp": 0.36,
@@ -616,167 +1288,30 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "durhara01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2006.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.6,
-      "formulaVersion": "season-selection-v1"
+      "score": 56.230000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2000s-marquis-grissom-2003",
-    "playerId": "grissma02",
-    "playerSlug": "marquis-grissom",
-    "name": "Marquis Grissom",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.3,
-      "obp": 0.322,
-      "slg": 0.468,
-      "rbi": 79,
-      "sb": 11
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.3,
-      "obp": 0.322,
-      "slg": 0.468,
-      "rbi": 79,
-      "sb": 11
-    },
-    "scoringStats": {
-      "games": 149,
-      "plateAppearances": 615,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.322,
-      "slg": 0.468,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "grissma02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.57142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-jose-cruz-2003",
-    "playerId": "cruzjo02",
-    "playerSlug": "jose-cruz",
-    "name": "Jose Cruz",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2003,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.25,
-      "obp": 0.366,
-      "slg": 0.414,
-      "rbi": 68,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.25,
-      "obp": 0.366,
-      "slg": 0.414,
-      "rbi": 68,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 158,
-      "plateAppearances": 648,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.366,
-      "slg": 0.414,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "cruzjo02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.51428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-robb-nen-2000",
-    "playerId": "nenro01",
-    "playerSlug": "robb-nen",
-    "name": "Robb Nen",
+    "id": "sfg-2000s-livan-hernandez-2000",
+    "playerId": "hernali01",
+    "playerSlug": "livan-hernandez",
+    "name": "Livan Hernandez",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
@@ -786,59 +1321,135 @@
     "playerType": "pitcher",
     "type": "pitcher",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": "SP",
     "eligiblePositions": [
-      "RP"
+      "SP"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.5,
-      "whip": 0.848,
-      "so": 92,
-      "wins": 4,
-      "saves": 41,
-      "sv": 41
+      "war": 3.4,
+      "eraPlus": 114,
+      "era": 3.75,
+      "whip": 1.363,
+      "so": 165,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.5,
-      "whip": 0.848,
-      "so": 92,
-      "wins": 4,
-      "saves": 41,
-      "sv": 41
+      "war": 3.4,
+      "eraPlus": 114,
+      "era": 3.75,
+      "whip": 1.363,
+      "so": 165,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
     },
     "scoringStats": {
-      "whip": 0.848,
+      "whip": 1.363,
       "fip": null,
-      "inningsPitched": 66,
-      "strikeoutRate": 12.545454545454545,
-      "walkRate": 2.590909090909091,
-      "starts": 0,
-      "reliefAppearances": 68
+      "inningsPitched": 240,
+      "strikeoutRate": 6.1875,
+      "walkRate": 2.7375,
+      "starts": 33,
+      "reliefAppearances": 0
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "nenro01"
+      "sourcePlayerId": "hernali01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.97181818181818,
-      "formulaVersion": "season-selection-v1"
+      "score": 55.699999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sfg-2000s-reggie-sanders-2002",
+    "playerId": "sandere02",
+    "playerSlug": "reggie-sanders",
+    "name": "Reggie Sanders",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.6,
+      "opsPlus": 107,
+      "hr": 23,
+      "avg": 0.25,
+      "obp": 0.324,
+      "slg": 0.455,
+      "rbi": 85,
+      "sb": 18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.6,
+      "opsPlus": 107,
+      "hr": 23,
+      "avg": 0.25,
+      "obp": 0.324,
+      "slg": 0.455,
+      "rbi": 85,
+      "sb": 18
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 571,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.324,
+      "slg": 0.455,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "sandere02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.410000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -864,8 +1475,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.5,
+      "opsPlus": 112,
       "hr": 16,
       "avg": 0.289,
       "obp": 0.329,
@@ -875,8 +1486,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.5,
+      "opsPlus": 112,
       "hr": 16,
       "avg": 0.289,
       "obp": 0.329,
@@ -897,233 +1508,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "uribeju01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.65714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-reggie-sanders-2002",
-    "playerId": "sandere02",
-    "playerSlug": "reggie-sanders",
-    "name": "Reggie Sanders",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.25,
-      "obp": 0.324,
-      "slg": 0.455,
-      "rbi": 85,
-      "sb": 18
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.25,
-      "obp": 0.324,
-      "slg": 0.455,
-      "rbi": 85,
-      "sb": 18
-    },
-    "scoringStats": {
-      "games": 140,
-      "plateAppearances": 571,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.324,
-      "slg": 0.455,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "sandere02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.21428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-pedro-feliz-2004",
-    "playerId": "felizpe01",
-    "playerSlug": "pedro-feliz",
-    "name": "Pedro Feliz",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2004,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "3B",
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.276,
-      "obp": 0.305,
-      "slg": 0.485,
-      "rbi": 84,
-      "sb": 5
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 22,
-      "avg": 0.276,
-      "obp": 0.305,
-      "slg": 0.485,
-      "rbi": 84,
-      "sb": 5
-    },
-    "scoringStats": {
-      "games": 144,
-      "plateAppearances": 531,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.305,
-      "slg": 0.485,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "felizpe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.17142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-fred-lewis-2008",
-    "playerId": "lewisfr02",
-    "playerSlug": "fred-lewis",
-    "name": "Fred Lewis",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2008,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF",
-      "LF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.282,
-      "obp": 0.351,
-      "slg": 0.44,
-      "rbi": 40,
-      "sb": 21
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.282,
-      "obp": 0.351,
-      "slg": 0.44,
-      "rbi": 40,
-      "sb": 21
-    },
-    "scoringStats": {
-      "games": 133,
-      "plateAppearances": 521,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.351,
-      "slg": 0.44,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "lewisfr02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.98571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 52.29,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1148,8 +1549,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 104,
       "hr": 20,
       "avg": 0.261,
       "obp": 0.333,
@@ -1159,8 +1560,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 104,
       "hr": 20,
       "avg": 0.261,
       "obp": 0.333,
@@ -1181,230 +1582,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "bellda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 93.97142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-omar-vizquel-2006",
-    "playerId": "vizquom01",
-    "playerSlug": "omar-vizquel",
-    "name": "Omar Vizquel",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2006,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.295,
-      "obp": 0.361,
-      "slg": 0.389,
-      "rbi": 58,
-      "sb": 24
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 4,
-      "avg": 0.295,
-      "obp": 0.361,
-      "slg": 0.389,
-      "rbi": 58,
-      "sb": 24
-    },
-    "scoringStats": {
-      "games": 153,
-      "plateAppearances": 646,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.361,
-      "slg": 0.389,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "vizquom01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.45714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-bengie-molina-2008",
-    "playerId": "molinbe01",
-    "playerSlug": "bengie-molina",
-    "name": "Bengie Molina",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2008,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.292,
-      "obp": 0.322,
-      "slg": 0.445,
-      "rbi": 95,
-      "sb": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.292,
-      "obp": 0.322,
-      "slg": 0.445,
-      "rbi": 95,
-      "sb": 0
-    },
-    "scoringStats": {
-      "games": 145,
-      "plateAppearances": 569,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.322,
-      "slg": 0.445,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "molinbe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 92.95714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-bobby-estalella-2000",
-    "playerId": "estalbo02",
-    "playerSlug": "bobby-estalella",
-    "name": "Bobby Estalella",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2000,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.234,
-      "obp": 0.357,
-      "slg": 0.468,
-      "rbi": 53,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 14,
-      "avg": 0.234,
-      "obp": 0.357,
-      "slg": 0.468,
-      "rbi": 53,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 106,
-      "plateAppearances": 361,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.357,
-      "slg": 0.468,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "estalbo02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 92.81428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 45.42,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1428,8 +1622,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.6,
+      "opsPlus": 103,
       "hr": 16,
       "avg": 0.278,
       "obp": 0.315,
@@ -1439,8 +1633,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.6,
+      "opsPlus": 103,
       "hr": 16,
       "avg": 0.278,
       "obp": 0.315,
@@ -1461,503 +1655,389 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
       "sourcePlayerId": "santibe01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2002.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 91.18571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 37.84,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2000s-felix-rodriguez-2001",
-    "playerId": "rodrife01",
-    "playerSlug": "felix-rodriguez",
-    "name": "Felix Rodriguez",
+    "id": "sfg-2000s-omar-vizquel-2006",
+    "playerId": "vizquom01",
+    "playerSlug": "omar-vizquel",
+    "name": "Omar Vizquel",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "RP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "RP"
+      "SS"
     ],
-    "bats": "R",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.68,
-      "whip": 0.996,
-      "so": 91,
-      "wins": 9,
-      "saves": 0,
-      "sv": 0
+      "war": 2.9,
+      "opsPlus": 93,
+      "hr": 4,
+      "avg": 0.295,
+      "obp": 0.361,
+      "slg": 0.389,
+      "rbi": 58,
+      "sb": 24
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.68,
-      "whip": 0.996,
-      "so": 91,
-      "wins": 9,
-      "saves": 0,
-      "sv": 0
+      "war": 2.9,
+      "opsPlus": 93,
+      "hr": 4,
+      "avg": 0.295,
+      "obp": 0.361,
+      "slg": 0.389,
+      "rbi": 58,
+      "sb": 24
     },
     "scoringStats": {
-      "whip": 0.996,
-      "fip": null,
-      "inningsPitched": 80.3,
-      "strikeoutRate": 10.199252801992529,
-      "walkRate": 3.0261519302615194,
-      "starts": 0,
-      "reliefAppearances": 80
+      "games": 153,
+      "plateAppearances": 646,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.389,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "rodrife01"
+      "sourcePlayerId": "vizquom01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2006.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 86.67965130759652,
-      "formulaVersion": "season-selection-v1"
+      "score": 37.76,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2000s-sergio-romo-2008",
-    "playerId": "romose01",
-    "playerSlug": "sergio-romo",
-    "name": "Sergio Romo",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2008,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.12,
-      "whip": 0.706,
-      "so": 33,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.12,
-      "whip": 0.706,
-      "so": 33,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.706,
-      "fip": null,
-      "inningsPitched": 34,
-      "strikeoutRate": 8.735294117647058,
-      "walkRate": 2.1176470588235294,
-      "starts": 0,
-      "reliefAppearances": 29
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "romose01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 80.16647058823528,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-jason-schmidt-2003",
-    "playerId": "schmija01",
-    "playerSlug": "jason-schmidt",
-    "name": "Jason Schmidt",
+    "id": "sfg-2000s-marquis-grissom-2003",
+    "playerId": "grissma02",
+    "playerSlug": "marquis-grissom",
+    "name": "Marquis Grissom",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2000s",
     "featuredSeason": 2003,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "CF"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.34,
-      "whip": 0.953,
-      "so": 208,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
+      "war": 2.4,
+      "opsPlus": 104,
+      "hr": 20,
+      "avg": 0.3,
+      "obp": 0.322,
+      "slg": 0.468,
+      "rbi": 79,
+      "sb": 11
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.34,
-      "whip": 0.953,
-      "so": 208,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
+      "war": 2.4,
+      "opsPlus": 104,
+      "hr": 20,
+      "avg": 0.3,
+      "obp": 0.322,
+      "slg": 0.468,
+      "rbi": 79,
+      "sb": 11
     },
     "scoringStats": {
-      "whip": 0.953,
-      "fip": null,
-      "inningsPitched": 207.7,
-      "strikeoutRate": 9.01299951853635,
-      "walkRate": 1.9932595089070777,
-      "starts": 29,
-      "reliefAppearances": 0
+      "games": 149,
+      "plateAppearances": 615,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.322,
+      "slg": 0.468,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "schmija01"
+      "sourcePlayerId": "grissma02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2003.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 78.92849890333281,
-      "formulaVersion": "season-selection-v1"
+      "score": 36.949999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2000s-tim-lincecum-2009",
-    "playerId": "linceti01",
-    "playerSlug": "tim-lincecum",
-    "name": "Tim Lincecum",
+    "id": "sfg-2000s-andres-torres-2009",
+    "playerId": "torrean02",
+    "playerSlug": "andres-torres",
+    "name": "Andres Torres",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2000s",
     "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "CF",
+      "LF"
     ],
-    "bats": "L",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.48,
-      "whip": 1.047,
-      "so": 261,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
+      "war": 1.8,
+      "opsPlus": 126,
+      "hr": 6,
+      "avg": 0.27,
+      "obp": 0.343,
+      "slg": 0.533,
+      "rbi": 23,
+      "sb": 6
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.48,
-      "whip": 1.047,
-      "so": 261,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
+      "war": 1.8,
+      "opsPlus": 126,
+      "hr": 6,
+      "avg": 0.27,
+      "obp": 0.343,
+      "slg": 0.533,
+      "rbi": 23,
+      "sb": 6
     },
     "scoringStats": {
-      "whip": 1.047,
-      "fip": null,
-      "inningsPitched": 225.3,
-      "strikeoutRate": 10.426098535286284,
-      "walkRate": 2.7163781624500665,
-      "starts": 32,
-      "reliefAppearances": 0
+      "games": 75,
+      "plateAppearances": 169,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.343,
+      "slg": 0.533,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "linceti01"
+      "sourcePlayerId": "torrean02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2009.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 76.86458055925434,
-      "formulaVersion": "season-selection-v1"
+      "score": 36.29,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2000s-matt-cain-2009",
-    "playerId": "cainma01",
-    "playerSlug": "matt-cain",
-    "name": "Matt Cain",
+    "id": "sfg-2000s-bobby-estalella-2000",
+    "playerId": "estalbo02",
+    "playerSlug": "bobby-estalella",
+    "name": "Bobby Estalella",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2000s",
-    "featuredSeason": 2009,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "C"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.89,
-      "whip": 1.181,
-      "so": 171,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
+      "war": 2.1,
+      "opsPlus": 113,
+      "hr": 14,
+      "avg": 0.234,
+      "obp": 0.357,
+      "slg": 0.468,
+      "rbi": 53,
+      "sb": 3
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.89,
-      "whip": 1.181,
-      "so": 171,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
+      "war": 2.1,
+      "opsPlus": 113,
+      "hr": 14,
+      "avg": 0.234,
+      "obp": 0.357,
+      "slg": 0.468,
+      "rbi": 53,
+      "sb": 3
     },
     "scoringStats": {
-      "whip": 1.181,
-      "fip": null,
-      "inningsPitched": 217.7,
-      "strikeoutRate": 7.069361506660543,
-      "walkRate": 3.0179145613229217,
-      "starts": 33,
-      "reliefAppearances": 0
+      "games": 106,
+      "plateAppearances": 361,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.468,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "cainma01"
+      "sourcePlayerId": "estalbo02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2000.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 63.777170418006435,
-      "formulaVersion": "season-selection-v1"
+      "score": 35.31,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sfg-2000s-russ-ortiz-2001",
-    "playerId": "ortizru01",
-    "playerSlug": "russ-ortiz",
-    "name": "Russ Ortiz",
+    "id": "sfg-2000s-bengie-molina-2008",
+    "playerId": "molinbe01",
+    "playerSlug": "bengie-molina",
+    "name": "Bengie Molina",
     "franchiseId": "sfg",
     "teamAbbreviation": "SFG",
     "teamDisplayName": "San Francisco Giants",
     "team": "SFG",
     "decade": "2000s",
-    "featuredSeason": 2001,
-    "playerType": "pitcher",
-    "type": "pitcher",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
     "isTwoWay": false,
-    "pitchingRole": "SP",
+    "pitchingRole": null,
     "eligiblePositions": [
-      "SP"
+      "C"
     ],
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.29,
-      "whip": 1.271,
-      "so": 169,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
+      "war": 1.9,
+      "opsPlus": 98,
+      "hr": 16,
+      "avg": 0.292,
+      "obp": 0.322,
+      "slg": 0.445,
+      "rbi": 95,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.29,
-      "whip": 1.271,
-      "so": 169,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
+      "war": 1.9,
+      "opsPlus": 98,
+      "hr": 16,
+      "avg": 0.292,
+      "obp": 0.322,
+      "slg": 0.445,
+      "rbi": 95,
+      "sb": 0
     },
     "scoringStats": {
-      "whip": 1.271,
-      "fip": null,
-      "inningsPitched": 218.7,
-      "strikeoutRate": 6.954732510288066,
-      "walkRate": 3.7448559670781894,
-      "starts": 33,
-      "reliefAppearances": 0
+      "games": 145,
+      "plateAppearances": 569,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.322,
+      "slg": 0.445,
+      "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SFN"
       ],
-      "sourcePlayerId": "ortizru01"
+      "sourcePlayerId": "molinbe01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 2008.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 55.91481481481482,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sfg-2000s-kirk-rueter-2002",
-    "playerId": "rueteki01",
-    "playerSlug": "kirk-rueter",
-    "name": "Kirk Rueter",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2000s",
-    "featuredSeason": 2002,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.23,
-      "whip": 1.267,
-      "so": 76,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.23,
-      "whip": 1.267,
-      "so": 76,
-      "wins": 14,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.267,
-      "fip": null,
-      "inningsPitched": 203.7,
-      "strikeoutRate": 3.357879234167894,
-      "walkRate": 2.385861561119293,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "rueteki01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 52.67469317623957,
-      "formulaVersion": "season-selection-v1"
+      "score": 27.49,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

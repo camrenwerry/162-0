@@ -20,8 +20,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.4,
+      "opsPlus": 161,
       "hr": 36,
       "avg": 0.358,
       "obp": 0.414,
@@ -31,8 +31,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 9.4,
+      "opsPlus": 161,
       "hr": 36,
       "avg": 0.358,
       "obp": 0.414,
@@ -53,97 +53,30 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "rodrial01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 123.67142857142858,
-      "formulaVersion": "season-selection-v1"
+      "score": 150.01000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-1990s-ken-griffey-jr-1997",
+    "id": "sea-1990s-ken-griffey-jr-1996",
     "playerId": "griffke02",
     "playerSlug": "ken-griffey-jr",
     "name": "Ken Griffey Jr.",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 56,
-      "avg": 0.304,
-      "obp": 0.382,
-      "slg": 0.646,
-      "rbi": 147,
-      "sb": 15
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 56,
-      "avg": 0.304,
-      "obp": 0.382,
-      "slg": 0.646,
-      "rbi": 147,
-      "sb": 15
-    },
-    "scoringStats": {
-      "games": 157,
-      "plateAppearances": 704,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.382,
-      "slg": 0.646,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "griffke02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 122.91428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-jay-buhner-1996",
-    "playerId": "buhneja01",
-    "playerSlug": "jay-buhner",
-    "name": "Jay Buhner",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
@@ -155,58 +88,493 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "RF"
+      "CF"
     ],
-    "bats": "R",
-    "throws": "R",
+    "bats": "L",
+    "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 44,
-      "avg": 0.271,
-      "obp": 0.369,
-      "slg": 0.557,
-      "rbi": 138,
-      "sb": 0
+      "war": 9.7,
+      "opsPlus": 154,
+      "hr": 49,
+      "avg": 0.303,
+      "obp": 0.392,
+      "slg": 0.628,
+      "rbi": 140,
+      "sb": 16
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 44,
-      "avg": 0.271,
-      "obp": 0.369,
-      "slg": 0.557,
-      "rbi": 138,
-      "sb": 0
+      "war": 9.7,
+      "opsPlus": 154,
+      "hr": 49,
+      "avg": 0.303,
+      "obp": 0.392,
+      "slg": 0.628,
+      "rbi": 140,
+      "sb": 16
     },
     "scoringStats": {
-      "games": 150,
-      "plateAppearances": 667,
+      "games": 140,
+      "plateAppearances": 637,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.369,
-      "slg": 0.557,
+      "obp": 0.392,
+      "slg": 0.628,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "buhneja01"
+      "sourcePlayerId": "griffke02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 111.65714285714287,
-      "formulaVersion": "season-selection-v1"
+      "score": 149.76999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-randy-johnson-1995",
+    "playerId": "johnsra05",
+    "playerSlug": "randy-johnson",
+    "name": "Randy Johnson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 8.6,
+      "eraPlus": 193,
+      "era": 2.48,
+      "whip": 1.045,
+      "so": 294,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 8.6,
+      "eraPlus": 193,
+      "era": 2.48,
+      "whip": 1.045,
+      "so": 294,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.045,
+      "fip": null,
+      "inningsPitched": 214.3,
+      "strikeoutRate": 12.347176854876341,
+      "walkRate": 2.729818012132524,
+      "starts": 30,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "johnsra05"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 145.75,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-norm-charlton-1995",
+    "playerId": "charlno01",
+    "playerSlug": "norm-charlton",
+    "name": "Norm Charlton",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.2,
+      "eraPlus": 318,
+      "era": 1.51,
+      "whip": 0.818,
+      "so": 58,
+      "wins": 2,
+      "saves": 14,
+      "sv": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "eraPlus": 318,
+      "era": 1.51,
+      "whip": 0.818,
+      "so": 58,
+      "wins": 2,
+      "saves": 14,
+      "sv": 14
+    },
+    "scoringStats": {
+      "whip": 0.818,
+      "fip": null,
+      "inningsPitched": 47.7,
+      "strikeoutRate": 10.943396226415095,
+      "walkRate": 3.0188679245283017,
+      "starts": 0,
+      "reliefAppearances": 30
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "charlno01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.9857142857143,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-jamie-moyer-1999",
+    "playerId": "moyerja01",
+    "playerSlug": "jamie-moyer",
+    "name": "Jamie Moyer",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 6.5,
+      "eraPlus": 129,
+      "era": 3.87,
+      "whip": 1.241,
+      "so": 137,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 6.5,
+      "eraPlus": 129,
+      "era": 3.87,
+      "whip": 1.241,
+      "so": 137,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.241,
+      "fip": null,
+      "inningsPitched": 228,
+      "strikeoutRate": 5.407894736842105,
+      "walkRate": 1.894736842105263,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "moyerja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.15,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-bill-swift-1991",
+    "playerId": "swiftbi02",
+    "playerSlug": "bill-swift",
+    "name": "Bill Swift",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.7,
+      "eraPlus": 207,
+      "era": 1.99,
+      "whip": 1.107,
+      "so": 48,
+      "wins": 1,
+      "saves": 17,
+      "sv": 17
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "eraPlus": 207,
+      "era": 1.99,
+      "whip": 1.107,
+      "so": 48,
+      "wins": 1,
+      "saves": 17,
+      "sv": 17
+    },
+    "scoringStats": {
+      "whip": 1.107,
+      "fip": null,
+      "inningsPitched": 90.3,
+      "strikeoutRate": 4.78405315614618,
+      "walkRate": 2.5913621262458473,
+      "starts": 0,
+      "reliefAppearances": 71
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "swiftbi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.85,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-jeff-nelson-1995",
+    "playerId": "nelsoje01",
+    "playerSlug": "jeff-nelson",
+    "name": "Jeff Nelson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.9,
+      "eraPlus": 220,
+      "era": 2.17,
+      "whip": 1.081,
+      "so": 96,
+      "wins": 7,
+      "saves": 2,
+      "sv": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.9,
+      "eraPlus": 220,
+      "era": 2.17,
+      "whip": 1.081,
+      "so": 96,
+      "wins": 7,
+      "saves": 2,
+      "sv": 2
+    },
+    "scoringStats": {
+      "whip": 1.081,
+      "fip": null,
+      "inningsPitched": 78.7,
+      "strikeoutRate": 10.978398983481576,
+      "walkRate": 3.087674714104193,
+      "starts": 0,
+      "reliefAppearances": 62
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "nelsoje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.65714285714286,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-freddy-garcia-1999",
+    "playerId": "garcifr02",
+    "playerSlug": "freddy-garcia",
+    "name": "Freddy Garcia",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5.4,
+      "eraPlus": 122,
+      "era": 4.07,
+      "whip": 1.465,
+      "so": 170,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.4,
+      "eraPlus": 122,
+      "era": 4.07,
+      "whip": 1.465,
+      "so": 170,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.465,
+      "fip": null,
+      "inningsPitched": 201.3,
+      "strikeoutRate": 7.600596125186288,
+      "walkRate": 4.023845007451564,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "garcifr02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82.50000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -230,8 +598,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.5,
+      "opsPlus": 135,
       "hr": 31,
       "avg": 0.293,
       "obp": 0.369,
@@ -241,8 +609,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 4.5,
+      "opsPlus": 135,
       "hr": 31,
       "avg": 0.293,
       "obp": 0.369,
@@ -263,27 +631,174 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "martiti02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1995.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 108.88571428571429,
-      "formulaVersion": "season-selection-v1"
+      "score": 77.41,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-1990s-mark-whiten-1996",
-    "playerId": "whitema01",
-    "playerSlug": "mark-whiten",
-    "name": "Mark Whiten",
+    "id": "sea-1990s-erik-hanson-1990",
+    "playerId": "hansoer01",
+    "playerSlug": "erik-hanson",
+    "name": "Erik Hanson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 5,
+      "eraPlus": 121,
+      "era": 3.24,
+      "whip": 1.157,
+      "so": 211,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5,
+      "eraPlus": 121,
+      "era": 3.24,
+      "whip": 1.157,
+      "so": 211,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.157,
+      "fip": null,
+      "inningsPitched": 236,
+      "strikeoutRate": 8.046610169491526,
+      "walkRate": 2.593220338983051,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "hansoer01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.35,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-dave-fleming-1992",
+    "playerId": "flemida01",
+    "playerSlug": "dave-fleming",
+    "name": "Dave Fleming",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 5.1,
+      "eraPlus": 117,
+      "era": 3.39,
+      "whip": 1.248,
+      "so": 112,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 5.1,
+      "eraPlus": 117,
+      "era": 3.39,
+      "whip": 1.248,
+      "so": 112,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.248,
+      "fip": null,
+      "inningsPitched": 228.3,
+      "strikeoutRate": 4.4152431011826545,
+      "walkRate": 2.3653088042049935,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "flemida01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.14999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-jay-buhner-1996",
+    "playerId": "buhneja01",
+    "playerSlug": "jay-buhner",
+    "name": "Jay Buhner",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
@@ -295,71 +810,147 @@
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "LF"
+      "RF"
     ],
-    "bats": "B",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.3,
-      "obp": 0.399,
-      "slg": 0.607,
-      "rbi": 33,
-      "sb": 2
+      "war": 3.5,
+      "opsPlus": 131,
+      "hr": 44,
+      "avg": 0.271,
+      "obp": 0.369,
+      "slg": 0.557,
+      "rbi": 138,
+      "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.3,
-      "obp": 0.399,
-      "slg": 0.607,
-      "rbi": 33,
-      "sb": 2
+      "war": 3.5,
+      "opsPlus": 131,
+      "hr": 44,
+      "avg": 0.271,
+      "obp": 0.369,
+      "slg": 0.557,
+      "rbi": 138,
+      "sb": 0
     },
     "scoringStats": {
-      "games": 40,
-      "plateAppearances": 163,
+      "games": 150,
+      "plateAppearances": 667,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.399,
-      "slg": 0.607,
+      "obp": 0.369,
+      "slg": 0.557,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "whitema01"
+      "sourcePlayerId": "buhneja01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 105.25714285714285,
-      "formulaVersion": "season-selection-v1"
+      "score": 64.17,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-1990s-paul-sorrento-1996",
-    "playerId": "sorrepa01",
-    "playerSlug": "paul-sorrento",
-    "name": "Paul Sorrento",
+    "id": "sea-1990s-harold-reynolds-1990",
+    "playerId": "reynoha01",
+    "playerSlug": "harold-reynolds",
+    "name": "Harold Reynolds",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
     "team": "SEA",
     "decade": "1990s",
-    "featuredSeason": 1996,
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4.8,
+      "opsPlus": 92,
+      "hr": 5,
+      "avg": 0.252,
+      "obp": 0.336,
+      "slg": 0.347,
+      "rbi": 55,
+      "sb": 31
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.8,
+      "opsPlus": 92,
+      "hr": 5,
+      "avg": 0.252,
+      "obp": 0.336,
+      "slg": 0.347,
+      "rbi": 55,
+      "sb": 31
+    },
+    "scoringStats": {
+      "games": 160,
+      "plateAppearances": 732,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.336,
+      "slg": 0.347,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "reynoha01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.919999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-alvin-davis-1990",
+    "playerId": "davisal01",
+    "playerSlug": "alvin-davis",
+    "name": "Alvin Davis",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1990,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -370,53 +961,56 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.289,
-      "obp": 0.37,
-      "slg": 0.507,
-      "rbi": 93,
+      "war": 2.9,
+      "opsPlus": 129,
+      "hr": 17,
+      "avg": 0.283,
+      "obp": 0.387,
+      "slg": 0.429,
+      "rbi": 68,
       "sb": 0
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 23,
-      "avg": 0.289,
-      "obp": 0.37,
-      "slg": 0.507,
-      "rbi": 93,
+      "war": 2.9,
+      "opsPlus": 129,
+      "hr": 17,
+      "avg": 0.283,
+      "obp": 0.387,
+      "slg": 0.429,
+      "rbi": 68,
       "sb": 0
     },
     "scoringStats": {
-      "games": 143,
-      "plateAppearances": 540,
+      "games": 140,
+      "plateAppearances": 592,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.37,
-      "slg": 0.507,
+      "obp": 0.387,
+      "slg": 0.429,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "sorrepa01"
+      "sourcePlayerId": "davisal01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1990.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 103.12857142857143,
-      "formulaVersion": "season-selection-v1"
+      "score": 55.22,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -440,8 +1034,8 @@
     "bats": "B",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.2,
+      "opsPlus": 119,
       "hr": 19,
       "avg": 0.305,
       "obp": 0.359,
@@ -451,8 +1045,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.2,
+      "opsPlus": 119,
       "hr": 19,
       "avg": 0.305,
       "obp": 0.359,
@@ -473,90 +1067,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "seguida01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1998.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 101.17142857142856,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-joey-cora-1997",
-    "playerId": "corajo01",
-    "playerSlug": "joey-cora",
-    "name": "Joey Cora",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.3,
-      "obp": 0.359,
-      "slg": 0.441,
-      "rbi": 54,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 11,
-      "avg": 0.3,
-      "obp": 0.359,
-      "slg": 0.441,
-      "rbi": 54,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 149,
-      "plateAppearances": 641,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.359,
-      "slg": 0.441,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "corajo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 98.31428571428572,
-      "formulaVersion": "season-selection-v1"
+      "score": 53.7,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -580,8 +1107,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 121,
       "hr": 15,
       "avg": 0.28,
       "obp": 0.357,
@@ -591,8 +1118,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.1,
+      "opsPlus": 121,
       "hr": 15,
       "avg": 0.28,
       "obp": 0.357,
@@ -613,33 +1140,328 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "blowemi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.37142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 51.96,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-1990s-david-bell-1999",
-    "playerId": "bellda01",
-    "playerSlug": "david-bell",
-    "name": "David Bell",
+    "id": "sea-1990s-dan-wilson-1997",
+    "playerId": "wilsoda01",
+    "playerSlug": "dan-wilson",
+    "name": "Dan Wilson",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
     "team": "SEA",
     "decade": "1990s",
-    "featuredSeason": 1999,
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.8,
+      "opsPlus": 96,
+      "hr": 15,
+      "avg": 0.27,
+      "obp": 0.326,
+      "slg": 0.423,
+      "rbi": 74,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.8,
+      "opsPlus": 96,
+      "hr": 15,
+      "avg": 0.27,
+      "obp": 0.326,
+      "slg": 0.423,
+      "rbi": 74,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 146,
+      "plateAppearances": 555,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.326,
+      "slg": 0.423,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "wilsoda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.14999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-mark-whiten-1996",
+    "playerId": "whitema01",
+    "playerSlug": "mark-whiten",
+    "name": "Mark Whiten",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.7,
+      "opsPlus": 151,
+      "hr": 12,
+      "avg": 0.3,
+      "obp": 0.399,
+      "slg": 0.607,
+      "rbi": 33,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.7,
+      "opsPlus": 151,
+      "hr": 12,
+      "avg": 0.3,
+      "obp": 0.399,
+      "slg": 0.607,
+      "rbi": 33,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 40,
+      "plateAppearances": 163,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.399,
+      "slg": 0.607,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "whitema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.53,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-dave-valle-1993",
+    "playerId": "valleda01",
+    "playerSlug": "dave-valle",
+    "name": "Dave Valle",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.4,
+      "opsPlus": 101,
+      "hr": 13,
+      "avg": 0.258,
+      "obp": 0.354,
+      "slg": 0.395,
+      "rbi": 63,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.4,
+      "opsPlus": 101,
+      "hr": 13,
+      "avg": 0.258,
+      "obp": 0.354,
+      "slg": 0.395,
+      "rbi": 63,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 135,
+      "plateAppearances": 492,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.354,
+      "slg": 0.395,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "valleda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.22,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-omar-vizquel-1992",
+    "playerId": "vizquom01",
+    "playerSlug": "omar-vizquel",
+    "name": "Omar Vizquel",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.5,
+      "opsPlus": 95,
+      "hr": 0,
+      "avg": 0.294,
+      "obp": 0.34,
+      "slg": 0.352,
+      "rbi": 21,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.5,
+      "opsPlus": 95,
+      "hr": 0,
+      "avg": 0.294,
+      "obp": 0.34,
+      "slg": 0.352,
+      "rbi": 21,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 518,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.34,
+      "slg": 0.352,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "vizquom01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1992.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.68,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-joey-cora-1997",
+    "playerId": "corajo01",
+    "playerSlug": "joey-cora",
+    "name": "Joey Cora",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1997,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -647,56 +1469,207 @@
     "eligiblePositions": [
       "2B"
     ],
-    "bats": "R",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.268,
-      "obp": 0.331,
-      "slg": 0.432,
-      "rbi": 78,
-      "sb": 7
+      "war": 2.6,
+      "opsPlus": 110,
+      "hr": 11,
+      "avg": 0.3,
+      "obp": 0.359,
+      "slg": 0.441,
+      "rbi": 54,
+      "sb": 6
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.268,
-      "obp": 0.331,
-      "slg": 0.432,
-      "rbi": 78,
-      "sb": 7
+      "war": 2.6,
+      "opsPlus": 110,
+      "hr": 11,
+      "avg": 0.3,
+      "obp": 0.359,
+      "slg": 0.441,
+      "rbi": 54,
+      "sb": 6
     },
     "scoringStats": {
-      "games": 157,
-      "plateAppearances": 664,
+      "games": 149,
+      "plateAppearances": 641,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.331,
-      "slg": 0.432,
+      "obp": 0.359,
+      "slg": 0.441,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "bellda01"
+      "sourcePlayerId": "corajo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 95.27142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 42.61,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-rich-amaral-1993",
+    "playerId": "amarari01",
+    "playerSlug": "rich-amaral",
+    "name": "Rich Amaral",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.1,
+      "opsPlus": 92,
+      "hr": 1,
+      "avg": 0.29,
+      "obp": 0.348,
+      "slg": 0.367,
+      "rbi": 44,
+      "sb": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.1,
+      "opsPlus": 92,
+      "hr": 1,
+      "avg": 0.29,
+      "obp": 0.348,
+      "slg": 0.367,
+      "rbi": 44,
+      "sb": 19
+    },
+    "scoringStats": {
+      "games": 110,
+      "plateAppearances": 414,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.367,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "amarari01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1993.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.34,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "sea-1990s-jose-cruz-1997",
+    "playerId": "cruzjo02",
+    "playerSlug": "jose-cruz",
+    "name": "Jose Cruz",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.6,
+      "opsPlus": 120,
+      "hr": 12,
+      "avg": 0.268,
+      "obp": 0.315,
+      "slg": 0.541,
+      "rbi": 34,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.6,
+      "opsPlus": 120,
+      "hr": 12,
+      "avg": 0.268,
+      "obp": 0.315,
+      "slg": 0.541,
+      "rbi": 34,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 49,
+      "plateAppearances": 197,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.315,
+      "slg": 0.541,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "cruzjo02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 31.17,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -720,8 +1693,8 @@
     "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 133,
       "hr": 3,
       "avg": 0.351,
       "obp": 0.438,
@@ -731,8 +1704,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 133,
       "hr": 3,
       "avg": 0.351,
       "obp": 0.438,
@@ -753,372 +1726,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "hollida01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 94.9,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-russ-davis-1997",
-    "playerId": "davisru01",
-    "playerSlug": "russ-davis",
-    "name": "Russ Davis",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.271,
-      "obp": 0.317,
-      "slg": 0.488,
-      "rbi": 63,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 20,
-      "avg": 0.271,
-      "obp": 0.317,
-      "slg": 0.488,
-      "rbi": 63,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 119,
-      "plateAppearances": 451,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.317,
-      "slg": 0.488,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "davisru01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.38571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-butch-huskey-1999",
-    "playerId": "huskebu01",
-    "playerSlug": "butch-huskey",
-    "name": "Butch Huskey",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B",
-      "LF",
-      "RF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.29,
-      "obp": 0.353,
-      "slg": 0.496,
-      "rbi": 49,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.29,
-      "obp": 0.353,
-      "slg": 0.496,
-      "rbi": 49,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 74,
-      "plateAppearances": 292,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.353,
-      "slg": 0.496,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "huskebu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.24285714285713,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-glenallen-hill-1998",
-    "playerId": "hillgl01",
-    "playerSlug": "glenallen-hill",
-    "name": "Glenallen Hill",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.29,
-      "obp": 0.332,
-      "slg": 0.521,
-      "rbi": 33,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 12,
-      "avg": 0.29,
-      "obp": 0.332,
-      "slg": 0.521,
-      "rbi": 33,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 74,
-      "plateAppearances": 277,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.332,
-      "slg": 0.521,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "hillgl01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.21428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-dan-wilson-1996",
-    "playerId": "wilsoda01",
-    "playerSlug": "dan-wilson",
-    "name": "Dan Wilson",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1996,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.285,
-      "obp": 0.33,
-      "slg": 0.444,
-      "rbi": 83,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.285,
-      "obp": 0.33,
-      "slg": 0.444,
-      "rbi": 83,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 138,
-      "plateAppearances": 531,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.33,
-      "slg": 0.444,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "wilsoda01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 92.57142857142858,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-tom-lampkin-1999",
-    "playerId": "lampkto01",
-    "playerSlug": "tom-lampkin",
-    "name": "Tom Lampkin",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1999,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.291,
-      "obp": 0.345,
-      "slg": 0.495,
-      "rbi": 34,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.291,
-      "obp": 0.345,
-      "slg": 0.495,
-      "rbi": 34,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 76,
-      "plateAppearances": 226,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.345,
-      "slg": 0.495,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "lampkto01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 90.45714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 30.820000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1143,8 +1767,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.8,
+      "opsPlus": 110,
       "hr": 7,
       "avg": 0.272,
       "obp": 0.376,
@@ -1154,8 +1778,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.8,
+      "opsPlus": 110,
       "hr": 7,
       "avg": 0.272,
       "obp": 0.376,
@@ -1176,103 +1800,36 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "braggda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1996.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 89.38571428571427,
-      "formulaVersion": "season-selection-v1"
+      "score": 28.94,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "sea-1990s-harold-reynolds-1990",
-    "playerId": "reynoha01",
-    "playerSlug": "harold-reynolds",
-    "name": "Harold Reynolds",
+    "id": "sea-1990s-tom-lampkin-1999",
+    "playerId": "lampkto01",
+    "playerSlug": "tom-lampkin",
+    "name": "Tom Lampkin",
     "franchiseId": "sea",
     "teamAbbreviation": "SEA",
     "teamDisplayName": "Seattle Mariners",
     "team": "SEA",
     "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.252,
-      "obp": 0.336,
-      "slg": 0.347,
-      "rbi": 55,
-      "sb": 31
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 5,
-      "avg": 0.252,
-      "obp": 0.336,
-      "slg": 0.347,
-      "rbi": 55,
-      "sb": 31
-    },
-    "scoringStats": {
-      "games": 160,
-      "plateAppearances": 732,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.336,
-      "slg": 0.347,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "reynoha01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 89.21428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-dave-valle-1993",
-    "playerId": "valleda01",
-    "playerSlug": "dave-valle",
-    "name": "Dave Valle",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1993,
+    "featuredSeason": 1999,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -1280,56 +1837,59 @@
     "eligiblePositions": [
       "C"
     ],
-    "bats": "R",
+    "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.258,
-      "obp": 0.354,
-      "slg": 0.395,
-      "rbi": 63,
+      "war": 1.6,
+      "opsPlus": 110,
+      "hr": 9,
+      "avg": 0.291,
+      "obp": 0.345,
+      "slg": 0.495,
+      "rbi": 34,
       "sb": 1
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 13,
-      "avg": 0.258,
-      "obp": 0.354,
-      "slg": 0.395,
-      "rbi": 63,
+      "war": 1.6,
+      "opsPlus": 110,
+      "hr": 9,
+      "avg": 0.291,
+      "obp": 0.345,
+      "slg": 0.495,
+      "rbi": 34,
       "sb": 1
     },
     "scoringStats": {
-      "games": 135,
-      "plateAppearances": 492,
+      "games": 76,
+      "plateAppearances": 226,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.354,
-      "slg": 0.395,
+      "obp": 0.345,
+      "slg": 0.495,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
-      "sourcePlayerId": "valleda01"
+      "sourcePlayerId": "lampkto01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1999.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 88.95714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 26.46,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1355,8 +1915,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.9,
+      "opsPlus": 115,
       "hr": 5,
       "avg": 0.287,
       "obp": 0.311,
@@ -1366,8 +1926,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.9,
+      "opsPlus": 115,
       "hr": 5,
       "avg": 0.287,
       "obp": 0.311,
@@ -1388,89 +1948,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "duceyro01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1997.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 87.81428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-norm-charlton-1995",
-    "playerId": "charlno01",
-    "playerSlug": "norm-charlton",
-    "name": "Norm Charlton",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "B",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.51,
-      "whip": 0.818,
-      "so": 58,
-      "wins": 2,
-      "saves": 14,
-      "sv": 14
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.51,
-      "whip": 0.818,
-      "so": 58,
-      "wins": 2,
-      "saves": 14,
-      "sv": 14
-    },
-    "scoringStats": {
-      "whip": 0.818,
-      "fip": null,
-      "inningsPitched": 47.7,
-      "strikeoutRate": 10.943396226415095,
-      "walkRate": 3.0188679245283017,
-      "starts": 0,
-      "reliefAppearances": 30
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "charlno01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 87.4067924528302,
-      "formulaVersion": "season-selection-v1"
+      "score": 19.810000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1495,8 +1989,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.3,
+      "opsPlus": 123,
       "hr": 6,
       "avg": 0.305,
       "obp": 0.347,
@@ -1506,8 +2000,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.3,
+      "opsPlus": 123,
       "hr": 6,
       "avg": 0.305,
       "obp": 0.347,
@@ -1528,644 +2022,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "SEA"
       ],
       "sourcePlayerId": "cottohe01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1991.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 86.42857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-luis-sojo-1995",
-    "playerId": "sojolu01",
-    "playerSlug": "luis-sojo",
-    "name": "Luis Sojo",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B",
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.289,
-      "obp": 0.335,
-      "slg": 0.416,
-      "rbi": 39,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.289,
-      "obp": 0.335,
-      "slg": 0.416,
-      "rbi": 39,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 102,
-      "plateAppearances": 364,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.335,
-      "slg": 0.416,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "sojolu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 85.5,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-omar-vizquel-1992",
-    "playerId": "vizquom01",
-    "playerSlug": "omar-vizquel",
-    "name": "Omar Vizquel",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1992,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 0,
-      "avg": 0.294,
-      "obp": 0.34,
-      "slg": 0.352,
-      "rbi": 21,
-      "sb": 15
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 0,
-      "avg": 0.294,
-      "obp": 0.34,
-      "slg": 0.352,
-      "rbi": 21,
-      "sb": 15
-    },
-    "scoringStats": {
-      "games": 136,
-      "plateAppearances": 518,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.34,
-      "slg": 0.352,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "vizquom01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 83.99999999999999,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-randy-johnson-1997",
-    "playerId": "johnsra05",
-    "playerSlug": "randy-johnson",
-    "name": "Randy Johnson",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1997,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.28,
-      "whip": 1.052,
-      "so": 291,
-      "wins": 20,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.28,
-      "whip": 1.052,
-      "so": 291,
-      "wins": 20,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.052,
-      "fip": null,
-      "inningsPitched": 213,
-      "strikeoutRate": 12.295774647887324,
-      "walkRate": 3.2535211267605635,
-      "starts": 29,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "johnsra05"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 80.99671361502347,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-jeff-nelson-1995",
-    "playerId": "nelsoje01",
-    "playerSlug": "jeff-nelson",
-    "name": "Jeff Nelson",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.17,
-      "whip": 1.081,
-      "so": 96,
-      "wins": 7,
-      "saves": 2,
-      "sv": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.17,
-      "whip": 1.081,
-      "so": 96,
-      "wins": 7,
-      "saves": 2,
-      "sv": 2
-    },
-    "scoringStats": {
-      "whip": 1.081,
-      "fip": null,
-      "inningsPitched": 78.7,
-      "strikeoutRate": 10.978398983481576,
-      "walkRate": 3.087674714104193,
-      "starts": 0,
-      "reliefAppearances": 62
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "nelsoje01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 80.17608640406608,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-bill-swift-1991",
-    "playerId": "swiftbi02",
-    "playerSlug": "bill-swift",
-    "name": "Bill Swift",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1991,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.99,
-      "whip": 1.107,
-      "so": 48,
-      "wins": 1,
-      "saves": 17,
-      "sv": 17
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.99,
-      "whip": 1.107,
-      "so": 48,
-      "wins": 1,
-      "saves": 17,
-      "sv": 17
-    },
-    "scoringStats": {
-      "whip": 1.107,
-      "fip": null,
-      "inningsPitched": 90.3,
-      "strikeoutRate": 4.78405315614618,
-      "walkRate": 2.5913621262458473,
-      "starts": 0,
-      "reliefAppearances": 71
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "swiftbi02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 73.26903654485051,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-erik-hanson-1990",
-    "playerId": "hansoer01",
-    "playerSlug": "erik-hanson",
-    "name": "Erik Hanson",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.24,
-      "whip": 1.157,
-      "so": 211,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.24,
-      "whip": 1.157,
-      "so": 211,
-      "wins": 18,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.157,
-      "fip": null,
-      "inningsPitched": 236,
-      "strikeoutRate": 8.046610169491526,
-      "walkRate": 2.593220338983051,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "hansoer01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 62.16008474576271,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-jamie-moyer-1998",
-    "playerId": "moyerja01",
-    "playerSlug": "jamie-moyer",
-    "name": "Jamie Moyer",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1998,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.53,
-      "whip": 1.178,
-      "so": 158,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.53,
-      "whip": 1.178,
-      "so": 158,
-      "wins": 15,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.178,
-      "fip": null,
-      "inningsPitched": 234.3,
-      "strikeoutRate": 6.069142125480154,
-      "walkRate": 1.6133162612035852,
-      "starts": 34,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "moyerja01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 56.763738796414856,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-dave-fleming-1992",
-    "playerId": "flemida01",
-    "playerSlug": "dave-fleming",
-    "name": "Dave Fleming",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1992,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.39,
-      "whip": 1.248,
-      "so": 112,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.39,
-      "whip": 1.248,
-      "so": 112,
-      "wins": 17,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.248,
-      "fip": null,
-      "inningsPitched": 228.3,
-      "strikeoutRate": 4.4152431011826545,
-      "walkRate": 2.3653088042049935,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "flemida01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 53.434901445466494,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "sea-1990s-chris-bosio-1993",
-    "playerId": "bosioch01",
-    "playerSlug": "chris-bosio",
-    "name": "Chris Bosio",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1993,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.45,
-      "whip": 1.199,
-      "so": 119,
-      "wins": 9,
-      "saves": 1,
-      "sv": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.45,
-      "whip": 1.199,
-      "so": 119,
-      "wins": 9,
-      "saves": 1,
-      "sv": 1
-    },
-    "scoringStats": {
-      "whip": 1.199,
-      "fip": null,
-      "inningsPitched": 164.3,
-      "strikeoutRate": 6.518563603164941,
-      "walkRate": 3.2318928788800974,
-      "starts": 24,
-      "reliefAppearances": 5
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "bosioch01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 52.67778386420504,
-      "formulaVersion": "season-selection-v1"
+      "score": 17,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]

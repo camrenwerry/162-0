@@ -1,6 +1,78 @@
 [
   {
-    "id": "phi-1980s-mike-schmidt-1981",
+    "id": "phi-1980s-steve-carlton-1980",
+    "playerId": "carltst01",
+    "playerSlug": "steve-carlton",
+    "name": "Steve Carlton",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 10.2,
+      "eraPlus": 162,
+      "era": 2.34,
+      "whip": 1.095,
+      "so": 286,
+      "wins": 24,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 10.2,
+      "eraPlus": 162,
+      "era": 2.34,
+      "whip": 1.095,
+      "so": 286,
+      "wins": 24,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.095,
+      "fip": null,
+      "inningsPitched": 304,
+      "strikeoutRate": 8.467105263157896,
+      "walkRate": 2.664473684210526,
+      "starts": 38,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "carltst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 154.1,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-mike-schmidt-1980",
     "playerId": "schmimi01",
     "playerSlug": "mike-schmidt",
     "name": "Mike Schmidt",
@@ -9,7 +81,7 @@
     "teamDisplayName": "Philadelphia Phillies",
     "team": "PHI",
     "decade": "1980s",
-    "featuredSeason": 1981,
+    "featuredSeason": 1980,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
@@ -20,57 +92,348 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.316,
-      "obp": 0.435,
-      "slg": 0.644,
-      "rbi": 91,
+      "war": 8.9,
+      "opsPlus": 171,
+      "hr": 48,
+      "avg": 0.286,
+      "obp": 0.38,
+      "slg": 0.624,
+      "rbi": 121,
       "sb": 12
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 31,
-      "avg": 0.316,
-      "obp": 0.435,
-      "slg": 0.644,
-      "rbi": 91,
+      "war": 8.9,
+      "opsPlus": 171,
+      "hr": 48,
+      "avg": 0.286,
+      "obp": 0.38,
+      "slg": 0.624,
+      "rbi": 121,
       "sb": 12
     },
     "scoringStats": {
-      "games": 102,
-      "plateAppearances": 434,
+      "games": 150,
+      "plateAppearances": 652,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.435,
-      "slg": 0.644,
+      "obp": 0.38,
+      "slg": 0.624,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "schmimi01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 120.3,
-      "formulaVersion": "season-selection-v1"
+      "score": 148.82000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "phi-1980s-von-hayes-1987",
+    "id": "phi-1980s-tug-mcgraw-1980",
+    "playerId": "mcgratu01",
+    "playerSlug": "tug-mcgraw",
+    "name": "Tug McGraw",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4.6,
+      "eraPlus": 260,
+      "era": 1.46,
+      "whip": 0.921,
+      "so": 75,
+      "wins": 5,
+      "saves": 20,
+      "sv": 20
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4.6,
+      "eraPlus": 260,
+      "era": 1.46,
+      "whip": 0.921,
+      "so": 75,
+      "wins": 5,
+      "saves": 20,
+      "sv": 20
+    },
+    "scoringStats": {
+      "whip": 0.921,
+      "fip": null,
+      "inningsPitched": 92.3,
+      "strikeoutRate": 7.313109425785482,
+      "walkRate": 2.2426868905742148,
+      "starts": 0,
+      "reliefAppearances": 57
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "mcgratu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 119.34285714285713,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-john-denny-1983",
+    "playerId": "dennyjo01",
+    "playerSlug": "john-denny",
+    "name": "John Denny",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 7.4,
+      "eraPlus": 152,
+      "era": 2.37,
+      "whip": 1.162,
+      "so": 139,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 7.4,
+      "eraPlus": 152,
+      "era": 2.37,
+      "whip": 1.162,
+      "so": 139,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.162,
+      "fip": null,
+      "inningsPitched": 242.7,
+      "strikeoutRate": 5.15451174289246,
+      "walkRate": 1.965389369592089,
+      "starts": 36,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "dennyjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.00000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-roger-mcdowell-1989",
+    "playerId": "mcdowro01",
+    "playerSlug": "roger-mcdowell",
+    "name": "Roger McDowell",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2,
+      "eraPlus": 321,
+      "era": 1.11,
+      "whip": 1.182,
+      "so": 32,
+      "wins": 3,
+      "saves": 19,
+      "sv": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2,
+      "eraPlus": 321,
+      "era": 1.11,
+      "whip": 1.182,
+      "so": 32,
+      "wins": 3,
+      "saves": 19,
+      "sv": 19
+    },
+    "scoringStats": {
+      "whip": 1.182,
+      "fip": null,
+      "inningsPitched": 56.7,
+      "strikeoutRate": 5.079365079365079,
+      "walkRate": 3.492063492063492,
+      "starts": 0,
+      "reliefAppearances": 44
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "mcdowro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.63571428571429,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-jeff-calhoun-1987",
+    "playerId": "calhoje01",
+    "playerSlug": "jeff-calhoun",
+    "name": "Jeff Calhoun",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 1.3,
+      "eraPlus": 290,
+      "era": 1.48,
+      "whip": 1.195,
+      "so": 31,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.3,
+      "eraPlus": 290,
+      "era": 1.48,
+      "whip": 1.195,
+      "so": 31,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.195,
+      "fip": null,
+      "inningsPitched": 42.7,
+      "strikeoutRate": 6.533957845433255,
+      "walkRate": 5.480093676814988,
+      "starts": 0,
+      "reliefAppearances": 42
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "calhoje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.1,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-von-hayes-1989",
     "playerId": "hayesvo01",
     "playerSlug": "von-hayes",
     "name": "Von Hayes",
@@ -79,65 +442,358 @@
     "teamDisplayName": "Philadelphia Phillies",
     "team": "PHI",
     "decade": "1980s",
-    "featuredSeason": 1987,
+    "featuredSeason": 1989,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
       "1B",
-      "CF"
+      "3B",
+      "CF",
+      "RF"
     ],
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.277,
-      "obp": 0.404,
-      "slg": 0.473,
-      "rbi": 84,
-      "sb": 16
+      "war": 5.1,
+      "opsPlus": 140,
+      "hr": 26,
+      "avg": 0.259,
+      "obp": 0.376,
+      "slg": 0.461,
+      "rbi": 78,
+      "sb": 28
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 21,
-      "avg": 0.277,
-      "obp": 0.404,
-      "slg": 0.473,
-      "rbi": 84,
-      "sb": 16
+      "war": 5.1,
+      "opsPlus": 140,
+      "hr": 26,
+      "avg": 0.259,
+      "obp": 0.376,
+      "slg": 0.461,
+      "rbi": 78,
+      "sb": 28
     },
     "scoringStats": {
-      "games": 158,
-      "plateAppearances": 681,
+      "games": 154,
+      "plateAppearances": 652,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.404,
-      "slg": 0.473,
+      "obp": 0.376,
+      "slg": 0.461,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "hayesvo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 107.15714285714286,
-      "formulaVersion": "season-selection-v1"
+      "score": 87.71999999999998,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-bruce-ruffin-1986",
+    "playerId": "ruffibr01",
+    "playerSlug": "bruce-ruffin",
+    "name": "Bruce Ruffin",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.7,
+      "eraPlus": 158,
+      "era": 2.46,
+      "whip": 1.244,
+      "so": 70,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.7,
+      "eraPlus": 158,
+      "era": 2.46,
+      "whip": 1.244,
+      "so": 70,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.244,
+      "fip": null,
+      "inningsPitched": 146.3,
+      "strikeoutRate": 4.30622009569378,
+      "walkRate": 2.706766917293233,
+      "starts": 21,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "ruffibr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.015,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-don-carman-1985",
+    "playerId": "carmado01",
+    "playerSlug": "don-carman",
+    "name": "Don Carman",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": 2.8,
+      "eraPlus": 179,
+      "era": 2.08,
+      "whip": 1.042,
+      "so": 87,
+      "wins": 9,
+      "saves": 7,
+      "sv": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.8,
+      "eraPlus": 179,
+      "era": 2.08,
+      "whip": 1.042,
+      "so": 87,
+      "wins": 9,
+      "saves": 7,
+      "sv": 7
+    },
+    "scoringStats": {
+      "whip": 1.042,
+      "fip": null,
+      "inningsPitched": 86.3,
+      "strikeoutRate": 9.073001158748552,
+      "walkRate": 3.962920046349942,
+      "starts": 0,
+      "reliefAppearances": 71
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "carmado01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.25,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-al-holland-1983",
+    "playerId": "hollaal01",
+    "playerSlug": "al-holland",
+    "name": "Al Holland",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 3.3,
+      "eraPlus": 160,
+      "era": 2.26,
+      "whip": 1.015,
+      "so": 100,
+      "wins": 8,
+      "saves": 25,
+      "sv": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.3,
+      "eraPlus": 160,
+      "era": 2.26,
+      "whip": 1.015,
+      "so": 100,
+      "wins": 8,
+      "saves": 25,
+      "sv": 25
+    },
+    "scoringStats": {
+      "whip": 1.015,
+      "fip": null,
+      "inningsPitched": 91.7,
+      "strikeoutRate": 9.814612868047982,
+      "walkRate": 2.9443838604143946,
+      "starts": 0,
+      "reliefAppearances": 68
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "hollaal01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.3142857142857,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-shane-rawley-1985",
+    "playerId": "rawlesh01",
+    "playerSlug": "shane-rawley",
+    "name": "Shane Rawley",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": 4,
+      "eraPlus": 112,
+      "era": 3.31,
+      "whip": 1.354,
+      "so": 106,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "eraPlus": 112,
+      "era": 3.31,
+      "whip": 1.354,
+      "so": 106,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.354,
+      "fip": null,
+      "inningsPitched": 198.7,
+      "strikeoutRate": 4.801207851031706,
+      "walkRate": 3.6688475088072474,
+      "starts": 31,
+      "reliefAppearances": 5
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "rawlesh01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 62.135000000000005,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -161,8 +817,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.7,
+      "opsPlus": 116,
       "hr": 28,
       "avg": 0.272,
       "obp": 0.335,
@@ -172,8 +828,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.7,
+      "opsPlus": 116,
       "hr": 28,
       "avg": 0.272,
       "obp": 0.335,
@@ -194,91 +850,168 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "samueju01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 104.44285714285715,
-      "formulaVersion": "season-selection-v1"
+      "score": 59.660000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "phi-1980s-joe-lefebvre-1983",
-    "playerId": "lefebjo01",
-    "playerSlug": "joe-lefebvre",
-    "name": "Joe Lefebvre",
+    "id": "phi-1980s-ken-howell-1989",
+    "playerId": "howelke01",
+    "playerSlug": "ken-howell",
+    "name": "Ken Howell",
     "franchiseId": "phi",
     "teamAbbreviation": "PHI",
     "teamDisplayName": "Philadelphia Phillies",
     "team": "PHI",
     "decade": "1980s",
-    "featuredSeason": 1983,
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "eraPlus": 103,
+      "era": 3.44,
+      "whip": 1.181,
+      "so": 164,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "eraPlus": 103,
+      "era": 3.44,
+      "whip": 1.181,
+      "so": 164,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.181,
+      "fip": null,
+      "inningsPitched": 204,
+      "strikeoutRate": 7.235294117647059,
+      "walkRate": 3.7941176470588234,
+      "starts": 32,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_pitch.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "howelke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.05,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-bo-diaz-1982",
+    "playerId": "diazbo01",
+    "playerSlug": "bo-diaz",
+    "name": "Bo Diaz",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1982,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "LF",
-      "RF"
+      "C"
     ],
-    "bats": "L",
+    "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.31,
-      "obp": 0.388,
-      "slg": 0.543,
-      "rbi": 38,
-      "sb": 5
+      "war": 3.6,
+      "opsPlus": 115,
+      "hr": 18,
+      "avg": 0.288,
+      "obp": 0.333,
+      "slg": 0.45,
+      "rbi": 85,
+      "sb": 3
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.31,
-      "obp": 0.388,
-      "slg": 0.543,
-      "rbi": 38,
-      "sb": 5
+      "war": 3.6,
+      "opsPlus": 115,
+      "hr": 18,
+      "avg": 0.288,
+      "obp": 0.333,
+      "slg": 0.45,
+      "rbi": 85,
+      "sb": 3
     },
     "scoringStats": {
-      "games": 101,
-      "plateAppearances": 294,
+      "games": 144,
+      "plateAppearances": 571,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.388,
-      "slg": 0.543,
+      "obp": 0.333,
+      "slg": 0.45,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
-      "sourcePlayerId": "lefebjo01"
+      "sourcePlayerId": "diazbo01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1982.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 101.50000000000001,
-      "formulaVersion": "season-selection-v1"
+      "score": 56.410000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -303,8 +1036,8 @@
     "bats": "L",
     "throws": "L",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2,
+      "opsPlus": 159,
       "hr": 5,
       "avg": 0.341,
       "obp": 0.44,
@@ -314,8 +1047,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2,
+      "opsPlus": 159,
       "hr": 5,
       "avg": 0.341,
       "obp": 0.44,
@@ -336,20 +1069,316 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "corcoti01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 99.68571428571428,
-      "formulaVersion": "season-selection-v1"
+      "score": 55.98,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-milt-thompson-1987",
+    "playerId": "thompmi02",
+    "playerSlug": "milt-thompson",
+    "name": "Milt Thompson",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 4,
+      "opsPlus": 103,
+      "hr": 7,
+      "avg": 0.302,
+      "obp": 0.351,
+      "slg": 0.425,
+      "rbi": 43,
+      "sb": 46
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 4,
+      "opsPlus": 103,
+      "hr": 7,
+      "avg": 0.302,
+      "obp": 0.351,
+      "slg": 0.425,
+      "rbi": 43,
+      "sb": 46
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 572,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.351,
+      "slg": 0.425,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "thompmi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 55.22,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-joe-lefebvre-1983",
+    "playerId": "lefebjo01",
+    "playerSlug": "joe-lefebvre",
+    "name": "Joe Lefebvre",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.9,
+      "opsPlus": 157,
+      "hr": 8,
+      "avg": 0.31,
+      "obp": 0.388,
+      "slg": 0.543,
+      "rbi": 38,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.9,
+      "opsPlus": 157,
+      "hr": 8,
+      "avg": 0.31,
+      "obp": 0.388,
+      "slg": 0.543,
+      "rbi": 38,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 101,
+      "plateAppearances": 294,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.388,
+      "slg": 0.543,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "lefebjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.239999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-gary-matthews-1981",
+    "playerId": "matthga01",
+    "playerSlug": "gary-matthews",
+    "name": "Gary Matthews",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.5,
+      "opsPlus": 137,
+      "hr": 9,
+      "avg": 0.301,
+      "obp": 0.398,
+      "slg": 0.451,
+      "rbi": 67,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.5,
+      "opsPlus": 137,
+      "hr": 9,
+      "avg": 0.301,
+      "obp": 0.398,
+      "slg": 0.451,
+      "rbi": 67,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 101,
+      "plateAppearances": 427,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.398,
+      "slg": 0.451,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "matthga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1981.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.769999999999996,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-joe-morgan-1983",
+    "playerId": "morgajo02",
+    "playerSlug": "joe-morgan",
+    "name": "Joe Morgan",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": 3.2,
+      "opsPlus": 116,
+      "hr": 16,
+      "avg": 0.23,
+      "obp": 0.37,
+      "slg": 0.403,
+      "rbi": 59,
+      "sb": 18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 3.2,
+      "opsPlus": 116,
+      "hr": 16,
+      "avg": 0.23,
+      "obp": 0.37,
+      "slg": 0.403,
+      "rbi": 59,
+      "sb": 18
+    },
+    "scoringStats": {
+      "games": 123,
+      "plateAppearances": 503,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.37,
+      "slg": 0.403,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "morgajo02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1983.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.43000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -374,8 +1403,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.8,
+      "opsPlus": 124,
       "hr": 17,
       "avg": 0.293,
       "obp": 0.344,
@@ -385,8 +1414,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 2.8,
+      "opsPlus": 124,
       "hr": 17,
       "avg": 0.293,
       "obp": 0.344,
@@ -407,510 +1436,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "jamesch02"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1987.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 98.04285714285714,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-gary-matthews-1982",
-    "playerId": "matthga01",
-    "playerSlug": "gary-matthews",
-    "name": "Gary Matthews",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.281,
-      "obp": 0.349,
-      "slg": 0.427,
-      "rbi": 83,
-      "sb": 21
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 19,
-      "avg": 0.281,
-      "obp": 0.349,
-      "slg": 0.427,
-      "rbi": 83,
-      "sb": 21
-    },
-    "scoringStats": {
-      "games": 162,
-      "plateAppearances": 690,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.349,
-      "slg": 0.427,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "matthga01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 97.31428571428572,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-bake-mcbride-1980",
-    "playerId": "mcbriba01",
-    "playerSlug": "bake-mcbride",
-    "name": "Bake McBride",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.309,
-      "obp": 0.342,
-      "slg": 0.453,
-      "rbi": 87,
-      "sb": 13
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 9,
-      "avg": 0.309,
-      "obp": 0.342,
-      "slg": 0.453,
-      "rbi": 87,
-      "sb": 13
-    },
-    "scoringStats": {
-      "games": 137,
-      "plateAppearances": 591,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.342,
-      "slg": 0.453,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "mcbriba01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 96.38571428571429,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-bo-diaz-1982",
-    "playerId": "diazbo01",
-    "playerSlug": "bo-diaz",
-    "name": "Bo Diaz",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.288,
-      "obp": 0.333,
-      "slg": 0.45,
-      "rbi": 85,
-      "sb": 3
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.288,
-      "obp": 0.333,
-      "slg": 0.45,
-      "rbi": 85,
-      "sb": 3
-    },
-    "scoringStats": {
-      "games": 144,
-      "plateAppearances": 571,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.333,
-      "slg": 0.45,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "diazbo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 94.61428571428571,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-milt-thompson-1987",
-    "playerId": "thompmi02",
-    "playerSlug": "milt-thompson",
-    "name": "Milt Thompson",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1987,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "CF"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.302,
-      "obp": 0.351,
-      "slg": 0.425,
-      "rbi": 43,
-      "sb": 46
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 7,
-      "avg": 0.302,
-      "obp": 0.351,
-      "slg": 0.425,
-      "rbi": 43,
-      "sb": 46
-    },
-    "scoringStats": {
-      "games": 150,
-      "plateAppearances": 572,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.351,
-      "slg": 0.425,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "thompmi02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 93.94285714285715,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-pete-rose-1981",
-    "playerId": "rosepe01",
-    "playerSlug": "pete-rose",
-    "name": "Pete Rose",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1981,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "bats": "B",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 0,
-      "avg": 0.325,
-      "obp": 0.391,
-      "slg": 0.39,
-      "rbi": 33,
-      "sb": 4
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 0,
-      "avg": 0.325,
-      "obp": 0.391,
-      "slg": 0.39,
-      "rbi": 33,
-      "sb": 4
-    },
-    "scoringStats": {
-      "games": 107,
-      "plateAppearances": 483,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.391,
-      "slg": 0.39,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "rosepe01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 91.9,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-joe-morgan-1983",
-    "playerId": "morgajo02",
-    "playerSlug": "joe-morgan",
-    "name": "Joe Morgan",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "bats": "L",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.23,
-      "obp": 0.37,
-      "slg": 0.403,
-      "rbi": 59,
-      "sb": 18
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 16,
-      "avg": 0.23,
-      "obp": 0.37,
-      "slg": 0.403,
-      "rbi": 59,
-      "sb": 18
-    },
-    "scoringStats": {
-      "games": 123,
-      "plateAppearances": 503,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.37,
-      "slg": 0.403,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "morgajo02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 91.67142857142856,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-ozzie-virgil-1984",
-    "playerId": "virgioz02",
-    "playerSlug": "ozzie-virgil",
-    "name": "Ozzie Virgil",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1984,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "C"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.261,
-      "obp": 0.331,
-      "slg": 0.434,
-      "rbi": 68,
-      "sb": 1
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 18,
-      "avg": 0.261,
-      "obp": 0.331,
-      "slg": 0.434,
-      "rbi": 68,
-      "sb": 1
-    },
-    "scoringStats": {
-      "games": 141,
-      "plateAppearances": 511,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.331,
-      "slg": 0.434,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "virgioz02"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 91.1,
-      "formulaVersion": "season-selection-v1"
+      "score": 49.49999999999999,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -934,8 +1476,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 104,
       "hr": 7,
       "avg": 0.292,
       "obp": 0.334,
@@ -945,8 +1487,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 3.4,
+      "opsPlus": 104,
       "hr": 7,
       "avg": 0.292,
       "obp": 0.334,
@@ -967,20 +1509,242 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "trillma01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1980.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.85714285714285,
-      "formulaVersion": "season-selection-v1"
+      "score": 48.489999999999995,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-ozzie-virgil-1984",
+    "playerId": "virgioz02",
+    "playerSlug": "ozzie-virgil",
+    "name": "Ozzie Virgil",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.6,
+      "opsPlus": 112,
+      "hr": 18,
+      "avg": 0.261,
+      "obp": 0.331,
+      "slg": 0.434,
+      "rbi": 68,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.6,
+      "opsPlus": 112,
+      "hr": 18,
+      "avg": 0.261,
+      "obp": 0.331,
+      "slg": 0.434,
+      "rbi": 68,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 511,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.331,
+      "slg": 0.434,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "virgioz02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1984.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.31,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-ricky-jordan-1988",
+    "playerId": "jordari02",
+    "playerSlug": "ricky-jordan",
+    "name": "Ricky Jordan",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 1.8,
+      "opsPlus": 131,
+      "hr": 11,
+      "avg": 0.308,
+      "obp": 0.324,
+      "slg": 0.491,
+      "rbi": 43,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 1.8,
+      "opsPlus": 131,
+      "hr": 11,
+      "avg": 0.308,
+      "obp": 0.324,
+      "slg": 0.491,
+      "rbi": 43,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 69,
+      "plateAppearances": 281,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.324,
+      "slg": 0.491,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "jordari02"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1988.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.910000000000004,
+      "formulaVersion": "advanced-season-selection-v2"
+    }
+  },
+  {
+    "id": "phi-1980s-dickie-thon-1989",
+    "playerId": "thondi01",
+    "playerSlug": "dickie-thon",
+    "name": "Dickie Thon",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": 2.2,
+      "opsPlus": 116,
+      "hr": 15,
+      "avg": 0.271,
+      "obp": 0.321,
+      "slg": 0.434,
+      "rbi": 60,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": 2.2,
+      "opsPlus": 116,
+      "hr": 15,
+      "avg": 0.271,
+      "obp": 0.321,
+      "slg": 0.434,
+      "rbi": 60,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 471,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.321,
+      "slg": 0.434,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "thondi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.11000000000001,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1005,8 +1769,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.4,
+      "opsPlus": 133,
       "hr": 6,
       "avg": 0.279,
       "obp": 0.378,
@@ -1016,8 +1780,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.4,
+      "opsPlus": 133,
       "hr": 6,
       "avg": 0.279,
       "obp": 0.378,
@@ -1038,20 +1802,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "aguaylu01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1985.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.1,
-      "formulaVersion": "season-selection-v1"
+      "score": 35.26,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1076,8 +1843,8 @@
     "bats": "R",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.4,
+      "opsPlus": 140,
       "hr": 8,
       "avg": 0.267,
       "obp": 0.372,
@@ -1087,8 +1854,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 0.4,
+      "opsPlus": 140,
       "hr": 8,
       "avg": 0.267,
       "obp": 0.372,
@@ -1109,159 +1876,23 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "readyra01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 90.07142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-dickie-thon-1989",
-    "playerId": "thondi01",
-    "playerSlug": "dickie-thon",
-    "name": "Dickie Thon",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.271,
-      "obp": 0.321,
-      "slg": 0.434,
-      "rbi": 60,
-      "sb": 6
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 15,
-      "avg": 0.271,
-      "obp": 0.321,
-      "slg": 0.434,
-      "rbi": 60,
-      "sb": 6
-    },
-    "scoringStats": {
-      "games": 136,
-      "plateAppearances": 471,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.321,
-      "slg": 0.434,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "thondi01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 88.95714285714286,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-tug-mcgraw-1980",
-    "playerId": "mcgratu01",
-    "playerSlug": "tug-mcgraw",
-    "name": "Tug McGraw",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.46,
-      "whip": 0.921,
-      "so": 75,
-      "wins": 5,
-      "saves": 20,
-      "sv": 20
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.46,
-      "whip": 0.921,
-      "so": 75,
-      "wins": 5,
-      "saves": 20,
-      "sv": 20
-    },
-    "scoringStats": {
-      "whip": 0.921,
-      "fip": null,
-      "inningsPitched": 92.3,
-      "strikeoutRate": 7.313109425785482,
-      "walkRate": 2.2426868905742148,
-      "starts": 0,
-      "reliefAppearances": 57
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "mcgratu01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 87.0656338028169,
-      "formulaVersion": "season-selection-v1"
+      "score": 27.03,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
@@ -1285,8 +1916,8 @@
     "bats": "L",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 124,
       "hr": 8,
       "avg": 0.225,
       "obp": 0.391,
@@ -1296,8 +1927,8 @@
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.1,
+      "opsPlus": 124,
       "hr": 8,
       "avg": 0.225,
       "obp": 0.391,
@@ -1318,643 +1949,98 @@
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
       "sourcePlayerId": "daultda01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1986.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 87.0142857142857,
-      "formulaVersion": "season-selection-v1"
+      "score": 26.990000000000002,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   },
   {
-    "id": "phi-1980s-rick-schu-1986",
-    "playerId": "schuri01",
-    "playerSlug": "rick-schu",
-    "name": "Rick Schu",
+    "id": "phi-1980s-steve-jeltz-1989",
+    "playerId": "jeltzst01",
+    "playerSlug": "steve-jeltz",
+    "name": "Steve Jeltz",
     "franchiseId": "phi",
     "teamAbbreviation": "PHI",
     "teamDisplayName": "Philadelphia Phillies",
     "team": "PHI",
     "decade": "1980s",
-    "featuredSeason": 1986,
+    "featuredSeason": 1989,
     "playerType": "hitter",
     "type": "hitter",
     "isTwoWay": false,
     "pitchingRole": null,
     "eligiblePositions": [
-      "3B"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.274,
-      "obp": 0.335,
-      "slg": 0.447,
-      "rbi": 25,
-      "sb": 2
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "hr": 8,
-      "avg": 0.274,
-      "obp": 0.335,
-      "slg": 0.447,
-      "rbi": 25,
-      "sb": 2
-    },
-    "scoringStats": {
-      "games": 92,
-      "plateAppearances": 230,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "obp": 0.335,
-      "slg": 0.447,
-      "wrcPlus": null
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "schuri01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 84.77142857142857,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-ivan-de-jesus-1983",
-    "playerId": "dejesiv01",
-    "playerSlug": "ivan-de-jesus",
-    "name": "Ivan de Jesus",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "hitter",
-    "type": "hitter",
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "eligiblePositions": [
+      "2B",
+      "3B",
       "SS"
     ],
-    "bats": "R",
+    "bats": "B",
     "throws": "R",
     "visibleStats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.4,
+      "opsPlus": 101,
       "hr": 4,
-      "avg": 0.254,
-      "obp": 0.323,
-      "slg": 0.336,
-      "rbi": 45,
-      "sb": 11
+      "avg": 0.243,
+      "obp": 0.356,
+      "slg": 0.338,
+      "rbi": 25,
+      "sb": 4
     },
     "pitchingVisibleStats": null,
     "stats": {
-      "war": null,
-      "opsPlus": null,
+      "war": 1.4,
+      "opsPlus": 101,
       "hr": 4,
-      "avg": 0.254,
-      "obp": 0.323,
-      "slg": 0.336,
-      "rbi": 45,
-      "sb": 11
+      "avg": 0.243,
+      "obp": 0.356,
+      "slg": 0.338,
+      "rbi": 25,
+      "sb": 4
     },
     "scoringStats": {
-      "games": 158,
-      "plateAppearances": 554,
+      "games": 116,
+      "plateAppearances": 309,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "obp": 0.323,
-      "slg": 0.336,
+      "obp": 0.356,
+      "slg": 0.338,
       "wrcPlus": null
     },
     "pitchingScoringStats": null,
     "sourceMetadata": {
       "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceLabel": "SABR Lahman Baseball Database 2025 + Baseball-Reference daily WAR data",
       "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [
+        "https://www.baseball-reference.com/data/war_daily_bat.txt"
+      ],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
         "PHI"
       ],
-      "sourcePlayerId": "dejesiv01"
+      "sourcePlayerId": "jeltzst01"
     },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "sourceNotes": "SABR Lahman 2025 counting stats and Baseball-Reference season-level WAR/OPS+/ERA+ for 1989.",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 81.72857142857143,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-al-holland-1983",
-    "playerId": "hollaal01",
-    "playerSlug": "al-holland",
-    "name": "Al Holland",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1983,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.26,
-      "whip": 1.015,
-      "so": 100,
-      "wins": 8,
-      "saves": 25,
-      "sv": 25
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.26,
-      "whip": 1.015,
-      "so": 100,
-      "wins": 8,
-      "saves": 25,
-      "sv": 25
-    },
-    "scoringStats": {
-      "whip": 1.015,
-      "fip": null,
-      "inningsPitched": 91.7,
-      "strikeoutRate": 9.814612868047982,
-      "walkRate": 2.9443838604143946,
-      "starts": 0,
-      "reliefAppearances": 68
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "hollaal01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 78.88534351145039,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-roger-mcdowell-1989",
-    "playerId": "mcdowro01",
-    "playerSlug": "roger-mcdowell",
-    "name": "Roger McDowell",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "eligiblePositions": [
-      "RP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.11,
-      "whip": 1.182,
-      "so": 32,
-      "wins": 3,
-      "saves": 19,
-      "sv": 19
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 1.11,
-      "whip": 1.182,
-      "so": 32,
-      "wins": 3,
-      "saves": 19,
-      "sv": 19
-    },
-    "scoringStats": {
-      "whip": 1.182,
-      "fip": null,
-      "inningsPitched": 56.7,
-      "strikeoutRate": 5.079365079365079,
-      "walkRate": 3.492063492063492,
-      "starts": 0,
-      "reliefAppearances": 44
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "mcdowro01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 78.22095238095237,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-steve-carlton-1980",
-    "playerId": "carltst01",
-    "playerSlug": "steve-carlton",
-    "name": "Steve Carlton",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1980,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "L",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.34,
-      "whip": 1.095,
-      "so": 286,
-      "wins": 24,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.34,
-      "whip": 1.095,
-      "so": 286,
-      "wins": 24,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.095,
-      "fip": null,
-      "inningsPitched": 304,
-      "strikeoutRate": 8.467105263157896,
-      "walkRate": 2.664473684210526,
-      "starts": 38,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "carltst01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 74.72394736842105,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-john-denny-1984",
-    "playerId": "dennyjo01",
-    "playerSlug": "john-denny",
-    "name": "John Denny",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1984,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.45,
-      "whip": 0.978,
-      "so": 94,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.45,
-      "whip": 0.978,
-      "so": 94,
-      "wins": 7,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 0.978,
-      "fip": null,
-      "inningsPitched": 154.3,
-      "strikeoutRate": 5.482825664290343,
-      "walkRate": 1.6915100453661698,
-      "starts": 22,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "dennyjo01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 69.29919565060848,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-bruce-ruffin-1986",
-    "playerId": "ruffibr01",
-    "playerSlug": "bruce-ruffin",
-    "name": "Bruce Ruffin",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "B",
-    "throws": "L",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.46,
-      "whip": 1.244,
-      "so": 70,
-      "wins": 9,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.46,
-      "whip": 1.244,
-      "so": 70,
-      "wins": 9,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.244,
-      "fip": null,
-      "inningsPitched": 146.3,
-      "strikeoutRate": 4.30622009569378,
-      "walkRate": 2.706766917293233,
-      "starts": 21,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "ruffibr01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 60.12695754537861,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-larry-christenson-1982",
-    "playerId": "chrisla01",
-    "playerSlug": "larry-christenson",
-    "name": "Larry Christenson",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1982,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.47,
-      "whip": 1.188,
-      "so": 145,
-      "wins": 9,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.47,
-      "whip": 1.188,
-      "so": 145,
-      "wins": 9,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.188,
-      "fip": null,
-      "inningsPitched": 223,
-      "strikeoutRate": 5.852017937219731,
-      "walkRate": 2.1390134529147984,
-      "starts": 33,
-      "reliefAppearances": 0
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "chrisla01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 56.1695067264574,
-      "formulaVersion": "season-selection-v1"
-    }
-  },
-  {
-    "id": "phi-1980s-ken-howell-1989",
-    "playerId": "howelke01",
-    "playerSlug": "ken-howell",
-    "name": "Ken Howell",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1980s",
-    "featuredSeason": 1989,
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "isTwoWay": false,
-    "pitchingRole": "SP",
-    "eligiblePositions": [
-      "SP"
-    ],
-    "bats": "R",
-    "throws": "R",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.44,
-      "whip": 1.181,
-      "so": 164,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.44,
-      "whip": 1.181,
-      "so": 164,
-      "wins": 12,
-      "saves": 0,
-      "sv": 0
-    },
-    "scoringStats": {
-      "whip": 1.181,
-      "fip": null,
-      "inningsPitched": 204,
-      "strikeoutRate": 7.235294117647059,
-      "walkRate": 3.7941176470588234,
-      "starts": 32,
-      "reliefAppearances": 1
-    },
-    "pitchingScoringStats": null,
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "howelke01"
-    },
-    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 55.59509803921569,
-      "formulaVersion": "season-selection-v1"
+      "score": 20.389999999999997,
+      "formulaVersion": "advanced-season-selection-v2"
     }
   }
 ]
