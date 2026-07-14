@@ -27,10 +27,11 @@ export default function PositionPicker({ player, roster, onCancel, onConfirm }: 
     }}>
       <section className="position-picker" role="dialog" aria-modal="true" aria-labelledby="position-picker-title">
         <div className="position-picker__handle" aria-hidden="true" />
+        <button className="position-picker__close" type="button" aria-label="Close position picker" onClick={onCancel}>×</button>
         <div className="position-picker__heading">
-          <span>Assign position</span>
-          <h2 id="position-picker-title">{player.name}</h2>
-          <p>Choose one eligible roster slot.</p>
+          <span>{player.name}</span>
+          <h2 id="position-picker-title">Choose a Position</h2>
+          <p>Select an available position for this player.</p>
         </div>
         <div className="position-picker__options">
           {availablePositions.map((eligiblePosition) => (

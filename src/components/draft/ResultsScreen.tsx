@@ -1,4 +1,5 @@
-import Logo162 from '../Logo162'
+import DiamondDraftLogo from '../DiamondDraftLogo'
+import GameMenu from '../GameMenu'
 import { POSITIONS, type Roster } from '../../types/draft'
 
 interface ResultsScreenProps {
@@ -11,13 +12,20 @@ export default function ResultsScreen({ roster, onPlayAgain, onHome }: ResultsSc
   return (
     <main className="results-screen">
       <div className="results-screen__glow" aria-hidden="true" />
+      <div className="results-particles" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
       <div className="results-shell">
+        <GameMenu className="results-game-menu" confirmHome={false} onHome={onHome} onRestart={onPlayAgain} />
         <button className="results-home" type="button" onClick={onHome}>Home</button>
-        <Logo162 className="results-logo" />
-        <span className="results-kicker">Classic draft complete</span>
+        <DiamondDraftLogo className="results-logo" compact />
+        <span className="results-kicker">Season Complete</span>
         <section className="projected-record" aria-label="Placeholder projected record">
+          <div className="results-trophy" aria-hidden="true">
+            <span>⚾</span>
+            <svg viewBox="0 0 48 48"><path d="M14 7h20v10c0 8-4 14-10 14s-10-6-10-14V7Zm4 25h12M24 31v8M17 41h14M14 11H7v4c0 5 3 8 8 8m19-12h7v4c0 5-3 8-8 8" /></svg>
+          </div>
           <small>Projected record</small>
           <strong>98–64</strong>
+          <b>Championship Contender</b>
           <span>Prototype projection</span>
         </section>
         <section className="results-roster">
@@ -32,7 +40,7 @@ export default function ResultsScreen({ roster, onPlayAgain, onHome }: ResultsSc
             ))}
           </div>
         </section>
-        <button className="results-play-again" type="button" onClick={onPlayAgain}>Play Again</button>
+        <button className="results-play-again" type="button" onClick={onPlayAgain}>New Game</button>
       </div>
     </main>
   )

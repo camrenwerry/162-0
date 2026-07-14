@@ -55,6 +55,7 @@ function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDra
           </span>
         ))}
       </span>
+      <span className="player-card__arrow" aria-hidden="true">›</span>
     </button>
   )
 }

@@ -10,11 +10,14 @@ import {
   type TeamDecadeCombination,
 } from '../../types/draft'
 import { getAvailablePositions } from '../../utils/draft'
+import GameMenu from '../GameMenu'
 import DraftHeader from './DraftHeader'
+import FranchiseProfile from './FranchiseProfile'
 import PlayerList from './PlayerList'
 import PositionPicker from './PositionPicker'
 import ResultsScreen from './ResultsScreen'
 import RosterBar from './RosterBar'
+import TeamDecadeReveal from './TeamDecadeReveal'
 import './ClassicMode.css'
 
 const FILTERS: PositionFilter[] = ['ALL', 'C', '1B', '2B', '3B', 'SS', 'OF', 'DH', 'SP', 'RP']
@@ -46,6 +49,8 @@ const PITCHER_SORTS: Array<{ value: SortKey; label: string }> = [
 interface ClassicModeProps {
   onHome: () => void
 }
+
+type RollMode = 'both' | 'team' | 'era'
 
 function randomItem<T>(items: T[]) {
   return items[Math.floor(Math.random() * items.length)]
@@ -85,11 +90,17 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
   const [displayTeam, setDisplayTeam] = useState(FIRST_COMBINATION.team)
   const [displayDecade, setDisplayDecade] = useState(FIRST_COMBINATION.decade)
   const [isRolling, setIsRolling] = useState(false)
+  const [rollingMode, setRollingMode] = useState<RollMode | null>(null)
+  const [teamRerollAvailable, setTeamRerollAvailable] = useState(true)
+  const [eraRerollAvailable, setEraRerollAvailable] = useState(true)
   const [committingPlayerId, setCommittingPlayerId] = useState<string | null>(null)
   const [recentlyFilledPosition, setRecentlyFilledPosition] = useState<Position | null>(null)
 
   const rosterRef = useRef(roster)
+  const currentCombinationRef = useRef(combination)
   const usedCombinationsRef = useRef(new Set<string>())
+  const teamRerollAvailableRef = useRef(true)
+  const eraRerollAvailableRef = useRef(true)
   const rollingRef = useRef(false)
   const assignmentLockRef = useRef(false)
   const rollTimersRef = useRef<Array<ReturnType<typeof setTimeout>>>([])
@@ -111,10 +122,11 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     rosterRef.current = roster
   }, [roster])
 
-  const beginRoundRoll = useCallback((rosterOverride?: Roster) => {
-    if (rollingRef.current) return
+  const beginRoundRoll = useCallback((mode: RollMode = 'both', rosterOverride?: Roster) => {
+    if (rollingRef.current) return false
 
     const activeRoster = rosterOverride ?? rosterRef.current
+    const activeCombination = currentCombinationRef.current
     const activeDraftedIds = new Set(Object.values(activeRoster).map((player) => player.id))
     const teamHasValidPlayer = (team: string) => SAMPLE_PLAYERS.some((player) => (
       player.team === team
@@ -123,18 +135,33 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     ))
     const candidates = ALL_ROLL_COMBINATIONS.filter((candidate) => {
       if (usedCombinationsRef.current.has(candidate.id)) return false
+      if (mode === 'team' && candidate.decade !== activeCombination.decade) return false
+      if (mode === 'era' && candidate.team !== activeCombination.team) return false
+      if (mode === 'both' && teamRerollAvailableRef.current) {
+        const decadeUseCount = ALL_ROLL_COMBINATIONS.filter((combinationOption) => (
+          combinationOption.decade === candidate.decade && usedCombinationsRef.current.has(combinationOption.id)
+        )).length
+        if (decadeUseCount >= ROLL_TEAMS.length - 1) return false
+      }
+      if (mode === 'both' && eraRerollAvailableRef.current) {
+        const teamUseCount = ALL_ROLL_COMBINATIONS.filter((combinationOption) => (
+          combinationOption.team === candidate.team && usedCombinationsRef.current.has(combinationOption.id)
+        )).length
+        if (teamUseCount >= ROLL_DECADES.length - 1) return false
+      }
       return teamHasValidPlayer(candidate.team)
     })
 
     if (candidates.length === 0) {
       assignmentLockRef.current = false
-      return
+      return false
     }
 
     const target = randomItem(candidates)
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     rollingRef.current = true
     setIsRolling(true)
+    setRollingMode(mode)
     setSelectedPlayer(null)
     clearRollTimers()
 
@@ -142,16 +169,18 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
       setDisplayTeam(target.team)
       setDisplayDecade(target.decade)
       setCombination(target)
+      currentCombinationRef.current = target
       usedCombinationsRef.current.add(target.id)
       rollingRef.current = false
       assignmentLockRef.current = false
       setIsRolling(false)
+      setRollingMode(null)
       rollTimersRef.current = []
     }
 
     if (reducedMotion) {
       rollTimersRef.current.push(setTimeout(reveal, 180))
-      return
+      return true
     }
 
     const delays = [55, 60, 65, 75, 90, 110, 135, 155, 180]
@@ -163,14 +192,15 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
           reveal()
           return
         }
-        setDisplayTeam(randomItem(ROLL_TEAMS).team)
-        setDisplayDecade(randomItem(ROLL_DECADES))
+        if (mode !== 'era') setDisplayTeam(randomItem(ROLL_TEAMS).team)
+        if (mode !== 'team') setDisplayDecade(randomItem(ROLL_DECADES))
       }, elapsed))
     })
+    return true
   }, [clearRollTimers])
 
   useEffect(() => {
-    beginRoundRoll()
+    beginRoundRoll('both')
     return () => {
       clearRollTimers()
       rollingRef.current = false
@@ -229,8 +259,22 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
         return
       }
       setCommittingPlayerId(null)
-      beginRoundRoll(nextRoster)
+      beginRoundRoll('both', nextRoster)
     }, commitDuration)
+  }
+
+  const useTeamReroll = () => {
+    if (!teamRerollAvailableRef.current || interactionsDisabled) return
+    if (!beginRoundRoll('team')) return
+    teamRerollAvailableRef.current = false
+    setTeamRerollAvailable(false)
+  }
+
+  const useEraReroll = () => {
+    if (!eraRerollAvailableRef.current || interactionsDisabled) return
+    if (!beginRoundRoll('era')) return
+    eraRerollAvailableRef.current = false
+    setEraRerollAvailable(false)
   }
 
   const resetGame = () => {
@@ -240,9 +284,12 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     if (rosterEffectTimerRef.current) clearTimeout(rosterEffectTimerRef.current)
     if (resultsTimerRef.current) clearTimeout(resultsTimerRef.current)
     usedCombinationsRef.current.clear()
+    teamRerollAvailableRef.current = true
+    eraRerollAvailableRef.current = true
     rollingRef.current = false
     assignmentLockRef.current = false
     rosterRef.current = emptyRoster
+    currentCombinationRef.current = FIRST_COMBINATION
     setRoster(emptyRoster)
     setSelectedPlayer(null)
     setSearch('')
@@ -251,11 +298,29 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     setCombination(FIRST_COMBINATION)
     setDisplayTeam(FIRST_COMBINATION.team)
     setDisplayDecade(FIRST_COMBINATION.decade)
+    setRollingMode(null)
+    setTeamRerollAvailable(true)
+    setEraRerollAvailable(true)
     setCommittingPlayerId(null)
     setRecentlyFilledPosition(null)
     setComplete(false)
-    beginRoundRoll(emptyRoster)
+    beginRoundRoll('both', emptyRoster)
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const leaveGame = () => {
+    clearRollTimers()
+    if (commitTimerRef.current) clearTimeout(commitTimerRef.current)
+    if (rosterEffectTimerRef.current) clearTimeout(rosterEffectTimerRef.current)
+    if (resultsTimerRef.current) clearTimeout(resultsTimerRef.current)
+    rosterRef.current = {}
+    currentCombinationRef.current = FIRST_COMBINATION
+    usedCombinationsRef.current.clear()
+    teamRerollAvailableRef.current = true
+    eraRerollAvailableRef.current = true
+    rollingRef.current = false
+    assignmentLockRef.current = false
+    onHome()
   }
 
   if (complete) return <ResultsScreen roster={roster} onPlayAgain={resetGame} onHome={onHome} />
@@ -267,57 +332,63 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
         <DraftHeader
           round={round}
           totalRounds={POSITIONS.length}
-          combination={combination}
-          displayTeam={displayTeam}
-          displayDecade={displayDecade}
-          isRolling={isRolling}
+          teamRerollAvailable={teamRerollAvailable}
+          eraRerollAvailable={eraRerollAvailable}
+          interactionsDisabled={interactionsDisabled}
+          onTeamReroll={useTeamReroll}
+          onEraReroll={useEraReroll}
+          menu={<GameMenu onHome={leaveGame} onRestart={resetGame} />}
         />
+        <div className="draft-workspace">
+          <div className="draft-primary">
+            <TeamDecadeReveal combination={combination} displayTeam={displayTeam} displayDecade={displayDecade} rollingMode={rollingMode} />
+            <FranchiseProfile />
+            <section className="draft-board" aria-labelledby="draft-board-title" aria-busy={isRolling}>
+              <div className="draft-board__heading">
+                <div><span>{isRolling ? 'Drawing matchup' : 'Available players'}</span><h1 id="draft-board-title">{isRolling ? 'Rolling…' : 'Make your pick'}</h1></div>
+                <small>{players.length} players</small>
+              </div>
 
-        <section className="draft-board" aria-labelledby="draft-board-title" aria-busy={isRolling}>
-          <div className="draft-board__heading">
-            <div><span>{isRolling ? 'Drawing matchup' : 'Available players'}</span><h1 id="draft-board-title">{isRolling ? 'Rolling…' : 'Make your pick'}</h1></div>
-            <small>{players.length} players</small>
+              <div className="draft-controls">
+                <label className="draft-search">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.25" /><path d="m15.2 15.2 4.2 4.2" /></svg>
+                  <input disabled={interactionsDisabled} value={search} onChange={(event) => setSearch(event.target.value)} type="search" placeholder="Search players" />
+                </label>
+                <label className="draft-sort">
+                  <span>Sort</span>
+                  <select disabled={interactionsDisabled} value={sort} onChange={(event) => setSort(event.target.value as SortKey)}>
+                    {sortOptions.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+                  </select>
+                </label>
+              </div>
+
+              <div className="position-filters" aria-label="Filter players by position">
+                {FILTERS.map((positionFilter) => (
+                  <button
+                    className={filter === positionFilter ? 'is-active' : ''}
+                    disabled={interactionsDisabled}
+                    key={positionFilter}
+                    type="button"
+                    onClick={() => {
+                      setFilter(positionFilter)
+                      setSort('war')
+                    }}
+                  >{positionFilter}</button>
+                ))}
+              </div>
+
+              <PlayerList
+                players={players}
+                roster={roster}
+                interactionsDisabled={interactionsDisabled}
+                committingPlayerId={committingPlayerId}
+                onSelect={selectPlayer}
+              />
+            </section>
           </div>
-
-          <div className="draft-controls">
-            <label className="draft-search">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.25" /><path d="m15.2 15.2 4.2 4.2" /></svg>
-              <input disabled={interactionsDisabled} value={search} onChange={(event) => setSearch(event.target.value)} type="search" placeholder="Search players" />
-            </label>
-            <label className="draft-sort">
-              <span>Sort</span>
-              <select disabled={interactionsDisabled} value={sort} onChange={(event) => setSort(event.target.value as SortKey)}>
-                {sortOptions.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
-              </select>
-            </label>
-          </div>
-
-          <div className="position-filters" aria-label="Filter players by position">
-            {FILTERS.map((positionFilter) => (
-              <button
-                className={filter === positionFilter ? 'is-active' : ''}
-                disabled={interactionsDisabled}
-                key={positionFilter}
-                type="button"
-                onClick={() => {
-                  setFilter(positionFilter)
-                  setSort('war')
-                }}
-              >{positionFilter}</button>
-            ))}
-          </div>
-
-          <PlayerList
-            players={players}
-            roster={roster}
-            interactionsDisabled={interactionsDisabled}
-            committingPlayerId={committingPlayerId}
-            onSelect={selectPlayer}
-          />
-        </section>
+          <RosterBar roster={roster} recentlyFilledPosition={recentlyFilledPosition} />
+        </div>
       </div>
-
-      <RosterBar roster={roster} recentlyFilledPosition={recentlyFilledPosition} />
       {selectedPlayer && !interactionsDisabled && (
         <PositionPicker player={selectedPlayer} roster={roster} onCancel={() => setSelectedPlayer(null)} onConfirm={choosePosition} />
       )}

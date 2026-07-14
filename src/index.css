@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --color-bg: #080b10;
@@ -10,9 +10,13 @@
   --color-text: #f7f8fa;
   --color-text-muted: #8c98a8;
   --color-text-faint: #5e6978;
-  --color-accent: #ef3d48;
-  --color-accent-bright: #ff5963;
-  --color-accent-dark: #a91825;
+  --color-accent: #f5c542;
+  --color-accent-bright: #ffe27a;
+  --color-accent-dark: #a66e12;
+  --color-blue: #1e90ff;
+  --color-purple: #6e44ad;
+  --color-danger: #e63946;
+  --color-success: #43b978;
   --color-cream: #f2eee4;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-display: 'Barlow Condensed', Impact, sans-serif;
