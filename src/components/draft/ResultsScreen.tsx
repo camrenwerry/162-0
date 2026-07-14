@@ -1,17 +1,15 @@
-import { useMemo } from 'react'
 import DiamondDraftLogo from '../DiamondDraftLogo'
 import GameMenu from '../GameMenu'
-import { ROSTER_SLOTS, type Roster } from '../../types/draft'
-import { projectRoster } from '../../game/scoring'
+import { ROSTER_SLOTS, type DraftResult, type Roster } from '../../types/draft'
 
 interface ResultsScreenProps {
   roster: Roster
+  result: DraftResult
   onPlayAgain: () => void
   onHome: () => void
 }
 
-export default function ResultsScreen({ roster, onPlayAgain, onHome }: ResultsScreenProps) {
-  const result = useMemo(() => projectRoster(roster), [roster])
+export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: ResultsScreenProps) {
   const grades = [
     ['Offense', result.offense],
     ['Defense', result.defense],

@@ -1,23 +1,7 @@
-import { ROSTER_SLOTS, type Hitter, type Pitcher, type Position, type Roster } from '../types/draft'
+import { ROSTER_SLOTS, type DraftCategoryResult, type DraftResult, type Hitter, type Pitcher, type Position, type Roster } from '../types/draft'
 
-export interface CategoryScore {
-  score: number
-  grade: string
-}
-
-export interface ProjectedResult {
-  wins: number
-  losses: number
-  letterGrade: string
-  tierLabel: string
-  overallTeamStrength: number
-  offense: CategoryScore
-  defense: CategoryScore
-  pitching: CategoryScore
-  startingPitching: CategoryScore
-  reliefPitching: CategoryScore
-  speed: CategoryScore
-  rosterBalance: CategoryScore
+export interface Scoring {
+  calculate(roster: Roster): DraftResult
 }
 
 const clamp = (value: number, minimum = 0, maximum = 100) => Math.min(maximum, Math.max(minimum, value))
@@ -37,7 +21,7 @@ function grade(score: number) {
   return 'F'
 }
 
-const category = (value: number): CategoryScore => {
+const category = (value: number): DraftCategoryResult => {
   const score = Math.round(clamp(value))
   return { score, grade: grade(score) }
 }
@@ -97,7 +81,7 @@ function tierForWins(wins: number) {
   return 'Rebuild'
 }
 
-export function projectRoster(roster: Roster): ProjectedResult {
+function projectRoster(roster: Roster): DraftResult {
   const hitterEntries = ROSTER_SLOTS
     .filter((slot) => !['SP', 'RP'].includes(slot.position))
     .flatMap((slot) => {
@@ -159,5 +143,13 @@ export function projectRoster(roster: Roster): ProjectedResult {
     reliefPitching: category(reliefPitchingScore),
     speed: category(speedScore),
     rosterBalance: category(balanceScore),
+  }
+}
+
+// Replace this implementation when the simulation service is ready. DraftEngine
+// depends only on the interface above, so no React component needs to change.
+export class BetaScoring implements Scoring {
+  calculate(roster: Roster) {
+    return projectRoster(roster)
   }
 }

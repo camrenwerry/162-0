@@ -91,5 +91,39 @@ export interface Pitcher extends PlayerBase {
 }
 
 export type Player = Hitter | Pitcher
+export type PlayerCard = Player
 export type PlayerCardData = Player
+export interface DraftPlayerView {
+  player: PlayerCard
+  isAvailable: boolean
+}
+export type RosterSlot = (typeof ROSTER_SLOTS)[number]
 export type Roster = Partial<Record<RosterSlotId, Player>>
+
+export type TeamDecade = TeamDecadeCombination
+
+export interface DraftRound {
+  current: number
+  total: number
+  combination: TeamDecade
+}
+
+export interface DraftCategoryResult {
+  score: number
+  grade: string
+}
+
+export interface DraftResult {
+  wins: number
+  losses: number
+  letterGrade: string
+  tierLabel: string
+  overallTeamStrength: number
+  offense: DraftCategoryResult
+  defense: DraftCategoryResult
+  pitching: DraftCategoryResult
+  startingPitching: DraftCategoryResult
+  reliefPitching: DraftCategoryResult
+  speed: DraftCategoryResult
+  rosterBalance: DraftCategoryResult
+}

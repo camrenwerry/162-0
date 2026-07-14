@@ -3,7 +3,7 @@ import type { PlayerCardData } from '../../types/draft'
 
 interface PlayerCardProps {
   player: PlayerCardData
-  onSelect: (player: PlayerCardData) => void
+  onSelect: () => void
   isAvailable: boolean
   interactionsDisabled: boolean
   isDrafting: boolean
@@ -42,7 +42,7 @@ function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDra
       className={`player-card${!isAvailable ? ' is-unavailable' : ''}${isDrafting ? ' is-drafting' : ''}`}
       type="button"
       disabled={!isAvailable || interactionsDisabled}
-      onClick={() => onSelect(player)}
+      onClick={onSelect}
     >
       <span className="player-card__accent" aria-hidden="true" />
       <span className="player-card__body">

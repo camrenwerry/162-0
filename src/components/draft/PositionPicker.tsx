@@ -1,17 +1,15 @@
 import { useEffect, useState } from 'react'
-import type { Player, Position, Roster } from '../../types/draft'
-import { getAvailablePositions } from '../../utils/draft'
+import type { Player, Position } from '../../types/draft'
 
 interface PositionPickerProps {
   player: Player
-  roster: Roster
+  availablePositions: readonly Position[]
   onCancel: () => void
   onConfirm: (position: Position) => void
 }
 
-export default function PositionPicker({ player, roster, onCancel, onConfirm }: PositionPickerProps) {
+export default function PositionPicker({ player, availablePositions, onCancel, onConfirm }: PositionPickerProps) {
   const [position, setPosition] = useState<Position | null>(null)
-  const availablePositions = getAvailablePositions(player, roster)
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {

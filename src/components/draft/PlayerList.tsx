@@ -1,18 +1,15 @@
 import { memo } from 'react'
-import type { PlayerCardData } from '../../types/draft'
-import type { Roster } from '../../types/draft'
-import { getAvailablePositions } from '../../utils/draft'
+import type { DraftPlayerView } from '../../types/draft'
 import PlayerCard from './PlayerCard'
 
 interface PlayerListProps {
-  players: PlayerCardData[]
-  onSelect: (player: PlayerCardData) => void
-  roster: Roster
+  players: readonly DraftPlayerView[]
+  onSelect: (playerId: string) => void
   interactionsDisabled: boolean
   committingPlayerId: string | null
 }
 
-function PlayerList({ players, onSelect, roster, interactionsDisabled, committingPlayerId }: PlayerListProps) {
+function PlayerList({ players, onSelect, interactionsDisabled, committingPlayerId }: PlayerListProps) {
   if (players.length === 0) {
     return (
       <div className="classic-empty">
@@ -25,12 +22,12 @@ function PlayerList({ players, onSelect, roster, interactionsDisabled, committin
 
   return (
     <div className="player-list-prototype" aria-live="polite">
-      {players.map((player) => (
+      {players.map(({ player, isAvailable }) => (
         <PlayerCard
           key={player.id}
           player={player}
-          onSelect={onSelect}
-          isAvailable={getAvailablePositions(player, roster).length > 0}
+          onSelect={() => onSelect(player.id)}
+          isAvailable={isAvailable}
           interactionsDisabled={interactionsDisabled}
           isDrafting={committingPlayerId === player.id}
         />

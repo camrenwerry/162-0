@@ -34,7 +34,7 @@ HR, AVG, ERA, SO, and SV are direct aggregates. Lahman does not publish WAR, OPS
 
 ## Projected record
 
-`src/game/scoring.ts` owns the complete scoring model. React components contain no scoring formulas. It evaluates:
+`src/game/Scoring.ts` exposes the replaceable scoring interface and current beta implementation. React components contain no scoring formulas. It evaluates:
 
 - Offense
 - Defense
@@ -58,11 +58,25 @@ Production checks:
 ```bash
 npm run validate:data
 npm run test:game
+npm run test:engine
 npm run lint
 npm run build
 ```
 
 `npm run build` runs data validation automatically and fails on serious dataset errors.
+
+## Engine architecture
+
+React subscribes to `DraftEngine` and renders immutable snapshots. All draft transitions are commands on the engine; components never mutate roster or round state.
+
+- `src/game/DraftEngine.ts`: single orchestration and state-transition boundary
+- `src/game/GameState.ts`: internal draft state and render-view contracts
+- `src/game/Randomizer.ts`: combination selection, rerolls, and duplicate prevention
+- `src/game/Eligibility.ts`: DH, fielding, SP/RP slot, and assignment rules
+- `src/game/TeamPool.ts`: static database adapter, queries, filters, and sorting
+- `src/game/Scoring.ts`: replaceable results interface and current beta projection
+
+The UI has no direct dependency on the checked-in JSON. Replacing `TeamPool` with a remote implementation or replacing the `Scoring` provider does not require visual component changes.
 
 ## Add or regenerate a pool
 

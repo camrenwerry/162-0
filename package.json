@@ -8,6 +8,7 @@
     "build": "npm run validate:data && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "test:engine": "vite build --ssr scripts/engine-smoke.ts --outDir /tmp/diamond-draft-engine-smoke --emptyOutDir && node /tmp/diamond-draft-engine-smoke/engine-smoke.js",
     "test:game": "node scripts/smoke-game.mjs",
     "validate:data": "node scripts/validate-data.mjs"
   },
