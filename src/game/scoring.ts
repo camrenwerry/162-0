@@ -1,4 +1,4 @@
-import { ROSTER_SLOTS, type DraftCategoryResult, type DraftResult, type Hitter, type Pitcher, type Position, type Roster } from '../types/draft'
+import { ROSTER_SLOTS, type DraftCategoryResult, type DraftResult, type Hitter, type Pitcher, type Position, type Roster, type TwoWayPlayer } from '../types/draft'
 
 export interface Scoring {
   calculate(roster: Roster): DraftResult
@@ -26,34 +26,39 @@ const category = (value: number): DraftCategoryResult => {
   return { score, grade: grade(score) }
 }
 
-function hitterOffense(player: Hitter) {
+function hitterOffense(player: Hitter | TwoWayPlayer) {
   const { plateAppearances, obp, slg, wrcPlus } = player.scoringStats
   const warRate = (player.stats.war ?? 0) / Math.max(1, plateAppearances / 650)
   const durability = clamp(plateAppearances / 45, 20, 100)
   return clamp(
     50
-    + (wrcPlus - 100) * .38
-    + (obp - .320) * 80
-    + (slg - .400) * 45
+    + ((wrcPlus ?? 100) - 100) * .38
+    + ((obp ?? .320) - .320) * 80
+    + ((slg ?? .400) - .400) * 45
     + (warRate - 2) * 2.2
     + (durability - 70) * .08,
   )
 }
 
-function hitterDefense(player: Hitter, position: Position) {
+function hitterDefense(player: Hitter | TwoWayPlayer, position: Position) {
   if (position === 'DH') return 50
   const positionPremium: Partial<Record<Position, number>> = { C: 5, SS: 5, CF: 3, '2B': 2, '3B': 1 }
-  return clamp(70 + player.scoringStats.defensiveValue * 2 + (positionPremium[position] ?? 0))
+  return clamp(70 + (player.scoringStats.defensiveValue ?? 0) * 2 + (positionPremium[position] ?? 0))
 }
 
-function hitterSpeed(player: Hitter) {
+function hitterSpeed(player: Hitter | TwoWayPlayer) {
   const opportunities = Math.max(1, player.scoringStats.plateAppearances / 650)
-  return clamp(58 + (player.scoringStats.baserunningValue / opportunities) * 2.5)
+  return clamp(58 + ((player.scoringStats.baserunningValue ?? 0) / opportunities) * 2.5)
 }
 
-function pitcherValue(player: Pitcher, role: 'SP' | 'RP') {
-  const { inningsPitched, whip, fip, strikeoutRate, walkRate, starts, reliefAppearances } = player.scoringStats
-  const warRate = (player.stats.war ?? 0) / Math.max(1, inningsPitched / 200)
+function pitcherValue(player: Pitcher | TwoWayPlayer, role: 'SP' | 'RP') {
+  const scoring = player.playerType === 'twoWay' ? player.pitchingScoringStats : player.scoringStats
+  const stats = player.playerType === 'twoWay' ? player.pitchingVisibleStats : player.stats
+  const { inningsPitched, reliefAppearances } = scoring
+  const starts = scoring.starts ?? scoring.gamesStarted ?? 0
+  const whip = player.playerType === 'pitcher' ? scoring.whip : stats.whip
+  const { fip, strikeoutRate, walkRate } = scoring
+  const warRate = (stats.war ?? 0) / Math.max(1, inningsPitched / 200)
   const roleShare = role === 'SP'
     ? starts / Math.max(1, starts + reliefAppearances)
     : reliefAppearances / Math.max(1, starts + reliefAppearances)
@@ -61,10 +66,10 @@ function pitcherValue(player: Pitcher, role: 'SP' | 'RP') {
   const workload = clamp(inningsPitched / workloadTarget * 100, 20, 100)
   return clamp(
     48
-    + ((player.stats.eraPlus ?? 100) - 100) * .3
-    + (1.3 - whip) * 22
-    + (4.2 - fip) * 4
-    + (strikeoutRate - walkRate - 4) * 1.8
+    + ((stats.eraPlus ?? 100) - 100) * .3
+    + (1.3 - (whip ?? 1.3)) * 22
+    + (4.2 - (fip ?? 4.2)) * 4
+    + ((strikeoutRate ?? 7) - (walkRate ?? 3) - 4) * 1.8
     + (warRate - 2) * 2
     + (roleShare - .5) * 9
     + (workload - 60) * .07,
@@ -86,7 +91,7 @@ function projectRoster(roster: Roster): DraftResult {
     .filter((slot) => !['SP', 'RP'].includes(slot.position))
     .flatMap((slot) => {
       const player = roster[slot.id]
-      return player?.type === 'hitter' ? [{ player, position: slot.position as Position }] : []
+      return player && player.playerType !== 'pitcher' ? [{ player, position: slot.position as Position }] : []
     })
 
   const offenseScore = average(hitterEntries.map(({ player }) => hitterOffense(player)))
@@ -95,11 +100,11 @@ function projectRoster(roster: Roster): DraftResult {
 
   const starterScores = (['SP1', 'SP2', 'SP3'] as const).flatMap((slot) => {
     const player = roster[slot]
-    return player?.type === 'pitcher' ? [pitcherValue(player, 'SP')] : []
+    return player && player.playerType !== 'hitter' ? [pitcherValue(player, 'SP')] : []
   })
   const relieverScores = (['RP1', 'RP2'] as const).flatMap((slot) => {
     const player = roster[slot]
-    return player?.type === 'pitcher' ? [pitcherValue(player, 'RP')] : []
+    return player && player.playerType !== 'hitter' ? [pitcherValue(player, 'RP')] : []
   })
   const startingPitchingScore = average(starterScores)
   const reliefPitchingScore = average(relieverScores)

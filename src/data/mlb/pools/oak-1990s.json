@@ -1,0 +1,1965 @@
+[
+  {
+    "id": "oak-1990s-mark-mcgwire-1996",
+    "playerId": "mcgwima01",
+    "playerSlug": "mark-mcgwire",
+    "name": "Mark McGwire",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 52,
+      "avg": 0.312,
+      "obp": 0.467,
+      "slg": 0.73,
+      "rbi": 113,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 52,
+      "avg": 0.312,
+      "obp": 0.467,
+      "slg": 0.73,
+      "rbi": 113,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 130,
+      "plateAppearances": 548,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.467,
+      "slg": 0.73,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "mcgwima01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 135.35714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-rickey-henderson-1990",
+    "playerId": "henderi01",
+    "playerSlug": "rickey-henderson",
+    "name": "Rickey Henderson",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 28,
+      "avg": 0.325,
+      "obp": 0.439,
+      "slg": 0.577,
+      "rbi": 61,
+      "sb": 65
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 28,
+      "avg": 0.325,
+      "obp": 0.439,
+      "slg": 0.577,
+      "rbi": 61,
+      "sb": 65
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 592,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.439,
+      "slg": 0.577,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "henderi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 118.5142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-jason-giambi-1999",
+    "playerId": "giambja01",
+    "playerSlug": "jason-giambi",
+    "name": "Jason Giambi",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 33,
+      "avg": 0.315,
+      "obp": 0.422,
+      "slg": 0.553,
+      "rbi": 123,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 33,
+      "avg": 0.315,
+      "obp": 0.422,
+      "slg": 0.553,
+      "rbi": 123,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 695,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.422,
+      "slg": 0.553,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "giambja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.35714285714288,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-jose-canseco-1991",
+    "playerId": "cansejo01",
+    "playerSlug": "jose-canseco",
+    "name": "Jose Canseco",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 44,
+      "avg": 0.266,
+      "obp": 0.359,
+      "slg": 0.556,
+      "rbi": 122,
+      "sb": 26
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 44,
+      "avg": 0.266,
+      "obp": 0.359,
+      "slg": 0.556,
+      "rbi": 122,
+      "sb": 26
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 665,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.556,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "cansejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.5,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-dennis-eckersley-1990",
+    "playerId": "eckerde01",
+    "playerSlug": "dennis-eckersley",
+    "name": "Dennis Eckersley",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.61,
+      "whip": 0.614,
+      "so": 73,
+      "wins": 4,
+      "saves": 48,
+      "sv": 48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.61,
+      "whip": 0.614,
+      "so": 73,
+      "wins": 4,
+      "saves": 48,
+      "sv": 48
+    },
+    "scoringStats": {
+      "whip": 0.614,
+      "fip": null,
+      "inningsPitched": 73.3,
+      "strikeoutRate": 8.963165075034107,
+      "walkRate": 0.4911323328785812,
+      "starts": 0,
+      "reliefAppearances": 63
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "eckerde01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 109.10804911323328,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-matt-stairs-1997",
+    "playerId": "stairma01",
+    "playerSlug": "matt-stairs",
+    "name": "Matt Stairs",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.298,
+      "obp": 0.386,
+      "slg": 0.582,
+      "rbi": 73,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.298,
+      "obp": 0.386,
+      "slg": 0.582,
+      "rbi": 73,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 133,
+      "plateAppearances": 409,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.386,
+      "slg": 0.582,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "stairma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.48571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-geronimo-berroa-1996",
+    "playerId": "berroge01",
+    "playerSlug": "geronimo-berroa",
+    "name": "Geronimo Berroa",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.29,
+      "obp": 0.344,
+      "slg": 0.532,
+      "rbi": 106,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.29,
+      "obp": 0.344,
+      "slg": 0.532,
+      "rbi": 106,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 643,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.344,
+      "slg": 0.532,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "berroge01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.97142857142856,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-scott-brosius-1996",
+    "playerId": "brosisc01",
+    "playerSlug": "scott-brosius",
+    "name": "Scott Brosius",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.304,
+      "obp": 0.393,
+      "slg": 0.516,
+      "rbi": 71,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.304,
+      "obp": 0.393,
+      "slg": 0.516,
+      "rbi": 71,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 114,
+      "plateAppearances": 499,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.393,
+      "slg": 0.516,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "brosisc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.15714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-terry-steinbach-1996",
+    "playerId": "steinte01",
+    "playerSlug": "terry-steinbach",
+    "name": "Terry Steinbach",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 35,
+      "avg": 0.272,
+      "obp": 0.342,
+      "slg": 0.529,
+      "rbi": 100,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 35,
+      "avg": 0.272,
+      "obp": 0.342,
+      "slg": 0.529,
+      "rbi": 100,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 571,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.342,
+      "slg": 0.529,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "steinte01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.41428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-dave-henderson-1991",
+    "playerId": "hendeda01",
+    "playerSlug": "dave-henderson",
+    "name": "Dave Henderson",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.276,
+      "obp": 0.346,
+      "slg": 0.465,
+      "rbi": 85,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.276,
+      "obp": 0.346,
+      "slg": 0.465,
+      "rbi": 85,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 636,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.346,
+      "slg": 0.465,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "hendeda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.27142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-randy-velarde-1999",
+    "playerId": "velarra01",
+    "playerSlug": "randy-velarde",
+    "name": "Randy Velarde",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.333,
+      "obp": 0.401,
+      "slg": 0.478,
+      "rbi": 28,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.333,
+      "obp": 0.401,
+      "slg": 0.478,
+      "rbi": 28,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 61,
+      "plateAppearances": 284,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.401,
+      "slg": 0.478,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "velarra01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.01428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-miguel-tejada-1999",
+    "playerId": "tejadmi01",
+    "playerSlug": "miguel-tejada",
+    "name": "Miguel Tejada",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.251,
+      "obp": 0.325,
+      "slg": 0.427,
+      "rbi": 84,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.251,
+      "obp": 0.325,
+      "slg": 0.427,
+      "rbi": 84,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 665,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.325,
+      "slg": 0.427,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "tejadmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.2,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-tony-phillips-1999",
+    "playerId": "phillto02",
+    "playerSlug": "tony-phillips",
+    "name": "Tony Phillips",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.244,
+      "obp": 0.362,
+      "slg": 0.433,
+      "rbi": 49,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.244,
+      "obp": 0.362,
+      "slg": 0.433,
+      "rbi": 49,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 106,
+      "plateAppearances": 484,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.362,
+      "slg": 0.433,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "phillto02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.32857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-olmedo-saenz-1999",
+    "playerId": "saenzol01",
+    "playerSlug": "olmedo-saenz",
+    "name": "Olmedo Saenz",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.275,
+      "obp": 0.363,
+      "slg": 0.475,
+      "rbi": 41,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.275,
+      "obp": 0.363,
+      "slg": 0.475,
+      "rbi": 41,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 97,
+      "plateAppearances": 295,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.363,
+      "slg": 0.475,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "saenzol01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.22857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-brent-gates-1993",
+    "playerId": "gatesbr01",
+    "playerSlug": "brent-gates",
+    "name": "Brent Gates",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.29,
+      "obp": 0.357,
+      "slg": 0.391,
+      "rbi": 69,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.29,
+      "obp": 0.357,
+      "slg": 0.391,
+      "rbi": 69,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 139,
+      "plateAppearances": 603,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.391,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "gatesbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.02857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-ernie-young-1996",
+    "playerId": "younger02",
+    "playerSlug": "ernie-young",
+    "name": "Ernie Young",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.242,
+      "obp": 0.326,
+      "slg": 0.424,
+      "rbi": 64,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.242,
+      "obp": 0.326,
+      "slg": 0.424,
+      "rbi": 64,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 525,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.326,
+      "slg": 0.424,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "younger02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-dave-magadan-1997",
+    "playerId": "magadda01",
+    "playerSlug": "dave-magadan",
+    "name": "Dave Magadan",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.303,
+      "obp": 0.414,
+      "slg": 0.391,
+      "rbi": 30,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.303,
+      "obp": 0.414,
+      "slg": 0.391,
+      "rbi": 30,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 128,
+      "plateAppearances": 324,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.414,
+      "slg": 0.391,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "magadda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.75714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-mike-bordick-1992",
+    "playerId": "bordimi01",
+    "playerSlug": "mike-bordick",
+    "name": "Mike Bordick",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.3,
+      "obp": 0.358,
+      "slg": 0.371,
+      "rbi": 48,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.3,
+      "obp": 0.358,
+      "slg": 0.371,
+      "rbi": 48,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 558,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.358,
+      "slg": 0.371,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "bordimi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.84285714285713,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-mike-gallego-1991",
+    "playerId": "gallemi01",
+    "playerSlug": "mike-gallego",
+    "name": "Mike Gallego",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.247,
+      "obp": 0.343,
+      "slg": 0.369,
+      "rbi": 49,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.247,
+      "obp": 0.343,
+      "slg": 0.369,
+      "rbi": 49,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 557,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.343,
+      "slg": 0.369,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "gallemi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.11428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-george-williams-1997",
+    "playerId": "willige03",
+    "playerSlug": "george-williams",
+    "name": "George Williams",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.289,
+      "obp": 0.397,
+      "slg": 0.388,
+      "rbi": 22,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.289,
+      "obp": 0.397,
+      "slg": 0.388,
+      "rbi": 22,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 76,
+      "plateAppearances": 239,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.397,
+      "slg": 0.388,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "willige03"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.32857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-scott-hemond-1993",
+    "playerId": "hemonsc01",
+    "playerSlug": "scott-hemond",
+    "name": "Scott Hemond",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.256,
+      "obp": 0.353,
+      "slg": 0.414,
+      "rbi": 26,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.256,
+      "obp": 0.353,
+      "slg": 0.414,
+      "rbi": 26,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 91,
+      "plateAppearances": 249,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.353,
+      "slg": 0.414,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "hemonsc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.8142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-gene-nelson-1990",
+    "playerId": "nelsoge01",
+    "playerSlug": "gene-nelson",
+    "name": "Gene Nelson",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.57,
+      "whip": 0.964,
+      "so": 38,
+      "wins": 3,
+      "saves": 5,
+      "sv": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.57,
+      "whip": 0.964,
+      "so": 38,
+      "wins": 3,
+      "saves": 5,
+      "sv": 5
+    },
+    "scoringStats": {
+      "whip": 0.964,
+      "fip": null,
+      "inningsPitched": 74.7,
+      "strikeoutRate": 4.578313253012048,
+      "walkRate": 2.048192771084337,
+      "starts": 0,
+      "reliefAppearances": 51
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "nelsoge01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 79.87518072289157,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-rick-honeycutt-1995",
+    "playerId": "honeyri01",
+    "playerSlug": "rick-honeycutt",
+    "name": "Rick Honeycutt",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.42,
+      "whip": 1.03,
+      "so": 21,
+      "wins": 5,
+      "saves": 2,
+      "sv": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.42,
+      "whip": 1.03,
+      "so": 21,
+      "wins": 5,
+      "saves": 2,
+      "sv": 2
+    },
+    "scoringStats": {
+      "whip": 1.03,
+      "fip": null,
+      "inningsPitched": 44.7,
+      "strikeoutRate": 4.228187919463087,
+      "walkRate": 1.8120805369127515,
+      "starts": 0,
+      "reliefAppearances": 49
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "honeyri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.7841610738255,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-dave-stewart-1990",
+    "playerId": "stewada01",
+    "playerSlug": "dave-stewart",
+    "name": "Dave Stewart",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.157,
+      "so": 166,
+      "wins": 22,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.157,
+      "so": 166,
+      "wins": 22,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.157,
+      "fip": null,
+      "inningsPitched": 267,
+      "strikeoutRate": 5.595505617977528,
+      "walkRate": 2.797752808988764,
+      "starts": 36,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "stewada01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.33662921348315,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-steve-ontiveros-1994",
+    "playerId": "ontivst02",
+    "playerSlug": "steve-ontiveros",
+    "name": "Steve Ontiveros",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.65,
+      "whip": 1.032,
+      "so": 56,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.65,
+      "whip": 1.032,
+      "so": 56,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.032,
+      "fip": null,
+      "inningsPitched": 115.3,
+      "strikeoutRate": 4.371205550737208,
+      "walkRate": 2.0294882914137036,
+      "starts": 13,
+      "reliefAppearances": 14
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "ontivst02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 61.47813144454081,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-bob-welch-1990",
+    "playerId": "welchbo01",
+    "playerSlug": "bob-welch",
+    "name": "Bob Welch",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.223,
+      "so": 127,
+      "wins": 27,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.223,
+      "so": 127,
+      "wins": 27,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.223,
+      "fip": null,
+      "inningsPitched": 238,
+      "strikeoutRate": 4.802521008403361,
+      "walkRate": 2.911764705882353,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "welchbo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.976134453781505,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-kenny-rogers-1998",
+    "playerId": "rogerke01",
+    "playerSlug": "kenny-rogers",
+    "name": "Kenny Rogers",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.17,
+      "whip": 1.182,
+      "so": 138,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.17,
+      "whip": 1.182,
+      "so": 138,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.182,
+      "fip": null,
+      "inningsPitched": 238.7,
+      "strikeoutRate": 5.203183912861332,
+      "walkRate": 2.5261834939254295,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "rogerke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.335500628403864,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-1990s-mike-moore-1991",
+    "playerId": "mooremi01",
+    "playerSlug": "mike-moore",
+    "name": "Mike Moore",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.96,
+      "whip": 1.338,
+      "so": 153,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.96,
+      "whip": 1.338,
+      "so": 153,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.338,
+      "fip": null,
+      "inningsPitched": 210,
+      "strikeoutRate": 6.557142857142857,
+      "walkRate": 4.5,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "mooremi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.47238095238095,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

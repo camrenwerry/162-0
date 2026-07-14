@@ -6,6 +6,14 @@ import { ROSTER_SLOTS } from '../src/types/draft'
 
 const waitForTimers = () => new Promise((resolve) => setTimeout(resolve, 5))
 const pool = new TeamPool()
+const supported = pool.getCombinations()[0]
+assert(pool.getPlayers(supported).length > 0)
+assert(pool.getPlayers(supported).every((player) => (
+  player.franchiseId === supported.franchiseId
+  && player.decade === supported.decade
+  && String(player.featuredSeason).startsWith(supported.decade.slice(0, 3))
+)))
+assert.deepEqual(pool.getPlayers({ ...supported, id: 'unsupported-pool' }), [])
 let randomIndex = 0
 const randomizer = new Randomizer(pool, () => ((randomIndex++ * 17) % 97) / 97)
 const engine = new DraftEngine({
@@ -27,7 +35,7 @@ assert.equal(draft.usedCombinationIds.length, 1)
 
 engine.setSort('hr')
 draft = engine.getSnapshot()
-assert(draft.players.length > 0 && draft.players.every(({ player }) => player.type === 'hitter'))
+assert(draft.players.length > 0 && draft.players.every(({ player }) => player.playerType !== 'pitcher'))
 const searchName = draft.players[0].player.name
 engine.setSearch(searchName)
 assert(engine.getSnapshot().players.every(({ player }) => player.name === searchName))

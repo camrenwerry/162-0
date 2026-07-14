@@ -1,0 +1,338 @@
+[
+  {
+    "id": "nyy-1980s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "Yankees",
+    "decade": "1980s"
+  },
+  {
+    "id": "nyy-1990s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "Yankees",
+    "decade": "1990s"
+  },
+  {
+    "id": "nyy-2000s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "Yankees",
+    "decade": "2000s"
+  },
+  {
+    "id": "nyy-2010s",
+    "franchiseId": "nyy",
+    "team": "NYY",
+    "teamName": "Yankees",
+    "decade": "2010s"
+  },
+  {
+    "id": "bos-1980s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Red Sox",
+    "decade": "1980s"
+  },
+  {
+    "id": "bos-1990s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Red Sox",
+    "decade": "1990s"
+  },
+  {
+    "id": "bos-2000s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Red Sox",
+    "decade": "2000s"
+  },
+  {
+    "id": "bos-2010s",
+    "franchiseId": "bos",
+    "team": "BOS",
+    "teamName": "Red Sox",
+    "decade": "2010s"
+  },
+  {
+    "id": "lad-1980s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Dodgers",
+    "decade": "1980s"
+  },
+  {
+    "id": "lad-1990s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Dodgers",
+    "decade": "1990s"
+  },
+  {
+    "id": "lad-2000s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Dodgers",
+    "decade": "2000s"
+  },
+  {
+    "id": "lad-2010s",
+    "franchiseId": "lad",
+    "team": "LAD",
+    "teamName": "Dodgers",
+    "decade": "2010s"
+  },
+  {
+    "id": "sfg-1980s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "Giants",
+    "decade": "1980s"
+  },
+  {
+    "id": "sfg-1990s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "Giants",
+    "decade": "1990s"
+  },
+  {
+    "id": "sfg-2000s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "Giants",
+    "decade": "2000s"
+  },
+  {
+    "id": "sfg-2010s",
+    "franchiseId": "sfg",
+    "team": "SFG",
+    "teamName": "Giants",
+    "decade": "2010s"
+  },
+  {
+    "id": "stl-1980s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "Cardinals",
+    "decade": "1980s"
+  },
+  {
+    "id": "stl-1990s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "Cardinals",
+    "decade": "1990s"
+  },
+  {
+    "id": "stl-2000s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "Cardinals",
+    "decade": "2000s"
+  },
+  {
+    "id": "stl-2010s",
+    "franchiseId": "stl",
+    "team": "STL",
+    "teamName": "Cardinals",
+    "decade": "2010s"
+  },
+  {
+    "id": "chc-1980s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Cubs",
+    "decade": "1980s"
+  },
+  {
+    "id": "chc-1990s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Cubs",
+    "decade": "1990s"
+  },
+  {
+    "id": "chc-2000s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Cubs",
+    "decade": "2000s"
+  },
+  {
+    "id": "chc-2010s",
+    "franchiseId": "chc",
+    "team": "CHC",
+    "teamName": "Cubs",
+    "decade": "2010s"
+  },
+  {
+    "id": "atl-1980s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Braves",
+    "decade": "1980s"
+  },
+  {
+    "id": "atl-1990s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Braves",
+    "decade": "1990s"
+  },
+  {
+    "id": "atl-2000s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Braves",
+    "decade": "2000s"
+  },
+  {
+    "id": "atl-2010s",
+    "franchiseId": "atl",
+    "team": "ATL",
+    "teamName": "Braves",
+    "decade": "2010s"
+  },
+  {
+    "id": "sea-1980s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Mariners",
+    "decade": "1980s"
+  },
+  {
+    "id": "sea-1990s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Mariners",
+    "decade": "1990s"
+  },
+  {
+    "id": "sea-2000s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Mariners",
+    "decade": "2000s"
+  },
+  {
+    "id": "sea-2010s",
+    "franchiseId": "sea",
+    "team": "SEA",
+    "teamName": "Mariners",
+    "decade": "2010s"
+  },
+  {
+    "id": "bal-1980s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Orioles",
+    "decade": "1980s"
+  },
+  {
+    "id": "bal-1990s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Orioles",
+    "decade": "1990s"
+  },
+  {
+    "id": "bal-2000s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Orioles",
+    "decade": "2000s"
+  },
+  {
+    "id": "bal-2010s",
+    "franchiseId": "bal",
+    "team": "BAL",
+    "teamName": "Orioles",
+    "decade": "2010s"
+  },
+  {
+    "id": "oak-1980s",
+    "franchiseId": "oak",
+    "team": "OAK",
+    "teamName": "Athletics",
+    "decade": "1980s"
+  },
+  {
+    "id": "oak-1990s",
+    "franchiseId": "oak",
+    "team": "OAK",
+    "teamName": "Athletics",
+    "decade": "1990s"
+  },
+  {
+    "id": "oak-2000s",
+    "franchiseId": "oak",
+    "team": "OAK",
+    "teamName": "Athletics",
+    "decade": "2000s"
+  },
+  {
+    "id": "oak-2010s",
+    "franchiseId": "oak",
+    "team": "OAK",
+    "teamName": "Athletics",
+    "decade": "2010s"
+  },
+  {
+    "id": "laa-1980s",
+    "franchiseId": "laa",
+    "team": "LAA",
+    "teamName": "Angels",
+    "decade": "1980s"
+  },
+  {
+    "id": "laa-1990s",
+    "franchiseId": "laa",
+    "team": "LAA",
+    "teamName": "Angels",
+    "decade": "1990s"
+  },
+  {
+    "id": "laa-2000s",
+    "franchiseId": "laa",
+    "team": "LAA",
+    "teamName": "Angels",
+    "decade": "2000s"
+  },
+  {
+    "id": "laa-2010s",
+    "franchiseId": "laa",
+    "team": "LAA",
+    "teamName": "Angels",
+    "decade": "2010s"
+  },
+  {
+    "id": "phi-1980s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Phillies",
+    "decade": "1980s"
+  },
+  {
+    "id": "phi-1990s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Phillies",
+    "decade": "1990s"
+  },
+  {
+    "id": "phi-2000s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Phillies",
+    "decade": "2000s"
+  },
+  {
+    "id": "phi-2010s",
+    "franchiseId": "phi",
+    "team": "PHI",
+    "teamName": "Phillies",
+    "decade": "2010s"
+  }
+]

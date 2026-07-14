@@ -1,0 +1,2030 @@
+[
+  {
+    "id": "bos-1990s-mo-vaughn-1996",
+    "playerId": "vaughmo01",
+    "playerSlug": "mo-vaughn",
+    "name": "Mo Vaughn",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 44,
+      "avg": 0.326,
+      "obp": 0.42,
+      "slg": 0.583,
+      "rbi": 143,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 44,
+      "avg": 0.326,
+      "obp": 0.42,
+      "slg": 0.583,
+      "rbi": 143,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 161,
+      "plateAppearances": 752,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.42,
+      "slg": 0.583,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "vaughmo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 121.72857142857141,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-nomar-garciaparra-1999",
+    "playerId": "garcino01",
+    "playerSlug": "nomar-garciaparra",
+    "name": "Nomar Garciaparra",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.357,
+      "obp": 0.418,
+      "slg": 0.603,
+      "rbi": 104,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.357,
+      "obp": 0.418,
+      "slg": 0.603,
+      "rbi": 104,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 135,
+      "plateAppearances": 595,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.418,
+      "slg": 0.603,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "garcino01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 119.1,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-jose-canseco-1996",
+    "playerId": "cansejo01",
+    "playerSlug": "jose-canseco",
+    "name": "Jose Canseco",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 28,
+      "avg": 0.289,
+      "obp": 0.4,
+      "slg": 0.589,
+      "rbi": 82,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 28,
+      "avg": 0.289,
+      "obp": 0.4,
+      "slg": 0.589,
+      "rbi": 82,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 96,
+      "plateAppearances": 432,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.4,
+      "slg": 0.589,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "cansejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 111.24285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-john-valentin-1995",
+    "playerId": "valenjo02",
+    "playerSlug": "john-valentin",
+    "name": "John Valentin",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.298,
+      "obp": 0.399,
+      "slg": 0.533,
+      "rbi": 102,
+      "sb": 20
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.298,
+      "obp": 0.399,
+      "slg": 0.533,
+      "rbi": 102,
+      "sb": 20
+    },
+    "scoringStats": {
+      "games": 135,
+      "plateAppearances": 617,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.399,
+      "slg": 0.533,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "valenjo02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.82857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-reggie-jefferson-1996",
+    "playerId": "jeffere01",
+    "playerSlug": "reggie-jefferson",
+    "name": "Reggie Jefferson",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.347,
+      "obp": 0.388,
+      "slg": 0.593,
+      "rbi": 74,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.347,
+      "obp": 0.388,
+      "slg": 0.593,
+      "rbi": 74,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 122,
+      "plateAppearances": 418,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.388,
+      "slg": 0.593,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "jeffere01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.04285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-phil-plantier-1991",
+    "playerId": "plantph01",
+    "playerSlug": "phil-plantier",
+    "name": "Phil Plantier",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.331,
+      "obp": 0.42,
+      "slg": 0.615,
+      "rbi": 35,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.331,
+      "obp": 0.42,
+      "slg": 0.615,
+      "rbi": 35,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 53,
+      "plateAppearances": 174,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.42,
+      "slg": 0.615,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "plantph01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.47142857142856,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-wade-boggs-1991",
+    "playerId": "boggswa01",
+    "playerSlug": "wade-boggs",
+    "name": "Wade Boggs",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.332,
+      "obp": 0.421,
+      "slg": 0.46,
+      "rbi": 51,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.332,
+      "obp": 0.421,
+      "slg": 0.46,
+      "rbi": 51,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 144,
+      "plateAppearances": 641,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.421,
+      "slg": 0.46,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "boggswa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.41428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-brian-daubach-1999",
+    "playerId": "daubabr01",
+    "playerSlug": "brian-daubach",
+    "name": "Brian Daubach",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.294,
+      "obp": 0.36,
+      "slg": 0.562,
+      "rbi": 73,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.294,
+      "obp": 0.36,
+      "slg": 0.562,
+      "rbi": 73,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 110,
+      "plateAppearances": 420,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.36,
+      "slg": 0.562,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "daubabr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.2,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-mike-stanley-1996",
+    "playerId": "stanlmi02",
+    "playerSlug": "mike-stanley",
+    "name": "Mike Stanley",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.27,
+      "obp": 0.383,
+      "slg": 0.506,
+      "rbi": 69,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.27,
+      "obp": 0.383,
+      "slg": 0.506,
+      "rbi": 69,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 121,
+      "plateAppearances": 473,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.383,
+      "slg": 0.506,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "stanlmi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.41428571428573,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-jose-offerman-1999",
+    "playerId": "offerjo01",
+    "playerSlug": "jose-offerman",
+    "name": "Jose Offerman",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.294,
+      "obp": 0.391,
+      "slg": 0.435,
+      "rbi": 69,
+      "sb": 18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.294,
+      "obp": 0.391,
+      "slg": 0.435,
+      "rbi": 69,
+      "sb": 18
+    },
+    "scoringStats": {
+      "games": 149,
+      "plateAppearances": 691,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.391,
+      "slg": 0.435,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "offerjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.34285714285716,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-ellis-burks-1990",
+    "playerId": "burksel01",
+    "playerSlug": "ellis-burks",
+    "name": "Ellis Burks",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.296,
+      "obp": 0.349,
+      "slg": 0.486,
+      "rbi": 89,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.296,
+      "obp": 0.349,
+      "slg": 0.486,
+      "rbi": 89,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 639,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.349,
+      "slg": 0.486,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "burksel01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.75714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-tim-naehring-1995",
+    "playerId": "naehrti01",
+    "playerSlug": "tim-naehring",
+    "name": "Tim Naehring",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.307,
+      "obp": 0.415,
+      "slg": 0.448,
+      "rbi": 57,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.307,
+      "obp": 0.415,
+      "slg": 0.448,
+      "rbi": 57,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 126,
+      "plateAppearances": 516,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.415,
+      "slg": 0.448,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "naehrti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.04285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-jason-varitek-1999",
+    "playerId": "varitja01",
+    "playerSlug": "jason-varitek",
+    "name": "Jason Varitek",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.269,
+      "obp": 0.33,
+      "slg": 0.482,
+      "rbi": 76,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.269,
+      "obp": 0.33,
+      "slg": 0.482,
+      "rbi": 76,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 144,
+      "plateAppearances": 539,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.33,
+      "slg": 0.482,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "varitja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.60000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-trot-nixon-1999",
+    "playerId": "nixontr01",
+    "playerSlug": "trot-nixon",
+    "name": "Trot Nixon",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.27,
+      "obp": 0.357,
+      "slg": 0.472,
+      "rbi": 52,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.27,
+      "obp": 0.357,
+      "slg": 0.472,
+      "rbi": 52,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 124,
+      "plateAppearances": 445,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.472,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "nixontr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.6142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-jody-reed-1990",
+    "playerId": "reedjo01",
+    "playerSlug": "jody-reed",
+    "name": "Jody Reed",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.289,
+      "obp": 0.371,
+      "slg": 0.39,
+      "rbi": 51,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.289,
+      "obp": 0.371,
+      "slg": 0.39,
+      "rbi": 51,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 680,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.371,
+      "slg": 0.39,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "reedjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.52857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-tom-brunansky-1992",
+    "playerId": "brunato01",
+    "playerSlug": "tom-brunansky",
+    "name": "Tom Brunansky",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.266,
+      "obp": 0.354,
+      "slg": 0.445,
+      "rbi": 74,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.266,
+      "obp": 0.354,
+      "slg": 0.445,
+      "rbi": 74,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 138,
+      "plateAppearances": 531,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.354,
+      "slg": 0.445,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "brunato01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.07142857142856,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-damon-buford-1998",
+    "playerId": "buforda01",
+    "playerSlug": "damon-buford",
+    "name": "Damon Buford",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.282,
+      "obp": 0.349,
+      "slg": 0.523,
+      "rbi": 42,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.282,
+      "obp": 0.349,
+      "slg": 0.523,
+      "rbi": 42,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 86,
+      "plateAppearances": 241,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.349,
+      "slg": 0.523,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "buforda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.08571428571429,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-scott-hatteberg-1998",
+    "playerId": "hattesc01",
+    "playerSlug": "scott-hatteberg",
+    "name": "Scott Hatteberg",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.276,
+      "obp": 0.359,
+      "slg": 0.446,
+      "rbi": 43,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.276,
+      "obp": 0.359,
+      "slg": 0.446,
+      "rbi": 43,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 112,
+      "plateAppearances": 410,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.446,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "hattesc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.21428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-scott-cooper-1993",
+    "playerId": "coopesc01",
+    "playerSlug": "scott-cooper",
+    "name": "Scott Cooper",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.279,
+      "obp": 0.355,
+      "slg": 0.397,
+      "rbi": 63,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.279,
+      "obp": 0.355,
+      "slg": 0.397,
+      "rbi": 63,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 592,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.397,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "coopesc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.11428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-jeff-frye-1997",
+    "playerId": "fryeje01",
+    "playerSlug": "jeff-frye",
+    "name": "Jeff Frye",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.312,
+      "obp": 0.352,
+      "slg": 0.433,
+      "rbi": 51,
+      "sb": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.312,
+      "obp": 0.352,
+      "slg": 0.433,
+      "rbi": 51,
+      "sb": 19
+    },
+    "scoringStats": {
+      "games": 127,
+      "plateAppearances": 440,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.433,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "fryeje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.07142857142856,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-darren-bragg-1998",
+    "playerId": "braggda01",
+    "playerSlug": "darren-bragg",
+    "name": "Darren Bragg",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.279,
+      "obp": 0.351,
+      "slg": 0.423,
+      "rbi": 57,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.279,
+      "obp": 0.351,
+      "slg": 0.423,
+      "rbi": 57,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 129,
+      "plateAppearances": 461,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.351,
+      "slg": 0.423,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "braggda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.57142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-pedro-martinez-1999",
+    "playerId": "martipe02",
+    "playerSlug": "pedro-martinez",
+    "name": "Pedro Martinez",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.07,
+      "whip": 0.923,
+      "so": 313,
+      "wins": 23,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.07,
+      "whip": 0.923,
+      "so": 313,
+      "wins": 23,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.923,
+      "fip": null,
+      "inningsPitched": 213.3,
+      "strikeoutRate": 13.20675105485232,
+      "walkRate": 1.561181434599156,
+      "starts": 29,
+      "reliefAppearances": 2
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "martipe02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.01835443037976,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-roger-clemens-1990",
+    "playerId": "clemero02",
+    "playerSlug": "roger-clemens",
+    "name": "Roger Clemens",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.93,
+      "whip": 1.082,
+      "so": 209,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.93,
+      "whip": 1.082,
+      "so": 209,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.082,
+      "fip": null,
+      "inningsPitched": 228.3,
+      "strikeoutRate": 8.23915900131406,
+      "walkRate": 2.128777923784494,
+      "starts": 31,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "clemero02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.36557161629435,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-jeff-gray-1991",
+    "playerId": "grayje01",
+    "playerSlug": "jeff-gray",
+    "name": "Jeff Gray",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 0.795,
+      "so": 41,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 0.795,
+      "so": 41,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.795,
+      "fip": null,
+      "inningsPitched": 61.7,
+      "strikeoutRate": 5.980551053484603,
+      "walkRate": 1.458670988654781,
+      "starts": 0,
+      "reliefAppearances": 50
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "grayje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 76.80282009724473,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-rich-garces-1999",
+    "playerId": "garceri01",
+    "playerSlug": "rich-garces",
+    "name": "Rich Garces",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.55,
+      "whip": 1.057,
+      "so": 33,
+      "wins": 5,
+      "saves": 2,
+      "sv": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.55,
+      "whip": 1.057,
+      "so": 33,
+      "wins": 5,
+      "saves": 2,
+      "sv": 2
+    },
+    "scoringStats": {
+      "whip": 1.057,
+      "fip": null,
+      "inningsPitched": 40.7,
+      "strikeoutRate": 7.2972972972972965,
+      "walkRate": 3.98034398034398,
+      "starts": 0,
+      "reliefAppearances": 30
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "garceri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.23542997542998,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-tom-gordon-1998",
+    "playerId": "gordoto01",
+    "playerSlug": "tom-gordon",
+    "name": "Tom Gordon",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 1.008,
+      "so": 78,
+      "wins": 7,
+      "saves": 46,
+      "sv": 46
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 1.008,
+      "so": 78,
+      "wins": 7,
+      "saves": 46,
+      "sv": 46
+    },
+    "scoringStats": {
+      "whip": 1.008,
+      "fip": null,
+      "inningsPitched": 79.3,
+      "strikeoutRate": 8.852459016393443,
+      "walkRate": 2.837326607818411,
+      "starts": 0,
+      "reliefAppearances": 73
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "gordoto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.22269861286256,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-bret-saberhagen-1999",
+    "playerId": "saberbr01",
+    "playerSlug": "bret-saberhagen",
+    "name": "Bret Saberhagen",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.118,
+      "so": 81,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.118,
+      "so": 81,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.118,
+      "fip": null,
+      "inningsPitched": 119,
+      "strikeoutRate": 6.126050420168068,
+      "walkRate": 0.8319327731092437,
+      "starts": 22,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "saberbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.79228758169934,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-danny-darwin-1993",
+    "playerId": "darwida01",
+    "playerSlug": "danny-darwin",
+    "name": "Danny Darwin",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.26,
+      "whip": 1.068,
+      "so": 130,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.26,
+      "whip": 1.068,
+      "so": 130,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.068,
+      "fip": null,
+      "inningsPitched": 229.3,
+      "strikeoutRate": 5.10248582642826,
+      "walkRate": 1.9232446576537285,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "darwida01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.2888617531618,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-1990s-tim-wakefield-1995",
+    "playerId": "wakefti01",
+    "playerSlug": "tim-wakefield",
+    "name": "Tim Wakefield",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.183,
+      "so": 119,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.183,
+      "so": 119,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.183,
+      "fip": null,
+      "inningsPitched": 195.3,
+      "strikeoutRate": 5.483870967741935,
+      "walkRate": 3.1336405529953915,
+      "starts": 27,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "wakefti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.315345622119814,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

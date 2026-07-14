@@ -1,0 +1,1961 @@
+[
+  {
+    "id": "bos-2000s-manny-ramirez-2002",
+    "playerId": "ramirma02",
+    "playerSlug": "manny-ramirez",
+    "name": "Manny Ramirez",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 33,
+      "avg": 0.349,
+      "obp": 0.45,
+      "slg": 0.647,
+      "rbi": 107,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 33,
+      "avg": 0.349,
+      "obp": 0.45,
+      "slg": 0.647,
+      "rbi": 107,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 120,
+      "plateAppearances": 518,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.45,
+      "slg": 0.647,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "ramirma02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 124.5,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-nomar-garciaparra-2000",
+    "playerId": "garcino01",
+    "playerSlug": "nomar-garciaparra",
+    "name": "Nomar Garciaparra",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.372,
+      "obp": 0.434,
+      "slg": 0.599,
+      "rbi": 96,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.372,
+      "obp": 0.434,
+      "slg": 0.599,
+      "rbi": 96,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 599,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.434,
+      "slg": 0.599,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "garcino01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 120.41428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-kevin-youkilis-2008",
+    "playerId": "youklke01",
+    "playerSlug": "kevin-youkilis",
+    "name": "Kevin Youkilis",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 29,
+      "avg": 0.312,
+      "obp": 0.39,
+      "slg": 0.569,
+      "rbi": 115,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 29,
+      "avg": 0.312,
+      "obp": 0.39,
+      "slg": 0.569,
+      "rbi": 115,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 621,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.39,
+      "slg": 0.569,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "youklke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 113.64285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-carl-everett-2000",
+    "playerId": "evereca01",
+    "playerSlug": "carl-everett",
+    "name": "Carl Everett",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.3,
+      "obp": 0.373,
+      "slg": 0.587,
+      "rbi": 108,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.3,
+      "obp": 0.373,
+      "slg": 0.587,
+      "rbi": 108,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 561,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.373,
+      "slg": 0.587,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "evereca01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 112.02857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-trot-nixon-2003",
+    "playerId": "nixontr01",
+    "playerSlug": "trot-nixon",
+    "name": "Trot Nixon",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 28,
+      "avg": 0.306,
+      "obp": 0.396,
+      "slg": 0.578,
+      "rbi": 87,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 28,
+      "avg": 0.306,
+      "obp": 0.396,
+      "slg": 0.578,
+      "rbi": 87,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 512,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.396,
+      "slg": 0.578,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "nixontr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 112.02857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-bill-mueller-2003",
+    "playerId": "muellbi02",
+    "playerSlug": "bill-mueller",
+    "name": "Bill Mueller",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.326,
+      "obp": 0.398,
+      "slg": 0.54,
+      "rbi": 85,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.326,
+      "obp": 0.398,
+      "slg": 0.54,
+      "rbi": 85,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 146,
+      "plateAppearances": 596,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.398,
+      "slg": 0.54,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "muellbi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.82857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-jason-bay-2009",
+    "playerId": "bayja01",
+    "playerSlug": "jason-bay",
+    "name": "Jason Bay",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.267,
+      "obp": 0.384,
+      "slg": 0.537,
+      "rbi": 119,
+      "sb": 13
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.267,
+      "obp": 0.384,
+      "slg": 0.537,
+      "rbi": 119,
+      "sb": 13
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 638,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.537,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "bayja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.32857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-dustin-pedroia-2008",
+    "playerId": "pedrodu01",
+    "playerSlug": "dustin-pedroia",
+    "name": "Dustin Pedroia",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.326,
+      "obp": 0.376,
+      "slg": 0.493,
+      "rbi": 83,
+      "sb": 20
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.326,
+      "obp": 0.376,
+      "slg": 0.493,
+      "rbi": 83,
+      "sb": 20
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 719,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.376,
+      "slg": 0.493,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "pedrodu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.44285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-j-d-drew-2009",
+    "playerId": "drewjd01",
+    "playerSlug": "j-d-drew",
+    "name": "J. D. Drew",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.279,
+      "obp": 0.392,
+      "slg": 0.522,
+      "rbi": 68,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.279,
+      "obp": 0.392,
+      "slg": 0.522,
+      "rbi": 68,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 538,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.392,
+      "slg": 0.522,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "drewjd01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.77142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-mike-lowell-2007",
+    "playerId": "lowelmi01",
+    "playerSlug": "mike-lowell",
+    "name": "Mike Lowell",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.324,
+      "obp": 0.378,
+      "slg": 0.501,
+      "rbi": 120,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.324,
+      "obp": 0.378,
+      "slg": 0.501,
+      "rbi": 120,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 653,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.378,
+      "slg": 0.501,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "lowelmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.55714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-johnny-damon-2004",
+    "playerId": "damonjo01",
+    "playerSlug": "johnny-damon",
+    "name": "Johnny Damon",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.304,
+      "obp": 0.38,
+      "slg": 0.477,
+      "rbi": 94,
+      "sb": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.304,
+      "obp": 0.38,
+      "slg": 0.477,
+      "rbi": 94,
+      "sb": 19
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 702,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.38,
+      "slg": 0.477,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "damonjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.75714285714287,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-jason-varitek-2004",
+    "playerId": "varitja01",
+    "playerSlug": "jason-varitek",
+    "name": "Jason Varitek",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.296,
+      "obp": 0.39,
+      "slg": 0.482,
+      "rbi": 73,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.296,
+      "obp": 0.39,
+      "slg": 0.482,
+      "rbi": 73,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 536,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.39,
+      "slg": 0.482,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "varitja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.51428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-kevin-millar-2004",
+    "playerId": "millake01",
+    "playerSlug": "kevin-millar",
+    "name": "Kevin Millar",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.297,
+      "obp": 0.383,
+      "slg": 0.474,
+      "rbi": 74,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.297,
+      "obp": 0.383,
+      "slg": 0.474,
+      "rbi": 74,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 588,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.383,
+      "slg": 0.474,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "millake01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.5,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-jonathan-papelbon-2006",
+    "playerId": "papeljo01",
+    "playerSlug": "jonathan-papelbon",
+    "name": "Jonathan Papelbon",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.92,
+      "whip": 0.776,
+      "so": 75,
+      "wins": 4,
+      "saves": 35,
+      "sv": 35
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.92,
+      "whip": 0.776,
+      "so": 75,
+      "wins": 4,
+      "saves": 35,
+      "sv": 35
+    },
+    "scoringStats": {
+      "whip": 0.776,
+      "fip": null,
+      "inningsPitched": 68.3,
+      "strikeoutRate": 9.882869692532942,
+      "walkRate": 1.7130307467057102,
+      "starts": 0,
+      "reliefAppearances": 59
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "papeljo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.49475841874084,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-mark-bellhorn-2004",
+    "playerId": "bellhma01",
+    "playerSlug": "mark-bellhorn",
+    "name": "Mark Bellhorn",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.264,
+      "obp": 0.373,
+      "slg": 0.444,
+      "rbi": 82,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.264,
+      "obp": 0.373,
+      "slg": 0.444,
+      "rbi": 82,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 138,
+      "plateAppearances": 619,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.373,
+      "slg": 0.444,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "bellhma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.38571428571427,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-brian-daubach-2001",
+    "playerId": "daubabr01",
+    "playerSlug": "brian-daubach",
+    "name": "Brian Daubach",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.263,
+      "obp": 0.35,
+      "slg": 0.509,
+      "rbi": 71,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.263,
+      "obp": 0.35,
+      "slg": 0.509,
+      "rbi": 71,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 122,
+      "plateAppearances": 471,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.35,
+      "slg": 0.509,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "daubabr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.35714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-victor-martinez-2009",
+    "playerId": "martivi01",
+    "playerSlug": "victor-martinez",
+    "name": "Victor Martinez",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.336,
+      "obp": 0.405,
+      "slg": 0.507,
+      "rbi": 41,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.336,
+      "obp": 0.405,
+      "slg": 0.507,
+      "rbi": 41,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 56,
+      "plateAppearances": 237,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.405,
+      "slg": 0.507,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "martivi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.97142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-jacoby-ellsbury-2009",
+    "playerId": "ellsbja01",
+    "playerSlug": "jacoby-ellsbury",
+    "name": "Jacoby Ellsbury",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.301,
+      "obp": 0.355,
+      "slg": 0.415,
+      "rbi": 60,
+      "sb": 70
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.301,
+      "obp": 0.355,
+      "slg": 0.415,
+      "rbi": 60,
+      "sb": 70
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 685,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.415,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "ellsbja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.57142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-pedro-martinez-2000",
+    "playerId": "martipe02",
+    "playerSlug": "pedro-martinez",
+    "name": "Pedro Martinez",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.74,
+      "whip": 0.737,
+      "so": 284,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.74,
+      "whip": 0.737,
+      "so": 284,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.737,
+      "fip": null,
+      "inningsPitched": 217,
+      "strikeoutRate": 11.778801843317972,
+      "walkRate": 1.327188940092166,
+      "starts": 29,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "martipe02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.0574193548387,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-doug-mirabelli-2004",
+    "playerId": "mirabdo01",
+    "playerSlug": "doug-mirabelli",
+    "name": "Doug Mirabelli",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.281,
+      "obp": 0.368,
+      "slg": 0.525,
+      "rbi": 32,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.281,
+      "obp": 0.368,
+      "slg": 0.525,
+      "rbi": 32,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 59,
+      "plateAppearances": 182,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.368,
+      "slg": 0.525,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "mirabdo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.5,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-edgar-renteria-2005",
+    "playerId": "renteed01",
+    "playerSlug": "edgar-renteria",
+    "name": "Edgar Renteria",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.276,
+      "obp": 0.335,
+      "slg": 0.385,
+      "rbi": 70,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.276,
+      "obp": 0.335,
+      "slg": 0.385,
+      "rbi": 70,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 686,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.335,
+      "slg": 0.385,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "renteed01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.6,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-orlando-cabrera-2004",
+    "playerId": "cabreor01",
+    "playerSlug": "orlando-cabrera",
+    "name": "Orlando Cabrera",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.294,
+      "obp": 0.32,
+      "slg": 0.465,
+      "rbi": 31,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.294,
+      "obp": 0.32,
+      "slg": 0.465,
+      "rbi": 31,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 58,
+      "plateAppearances": 247,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.32,
+      "slg": 0.465,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "cabreor01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.55714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-keith-foulke-2004",
+    "playerId": "foulkke01",
+    "playerSlug": "keith-foulke",
+    "name": "Keith Foulke",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.17,
+      "whip": 0.94,
+      "so": 79,
+      "wins": 5,
+      "saves": 32,
+      "sv": 32
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.17,
+      "whip": 0.94,
+      "so": 79,
+      "wins": 5,
+      "saves": 32,
+      "sv": 32
+    },
+    "scoringStats": {
+      "whip": 0.94,
+      "fip": null,
+      "inningsPitched": 83,
+      "strikeoutRate": 8.566265060240964,
+      "walkRate": 1.6265060240963856,
+      "starts": 0,
+      "reliefAppearances": 72
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "foulkke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 81.56963855421687,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-hideki-okajima-2007",
+    "playerId": "okajihi01",
+    "playerSlug": "hideki-okajima",
+    "name": "Hideki Okajima",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.22,
+      "whip": 0.971,
+      "so": 63,
+      "wins": 3,
+      "saves": 5,
+      "sv": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.22,
+      "whip": 0.971,
+      "so": 63,
+      "wins": 3,
+      "saves": 5,
+      "sv": 5
+    },
+    "scoringStats": {
+      "whip": 0.971,
+      "fip": null,
+      "inningsPitched": 69,
+      "strikeoutRate": 8.217391304347826,
+      "walkRate": 2.217391304347826,
+      "starts": 0,
+      "reliefAppearances": 66
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "okajihi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.94,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-derek-lowe-2002",
+    "playerId": "lowede01",
+    "playerSlug": "derek-lowe",
+    "name": "Derek Lowe",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.58,
+      "whip": 0.974,
+      "so": 127,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.58,
+      "whip": 0.974,
+      "so": 127,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.974,
+      "fip": null,
+      "inningsPitched": 219.7,
+      "strikeoutRate": 5.2025489303595815,
+      "walkRate": 1.9663177059626764,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "lowede01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.41434683659536,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-curt-schilling-2004",
+    "playerId": "schilcu01",
+    "playerSlug": "curt-schilling",
+    "name": "Curt Schilling",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.26,
+      "whip": 1.063,
+      "so": 203,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.26,
+      "whip": 1.063,
+      "so": 203,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.063,
+      "fip": null,
+      "inningsPitched": 226.7,
+      "strikeoutRate": 8.059108954565506,
+      "walkRate": 1.3895015438906044,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "schilcu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 65.62441111601235,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-tim-wakefield-2002",
+    "playerId": "wakefti01",
+    "playerSlug": "tim-wakefield",
+    "name": "Tim Wakefield",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.81,
+      "whip": 1.053,
+      "so": 134,
+      "wins": 11,
+      "saves": 3,
+      "sv": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.81,
+      "whip": 1.053,
+      "so": 134,
+      "wins": 11,
+      "saves": 3,
+      "sv": 3
+    },
+    "scoringStats": {
+      "whip": 1.053,
+      "fip": null,
+      "inningsPitched": 163.3,
+      "strikeoutRate": 7.385180649112063,
+      "walkRate": 2.810777709736681,
+      "starts": 15,
+      "reliefAppearances": 30
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "wakefti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 65.1538266312853,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "bos-2000s-josh-beckett-2007",
+    "playerId": "beckejo02",
+    "playerSlug": "josh-beckett",
+    "name": "Josh Beckett",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.141,
+      "so": 194,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.141,
+      "so": 194,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.141,
+      "fip": null,
+      "inningsPitched": 200.7,
+      "strikeoutRate": 8.699551569506728,
+      "walkRate": 1.7937219730941705,
+      "starts": 30,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "beckejo02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 63.448744394618835,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

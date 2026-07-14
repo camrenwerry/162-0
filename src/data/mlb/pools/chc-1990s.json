@@ -1,0 +1,1963 @@
+[
+  {
+    "id": "chc-1990s-sammy-sosa-1998",
+    "playerId": "sosasa01",
+    "playerSlug": "sammy-sosa",
+    "name": "Sammy Sosa",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 66,
+      "avg": 0.308,
+      "obp": 0.377,
+      "slg": 0.647,
+      "rbi": 158,
+      "sb": 18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 66,
+      "avg": 0.308,
+      "obp": 0.377,
+      "slg": 0.647,
+      "rbi": 158,
+      "sb": 18
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 722,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.377,
+      "slg": 0.647,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "sosasa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 123.02857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-ryne-sandberg-1990",
+    "playerId": "sandbry01",
+    "playerSlug": "ryne-sandberg",
+    "name": "Ryne Sandberg",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 40,
+      "avg": 0.306,
+      "obp": 0.354,
+      "slg": 0.559,
+      "rbi": 100,
+      "sb": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 40,
+      "avg": 0.306,
+      "obp": 0.354,
+      "slg": 0.559,
+      "rbi": 100,
+      "sb": 25
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 675,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.354,
+      "slg": 0.559,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "sandbry01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.58571428571429,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-mark-grace-1995",
+    "playerId": "gracema01",
+    "playerSlug": "mark-grace",
+    "name": "Mark Grace",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.326,
+      "obp": 0.395,
+      "slg": 0.516,
+      "rbi": 92,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.326,
+      "obp": 0.395,
+      "slg": 0.516,
+      "rbi": 92,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 143,
+      "plateAppearances": 626,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.395,
+      "slg": 0.516,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "gracema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.9857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-rick-wilkins-1993",
+    "playerId": "wilkiri01",
+    "playerSlug": "rick-wilkins",
+    "name": "Rick Wilkins",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 30,
+      "avg": 0.303,
+      "obp": 0.376,
+      "slg": 0.561,
+      "rbi": 73,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 30,
+      "avg": 0.303,
+      "obp": 0.376,
+      "slg": 0.561,
+      "rbi": 73,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 500,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.376,
+      "slg": 0.561,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "wilkiri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.9857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-henry-rodriguez-1999",
+    "playerId": "rodrihe02",
+    "playerSlug": "henry-rodriguez",
+    "name": "Henry Rodriguez",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.304,
+      "obp": 0.381,
+      "slg": 0.544,
+      "rbi": 87,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.304,
+      "obp": 0.381,
+      "slg": 0.544,
+      "rbi": 87,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 130,
+      "plateAppearances": 504,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.381,
+      "slg": 0.544,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "rodrihe02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.9,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-andre-dawson-1990",
+    "playerId": "dawsoan01",
+    "playerSlug": "andre-dawson",
+    "name": "Andre Dawson",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.31,
+      "obp": 0.358,
+      "slg": 0.535,
+      "rbi": 100,
+      "sb": 16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.31,
+      "obp": 0.358,
+      "slg": 0.535,
+      "rbi": 100,
+      "sb": 16
+    },
+    "scoringStats": {
+      "games": 147,
+      "plateAppearances": 581,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.358,
+      "slg": 0.535,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "dawsoan01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.9,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-gary-gaetti-1998",
+    "playerId": "gaettga01",
+    "playerSlug": "gary-gaetti",
+    "name": "Gary Gaetti",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.32,
+      "obp": 0.397,
+      "slg": 0.594,
+      "rbi": 27,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.32,
+      "obp": 0.397,
+      "slg": 0.594,
+      "rbi": 27,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 37,
+      "plateAppearances": 146,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.397,
+      "slg": 0.594,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "gaettga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.27142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-glenallen-hill-1998",
+    "playerId": "hillgl01",
+    "playerSlug": "glenallen-hill",
+    "name": "Glenallen Hill",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.351,
+      "obp": 0.414,
+      "slg": 0.573,
+      "rbi": 23,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.351,
+      "obp": 0.414,
+      "slg": 0.573,
+      "rbi": 23,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 48,
+      "plateAppearances": 145,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.414,
+      "slg": 0.573,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "hillgl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.84285714285713,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-brian-mcrae-1996",
+    "playerId": "mcraebr01",
+    "playerSlug": "brian-mcrae",
+    "name": "Brian McRae",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.276,
+      "obp": 0.36,
+      "slg": 0.425,
+      "rbi": 66,
+      "sb": 37
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.276,
+      "obp": 0.36,
+      "slg": 0.425,
+      "rbi": 66,
+      "sb": 37
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 714,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.36,
+      "slg": 0.425,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "mcraebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.89999999999998,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-scott-servais-1995",
+    "playerId": "servasc01",
+    "playerSlug": "scott-servais",
+    "name": "Scott Servais",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.286,
+      "obp": 0.371,
+      "slg": 0.56,
+      "rbi": 35,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.286,
+      "obp": 0.371,
+      "slg": 0.56,
+      "rbi": 35,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 52,
+      "plateAppearances": 202,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.371,
+      "slg": 0.56,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "servasc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.87142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-george-bell-1991",
+    "playerId": "bellge02",
+    "playerSlug": "george-bell",
+    "name": "George Bell",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.285,
+      "obp": 0.323,
+      "slg": 0.468,
+      "rbi": 86,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.285,
+      "obp": 0.323,
+      "slg": 0.468,
+      "rbi": 86,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 149,
+      "plateAppearances": 603,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.323,
+      "slg": 0.468,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "bellge02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.32857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-brant-brown-1998",
+    "playerId": "brownbr01",
+    "playerSlug": "brant-brown",
+    "name": "Brant Brown",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.291,
+      "obp": 0.348,
+      "slg": 0.501,
+      "rbi": 48,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.291,
+      "obp": 0.348,
+      "slg": 0.501,
+      "rbi": 48,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 124,
+      "plateAppearances": 379,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.501,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "brownbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.72857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-mickey-morandini-1998",
+    "playerId": "moranmi01",
+    "playerSlug": "mickey-morandini",
+    "name": "Mickey Morandini",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.296,
+      "obp": 0.38,
+      "slg": 0.385,
+      "rbi": 53,
+      "sb": 13
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.296,
+      "obp": 0.38,
+      "slg": 0.385,
+      "rbi": 53,
+      "sb": 13
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 665,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.38,
+      "slg": 0.385,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "moranmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.5,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-hector-villanueva-1991",
+    "playerId": "villahe01",
+    "playerSlug": "hector-villanueva",
+    "name": "Hector Villanueva",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.276,
+      "obp": 0.346,
+      "slg": 0.542,
+      "rbi": 32,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.276,
+      "obp": 0.346,
+      "slg": 0.542,
+      "rbi": 32,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 71,
+      "plateAppearances": 214,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.346,
+      "slg": 0.542,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "villahe01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.91428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-dwight-smith-1993",
+    "playerId": "smithdw01",
+    "playerSlug": "dwight-smith",
+    "name": "Dwight Smith",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.3,
+      "obp": 0.355,
+      "slg": 0.494,
+      "rbi": 35,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.3,
+      "obp": 0.355,
+      "slg": 0.494,
+      "rbi": 35,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 111,
+      "plateAppearances": 341,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.494,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "smithdw01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.64285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-jose-hernandez-1998",
+    "playerId": "hernajo01",
+    "playerSlug": "jose-hernandez",
+    "name": "Jose Hernandez",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B",
+      "SS",
+      "CF",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.254,
+      "obp": 0.311,
+      "slg": 0.471,
+      "rbi": 75,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.254,
+      "obp": 0.311,
+      "slg": 0.471,
+      "rbi": 75,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 149,
+      "plateAppearances": 531,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.311,
+      "slg": 0.471,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "hernajo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.37142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-dave-hansen-1997",
+    "playerId": "hanseda01",
+    "playerSlug": "dave-hansen",
+    "name": "Dave Hansen",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.311,
+      "obp": 0.429,
+      "slg": 0.45,
+      "rbi": 21,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.311,
+      "obp": 0.429,
+      "slg": 0.45,
+      "rbi": 21,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 90,
+      "plateAppearances": 184,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.429,
+      "slg": 0.45,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "hanseda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.15714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-shawon-dunston-1995",
+    "playerId": "dunstsh01",
+    "playerSlug": "shawon-dunston",
+    "name": "Shawon Dunston",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.296,
+      "obp": 0.317,
+      "slg": 0.472,
+      "rbi": 69,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.296,
+      "obp": 0.317,
+      "slg": 0.472,
+      "rbi": 69,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 127,
+      "plateAppearances": 496,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.317,
+      "slg": 0.472,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "dunstsh01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.07142857142856,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-jose-vizcaino-1993",
+    "playerId": "vizcajo01",
+    "playerSlug": "jose-vizcaino",
+    "name": "Jose Vizcaino",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.287,
+      "obp": 0.34,
+      "slg": 0.358,
+      "rbi": 54,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.287,
+      "obp": 0.34,
+      "slg": 0.358,
+      "rbi": 54,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 609,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.34,
+      "slg": 0.358,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "vizcajo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.19999999999999,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-dave-magadan-1996",
+    "playerId": "magadda01",
+    "playerSlug": "dave-magadan",
+    "name": "Dave Magadan",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.254,
+      "obp": 0.36,
+      "slg": 0.367,
+      "rbi": 17,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.254,
+      "obp": 0.36,
+      "slg": 0.367,
+      "rbi": 17,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 78,
+      "plateAppearances": 200,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.36,
+      "slg": 0.367,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "magadda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.41428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-greg-maddux-1992",
+    "playerId": "maddugr01",
+    "playerSlug": "greg-maddux",
+    "name": "Greg Maddux",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.18,
+      "whip": 1.011,
+      "so": 199,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.18,
+      "whip": 1.011,
+      "so": 199,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.011,
+      "fip": null,
+      "inningsPitched": 268,
+      "strikeoutRate": 6.682835820895522,
+      "walkRate": 2.3507462686567164,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "maddugr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 76.11813432835821,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-chuck-mcelroy-1991",
+    "playerId": "mcelrch01",
+    "playerSlug": "chuck-mcelroy",
+    "name": "Chuck McElroy",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.95,
+      "whip": 1.283,
+      "so": 92,
+      "wins": 6,
+      "saves": 3,
+      "sv": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.95,
+      "whip": 1.283,
+      "so": 92,
+      "wins": 6,
+      "saves": 3,
+      "sv": 3
+    },
+    "scoringStats": {
+      "whip": 1.283,
+      "fip": null,
+      "inningsPitched": 101.3,
+      "strikeoutRate": 8.173741362290228,
+      "walkRate": 5.064165844027641,
+      "starts": 0,
+      "reliefAppearances": 71
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "mcelrch01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.60436327739387,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-bob-patterson-1997",
+    "playerId": "pattebo01",
+    "playerSlug": "bob-patterson",
+    "name": "Bob Patterson",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 0.961,
+      "so": 58,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 0.961,
+      "so": 58,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.961,
+      "fip": null,
+      "inningsPitched": 59.3,
+      "strikeoutRate": 8.802698145025296,
+      "walkRate": 1.5177065767284992,
+      "starts": 0,
+      "reliefAppearances": 76
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "pattebo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.6274873524452,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-paul-assenmacher-1991",
+    "playerId": "assenpa01",
+    "playerSlug": "paul-assenmacher",
+    "name": "Paul Assenmacher",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.24,
+      "whip": 1.13,
+      "so": 117,
+      "wins": 7,
+      "saves": 15,
+      "sv": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.24,
+      "whip": 1.13,
+      "so": 117,
+      "wins": 7,
+      "saves": 15,
+      "sv": 15
+    },
+    "scoringStats": {
+      "whip": 1.13,
+      "fip": null,
+      "inningsPitched": 102.7,
+      "strikeoutRate": 10.253164556962025,
+      "walkRate": 2.7166504381694256,
+      "starts": 0,
+      "reliefAppearances": 75
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "assenpa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 65.82477117818891,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-mike-morgan-1992",
+    "playerId": "morgami01",
+    "playerSlug": "mike-morgan",
+    "name": "Mike Morgan",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.55,
+      "whip": 1.175,
+      "so": 123,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.55,
+      "whip": 1.175,
+      "so": 123,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.175,
+      "fip": null,
+      "inningsPitched": 240,
+      "strikeoutRate": 4.6125,
+      "walkRate": 2.9625,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "morgami01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1992; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 64.375,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-kerry-wood-1998",
+    "playerId": "woodke02",
+    "playerSlug": "kerry-wood",
+    "name": "Kerry Wood",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.4,
+      "whip": 1.212,
+      "so": 233,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.4,
+      "whip": 1.212,
+      "so": 233,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.212,
+      "fip": null,
+      "inningsPitched": 166.7,
+      "strikeoutRate": 12.579484103179364,
+      "walkRate": 4.589082183563288,
+      "starts": 26,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "woodke02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.206713990535235,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-steve-trachsel-1996",
+    "playerId": "trachst01",
+    "playerSlug": "steve-trachsel",
+    "name": "Steve Trachsel",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.03,
+      "whip": 1.185,
+      "so": 132,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.03,
+      "whip": 1.185,
+      "so": 132,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.185,
+      "fip": null,
+      "inningsPitched": 205,
+      "strikeoutRate": 5.795121951219512,
+      "walkRate": 2.7219512195121953,
+      "starts": 31,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "trachst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.93864498644986,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "chc-1990s-frank-castillo-1995",
+    "playerId": "castifr01",
+    "playerSlug": "frank-castillo",
+    "name": "Frank Castillo",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.21,
+      "whip": 1.229,
+      "so": 135,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.21,
+      "whip": 1.229,
+      "so": 135,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.229,
+      "fip": null,
+      "inningsPitched": 188,
+      "strikeoutRate": 6.462765957446808,
+      "walkRate": 2.4893617021276597,
+      "starts": 29,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "castifr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.30455082742317,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

@@ -1,0 +1,2033 @@
+[
+  {
+    "id": "nyy-1980s-don-mattingly-1986",
+    "playerId": "mattido01",
+    "playerSlug": "don-mattingly",
+    "name": "Don Mattingly",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 31,
+      "avg": 0.352,
+      "obp": 0.394,
+      "slg": 0.573,
+      "rbi": 113,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 31,
+      "avg": 0.352,
+      "obp": 0.394,
+      "slg": 0.573,
+      "rbi": 113,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 741,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.394,
+      "slg": 0.573,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "mattido01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.87142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-reggie-jackson-1980",
+    "playerId": "jacksre01",
+    "playerSlug": "reggie-jackson",
+    "name": "Reggie Jackson",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 41,
+      "avg": 0.3,
+      "obp": 0.398,
+      "slg": 0.597,
+      "rbi": 111,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 41,
+      "avg": 0.3,
+      "obp": 0.398,
+      "slg": 0.597,
+      "rbi": 111,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 143,
+      "plateAppearances": 601,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.398,
+      "slg": 0.597,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "jacksre01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 116.67142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-rickey-henderson-1985",
+    "playerId": "henderi01",
+    "playerSlug": "rickey-henderson",
+    "name": "Rickey Henderson",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.314,
+      "obp": 0.419,
+      "slg": 0.516,
+      "rbi": 72,
+      "sb": 80
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.314,
+      "obp": 0.419,
+      "slg": 0.516,
+      "rbi": 72,
+      "sb": 80
+    },
+    "scoringStats": {
+      "games": 143,
+      "plateAppearances": 654,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.419,
+      "slg": 0.516,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "henderi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 112.18571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-dave-winfield-1988",
+    "playerId": "winfida01",
+    "playerSlug": "dave-winfield",
+    "name": "Dave Winfield",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.322,
+      "obp": 0.398,
+      "slg": 0.53,
+      "rbi": 107,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.322,
+      "obp": 0.398,
+      "slg": 0.53,
+      "rbi": 107,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 149,
+      "plateAppearances": 631,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.398,
+      "slg": 0.53,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "winfida01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.82857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-dan-pasqua-1986",
+    "playerId": "pasquda01",
+    "playerSlug": "dan-pasqua",
+    "name": "Dan Pasqua",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.293,
+      "obp": 0.399,
+      "slg": 0.525,
+      "rbi": 45,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.293,
+      "obp": 0.399,
+      "slg": 0.525,
+      "rbi": 45,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 102,
+      "plateAppearances": 331,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.399,
+      "slg": 0.525,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "pasquda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.85714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-willie-randolph-1980",
+    "playerId": "randowi01",
+    "playerSlug": "willie-randolph",
+    "name": "Willie Randolph",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.294,
+      "obp": 0.427,
+      "slg": 0.407,
+      "rbi": 46,
+      "sb": 30
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.294,
+      "obp": 0.427,
+      "slg": 0.407,
+      "rbi": 46,
+      "sb": 30
+    },
+    "scoringStats": {
+      "games": 138,
+      "plateAppearances": 637,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.427,
+      "slg": 0.407,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "randowi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.6,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-jack-clark-1988",
+    "playerId": "clarkja01",
+    "playerSlug": "jack-clark",
+    "name": "Jack Clark",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.242,
+      "obp": 0.381,
+      "slg": 0.433,
+      "rbi": 93,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.242,
+      "obp": 0.381,
+      "slg": 0.433,
+      "rbi": 93,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 616,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.381,
+      "slg": 0.433,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "clarkja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-bob-watson-1980",
+    "playerId": "watsobo01",
+    "playerSlug": "bob-watson",
+    "name": "Bob Watson",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.307,
+      "obp": 0.368,
+      "slg": 0.456,
+      "rbi": 68,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.307,
+      "obp": 0.368,
+      "slg": 0.456,
+      "rbi": 68,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 130,
+      "plateAppearances": 524,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.368,
+      "slg": 0.456,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "watsobo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.37142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-jerry-mumphrey-1982",
+    "playerId": "mumphje01",
+    "playerSlug": "jerry-mumphrey",
+    "name": "Jerry Mumphrey",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.3,
+      "obp": 0.364,
+      "slg": 0.449,
+      "rbi": 68,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.3,
+      "obp": 0.364,
+      "slg": 0.449,
+      "rbi": 68,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 123,
+      "plateAppearances": 530,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.364,
+      "slg": 0.449,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "mumphje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.44285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-ron-hassey-1985",
+    "playerId": "hassero01",
+    "playerSlug": "ron-hassey",
+    "name": "Ron Hassey",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.296,
+      "obp": 0.369,
+      "slg": 0.509,
+      "rbi": 42,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.296,
+      "obp": 0.369,
+      "slg": 0.509,
+      "rbi": 42,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 92,
+      "plateAppearances": 298,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.509,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "hassero01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.31428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-roy-smalley-1983",
+    "playerId": "smallro02",
+    "playerSlug": "roy-smalley",
+    "name": "Roy Smalley",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.275,
+      "obp": 0.357,
+      "slg": 0.452,
+      "rbi": 62,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.275,
+      "obp": 0.357,
+      "slg": 0.452,
+      "rbi": 62,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 130,
+      "plateAppearances": 515,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.452,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "smallro02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.6142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-rich-gossage-1981",
+    "playerId": "gossari01",
+    "playerSlug": "rich-gossage",
+    "name": "Rich Gossage",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.77,
+      "whip": 0.771,
+      "so": 48,
+      "wins": 3,
+      "saves": 20,
+      "sv": 20
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.77,
+      "whip": 0.771,
+      "so": 48,
+      "wins": 3,
+      "saves": 20,
+      "sv": 20
+    },
+    "scoringStats": {
+      "whip": 0.771,
+      "fip": null,
+      "inningsPitched": 46.7,
+      "strikeoutRate": 9.25053533190578,
+      "walkRate": 2.6980728051391862,
+      "starts": 0,
+      "reliefAppearances": 32
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "gossari01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.5686937901499,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-steve-sax-1989",
+    "playerId": "saxst01",
+    "playerSlug": "steve-sax",
+    "name": "Steve Sax",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.315,
+      "obp": 0.364,
+      "slg": 0.387,
+      "rbi": 63,
+      "sb": 43
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.315,
+      "obp": 0.364,
+      "slg": 0.387,
+      "rbi": 63,
+      "sb": 43
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 709,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.364,
+      "slg": 0.387,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "saxst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.35714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-mike-pagliarulo-1987",
+    "playerId": "paglimi01",
+    "playerSlug": "mike-pagliarulo",
+    "name": "Mike Pagliarulo",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 32,
+      "avg": 0.234,
+      "obp": 0.305,
+      "slg": 0.479,
+      "rbi": 87,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 32,
+      "avg": 0.234,
+      "obp": 0.305,
+      "slg": 0.479,
+      "rbi": 87,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 580,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.305,
+      "slg": 0.479,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "paglimi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.97142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-graig-nettles-1983",
+    "playerId": "nettlgr01",
+    "playerSlug": "graig-nettles",
+    "name": "Graig Nettles",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.266,
+      "obp": 0.341,
+      "slg": 0.446,
+      "rbi": 75,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.266,
+      "obp": 0.341,
+      "slg": 0.446,
+      "rbi": 75,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 129,
+      "plateAppearances": 519,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.341,
+      "slg": 0.446,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "nettlgr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.52857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-ken-griffey-1983",
+    "playerId": "griffke01",
+    "playerSlug": "ken-griffey",
+    "name": "Ken Griffey",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.306,
+      "obp": 0.355,
+      "slg": 0.437,
+      "rbi": 46,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.306,
+      "obp": 0.355,
+      "slg": 0.437,
+      "rbi": 46,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 118,
+      "plateAppearances": 496,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.437,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "griffke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.37142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-butch-wynegar-1983",
+    "playerId": "wynegbu01",
+    "playerSlug": "butch-wynegar",
+    "name": "Butch Wynegar",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.296,
+      "obp": 0.399,
+      "slg": 0.429,
+      "rbi": 42,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.296,
+      "obp": 0.399,
+      "slg": 0.429,
+      "rbi": 42,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 94,
+      "plateAppearances": 356,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.399,
+      "slg": 0.429,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "wynegbu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.97142857142859,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-claudell-washington-1988",
+    "playerId": "washicl01",
+    "playerSlug": "claudell-washington",
+    "name": "Claudell Washington",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.308,
+      "obp": 0.342,
+      "slg": 0.442,
+      "rbi": 64,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.308,
+      "obp": 0.342,
+      "slg": 0.442,
+      "rbi": 64,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 126,
+      "plateAppearances": 485,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.342,
+      "slg": 0.442,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "washicl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.25714285714287,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-rick-cerone-1980",
+    "playerId": "ceronri01",
+    "playerSlug": "rick-cerone",
+    "name": "Rick Cerone",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.277,
+      "obp": 0.321,
+      "slg": 0.432,
+      "rbi": 85,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.277,
+      "obp": 0.321,
+      "slg": 0.432,
+      "rbi": 85,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 147,
+      "plateAppearances": 567,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.321,
+      "slg": 0.432,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "ceronri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.5,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-lou-piniella-1982",
+    "playerId": "pinielo01",
+    "playerSlug": "lou-piniella",
+    "name": "Lou Piniella",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.307,
+      "obp": 0.352,
+      "slg": 0.448,
+      "rbi": 37,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.307,
+      "obp": 0.352,
+      "slg": 0.448,
+      "rbi": 37,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 102,
+      "plateAppearances": 281,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.448,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "pinielo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.02857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-bucky-dent-1980",
+    "playerId": "dentbu01",
+    "playerSlug": "bucky-dent",
+    "name": "Bucky Dent",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.262,
+      "obp": 0.327,
+      "slg": 0.354,
+      "rbi": 52,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.262,
+      "obp": 0.327,
+      "slg": 0.354,
+      "rbi": 52,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 544,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.327,
+      "slg": 0.354,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "dentbu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.64285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-bob-meacham-1987",
+    "playerId": "meachbo01",
+    "playerSlug": "bob-meacham",
+    "name": "Bob Meacham",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.271,
+      "obp": 0.349,
+      "slg": 0.409,
+      "rbi": 21,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.271,
+      "obp": 0.349,
+      "slg": 0.409,
+      "rbi": 21,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 77,
+      "plateAppearances": 229,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.349,
+      "slg": 0.409,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "meachbo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82.34285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-brian-fisher-1985",
+    "playerId": "fishebr01",
+    "playerSlug": "brian-fisher",
+    "name": "Brian Fisher",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.38,
+      "whip": 1.078,
+      "so": 85,
+      "wins": 4,
+      "saves": 14,
+      "sv": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.38,
+      "whip": 1.078,
+      "so": 85,
+      "wins": 4,
+      "saves": 14,
+      "sv": 14
+    },
+    "scoringStats": {
+      "whip": 1.078,
+      "fip": null,
+      "inningsPitched": 98.3,
+      "strikeoutRate": 7.782299084435402,
+      "walkRate": 2.6551373346897256,
+      "starts": 0,
+      "reliefAppearances": 55
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "fishebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.5707426246185,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-dave-righetti-1984",
+    "playerId": "righeda01",
+    "playerSlug": "dave-righetti",
+    "name": "Dave Righetti",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 1.204,
+      "so": 90,
+      "wins": 5,
+      "saves": 31,
+      "sv": 31
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 1.204,
+      "so": 90,
+      "wins": 5,
+      "saves": 31,
+      "sv": 31
+    },
+    "scoringStats": {
+      "whip": 1.204,
+      "fip": null,
+      "inningsPitched": 96.3,
+      "strikeoutRate": 8.411214953271028,
+      "walkRate": 3.457943925233645,
+      "starts": 0,
+      "reliefAppearances": 64
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "righeda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.26990654205608,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-rudy-may-1980",
+    "playerId": "mayru01",
+    "playerSlug": "rudy-may",
+    "name": "Rudy May",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.46,
+      "whip": 1.044,
+      "so": 133,
+      "wins": 15,
+      "saves": 3,
+      "sv": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.46,
+      "whip": 1.044,
+      "so": 133,
+      "wins": 15,
+      "saves": 3,
+      "sv": 3
+    },
+    "scoringStats": {
+      "whip": 1.044,
+      "fip": null,
+      "inningsPitched": 175.3,
+      "strikeoutRate": 6.828294352538505,
+      "walkRate": 2.002281802624073,
+      "starts": 17,
+      "reliefAppearances": 24
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "mayru01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.57790771376055,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-ron-guidry-1981",
+    "playerId": "guidrro01",
+    "playerSlug": "ron-guidry",
+    "name": "Ron Guidry",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.76,
+      "whip": 0.992,
+      "so": 104,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.76,
+      "whip": 0.992,
+      "so": 104,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.992,
+      "fip": null,
+      "inningsPitched": 127,
+      "strikeoutRate": 7.3700787401574805,
+      "walkRate": 1.8425196850393701,
+      "starts": 21,
+      "reliefAppearances": 2
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "guidrro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.38689413823272,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-john-candelaria-1988",
+    "playerId": "candejo01",
+    "playerSlug": "john-candelaria",
+    "name": "John Candelaria",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.38,
+      "whip": 1.102,
+      "so": 121,
+      "wins": 13,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.38,
+      "whip": 1.102,
+      "so": 121,
+      "wins": 13,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.102,
+      "fip": null,
+      "inningsPitched": 157,
+      "strikeoutRate": 6.936305732484076,
+      "walkRate": 1.3184713375796178,
+      "starts": 24,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "candejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.548973814578915,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-tommy-john-1981",
+    "playerId": "johnto01",
+    "playerSlug": "tommy-john",
+    "name": "Tommy John",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.63,
+      "whip": 1.24,
+      "so": 50,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.63,
+      "whip": 1.24,
+      "so": 50,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.24,
+      "fip": null,
+      "inningsPitched": 140.3,
+      "strikeoutRate": 3.2074126870990733,
+      "walkRate": 2.501781895937277,
+      "starts": 20,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "johnto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.49289063118714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-1980s-chuck-cary-1989",
+    "playerId": "carych01",
+    "playerSlug": "chuck-cary",
+    "name": "Chuck Cary",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.26,
+      "whip": 1.077,
+      "so": 79,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.26,
+      "whip": 1.077,
+      "so": 79,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.077,
+      "fip": null,
+      "inningsPitched": 99.3,
+      "strikeoutRate": 7.16012084592145,
+      "walkRate": 2.6283987915407856,
+      "starts": 11,
+      "reliefAppearances": 11
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "carych01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 55.65424974823767,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

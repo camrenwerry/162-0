@@ -1,0 +1,2031 @@
+[
+  {
+    "id": "stl-1980s-jack-clark-1987",
+    "playerId": "clarkja01",
+    "playerSlug": "jack-clark",
+    "name": "Jack Clark",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 35,
+      "avg": 0.286,
+      "obp": 0.459,
+      "slg": 0.597,
+      "rbi": 106,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 35,
+      "avg": 0.286,
+      "obp": 0.459,
+      "slg": 0.597,
+      "rbi": 106,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 131,
+      "plateAppearances": 558,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.459,
+      "slg": 0.597,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "clarkja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 121.54285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-keith-hernandez-1980",
+    "playerId": "hernake01",
+    "playerSlug": "keith-hernandez",
+    "name": "Keith Hernandez",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.321,
+      "obp": 0.408,
+      "slg": 0.494,
+      "rbi": 99,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.321,
+      "obp": 0.408,
+      "slg": 0.494,
+      "rbi": 99,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 689,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.408,
+      "slg": 0.494,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "hernake01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 109.88571428571427,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-willie-mcgee-1985",
+    "playerId": "mcgeewi01",
+    "playerSlug": "willie-mcgee",
+    "name": "Willie McGee",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.353,
+      "obp": 0.384,
+      "slg": 0.503,
+      "rbi": 82,
+      "sb": 56
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.353,
+      "obp": 0.384,
+      "slg": 0.503,
+      "rbi": 82,
+      "sb": 56
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 651,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.503,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "mcgeewi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.30000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-pedro-guerrero-1989",
+    "playerId": "guerrpe01",
+    "playerSlug": "pedro-guerrero",
+    "name": "Pedro Guerrero",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.311,
+      "obp": 0.391,
+      "slg": 0.477,
+      "rbi": 117,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.311,
+      "obp": 0.391,
+      "slg": 0.477,
+      "rbi": 117,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 665,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.391,
+      "slg": 0.477,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "guerrpe01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.8,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-ted-simmons-1980",
+    "playerId": "simmote01",
+    "playerSlug": "ted-simmons",
+    "name": "Ted Simmons",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.303,
+      "obp": 0.375,
+      "slg": 0.505,
+      "rbi": 98,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.303,
+      "obp": 0.375,
+      "slg": 0.505,
+      "rbi": 98,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 562,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.375,
+      "slg": 0.505,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "simmote01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.05714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-george-hendrick-1983",
+    "playerId": "hendrge01",
+    "playerSlug": "george-hendrick",
+    "name": "George Hendrick",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.318,
+      "obp": 0.373,
+      "slg": 0.493,
+      "rbi": 97,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.318,
+      "obp": 0.373,
+      "slg": 0.493,
+      "rbi": 97,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 144,
+      "plateAppearances": 593,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.373,
+      "slg": 0.493,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "hendrge01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.54285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-lonnie-smith-1982",
+    "playerId": "smithlo01",
+    "playerSlug": "lonnie-smith",
+    "name": "Lonnie Smith",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.307,
+      "obp": 0.381,
+      "slg": 0.434,
+      "rbi": 69,
+      "sb": 68
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.307,
+      "obp": 0.381,
+      "slg": 0.434,
+      "rbi": 69,
+      "sb": 68
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 669,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.381,
+      "slg": 0.434,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "smithlo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.61428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-tom-herr-1985",
+    "playerId": "herrto01",
+    "playerSlug": "tom-herr",
+    "name": "Tom Herr",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.302,
+      "obp": 0.379,
+      "slg": 0.416,
+      "rbi": 110,
+      "sb": 31
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.302,
+      "obp": 0.379,
+      "slg": 0.416,
+      "rbi": 110,
+      "sb": 31
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 691,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.379,
+      "slg": 0.416,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "herrto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.24285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-gene-tenace-1982",
+    "playerId": "tenacge01",
+    "playerSlug": "gene-tenace",
+    "name": "Gene Tenace",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.258,
+      "obp": 0.436,
+      "slg": 0.5,
+      "rbi": 18,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.258,
+      "obp": 0.436,
+      "slg": 0.5,
+      "rbi": 18,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 66,
+      "plateAppearances": 165,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.436,
+      "slg": 0.5,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "tenacge01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.3142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-ozzie-smith-1987",
+    "playerId": "smithoz01",
+    "playerSlug": "ozzie-smith",
+    "name": "Ozzie Smith",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 0,
+      "avg": 0.303,
+      "obp": 0.392,
+      "slg": 0.383,
+      "rbi": 75,
+      "sb": 43
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 0,
+      "avg": 0.303,
+      "obp": 0.392,
+      "slg": 0.383,
+      "rbi": 75,
+      "sb": 43
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 694,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.392,
+      "slg": 0.383,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "smithoz01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.32857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-terry-pendleton-1987",
+    "playerId": "pendlte01",
+    "playerSlug": "terry-pendleton",
+    "name": "Terry Pendleton",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.286,
+      "obp": 0.36,
+      "slg": 0.412,
+      "rbi": 96,
+      "sb": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.286,
+      "obp": 0.36,
+      "slg": 0.412,
+      "rbi": 96,
+      "sb": 19
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 664,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.36,
+      "slg": 0.412,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "pendlte01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.17142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-tom-brunansky-1988",
+    "playerId": "brunato01",
+    "playerSlug": "tom-brunansky",
+    "name": "Tom Brunansky",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.245,
+      "obp": 0.345,
+      "slg": 0.428,
+      "rbi": 79,
+      "sb": 16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.245,
+      "obp": 0.345,
+      "slg": 0.428,
+      "rbi": 79,
+      "sb": 16
+    },
+    "scoringStats": {
+      "games": 143,
+      "plateAppearances": 612,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.345,
+      "slg": 0.428,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "brunato01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.78571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-darrell-porter-1983",
+    "playerId": "porteda02",
+    "playerSlug": "darrell-porter",
+    "name": "Darrell Porter",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.262,
+      "obp": 0.363,
+      "slg": 0.431,
+      "rbi": 66,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.262,
+      "obp": 0.363,
+      "slg": 0.431,
+      "rbi": 66,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 518,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.363,
+      "slg": 0.431,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "porteda02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.2,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-jose-oquendo-1989",
+    "playerId": "oquenjo01",
+    "playerSlug": "jose-oquendo",
+    "name": "Jose Oquendo",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.291,
+      "obp": 0.375,
+      "slg": 0.372,
+      "rbi": 48,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.291,
+      "obp": 0.375,
+      "slg": 0.372,
+      "rbi": 48,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 163,
+      "plateAppearances": 643,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.375,
+      "slg": 0.372,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "oquenjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.07142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-ken-oberkfell-1980",
+    "playerId": "oberkke01",
+    "playerSlug": "ken-oberkfell",
+    "name": "Ken Oberkfell",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.303,
+      "obp": 0.377,
+      "slg": 0.417,
+      "rbi": 46,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.303,
+      "obp": 0.377,
+      "slg": 0.417,
+      "rbi": 46,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 116,
+      "plateAppearances": 477,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.377,
+      "slg": 0.417,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "oberkke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.02857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-andy-van-slyke-1986",
+    "playerId": "vanslan01",
+    "playerSlug": "andy-van-slyke",
+    "name": "Andy Van Slyke",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "CF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.27,
+      "obp": 0.343,
+      "slg": 0.452,
+      "rbi": 61,
+      "sb": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.27,
+      "obp": 0.343,
+      "slg": 0.452,
+      "rbi": 61,
+      "sb": 21
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 469,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.343,
+      "slg": 0.452,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "vanslan01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.9,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-vince-coleman-1987",
+    "playerId": "colemvi01",
+    "playerSlug": "vince-coleman",
+    "name": "Vince Coleman",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.289,
+      "obp": 0.363,
+      "slg": 0.358,
+      "rbi": 43,
+      "sb": 109
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.289,
+      "obp": 0.363,
+      "slg": 0.358,
+      "rbi": 43,
+      "sb": 109
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 697,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.363,
+      "slg": 0.358,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "colemvi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.0142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-garry-templeton-1980",
+    "playerId": "templga01",
+    "playerSlug": "garry-templeton",
+    "name": "Garry Templeton",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.319,
+      "obp": 0.342,
+      "slg": 0.417,
+      "rbi": 43,
+      "sb": 31
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.319,
+      "obp": 0.342,
+      "slg": 0.417,
+      "rbi": 43,
+      "sb": 31
+    },
+    "scoringStats": {
+      "games": 118,
+      "plateAppearances": 523,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.342,
+      "slg": 0.417,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "templga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.84285714285716,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-milt-thompson-1989",
+    "playerId": "thompmi02",
+    "playerSlug": "milt-thompson",
+    "name": "Milt Thompson",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.29,
+      "obp": 0.34,
+      "slg": 0.393,
+      "rbi": 68,
+      "sb": 27
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.29,
+      "obp": 0.34,
+      "slg": 0.393,
+      "rbi": 68,
+      "sb": 27
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 591,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.34,
+      "slg": 0.393,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "thompmi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.1857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-ken-reitz-1980",
+    "playerId": "reitzke01",
+    "playerSlug": "ken-reitz",
+    "name": "Ken Reitz",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.27,
+      "obp": 0.3,
+      "slg": 0.379,
+      "rbi": 58,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.27,
+      "obp": 0.3,
+      "slg": 0.379,
+      "rbi": 58,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 553,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.3,
+      "slg": 0.379,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "reitzke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.7,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-bruce-sutter-1984",
+    "playerId": "suttebr01",
+    "playerSlug": "bruce-sutter",
+    "name": "Bruce Sutter",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.54,
+      "whip": 1.076,
+      "so": 77,
+      "wins": 5,
+      "saves": 45,
+      "sv": 45
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.54,
+      "whip": 1.076,
+      "so": 77,
+      "wins": 5,
+      "saves": 45,
+      "sv": 45
+    },
+    "scoringStats": {
+      "whip": 1.076,
+      "fip": null,
+      "inningsPitched": 122.7,
+      "strikeoutRate": 5.647921760391198,
+      "walkRate": 1.687041564792176,
+      "starts": 0,
+      "reliefAppearances": 71
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "suttebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 81.94132029339853,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-john-tudor-1985",
+    "playerId": "tudorjo01",
+    "playerSlug": "john-tudor",
+    "name": "John Tudor",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.93,
+      "whip": 0.938,
+      "so": 169,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.93,
+      "whip": 0.938,
+      "so": 169,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.938,
+      "fip": null,
+      "inningsPitched": 275,
+      "strikeoutRate": 5.530909090909091,
+      "walkRate": 1.6036363636363635,
+      "starts": 36,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "tudorjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 79.9709090909091,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-todd-worrell-1986",
+    "playerId": "worreto01",
+    "playerSlug": "todd-worrell",
+    "name": "Todd Worrell",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.08,
+      "whip": 1.225,
+      "so": 73,
+      "wins": 9,
+      "saves": 36,
+      "sv": 36
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.08,
+      "whip": 1.225,
+      "so": 73,
+      "wins": 9,
+      "saves": 36,
+      "sv": 36
+    },
+    "scoringStats": {
+      "whip": 1.225,
+      "fip": null,
+      "inningsPitched": 103.7,
+      "strikeoutRate": 6.335583413693346,
+      "walkRate": 3.558341369334619,
+      "starts": 0,
+      "reliefAppearances": 74
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "worreto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.70586306653809,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-mike-ramsey-1983",
+    "playerId": "ramsemi01",
+    "playerSlug": "mike-ramsey",
+    "name": "Mike Ramsey",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.263,
+      "obp": 0.309,
+      "slg": 0.337,
+      "rbi": 16,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.263,
+      "obp": 0.309,
+      "slg": 0.337,
+      "rbi": 16,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 97,
+      "plateAppearances": 191,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.309,
+      "slg": 0.337,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "ramsemi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.05714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-jeff-lahti-1985",
+    "playerId": "lahtije01",
+    "playerSlug": "jeff-lahti",
+    "name": "Jeff Lahti",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.84,
+      "whip": 1.302,
+      "so": 41,
+      "wins": 5,
+      "saves": 19,
+      "sv": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.84,
+      "whip": 1.302,
+      "so": 41,
+      "wins": 5,
+      "saves": 19,
+      "sv": 19
+    },
+    "scoringStats": {
+      "whip": 1.302,
+      "fip": null,
+      "inningsPitched": 68.3,
+      "strikeoutRate": 5.402635431918009,
+      "walkRate": 3.4260614934114204,
+      "starts": 0,
+      "reliefAppearances": 52
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "lahtije01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1985; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 69.24486090775989,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-joaquin-andujar-1982",
+    "playerId": "andujjo01",
+    "playerSlug": "joaquin-andujar",
+    "name": "Joaquin Andujar",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 1.08,
+      "so": 137,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 1.08,
+      "so": 137,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.08,
+      "fip": null,
+      "inningsPitched": 265.7,
+      "strikeoutRate": 4.640572073767407,
+      "walkRate": 1.6936394429808055,
+      "starts": 37,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "andujjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 69.1803989461799,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-joe-magrane-1988",
+    "playerId": "magrajo01",
+    "playerSlug": "joe-magrane",
+    "name": "Joe Magrane",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.18,
+      "whip": 1.113,
+      "so": 100,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.18,
+      "whip": 1.113,
+      "so": 100,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.113,
+      "fip": null,
+      "inningsPitched": 165.3,
+      "strikeoutRate": 5.44464609800363,
+      "walkRate": 2.776769509981851,
+      "starts": 24,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "magrajo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 68.765148215366,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-jose-deleon-1989",
+    "playerId": "deleojo01",
+    "playerSlug": "jose-deleon",
+    "name": "Jose DeLeon",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.05,
+      "whip": 1.034,
+      "so": 201,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.05,
+      "whip": 1.034,
+      "so": 201,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.034,
+      "fip": null,
+      "inningsPitched": 244.7,
+      "strikeoutRate": 7.392725786677564,
+      "walkRate": 2.942378422558235,
+      "starts": 36,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "deleojo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 65.395521046179,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "stl-1980s-danny-cox-1986",
+    "playerId": "coxda01",
+    "playerSlug": "danny-cox",
+    "name": "Danny Cox",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.9,
+      "whip": 1.132,
+      "so": 108,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.9,
+      "whip": 1.132,
+      "so": 108,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.132,
+      "fip": null,
+      "inningsPitched": 220,
+      "strikeoutRate": 4.418181818181818,
+      "walkRate": 2.4545454545454546,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "coxda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 61.50545454545455,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

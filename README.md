@@ -1,104 +1,125 @@
 # Diamond Draft
 
-Diamond Draft is a mobile-first baseball roster-building game. Classic Mode gives the player a random MLB franchise and decade for each of 14 rounds. The player drafts one eligible card per round, fills a complete roster, and receives a deterministic 162-game projection.
+Diamond Draft is a mobile-first baseball roster-building game. Classic Mode presents one MLB franchise/decade pool in each of 14 rounds. The player fills C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP slots, and two RP slots, then receives the current placeholder 162-game projection.
 
-The beta is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API calls, or server dependency.
+Version 0.6.0 is a static React + TypeScript + Vite application. It has no accounts, persistence, gameplay API calls, or database server.
 
-## Current beta scope
+## Official card definition
 
-The checked-in beta contains 1,536 player/franchise/decade cards across 48 pools:
+Every card is one **player + franchise + decade + best eligible single season**. The featured season must belong to that franchise and fall inside that decade. Cards never use career totals, combined decade totals, a different club's season, or an out-of-decade season.
 
-- Franchises: Yankees, Red Sox, Dodgers, Giants, Cardinals, Cubs, Braves, Mariners, Orioles, Athletics, Angels, and Phillies
-- Decades: 1980s, 1990s, 2000s, and 2010s
-- Thirty-two curated cards per franchise/decade pool
-- At least three eligible cards at every required hitter fielding position in every pool
-- At least five meaningful starting-pitcher choices and three meaningful relief-pitcher choices in every pool
+The checked-in pools are generated from season-level records in the [SABR Lahman Baseball Database 2025](https://sabr.org/lahman-database/). Unavailable values are `null`; the pipeline does not manufacture WAR, OPS+, ERA+, wRC+, FIP, defensive, or baserunning values.
 
-The Classic roster is C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP slots, and two RP slots. Pitching slots have stable internal IDs while the player-facing picker continues to show a single SP or RP choice and fills the first open slot.
+### Featured-season selection
 
-The source is the [SABR Lahman Baseball Database 2025](https://sabr.org/lahman-database/). Player totals are aggregated only from seasons with the card's franchise identity and decade. A Yankees 1990s card, for example, contains no statistics earned for another club or decade.
+The formula is isolated in `scripts/lib/player-pipeline.mjs` and is used only to select a featured season—no overall rating is shown in the game.
 
-## Player cards
+- A hitter season needs at least 100 PA. Its score is `OPS × 100 + min(PA, 750) / 35`, balancing rate performance and a meaningful full-season sample.
+- A pitcher season needs at least 30 IP and must satisfy the SP or RP usage threshold. Its score combines ERA run prevention, WHIP, K/9 minus BB/9, and role-specific workload.
+- A two-way season must satisfy the pitching rules and have at least 200 PA. Its selection score blends both sides.
+- Records are filtered to the requested franchise and decade before they are scored. A manual featured-season override is allowed, but only when that season exists in the already eligible group.
 
-Runtime data lives in `src/data/mlb/betaPlayers.json` and is exposed through `src/data/mlb/index.ts`. Every card includes:
+These fallbacks are transparent because Lahman does not contain the preferred advanced metrics. The selection module can incorporate verified WAR/OPS+/ERA+/FIP later without changing the UI or game engine.
 
-- A stable card ID and Lahman player ID
-- Franchise, team abbreviation, and decade
-- Historically recorded position eligibility derived from fielding appearances
-- Hitter or pitcher role and explicit two-way status
-- Visible and sortable franchise/decade statistics, with unavailable values represented as `null`
-- Additional normalized scoring inputs
-- Provenance notes
+### Position eligibility
 
-HR, AVG, ERA, SO, and SV are direct aggregates. Lahman does not publish WAR, OPS+, ERA+, wRC+, FIP, or modern defensive runs. The beta generator therefore calculates transparent, deterministic estimates from the underlying franchise/decade totals and the appropriate decade league environment. These estimates are suitable for beta gameplay tuning, but must not be represented as official Baseball-Reference or FanGraphs values.
+Eligibility is derived only from appearances in the featured season:
 
-## Projected record
+- Fielding position: at least 10 games
+- SP: at least 10 starts
+- RP: at least 15 relief appearances
+- DH: supplied by the existing game rule to any hitter; never stored as season fielding eligibility
 
-`src/game/Scoring.ts` exposes the replaceable scoring interface and current beta implementation. React components contain no scoring formulas. It evaluates:
+Manual overrides can add or remove historically supported positions and are surfaced as validation warnings. Normal pitchers cannot fill DH. A historically supported two-way card can expose both batting and pitching views.
 
-- Offense
-- Defense
-- Speed
-- Starting pitching
-- Relief pitching
-- Roster balance
-- Overall team strength
+## Data layout
 
-Rate and durability inputs are normalized before they are combined. DH receives no defensive value, while SP/RP role fit affects pitching value. The final deterministic strength score maps to a tunable 162-game win curve and a tier from Rebuild through Perfect Season.
+```text
+data-import/
+  pool-config.json            franchise/source-team and decade definitions
+  season-stats.csv            one player/franchise/season batting-pitching row
+  fielding-appearances.csv    one player/franchise/season/position row
+  manual-overrides.json       reviewed name, season, position, and note overrides
+  validation-report.json      generated machine-readable report
+src/data/mlb/
+  franchises.ts
+  decades.ts
+  pool-index.json             validated combinations available to Randomizer
+  pools/<franchise>-<decade>.json
+  index.ts                    generated TeamPool-facing registry
+```
 
-## Run locally
+The season import includes player/team identity, season, batting totals and rates, pitching totals and rates, handedness, and source team IDs. The fielding import includes player/team identity, season, position, games, and starts. `scripts/export-lahman-seasons.py` documents and reproduces both CSV schemas from the official Lahman RData files.
+
+React never imports pool JSON. `TeamPool` is the only runtime adapter; unsupported combinations return no cards, and the randomizer sees only combinations in the generated index. This boundary can later become lazy or remote without changing components.
+
+## Build and validate data
+
+The generated JSON is committed, so Python is not required to run the app.
+
+```bash
+npm run data:build      # transform raw CSVs into pools and generate a report
+npm run data:validate   # strictly validate the checked-in generated pools
+npm run data:report     # print the last generated report grouped by pool
+npm run test:data       # season selection and validation unit checks
+```
+
+Blocking validation covers duplicate IDs, identities, franchise/decade association, featured-year range, position/stat shapes, and full 14-slot roster feasibility. It requires at least three SP and two RP options. Coverage, missing optional metrics, unverified data, overrides, and low playing time are warnings.
+
+To reproduce the raw import from an official Lahman checkout:
+
+```bash
+PYTHONPATH=/path/to/python/packages python3 scripts/export-lahman-seasons.py \
+  --lahman-dir /path/to/Lahman/data
+npm run data:build
+```
+
+The export helper requires Python, pandas, and `rdata`; none ship in the browser bundle.
+
+## Add a franchise or decade
+
+1. Add its canonical ID, display identity, and all applicable Lahman team IDs to `data-import/pool-config.json`.
+2. Add the matching typed display definition to `src/data/mlb/franchises.ts` or `decades.ts`.
+3. Re-export the raw season files (or add verified rows using the documented CSV schema).
+4. Run `npm run data:build`, inspect the organized warnings, then run all quality checks below.
+5. Review the generated pool for identity changes and historically unusual secondary positions before merging.
+
+`manual-overrides.json` supports `names` by source player ID and `featuredSeasons`, `positionOverrides`, and `notes` by `<franchise>-<decade>-<playerId>`. Position overrides use `{ "add": [], "remove": [] }`. They must document a historically defensible exception; validation never allows an override to bypass the franchise/decade season filter.
+
+Every generated card includes internal `sourceMetadata` with verification state, source label/URL/date, source player ID, and source team IDs. This metadata is deliberately invisible during gameplay. A record marked `verified: false` remains a warning until reviewed.
+
+## Supported combinations
+
+The current data index contains 48 verified pools: Yankees, Red Sox, Dodgers, Giants, Cardinals, Cubs, Braves, Mariners, Orioles, Athletics, Angels, and Phillies for each of the 1980s, 1990s, 2000s, and 2010s. This includes the milestone pools SEA 1990s, NYY 2000s, ATL 1990s, STL 2000s, LAA 2010s, BOS 2000s, LAD 2010s, and CHC 1990s.
+
+Pools contain roughly 28–35 selected cards and are validated for complete-roster play. Coverage targets are warnings rather than a reason to invent players or eligibility.
+
+## Run and test
 
 ```bash
 npm install
 npm run dev
-```
 
-Production checks:
-
-```bash
-npm run validate:data
+npm run data:build
+npm run data:validate
+npm run data:report
+npm run test:data
 npm run test:game
 npm run test:engine
 npm run lint
 npm run build
 ```
 
-`npm run build` runs data validation automatically and fails on serious dataset errors.
+`npm run build` runs strict data validation before TypeScript and Vite.
 
-## Engine architecture
+## Engine boundary and limitations
 
-React subscribes to `DraftEngine` and renders immutable snapshots. All draft transitions are commands on the engine; components never mutate roster or round state.
+`DraftEngine` owns transitions, `Randomizer` owns combination selection, `Eligibility` owns roster rules, `TeamPool` owns data access and queries, and `Scoring` remains a replaceable placeholder. Components render immutable snapshots.
 
-- `src/game/DraftEngine.ts`: single orchestration and state-transition boundary
-- `src/game/GameState.ts`: internal draft state and render-view contracts
-- `src/game/Randomizer.ts`: combination selection, rerolls, and duplicate prevention
-- `src/game/Eligibility.ts`: DH, fielding, SP/RP slot, and assignment rules
-- `src/game/TeamPool.ts`: static database adapter, queries, filters, and sorting
-- `src/game/Scoring.ts`: replaceable results interface and current beta projection
+Known limitations:
 
-The UI has no direct dependency on the checked-in JSON. Replacing `TeamPool` with a remote implementation or replacing the `Scoring` provider does not require visual component changes.
-
-## Add or regenerate a pool
-
-The checked-in JSON is the runtime artifact, so contributors do not need Python to play or build the game. To regenerate it from an official Lahman release:
-
-1. Obtain the Lahman `Batting`, `Pitching`, `Fielding`, `FieldingOFsplit`, and `People` RData files.
-2. Install Python, pandas, and the `rdata` package outside the application bundle.
-3. Add the franchise mapping or decade in `scripts/generate_beta_data.py`.
-4. Run:
-
-```bash
-PYTHONPATH=/path/to/python/packages python3 scripts/generate_beta_data.py \
-  --lahman-dir /path/to/Lahman/data
-npm run validate:data
-```
-
-The generator aggregates team/decade totals, derives eligibility from appearances, selects the strongest coverage set, and writes the static JSON. Review every newly generated pool for identity changes and historically unusual secondary positions before merging it.
-
-## Current limitations
-
-- This is a 12-franchise, four-decade beta rather than the complete MLB historical database.
-- Advanced metrics are documented beta estimates, not licensed values from a commercial statistics provider.
-- Defensive and baserunning inputs are deliberately conservative proxies because Lahman lacks modern play-by-play metrics for the full period.
-- The season projection is a game model, not a claim of predictive accuracy.
-- Drafts are not saved between reloads and cannot be shared through accounts yet.
+- The pool covers 12 franchises and four decades, not all MLB history.
+- Lahman does not supply the optional advanced metrics listed above, so those values display as `—` and sort after real values.
+- Some pools use lower-playing-time but still threshold-qualified real seasons to preserve historical position coverage; these are called out in the report.
+- The projection remains a game placeholder, not a final simulation or a claim of predictive accuracy.
+- Drafts are not persisted.

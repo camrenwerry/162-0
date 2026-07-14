@@ -109,7 +109,11 @@ export class DraftEngine {
       selectedPlayerIds: [...this.state.selectedPlayerIds],
       selectedPlayer,
       availablePositions: selectedPlayer ? getAvailablePositions(selectedPlayer, this.state.roster) : [],
-      players: visiblePlayers.map((player) => ({ player, isAvailable: isPlayerSelectable(player, this.state.roster) })),
+      players: visiblePlayers.map((player) => ({
+        player,
+        isAvailable: isPlayerSelectable(player, this.state.roster),
+        statView: this.pool.getStatView(this.state.filter, this.state.sort),
+      })),
       search: this.state.search,
       filter: this.state.filter,
       sort: this.state.sort,

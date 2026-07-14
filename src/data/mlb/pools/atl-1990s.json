@@ -1,0 +1,2168 @@
+[
+  {
+    "id": "atl-1990s-chipper-jones-1999",
+    "playerId": "jonesch06",
+    "playerSlug": "chipper-jones",
+    "name": "Chipper Jones",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 45,
+      "avg": 0.319,
+      "obp": 0.441,
+      "slg": 0.633,
+      "rbi": 110,
+      "sb": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 45,
+      "avg": 0.319,
+      "obp": 0.441,
+      "slg": 0.633,
+      "rbi": 110,
+      "sb": 25
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 701,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.441,
+      "slg": 0.633,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jonesch06"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 127.42857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-andres-galarraga-1998",
+    "playerId": "galaran01",
+    "playerSlug": "andres-galarraga",
+    "name": "Andres Galarraga",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 44,
+      "avg": 0.305,
+      "obp": 0.397,
+      "slg": 0.595,
+      "rbi": 121,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 44,
+      "avg": 0.305,
+      "obp": 0.397,
+      "slg": 0.595,
+      "rbi": 121,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 648,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.397,
+      "slg": 0.595,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "galaran01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 117.71428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-fred-mcgriff-1994",
+    "playerId": "mcgrifr01",
+    "playerSlug": "fred-mcgriff",
+    "name": "Fred McGriff",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.318,
+      "obp": 0.389,
+      "slg": 0.623,
+      "rbi": 94,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.318,
+      "obp": 0.389,
+      "slg": 0.623,
+      "rbi": 94,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 113,
+      "plateAppearances": 478,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.389,
+      "slg": 0.623,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "mcgrifr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 114.85714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-ryan-klesko-1995",
+    "playerId": "kleskry01",
+    "playerSlug": "ryan-klesko",
+    "name": "Ryan Klesko",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.31,
+      "obp": 0.396,
+      "slg": 0.608,
+      "rbi": 70,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.31,
+      "obp": 0.396,
+      "slg": 0.608,
+      "rbi": 70,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 107,
+      "plateAppearances": 381,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.396,
+      "slg": 0.608,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "kleskry01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 111.28571428571429,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-david-justice-1994",
+    "playerId": "justida01",
+    "playerSlug": "david-justice",
+    "name": "David Justice",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.312,
+      "obp": 0.427,
+      "slg": 0.531,
+      "rbi": 59,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.312,
+      "obp": 0.427,
+      "slg": 0.531,
+      "rbi": 59,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 104,
+      "plateAppearances": 424,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.427,
+      "slg": 0.531,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "justida01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.91428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-ron-gant-1990",
+    "playerId": "gantro01",
+    "playerSlug": "ron-gant",
+    "name": "Ron Gant",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 32,
+      "avg": 0.303,
+      "obp": 0.357,
+      "slg": 0.539,
+      "rbi": 84,
+      "sb": 33
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 32,
+      "avg": 0.303,
+      "obp": 0.357,
+      "slg": 0.539,
+      "rbi": 84,
+      "sb": 33
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 630,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.357,
+      "slg": 0.539,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "gantro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.60000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-jeff-blauser-1997",
+    "playerId": "blausje01",
+    "playerSlug": "jeff-blauser",
+    "name": "Jeff Blauser",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.308,
+      "obp": 0.405,
+      "slg": 0.482,
+      "rbi": 70,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.308,
+      "obp": 0.405,
+      "slg": 0.482,
+      "rbi": 70,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 618,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.405,
+      "slg": 0.482,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "blausje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.35714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-terry-pendleton-1991",
+    "playerId": "pendlte01",
+    "playerSlug": "terry-pendleton",
+    "name": "Terry Pendleton",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.319,
+      "obp": 0.363,
+      "slg": 0.517,
+      "rbi": 86,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.319,
+      "obp": 0.363,
+      "slg": 0.517,
+      "rbi": 86,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 637,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.363,
+      "slg": 0.517,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "pendlte01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.2,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-marquis-grissom-1996",
+    "playerId": "grissma02",
+    "playerSlug": "marquis-grissom",
+    "name": "Marquis Grissom",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.308,
+      "obp": 0.349,
+      "slg": 0.489,
+      "rbi": 74,
+      "sb": 28
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.308,
+      "obp": 0.349,
+      "slg": 0.489,
+      "rbi": 74,
+      "sb": 28
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 719,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.349,
+      "slg": 0.489,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "grissma02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.34285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-andruw-jones-1999",
+    "playerId": "jonesan01",
+    "playerSlug": "andruw-jones",
+    "name": "Andruw Jones",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.275,
+      "obp": 0.365,
+      "slg": 0.483,
+      "rbi": 84,
+      "sb": 24
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.275,
+      "obp": 0.365,
+      "slg": 0.483,
+      "rbi": 84,
+      "sb": 24
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 679,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.365,
+      "slg": 0.483,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jonesan01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.19999999999999,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-javy-lopez-1997",
+    "playerId": "lopezja01",
+    "playerSlug": "javy-lopez",
+    "name": "Javy Lopez",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.295,
+      "obp": 0.361,
+      "slg": 0.534,
+      "rbi": 68,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.295,
+      "obp": 0.361,
+      "slg": 0.534,
+      "rbi": 68,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 123,
+      "plateAppearances": 463,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.534,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "lopezja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.72857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-lonnie-smith-1990",
+    "playerId": "smithlo01",
+    "playerSlug": "lonnie-smith",
+    "name": "Lonnie Smith",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.305,
+      "obp": 0.384,
+      "slg": 0.459,
+      "rbi": 42,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.305,
+      "obp": 0.384,
+      "slg": 0.459,
+      "rbi": 42,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 135,
+      "plateAppearances": 536,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.459,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "smithlo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.61428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-brian-jordan-1999",
+    "playerId": "jordabr01",
+    "playerSlug": "brian-jordan",
+    "name": "Brian Jordan",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.283,
+      "obp": 0.346,
+      "slg": 0.465,
+      "rbi": 115,
+      "sb": 13
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.283,
+      "obp": 0.346,
+      "slg": 0.465,
+      "rbi": 115,
+      "sb": 13
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 645,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.346,
+      "slg": 0.465,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jordabr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.52857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-eddie-perez-1998",
+    "playerId": "perezed02",
+    "playerSlug": "eddie-perez",
+    "name": "Eddie Perez",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.336,
+      "obp": 0.404,
+      "slg": 0.537,
+      "rbi": 32,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.336,
+      "obp": 0.404,
+      "slg": 0.537,
+      "rbi": 32,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 61,
+      "plateAppearances": 166,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.404,
+      "slg": 0.537,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "perezed02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.84285714285716,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-michael-tucker-1997",
+    "playerId": "tuckemi01",
+    "playerSlug": "michael-tucker",
+    "name": "Michael Tucker",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.283,
+      "obp": 0.347,
+      "slg": 0.445,
+      "rbi": 56,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.283,
+      "obp": 0.347,
+      "slg": 0.445,
+      "rbi": 56,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 138,
+      "plateAppearances": 550,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.347,
+      "slg": 0.445,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "tuckemi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.91428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-bret-boone-1999",
+    "playerId": "boonebr01",
+    "playerSlug": "bret-boone",
+    "name": "Bret Boone",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.252,
+      "obp": 0.31,
+      "slg": 0.416,
+      "rbi": 63,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.252,
+      "obp": 0.31,
+      "slg": 0.416,
+      "rbi": 63,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 662,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.31,
+      "slg": 0.416,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "boonebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.5142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-greg-maddux-1995",
+    "playerId": "maddugr01",
+    "playerSlug": "greg-maddux",
+    "name": "Greg Maddux",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.63,
+      "whip": 0.811,
+      "so": 181,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.63,
+      "whip": 0.811,
+      "so": 181,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.811,
+      "fip": null,
+      "inningsPitched": 209.7,
+      "strikeoutRate": 7.76824034334764,
+      "walkRate": 0.9871244635193134,
+      "starts": 28,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "maddugr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.0416738197425,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-randall-simon-1999",
+    "playerId": "simonra01",
+    "playerSlug": "randall-simon",
+    "name": "Randall Simon",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.317,
+      "obp": 0.367,
+      "slg": 0.459,
+      "rbi": 25,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.317,
+      "obp": 0.367,
+      "slg": 0.459,
+      "rbi": 25,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 90,
+      "plateAppearances": 237,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.367,
+      "slg": 0.459,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "simonra01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.37142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-jeff-treadway-1991",
+    "playerId": "treadje01",
+    "playerSlug": "jeff-treadway",
+    "name": "Jeff Treadway",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.32,
+      "obp": 0.368,
+      "slg": 0.418,
+      "rbi": 32,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.32,
+      "obp": 0.368,
+      "slg": 0.418,
+      "rbi": 32,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 106,
+      "plateAppearances": 334,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.368,
+      "slg": 0.418,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "treadje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.14285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-jim-presley-1990",
+    "playerId": "preslji01",
+    "playerSlug": "jim-presley",
+    "name": "Jim Presley",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.242,
+      "obp": 0.282,
+      "slg": 0.414,
+      "rbi": 72,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.242,
+      "obp": 0.282,
+      "slg": 0.414,
+      "rbi": 72,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 577,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.282,
+      "slg": 0.414,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "preslji01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1990; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.08571428571427,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-keith-lockhart-1997",
+    "playerId": "lockhke01",
+    "playerSlug": "keith-lockhart",
+    "name": "Keith Lockhart",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.279,
+      "obp": 0.337,
+      "slg": 0.476,
+      "rbi": 32,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.279,
+      "obp": 0.337,
+      "slg": 0.476,
+      "rbi": 32,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 96,
+      "plateAppearances": 166,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.337,
+      "slg": 0.476,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "lockhke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.04285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-walt-weiss-1998",
+    "playerId": "weisswa01",
+    "playerSlug": "walt-weiss",
+    "name": "Walt Weiss",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 0,
+      "avg": 0.28,
+      "obp": 0.386,
+      "slg": 0.343,
+      "rbi": 27,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 0,
+      "avg": 0.28,
+      "obp": 0.386,
+      "slg": 0.343,
+      "rbi": 27,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 96,
+      "plateAppearances": 412,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.386,
+      "slg": 0.343,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "weisswa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.67142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-charlie-o-brien-1994",
+    "playerId": "obriech01",
+    "playerSlug": "charlie-o-brien",
+    "name": "Charlie O'Brien",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.243,
+      "obp": 0.322,
+      "slg": 0.474,
+      "rbi": 28,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.243,
+      "obp": 0.322,
+      "slg": 0.474,
+      "rbi": 28,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 51,
+      "plateAppearances": 171,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.322,
+      "slg": 0.474,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "obriech01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1994; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.4857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-mark-wohlers-1995",
+    "playerId": "wohlema01",
+    "playerSlug": "mark-wohlers",
+    "name": "Mark Wohlers",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.09,
+      "whip": 1.16,
+      "so": 90,
+      "wins": 7,
+      "saves": 25,
+      "sv": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.09,
+      "whip": 1.16,
+      "so": 90,
+      "wins": 7,
+      "saves": 25,
+      "sv": 25
+    },
+    "scoringStats": {
+      "whip": 1.16,
+      "fip": null,
+      "inningsPitched": 64.7,
+      "strikeoutRate": 12.519319938176197,
+      "walkRate": 3.338485316846986,
+      "starts": 0,
+      "reliefAppearances": 65
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "wohlema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1995; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 81.49125193199382,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-steve-bedrosian-1993",
+    "playerId": "bedrost01",
+    "playerSlug": "steve-bedrosian",
+    "name": "Steve Bedrosian",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.63,
+      "whip": 0.966,
+      "so": 33,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.63,
+      "whip": 0.966,
+      "so": 33,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.966,
+      "fip": null,
+      "inningsPitched": 49.7,
+      "strikeoutRate": 5.975855130784708,
+      "walkRate": 2.5352112676056335,
+      "starts": 0,
+      "reliefAppearances": 49
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "bedrost01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.08096579476862,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-greg-mcmichael-1993",
+    "playerId": "mcmicgr01",
+    "playerSlug": "greg-mcmichael",
+    "name": "Greg McMichael",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.06,
+      "whip": 1.058,
+      "so": 89,
+      "wins": 2,
+      "saves": 19,
+      "sv": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.06,
+      "whip": 1.058,
+      "so": 89,
+      "wins": 2,
+      "saves": 19,
+      "sv": 19
+    },
+    "scoringStats": {
+      "whip": 1.058,
+      "fip": null,
+      "inningsPitched": 91.7,
+      "strikeoutRate": 8.735005452562705,
+      "walkRate": 2.8462377317339147,
+      "starts": 0,
+      "reliefAppearances": 74
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "mcmicgr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1993; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.95315158124319,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-ozzie-guillen-1998",
+    "playerId": "guilloz01",
+    "playerSlug": "ozzie-guillen",
+    "name": "Ozzie Guillen",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.277,
+      "obp": 0.337,
+      "slg": 0.352,
+      "rbi": 22,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.277,
+      "obp": 0.337,
+      "slg": 0.352,
+      "rbi": 22,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 83,
+      "plateAppearances": 291,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.337,
+      "slg": 0.352,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "guilloz01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1998; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.21428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-kevin-millwood-1999",
+    "playerId": "millwke01",
+    "playerSlug": "kevin-millwood",
+    "name": "Kevin Millwood",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 0.996,
+      "so": 205,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 0.996,
+      "so": 205,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.996,
+      "fip": null,
+      "inningsPitched": 228,
+      "strikeoutRate": 8.092105263157896,
+      "walkRate": 2.3289473684210527,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "millwke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1999; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.56473684210526,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-john-smoltz-1996",
+    "playerId": "smoltjo01",
+    "playerSlug": "john-smoltz",
+    "name": "John Smoltz",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.94,
+      "whip": 1.001,
+      "so": 276,
+      "wins": 24,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.94,
+      "whip": 1.001,
+      "so": 276,
+      "wins": 24,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.001,
+      "fip": null,
+      "inningsPitched": 253.7,
+      "strikeoutRate": 9.791091840756799,
+      "walkRate": 1.951123374063855,
+      "starts": 35,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "smoltjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1996; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 72.45995270003942,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-tom-glavine-1991",
+    "playerId": "glavito02",
+    "playerSlug": "tom-glavine",
+    "name": "Tom Glavine",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.55,
+      "whip": 1.095,
+      "so": 192,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.55,
+      "whip": 1.095,
+      "so": 192,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.095,
+      "fip": null,
+      "inningsPitched": 246.7,
+      "strikeoutRate": 7.004458856911229,
+      "walkRate": 2.5172274017024727,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "glavito02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1991; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.23084718281314,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1990s-denny-neagle-1997",
+    "playerId": "neaglde01",
+    "playerSlug": "denny-neagle",
+    "name": "Denny Neagle",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.97,
+      "whip": 1.084,
+      "so": 172,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.97,
+      "whip": 1.084,
+      "so": 172,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.084,
+      "fip": null,
+      "inningsPitched": 233.3,
+      "strikeoutRate": 6.6352336048006855,
+      "walkRate": 1.8902700385769395,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "neaglde01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1997; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 65.79744534933562,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

@@ -1,0 +1,2103 @@
+[
+  {
+    "id": "nyy-2000s-alex-rodriguez-2007",
+    "playerId": "rodrial01",
+    "playerSlug": "alex-rodriguez",
+    "name": "Alex Rodriguez",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 54,
+      "avg": 0.314,
+      "obp": 0.422,
+      "slg": 0.645,
+      "rbi": 156,
+      "sb": 24
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 54,
+      "avg": 0.314,
+      "obp": 0.422,
+      "slg": 0.645,
+      "rbi": 156,
+      "sb": 24
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 708,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.422,
+      "slg": 0.645,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "rodrial01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 126.92857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-jason-giambi-2002",
+    "playerId": "giambja01",
+    "playerSlug": "jason-giambi",
+    "name": "Jason Giambi",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 41,
+      "avg": 0.314,
+      "obp": 0.435,
+      "slg": 0.598,
+      "rbi": 122,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 41,
+      "avg": 0.314,
+      "obp": 0.435,
+      "slg": 0.598,
+      "rbi": 122,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 689,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.435,
+      "slg": 0.598,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "giambja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 122.98571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-glenallen-hill-2000",
+    "playerId": "hillgl01",
+    "playerSlug": "glenallen-hill",
+    "name": "Glenallen Hill",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.333,
+      "obp": 0.378,
+      "slg": 0.735,
+      "rbi": 29,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.333,
+      "obp": 0.378,
+      "slg": 0.735,
+      "rbi": 29,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 40,
+      "plateAppearances": 143,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.378,
+      "slg": 0.735,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "hillgl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 115.38571428571429,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-mark-teixeira-2009",
+    "playerId": "teixema01",
+    "playerSlug": "mark-teixeira",
+    "name": "Mark Teixeira",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.292,
+      "obp": 0.383,
+      "slg": 0.565,
+      "rbi": 122,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.292,
+      "obp": 0.383,
+      "slg": 0.565,
+      "rbi": 122,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 707,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.383,
+      "slg": 0.565,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "teixema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 115,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-jorge-posada-2007",
+    "playerId": "posadjo01",
+    "playerSlug": "jorge-posada",
+    "name": "Jorge Posada",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.338,
+      "obp": 0.426,
+      "slg": 0.543,
+      "rbi": 90,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.338,
+      "obp": 0.426,
+      "slg": 0.543,
+      "rbi": 90,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 144,
+      "plateAppearances": 589,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.426,
+      "slg": 0.543,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "posadjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 113.72857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-bernie-williams-2000",
+    "playerId": "willibe02",
+    "playerSlug": "bernie-williams",
+    "name": "Bernie Williams",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 30,
+      "avg": 0.307,
+      "obp": 0.391,
+      "slg": 0.566,
+      "rbi": 121,
+      "sb": 13
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 30,
+      "avg": 0.307,
+      "obp": 0.391,
+      "slg": 0.566,
+      "rbi": 121,
+      "sb": 13
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 616,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.391,
+      "slg": 0.566,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "willibe02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 113.30000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-gary-sheffield-2004",
+    "playerId": "sheffga01",
+    "playerSlug": "gary-sheffield",
+    "name": "Gary Sheffield",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.29,
+      "obp": 0.393,
+      "slg": 0.534,
+      "rbi": 121,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.29,
+      "obp": 0.393,
+      "slg": 0.534,
+      "rbi": 121,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 684,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.393,
+      "slg": 0.534,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "sheffga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 112.24285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-hideki-matsui-2004",
+    "playerId": "matsuhi01",
+    "playerSlug": "hideki-matsui",
+    "name": "Hideki Matsui",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 31,
+      "avg": 0.298,
+      "obp": 0.39,
+      "slg": 0.522,
+      "rbi": 108,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 31,
+      "avg": 0.298,
+      "obp": 0.39,
+      "slg": 0.522,
+      "rbi": 108,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 680,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.39,
+      "slg": 0.522,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "matsuhi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.62857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-derek-jeter-2006",
+    "playerId": "jeterde01",
+    "playerSlug": "derek-jeter",
+    "name": "Derek Jeter",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.343,
+      "obp": 0.417,
+      "slg": 0.483,
+      "rbi": 97,
+      "sb": 34
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.343,
+      "obp": 0.417,
+      "slg": 0.483,
+      "rbi": 97,
+      "sb": 34
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 708,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.417,
+      "slg": 0.483,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "jeterde01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.22857142857141,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-alfonso-soriano-2002",
+    "playerId": "soriaal01",
+    "playerSlug": "alfonso-soriano",
+    "name": "Alfonso Soriano",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.3,
+      "obp": 0.332,
+      "slg": 0.547,
+      "rbi": 102,
+      "sb": 41
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.3,
+      "obp": 0.332,
+      "slg": 0.547,
+      "rbi": 102,
+      "sb": 41
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 740,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.332,
+      "slg": 0.547,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "soriaal01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 109.04285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-david-justice-2000",
+    "playerId": "justida01",
+    "playerSlug": "david-justice",
+    "name": "David Justice",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.305,
+      "obp": 0.391,
+      "slg": 0.585,
+      "rbi": 60,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.305,
+      "obp": 0.391,
+      "slg": 0.585,
+      "rbi": 60,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 78,
+      "plateAppearances": 317,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.391,
+      "slg": 0.585,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "justida01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.65714285714284,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-robinson-cano-2009",
+    "playerId": "canoro01",
+    "playerSlug": "robinson-cano",
+    "name": "Robinson Cano",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.32,
+      "obp": 0.352,
+      "slg": 0.52,
+      "rbi": 85,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.32,
+      "obp": 0.352,
+      "slg": 0.52,
+      "rbi": 85,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 161,
+      "plateAppearances": 674,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.52,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "canoro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.45714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-nick-swisher-2009",
+    "playerId": "swishni01",
+    "playerSlug": "nick-swisher",
+    "name": "Nick Swisher",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "RF"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 29,
+      "avg": 0.249,
+      "obp": 0.371,
+      "slg": 0.498,
+      "rbi": 82,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 29,
+      "avg": 0.249,
+      "obp": 0.371,
+      "slg": 0.498,
+      "rbi": 82,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 604,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.371,
+      "slg": 0.498,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "swishni01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104.15714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-mariano-rivera-2008",
+    "playerId": "riverma01",
+    "playerSlug": "mariano-rivera",
+    "name": "Mariano Rivera",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.4,
+      "whip": 0.665,
+      "so": 77,
+      "wins": 6,
+      "saves": 39,
+      "sv": 39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.4,
+      "whip": 0.665,
+      "so": 77,
+      "wins": 6,
+      "saves": 39,
+      "sv": 39
+    },
+    "scoringStats": {
+      "whip": 0.665,
+      "fip": null,
+      "inningsPitched": 70.7,
+      "strikeoutRate": 9.801980198019802,
+      "walkRate": 0.7637906647807637,
+      "starts": 0,
+      "reliefAppearances": 64
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "riverma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.45728429985856,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-robin-ventura-2002",
+    "playerId": "venturo01",
+    "playerSlug": "robin-ventura",
+    "name": "Robin Ventura",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.247,
+      "obp": 0.368,
+      "slg": 0.458,
+      "rbi": 93,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.247,
+      "obp": 0.368,
+      "slg": 0.458,
+      "rbi": 93,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 562,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.368,
+      "slg": 0.458,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "venturo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.65714285714287,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-scott-brosius-2001",
+    "playerId": "brosisc01",
+    "playerSlug": "scott-brosius",
+    "name": "Scott Brosius",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.287,
+      "obp": 0.343,
+      "slg": 0.446,
+      "rbi": 49,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.287,
+      "obp": 0.343,
+      "slg": 0.446,
+      "rbi": 49,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 120,
+      "plateAppearances": 472,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.343,
+      "slg": 0.446,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "brosisc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.38571428571429,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-melky-cabrera-2009",
+    "playerId": "cabreme01",
+    "playerSlug": "melky-cabrera",
+    "name": "Melky Cabrera",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "bats": "B",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.274,
+      "obp": 0.336,
+      "slg": 0.416,
+      "rbi": 68,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.274,
+      "obp": 0.336,
+      "slg": 0.416,
+      "rbi": 68,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 536,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.336,
+      "slg": 0.416,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "cabreme01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.51428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-chuck-knoblauch-2000",
+    "playerId": "knoblch01",
+    "playerSlug": "chuck-knoblauch",
+    "name": "Chuck Knoblauch",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.282,
+      "obp": 0.366,
+      "slg": 0.385,
+      "rbi": 26,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.282,
+      "obp": 0.366,
+      "slg": 0.385,
+      "rbi": 26,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 102,
+      "plateAppearances": 456,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.366,
+      "slg": 0.385,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "knoblch01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.12857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-kenny-lofton-2004",
+    "playerId": "loftoke01",
+    "playerSlug": "kenny-lofton",
+    "name": "Kenny Lofton",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.275,
+      "obp": 0.346,
+      "slg": 0.395,
+      "rbi": 18,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 3,
+      "avg": 0.275,
+      "obp": 0.346,
+      "slg": 0.395,
+      "rbi": 18,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 83,
+      "plateAppearances": 312,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.346,
+      "slg": 0.395,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "loftoke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 83.0142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-tom-gordon-2004",
+    "playerId": "gordoto01",
+    "playerSlug": "tom-gordon",
+    "name": "Tom Gordon",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.21,
+      "whip": 0.881,
+      "so": 96,
+      "wins": 9,
+      "saves": 4,
+      "sv": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.21,
+      "whip": 0.881,
+      "so": 96,
+      "wins": 9,
+      "saves": 4,
+      "sv": 4
+    },
+    "scoringStats": {
+      "whip": 0.881,
+      "fip": null,
+      "inningsPitched": 89.7,
+      "strikeoutRate": 9.63210702341137,
+      "walkRate": 2.3076923076923075,
+      "starts": 0,
+      "reliefAppearances": 80
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "gordoto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 82.8466220735786,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-john-flaherty-2004",
+    "playerId": "flahejo01",
+    "playerSlug": "john-flaherty",
+    "name": "John Flaherty",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.252,
+      "obp": 0.286,
+      "slg": 0.465,
+      "rbi": 16,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.252,
+      "obp": 0.286,
+      "slg": 0.465,
+      "rbi": 16,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 47,
+      "plateAppearances": 133,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.286,
+      "slg": 0.465,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "flahejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.89999999999999,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-wilson-betemit-2008",
+    "playerId": "betemwi01",
+    "playerSlug": "wilson-betemit",
+    "name": "Wilson Betemit",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.265,
+      "obp": 0.289,
+      "slg": 0.429,
+      "rbi": 25,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.265,
+      "obp": 0.289,
+      "slg": 0.429,
+      "rbi": 25,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 87,
+      "plateAppearances": 197,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.289,
+      "slg": 0.429,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "betemwi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.42857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-brian-bruney-2008",
+    "playerId": "brunebr01",
+    "playerSlug": "brian-bruney",
+    "name": "Brian Bruney",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.83,
+      "whip": 0.99,
+      "so": 33,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.83,
+      "whip": 0.99,
+      "so": 33,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.99,
+      "fip": null,
+      "inningsPitched": 34.3,
+      "strikeoutRate": 8.658892128279884,
+      "walkRate": 4.198250728862974,
+      "starts": 1,
+      "reliefAppearances": 31
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "brunebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.13096209912537,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-ramiro-pena-2009",
+    "playerId": "penara02",
+    "playerSlug": "ramiro-pena",
+    "name": "Ramiro Peña",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.287,
+      "obp": 0.317,
+      "slg": 0.383,
+      "rbi": 10,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.287,
+      "obp": 0.317,
+      "slg": 0.383,
+      "rbi": 10,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 69,
+      "plateAppearances": 120,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.317,
+      "slg": 0.383,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "penara02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 73.42857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-chad-moeller-2008",
+    "playerId": "moellch01",
+    "playerSlug": "chad-moeller",
+    "name": "Chad Moeller",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.231,
+      "obp": 0.311,
+      "slg": 0.33,
+      "rbi": 9,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 1,
+      "avg": 0.231,
+      "obp": 0.311,
+      "slg": 0.33,
+      "rbi": 9,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 41,
+      "plateAppearances": 103,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.311,
+      "slg": 0.33,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "moellch01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.04285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-mike-mussina-2001",
+    "playerId": "mussimi01",
+    "playerSlug": "mike-mussina",
+    "name": "Mike Mussina",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.15,
+      "whip": 1.067,
+      "so": 214,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.15,
+      "whip": 1.067,
+      "so": 214,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.067,
+      "fip": null,
+      "inningsPitched": 228.7,
+      "strikeoutRate": 8.421512898994315,
+      "walkRate": 1.6528202885876695,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "mussimi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.01303891560997,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-joba-chamberlain-2008",
+    "playerId": "chambjo03",
+    "playerSlug": "joba-chamberlain",
+    "name": "Joba Chamberlain",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.6,
+      "whip": 1.256,
+      "so": 118,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.6,
+      "whip": 1.256,
+      "so": 118,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.256,
+      "fip": null,
+      "inningsPitched": 100.3,
+      "strikeoutRate": 10.588235294117647,
+      "walkRate": 3.4995014955134596,
+      "starts": 12,
+      "reliefAppearances": 30
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "chambjo03"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 63.8853229201285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-cc-sabathia-2009",
+    "playerId": "sabatcc01",
+    "playerSlug": "cc-sabathia",
+    "name": "CC Sabathia",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.37,
+      "whip": 1.148,
+      "so": 197,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.37,
+      "whip": 1.148,
+      "so": 197,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.148,
+      "fip": null,
+      "inningsPitched": 230,
+      "strikeoutRate": 7.708695652173913,
+      "walkRate": 2.621739130434783,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "sabatcc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.2304347826087,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-randy-johnson-2005",
+    "playerId": "johnsra05",
+    "playerSlug": "randy-johnson",
+    "name": "Randy Johnson",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.79,
+      "whip": 1.126,
+      "so": 211,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.79,
+      "whip": 1.126,
+      "so": 211,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.126,
+      "fip": null,
+      "inningsPitched": 225.7,
+      "strikeoutRate": 8.413823659725299,
+      "walkRate": 1.8741692512184316,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "johnsra05"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.8094816127603,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "nyy-2000s-roger-clemens-2001",
+    "playerId": "clemero02",
+    "playerSlug": "roger-clemens",
+    "name": "Roger Clemens",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.51,
+      "whip": 1.257,
+      "so": 213,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.51,
+      "whip": 1.257,
+      "so": 213,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.257,
+      "fip": null,
+      "inningsPitched": 220.3,
+      "strikeoutRate": 8.70177031320926,
+      "walkRate": 2.9414434861552428,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "clemero02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.38049024058103,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

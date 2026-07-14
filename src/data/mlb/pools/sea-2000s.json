@@ -1,0 +1,2030 @@
+[
+  {
+    "id": "sea-2000s-alex-rodriguez-2000",
+    "playerId": "rodrial01",
+    "playerSlug": "alex-rodriguez",
+    "name": "Alex Rodriguez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 41,
+      "avg": 0.316,
+      "obp": 0.42,
+      "slg": 0.606,
+      "rbi": 132,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 41,
+      "avg": 0.316,
+      "obp": 0.42,
+      "slg": 0.606,
+      "rbi": 132,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 148,
+      "plateAppearances": 672,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.42,
+      "slg": 0.606,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "rodrial01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 121.80000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-bret-boone-2001",
+    "playerId": "boonebr01",
+    "playerSlug": "bret-boone",
+    "name": "Bret Boone",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 37,
+      "avg": 0.331,
+      "obp": 0.372,
+      "slg": 0.578,
+      "rbi": 141,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 37,
+      "avg": 0.331,
+      "obp": 0.372,
+      "slg": 0.578,
+      "rbi": 141,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 685,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.372,
+      "slg": 0.578,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "boonebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 114.57142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-richie-sexson-2005",
+    "playerId": "sexsori01",
+    "playerSlug": "richie-sexson",
+    "name": "Richie Sexson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.263,
+      "obp": 0.369,
+      "slg": 0.541,
+      "rbi": 121,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.263,
+      "obp": 0.369,
+      "slg": 0.541,
+      "rbi": 121,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 656,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.541,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "sexsori01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 109.74285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-john-olerud-2002",
+    "playerId": "olerujo01",
+    "playerSlug": "john-olerud",
+    "name": "John Olerud",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.3,
+      "obp": 0.403,
+      "slg": 0.49,
+      "rbi": 102,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.3,
+      "obp": 0.403,
+      "slg": 0.49,
+      "rbi": 102,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 668,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.403,
+      "slg": 0.49,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "olerujo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.38571428571429,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-ichiro-suzuki-2004",
+    "playerId": "suzukic01",
+    "playerSlug": "ichiro-suzuki",
+    "name": "Ichiro Suzuki",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.372,
+      "obp": 0.414,
+      "slg": 0.455,
+      "rbi": 60,
+      "sb": 36
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.372,
+      "obp": 0.414,
+      "slg": 0.455,
+      "rbi": 60,
+      "sb": 36
+    },
+    "scoringStats": {
+      "games": 161,
+      "plateAppearances": 760,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.414,
+      "slg": 0.455,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "suzukic01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.32857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-raul-ibanez-2006",
+    "playerId": "ibanera01",
+    "playerSlug": "raul-ibanez",
+    "name": "Raul Ibanez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 33,
+      "avg": 0.289,
+      "obp": 0.353,
+      "slg": 0.516,
+      "rbi": 123,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 33,
+      "avg": 0.289,
+      "obp": 0.353,
+      "slg": 0.516,
+      "rbi": 123,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 699,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.353,
+      "slg": 0.516,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "ibanera01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.87142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-mike-cameron-2001",
+    "playerId": "camermi01",
+    "playerSlug": "mike-cameron",
+    "name": "Mike Cameron",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.267,
+      "obp": 0.353,
+      "slg": 0.48,
+      "rbi": 110,
+      "sb": 34
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.267,
+      "obp": 0.353,
+      "slg": 0.48,
+      "rbi": 110,
+      "sb": 34
+    },
+    "scoringStats": {
+      "games": 150,
+      "plateAppearances": 632,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.353,
+      "slg": 0.48,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "camermi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.35714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-russell-branyan-2009",
+    "playerId": "branyru01",
+    "playerSlug": "russell-branyan",
+    "name": "Russell Branyan",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 31,
+      "avg": 0.251,
+      "obp": 0.347,
+      "slg": 0.52,
+      "rbi": 76,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 31,
+      "avg": 0.251,
+      "obp": 0.347,
+      "slg": 0.52,
+      "rbi": 76,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 116,
+      "plateAppearances": 504,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.347,
+      "slg": 0.52,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "branyru01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.10000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-jay-buhner-2000",
+    "playerId": "buhneja01",
+    "playerSlug": "jay-buhner",
+    "name": "Jay Buhner",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.253,
+      "obp": 0.361,
+      "slg": 0.522,
+      "rbi": 82,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.253,
+      "obp": 0.361,
+      "slg": 0.522,
+      "rbi": 82,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 112,
+      "plateAppearances": 429,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.522,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "buhneja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.55714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-jose-guillen-2007",
+    "playerId": "guilljo01",
+    "playerSlug": "jose-guillen",
+    "name": "Jose Guillen",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.29,
+      "obp": 0.353,
+      "slg": 0.46,
+      "rbi": 99,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.29,
+      "obp": 0.353,
+      "slg": 0.46,
+      "rbi": 99,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 658,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.353,
+      "slg": 0.46,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "guilljo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.1,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-adrian-beltre-2006",
+    "playerId": "beltrad01",
+    "playerSlug": "adrian-beltre",
+    "name": "Adrian Beltre",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.268,
+      "obp": 0.328,
+      "slg": 0.465,
+      "rbi": 89,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.268,
+      "obp": 0.328,
+      "slg": 0.465,
+      "rbi": 89,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 680,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.328,
+      "slg": 0.465,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "beltrad01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.72857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-j-j-putz-2007",
+    "playerId": "putzjj01",
+    "playerSlug": "j-j-putz",
+    "name": "J. J. Putz",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.38,
+      "whip": 0.698,
+      "so": 82,
+      "wins": 6,
+      "saves": 40,
+      "sv": 40
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.38,
+      "whip": 0.698,
+      "so": 82,
+      "wins": 6,
+      "saves": 40,
+      "sv": 40
+    },
+    "scoringStats": {
+      "whip": 0.698,
+      "fip": null,
+      "inningsPitched": 71.7,
+      "strikeoutRate": 10.292887029288703,
+      "walkRate": 1.6317991631799162,
+      "starts": 0,
+      "reliefAppearances": 68
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "putzjj01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.47163179916319,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-randy-winn-2004",
+    "playerId": "winnra01",
+    "playerSlug": "randy-winn",
+    "name": "Randy Winn",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.286,
+      "obp": 0.346,
+      "slg": 0.427,
+      "rbi": 81,
+      "sb": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.286,
+      "obp": 0.346,
+      "slg": 0.427,
+      "rbi": 81,
+      "sb": 21
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 694,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.346,
+      "slg": 0.427,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "winnra01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.12857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-jose-lopez-2008",
+    "playerId": "lopezjo01",
+    "playerSlug": "jose-lopez",
+    "name": "Jose Lopez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.297,
+      "obp": 0.322,
+      "slg": 0.443,
+      "rbi": 89,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.297,
+      "obp": 0.322,
+      "slg": 0.443,
+      "rbi": 89,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 681,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.322,
+      "slg": 0.443,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "lopezjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.95714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-jose-vidro-2007",
+    "playerId": "vidrojo01",
+    "playerSlug": "jose-vidro",
+    "name": "Jose Vidro",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.314,
+      "obp": 0.381,
+      "slg": 0.394,
+      "rbi": 59,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.314,
+      "obp": 0.381,
+      "slg": 0.394,
+      "rbi": 59,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 147,
+      "plateAppearances": 620,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.381,
+      "slg": 0.394,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "vidrojo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.21428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-franklin-gutierrez-2009",
+    "playerId": "gutiefr01",
+    "playerSlug": "franklin-gutierrez",
+    "name": "Franklin Gutierrez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.283,
+      "obp": 0.339,
+      "slg": 0.425,
+      "rbi": 70,
+      "sb": 16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.283,
+      "obp": 0.339,
+      "slg": 0.425,
+      "rbi": 70,
+      "sb": 16
+    },
+    "scoringStats": {
+      "games": 153,
+      "plateAppearances": 616,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.339,
+      "slg": 0.425,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "gutiefr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-kenji-johjima-2006",
+    "playerId": "johjike01",
+    "playerSlug": "kenji-johjima",
+    "name": "Kenji Johjima",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.291,
+      "obp": 0.332,
+      "slg": 0.451,
+      "rbi": 76,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.291,
+      "obp": 0.332,
+      "slg": 0.451,
+      "rbi": 76,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 144,
+      "plateAppearances": 542,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.332,
+      "slg": 0.451,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "johjike01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.78571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-mark-mclemore-2001",
+    "playerId": "mclemma01",
+    "playerSlug": "mark-mclemore",
+    "name": "Mark McLemore",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B",
+      "SS",
+      "LF"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.286,
+      "obp": 0.384,
+      "slg": 0.406,
+      "rbi": 57,
+      "sb": 39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.286,
+      "obp": 0.384,
+      "slg": 0.406,
+      "rbi": 57,
+      "sb": 39
+    },
+    "scoringStats": {
+      "games": 125,
+      "plateAppearances": 484,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.406,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "mclemma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.82857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-arthur-rhodes-2001",
+    "playerId": "rhodear01",
+    "playerSlug": "arthur-rhodes",
+    "name": "Arthur Rhodes",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.72,
+      "whip": 0.853,
+      "so": 83,
+      "wins": 8,
+      "saves": 3,
+      "sv": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.72,
+      "whip": 0.853,
+      "so": 83,
+      "wins": 8,
+      "saves": 3,
+      "sv": 3
+    },
+    "scoringStats": {
+      "whip": 0.853,
+      "fip": null,
+      "inningsPitched": 68,
+      "strikeoutRate": 10.985294117647058,
+      "walkRate": 1.588235294117647,
+      "starts": 0,
+      "reliefAppearances": 71
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "rhodear01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.39558823529411,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-rafael-soriano-2003",
+    "playerId": "soriara01",
+    "playerSlug": "rafael-soriano",
+    "name": "Rafael Soriano",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.53,
+      "whip": 0.792,
+      "so": 68,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.53,
+      "whip": 0.792,
+      "so": 68,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.792,
+      "fip": null,
+      "inningsPitched": 53,
+      "strikeoutRate": 11.547169811320755,
+      "walkRate": 2.0377358490566038,
+      "starts": 0,
+      "reliefAppearances": 40
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "soriara01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.06415094339623,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-tom-lampkin-2000",
+    "playerId": "lampkto01",
+    "playerSlug": "tom-lampkin",
+    "name": "Tom Lampkin",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.252,
+      "obp": 0.325,
+      "slg": 0.534,
+      "rbi": 23,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.252,
+      "obp": 0.325,
+      "slg": 0.534,
+      "rbi": 23,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 36,
+      "plateAppearances": 117,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.325,
+      "slg": 0.534,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "lampkto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.24285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-yuniesky-betancourt-2007",
+    "playerId": "betanyu01",
+    "playerSlug": "yuniesky-betancourt",
+    "name": "Yuniesky Betancourt",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.289,
+      "obp": 0.308,
+      "slg": 0.418,
+      "rbi": 67,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.289,
+      "obp": 0.308,
+      "slg": 0.418,
+      "rbi": 67,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 556,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.308,
+      "slg": 0.418,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "betanyu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.48571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-carlos-guillen-2003",
+    "playerId": "guillca01",
+    "playerSlug": "carlos-guillen",
+    "name": "Carlos Guillen",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.276,
+      "obp": 0.359,
+      "slg": 0.394,
+      "rbi": 52,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.276,
+      "obp": 0.359,
+      "slg": 0.394,
+      "rbi": 52,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 109,
+      "plateAppearances": 446,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.394,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "guillca01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.04285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-joe-oliver-2000",
+    "playerId": "olivejo01",
+    "playerSlug": "joe-oliver",
+    "name": "Joe Oliver",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.265,
+      "obp": 0.313,
+      "slg": 0.49,
+      "rbi": 35,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.265,
+      "obp": 0.313,
+      "slg": 0.49,
+      "rbi": 35,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 69,
+      "plateAppearances": 214,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.313,
+      "slg": 0.49,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "olivejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.41428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-felix-hernandez-2009",
+    "playerId": "hernafe02",
+    "playerSlug": "felix-hernandez",
+    "name": "Felix Hernandez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.49,
+      "whip": 1.135,
+      "so": 217,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.49,
+      "whip": 1.135,
+      "so": 217,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.135,
+      "fip": null,
+      "inningsPitched": 238.7,
+      "strikeoutRate": 8.181818181818182,
+      "walkRate": 2.677000418935903,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "hernafe02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.67722664432341,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-joel-pineiro-2001",
+    "playerId": "pineijo01",
+    "playerSlug": "joel-pineiro",
+    "name": "Joel Pineiro",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.03,
+      "whip": 0.942,
+      "so": 56,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.03,
+      "whip": 0.942,
+      "so": 56,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.942,
+      "fip": null,
+      "inningsPitched": 75.3,
+      "strikeoutRate": 6.693227091633466,
+      "walkRate": 2.50996015936255,
+      "starts": 11,
+      "reliefAppearances": 6
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "pineijo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.25823373173972,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-jarrod-washburn-2009",
+    "playerId": "washbja01",
+    "playerSlug": "jarrod-washburn",
+    "name": "Jarrod Washburn",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.068,
+      "so": 79,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.068,
+      "so": 79,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.068,
+      "fip": null,
+      "inningsPitched": 133,
+      "strikeoutRate": 5.345864661654136,
+      "walkRate": 2.2330827067669174,
+      "starts": 20,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "washbja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 63.01806182121972,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-freddy-garcia-2001",
+    "playerId": "garcifr02",
+    "playerSlug": "freddy-garcia",
+    "name": "Freddy Garcia",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.05,
+      "whip": 1.123,
+      "so": 163,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.05,
+      "whip": 1.123,
+      "so": 163,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.123,
+      "fip": null,
+      "inningsPitched": 238.7,
+      "strikeoutRate": 6.145789694176791,
+      "walkRate": 2.601591956430666,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "garcifr02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 62.2562966066192,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "sea-2000s-jamie-moyer-2002",
+    "playerId": "moyerja01",
+    "playerSlug": "jamie-moyer",
+    "name": "Jamie Moyer",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.32,
+      "whip": 1.075,
+      "so": 147,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.32,
+      "whip": 1.075,
+      "so": 147,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.075,
+      "fip": null,
+      "inningsPitched": 230.7,
+      "strikeoutRate": 5.734720416124838,
+      "walkRate": 1.950585175552666,
+      "starts": 34,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "moyerja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.336202860858265,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

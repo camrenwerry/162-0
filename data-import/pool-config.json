@@ -1,0 +1,22 @@
+{
+  "decades": [
+    { "id": "1980s", "startYear": 1980, "endYear": 1989 },
+    { "id": "1990s", "startYear": 1990, "endYear": 1999 },
+    { "id": "2000s", "startYear": 2000, "endYear": 2009 },
+    { "id": "2010s", "startYear": 2010, "endYear": 2019 }
+  ],
+  "franchises": [
+    { "id": "nyy", "abbreviation": "NYY", "displayName": "New York Yankees", "poolName": "Yankees", "lahmanTeamIds": ["NYA"] },
+    { "id": "bos", "abbreviation": "BOS", "displayName": "Boston Red Sox", "poolName": "Red Sox", "lahmanTeamIds": ["BOS"] },
+    { "id": "lad", "abbreviation": "LAD", "displayName": "Los Angeles Dodgers", "poolName": "Dodgers", "lahmanTeamIds": ["LAN"] },
+    { "id": "sfg", "abbreviation": "SFG", "displayName": "San Francisco Giants", "poolName": "Giants", "lahmanTeamIds": ["SFN"] },
+    { "id": "stl", "abbreviation": "STL", "displayName": "St. Louis Cardinals", "poolName": "Cardinals", "lahmanTeamIds": ["SLN"] },
+    { "id": "chc", "abbreviation": "CHC", "displayName": "Chicago Cubs", "poolName": "Cubs", "lahmanTeamIds": ["CHN"] },
+    { "id": "atl", "abbreviation": "ATL", "displayName": "Atlanta Braves", "poolName": "Braves", "lahmanTeamIds": ["ATL"] },
+    { "id": "sea", "abbreviation": "SEA", "displayName": "Seattle Mariners", "poolName": "Mariners", "lahmanTeamIds": ["SEA"] },
+    { "id": "bal", "abbreviation": "BAL", "displayName": "Baltimore Orioles", "poolName": "Orioles", "lahmanTeamIds": ["BAL"] },
+    { "id": "oak", "abbreviation": "OAK", "displayName": "Oakland Athletics", "poolName": "Athletics", "lahmanTeamIds": ["OAK"] },
+    { "id": "laa", "abbreviation": "LAA", "displayName": "Los Angeles Angels", "poolName": "Angels", "lahmanTeamIds": ["CAL", "ANA", "LAA"] },
+    { "id": "phi", "abbreviation": "PHI", "displayName": "Philadelphia Phillies", "poolName": "Phillies", "lahmanTeamIds": ["PHI"] }
+  ]
+}

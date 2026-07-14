@@ -1,0 +1,2034 @@
+[
+  {
+    "id": "atl-1980s-dale-murphy-1987",
+    "playerId": "murphda05",
+    "playerSlug": "dale-murphy",
+    "name": "Dale Murphy",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 44,
+      "avg": 0.295,
+      "obp": 0.417,
+      "slg": 0.58,
+      "rbi": 105,
+      "sb": 16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 44,
+      "avg": 0.295,
+      "obp": 0.417,
+      "slg": 0.58,
+      "rbi": 105,
+      "sb": 16
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 693,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.417,
+      "slg": 0.58,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "murphda05"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 119.49999999999999,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-lonnie-smith-1989",
+    "playerId": "smithlo01",
+    "playerSlug": "lonnie-smith",
+    "name": "Lonnie Smith",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.315,
+      "obp": 0.415,
+      "slg": 0.533,
+      "rbi": 79,
+      "sb": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.315,
+      "obp": 0.415,
+      "slg": 0.533,
+      "rbi": 79,
+      "sb": 25
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 576,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.415,
+      "slg": 0.533,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "smithlo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 111.25714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-bob-horner-1983",
+    "playerId": "hornebo01",
+    "playerSlug": "bob-horner",
+    "name": "Bob Horner",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.303,
+      "obp": 0.383,
+      "slg": 0.528,
+      "rbi": 68,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.303,
+      "obp": 0.383,
+      "slg": 0.528,
+      "rbi": 68,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 104,
+      "plateAppearances": 439,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.383,
+      "slg": 0.528,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "hornebo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.64285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-dion-james-1987",
+    "playerId": "jamesdi01",
+    "playerSlug": "dion-james",
+    "name": "Dion James",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.312,
+      "obp": 0.397,
+      "slg": 0.472,
+      "rbi": 61,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.312,
+      "obp": 0.397,
+      "slg": 0.472,
+      "rbi": 61,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 569,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.397,
+      "slg": 0.472,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jamesdi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.15714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-chris-chambliss-1983",
+    "playerId": "chambch01",
+    "playerSlug": "chris-chambliss",
+    "name": "Chris Chambliss",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.28,
+      "obp": 0.366,
+      "slg": 0.481,
+      "rbi": 78,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.28,
+      "obp": 0.366,
+      "slg": 0.481,
+      "rbi": 78,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 131,
+      "plateAppearances": 513,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.366,
+      "slg": 0.481,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "chambch01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.35714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-claudell-washington-1984",
+    "playerId": "washicl01",
+    "playerSlug": "claudell-washington",
+    "name": "Claudell Washington",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.286,
+      "obp": 0.374,
+      "slg": 0.469,
+      "rbi": 61,
+      "sb": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.286,
+      "obp": 0.374,
+      "slg": 0.469,
+      "rbi": 61,
+      "sb": 21
+    },
+    "scoringStats": {
+      "games": 120,
+      "plateAppearances": 479,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.374,
+      "slg": 0.469,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "washicl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.98571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-ken-griffey-1986",
+    "playerId": "griffke01",
+    "playerSlug": "ken-griffey",
+    "name": "Ken Griffey",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.308,
+      "obp": 0.351,
+      "slg": 0.503,
+      "rbi": 32,
+      "sb": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.308,
+      "obp": 0.351,
+      "slg": 0.503,
+      "rbi": 32,
+      "sb": 12
+    },
+    "scoringStats": {
+      "games": 80,
+      "plateAppearances": 313,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.351,
+      "slg": 0.503,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "griffke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.34285714285713,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-ozzie-virgil-1987",
+    "playerId": "virgioz02",
+    "playerSlug": "ozzie-virgil",
+    "name": "Ozzie Virgil",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.247,
+      "obp": 0.331,
+      "slg": 0.471,
+      "rbi": 72,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.247,
+      "obp": 0.331,
+      "slg": 0.471,
+      "rbi": 72,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 123,
+      "plateAppearances": 484,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.331,
+      "slg": 0.471,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "virgioz02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.02857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-ron-gant-1988",
+    "playerId": "gantro01",
+    "playerSlug": "ron-gant",
+    "name": "Ron Gant",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.259,
+      "obp": 0.317,
+      "slg": 0.439,
+      "rbi": 60,
+      "sb": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.259,
+      "obp": 0.317,
+      "slg": 0.439,
+      "rbi": 60,
+      "sb": 19
+    },
+    "scoringStats": {
+      "games": 146,
+      "plateAppearances": 616,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.317,
+      "slg": 0.439,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "gantro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.19999999999999,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-oddibe-mcdowell-1989",
+    "playerId": "mcdowod01",
+    "playerSlug": "oddibe-mcdowell",
+    "name": "Oddibe McDowell",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.304,
+      "obp": 0.365,
+      "slg": 0.471,
+      "rbi": 24,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.304,
+      "obp": 0.365,
+      "slg": 0.471,
+      "rbi": 24,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 76,
+      "plateAppearances": 307,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.365,
+      "slg": 0.471,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "mcdowod01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.37142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-gary-matthews-1980",
+    "playerId": "matthga01",
+    "playerSlug": "gary-matthews",
+    "name": "Gary Matthews",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.278,
+      "obp": 0.325,
+      "slg": 0.419,
+      "rbi": 75,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.278,
+      "obp": 0.325,
+      "slg": 0.419,
+      "rbi": 75,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 618,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.325,
+      "slg": 0.419,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "matthga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.05714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-bob-watson-1983",
+    "playerId": "watsobo01",
+    "playerSlug": "bob-watson",
+    "name": "Bob Watson",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.309,
+      "obp": 0.376,
+      "slg": 0.49,
+      "rbi": 37,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.309,
+      "obp": 0.376,
+      "slg": 0.49,
+      "rbi": 37,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 65,
+      "plateAppearances": 170,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.376,
+      "slg": 0.49,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "watsobo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.45714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-brett-butler-1983",
+    "playerId": "butlebr01",
+    "playerSlug": "brett-butler",
+    "name": "Brett Butler",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.281,
+      "obp": 0.344,
+      "slg": 0.393,
+      "rbi": 37,
+      "sb": 39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.281,
+      "obp": 0.344,
+      "slg": 0.393,
+      "rbi": 37,
+      "sb": 39
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 610,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.344,
+      "slg": 0.393,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "butlebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.12857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-glenn-hubbard-1987",
+    "playerId": "hubbagl01",
+    "playerSlug": "glenn-hubbard",
+    "name": "Glenn Hubbard",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.264,
+      "obp": 0.378,
+      "slg": 0.381,
+      "rbi": 38,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.264,
+      "obp": 0.378,
+      "slg": 0.381,
+      "rbi": 38,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 529,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.378,
+      "slg": 0.381,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "hubbagl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.01428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-gerald-perry-1988",
+    "playerId": "perryge01",
+    "playerSlug": "gerald-perry",
+    "name": "Gerald Perry",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.3,
+      "obp": 0.338,
+      "slg": 0.4,
+      "rbi": 74,
+      "sb": 29
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.3,
+      "obp": 0.338,
+      "slg": 0.4,
+      "rbi": 74,
+      "sb": 29
+    },
+    "scoringStats": {
+      "games": 141,
+      "plateAppearances": 594,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.338,
+      "slg": 0.4,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "perryge01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1988; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.77142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-ken-oberkfell-1986",
+    "playerId": "oberkke01",
+    "playerSlug": "ken-oberkfell",
+    "name": "Ken Oberkfell",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.27,
+      "obp": 0.373,
+      "slg": 0.36,
+      "rbi": 48,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.27,
+      "obp": 0.373,
+      "slg": 0.36,
+      "rbi": 48,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 592,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.373,
+      "slg": 0.36,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "oberkke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1986; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.21428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-rafael-ramirez-1983",
+    "playerId": "ramirra01",
+    "playerSlug": "rafael-ramirez",
+    "name": "Rafael Ramirez",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.297,
+      "obp": 0.337,
+      "slg": 0.368,
+      "rbi": 58,
+      "sb": 16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.297,
+      "obp": 0.337,
+      "slg": 0.368,
+      "rbi": 58,
+      "sb": 16
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 662,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.337,
+      "slg": 0.368,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "ramirra01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.41428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-jeff-blauser-1989",
+    "playerId": "blausje01",
+    "playerSlug": "jeff-blauser",
+    "name": "Jeff Blauser",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.27,
+      "obp": 0.325,
+      "slg": 0.41,
+      "rbi": 46,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.27,
+      "obp": 0.325,
+      "slg": 0.41,
+      "rbi": 46,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 142,
+      "plateAppearances": 499,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.325,
+      "slg": 0.41,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "blausje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.75714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-bruce-benedict-1983",
+    "playerId": "benedbr01",
+    "playerSlug": "bruce-benedict",
+    "name": "Bruce Benedict",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 2,
+      "avg": 0.298,
+      "obp": 0.385,
+      "slg": 0.348,
+      "rbi": 43,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 2,
+      "avg": 0.298,
+      "obp": 0.385,
+      "slg": 0.348,
+      "rbi": 43,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 488,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.385,
+      "slg": 0.348,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "benedbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.24285714285713,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-jerry-royster-1982",
+    "playerId": "roystje01",
+    "playerSlug": "jerry-royster",
+    "name": "Jerry Royster",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B",
+      "SS",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 2,
+      "avg": 0.295,
+      "obp": 0.351,
+      "slg": 0.383,
+      "rbi": 25,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 2,
+      "avg": 0.295,
+      "obp": 0.351,
+      "slg": 0.383,
+      "rbi": 25,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 108,
+      "plateAppearances": 288,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.351,
+      "slg": 0.383,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "roystje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 81.62857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-ted-simmons-1987",
+    "playerId": "simmote01",
+    "playerSlug": "ted-simmons",
+    "name": "Ted Simmons",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.277,
+      "obp": 0.35,
+      "slg": 0.39,
+      "rbi": 30,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 4,
+      "avg": 0.277,
+      "obp": 0.35,
+      "slg": 0.39,
+      "rbi": 30,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 73,
+      "plateAppearances": 200,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.35,
+      "slg": 0.39,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "simmote01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1987; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 79.71428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-al-hrabosky-1981",
+    "playerId": "hraboal01",
+    "playerSlug": "al-hrabosky",
+    "name": "Al Hrabosky",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.07,
+      "whip": 0.98,
+      "so": 13,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.07,
+      "whip": 0.98,
+      "so": 13,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.98,
+      "fip": null,
+      "inningsPitched": 33.7,
+      "strikeoutRate": 3.4718100890207713,
+      "walkRate": 2.403560830860534,
+      "starts": 0,
+      "reliefAppearances": 24
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "hraboal01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.96237388724036,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-rick-camp-1981",
+    "playerId": "campri01",
+    "playerSlug": "rick-camp",
+    "name": "Rick Camp",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.78,
+      "whip": 1.053,
+      "so": 47,
+      "wins": 9,
+      "saves": 17,
+      "sv": 17
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.78,
+      "whip": 1.053,
+      "so": 47,
+      "wins": 9,
+      "saves": 17,
+      "sv": 17
+    },
+    "scoringStats": {
+      "whip": 1.053,
+      "fip": null,
+      "inningsPitched": 76,
+      "strikeoutRate": 5.565789473684211,
+      "walkRate": 1.4210526315789473,
+      "starts": 0,
+      "reliefAppearances": 48
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "campri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1981; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 77.3971052631579,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-steve-bedrosian-1982",
+    "playerId": "bedrost01",
+    "playerSlug": "steve-bedrosian",
+    "name": "Steve Bedrosian",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.42,
+      "whip": 1.155,
+      "so": 123,
+      "wins": 8,
+      "saves": 11,
+      "sv": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.42,
+      "whip": 1.155,
+      "so": 123,
+      "wins": 8,
+      "saves": 11,
+      "sv": 11
+    },
+    "scoringStats": {
+      "whip": 1.155,
+      "fip": null,
+      "inningsPitched": 137.7,
+      "strikeoutRate": 8.03921568627451,
+      "walkRate": 3.7254901960784315,
+      "starts": 3,
+      "reliefAppearances": 61
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "bedrost01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1982; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.33058823529412,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-john-smoltz-1989",
+    "playerId": "smoltjo01",
+    "playerSlug": "john-smoltz",
+    "name": "John Smoltz",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.94,
+      "whip": 1.115,
+      "so": 168,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.94,
+      "whip": 1.115,
+      "so": 168,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.115,
+      "fip": null,
+      "inningsPitched": 208,
+      "strikeoutRate": 7.269230769230769,
+      "walkRate": 3.1153846153846154,
+      "starts": 29,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "smoltjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1989; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 64.20632478632479,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-rick-mahler-1984",
+    "playerId": "mahleri01",
+    "playerSlug": "rick-mahler",
+    "name": "Rick Mahler",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.12,
+      "whip": 1.221,
+      "so": 106,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.12,
+      "whip": 1.221,
+      "so": 106,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.221,
+      "fip": null,
+      "inningsPitched": 222,
+      "strikeoutRate": 4.297297297297297,
+      "walkRate": 2.5135135135135136,
+      "starts": 29,
+      "reliefAppearances": 9
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "mahleri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1984; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.81567567567568,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-pascual-perez-1983",
+    "playerId": "perezpa01",
+    "playerSlug": "pascual-perez",
+    "name": "Pascual Perez",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.43,
+      "whip": 1.226,
+      "so": 144,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.43,
+      "whip": 1.226,
+      "so": 144,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.226,
+      "fip": null,
+      "inningsPitched": 215.3,
+      "strikeoutRate": 6.019507663725035,
+      "walkRate": 2.13190896423595,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "perezpa01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.11250916034474,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-craig-mcmurtry-1983",
+    "playerId": "mcmurcr01",
+    "playerSlug": "craig-mcmurtry",
+    "name": "Craig McMurtry",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.08,
+      "whip": 1.3,
+      "so": 105,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.08,
+      "whip": 1.3,
+      "so": 105,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.3,
+      "fip": null,
+      "inningsPitched": 224.7,
+      "strikeoutRate": 4.205607476635514,
+      "walkRate": 3.5246995994659547,
+      "starts": 35,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "mcmurcr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1983; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.06136181575434,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-1980s-tommy-boggs-1980",
+    "playerId": "boggsto01",
+    "playerSlug": "tommy-boggs",
+    "name": "Tommy Boggs",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.42,
+      "whip": 1.175,
+      "so": 84,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.42,
+      "whip": 1.175,
+      "so": 84,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.175,
+      "fip": null,
+      "inningsPitched": 192.3,
+      "strikeoutRate": 3.9313572542901714,
+      "walkRate": 2.1528861154446175,
+      "starts": 26,
+      "reliefAppearances": 6
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "boggsto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 1980; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.81104004160167,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

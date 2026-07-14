@@ -1,0 +1,1965 @@
+[
+  {
+    "id": "oak-2010s-marcus-semien-2019",
+    "playerId": "semiema01",
+    "playerSlug": "marcus-semien",
+    "name": "Marcus Semien",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 33,
+      "avg": 0.285,
+      "obp": 0.369,
+      "slg": 0.522,
+      "rbi": 92,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 33,
+      "avg": 0.285,
+      "obp": 0.369,
+      "slg": 0.522,
+      "rbi": 92,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 747,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.522,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "semiema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.44285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-josh-donaldson-2013",
+    "playerId": "donaljo02",
+    "playerSlug": "josh-donaldson",
+    "name": "Josh Donaldson",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.301,
+      "obp": 0.384,
+      "slg": 0.499,
+      "rbi": 93,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.301,
+      "obp": 0.384,
+      "slg": 0.499,
+      "rbi": 93,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 667,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.384,
+      "slg": 0.499,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "donaljo02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.35714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-matt-olson-2017",
+    "playerId": "olsonma02",
+    "playerSlug": "matt-olson",
+    "name": "Matt Olson",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.259,
+      "obp": 0.352,
+      "slg": 0.651,
+      "rbi": 45,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.259,
+      "obp": 0.352,
+      "slg": 0.651,
+      "rbi": 45,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 59,
+      "plateAppearances": 216,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.651,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "olsonma02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.47142857142859,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-khris-davis-2018",
+    "playerId": "daviskh01",
+    "playerSlug": "khris-davis",
+    "name": "Khris Davis",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 48,
+      "avg": 0.247,
+      "obp": 0.326,
+      "slg": 0.549,
+      "rbi": 123,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 48,
+      "avg": 0.247,
+      "obp": 0.326,
+      "slg": 0.549,
+      "rbi": 123,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 654,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.326,
+      "slg": 0.549,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "daviskh01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.18571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-mark-canha-2019",
+    "playerId": "canhama01",
+    "playerSlug": "mark-canha",
+    "name": "Mark Canha",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.273,
+      "obp": 0.396,
+      "slg": 0.517,
+      "rbi": 58,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.273,
+      "obp": 0.396,
+      "slg": 0.517,
+      "rbi": 58,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 126,
+      "plateAppearances": 497,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.396,
+      "slg": 0.517,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "canhama01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.5,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-matt-chapman-2018",
+    "playerId": "chapmma01",
+    "playerSlug": "matt-chapman",
+    "name": "Matt Chapman",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.278,
+      "obp": 0.356,
+      "slg": 0.508,
+      "rbi": 68,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.278,
+      "obp": 0.356,
+      "slg": 0.508,
+      "rbi": 68,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 616,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.356,
+      "slg": 0.508,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "chapmma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 104,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-brandon-moss-2012",
+    "playerId": "mossbr01",
+    "playerSlug": "brandon-moss",
+    "name": "Brandon Moss",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.291,
+      "obp": 0.358,
+      "slg": 0.596,
+      "rbi": 52,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.291,
+      "obp": 0.358,
+      "slg": 0.596,
+      "rbi": 52,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 84,
+      "plateAppearances": 296,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.358,
+      "slg": 0.596,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "mossbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.85714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-blake-treinen-2018",
+    "playerId": "treinbl01",
+    "playerSlug": "blake-treinen",
+    "name": "Blake Treinen",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.78,
+      "whip": 0.834,
+      "so": 100,
+      "wins": 9,
+      "saves": 38,
+      "sv": 38
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.78,
+      "whip": 0.834,
+      "so": 100,
+      "wins": 9,
+      "saves": 38,
+      "sv": 38
+    },
+    "scoringStats": {
+      "whip": 0.834,
+      "fip": null,
+      "inningsPitched": 80.3,
+      "strikeoutRate": 11.207970112079702,
+      "walkRate": 2.3536737235367373,
+      "starts": 0,
+      "reliefAppearances": 68
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "treinbl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.24144458281445,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-yoenis-cespedes-2012",
+    "playerId": "cespeyo01",
+    "playerSlug": "yoenis-cespedes",
+    "name": "Yoenis Cespedes",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.292,
+      "obp": 0.356,
+      "slg": 0.505,
+      "rbi": 82,
+      "sb": 16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.292,
+      "obp": 0.356,
+      "slg": 0.505,
+      "rbi": 82,
+      "sb": 16
+    },
+    "scoringStats": {
+      "games": 129,
+      "plateAppearances": 540,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.356,
+      "slg": 0.505,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "cespeyo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.52857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-yonder-alonso-2017",
+    "playerId": "alonsyo01",
+    "playerSlug": "yonder-alonso",
+    "name": "Yonder Alonso",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.266,
+      "obp": 0.369,
+      "slg": 0.527,
+      "rbi": 49,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.266,
+      "obp": 0.369,
+      "slg": 0.527,
+      "rbi": 49,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 100,
+      "plateAppearances": 371,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.369,
+      "slg": 0.527,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "alonsyo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.2,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-ramon-laureano-2019",
+    "playerId": "laurera01",
+    "playerSlug": "ramon-laureano",
+    "name": "Ramon Laureano",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.288,
+      "obp": 0.34,
+      "slg": 0.521,
+      "rbi": 67,
+      "sb": 13
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.288,
+      "obp": 0.34,
+      "slg": 0.521,
+      "rbi": 67,
+      "sb": 13
+    },
+    "scoringStats": {
+      "games": 123,
+      "plateAppearances": 480,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.34,
+      "slg": 0.521,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "laurera01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.8142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-jed-lowrie-2018",
+    "playerId": "lowrije01",
+    "playerSlug": "jed-lowrie",
+    "name": "Jed Lowrie",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.267,
+      "obp": 0.353,
+      "slg": 0.448,
+      "rbi": 99,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.267,
+      "obp": 0.353,
+      "slg": 0.448,
+      "rbi": 99,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 680,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.353,
+      "slg": 0.448,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "lowrije01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.52857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-stephen-piscotty-2018",
+    "playerId": "piscost01",
+    "playerSlug": "stephen-piscotty",
+    "name": "Stephen Piscotty",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.267,
+      "obp": 0.331,
+      "slg": 0.491,
+      "rbi": 88,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 27,
+      "avg": 0.267,
+      "obp": 0.331,
+      "slg": 0.491,
+      "rbi": 88,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 605,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.331,
+      "slg": 0.491,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "piscost01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.4857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-daric-barton-2010",
+    "playerId": "bartoda02",
+    "playerSlug": "daric-barton",
+    "name": "Daric Barton",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.273,
+      "obp": 0.393,
+      "slg": 0.405,
+      "rbi": 57,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.273,
+      "obp": 0.393,
+      "slg": 0.405,
+      "rbi": 57,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 674,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.393,
+      "slg": 0.405,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "bartoda02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.05714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-stephen-vogt-2015",
+    "playerId": "vogtst01",
+    "playerSlug": "stephen-vogt",
+    "name": "Stephen Vogt",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.261,
+      "obp": 0.341,
+      "slg": 0.443,
+      "rbi": 71,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.261,
+      "obp": 0.341,
+      "slg": 0.443,
+      "rbi": 71,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 511,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.341,
+      "slg": 0.443,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "vogtst01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-liam-hendriks-2019",
+    "playerId": "hendrli01",
+    "playerSlug": "liam-hendriks",
+    "name": "Liam Hendriks",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.8,
+      "whip": 0.965,
+      "so": 124,
+      "wins": 4,
+      "saves": 25,
+      "sv": 25
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.8,
+      "whip": 0.965,
+      "so": 124,
+      "wins": 4,
+      "saves": 25,
+      "sv": 25
+    },
+    "scoringStats": {
+      "whip": 0.965,
+      "fip": null,
+      "inningsPitched": 85,
+      "strikeoutRate": 13.129411764705882,
+      "walkRate": 2.223529411764706,
+      "starts": 2,
+      "reliefAppearances": 73
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "hendrli01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.45882352941177,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-derek-norris-2014",
+    "playerId": "norride01",
+    "playerSlug": "derek-norris",
+    "name": "Derek Norris",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.27,
+      "obp": 0.361,
+      "slg": 0.403,
+      "rbi": 55,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.27,
+      "obp": 0.361,
+      "slg": 0.403,
+      "rbi": 55,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 127,
+      "plateAppearances": 441,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.403,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "norride01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-fernando-abad-2014",
+    "playerId": "abadfe01",
+    "playerSlug": "fernando-abad",
+    "name": "Fernando Abad",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.57,
+      "whip": 0.855,
+      "so": 51,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.57,
+      "whip": 0.855,
+      "so": 51,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.855,
+      "fip": null,
+      "inningsPitched": 57.3,
+      "strikeoutRate": 8.010471204188482,
+      "walkRate": 2.356020942408377,
+      "starts": 0,
+      "reliefAppearances": 69
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "abadfe01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.54167539267016,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-jemile-weeks-2011",
+    "playerId": "weeksje01",
+    "playerSlug": "jemile-weeks",
+    "name": "Jemile Weeks",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 2,
+      "avg": 0.303,
+      "obp": 0.34,
+      "slg": 0.421,
+      "rbi": 36,
+      "sb": 22
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 2,
+      "avg": 0.303,
+      "obp": 0.34,
+      "slg": 0.421,
+      "rbi": 36,
+      "sb": 22
+    },
+    "scoringStats": {
+      "games": 97,
+      "plateAppearances": 435,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.34,
+      "slg": 0.421,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "weeksje01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.52857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-mark-ellis-2010",
+    "playerId": "ellisma01",
+    "playerSlug": "mark-ellis",
+    "name": "Mark Ellis",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.291,
+      "obp": 0.358,
+      "slg": 0.381,
+      "rbi": 49,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.291,
+      "obp": 0.358,
+      "slg": 0.381,
+      "rbi": 49,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 124,
+      "plateAppearances": 489,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.358,
+      "slg": 0.381,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "ellisma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.87142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-john-jaso-2014",
+    "playerId": "jasojo01",
+    "playerSlug": "john-jaso",
+    "name": "John Jaso",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.264,
+      "obp": 0.337,
+      "slg": 0.43,
+      "rbi": 40,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.264,
+      "obp": 0.337,
+      "slg": 0.43,
+      "rbi": 40,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 99,
+      "plateAppearances": 344,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.337,
+      "slg": 0.43,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "jasojo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.52857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-cliff-pennington-2011",
+    "playerId": "pennicl01",
+    "playerSlug": "cliff-pennington",
+    "name": "Cliff Pennington",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.264,
+      "obp": 0.319,
+      "slg": 0.369,
+      "rbi": 58,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.264,
+      "obp": 0.319,
+      "slg": 0.369,
+      "rbi": 58,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 148,
+      "plateAppearances": 562,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.319,
+      "slg": 0.369,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "pennicl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.85714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-eric-sogard-2013",
+    "playerId": "sogarer01",
+    "playerSlug": "eric-sogard",
+    "name": "Eric Sogard",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 2,
+      "avg": 0.266,
+      "obp": 0.322,
+      "slg": 0.364,
+      "rbi": 35,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 2,
+      "avg": 0.266,
+      "obp": 0.322,
+      "slg": 0.364,
+      "rbi": 35,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 130,
+      "plateAppearances": 404,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.322,
+      "slg": 0.364,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "sogarer01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 80.14285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-rich-hill-2016",
+    "playerId": "hillri01",
+    "playerSlug": "rich-hill",
+    "name": "Rich Hill",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.25,
+      "whip": 1.092,
+      "so": 90,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.25,
+      "whip": 1.092,
+      "so": 90,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.092,
+      "fip": null,
+      "inningsPitched": 76,
+      "strikeoutRate": 10.657894736842104,
+      "walkRate": 3.3157894736842106,
+      "starts": 14,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "hillri01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.39538011695906,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-jon-lester-2014",
+    "playerId": "lestejo01",
+    "playerSlug": "jon-lester",
+    "name": "Jon Lester",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.35,
+      "whip": 1.07,
+      "so": 71,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.35,
+      "whip": 1.07,
+      "so": 71,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.07,
+      "fip": null,
+      "inningsPitched": 76.7,
+      "strikeoutRate": 8.33116036505867,
+      "walkRate": 1.877444589308996,
+      "starts": 11,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "lestejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 68.34168477473561,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-sonny-gray-2015",
+    "playerId": "grayso01",
+    "playerSlug": "sonny-gray",
+    "name": "Sonny Gray",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.73,
+      "whip": 1.082,
+      "so": 169,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.73,
+      "whip": 1.082,
+      "so": 169,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.082,
+      "fip": null,
+      "inningsPitched": 208,
+      "strikeoutRate": 7.3125,
+      "walkRate": 2.5528846153846154,
+      "starts": 31,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "grayso01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 68.29497863247863,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-scott-kazmir-2015",
+    "playerId": "kazmisc01",
+    "playerSlug": "scott-kazmir",
+    "name": "Scott Kazmir",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.38,
+      "whip": 1.085,
+      "so": 101,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.38,
+      "whip": 1.085,
+      "so": 101,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.085,
+      "fip": null,
+      "inningsPitched": 109.7,
+      "strikeoutRate": 8.28623518687329,
+      "walkRate": 2.871467639015497,
+      "starts": 18,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "kazmisc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2015; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.95659576623113,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "oak-2010s-frankie-montas-2019",
+    "playerId": "montafr01",
+    "playerSlug": "frankie-montas",
+    "name": "Frankie Montas",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.62,
+      "whip": 1.115,
+      "so": 103,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.62,
+      "whip": 1.115,
+      "so": 103,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.115,
+      "fip": null,
+      "inningsPitched": 96,
+      "strikeoutRate": 9.65625,
+      "walkRate": 2.15625,
+      "starts": 16,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "montafr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.84333333333333,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

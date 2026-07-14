@@ -1,0 +1,1964 @@
+[
+  {
+    "id": "atl-2010s-freddie-freeman-2016",
+    "playerId": "freemfr01",
+    "playerSlug": "freddie-freeman",
+    "name": "Freddie Freeman",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.302,
+      "obp": 0.4,
+      "slg": 0.569,
+      "rbi": 91,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.302,
+      "obp": 0.4,
+      "slg": 0.569,
+      "rbi": 91,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 693,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.4,
+      "slg": 0.569,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "freemfr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 116.69999999999999,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-craig-kimbrel-2012",
+    "playerId": "kimbrcr01",
+    "playerSlug": "craig-kimbrel",
+    "name": "Craig Kimbrel",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.01,
+      "whip": 0.654,
+      "so": 116,
+      "wins": 3,
+      "saves": 42,
+      "sv": 42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.01,
+      "whip": 0.654,
+      "so": 116,
+      "wins": 3,
+      "saves": 42,
+      "sv": 42
+    },
+    "scoringStats": {
+      "whip": 0.654,
+      "fip": null,
+      "inningsPitched": 62.7,
+      "strikeoutRate": 16.650717703349283,
+      "walkRate": 2.0095693779904304,
+      "starts": 0,
+      "reliefAppearances": 63
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "kimbrcr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 112.76172248803829,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-josh-donaldson-2019",
+    "playerId": "donaljo02",
+    "playerSlug": "josh-donaldson",
+    "name": "Josh Donaldson",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 37,
+      "avg": 0.259,
+      "obp": 0.379,
+      "slg": 0.521,
+      "rbi": 94,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 37,
+      "avg": 0.259,
+      "obp": 0.379,
+      "slg": 0.521,
+      "rbi": 94,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 659,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.379,
+      "slg": 0.521,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "donaljo02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.82857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-ronald-acuna-2019",
+    "playerId": "acunaro01",
+    "playerSlug": "ronald-acuna",
+    "name": "Ronald Acuña",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 41,
+      "avg": 0.28,
+      "obp": 0.365,
+      "slg": 0.518,
+      "rbi": 101,
+      "sb": 37
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 41,
+      "avg": 0.28,
+      "obp": 0.365,
+      "slg": 0.518,
+      "rbi": 101,
+      "sb": 37
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 712,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.365,
+      "slg": 0.518,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "acunaro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 108.64285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-ozzie-albies-2019",
+    "playerId": "albieoz01",
+    "playerSlug": "ozzie-albies",
+    "name": "Ozzie Albies",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.295,
+      "obp": 0.352,
+      "slg": 0.5,
+      "rbi": 86,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 24,
+      "avg": 0.295,
+      "obp": 0.352,
+      "slg": 0.5,
+      "rbi": 86,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 160,
+      "plateAppearances": 702,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.5,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "albieoz01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.25714285714287,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-jason-heyward-2010",
+    "playerId": "heywaja01",
+    "playerSlug": "jason-heyward",
+    "name": "Jason Heyward",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.277,
+      "obp": 0.393,
+      "slg": 0.456,
+      "rbi": 72,
+      "sb": 11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.277,
+      "obp": 0.393,
+      "slg": 0.456,
+      "rbi": 72,
+      "sb": 11
+    },
+    "scoringStats": {
+      "games": 142,
+      "plateAppearances": 623,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.393,
+      "slg": 0.456,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "heywaja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.69999999999999,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-justin-upton-2014",
+    "playerId": "uptonju01",
+    "playerSlug": "justin-upton",
+    "name": "Justin Upton",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 29,
+      "avg": 0.27,
+      "obp": 0.342,
+      "slg": 0.491,
+      "rbi": 102,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 29,
+      "avg": 0.27,
+      "obp": 0.342,
+      "slg": 0.491,
+      "rbi": 102,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 640,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.342,
+      "slg": 0.491,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "uptonju01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.58571428571429,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-nick-markakis-2018",
+    "playerId": "markani01",
+    "playerSlug": "nick-markakis",
+    "name": "Nick Markakis",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.297,
+      "obp": 0.366,
+      "slg": 0.44,
+      "rbi": 93,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.297,
+      "obp": 0.366,
+      "slg": 0.44,
+      "rbi": 93,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 162,
+      "plateAppearances": 705,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.366,
+      "slg": 0.44,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "markani01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.74285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-martin-prado-2010",
+    "playerId": "pradoma01",
+    "playerSlug": "martin-prado",
+    "name": "Martin Prado",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.307,
+      "obp": 0.35,
+      "slg": 0.459,
+      "rbi": 66,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.307,
+      "obp": 0.35,
+      "slg": 0.459,
+      "rbi": 66,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 648,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.35,
+      "slg": 0.459,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "pradoma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.41428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-brian-mccann-2010",
+    "playerId": "mccanbr01",
+    "playerSlug": "brian-mccann",
+    "name": "Brian McCann",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.269,
+      "obp": 0.375,
+      "slg": 0.453,
+      "rbi": 77,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.269,
+      "obp": 0.375,
+      "slg": 0.453,
+      "rbi": 77,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 143,
+      "plateAppearances": 566,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.375,
+      "slg": 0.453,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "mccanbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.97142857142859,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-billy-wagner-2010",
+    "playerId": "wagnebi02",
+    "playerSlug": "billy-wagner",
+    "name": "Billy Wagner",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.43,
+      "whip": 0.865,
+      "so": 104,
+      "wins": 7,
+      "saves": 37,
+      "sv": 37
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.43,
+      "whip": 0.865,
+      "so": 104,
+      "wins": 7,
+      "saves": 37,
+      "sv": 37
+    },
+    "scoringStats": {
+      "whip": 0.865,
+      "fip": null,
+      "inningsPitched": 69.3,
+      "strikeoutRate": 13.506493506493507,
+      "walkRate": 2.857142857142857,
+      "starts": 0,
+      "reliefAppearances": 71
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "wagnebi02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.51402597402598,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-kurt-suzuki-2017",
+    "playerId": "suzukku01",
+    "playerSlug": "kurt-suzuki",
+    "name": "Kurt Suzuki",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.283,
+      "obp": 0.351,
+      "slg": 0.536,
+      "rbi": 50,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.283,
+      "obp": 0.351,
+      "slg": 0.536,
+      "rbi": 50,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 81,
+      "plateAppearances": 308,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.351,
+      "slg": 0.536,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "suzukku01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.5,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-chris-johnson-2013",
+    "playerId": "johnsch05",
+    "playerSlug": "chris-johnson",
+    "name": "Chris Johnson",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.321,
+      "obp": 0.358,
+      "slg": 0.457,
+      "rbi": 68,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.321,
+      "obp": 0.358,
+      "slg": 0.457,
+      "rbi": 68,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 142,
+      "plateAppearances": 547,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.358,
+      "slg": 0.457,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "johnsch05"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.12857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-ender-inciarte-2017",
+    "playerId": "inciaen01",
+    "playerSlug": "ender-inciarte",
+    "name": "Ender Inciarte",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.304,
+      "obp": 0.35,
+      "slg": 0.409,
+      "rbi": 57,
+      "sb": 22
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 11,
+      "avg": 0.304,
+      "obp": 0.35,
+      "slg": 0.409,
+      "rbi": 57,
+      "sb": 22
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 715,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.35,
+      "slg": 0.409,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "inciaen01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.32857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-chipper-jones-2011",
+    "playerId": "jonesch06",
+    "playerSlug": "chipper-jones",
+    "name": "Chipper Jones",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.275,
+      "obp": 0.344,
+      "slg": 0.47,
+      "rbi": 70,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.275,
+      "obp": 0.344,
+      "slg": 0.47,
+      "rbi": 70,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 126,
+      "plateAppearances": 512,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.344,
+      "slg": 0.47,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jonesch06"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.02857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-dan-uggla-2011",
+    "playerId": "ugglada01",
+    "playerSlug": "dan-uggla",
+    "name": "Dan Uggla",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.233,
+      "obp": 0.311,
+      "slg": 0.453,
+      "rbi": 82,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.233,
+      "obp": 0.311,
+      "slg": 0.453,
+      "rbi": 82,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 161,
+      "plateAppearances": 672,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.311,
+      "slg": 0.453,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "ugglada01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.60000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-johan-camargo-2018",
+    "playerId": "camarjo01",
+    "playerSlug": "johan-camargo",
+    "name": "Johan Camargo",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.272,
+      "obp": 0.349,
+      "slg": 0.457,
+      "rbi": 76,
+      "sb": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.272,
+      "obp": 0.349,
+      "slg": 0.457,
+      "rbi": 76,
+      "sb": 1
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 524,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.349,
+      "slg": 0.457,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "camarjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 95.57142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-matt-adams-2017",
+    "playerId": "adamsma01",
+    "playerSlug": "matt-adams",
+    "name": "Matt Adams",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.271,
+      "obp": 0.315,
+      "slg": 0.543,
+      "rbi": 58,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 19,
+      "avg": 0.271,
+      "obp": 0.315,
+      "slg": 0.543,
+      "rbi": 58,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 100,
+      "plateAppearances": 314,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.315,
+      "slg": 0.543,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "adamsma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.77142857142859,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-michael-bourn-2012",
+    "playerId": "bournmi01",
+    "playerSlug": "michael-bourn",
+    "name": "Michael Bourn",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.274,
+      "obp": 0.348,
+      "slg": 0.391,
+      "rbi": 57,
+      "sb": 42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 9,
+      "avg": 0.274,
+      "obp": 0.348,
+      "slg": 0.391,
+      "rbi": 57,
+      "sb": 42
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 701,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.391,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "bournmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.92857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-tyler-flowers-2017",
+    "playerId": "flowety01",
+    "playerSlug": "tyler-flowers",
+    "name": "Tyler Flowers",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.281,
+      "obp": 0.378,
+      "slg": 0.445,
+      "rbi": 49,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 12,
+      "avg": 0.281,
+      "obp": 0.378,
+      "slg": 0.445,
+      "rbi": 49,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 99,
+      "plateAppearances": 370,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.378,
+      "slg": 0.445,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "flowety01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.87142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-omar-infante-2010",
+    "playerId": "infanom01",
+    "playerSlug": "omar-infante",
+    "name": "Omar Infante",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B",
+      "SS",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.321,
+      "obp": 0.359,
+      "slg": 0.416,
+      "rbi": 47,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.321,
+      "obp": 0.359,
+      "slg": 0.416,
+      "rbi": 47,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 502,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.416,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "infanom01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.84285714285713,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-eric-o-flaherty-2011",
+    "playerId": "oflaher01",
+    "playerSlug": "eric-o-flaherty",
+    "name": "Eric O'Flaherty",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.98,
+      "whip": 1.086,
+      "so": 67,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 0.98,
+      "whip": 1.086,
+      "so": 67,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.086,
+      "fip": null,
+      "inningsPitched": 73.7,
+      "strikeoutRate": 8.181818181818182,
+      "walkRate": 2.564450474898236,
+      "starts": 0,
+      "reliefAppearances": 78
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "oflaher01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.94605156037991,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-dansby-swanson-2019",
+    "playerId": "swansda01",
+    "playerSlug": "dansby-swanson",
+    "name": "Dansby Swanson",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.251,
+      "obp": 0.325,
+      "slg": 0.422,
+      "rbi": 65,
+      "sb": 10
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.251,
+      "obp": 0.325,
+      "slg": 0.422,
+      "rbi": 65,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 127,
+      "plateAppearances": 544,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.325,
+      "slg": 0.422,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "swansda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.24285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-kris-medlen-2012",
+    "playerId": "medlekr01",
+    "playerSlug": "kris-medlen",
+    "name": "Kris Medlen",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.57,
+      "whip": 0.913,
+      "so": 120,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.57,
+      "whip": 0.913,
+      "so": 120,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 0.913,
+      "fip": null,
+      "inningsPitched": 138,
+      "strikeoutRate": 7.826086956521739,
+      "walkRate": 1.5,
+      "starts": 12,
+      "reliefAppearances": 38
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "medlekr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.05579710144929,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-brandon-beachy-2012",
+    "playerId": "beachbr01",
+    "playerSlug": "brandon-beachy",
+    "name": "Brandon Beachy",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2,
+      "whip": 0.963,
+      "so": 68,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2,
+      "whip": 0.963,
+      "so": 68,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 0.963,
+      "fip": null,
+      "inningsPitched": 81,
+      "strikeoutRate": 7.555555555555555,
+      "walkRate": 3.2222222222222223,
+      "starts": 13,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "beachbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 71.74000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-mike-foltynewicz-2018",
+    "playerId": "foltymi01",
+    "playerSlug": "mike-foltynewicz",
+    "name": "Mike Foltynewicz",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.85,
+      "whip": 1.082,
+      "so": 202,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.85,
+      "whip": 1.082,
+      "so": 202,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.082,
+      "fip": null,
+      "inningsPitched": 183,
+      "strikeoutRate": 9.934426229508198,
+      "walkRate": 3.3442622950819674,
+      "starts": 31,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "foltymi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 68.211912568306,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-julio-teheran-2014",
+    "playerId": "teherju01",
+    "playerSlug": "julio-teheran",
+    "name": "Julio Teheran",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.89,
+      "whip": 1.081,
+      "so": 186,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.89,
+      "whip": 1.081,
+      "so": 186,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.081,
+      "fip": null,
+      "inningsPitched": 221,
+      "strikeoutRate": 7.574660633484163,
+      "walkRate": 2.076923076923077,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "teherju01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.94660633484163,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "atl-2010s-alex-wood-2014",
+    "playerId": "woodal02",
+    "playerSlug": "alex-wood",
+    "name": "Alex Wood",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.78,
+      "whip": 1.142,
+      "so": 170,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.78,
+      "whip": 1.142,
+      "so": 170,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.142,
+      "fip": null,
+      "inningsPitched": 171.7,
+      "strikeoutRate": 8.910891089108912,
+      "walkRate": 2.3587652882935353,
+      "starts": 24,
+      "reliefAppearances": 11
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "woodal02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.16707759011196,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

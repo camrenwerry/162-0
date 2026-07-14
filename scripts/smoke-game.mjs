@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { readBuiltData } from './lib/player-pipeline.mjs'
 
-const { combinations, players } = JSON.parse(readFileSync(new URL('../src/data/mlb/betaPlayers.json', import.meta.url), 'utf8'))
+const { combinations, pools } = readBuiltData(process.cwd())
+const players = Object.values(pools).flat()
 const slots = [
   ['C', 'C'], ['1B', '1B'], ['2B', '2B'], ['3B', '3B'], ['SS', 'SS'],
   ['LF', 'LF'], ['CF', 'CF'], ['RF', 'RF'], ['DH', 'DH'],
@@ -85,20 +86,21 @@ for (let game = 0; game < 100; game += 1) {
 // Requested direction and stable-name tie behavior for every sort key.
 const pool = players.filter((player) => player.franchiseId === combinations[0].franchiseId && player.decade === combinations[0].decade)
 const visibleForAllSort = (key) => pool.filter((player) => hitterSorts.has(key)
-  ? player.type === 'hitter'
-  : pitcherSorts.has(key) ? player.type === 'pitcher' : true)
+  ? player.playerType !== 'pitcher'
+  : pitcherSorts.has(key) ? player.playerType !== 'hitter' : true)
 for (const key of universalSorts) {
   const visible = visibleForAllSort(key)
   assert(visible.some((player) => player.type === 'hitter'))
   assert(visible.some((player) => player.type === 'pitcher'))
 }
-for (const key of hitterSorts) assert(visibleForAllSort(key).every((player) => player.type === 'hitter'))
-for (const key of pitcherSorts) assert(visibleForAllSort(key).every((player) => player.type === 'pitcher'))
+for (const key of hitterSorts) assert(visibleForAllSort(key).every((player) => player.playerType !== 'pitcher'))
+for (const key of pitcherSorts) assert(visibleForAllSort(key).every((player) => player.playerType !== 'hitter'))
 
 const valueFor = (player, key) => {
   if (key === 'name') return player.name
   if (key === 'position') return Math.min(...player.eligiblePositions.map((position) => positionOrder.get(position)))
-  return player.stats[key] ?? null
+  const stats = pitcherSorts.has(key) && player.playerType === 'twoWay' ? player.pitchingVisibleStats : player.stats
+  return stats[key] ?? null
 }
 const compare = (key, ascending) => (a, b) => {
   const av = valueFor(a, key); const bv = valueFor(b, key)
@@ -125,6 +127,6 @@ assert.equal([missingHr, validHr].sort(compare('hr', false)).at(-1).id, 'null-st
 
 const searchTarget = visibleForAllSort('hr')[0]
 const searchTerm = searchTarget.name.toLocaleLowerCase()
-assert(visibleForAllSort('hr').filter((player) => player.name.toLocaleLowerCase().includes(searchTerm)).every((player) => player.type === 'hitter'))
+assert(visibleForAllSort('hr').filter((player) => player.name.toLocaleLowerCase().includes(searchTerm)).every((player) => player.playerType !== 'pitcher'))
 
 console.log('Gameplay smoke passed: 200 drafts, duplicate pitching slots, rerolls, ALL type filtering, search, null handling, and all sort directions.')

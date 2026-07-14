@@ -1,0 +1,2030 @@
+[
+  {
+    "id": "laa-2000s-troy-glaus-2000",
+    "playerId": "glaustr01",
+    "playerSlug": "troy-glaus",
+    "name": "Troy Glaus",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 47,
+      "avg": 0.284,
+      "obp": 0.404,
+      "slg": 0.604,
+      "rbi": 102,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 47,
+      "avg": 0.284,
+      "obp": 0.404,
+      "slg": 0.604,
+      "rbi": 102,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 678,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.404,
+      "slg": 0.604,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "glaustr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 120.17142857142856,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-vladimir-guerrero-2004",
+    "playerId": "guerrvl01",
+    "playerSlug": "vladimir-guerrero",
+    "name": "Vladimir Guerrero",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.337,
+      "obp": 0.391,
+      "slg": 0.598,
+      "rbi": 126,
+      "sb": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.337,
+      "obp": 0.391,
+      "slg": 0.598,
+      "rbi": 126,
+      "sb": 15
+    },
+    "scoringStats": {
+      "games": 156,
+      "plateAppearances": 680,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.391,
+      "slg": 0.598,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "guerrvl01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 118.32857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-darin-erstad-2000",
+    "playerId": "erstada01",
+    "playerSlug": "darin-erstad",
+    "name": "Darin Erstad",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.355,
+      "obp": 0.409,
+      "slg": 0.541,
+      "rbi": 100,
+      "sb": 28
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 25,
+      "avg": 0.355,
+      "obp": 0.409,
+      "slg": 0.541,
+      "rbi": 100,
+      "sb": 28
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 745,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.409,
+      "slg": 0.541,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "erstada01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 116.28571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-mark-teixeira-2008",
+    "playerId": "teixema01",
+    "playerSlug": "mark-teixeira",
+    "name": "Mark Teixeira",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.358,
+      "obp": 0.449,
+      "slg": 0.632,
+      "rbi": 43,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 13,
+      "avg": 0.358,
+      "obp": 0.449,
+      "slg": 0.632,
+      "rbi": 43,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 54,
+      "plateAppearances": 234,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.449,
+      "slg": 0.632,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "teixema01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 114.78571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-tim-salmon-2000",
+    "playerId": "salmoti01",
+    "playerSlug": "tim-salmon",
+    "name": "Tim Salmon",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.29,
+      "obp": 0.404,
+      "slg": 0.54,
+      "rbi": 97,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.29,
+      "obp": 0.404,
+      "slg": 0.54,
+      "rbi": 97,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 680,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.404,
+      "slg": 0.54,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "salmoti01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 113.82857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-kendrys-morales-2009",
+    "playerId": "moralke01",
+    "playerSlug": "kendrys-morales",
+    "name": "Kendrys Morales",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.306,
+      "obp": 0.355,
+      "slg": 0.569,
+      "rbi": 108,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 34,
+      "avg": 0.306,
+      "obp": 0.355,
+      "slg": 0.569,
+      "rbi": 108,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 622,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.569,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "moralke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 110.17142857142856,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-garret-anderson-2003",
+    "playerId": "anderga01",
+    "playerSlug": "garret-anderson",
+    "name": "Garret Anderson",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 29,
+      "avg": 0.315,
+      "obp": 0.345,
+      "slg": 0.541,
+      "rbi": 116,
+      "sb": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 29,
+      "avg": 0.315,
+      "obp": 0.345,
+      "slg": 0.541,
+      "rbi": 116,
+      "sb": 6
+    },
+    "scoringStats": {
+      "games": 159,
+      "plateAppearances": 673,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.345,
+      "slg": 0.541,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "anderga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 107.82857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-mo-vaughn-2000",
+    "playerId": "vaughmo01",
+    "playerSlug": "mo-vaughn",
+    "name": "Mo Vaughn",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.272,
+      "obp": 0.365,
+      "slg": 0.498,
+      "rbi": 117,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 36,
+      "avg": 0.272,
+      "obp": 0.365,
+      "slg": 0.498,
+      "rbi": 117,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 161,
+      "plateAppearances": 712,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.365,
+      "slg": 0.498,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "vaughmo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2000; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 106.64285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-mike-napoli-2008",
+    "playerId": "napolmi01",
+    "playerSlug": "mike-napoli",
+    "name": "Mike Napoli",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.273,
+      "obp": 0.374,
+      "slg": 0.586,
+      "rbi": 49,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.273,
+      "obp": 0.374,
+      "slg": 0.586,
+      "rbi": 49,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 78,
+      "plateAppearances": 273,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.374,
+      "slg": 0.586,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "napolmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 103.8,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-juan-rivera-2006",
+    "playerId": "riverju01",
+    "playerSlug": "juan-rivera",
+    "name": "Juan Rivera",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.31,
+      "obp": 0.362,
+      "slg": 0.525,
+      "rbi": 85,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.31,
+      "obp": 0.362,
+      "slg": 0.525,
+      "rbi": 85,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 124,
+      "plateAppearances": 494,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.362,
+      "slg": 0.525,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "riverju01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 102.81428571428572,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-torii-hunter-2009",
+    "playerId": "hunteto01",
+    "playerSlug": "torii-hunter",
+    "name": "Torii Hunter",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.299,
+      "obp": 0.366,
+      "slg": 0.508,
+      "rbi": 90,
+      "sb": 18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.299,
+      "obp": 0.366,
+      "slg": 0.508,
+      "rbi": 90,
+      "sb": 18
+    },
+    "scoringStats": {
+      "games": 119,
+      "plateAppearances": 506,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.366,
+      "slg": 0.508,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "hunteto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 101.85714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-chone-figgins-2009",
+    "playerId": "figgich01",
+    "playerSlug": "chone-figgins",
+    "name": "Chone Figgins",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.298,
+      "obp": 0.395,
+      "slg": 0.393,
+      "rbi": 54,
+      "sb": 42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.298,
+      "obp": 0.395,
+      "slg": 0.393,
+      "rbi": 54,
+      "sb": 42
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 721,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.395,
+      "slg": 0.393,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "figgich01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 99.4,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-robb-quinlan-2004",
+    "playerId": "quinlro01",
+    "playerSlug": "robb-quinlan",
+    "name": "Robb Quinlan",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.344,
+      "obp": 0.401,
+      "slg": 0.525,
+      "rbi": 23,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.344,
+      "obp": 0.401,
+      "slg": 0.525,
+      "rbi": 23,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 56,
+      "plateAppearances": 177,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.401,
+      "slg": 0.525,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "quinlro01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.65714285714287,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-david-eckstein-2002",
+    "playerId": "eckstda01",
+    "playerSlug": "david-eckstein",
+    "name": "David Eckstein",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.293,
+      "obp": 0.363,
+      "slg": 0.388,
+      "rbi": 63,
+      "sb": 21
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.293,
+      "obp": 0.363,
+      "slg": 0.388,
+      "rbi": 63,
+      "sb": 21
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 688,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.363,
+      "slg": 0.388,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "eckstda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.75714285714285,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-orlando-cabrera-2007",
+    "playerId": "cabreor01",
+    "playerSlug": "orlando-cabrera",
+    "name": "Orlando Cabrera",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.301,
+      "obp": 0.345,
+      "slg": 0.397,
+      "rbi": 86,
+      "sb": 20
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.301,
+      "obp": 0.345,
+      "slg": 0.397,
+      "rbi": 86,
+      "sb": 20
+    },
+    "scoringStats": {
+      "games": 155,
+      "plateAppearances": 698,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.345,
+      "slg": 0.397,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "cabreor01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 94.14285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-adam-kennedy-2002",
+    "playerId": "kennead01",
+    "playerSlug": "adam-kennedy",
+    "name": "Adam Kennedy",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.312,
+      "obp": 0.345,
+      "slg": 0.449,
+      "rbi": 52,
+      "sb": 17
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.312,
+      "obp": 0.345,
+      "slg": 0.449,
+      "rbi": 52,
+      "sb": 17
+    },
+    "scoringStats": {
+      "games": 144,
+      "plateAppearances": 504,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.345,
+      "slg": 0.449,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "kennead01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.80000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-erick-aybar-2009",
+    "playerId": "aybarer01",
+    "playerSlug": "erick-aybar",
+    "name": "Erick Aybar",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.312,
+      "obp": 0.353,
+      "slg": 0.423,
+      "rbi": 58,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.312,
+      "obp": 0.353,
+      "slg": 0.423,
+      "rbi": 58,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 137,
+      "plateAppearances": 544,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.353,
+      "slg": 0.423,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "aybarer01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.14285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-maicer-izturis-2009",
+    "playerId": "izturma01",
+    "playerSlug": "maicer-izturis",
+    "name": "Maicer Izturis",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.3,
+      "obp": 0.359,
+      "slg": 0.434,
+      "rbi": 65,
+      "sb": 13
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.3,
+      "obp": 0.359,
+      "slg": 0.434,
+      "rbi": 65,
+      "sb": 13
+    },
+    "scoringStats": {
+      "games": 114,
+      "plateAppearances": 434,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.359,
+      "slg": 0.434,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "izturma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2009; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.7,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-bengie-molina-2005",
+    "playerId": "molinbe01",
+    "playerSlug": "bengie-molina",
+    "name": "Bengie Molina",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.295,
+      "obp": 0.336,
+      "slg": 0.446,
+      "rbi": 69,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 15,
+      "avg": 0.295,
+      "obp": 0.336,
+      "slg": 0.446,
+      "rbi": 69,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 119,
+      "plateAppearances": 444,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.336,
+      "slg": 0.446,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "molinbe01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.88571428571429,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-howie-kendrick-2007",
+    "playerId": "kendrho01",
+    "playerSlug": "howie-kendrick",
+    "name": "Howie Kendrick",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.322,
+      "obp": 0.347,
+      "slg": 0.45,
+      "rbi": 39,
+      "sb": 5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.322,
+      "obp": 0.347,
+      "slg": 0.45,
+      "rbi": 39,
+      "sb": 5
+    },
+    "scoringStats": {
+      "games": 88,
+      "plateAppearances": 352,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.347,
+      "slg": 0.45,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "kendrho01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 89.75714285714284,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-francisco-rodriguez-2004",
+    "playerId": "rodrifr03",
+    "playerSlug": "francisco-rodriguez",
+    "name": "Francisco Rodriguez",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.82,
+      "whip": 1,
+      "so": 123,
+      "wins": 4,
+      "saves": 12,
+      "sv": 12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.82,
+      "whip": 1,
+      "so": 123,
+      "wins": 4,
+      "saves": 12,
+      "sv": 12
+    },
+    "scoringStats": {
+      "whip": 1,
+      "fip": null,
+      "inningsPitched": 84,
+      "strikeoutRate": 13.178571428571429,
+      "walkRate": 3.5357142857142856,
+      "starts": 0,
+      "reliefAppearances": 69
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "rodrifr03"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2004; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 88.6242857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-shawn-wooten-2001",
+    "playerId": "wootesh01",
+    "playerSlug": "shawn-wooten",
+    "name": "Shawn Wooten",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.312,
+      "obp": 0.332,
+      "slg": 0.466,
+      "rbi": 32,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 8,
+      "avg": 0.312,
+      "obp": 0.332,
+      "slg": 0.466,
+      "rbi": 32,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 79,
+      "plateAppearances": 232,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.332,
+      "slg": 0.466,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "wootesh01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2001; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 86.42857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-brendan-donnelly-2003",
+    "playerId": "donnebr01",
+    "playerSlug": "brendan-donnelly",
+    "name": "Brendan Donnelly",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.58,
+      "whip": 1.068,
+      "so": 79,
+      "wins": 2,
+      "saves": 3,
+      "sv": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.58,
+      "whip": 1.068,
+      "so": 79,
+      "wins": 2,
+      "saves": 3,
+      "sv": 3
+    },
+    "scoringStats": {
+      "whip": 1.068,
+      "fip": null,
+      "inningsPitched": 74,
+      "strikeoutRate": 9.608108108108109,
+      "walkRate": 2.918918918918919,
+      "starts": 0,
+      "reliefAppearances": 63
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "donnebr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2003; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 85.71378378378378,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-jose-arredondo-2008",
+    "playerId": "arredjo01",
+    "playerSlug": "jose-arredondo",
+    "name": "Jose Arredondo",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.62,
+      "whip": 1.049,
+      "so": 55,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.62,
+      "whip": 1.049,
+      "so": 55,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.049,
+      "fip": null,
+      "inningsPitched": 61,
+      "strikeoutRate": 8.114754098360656,
+      "walkRate": 3.2459016393442623,
+      "starts": 0,
+      "reliefAppearances": 52
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "arredjo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 81.2832786885246,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-jered-weaver-2006",
+    "playerId": "weaveje02",
+    "playerSlug": "jered-weaver",
+    "name": "Jered Weaver",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.033,
+      "so": 105,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.033,
+      "so": 105,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.033,
+      "fip": null,
+      "inningsPitched": 123,
+      "strikeoutRate": 7.682926829268292,
+      "walkRate": 2.4146341463414633,
+      "starts": 19,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "weaveje02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2006; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 67.35577235772358,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-john-lackey-2007",
+    "playerId": "lackejo01",
+    "playerSlug": "john-lackey",
+    "name": "John Lackey",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.01,
+      "whip": 1.21,
+      "so": 179,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.01,
+      "whip": 1.21,
+      "so": 179,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.21,
+      "fip": null,
+      "inningsPitched": 224,
+      "strikeoutRate": 7.191964285714286,
+      "walkRate": 2.0892857142857144,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "lackejo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2007; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 63.33401785714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-ervin-santana-2008",
+    "playerId": "santaer01",
+    "playerSlug": "ervin-santana",
+    "name": "Ervin Santana",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.49,
+      "whip": 1.119,
+      "so": 214,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.49,
+      "whip": 1.119,
+      "so": 214,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.119,
+      "fip": null,
+      "inningsPitched": 219,
+      "strikeoutRate": 8.794520547945206,
+      "walkRate": 1.9315068493150684,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "santaer01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2008; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 62.0345205479452,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-jarrod-washburn-2002",
+    "playerId": "washbja01",
+    "playerSlug": "jarrod-washburn",
+    "name": "Jarrod Washburn",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.15,
+      "whip": 1.175,
+      "so": 139,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.15,
+      "whip": 1.175,
+      "so": 139,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.175,
+      "fip": null,
+      "inningsPitched": 206,
+      "strikeoutRate": 6.072815533980583,
+      "walkRate": 2.5776699029126213,
+      "starts": 32,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "washbja01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2002; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.38716289104639,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2000s-bartolo-colon-2005",
+    "playerId": "colonba01",
+    "playerSlug": "bartolo-colon",
+    "name": "Bartolo Colon",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.48,
+      "whip": 1.159,
+      "so": 157,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.48,
+      "whip": 1.159,
+      "so": 157,
+      "wins": 21,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.159,
+      "fip": null,
+      "inningsPitched": 222.7,
+      "strikeoutRate": 6.344858554108667,
+      "walkRate": 1.7377638078132016,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "colonba01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2005; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.9706421194432,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

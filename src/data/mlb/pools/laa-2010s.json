@@ -1,0 +1,1986 @@
+[
+  {
+    "id": "laa-2010s-mike-trout-2018",
+    "playerId": "troutmi01",
+    "playerSlug": "mike-trout",
+    "name": "Mike Trout",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.312,
+      "obp": 0.46,
+      "slg": 0.628,
+      "rbi": 79,
+      "sb": 24
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 39,
+      "avg": 0.312,
+      "obp": 0.46,
+      "slg": 0.628,
+      "rbi": 79,
+      "sb": 24
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 607,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.46,
+      "slg": 0.628,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "troutmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 126.14285714285715,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-shohei-ohtani-2018",
+    "playerId": "ohtansh01",
+    "playerSlug": "shohei-ohtani",
+    "name": "Shohei Ohtani",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "twoWay",
+    "type": "hitter",
+    "isTwoWay": true,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.285,
+      "obp": 0.361,
+      "slg": 0.564,
+      "rbi": 61,
+      "sb": 10
+    },
+    "pitchingVisibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.31,
+      "whip": 1.161,
+      "so": 63,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0
+    },
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.285,
+      "obp": 0.361,
+      "slg": 0.564,
+      "rbi": 61,
+      "sb": 10
+    },
+    "scoringStats": {
+      "games": 114,
+      "plateAppearances": 366,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.564,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": {
+      "inningsPitched": 51.7,
+      "games": 10,
+      "gamesStarted": 10,
+      "reliefAppearances": 0,
+      "fip": null,
+      "strikeoutRate": 10.967117988394584,
+      "walkRate": 3.829787234042553
+    },
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "ohtansh01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 113.88478652789291,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-albert-pujols-2012",
+    "playerId": "pujolal01",
+    "playerSlug": "albert-pujols",
+    "name": "Albert Pujols",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 30,
+      "avg": 0.285,
+      "obp": 0.343,
+      "slg": 0.516,
+      "rbi": 105,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 30,
+      "avg": 0.285,
+      "obp": 0.343,
+      "slg": 0.516,
+      "rbi": 105,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 670,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.343,
+      "slg": 0.516,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "pujolal01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 105.04285714285714,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-torii-hunter-2010",
+    "playerId": "hunteto01",
+    "playerSlug": "torii-hunter",
+    "name": "Torii Hunter",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.281,
+      "obp": 0.354,
+      "slg": 0.464,
+      "rbi": 90,
+      "sb": 9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 23,
+      "avg": 0.281,
+      "obp": 0.354,
+      "slg": 0.464,
+      "rbi": 90,
+      "sb": 9
+    },
+    "scoringStats": {
+      "games": 152,
+      "plateAppearances": 646,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.354,
+      "slg": 0.464,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "hunteto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 100.25714285714287,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-justin-upton-2018",
+    "playerId": "uptonju01",
+    "playerSlug": "justin-upton",
+    "name": "Justin Upton",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 30,
+      "avg": 0.257,
+      "obp": 0.344,
+      "slg": 0.463,
+      "rbi": 85,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 30,
+      "avg": 0.257,
+      "obp": 0.344,
+      "slg": 0.463,
+      "rbi": 85,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 613,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.344,
+      "slg": 0.463,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "uptonju01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2018; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 98.21428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-hideki-matsui-2010",
+    "playerId": "matsuhi01",
+    "playerSlug": "hideki-matsui",
+    "name": "Hideki Matsui",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.274,
+      "obp": 0.361,
+      "slg": 0.459,
+      "rbi": 84,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.274,
+      "obp": 0.361,
+      "slg": 0.459,
+      "rbi": 84,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 145,
+      "plateAppearances": 554,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.361,
+      "slg": 0.459,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "matsuhi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.82857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-kole-calhoun-2016",
+    "playerId": "calhoko01",
+    "playerSlug": "kole-calhoun",
+    "name": "Kole Calhoun",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.271,
+      "obp": 0.348,
+      "slg": 0.438,
+      "rbi": 75,
+      "sb": 2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.271,
+      "obp": 0.348,
+      "slg": 0.438,
+      "rbi": 75,
+      "sb": 2
+    },
+    "scoringStats": {
+      "games": 157,
+      "plateAppearances": 672,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.348,
+      "slg": 0.438,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "calhoko01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.80000000000001,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-bobby-abreu-2010",
+    "playerId": "abreubo01",
+    "playerSlug": "bobby-abreu",
+    "name": "Bobby Abreu",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.255,
+      "obp": 0.352,
+      "slg": 0.435,
+      "rbi": 78,
+      "sb": 24
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 20,
+      "avg": 0.255,
+      "obp": 0.352,
+      "slg": 0.435,
+      "rbi": 78,
+      "sb": 24
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 667,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.352,
+      "slg": 0.435,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "abreubo01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.75714285714284,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-mark-trumbo-2012",
+    "playerId": "trumbma01",
+    "playerSlug": "mark-trumbo",
+    "name": "Mark Trumbo",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "LF",
+      "RF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 32,
+      "avg": 0.268,
+      "obp": 0.317,
+      "slg": 0.491,
+      "rbi": 95,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 32,
+      "avg": 0.268,
+      "obp": 0.317,
+      "slg": 0.491,
+      "rbi": 95,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 144,
+      "plateAppearances": 586,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.317,
+      "slg": 0.491,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "trumbma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 97.54285714285716,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-howie-kendrick-2011",
+    "playerId": "kendrho01",
+    "playerSlug": "howie-kendrick",
+    "name": "Howie Kendrick",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "2B",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.285,
+      "obp": 0.338,
+      "slg": 0.464,
+      "rbi": 63,
+      "sb": 14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 18,
+      "avg": 0.285,
+      "obp": 0.338,
+      "slg": 0.464,
+      "rbi": 63,
+      "sb": 14
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 580,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.338,
+      "slg": 0.464,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "kendrho01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 96.77142857142857,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-andrelton-simmons-2017",
+    "playerId": "simmoan01",
+    "playerSlug": "andrelton-simmons",
+    "name": "Andrelton Simmons",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.278,
+      "obp": 0.331,
+      "slg": 0.421,
+      "rbi": 69,
+      "sb": 19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 14,
+      "avg": 0.278,
+      "obp": 0.331,
+      "slg": 0.421,
+      "rbi": 69,
+      "sb": 19
+    },
+    "scoringStats": {
+      "games": 158,
+      "plateAppearances": 647,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.331,
+      "slg": 0.421,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "simmoan01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2017; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.68571428571428,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-kendrys-morales-2012",
+    "playerId": "moralke01",
+    "playerSlug": "kendrys-morales",
+    "name": "Kendrys Morales",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.273,
+      "obp": 0.32,
+      "slg": 0.467,
+      "rbi": 73,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 22,
+      "avg": 0.273,
+      "obp": 0.32,
+      "slg": 0.467,
+      "rbi": 73,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 134,
+      "plateAppearances": 522,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.32,
+      "slg": 0.467,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "moralke01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2012; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 93.61428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-mike-napoli-2010",
+    "playerId": "napolmi01",
+    "playerSlug": "mike-napoli",
+    "name": "Mike Napoli",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "1B",
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.238,
+      "obp": 0.316,
+      "slg": 0.468,
+      "rbi": 68,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 26,
+      "avg": 0.238,
+      "obp": 0.316,
+      "slg": 0.468,
+      "rbi": 68,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 140,
+      "plateAppearances": 510,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.316,
+      "slg": 0.468,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "napolmi01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2010; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.97142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-brian-goodwin-2019",
+    "playerId": "goodwbr01",
+    "playerSlug": "brian-goodwin",
+    "name": "Brian Goodwin",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "CF",
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.262,
+      "obp": 0.326,
+      "slg": 0.47,
+      "rbi": 47,
+      "sb": 7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 17,
+      "avg": 0.262,
+      "obp": 0.326,
+      "slg": 0.47,
+      "rbi": 47,
+      "sb": 7
+    },
+    "scoringStats": {
+      "games": 136,
+      "plateAppearances": 457,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.326,
+      "slg": 0.47,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "goodwbr01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.65714285714287,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-tommy-la-stella-2019",
+    "playerId": "lasteto01",
+    "playerSlug": "tommy-la-stella",
+    "name": "Tommy La Stella",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B"
+    ],
+    "bats": "L",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.295,
+      "obp": 0.346,
+      "slg": 0.486,
+      "rbi": 44,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 16,
+      "avg": 0.295,
+      "obp": 0.346,
+      "slg": 0.486,
+      "rbi": 44,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 80,
+      "plateAppearances": 315,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.346,
+      "slg": 0.486,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "lasteto01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.2,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-josh-hamilton-2013",
+    "playerId": "hamiljo03",
+    "playerSlug": "josh-hamilton",
+    "name": "Josh Hamilton",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.25,
+      "obp": 0.307,
+      "slg": 0.432,
+      "rbi": 79,
+      "sb": 4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 21,
+      "avg": 0.25,
+      "obp": 0.307,
+      "slg": 0.432,
+      "rbi": 79,
+      "sb": 4
+    },
+    "scoringStats": {
+      "games": 151,
+      "plateAppearances": 636,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.307,
+      "slg": 0.432,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "hamiljo03"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.07142857142858,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-david-fletcher-2019",
+    "playerId": "fletcda02",
+    "playerSlug": "david-fletcher",
+    "name": "David Fletcher",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "2B",
+      "3B",
+      "SS",
+      "LF"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.29,
+      "obp": 0.35,
+      "slg": 0.384,
+      "rbi": 49,
+      "sb": 8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 6,
+      "avg": 0.29,
+      "obp": 0.35,
+      "slg": 0.384,
+      "rbi": 49,
+      "sb": 8
+    },
+    "scoringStats": {
+      "games": 154,
+      "plateAppearances": 652,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.35,
+      "slg": 0.384,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "fletcda02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2019; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 92.02857142857144,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-erick-aybar-2011",
+    "playerId": "aybarer01",
+    "playerSlug": "erick-aybar",
+    "name": "Erick Aybar",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "SS"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.279,
+      "obp": 0.322,
+      "slg": 0.421,
+      "rbi": 59,
+      "sb": 30
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 10,
+      "avg": 0.279,
+      "obp": 0.322,
+      "slg": 0.421,
+      "rbi": 59,
+      "sb": 30
+    },
+    "scoringStats": {
+      "games": 143,
+      "plateAppearances": 596,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.322,
+      "slg": 0.421,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "aybarer01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 91.32857142857142,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-yunel-escobar-2016",
+    "playerId": "escobyu01",
+    "playerSlug": "yunel-escobar",
+    "name": "Yunel Escobar",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.304,
+      "obp": 0.355,
+      "slg": 0.391,
+      "rbi": 39,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 5,
+      "avg": 0.304,
+      "obp": 0.355,
+      "slg": 0.391,
+      "rbi": 39,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 132,
+      "plateAppearances": 564,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.355,
+      "slg": 0.391,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "escobyu01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.71428571428571,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-cam-bedrosian-2016",
+    "playerId": "bedroca01",
+    "playerSlug": "cam-bedrosian",
+    "name": "Cam Bedrosian",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.12,
+      "whip": 1.091,
+      "so": 51,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.12,
+      "whip": 1.091,
+      "so": 51,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.091,
+      "fip": null,
+      "inningsPitched": 40.3,
+      "strikeoutRate": 11.389578163771713,
+      "walkRate": 3.1265508684863526,
+      "starts": 0,
+      "reliefAppearances": 45
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "bedroca01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2016; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 90.13454094292806,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-joe-smith-2014",
+    "playerId": "smithjo05",
+    "playerSlug": "joe-smith",
+    "name": "Joe Smith",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.81,
+      "whip": 0.804,
+      "so": 68,
+      "wins": 7,
+      "saves": 15,
+      "sv": 15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.81,
+      "whip": 0.804,
+      "so": 68,
+      "wins": 7,
+      "saves": 15,
+      "sv": 15
+    },
+    "scoringStats": {
+      "whip": 0.804,
+      "fip": null,
+      "inningsPitched": 74.7,
+      "strikeoutRate": 8.192771084337348,
+      "walkRate": 1.8072289156626504,
+      "starts": 0,
+      "reliefAppearances": 76
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "smithjo05"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.77831325301204,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-chris-iannetta-2014",
+    "playerId": "iannech01",
+    "playerSlug": "chris-iannetta",
+    "name": "Chris Iannetta",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.252,
+      "obp": 0.373,
+      "slg": 0.392,
+      "rbi": 43,
+      "sb": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.252,
+      "obp": 0.373,
+      "slg": 0.392,
+      "rbi": 43,
+      "sb": 3
+    },
+    "scoringStats": {
+      "games": 108,
+      "plateAppearances": 373,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.373,
+      "slg": 0.392,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "iannech01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 87.15714285714286,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-scott-downs-2011",
+    "playerId": "downssc01",
+    "playerSlug": "scott-downs",
+    "name": "Scott Downs",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "eligiblePositions": [
+      "RP"
+    ],
+    "bats": "L",
+    "throws": "L",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.34,
+      "whip": 1.006,
+      "so": 35,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.34,
+      "whip": 1.006,
+      "so": 35,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1
+    },
+    "scoringStats": {
+      "whip": 1.006,
+      "fip": null,
+      "inningsPitched": 53.7,
+      "strikeoutRate": 5.865921787709497,
+      "walkRate": 2.513966480446927,
+      "starts": 0,
+      "reliefAppearances": 60
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "downssc01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 84.82793296089386,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-hank-conger-2013",
+    "playerId": "congeha01",
+    "playerSlug": "hank-conger",
+    "name": "Hank Conger",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "playerType": "hitter",
+    "type": "hitter",
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "eligiblePositions": [
+      "C"
+    ],
+    "bats": "B",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.249,
+      "obp": 0.31,
+      "slg": 0.403,
+      "rbi": 21,
+      "sb": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "hr": 7,
+      "avg": 0.249,
+      "obp": 0.31,
+      "slg": 0.403,
+      "rbi": 21,
+      "sb": 0
+    },
+    "scoringStats": {
+      "games": 92,
+      "plateAppearances": 255,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "obp": 0.31,
+      "slg": 0.403,
+      "wrcPlus": null
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "congeha01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2013; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 78.5857142857143,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-jered-weaver-2011",
+    "playerId": "weaveje02",
+    "playerSlug": "jered-weaver",
+    "name": "Jered Weaver",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.41,
+      "whip": 1.01,
+      "so": 198,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.41,
+      "whip": 1.01,
+      "so": 198,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.01,
+      "fip": null,
+      "inningsPitched": 235.7,
+      "strikeoutRate": 7.56045820958846,
+      "walkRate": 2.138311412812898,
+      "starts": 33,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "weaveje02"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 75.01322019516334,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-garrett-richards-2014",
+    "playerId": "richaga01",
+    "playerSlug": "garrett-richards",
+    "name": "Garrett Richards",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.61,
+      "whip": 1.038,
+      "so": 164,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.61,
+      "whip": 1.038,
+      "so": 164,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.038,
+      "fip": null,
+      "inningsPitched": 168.7,
+      "strikeoutRate": 8.749259039715472,
+      "walkRate": 2.7208061647895674,
+      "starts": 26,
+      "reliefAppearances": 0
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "richaga01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 70.33490153461108,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-dan-haren-2011",
+    "playerId": "harenda01",
+    "playerSlug": "dan-haren",
+    "name": "Dan Haren",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.17,
+      "whip": 1.024,
+      "so": 192,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.17,
+      "whip": 1.024,
+      "so": 192,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.024,
+      "fip": null,
+      "inningsPitched": 238.3,
+      "strikeoutRate": 7.251363827108686,
+      "walkRate": 1.2463281577843055,
+      "starts": 34,
+      "reliefAppearances": 1
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "harenda01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2011; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 66.48755350398658,
+      "formulaVersion": "season-selection-v1"
+    }
+  },
+  {
+    "id": "laa-2010s-matt-shoemaker-2014",
+    "playerId": "shoemma01",
+    "playerSlug": "matt-shoemaker",
+    "name": "Matt Shoemaker",
+    "franchiseId": "laa",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "eligiblePositions": [
+      "SP"
+    ],
+    "bats": "R",
+    "throws": "R",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.04,
+      "whip": 1.074,
+      "so": 124,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.04,
+      "whip": 1.074,
+      "so": 124,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0
+    },
+    "scoringStats": {
+      "whip": 1.074,
+      "fip": null,
+      "inningsPitched": 136,
+      "strikeoutRate": 8.205882352941176,
+      "walkRate": 1.588235294117647,
+      "starts": 20,
+      "reliefAppearances": 7
+    },
+    "pitchingScoringStats": null,
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAA"
+      ],
+      "sourcePlayerId": "shoemma01"
+    },
+    "sourceNotes": "SABR Lahman 2025 season record for 2014; advanced metrics unavailable in source are null.",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 63.52202614379084,
+      "formulaVersion": "season-selection-v1"
+    }
+  }
+]

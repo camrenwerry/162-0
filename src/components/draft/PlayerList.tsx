@@ -22,7 +22,7 @@ function PlayerList({ players, onSelect, interactionsDisabled, committingPlayerI
 
   return (
     <div className="player-list-prototype" aria-live="polite">
-      {players.map(({ player, isAvailable }) => (
+      {players.map(({ player, isAvailable, statView }) => (
         <PlayerCard
           key={player.id}
           player={player}
@@ -30,6 +30,7 @@ function PlayerList({ players, onSelect, interactionsDisabled, committingPlayerI
           isAvailable={isAvailable}
           interactionsDisabled={interactionsDisabled}
           isDrafting={committingPlayerId === player.id}
+          statView={statView}
         />
       ))}
     </div>

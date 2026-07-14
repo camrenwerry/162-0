@@ -1,4 +1,4 @@
-import { BETA_PLAYERS, TEAM_DECADES } from '../data/mlb'
+import { PLAYER_CARDS, PLAYER_POOLS, TEAM_DECADES } from '../data/mlb'
 import { POSITIONS, type Player, type Position, type PositionFilter, type SortKey, type TeamDecade } from '../types/draft'
 
 export interface SortOption { value: SortKey; label: string }
@@ -33,23 +33,23 @@ function matchesPosition(player: Player, filter: PositionFilter) {
 
 function matchesSortType(player: Player, filter: PositionFilter, sort: SortKey) {
   if (filter !== 'ALL') return true
-  if (HITTER_KEYS.has(sort)) return player.type === 'hitter'
-  if (PITCHER_KEYS.has(sort)) return player.type === 'pitcher'
+  if (HITTER_KEYS.has(sort)) return player.playerType !== 'pitcher'
+  if (PITCHER_KEYS.has(sort)) return player.playerType !== 'hitter'
   return true
 }
 
-function valueFor(player: Player, key: SortKey): number | string | null {
+function valueFor(player: Player, key: SortKey, statView: 'hitter' | 'pitcher'): number | string | null {
   if (key === 'name') return player.name
   if (key === 'position') return Math.min(...player.eligiblePositions.map((position) => POSITION_ORDER.get(position) ?? 99))
-  if (key === 'war') return player.stats.war
-  if (player.type === 'hitter') return player.stats[key as keyof Player['stats']] ?? null
-  if (key === 'wins') return player.stats.wins
-  return player.stats[key as keyof typeof player.stats] ?? null
+  const stats = statView === 'pitcher' && player.playerType === 'twoWay'
+    ? player.pitchingVisibleStats
+    : player.stats
+  return stats[key as keyof typeof stats] ?? null
 }
 
-function comparePlayers(a: Player, b: Player, key: SortKey) {
-  const left = valueFor(a, key)
-  const right = valueFor(b, key)
+function comparePlayers(a: Player, b: Player, key: SortKey, statView: 'hitter' | 'pitcher') {
+  const left = valueFor(a, key, statView)
+  const right = valueFor(b, key, statView)
   if (left === null && right === null) return a.name.localeCompare(b.name)
   if (left === null) return 1
   if (right === null) return -1
@@ -76,24 +76,27 @@ export interface TeamPoolSource {
   getSortOptions(filter: PositionFilter): readonly SortOption[]
   isSortValid(filter: PositionFilter, sort: SortKey): boolean
   getSortTypeLabel(filter: PositionFilter, sort: SortKey): string | null
+  getStatView(filter: PositionFilter, sort: SortKey): 'hitter' | 'pitcher'
   query(query: PlayerQuery): Player[]
 }
 
 export class TeamPool implements TeamPoolSource {
   private readonly combinations: readonly TeamDecade[]
+  private readonly pools: Readonly<Record<string, readonly Player[]>>
   private readonly players: readonly Player[]
 
   constructor(
     combinations: readonly TeamDecade[] = TEAM_DECADES,
-    players: readonly Player[] = BETA_PLAYERS,
+    pools: Readonly<Record<string, readonly Player[]>> = PLAYER_POOLS,
   ) {
     this.combinations = combinations
-    this.players = players
+    this.pools = pools
+    this.players = pools === PLAYER_POOLS ? PLAYER_CARDS : Object.values(pools).flat()
   }
 
   getCombinations() { return this.combinations }
   getPlayers(combination: TeamDecade) {
-    return this.players.filter((player) => player.franchiseId === combination.franchiseId && player.decade === combination.decade)
+    return [...(this.pools[combination.id] ?? [])]
   }
   getPlayer(id: string | null) { return id ? this.players.find((player) => player.id === id) ?? null : null }
   getTeams() { return [...new Map(this.combinations.map(({ franchiseId, team, teamName }) => [franchiseId, { franchiseId, team, teamName }])).values()] }
@@ -110,13 +113,17 @@ export class TeamPool implements TeamPoolSource {
     if (PITCHER_KEYS.has(sort)) return 'Pitchers'
     return null
   }
+  getStatView(filter: PositionFilter, sort: SortKey) {
+    return filter === 'SP' || filter === 'RP' || (filter === 'ALL' && PITCHER_KEYS.has(sort)) ? 'pitcher' : 'hitter'
+  }
   query({ combination, excludedIds, filter, sort, search }: PlayerQuery) {
     const term = search.trim().toLocaleLowerCase()
+    const statView = this.getStatView(filter, sort)
     return this.getPlayers(combination)
       .filter((player) => !excludedIds.has(player.id))
       .filter((player) => matchesPosition(player, filter))
       .filter((player) => matchesSortType(player, filter, sort))
       .filter((player) => !term || player.name.toLocaleLowerCase().includes(term))
-      .sort((a, b) => comparePlayers(a, b, sort))
+      .sort((a, b) => comparePlayers(a, b, sort, statView))
   }
 }

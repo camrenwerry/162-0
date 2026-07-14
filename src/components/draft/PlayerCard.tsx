@@ -7,6 +7,7 @@ interface PlayerCardProps {
   isAvailable: boolean
   interactionsDisabled: boolean
   isDrafting: boolean
+  statView: 'hitter' | 'pitcher'
 }
 
 function formatAverage(value: number | null) {
@@ -19,8 +20,9 @@ function formatNumber(value: number | null, digits?: number) {
   return digits === undefined ? value.toLocaleString('en-US') : value.toFixed(digits)
 }
 
-function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDrafting }: PlayerCardProps) {
-  const stats = player.type === 'hitter'
+function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDrafting, statView }: PlayerCardProps) {
+  const pitcherStats = player.playerType === 'twoWay' ? player.pitchingVisibleStats : player.type === 'pitcher' ? player.stats : null
+  const stats = statView === 'hitter' && player.playerType !== 'pitcher'
     ? [
         ['WAR', formatNumber(player.stats.war, 1)],
         ['OPS+', formatNumber(player.stats.opsPlus)],
@@ -30,10 +32,10 @@ function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDra
     : (() => {
         const showSaves = player.eligiblePositions.includes('RP') && !player.eligiblePositions.includes('SP')
         return [
-          ['WAR', formatNumber(player.stats.war, 1)],
-          ['ERA+', formatNumber(player.stats.eraPlus)],
-          ['ERA', formatNumber(player.stats.era, 2)],
-          [showSaves ? 'SV' : 'SO', formatNumber(showSaves ? player.stats.sv : player.stats.so)],
+          ['WAR', formatNumber(pitcherStats?.war ?? null, 1)],
+          ['ERA+', formatNumber(pitcherStats?.eraPlus ?? null)],
+          ['ERA', formatNumber(pitcherStats?.era ?? null, 2)],
+          [showSaves ? 'SV' : 'SO', formatNumber(showSaves ? pitcherStats?.sv ?? null : pitcherStats?.so ?? null)],
         ]
       })()
 
@@ -50,12 +52,13 @@ function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDra
           <strong>{player.name}</strong>
           <span>{player.eligiblePositions.join(' · ')}</span>
           <small>{player.team} · {player.decade}</small>
+          <small>Featured season: {player.featuredSeason}</small>
         </span>
         {!isAvailable
           ? <span className="player-card__unavailable">No open position</span>
           : <span className={`player-card__type player-card__type--${player.type}`}>{player.type}</span>}
       </span>
-      <span className={`player-card__stats player-card__stats--${player.type}`}>
+      <span className={`player-card__stats player-card__stats--${statView}`}>
         {stats.map(([label, value]) => (
           <span key={label}>
             <small>{label}</small>

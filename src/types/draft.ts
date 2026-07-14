@@ -33,69 +33,124 @@ export interface TeamDecadeCombination {
 export const DECADES = ['1980s', '1990s', '2000s', '2010s'] as const
 export type Decade = (typeof DECADES)[number]
 
+export interface SourceMetadata {
+  verified: boolean
+  sourceLabel: string
+  sourceUrl: string
+  verifiedAt: string
+  lahmanTeamIds: string[]
+  sourcePlayerId: string
+}
+
+export interface HitterVisibleStats {
+  war: number | null
+  opsPlus: number | null
+  hr: number | null
+  avg: number | null
+  obp: number | null
+  slg: number | null
+  rbi: number | null
+  sb: number | null
+}
+
+export interface PitcherVisibleStats {
+  war: number | null
+  eraPlus: number | null
+  era: number | null
+  whip: number | null
+  so: number | null
+  wins: number | null
+  saves: number | null
+  sv: number | null
+}
+
+export interface HitterScoringStats {
+  obp: number | null
+  slg: number | null
+  wrcPlus: number | null
+  offensiveValue: number | null
+  defensiveValue: number | null
+  baserunningValue: number | null
+  games: number
+  plateAppearances: number
+}
+
+export interface PitcherScoringStats {
+  whip?: number | null
+  fip: number | null
+  inningsPitched: number
+  strikeoutRate: number | null
+  walkRate: number | null
+  starts?: number
+  gamesStarted?: number
+  games?: number
+  reliefAppearances: number
+}
+
 interface PlayerBase {
   id: string
   playerId: string
+  playerSlug: string
   name: string
   franchiseId: string
+  teamAbbreviation: string
+  teamDisplayName: string
   team: string
   decade: Decade
+  featuredSeason: number
   eligiblePositions: Position[]
   isTwoWay: boolean
+  pitchingRole: 'SP' | 'RP' | null
+  bats: string | null
+  throws: string | null
+  sourceMetadata: SourceMetadata
   sourceNotes: string
+  notes: string | null
+  manualPositionOverride: boolean
+  selectionMetadata?: {
+    score: number
+    formulaVersion: string
+  }
 }
 
 export interface Hitter extends PlayerBase {
+  playerType: 'hitter'
   type: 'hitter'
-  stats: {
-    war: number | null
-    opsPlus: number | null
-    hr: number | null
-    avg: number | null
-    obp: number | null
-    slg: number | null
-    rbi: number | null
-    sb: number | null
-  }
-  scoringStats: {
-    obp: number
-    slg: number
-    wrcPlus: number
-    defensiveValue: number
-    baserunningValue: number
-    games: number
-    plateAppearances: number
-  }
+  visibleStats: HitterVisibleStats
+  pitchingVisibleStats: null
+  stats: HitterVisibleStats
+  scoringStats: HitterScoringStats
+  pitchingScoringStats: null
 }
 
 export interface Pitcher extends PlayerBase {
+  playerType: 'pitcher'
   type: 'pitcher'
-  stats: {
-    war: number | null
-    eraPlus: number | null
-    era: number | null
-    whip: number | null
-    so: number | null
-    wins: number | null
-    sv: number | null
-  }
-  scoringStats: {
-    whip: number
-    fip: number
-    inningsPitched: number
-    strikeoutRate: number
-    walkRate: number
-    starts: number
-    reliefAppearances: number
-  }
+  visibleStats: PitcherVisibleStats
+  pitchingVisibleStats: null
+  stats: PitcherVisibleStats
+  scoringStats: PitcherScoringStats & { whip: number | null; starts: number }
+  pitchingScoringStats: null
 }
 
-export type Player = Hitter | Pitcher
+export interface TwoWayPlayer extends PlayerBase {
+  playerType: 'twoWay'
+  type: 'hitter'
+  isTwoWay: true
+  visibleStats: HitterVisibleStats
+  pitchingVisibleStats: PitcherVisibleStats
+  stats: HitterVisibleStats
+  scoringStats: HitterScoringStats
+  pitchingScoringStats: PitcherScoringStats
+}
+
+export type Player = Hitter | Pitcher | TwoWayPlayer
 export type PlayerCard = Player
 export type PlayerCardData = Player
 export interface DraftPlayerView {
   player: PlayerCard
   isAvailable: boolean
+  statView: 'hitter' | 'pitcher'
 }
 export type RosterSlot = (typeof ROSTER_SLOTS)[number]
 export type Roster = Partial<Record<RosterSlotId, Player>>
