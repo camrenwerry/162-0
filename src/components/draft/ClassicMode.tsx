@@ -1,15 +1,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { SAMPLE_PLAYERS, TEAM_DECADES } from '../../data/samplePlayers'
+import { BETA_PLAYERS, TEAM_DECADES } from '../../data/mlb'
 import {
   POSITIONS,
+  ROSTER_SLOTS,
   type Player,
   type Position,
   type PositionFilter,
   type Roster,
+  type RosterSlotId,
   type SortKey,
   type TeamDecadeCombination,
 } from '../../types/draft'
-import { getAvailablePositions } from '../../utils/draft'
+import { getAvailablePositions, getFirstOpenSlot } from '../../utils/draft'
 import GameMenu from '../GameMenu'
 import DraftHeader from './DraftHeader'
 import FranchiseProfile from './FranchiseProfile'
@@ -21,30 +23,66 @@ import TeamDecadeReveal from './TeamDecadeReveal'
 import './ClassicMode.css'
 
 const FILTERS: PositionFilter[] = ['ALL', 'C', '1B', '2B', '3B', 'SS', 'OF', 'DH', 'SP', 'RP']
-// A larger prototype draw deck allows 11 unique rounds while the five existing
-// team player pools continue to supply sample cards.
-const ROLL_DECADES = ['1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s']
-const ROLL_TEAMS = TEAM_DECADES.map(({ team, teamName }) => ({ team, teamName }))
+const ROLL_DECADES = [...new Set(TEAM_DECADES.map(({ decade }) => decade))]
+const ROLL_TEAMS = [...new Map(TEAM_DECADES.map(({ franchiseId, team, teamName }) => (
+  [franchiseId, { franchiseId, team, teamName }]
+))).values()]
 const FIRST_COMBINATION = TEAM_DECADES[0]
+const ALL_ROLL_COMBINATIONS = TEAM_DECADES
 
-const ALL_ROLL_COMBINATIONS: TeamDecadeCombination[] = ROLL_TEAMS.flatMap(({ team, teamName }) => (
-  ROLL_DECADES.map((decade) => ({ id: `${team.toLowerCase()}-${decade}`, team, teamName, decade }))
-))
+interface SortOption { value: SortKey; label: string }
 
-const HITTER_SORTS: Array<{ value: SortKey; label: string }> = [
+const UNIVERSAL_SORTS: SortOption[] = [
   { value: 'war', label: 'WAR' },
-  { value: 'opsPlus', label: 'OPS+' },
-  { value: 'hr', label: 'Home runs' },
-  { value: 'avg', label: 'Batting average' },
+  { value: 'name', label: 'Name (A–Z)' },
+  { value: 'position', label: 'Position' },
 ]
 
-const PITCHER_SORTS: Array<{ value: SortKey; label: string }> = [
+const HITTER_STAT_SORTS: SortOption[] = [
+  { value: 'opsPlus', label: 'OPS+' },
+  { value: 'hr', label: 'HR' },
+  { value: 'avg', label: 'AVG' },
+  { value: 'obp', label: 'OBP' },
+  { value: 'slg', label: 'SLG' },
+  { value: 'rbi', label: 'RBI' },
+  { value: 'sb', label: 'SB' },
+]
+
+const HITTER_SORTS: SortOption[] = [
   { value: 'war', label: 'WAR' },
+  ...HITTER_STAT_SORTS,
+  { value: 'name', label: 'Name (A–Z)' },
+  { value: 'position', label: 'Position' },
+]
+
+const PITCHER_STAT_SORTS: SortOption[] = [
   { value: 'eraPlus', label: 'ERA+' },
   { value: 'era', label: 'ERA' },
-  { value: 'so', label: 'Strikeouts' },
-  { value: 'sv', label: 'Saves' },
+  { value: 'whip', label: 'WHIP' },
+  { value: 'so', label: 'SO' },
+  { value: 'wins', label: 'W' },
+  { value: 'sv', label: 'SV' },
 ]
+
+const PITCHER_SORTS: SortOption[] = [
+  { value: 'war', label: 'WAR' },
+  ...PITCHER_STAT_SORTS,
+  { value: 'name', label: 'Name (A–Z)' },
+  { value: 'position', label: 'Position' },
+]
+
+const ALL_SORTS: SortOption[] = [...UNIVERSAL_SORTS, ...HITTER_STAT_SORTS, ...PITCHER_STAT_SORTS]
+const HITTER_SORT_KEYS = new Set<SortKey>(HITTER_STAT_SORTS.map(({ value }) => value))
+const PITCHER_SORT_KEYS = new Set<SortKey>(PITCHER_STAT_SORTS.map(({ value }) => value))
+
+const POSITION_SORT_ORDER = new Map(POSITIONS.map((position, index) => [position, index]))
+const ASCENDING_SORTS = new Set<SortKey>(['era', 'whip', 'name', 'position'])
+
+function sortOptionsForFilter(filter: PositionFilter) {
+  if (filter === 'ALL') return ALL_SORTS
+  if (filter === 'SP' || filter === 'RP') return PITCHER_SORTS
+  return HITTER_SORTS
+}
 
 interface ClassicModeProps {
   onHome: () => void
@@ -63,20 +101,48 @@ function matchesFilter(player: Player, filter: PositionFilter) {
   return player.eligiblePositions.includes(filter as Position)
 }
 
-function statValue(player: Player, key: SortKey) {
+function matchesAllSortType(player: Player, filter: PositionFilter, sort: SortKey) {
+  if (filter !== 'ALL') return true
+  if (HITTER_SORT_KEYS.has(sort)) return player.type === 'hitter'
+  if (PITCHER_SORT_KEYS.has(sort)) return player.type === 'pitcher'
+  return true
+}
+
+function statValue(player: Player, key: SortKey): number | string | null {
+  if (key === 'name') return player.name
+  if (key === 'position') return Math.min(...player.eligiblePositions.map((position) => POSITION_SORT_ORDER.get(position) ?? 99))
   if (key === 'war') return player.stats.war
   if (player.type === 'hitter') {
     if (key === 'opsPlus') return player.stats.opsPlus
     if (key === 'hr') return player.stats.hr
     if (key === 'avg') return player.stats.avg
+    if (key === 'obp') return player.stats.obp
+    if (key === 'slg') return player.stats.slg
+    if (key === 'rbi') return player.stats.rbi
+    if (key === 'sb') return player.stats.sb
   }
   if (player.type === 'pitcher') {
     if (key === 'eraPlus') return player.stats.eraPlus
     if (key === 'era') return player.stats.era
+    if (key === 'whip') return player.stats.whip
     if (key === 'so') return player.stats.so
+    if (key === 'wins') return player.stats.wins
     if (key === 'sv') return player.stats.sv
   }
-  return Number.NEGATIVE_INFINITY
+  return null
+}
+
+function comparePlayers(a: Player, b: Player, key: SortKey) {
+  const aValue = statValue(a, key)
+  const bValue = statValue(b, key)
+  if (aValue === null && bValue === null) return a.name.localeCompare(b.name)
+  if (aValue === null) return 1
+  if (bValue === null) return -1
+  const primary = typeof aValue === 'string' && typeof bValue === 'string'
+    ? aValue.localeCompare(bValue)
+    : Number(aValue) - Number(bValue)
+  const directed = ASCENDING_SORTS.has(key) ? primary : -primary
+  return directed || a.name.localeCompare(b.name)
 }
 
 export default function ClassicMode({ onHome }: ClassicModeProps) {
@@ -94,7 +160,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
   const [teamRerollAvailable, setTeamRerollAvailable] = useState(true)
   const [eraRerollAvailable, setEraRerollAvailable] = useState(true)
   const [committingPlayerId, setCommittingPlayerId] = useState<string | null>(null)
-  const [recentlyFilledPosition, setRecentlyFilledPosition] = useState<Position | null>(null)
+  const [recentlyFilledPosition, setRecentlyFilledPosition] = useState<RosterSlotId | null>(null)
 
   const rosterRef = useRef(roster)
   const currentCombinationRef = useRef(combination)
@@ -109,9 +175,9 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
   const resultsTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const filledCount = Object.keys(roster).length
-  const round = Math.min(filledCount + 1, POSITIONS.length)
+  const round = Math.min(filledCount + 1, ROSTER_SLOTS.length)
   const draftedIds = useMemo(() => new Set(Object.values(roster).map((player) => player.id)), [roster])
-  const sortOptions = filter === 'SP' || filter === 'RP' ? PITCHER_SORTS : filter === 'ALL' ? HITTER_SORTS.slice(0, 1) : HITTER_SORTS
+  const sortOptions = sortOptionsForFilter(filter)
 
   const clearRollTimers = useCallback(() => {
     rollTimersRef.current.forEach((timer) => clearTimeout(timer))
@@ -128,15 +194,16 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     const activeRoster = rosterOverride ?? rosterRef.current
     const activeCombination = currentCombinationRef.current
     const activeDraftedIds = new Set(Object.values(activeRoster).map((player) => player.id))
-    const teamHasValidPlayer = (team: string) => SAMPLE_PLAYERS.some((player) => (
-      player.team === team
+    const combinationHasValidPlayer = (candidate: TeamDecadeCombination) => BETA_PLAYERS.some((player) => (
+      player.franchiseId === candidate.franchiseId
+      && player.decade === candidate.decade
       && !activeDraftedIds.has(player.id)
       && getAvailablePositions(player, activeRoster).length > 0
     ))
     const candidates = ALL_ROLL_COMBINATIONS.filter((candidate) => {
       if (usedCombinationsRef.current.has(candidate.id)) return false
       if (mode === 'team' && candidate.decade !== activeCombination.decade) return false
-      if (mode === 'era' && candidate.team !== activeCombination.team) return false
+      if (mode === 'era' && candidate.franchiseId !== activeCombination.franchiseId) return false
       if (mode === 'both' && teamRerollAvailableRef.current) {
         const decadeUseCount = ALL_ROLL_COMBINATIONS.filter((combinationOption) => (
           combinationOption.decade === candidate.decade && usedCombinationsRef.current.has(combinationOption.id)
@@ -149,7 +216,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
         )).length
         if (teamUseCount >= ROLL_DECADES.length - 1) return false
       }
-      return teamHasValidPlayer(candidate.team)
+      return combinationHasValidPlayer(candidate)
     })
 
     if (candidates.length === 0) {
@@ -212,20 +279,19 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
 
   const players = useMemo(() => {
     const term = search.trim().toLocaleLowerCase()
-    return SAMPLE_PLAYERS
-      .filter((player) => player.team === combination.team)
+    return BETA_PLAYERS
+      .filter((player) => player.franchiseId === combination.franchiseId && player.decade === combination.decade)
       .filter((player) => !draftedIds.has(player.id))
-      .map((player) => ({ ...player, decade: combination.decade }))
       .filter((player) => matchesFilter(player, filter))
+      .filter((player) => matchesAllSortType(player, filter, sort))
       .filter((player) => !term || player.name.toLocaleLowerCase().includes(term))
-      .sort((a, b) => {
-        const aValue = statValue(a, sort)
-        const bValue = statValue(b, sort)
-        return sort === 'era' ? aValue - bValue : bValue - aValue
-      })
+      .sort((a, b) => comparePlayers(a, b, sort))
   }, [combination, draftedIds, filter, search, sort])
 
   const interactionsDisabled = isRolling || committingPlayerId !== null
+  const allSortType = filter === 'ALL'
+    ? HITTER_SORT_KEYS.has(sort) ? 'Hitters' : PITCHER_SORT_KEYS.has(sort) ? 'Pitchers' : null
+    : null
 
   const selectPlayer = useCallback((player: Player) => {
     if (interactionsDisabled || assignmentLockRef.current || getAvailablePositions(player, roster).length === 0) return
@@ -234,7 +300,10 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
 
   const choosePosition = (position: Position) => {
     if (assignmentLockRef.current || interactionsDisabled || !selectedPlayer) return
-    if (roster[position] || !getAvailablePositions(selectedPlayer, roster).includes(position)) return
+    if (!getAvailablePositions(selectedPlayer, roster).includes(position)) return
+
+    const slot = getFirstOpenSlot(position, roster)
+    if (!slot || roster[slot]) return
 
     assignmentLockRef.current = true
     const committedPlayer = selectedPlayer
@@ -242,16 +311,16 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
     setSelectedPlayer(null)
     const commitDuration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 120 : 300
     commitTimerRef.current = setTimeout(() => {
-      const nextRoster = { ...rosterRef.current, [position]: committedPlayer }
+      const nextRoster = { ...rosterRef.current, [slot]: committedPlayer }
       rosterRef.current = nextRoster
       setRoster(nextRoster)
-      setRecentlyFilledPosition(position)
+      setRecentlyFilledPosition(slot)
       setSearch('')
       setFilter('ALL')
-      setSort('war')
+      setSort((currentSort) => ALL_SORTS.some((option) => option.value === currentSort) ? currentSort : 'war')
       rosterEffectTimerRef.current = setTimeout(() => setRecentlyFilledPosition(null), 850)
 
-      if (Object.keys(nextRoster).length === POSITIONS.length) {
+      if (Object.keys(nextRoster).length === ROSTER_SLOTS.length) {
         resultsTimerRef.current = setTimeout(() => {
           setCommittingPlayerId(null)
           setComplete(true)
@@ -331,7 +400,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
       <div className="classic-shell">
         <DraftHeader
           round={round}
-          totalRounds={POSITIONS.length}
+          totalRounds={ROSTER_SLOTS.length}
           teamRerollAvailable={teamRerollAvailable}
           eraRerollAvailable={eraRerollAvailable}
           interactionsDisabled={interactionsDisabled}
@@ -346,7 +415,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
             <section className="draft-board" aria-labelledby="draft-board-title" aria-busy={isRolling}>
               <div className="draft-board__heading">
                 <div><span>{isRolling ? 'Drawing matchup' : 'Available players'}</span><h1 id="draft-board-title">{isRolling ? 'Rolling…' : 'Make your pick'}</h1></div>
-                <small>{players.length} players</small>
+                <small>{players.length} players{allSortType && <b> · {allSortType}</b>}</small>
               </div>
 
               <div className="draft-controls">
@@ -371,7 +440,7 @@ export default function ClassicMode({ onHome }: ClassicModeProps) {
                     type="button"
                     onClick={() => {
                       setFilter(positionFilter)
-                      setSort('war')
+                      if (!sortOptionsForFilter(positionFilter).some((option) => option.value === sort)) setSort('war')
                     }}
                   >{positionFilter}</button>
                 ))}

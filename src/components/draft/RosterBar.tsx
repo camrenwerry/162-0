@@ -1,8 +1,8 @@
-import { POSITIONS, type Position, type Roster } from '../../types/draft'
+import { ROSTER_SLOTS, type Roster, type RosterSlotId } from '../../types/draft'
 
 interface RosterBarProps {
   roster: Roster
-  recentlyFilledPosition: Position | null
+  recentlyFilledPosition: RosterSlotId | null
 }
 
 function surname(name: string) {
@@ -15,20 +15,23 @@ export default function RosterBar({ roster, recentlyFilledPosition }: RosterBarP
   const filled = Object.keys(roster).length
 
   return (
-    <aside className="roster-bar" aria-label={`Roster, ${filled} of ${POSITIONS.length} positions filled`}>
+    <aside className="roster-bar" aria-label={`Roster, ${filled} of ${ROSTER_SLOTS.length} positions filled`}>
       <div className="roster-bar__summary">
         <span>Your Roster</span>
-        <strong>{filled}<i>/</i>{POSITIONS.length}</strong>
+        <strong>{filled}<i>/</i>{ROSTER_SLOTS.length}</strong>
       </div>
       <div className="roster-bar__slots">
-        {POSITIONS.map((position) => (
-          <div className={`${roster[position] ? 'is-filled' : ''}${recentlyFilledPosition === position ? ' is-new' : ''}`} key={position}>
-            <strong>{position}</strong>
-            {roster[position] && <span>{surname(roster[position].name)}</span>}
-            {roster[position] && <small>{roster[position].team} · {roster[position].decade}</small>}
-            {recentlyFilledPosition === position && <i aria-hidden="true">✓</i>}
-          </div>
-        ))}
+        {ROSTER_SLOTS.map((slot) => {
+          const player = roster[slot.id]
+          return (
+            <div className={`${player ? 'is-filled' : ''}${recentlyFilledPosition === slot.id ? ' is-new' : ''}`} key={slot.id}>
+              <strong>{slot.label}</strong>
+              {player && <span>{surname(player.name)}</span>}
+              {player && <small>{player.team} · {player.decade}</small>}
+              {recentlyFilledPosition === slot.id && <i aria-hidden="true">✓</i>}
+            </div>
+          )
+        })}
       </div>
       <div className="roster-how">
         <strong>How It Works</strong>

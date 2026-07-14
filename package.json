@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run validate:data && tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:game": "node scripts/smoke-game.mjs",
+    "validate:data": "node scripts/validate-data.mjs"
   },
   "dependencies": {
     "react": "^19.2.7",

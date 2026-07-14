@@ -46,6 +46,7 @@
 * { box-sizing: border-box; }
 html { background: var(--color-bg); }
 body { margin: 0; min-width: 320px; min-height: 100vh; }
+.route-loading { min-height: 100dvh; background: #030a10; }
 button, input { font: inherit; }
 button { color: inherit; }
 button:focus-visible, input:focus-visible { outline: 2px solid var(--color-accent-bright); outline-offset: 3px; }

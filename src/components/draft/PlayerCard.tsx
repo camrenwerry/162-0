@@ -9,25 +9,33 @@ interface PlayerCardProps {
   isDrafting: boolean
 }
 
-function formatAverage(value: number) {
+function formatAverage(value: number | null) {
+  if (value === null) return '—'
   return value.toFixed(3).replace(/^0/, '')
+}
+
+function formatNumber(value: number | null, digits?: number) {
+  if (value === null) return '—'
+  return digits === undefined ? value.toLocaleString('en-US') : value.toFixed(digits)
 }
 
 function PlayerCard({ player, onSelect, isAvailable, interactionsDisabled, isDrafting }: PlayerCardProps) {
   const stats = player.type === 'hitter'
     ? [
-        ['WAR', player.stats.war.toFixed(1)],
-        ['OPS+', player.stats.opsPlus],
-        ['HR', player.stats.hr],
+        ['WAR', formatNumber(player.stats.war, 1)],
+        ['OPS+', formatNumber(player.stats.opsPlus)],
+        ['HR', formatNumber(player.stats.hr)],
         ['AVG', formatAverage(player.stats.avg)],
       ]
-    : [
-        ['WAR', player.stats.war.toFixed(1)],
-        ['ERA+', player.stats.eraPlus],
-        ['ERA', player.stats.era.toFixed(2)],
-        ['SO', player.stats.so.toLocaleString('en-US')],
-        ['SV', player.stats.sv],
-      ]
+    : (() => {
+        const showSaves = player.eligiblePositions.includes('RP') && !player.eligiblePositions.includes('SP')
+        return [
+          ['WAR', formatNumber(player.stats.war, 1)],
+          ['ERA+', formatNumber(player.stats.eraPlus)],
+          ['ERA', formatNumber(player.stats.era, 2)],
+          [showSaves ? 'SV' : 'SO', formatNumber(showSaves ? player.stats.sv : player.stats.so)],
+        ]
+      })()
 
   return (
     <button

@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
-import ClassicMode from './components/draft/ClassicMode'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import HomeScreen from './components/home/HomeScreen'
+
+const ClassicMode = lazy(() => import('./components/draft/ClassicMode'))
 
 type Route = '/' | '/draft'
 
@@ -21,7 +22,7 @@ function App() {
   }
 
   return route === '/draft'
-    ? <ClassicMode onHome={() => navigate('/')} />
+    ? <Suspense fallback={<main className="route-loading" aria-label="Loading draft" />}><ClassicMode onHome={() => navigate('/')} /></Suspense>
     : <HomeScreen onPlay={() => navigate('/draft')} />
 }
 
