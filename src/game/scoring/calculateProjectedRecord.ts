@@ -21,7 +21,7 @@ function winsFromCurve(score: number) {
     const progress = (boundedScore - left.score) / (right.score - left.score)
     return Math.round(left.wins + (right.wins - left.wins) * progress)
   }
-  return WIN_CURVE.maximumNonPerfectWins
+  return WIN_CURVE.maximumWins
 }
 
 export function tierForWins(wins: number) {
@@ -32,15 +32,17 @@ export function calculateProjectedRecord(
   categoryScores: Record<ScoringCategoryKey, number>,
   playerValues: readonly PlayerValueResult[],
 ): ProjectedRecord {
-  const winsBeforePerfectCheck = Math.min(WIN_CURVE.maximumNonPerfectWins, Math.max(WIN_CURVE.minimumWins, winsFromCurve(categoryScores.overall)))
-  const majorScores = [categoryScores.offense, categoryScores.defense, categoryScores.startingPitching, categoryScores.reliefPitching]
+  const winsBeforePerfectCheck = Math.min(WIN_CURVE.maximumWins, Math.max(WIN_CURVE.minimumWins, winsFromCurve(categoryScores.overall)))
   const weakestPlayer = playerValues.length ? Math.min(...playerValues.map(({ value }) => value)) : 0
   const perfectRequirementsMet = (
     categoryScores.overall >= WIN_CURVE.perfect.overallMinimum
-    && majorScores.every((score) => score >= WIN_CURVE.perfect.majorCategoryMinimum)
+    && categoryScores.offense >= WIN_CURVE.perfect.offenseMinimum
+    && categoryScores.defense >= WIN_CURVE.perfect.defenseMinimum
+    && categoryScores.startingPitching >= WIN_CURVE.perfect.startingPitchingMinimum
+    && categoryScores.reliefPitching >= WIN_CURVE.perfect.reliefPitchingMinimum
     && categoryScores.rosterBalance >= WIN_CURVE.perfect.balanceMinimum
     && weakestPlayer >= WIN_CURVE.perfect.weakestPlayerMinimum
   )
-  const wins = perfectRequirementsMet ? 162 : winsBeforePerfectCheck
+  const wins = perfectRequirementsMet ? 162 : Math.min(161, winsBeforePerfectCheck)
   return { wins, losses: WIN_CURVE.seasonGames - wins, tierLabel: tierForWins(wins), winsBeforePerfectCheck, perfectRequirementsMet }
 }

@@ -1,15 +1,15 @@
 import type { LetterGrade, Position } from '../../types/draft'
 import type { MetricRange } from './types'
 
-// All v2.1 tuning values live here. Ranges map poor/average/excellent/elite
+// All v2.2 tuning values live here. Ranges map poor/average/excellent/elite
 // featured-season performances onto the common 0–100 scoring scale.
-export const SCORING_VERSION = '2.1' as const
+export const SCORING_VERSION = '2.2' as const
 
 export const NORMALIZATION_SCORE_ANCHORS = {
-  poor: 15,
-  average: 50,
-  excellent: 80,
-  elite: 97,
+  poor: 35,
+  average: 68,
+  excellent: 89,
+  elite: 98,
 } as const
 
 export const RATE_SCALES = {
@@ -19,13 +19,13 @@ export const RATE_SCALES = {
 
 export const NORMALIZATION_RANGES = {
   hitter: {
-    eraAdjustedOffense: { poor: 65, average: 100, excellent: 135, elite: 190, direction: 'higher' },
-    ops: { poor: .5, average: .72, excellent: .9, elite: 1.2, direction: 'higher' },
+    eraAdjustedOffense: { poor: 65, average: 100, excellent: 130, elite: 190, direction: 'higher' },
+    ops: { poor: .5, average: .72, excellent: .88, elite: 1.2, direction: 'higher' },
     opsPlus: { poor: 70, average: 100, excellent: 130, elite: 180, direction: 'higher' },
     war: { poor: -1, average: 2, excellent: 5, elite: 10, direction: 'higher' },
     avg: { poor: .210, average: .260, excellent: .310, elite: .370, direction: 'higher' },
-    obp: { poor: .270, average: .325, excellent: .390, elite: .470, direction: 'higher' },
-    slg: { poor: .330, average: .420, excellent: .540, elite: .720, direction: 'higher' },
+    obp: { poor: .270, average: .325, excellent: .380, elite: .470, direction: 'higher' },
+    slg: { poor: .330, average: .420, excellent: .520, elite: .720, direction: 'higher' },
     hrRate: { poor: 2, average: 18, excellent: 35, elite: 60, direction: 'higher' },
     rbiRate: { poor: 25, average: 75, excellent: 110, elite: 155, direction: 'higher' },
     sbRate: { poor: 0, average: 8, excellent: 28, elite: 65, direction: 'higher' },
@@ -48,15 +48,15 @@ export const NORMALIZATION_RANGES = {
     starts: { poor: 5, average: 25, excellent: 32, elite: 36, direction: 'higher' },
   },
   reliever: {
-    eraAdjustedPitching: { poor: 65, average: 100, excellent: 145, elite: 240, direction: 'higher' },
+    eraAdjustedPitching: { poor: 65, average: 100, excellent: 130, elite: 220, direction: 'higher' },
     eraPlus: { poor: 70, average: 100, excellent: 140, elite: 220, direction: 'higher' },
     war: { poor: -1, average: 1, excellent: 2.5, elite: 5, direction: 'higher' },
     era: { poor: 6, average: 4.1, excellent: 2.8, elite: 1.2, direction: 'lower' },
     whip: { poor: 1.7, average: 1.3, excellent: 1.05, elite: .72, direction: 'lower' },
     saves: { poor: 0, average: 10, excellent: 32, elite: 55, direction: 'higher' },
-    strikeoutRate: { poor: 3, average: 8, excellent: 12, elite: 16, direction: 'higher' },
+    strikeoutRate: { poor: 3, average: 8, excellent: 11, elite: 16, direction: 'higher' },
     walkRate: { poor: 7, average: 3.5, excellent: 2, elite: .5, direction: 'lower' },
-    appearances: { poor: 12, average: 45, excellent: 70, elite: 90, direction: 'higher' },
+    appearances: { poor: 12, average: 45, excellent: 65, elite: 85, direction: 'higher' },
     fip: { poor: 6, average: 4.1, excellent: 2.8, elite: 1.5, direction: 'lower' },
     rateProxy: { poor: -1, average: 5, excellent: 10, elite: 16, direction: 'higher' },
   },
@@ -64,15 +64,20 @@ export const NORMALIZATION_RANGES = {
 
 // Player weights are redistributed proportionally when a source metric is null.
 export const PLAYER_WEIGHTS = {
-  hitter: { context: .25, ops: .20, obp: .10, slg: .10, hr: .08, rbi: .06, speed: .05, durability: .10, defense: .06 },
+  hitter: { context: .27, ops: .21, obp: .11, slg: .11, hr: .08, rbi: .05, speed: .03, durability: .09, defense: .05 },
   starter: { context: .27, era: .16, whip: .14, durability: .14, strikeouts: .10, walks: .07, starts: .08, ratePerformance: .04 },
-  reliever: { context: .25, era: .16, whip: .14, saves: .12, strikeouts: .11, walks: .08, workload: .10, ratePerformance: .04 },
+  reliever: { context: .28, era: .18, whip: .16, saves: .06, strikeouts: .12, walks: .08, workload: .09, ratePerformance: .03 },
 } as const
 
 // Small assignment-position adjustments; these cannot outweigh player quality.
 export const POSITIONAL_ADJUSTMENTS: Record<Extract<Position, 'C' | '1B' | '2B' | '3B' | 'SS' | 'LF' | 'CF' | 'RF' | 'DH'>, number> = {
-  C: 8, SS: 7, CF: 6, '2B': 5, '3B': 4, RF: 3, LF: 2, '1B': 1, DH: 0,
+  C: 4, SS: 3.5, CF: 3, '2B': 2.5, '3B': 2, RF: 1.5, LF: 1, '1B': .5, DH: 0,
 }
+
+export const DEFENSE_FALLBACK = {
+  neutralWeight: .35,
+  workloadWeight: .65,
+} as const
 
 export const CONFIDENCE_CONFIG = {
   minimumUsableWeight: .35,
@@ -80,63 +85,64 @@ export const CONFIDENCE_CONFIG = {
   mediumWeight: .60,
   highMetricCount: 6,
   mediumMetricCount: 4,
-  neutralFallbackScore: 50,
+  neutralFallbackScore: 68,
 } as const
 
 export const CATEGORY_WEIGHTS = {
-  offense: .32,
+  offense: .34,
   defense: .18,
   startingPitching: .25,
-  reliefPitching: .12,
-  speed: .05,
+  reliefPitching: .13,
+  speed: .02,
   rosterBalance: .08,
 } as const
 
 export const BALANCE_WEIGHTS = {
-  majorCategoryFloor: .25,
-  lineupDepth: .20,
+  categoryConsistency: .35,
+  lineupDepth: .25,
   rotationDepth: .20,
-  bullpenDepth: .15,
-  powerContactMix: .20,
+  bullpenDepth: .10,
+  productionCoverage: .10,
 } as const
 
 export const CATEGORY_COMPONENT_WEIGHTS = {
   contact: { avg: 1, obp: 1.4, ops: .6 },
   powerContactDifferenceRate: 1.5,
-  speedBalanceRate: .1,
+  speedBalanceRate: .05,
+  categorySpreadRate: .15,
 } as const
 
-// Modest caps ensure quality remains more important than bonuses or penalties.
+export const OVERALL_TRANSFORM = {
+  points: [
+    { input: 0, output: 0 }, { input: 35, output: 32 }, { input: 50, output: 47 },
+    { input: 65, output: 63 }, { input: 75, output: 75 }, { input: 85, output: 87 },
+    { input: 93, output: 95 }, { input: 98, output: 99 }, { input: 100, output: 100 },
+  ],
+} as const
+
+// Category scores already include quality and depth, so overall adjustments
+// are deliberately modest and do not repeat rotation/bullpen/defense penalties.
 export const OVERALL_ADJUSTMENTS = {
-  weakCategoryThreshold: 45,
-  weakCategoryRate: .12,
+  weakCategoryThreshold: 55,
+  weakCategoryRate: .15,
   weakCategoryMaximum: 4,
-  weakRotationThreshold: 45,
-  weakRotationRate: .08,
-  weakRotationMaximum: 2,
-  weakBullpenThreshold: 45,
-  weakBullpenRate: .08,
-  weakBullpenMaximum: 2,
-  weakDefenseThreshold: 45,
-  weakDefenseRate: .08,
-  weakDefenseMaximum: 2,
-  allStrongThreshold: 78,
-  allStrongBonus: 2,
-  exceptionalBalanceThreshold: 88,
+  allStrongThreshold: 88,
+  allStrongBonus: 1.5,
+  exceptionalBalanceThreshold: 90,
   exceptionalBalanceBonus: 1,
 } as const
 
 export const GRADE_THRESHOLDS: ReadonlyArray<{ minimum: number; grade: LetterGrade }> = [
-  { minimum: 97, grade: 'S' },
+  { minimum: 96, grade: 'S' },
   { minimum: 93, grade: 'A+' },
-  { minimum: 89, grade: 'A' },
-  { minimum: 85, grade: 'A-' },
-  { minimum: 81, grade: 'B+' },
-  { minimum: 77, grade: 'B' },
-  { minimum: 73, grade: 'B-' },
-  { minimum: 69, grade: 'C+' },
-  { minimum: 62, grade: 'C' },
-  { minimum: 54, grade: 'D' },
+  { minimum: 90, grade: 'A' },
+  { minimum: 86, grade: 'A-' },
+  { minimum: 82, grade: 'B+' },
+  { minimum: 78, grade: 'B' },
+  { minimum: 74, grade: 'B-' },
+  { minimum: 70, grade: 'C+' },
+  { minimum: 65, grade: 'C' },
+  { minimum: 55, grade: 'D' },
   { minimum: 0, grade: 'F' },
 ]
 
@@ -145,31 +151,36 @@ export const GRADE_THRESHOLDS: ReadonlyArray<{ minimum: number; grade: LetterGra
 // historic, and nearly perfect rosters.
 export const WIN_CURVE = {
   seasonGames: 162,
-  minimumWins: 70,
-  maximumNonPerfectWins: 161,
+  minimumWins: 55,
+  maximumWins: 162,
   points: [
-    { score: 0, wins: 70 }, { score: 30, wins: 78 }, { score: 40, wins: 84 },
-    { score: 50, wins: 89 }, { score: 60, wins: 95 }, { score: 70, wins: 103 },
-    { score: 78, wins: 112 }, { score: 84, wins: 121 }, { score: 89, wins: 132 },
-    { score: 93, wins: 143 }, { score: 96, wins: 153 }, { score: 98, wins: 159 },
-    { score: 100, wins: 161 },
+    { score: 0, wins: 55 }, { score: 35, wins: 58 }, { score: 45, wins: 65 },
+    { score: 55, wins: 74 }, { score: 60, wins: 78 }, { score: 65, wins: 81 },
+    { score: 68, wins: 87 }, { score: 72, wins: 93 }, { score: 76, wins: 99 },
+    { score: 80, wins: 105 }, { score: 84, wins: 112 }, { score: 88, wins: 121 },
+    { score: 92, wins: 133 }, { score: 95, wins: 144 }, { score: 97, wins: 153 },
+    { score: 98.5, wins: 158 }, { score: 99.5, wins: 161 }, { score: 100, wins: 162 },
   ],
   perfect: {
-    overallMinimum: 99,
-    majorCategoryMinimum: 97.05,
-    balanceMinimum: 90,
-    weakestPlayerMinimum: 90,
+    overallMinimum: 95,
+    offenseMinimum: 94.5,
+    defenseMinimum: 85,
+    startingPitchingMinimum: 94,
+    reliefPitchingMinimum: 95,
+    balanceMinimum: 93,
+    weakestPlayerMinimum: 88,
   },
 } as const
 
 export const TIER_THRESHOLDS = [
   { minimumWins: 162, label: 'Perfect Season' },
-  { minimumWins: 150, label: 'Near Perfect' },
-  { minimumWins: 130, label: 'Historic Dynasty' },
-  { minimumWins: 115, label: 'All-Time Great' },
-  { minimumWins: 105, label: 'World Series Favorite' },
-  { minimumWins: 95, label: 'Championship Contender' },
-  { minimumWins: 85, label: 'Playoff Contender' },
-  { minimumWins: 75, label: 'Competitive' },
+  { minimumWins: 156, label: 'Near Perfect' },
+  { minimumWins: 145, label: 'All-Time Great' },
+  { minimumWins: 130, label: 'Historic Powerhouse' },
+  { minimumWins: 115, label: 'World Series Favorite' },
+  { minimumWins: 105, label: 'Championship Contender' },
+  { minimumWins: 95, label: 'Playoff Contender' },
+  { minimumWins: 85, label: 'Competitive' },
+  { minimumWins: 75, label: 'Developing Club' },
   { minimumWins: 0, label: 'Rebuild' },
 ] as const

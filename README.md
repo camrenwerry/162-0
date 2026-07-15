@@ -2,7 +2,7 @@
 
 Diamond Draft is a mobile-first historical baseball roster-building game. Classic Mode presents one franchise/decade pool in each of 14 rounds. A complete roster contains C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP, and two RP slots, followed by a deterministic 162-game projection.
 
-Version 0.11.3 is a public beta of the static React + TypeScript + Vite application. It has no accounts, gameplay API, or database server. Local storage is used only to remember whether first-game tips were dismissed.
+Version 0.11.5 is a public beta of the static React + TypeScript + Vite application. It has no accounts, gameplay API, or database server. Local storage is used only to remember whether first-game tips were dismissed.
 
 ## Public beta configuration
 
@@ -146,11 +146,11 @@ Pools with blocking identity, season, stat, duplicate, size, pitching-depth, or 
 
 Field corrections fail the build if provenance fields are missing or the target path is invalid. Overrides must document source-backed exceptions and cannot bypass franchise/decade validation.
 
-## Scoring engine v2.1
+## Scoring engine v2.2
 
-The v2.1 projection uses the generated featured-season statistics plus the pipeline’s league/year context metrics. Hitter scoring uses era-relative offense, OPS, OBP, SLG, rate production, hidden speed, workload, and modest positional/defensive context. Pitcher scoring uses era-relative run prevention, ERA, WHIP, K/9, BB/9, workload, starts or relief appearances, and saves. The deterministic piecewise win curve expands the upper tail without adding a flat bonus, allowing complete historically elite rosters to reach 162–0 while average fixtures remain in the 86–95 range.
+The v2.2 projection uses the generated featured-season statistics plus the pipeline’s league/year context metrics. Hitter scoring uses era-relative offense, OPS, OBP, SLG, rate production, hidden speed, workload, and modest positional/defensive context. Pitcher scoring uses role-specific era-relative run prevention, ERA, WHIP, K/9, BB/9, workload, starts or relief appearances, and modest save value. Broader metric anchors and a continuous piecewise win curve separate weak, average, elite, and historic rosters without a flat win bonus.
 
-The engine does not require WAR, OPS+, ERA+, wRC+, or FIP. Missing optional inputs are omitted, available weights are redistributed, and low-coverage calculations blend toward neutral. When cross-era defensive enrichment is unavailable, featured-season workload and positional difficulty form a deterministic source-supported proxy. The same roster always returns the same result. Speed remains internal to offense, overall strength, and roster balance, but is not displayed as a Results category.
+The engine does not require WAR, OPS+, ERA+, wRC+, or FIP. Missing optional inputs are omitted, available weights are redistributed, and low-coverage calculations blend toward the league-average anchor. When cross-era defensive enrichment is unavailable, a neutral-confidence fallback combines featured-season workload and positional difficulty. The same roster always returns the same result. Speed remains a small internal input to offense, overall strength, and roster balance, but is not displayed as a Results category.
 
 ## Run and test
 
@@ -163,6 +163,7 @@ npm run audit:stars
 npm run audit:positions
 npm run audit:seasons
 npm run scoring:benchmarks
+npm run scoring:distribution
 npm run test:data
 npm run test:game
 npm run test:engine

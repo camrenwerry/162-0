@@ -1,6 +1,6 @@
 import type { Hitter, Pitcher, Position, RosterSlotId, TwoWayPlayer } from '../../types/draft'
-import { CATEGORY_COMPONENT_WEIGHTS, NORMALIZATION_RANGES, PLAYER_WEIGHTS, POSITIONAL_ADJUSTMENTS, RATE_SCALES } from './scoringConfig'
-import { average, clamp, confidenceFor, normalizeMetric, roundScore, weightedScore } from './normalization'
+import { CATEGORY_COMPONENT_WEIGHTS, CONFIDENCE_CONFIG, DEFENSE_FALLBACK, NORMALIZATION_RANGES, PLAYER_WEIGHTS, POSITIONAL_ADJUSTMENTS, RATE_SCALES } from './scoringConfig'
+import { average, clamp, confidenceFor, normalizeMetric, roundScore, weightedFacetScore, weightedScore } from './normalization'
 import type { MetricContribution, MetricRange, PlayerValueResult } from './types'
 
 type PendingContribution = Omit<MetricContribution, 'appliedWeight'>
@@ -41,7 +41,11 @@ export function calculateHitterValue(
   const defenseScore = position === 'DH'
     ? 0
     : scoring.defensiveValue === null
-      ? clamp(durabilityScore + positionAdjustment * .5)
+      ? clamp(
+        DEFENSE_FALLBACK.neutralWeight * CONFIDENCE_CONFIG.neutralFallbackScore
+        + DEFENSE_FALLBACK.workloadWeight * durabilityScore
+        + positionAdjustment,
+      )
       : clamp(normalizeMetric(scoring.defensiveValue, ranges.defense) + positionAdjustment)
 
   const components = compact([
@@ -77,8 +81,8 @@ export function calculateHitterValue(
     components: weighted.components,
     facets: {
       offense: roundScore(weightedScore(offenseComponents).score),
-      power: roundScore(weightedScore(powerComponents).score),
-      contact: roundScore(weightedScore(contactComponents).score),
+      power: roundScore(weightedFacetScore(powerComponents)),
+      contact: roundScore(weightedFacetScore(contactComponents)),
       speed: roundScore(speedMetric?.normalizedValue ?? 50),
       defense: roundScore(defenseScore),
       durability: roundScore(durabilityScore),

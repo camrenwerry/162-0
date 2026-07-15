@@ -25,6 +25,23 @@ export function normalizeMetric(value: number, range: MetricRange) {
   return clamp(interpolate(orientedValue, anchors[3], anchors[3] + Math.max(anchors[3] - anchors[2], .0001), scores[3], 100))
 }
 
+export function transformScore(value: number, points: ReadonlyArray<{ input: number; output: number }>) {
+  const bounded = clamp(value)
+  for (let index = 1; index < points.length; index += 1) {
+    if (bounded > points[index].input) continue
+    const left = points[index - 1]
+    const right = points[index]
+    return clamp(interpolate(bounded, left.input, right.input, left.output, right.output))
+  }
+  return clamp(points.at(-1)?.output ?? bounded)
+}
+
+export function weightedFacetScore(components: ReadonlyArray<Omit<MetricContribution, 'appliedWeight'>>) {
+  const totalWeight = components.reduce((total, component) => total + component.configuredWeight, 0)
+  if (!totalWeight) return CONFIDENCE_CONFIG.neutralFallbackScore
+  return clamp(components.reduce((total, component) => total + component.normalizedValue * component.configuredWeight / totalWeight, 0))
+}
+
 export function weightedScore(components: ReadonlyArray<Omit<MetricContribution, 'appliedWeight'>>) {
   const availableWeight = components.reduce((total, component) => total + component.configuredWeight, 0)
   if (!availableWeight) return { score: CONFIDENCE_CONFIG.neutralFallbackScore, availableWeight: 0, components: [] as MetricContribution[] }

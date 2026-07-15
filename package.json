@@ -1,7 +1,7 @@
 {
   "name": "diamond-draft",
   "private": true,
-  "version": "0.11.3",
+  "version": "0.11.5",
   "type": "module",
   "scripts": {
     "data:build": "node scripts/build-player-pools.mjs",
@@ -26,7 +26,10 @@
     "test:engine": "vite build --ssr scripts/engine-smoke.ts --outDir /tmp/diamond-draft-engine-smoke --emptyOutDir && node /tmp/diamond-draft-engine-smoke/engine-smoke.js",
     "test:game": "node scripts/smoke-game.mjs",
     "test:scoring": "vite build --ssr scripts/scoring.test.ts --outDir /tmp/diamond-draft-scoring-tests --emptyOutDir && node /tmp/diamond-draft-scoring-tests/scoring.test.js",
+    "test:randomizer": "vite build --ssr scripts/randomizer.test.ts --outDir /tmp/diamond-draft-randomizer-tests --emptyOutDir && node /tmp/diamond-draft-randomizer-tests/randomizer.test.js",
+    "test:randomizer-distribution": "vite build --ssr scripts/randomizer-distribution.ts --outDir /tmp/diamond-draft-randomizer-distribution --emptyOutDir && node /tmp/diamond-draft-randomizer-distribution/randomizer-distribution.js",
     "scoring:benchmarks": "vite build --ssr scripts/scoring-benchmarks.ts --outDir /tmp/diamond-draft-scoring-benchmarks --emptyOutDir && node /tmp/diamond-draft-scoring-benchmarks/scoring-benchmarks.js",
+    "scoring:distribution": "vite build --ssr scripts/scoring-distribution.ts --outDir /tmp/diamond-draft-scoring-distribution --emptyOutDir && node /tmp/diamond-draft-scoring-distribution/scoring-distribution.js",
     "test:responsive": "node scripts/responsive-contract.test.mjs",
     "test:presentation": "node scripts/v010-presentation.test.mjs",
     "test:beta": "vite build --ssr scripts/beta-readiness.test.ts --outDir /tmp/diamond-draft-beta-tests --emptyOutDir && node /tmp/diamond-draft-beta-tests/beta-readiness.test.js",

@@ -1,6 +1,6 @@
 # Diamond Draft Beta Feedback
 
-Running checklist for v0.11.3 and later beta work. Historical audits are report-only: they never add cards, replace featured seasons, or overwrite manual position overrides.
+Running checklist for v0.11.5 and later beta work. Historical audits are report-only: they never add cards, replace featured seasons, or overwrite manual position overrides.
 
 ## Current beta issues
 
@@ -8,7 +8,7 @@ Running checklist for v0.11.3 and later beta work. Historical audits are report-
 - [x] Keep average fixtures in the 86–95-win band and make 162–0 attainable only through explicit perfect-roster gates.
 - [x] Remove Speed from the Results presentation while retaining its internal scoring effect.
 - [x] Keep the draft flow, randomizer, roster slots, category weights, balance penalties, and weak-category penalties unchanged.
-- [ ] Review new beta reports for real-roster outliers after v0.11.3 ships.
+- [ ] Review new beta reports for real-roster outliers after v0.11.5 ships.
 
 ## Historical data tasks
 
@@ -19,12 +19,12 @@ Running checklist for v0.11.3 and later beta work. Historical audits are report-
 
 ## Scoring tuning notes
 
-- Scoring payload version: `2.1`.
-- The win conversion is deterministic piecewise interpolation. It starts at a 70-win floor, remains restrained through average scores, then expands sharply through great, historic, all-time, and near-perfect scores.
-- Category weights remain Offense 32%, Defense 18%, Starting Pitching 25%, Relief Pitching 12%, hidden Speed 5%, and Roster Balance 8%.
+- Scoring payload version: `2.2`.
+- The win conversion is deterministic piecewise interpolation. It starts at a 55-win floor, maps conceptual league-average strength near 81 wins, and expands sharply through great, historic, all-time, and near-perfect scores.
+- Category weights are Offense 34%, Defense 18%, Starting Pitching 25%, Relief Pitching 13%, hidden Speed 2%, and Roster Balance 8%.
 - Speed now contributes to the Offense facet and modifies the existing power/contact production-mix input to Roster Balance. It continues its direct Overall contribution.
-- When a card lacks a cross-era defensive value, its featured-season workload and positional difficulty supply a deterministic defensive proxy. This prevents real historical rosters from being permanently capped near neutral Defense.
-- Existing weak-major-category, rotation-depth, bullpen-depth, weak-defense, and roster-balance adjustments remain active.
+- When a card lacks a cross-era defensive value, a neutral-confidence fallback blends featured-season workload and positional difficulty. Missing enrichment no longer creates an automatic defensive failure.
+- A single modest catastrophic-category penalty replaces duplicated rotation, bullpen, and defense penalties already represented in category scores and roster balance.
 - Benchmark output: [SCORING_BENCHMARKS.md](audits/SCORING_BENCHMARKS.md).
 
 ## Missing player audit

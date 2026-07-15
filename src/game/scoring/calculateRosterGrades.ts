@@ -1,7 +1,7 @@
 import type { LetterGrade, Roster, ScoringCategoryKey } from '../../types/draft'
 import { calculateHitterValue, calculateReliefPitcherValue, calculateStartingPitcherValue } from './calculatePlayerValue'
-import { BALANCE_WEIGHTS, CATEGORY_COMPONENT_WEIGHTS, CATEGORY_WEIGHTS, GRADE_THRESHOLDS, OVERALL_ADJUSTMENTS } from './scoringConfig'
-import { average, clamp, roundScore } from './normalization'
+import { BALANCE_WEIGHTS, CATEGORY_COMPONENT_WEIGHTS, CATEGORY_WEIGHTS, GRADE_THRESHOLDS, OVERALL_ADJUSTMENTS, OVERALL_TRANSFORM } from './scoringConfig'
+import { average, clamp, roundScore, transformScore } from './normalization'
 import type { OverallAdjustment, PlayerValueResult } from './types'
 
 const HITTER_SLOT_IDS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH'] as const
@@ -10,6 +10,7 @@ const STARTER_SLOT_IDS = ['SP1', 'SP2', 'SP3'] as const
 const RELIEVER_SLOT_IDS = ['RP1', 'RP2'] as const
 
 const averageWithExpectedCount = (values: readonly number[], expectedCount: number) => values.reduce((total, value) => total + value, 0) / expectedCount
+const averageLowest = (values: readonly number[], count: number) => average([...values].sort((left, right) => left - right).slice(0, count))
 
 export function gradeForScore(score: number): LetterGrade {
   return GRADE_THRESHOLDS.find(({ minimum }) => score >= minimum)?.grade ?? 'F'
@@ -49,21 +50,22 @@ export function calculateRosterGrades(roster: Roster): RosterGradeCalculation {
   const startingPitching = averageWithExpectedCount(starterValues.map(({ value }) => value), STARTER_SLOT_IDS.length)
   const reliefPitching = averageWithExpectedCount(relieverValues.map(({ value }) => value), RELIEVER_SLOT_IDS.length)
 
-  const majorFloor = Math.min(offense, defense, startingPitching, reliefPitching)
-  const lineupDepth = Math.min(...HITTER_SLOT_IDS.map((slotId) => hitterValues.find((value) => value.slotId === slotId)?.value ?? 0))
-  const rotationDepth = Math.min(...STARTER_SLOT_IDS.map((slotId) => starterValues.find((value) => value.slotId === slotId)?.value ?? 0))
-  const bullpenDepth = Math.min(...RELIEVER_SLOT_IDS.map((slotId) => relieverValues.find((value) => value.slotId === slotId)?.value ?? 0))
+  const majorScores = [offense, defense, startingPitching, reliefPitching]
+  const categoryConsistency = average(majorScores) - (Math.max(...majorScores) - Math.min(...majorScores)) * CATEGORY_COMPONENT_WEIGHTS.categorySpreadRate
+  const lineupDepth = averageLowest(HITTER_SLOT_IDS.map((slotId) => hitterValues.find((value) => value.slotId === slotId)?.value ?? 0), 3)
+  const rotationDepth = averageLowest(STARTER_SLOT_IDS.map((slotId) => starterValues.find((value) => value.slotId === slotId)?.value ?? 0), 2)
+  const bullpenDepth = averageLowest(RELIEVER_SLOT_IDS.map((slotId) => relieverValues.find((value) => value.slotId === slotId)?.value ?? 0), 2)
   const productionMix = clamp(
     100
     - Math.abs(power - contact) * CATEGORY_COMPONENT_WEIGHTS.powerContactDifferenceRate
     + (speed - 50) * CATEGORY_COMPONENT_WEIGHTS.speedBalanceRate,
   )
   const rosterBalance = (
-    majorFloor * BALANCE_WEIGHTS.majorCategoryFloor
+    categoryConsistency * BALANCE_WEIGHTS.categoryConsistency
     + lineupDepth * BALANCE_WEIGHTS.lineupDepth
     + rotationDepth * BALANCE_WEIGHTS.rotationDepth
     + bullpenDepth * BALANCE_WEIGHTS.bullpenDepth
-    + productionMix * BALANCE_WEIGHTS.powerContactMix
+    + productionMix * BALANCE_WEIGHTS.productionCoverage
   )
 
   const baseOverallScore = (
@@ -75,38 +77,21 @@ export function calculateRosterGrades(roster: Roster): RosterGradeCalculation {
     + rosterBalance * CATEGORY_WEIGHTS.rosterBalance
   )
   const adjustments: OverallAdjustment[] = []
-  const weakestMajor = Math.min(offense, defense, startingPitching, reliefPitching)
+  const weakestMajor = Math.min(...majorScores)
   if (weakestMajor < OVERALL_ADJUSTMENTS.weakCategoryThreshold) {
     adjustments.push({
       label: 'extremely weak major category',
       value: -Math.min(OVERALL_ADJUSTMENTS.weakCategoryMaximum, (OVERALL_ADJUSTMENTS.weakCategoryThreshold - weakestMajor) * OVERALL_ADJUSTMENTS.weakCategoryRate),
     })
   }
-  if (rotationDepth < OVERALL_ADJUSTMENTS.weakRotationThreshold) {
-    adjustments.push({
-      label: 'poor rotation depth',
-      value: -Math.min(OVERALL_ADJUSTMENTS.weakRotationMaximum, (OVERALL_ADJUSTMENTS.weakRotationThreshold - rotationDepth) * OVERALL_ADJUSTMENTS.weakRotationRate),
-    })
-  }
-  if (bullpenDepth < OVERALL_ADJUSTMENTS.weakBullpenThreshold) {
-    adjustments.push({
-      label: 'poor bullpen depth',
-      value: -Math.min(OVERALL_ADJUSTMENTS.weakBullpenMaximum, (OVERALL_ADJUSTMENTS.weakBullpenThreshold - bullpenDepth) * OVERALL_ADJUSTMENTS.weakBullpenRate),
-    })
-  }
-  if (defense < OVERALL_ADJUSTMENTS.weakDefenseThreshold) {
-    adjustments.push({
-      label: 'unusually weak defense',
-      value: -Math.min(OVERALL_ADJUSTMENTS.weakDefenseMaximum, (OVERALL_ADJUSTMENTS.weakDefenseThreshold - defense) * OVERALL_ADJUSTMENTS.weakDefenseRate),
-    })
-  }
-  if ([offense, defense, startingPitching, reliefPitching].every((score) => score >= OVERALL_ADJUSTMENTS.allStrongThreshold)) {
+  if (majorScores.every((score) => score >= OVERALL_ADJUSTMENTS.allStrongThreshold)) {
     adjustments.push({ label: 'strong in every major category', value: OVERALL_ADJUSTMENTS.allStrongBonus })
   }
   if (rosterBalance >= OVERALL_ADJUSTMENTS.exceptionalBalanceThreshold) {
     adjustments.push({ label: 'exceptional roster balance', value: OVERALL_ADJUSTMENTS.exceptionalBalanceBonus })
   }
-  const overall = clamp(baseOverallScore + adjustments.reduce((total, adjustment) => total + adjustment.value, 0))
+  const adjustedOverall = clamp(baseOverallScore + adjustments.reduce((total, adjustment) => total + adjustment.value, 0))
+  const overall = transformScore(adjustedOverall, OVERALL_TRANSFORM.points)
   const categoryScores: Record<ScoringCategoryKey, number> = {
     offense: roundScore(offense), power: roundScore(power), contact: roundScore(contact), speed: roundScore(speed),
     defense: roundScore(defense), startingPitching: roundScore(startingPitching), reliefPitching: roundScore(reliefPitching),

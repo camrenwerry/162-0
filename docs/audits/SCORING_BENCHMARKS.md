@@ -1,13 +1,15 @@
 # Scoring Benchmark Report
 
-Deterministic v2.1 fixtures exercise the v0.11.3 win curve. Speed remains hidden from presentation but contributes to offense, overall score, and roster balance.
+Deterministic v2.2 fixtures exercise the v0.11.5 normalization and win curves. Speed remains hidden and contributes only a small internal benefit.
 
-| Benchmark | Projected record | Offense | Defense | Starting Pitching | Relief Pitching | Roster Balance | Overall |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Average roster | 91–71 | F (52.9) | D (54.5) | F (51.8) | F (49.6) | D (59.9) | F (52.9) |
-| Good roster | 103–59 | C+ (69) | B- (73.3) | C+ (72.9) | C (65.5) | C (62) | C+ (69.6) |
-| Elite roster | 122–40 | B+ (81.8) | B+ (84.5) | B+ (83.5) | B+ (81.3) | B (80.5) | B+ (84.5) |
-| Historical superteam | 146–16 | A (92.7) | A+ (95.5) | A+ (93) | A (89.2) | B+ (81.2) | A+ (93.9) |
-| Near-perfect roster | 159–3 | S (98.2) | S (99.9) | S (97.7) | A (89.2) | A- (86.3) | S (98.4) |
+| Benchmark | Overall | Projected record | Tier | Offense | Defense | Starting Pitching | Relief Pitching | Roster Balance | Bonuses | Penalties |
+| --- | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| Weak roster | F (39.3) | 61–101 | Rebuild | F (44.1) | F (43.9) | F (44.2) | F (42.1) | F (48.8) | None | extremely weak major category (-1.9) |
+| Average roster | C (68.5) | 88–74 | Competitive | C+ (70) | C+ (70.3) | C (69.2) | C (67.4) | C+ (71.8) | None | None |
+| Good roster | C+ (73.8) | 96–66 | Playoff Contender | B- (74.1) | B- (74.2) | C+ (73.5) | B- (74.6) | B- (74.3) | None | None |
+| Great roster | B+ (83.3) | 111–51 | Championship Contender | B+ (82.4) | B (80.8) | B+ (82.1) | B (81.7) | B+ (83.4) | None | None |
+| Elite roster | A- (88.5) | 123–39 | World Series Favorite | A- (86) | A- (86) | A- (88) | A- (86.2) | A- (86.4) | None | None |
+| Historical superteam | S (97.3) | 154–8 | All-Time Great | A+ (93.9) | A (92.2) | A+ (94.4) | A+ (93) | A (92.9) | strong in every major category (+1.5); exceptional roster balance (+1.0) | None |
+| Near-perfect roster | A+ (95.4) | 162–0 | Perfect Season | A+ (94.6) | B+ (85.4) | A+ (94.3) | S (96.8) | A+ (93.2) | exceptional roster balance (+1.0) | None |
 
-Perfect qualification fixture: **162–0**, overall **S (100)**.
+Perfect qualification fixture: **162–0**, overall **S (98.5)**.

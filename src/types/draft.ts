@@ -203,5 +203,5 @@ export interface DraftResult {
   strongestCategory: Exclude<ScoringCategoryKey, 'overall'>
   weakestCategory: Exclude<ScoringCategoryKey, 'overall'>
   bestPlayerValue: BestPlayerValue | null
-  scoringVersion: '2.1'
+  scoringVersion: '2.2'
 }
