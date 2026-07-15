@@ -996,7 +996,7 @@
     "historicalTeamName": "Colorado Rockies",
     "team": "COL",
     "decade": "2010s",
-    "featuredSeason": 2014,
+    "featuredSeason": 2013,
     "eligiblePositions": [
       "1B",
       "RF"
@@ -1020,7 +1020,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 54.249,
+      "score": 53.767,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -1028,40 +1028,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.955,
-      "hr": 10,
-      "avg": 0.332,
-      "obp": 0.376,
-      "slg": 0.579,
-      "rbi": 31,
-      "sb": 3,
-      "games": 49,
-      "plateAppearances": 205
+      "ops": 0.919,
+      "hr": 20,
+      "avg": 0.331,
+      "obp": 0.389,
+      "slg": 0.53,
+      "rbi": 84,
+      "sb": 10,
+      "games": 130,
+      "plateAppearances": 540
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.955,
-      "hr": 10,
-      "avg": 0.332,
-      "obp": 0.376,
-      "slg": 0.579,
-      "rbi": 31,
-      "sb": 3,
-      "games": 49,
-      "plateAppearances": 205
+      "ops": 0.919,
+      "hr": 20,
+      "avg": 0.331,
+      "obp": 0.389,
+      "slg": 0.53,
+      "rbi": 84,
+      "sb": 10,
+      "games": 130,
+      "plateAppearances": 540
     },
     "scoringStats": {
-      "obp": 0.376,
-      "slg": 0.579,
+      "obp": 0.389,
+      "slg": 0.53,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 49,
-      "plateAppearances": 205,
-      "eraAdjustedOffense": 137.5
+      "games": 130,
+      "plateAppearances": 540,
+      "eraAdjustedOffense": 130.6
     },
     "pitchingScoringStats": null
   },

@@ -164,6 +164,6 @@ Generated from Lahman awards, Hall of Fame inductions, qualified franchise tenur
 
 None.
 
-## Suspicious featured seasons (561)
+## Suspicious featured seasons (578)
 
 See [FEATURED_SEASON_AUDIT.md](FEATURED_SEASON_AUDIT.md).

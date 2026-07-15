@@ -10,7 +10,7 @@
     "historicalTeamName": "Boston Red Sox",
     "team": "BOS",
     "decade": "1950s",
-    "featuredSeason": 1953,
+    "featuredSeason": 1957,
     "eligiblePositions": [
       "LF"
     ],
@@ -33,7 +33,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 84.323,
+      "score": 84.241,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -41,40 +41,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 1.41,
-      "hr": 13,
-      "avg": 0.407,
-      "obp": 0.509,
-      "slg": 0.901,
-      "rbi": 34,
+      "ops": 1.257,
+      "hr": 38,
+      "avg": 0.388,
+      "obp": 0.526,
+      "slg": 0.731,
+      "rbi": 87,
       "sb": 0,
-      "games": 37,
-      "plateAppearances": 110
+      "games": 132,
+      "plateAppearances": 546
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 1.41,
-      "hr": 13,
-      "avg": 0.407,
-      "obp": 0.509,
-      "slg": 0.901,
-      "rbi": 34,
+      "ops": 1.257,
+      "hr": 38,
+      "avg": 0.388,
+      "obp": 0.526,
+      "slg": 0.731,
+      "rbi": 87,
       "sb": 0,
-      "games": 37,
-      "plateAppearances": 110
+      "games": 132,
+      "plateAppearances": 546
     },
     "scoringStats": {
-      "obp": 0.509,
-      "slg": 0.901,
+      "obp": 0.526,
+      "slg": 0.731,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 37,
-      "plateAppearances": 110,
-      "eraAdjustedOffense": 196.9
+      "games": 132,
+      "plateAppearances": 546,
+      "eraAdjustedOffense": 177.8
     },
     "pitchingScoringStats": null
   },

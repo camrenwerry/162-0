@@ -1630,10 +1630,9 @@
     "historicalTeamName": "Philadelphia Athletics",
     "team": "PHA",
     "decade": "1930s",
-    "featuredSeason": 1932,
+    "featuredSeason": 1935,
     "eligiblePositions": [
-      "CF",
-      "RF"
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1654,7 +1653,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 40.441,
+      "score": 40.089,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -1662,40 +1661,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.828,
+      "ops": 0.789,
       "hr": 3,
-      "avg": 0.336,
-      "obp": 0.367,
-      "slg": 0.461,
-      "rbi": 46,
-      "sb": 3,
-      "games": 92,
-      "plateAppearances": 407
+      "avg": 0.332,
+      "obp": 0.373,
+      "slg": 0.416,
+      "rbi": 70,
+      "sb": 6,
+      "games": 149,
+      "plateAppearances": 701
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.828,
+      "ops": 0.789,
       "hr": 3,
-      "avg": 0.336,
-      "obp": 0.367,
-      "slg": 0.461,
-      "rbi": 46,
-      "sb": 3,
-      "games": 92,
-      "plateAppearances": 407
+      "avg": 0.332,
+      "obp": 0.373,
+      "slg": 0.416,
+      "rbi": 70,
+      "sb": 6,
+      "games": 149,
+      "plateAppearances": 701
     },
     "scoringStats": {
-      "obp": 0.367,
-      "slg": 0.461,
+      "obp": 0.373,
+      "slg": 0.416,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 92,
-      "plateAppearances": 407,
-      "eraAdjustedOffense": 110.8
+      "games": 149,
+      "plateAppearances": 701,
+      "eraAdjustedOffense": 105.2
     },
     "pitchingScoringStats": null
   },

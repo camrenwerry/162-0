@@ -1910,85 +1910,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "ana-1990s-anderga01",
-    "playerId": "anderga01",
-    "playerSlug": "anderga01",
-    "name": "Garret Anderson",
-    "franchiseId": "ana",
-    "teamAbbreviation": "CAL",
-    "teamDisplayName": "California Angels",
-    "historicalTeamName": "California Angels",
-    "team": "CAL",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "eligiblePositions": [
-      "LF"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "L",
-    "throws": "L",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "anderga01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 42,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.857,
-      "hr": 16,
-      "avg": 0.321,
-      "obp": 0.352,
-      "slg": 0.505,
-      "rbi": 69,
-      "sb": 6,
-      "games": 106,
-      "plateAppearances": 400
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.857,
-      "hr": 16,
-      "avg": 0.321,
-      "obp": 0.352,
-      "slg": 0.505,
-      "rbi": 69,
-      "sb": 6,
-      "games": 106,
-      "plateAppearances": 400
-    },
-    "scoringStats": {
-      "obp": 0.352,
-      "slg": 0.505,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 106,
-      "plateAppearances": 400,
-      "eraAdjustedOffense": 111.1
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "ana-1990s-erstada01",
     "playerId": "erstada01",
     "playerSlug": "erstada01",
@@ -2069,6 +1990,173 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "ana-1990s-anderga01",
+    "playerId": "anderga01",
+    "playerSlug": "anderga01",
+    "name": "Garret Anderson",
+    "franchiseId": "ana",
+    "teamAbbreviation": "ANA",
+    "teamDisplayName": "Anaheim Angels",
+    "historicalTeamName": "Anaheim Angels",
+    "team": "ANA",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "anderga01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.59,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.806,
+      "hr": 21,
+      "avg": 0.303,
+      "obp": 0.336,
+      "slg": 0.469,
+      "rbi": 80,
+      "sb": 3,
+      "games": 157,
+      "plateAppearances": 660
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.806,
+      "hr": 21,
+      "avg": 0.303,
+      "obp": 0.336,
+      "slg": 0.469,
+      "rbi": 80,
+      "sb": 3,
+      "games": 157,
+      "plateAppearances": 660
+    },
+    "scoringStats": {
+      "obp": 0.336,
+      "slg": 0.469,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 157,
+      "plateAppearances": 660,
+      "eraAdjustedOffense": 102.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ana-1990s-petkoma01",
+    "playerId": "petkoma01",
+    "playerSlug": "petkoma01",
+    "name": "Mark Petkovsek",
+    "franchiseId": "ana",
+    "teamAbbreviation": "ANA",
+    "teamDisplayName": "Anaheim Angels",
+    "historicalTeamName": "Anaheim Angels",
+    "team": "ANA",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ANA"
+      ],
+      "sourcePlayerId": "petkoma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.944,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.47,
+      "whip": 1.277,
+      "so": 43,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 83,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 4.66,
+      "bb9": 2.28
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.47,
+      "whip": 1.277,
+      "so": 43,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 83,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 4.66,
+      "bb9": 2.28
+    },
+    "scoringStats": {
+      "whip": 1.277,
+      "fip": null,
+      "inningsPitched": 83,
+      "strikeoutRate": 4.66,
+      "walkRate": 2.28,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 64,
+      "reliefAppearances": 64,
+      "eraAdjustedPitching": 139.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "ana-1990s-hollida01",
     "playerId": "hollida01",
     "playerSlug": "hollida01",
@@ -2145,87 +2233,6 @@
       "games": 149,
       "plateAppearances": 648,
       "eraAdjustedOffense": 103.2
-    },
-    "pitchingScoringStats": null
-  },
-  {
-    "id": "ana-1990s-polonlu01",
-    "playerId": "polonlu01",
-    "playerSlug": "polonlu01",
-    "name": "Luis Polonia",
-    "franchiseId": "ana",
-    "teamAbbreviation": "CAL",
-    "teamDisplayName": "California Angels",
-    "historicalTeamName": "California Angels",
-    "team": "CAL",
-    "decade": "1990s",
-    "featuredSeason": 1990,
-    "eligiblePositions": [
-      "LF",
-      "CF",
-      "DH"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "L",
-    "throws": "L",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CAL"
-      ],
-      "sourcePlayerId": "polonlu01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 39.604,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.793,
-      "hr": 2,
-      "avg": 0.336,
-      "obp": 0.376,
-      "slg": 0.417,
-      "rbi": 32,
-      "sb": 20,
-      "games": 109,
-      "plateAppearances": 413
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.793,
-      "hr": 2,
-      "avg": 0.336,
-      "obp": 0.376,
-      "slg": 0.417,
-      "rbi": 32,
-      "sb": 20,
-      "games": 109,
-      "plateAppearances": 413
-    },
-    "scoringStats": {
-      "obp": 0.376,
-      "slg": 0.417,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 109,
-      "plateAppearances": 413,
-      "eraAdjustedOffense": 110.9
     },
     "pitchingScoringStats": null
   },

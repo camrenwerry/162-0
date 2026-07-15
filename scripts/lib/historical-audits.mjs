@@ -8,11 +8,19 @@ const AWARDS = new Map([
   ['Rookie of the Year', 'Rookie of the Year winner'],
 ])
 const compare = (left, right) => left.localeCompare(right, 'en')
-const workload = (candidate) => candidate.playerType === 'pitcher'
-  ? candidate.pitcher?.inningsPitched ?? 0
-  : candidate.hitter?.plateAppearances ?? 0
+const selectionRole = (candidate) => candidate.selectionRole
+  ?? (candidate.playerType === 'pitcher' ? candidate.pitchingRole : 'H')
+const workload = (candidate) => candidate.selectionWorkload
+  ?? (selectionRole(candidate) === 'H' ? candidate.hitter?.plateAppearances ?? 0 : candidate.pitcher?.inningsPitched ?? 0)
 const poolIdFor = (candidate) => `${candidate.franchiseId}-${candidate.decade}`
 const cardKey = (candidate) => `${candidate.franchiseId}-${candidate.decade}-${candidate.playerId}`
+const ratio = (numerator, denominator, places) => denominator > 0 ? Number((numerator / denominator).toFixed(places)) : null
+const transition = (before, after) => before === after ? 'none' : `${before} → ${after}`
+const positionTransition = (before, after) => {
+  const beforeLabel = before?.join(', ') || 'none'
+  const afterLabel = after?.join(', ') || 'none'
+  return transition(beforeLabel, afterLabel)
+}
 const markdownTable = (headers, rows) => [
   `| ${headers.join(' | ')} |`,
   `| ${headers.map(() => '---').join(' | ')} |`,
@@ -105,17 +113,32 @@ export function runHistoricalAudits(root = process.cwd()) {
   for (const chosen of selected) {
     if (!supportedPools.has(poolIdFor(chosen))) continue
     const seasons = [...(candidatesByCard.get(cardKey(chosen)) ?? [])].sort((a, b) => b.selectionScore - a.selectionScore || b.featuredSeason - a.featuredSeason)
-    const formulaBest = seasons[0]
+    const metadata = chosen.featuredSelection
+    const formulaBest = seasons.find(({ featuredSeason }) => featuredSeason === metadata?.rawWinnerSeason) ?? seasons[0]
     const fullest = [...seasons].sort((a, b) => workload(b) - workload(a) || b.selectionScore - a.selectionScore)[0]
     const override = overrides.featuredSeasons?.[cardKey(chosen)]
+    const workloadGuardChanged = Boolean(metadata?.workloadGuardApplied)
+    const manualOverrideChanged = Boolean(metadata?.manualOverrideApplied)
     let reason = ''
-    if (override && formulaBest && formulaBest.featuredSeason !== chosen.featuredSeason) reason = `Manual override conflicts with formula-best ${formulaBest.featuredSeason}`
+    if (manualOverrideChanged && formulaBest) reason = `Manual override selects ${chosen.featuredSeason} instead of raw formula winner ${formulaBest.featuredSeason}`
+    else if (workloadGuardChanged && formulaBest) reason = `Workload guard replaces raw formula winner ${formulaBest.featuredSeason} with fuller same-role season ${chosen.featuredSeason}`
     else if (formulaBest && formulaBest.selectionScore > chosen.selectionScore + .02) reason = `Clearly stronger eligible season ${formulaBest.featuredSeason} scores ${(formulaBest.selectionScore * 100).toFixed(1)} vs ${(chosen.selectionScore * 100).toFixed(1)}`
     else if (fullest && fullest.featuredSeason !== chosen.featuredSeason && workload(chosen) < workload(fullest) * .65 && fullest.selectionScore >= chosen.selectionScore * .88) reason = `Shorter featured season (${workload(chosen)} workload) narrowly outranks fuller ${fullest.featuredSeason} season (${workload(fullest)})`
     if (reason) featuredSeasons.push({
       player: chosen.name, franchise: chosen.teamDisplayName, decade: chosen.decade,
-      featuredSeason: chosen.featuredSeason, possibleSeason: formulaBest?.featuredSeason === chosen.featuredSeason ? fullest.featuredSeason : formulaBest?.featuredSeason,
-      reason, manualOverride: override ? 'yes — retained' : 'no',
+      rawFormulaWinner: formulaBest?.featuredSeason ?? null,
+      finalSelectedSeason: chosen.featuredSeason,
+      featuredSeason: chosen.featuredSeason,
+      possibleSeason: formulaBest?.featuredSeason === chosen.featuredSeason ? fullest?.featuredSeason ?? null : formulaBest?.featuredSeason ?? null,
+      workloadGuardChanged,
+      manualOverrideChanged,
+      scorePercentage: formulaBest ? ratio(chosen.selectionScore * 100, formulaBest.selectionScore, 2) : null,
+      workloadRatio: formulaBest ? ratio(workload(chosen), workload(formulaBest), 3) : null,
+      positionDifferences: formulaBest ? positionTransition(formulaBest.eligiblePositions, chosen.eligiblePositions) : 'unknown',
+      roleDifferences: formulaBest ? transition(selectionRole(formulaBest) ?? 'unknown', selectionRole(chosen) ?? 'unknown') : 'unknown',
+      reason,
+      manualOverride: override ? (manualOverrideChanged ? 'yes — changed selection' : 'yes — retained') : 'no',
+      playable: cardIds.has(chosen.id),
     })
   }
 
@@ -139,7 +162,16 @@ export function runHistoricalAudits(root = process.cwd()) {
   }
 
   return {
-    summary: { supportedPools: built.combinations.length, cards: cards.length },
+    summary: {
+      supportedPools: built.combinations.length,
+      cards: cards.length,
+      eligibleWorkloadGuardChanges: selected.filter((candidate) => candidate.featuredSelection?.workloadGuardApplied).length,
+      workloadGuardChanges: selected.filter((candidate) => supportedPools.has(poolIdFor(candidate)) && candidate.featuredSelection?.workloadGuardApplied).length,
+      playableWorkloadGuardChanges: selected.filter((candidate) => cardIds.has(candidate.id) && candidate.featuredSelection?.workloadGuardApplied).length,
+      eligibleManualOverrideChanges: selected.filter((candidate) => candidate.featuredSelection?.manualOverrideApplied).length,
+      manualOverrideChanges: selected.filter((candidate) => supportedPools.has(poolIdFor(candidate)) && candidate.featuredSelection?.manualOverrideApplied).length,
+      playableManualOverrideChanges: selected.filter((candidate) => cardIds.has(candidate.id) && candidate.featuredSelection?.manualOverrideApplied).length,
+    },
     stars: { missingExpectedPlayers: missingExpectedPlayers.sort((a, b) => compare(`${a.franchise}${a.decade}${a.player}`, `${b.franchise}${b.decade}${b.player}`)), duplicateCards: duplicateCards.sort((a, b) => compare(a.identity, b.identity)), suspiciousFeaturedSeasons: featuredSeasons },
     positions: positionFindings.sort((a, b) => compare(`${a.franchise}${a.decade}${a.player}`, `${b.franchise}${b.decade}${b.player}`)),
     featuredSeasons,
@@ -154,7 +186,12 @@ export function writeHistoricalAuditReports(root, report) {
   fs.writeFileSync(path.join(directory, 'STAR_AUDIT.md'), `# Star Player Audit\n\nGenerated from Lahman awards, Hall of Fame inductions, qualified franchise tenure, and supported pool membership. No cards are added automatically.\n\n## Missing expected players (${starRows.length})\n\n${starRows.length ? markdownTable(['Player', 'Franchise', 'Decade', 'Why expected'], starRows) : 'None.'}\n\n## Duplicate cards/files (${duplicateRows.length})\n\n${duplicateRows.length ? markdownTable(['Identity', 'Location(s)', 'Reason'], duplicateRows) : 'None.'}\n\n## Suspicious featured seasons (${report.featuredSeasons.length})\n\nSee [FEATURED_SEASON_AUDIT.md](FEATURED_SEASON_AUDIT.md).\n`)
   const positionRows = report.positions.map((item) => [item.player, item.franchise, item.decade, item.featuredSeason, item.eligiblePositions, item.reason, item.possibleExpectedPositions])
   fs.writeFileSync(path.join(directory, 'POSITION_AUDIT.md'), `# Position Audit\n\nReport only. Eligibility remains sourced from the featured season, and manual overrides are never overwritten.\n\n${positionRows.length ? markdownTable(['Player', 'Franchise', 'Decade', 'Featured season', 'Eligible positions', 'Reason flagged', 'Possible expected positions'], positionRows) : 'No suspicious positions found.'}\n`)
-  const seasonRows = report.featuredSeasons.map((item) => [item.player, item.franchise, item.decade, item.featuredSeason, item.possibleSeason, item.reason, item.manualOverride])
-  fs.writeFileSync(path.join(directory, 'FEATURED_SEASON_AUDIT.md'), `# Featured-Season Audit\n\nReport only. The audit compares the chosen season with every eligible same-franchise season in the decade; it does not replace selections or manual overrides.\n\n${seasonRows.length ? markdownTable(['Player', 'Franchise', 'Decade', 'Featured season', 'Possible season', 'Reason flagged', 'Manual override'], seasonRows) : 'No suspicious featured seasons found.'}\n`)
+  const seasonRows = report.featuredSeasons.map((item) => [
+    item.player, item.franchise, item.decade, item.rawFormulaWinner, item.finalSelectedSeason,
+    item.workloadGuardChanged ? 'yes' : 'no', item.manualOverrideChanged ? 'yes' : 'no',
+    item.scorePercentage === null ? '' : `${item.scorePercentage}%`, item.workloadRatio,
+    item.positionDifferences, item.roleDifferences, item.reason, item.playable ? 'yes' : 'no',
+  ])
+  fs.writeFileSync(path.join(directory, 'FEATURED_SEASON_AUDIT.md'), `# Featured-Season Audit\n\nReport only. The audit compares the chosen season with every eligible same-franchise season in the decade; it does not replace selections or manual overrides. Score percentage and workload ratio compare the final selection with the raw formula winner.\n\nWorkload guard changes: ${report.summary.eligibleWorkloadGuardChanges} eligible, ${report.summary.workloadGuardChanges} in supported pools, ${report.summary.playableWorkloadGuardChanges} playable. Manual override changes: ${report.summary.eligibleManualOverrideChanges} eligible, ${report.summary.manualOverrideChanges} in supported pools, ${report.summary.playableManualOverrideChanges} playable.\n\n${seasonRows.length ? markdownTable(['Player', 'Franchise', 'Decade', 'Raw formula winner', 'Final selected', 'Guard changed', 'Override changed', 'Score percentage', 'Workload ratio', 'Position differences', 'Role differences', 'Reason flagged', 'Playable'], seasonRows) : 'No suspicious featured seasons found.'}\n`)
   fs.writeFileSync(path.join(directory, 'historical-audit.json'), `${JSON.stringify(report, null, 2)}\n`)
 }

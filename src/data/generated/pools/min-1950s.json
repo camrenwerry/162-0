@@ -2062,92 +2062,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "min-1950s-byerlbu01",
-    "playerId": "byerlbu01",
-    "playerSlug": "byerlbu01",
-    "name": "Bud Byerly",
-    "franchiseId": "min",
-    "teamAbbreviation": "WSH",
-    "teamDisplayName": "Washington Senators",
-    "historicalTeamName": "Washington Senators",
-    "team": "WSH",
-    "decade": "1950s",
-    "featuredSeason": 1956,
-    "eligiblePositions": [
-      "RP"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "WS1"
-      ],
-      "sourcePlayerId": "byerlbu01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 35.997,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.96,
-      "whip": 1.142,
-      "so": 19,
-      "wins": 2,
-      "saves": 4,
-      "sv": 4,
-      "inningsPitched": 51.7,
-      "games": 25,
-      "starts": 0,
-      "reliefAppearances": 25,
-      "k9": 3.31,
-      "bb9": 2.44
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 2.96,
-      "whip": 1.142,
-      "so": 19,
-      "wins": 2,
-      "saves": 4,
-      "sv": 4,
-      "inningsPitched": 51.7,
-      "games": 25,
-      "starts": 0,
-      "reliefAppearances": 25,
-      "k9": 3.31,
-      "bb9": 2.44
-    },
-    "scoringStats": {
-      "whip": 1.142,
-      "fip": null,
-      "inningsPitched": 51.7,
-      "strikeoutRate": 3.31,
-      "walkRate": 2.44,
-      "starts": 0,
-      "gamesStarted": 0,
-      "games": 25,
-      "reliefAppearances": 25,
-      "eraAdjustedPitching": 140.5
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "min-1950s-fitzged01",
     "playerId": "fitzged01",
     "playerSlug": "fitzged01",
@@ -2382,6 +2296,92 @@
       "games": 53,
       "plateAppearances": 180,
       "eraAdjustedOffense": 107.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1950s-byerlbu01",
+    "playerId": "byerlbu01",
+    "playerSlug": "byerlbu01",
+    "name": "Bud Byerly",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1950s",
+    "featuredSeason": 1957,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "byerlbu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.584,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.13,
+      "whip": 1.221,
+      "so": 39,
+      "wins": 6,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 95,
+      "games": 47,
+      "starts": 0,
+      "reliefAppearances": 47,
+      "k9": 3.69,
+      "bb9": 2.08
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.13,
+      "whip": 1.221,
+      "so": 39,
+      "wins": 6,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 95,
+      "games": 47,
+      "starts": 0,
+      "reliefAppearances": 47,
+      "k9": 3.69,
+      "bb9": 2.08
+    },
+    "scoringStats": {
+      "whip": 1.221,
+      "fip": null,
+      "inningsPitched": 95,
+      "strikeoutRate": 3.69,
+      "walkRate": 2.08,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 47,
+      "reliefAppearances": 47,
+      "eraAdjustedPitching": 121.2
     },
     "pitchingScoringStats": null
   },

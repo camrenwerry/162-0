@@ -840,7 +840,7 @@
     "historicalTeamName": "Pittsburgh Pirates",
     "team": "PIT",
     "decade": "1990s",
-    "featuredSeason": 1999,
+    "featuredSeason": 1998,
     "eligiblePositions": [
       "C"
     ],
@@ -863,7 +863,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 51.651,
+      "score": 51.52,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -871,40 +871,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.939,
-      "hr": 8,
-      "avg": 0.332,
-      "obp": 0.428,
-      "slg": 0.511,
-      "rbi": 41,
-      "sb": 22,
-      "games": 78,
-      "plateAppearances": 334
+      "ops": 0.884,
+      "hr": 12,
+      "avg": 0.327,
+      "obp": 0.411,
+      "slg": 0.473,
+      "rbi": 75,
+      "sb": 26,
+      "games": 149,
+      "plateAppearances": 627
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.939,
-      "hr": 8,
-      "avg": 0.332,
-      "obp": 0.428,
-      "slg": 0.511,
-      "rbi": 41,
-      "sb": 22,
-      "games": 78,
-      "plateAppearances": 334
+      "ops": 0.884,
+      "hr": 12,
+      "avg": 0.327,
+      "obp": 0.411,
+      "slg": 0.473,
+      "rbi": 75,
+      "sb": 26,
+      "games": 149,
+      "plateAppearances": 627
     },
     "scoringStats": {
-      "obp": 0.428,
-      "slg": 0.511,
+      "obp": 0.411,
+      "slg": 0.473,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 78,
-      "plateAppearances": 334,
-      "eraAdjustedOffense": 121.7
+      "games": 149,
+      "plateAppearances": 627,
+      "eraAdjustedOffense": 119.3
     },
     "pitchingScoringStats": null
   },

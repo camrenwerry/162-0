@@ -22,19 +22,18 @@
       <stop offset="0.7" stop-color="#e5e1d8"/>
       <stop offset="1" stop-color="#a7a198"/>
     </radialGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
-      <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#000000" flood-opacity="0.7"/>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#000000" flood-opacity="0.72"/>
     </filter>
   </defs>
-  <rect width="1024" height="1024" rx="168" fill="url(#background)"/>
-  <path d="M512 142 854 512 512 882 170 512Z" fill="#09121a" fill-opacity="0.64" stroke="#73531c" stroke-width="42"/>
-  <path d="M512 151 844 512 512 873 180 512Z" fill="none" stroke="url(#gold)" stroke-width="22"/>
-  <path d="M512 188 810 512 512 836 214 512Z" fill="none" stroke="#ffe596" stroke-opacity="0.28" stroke-width="4"/>
+  <rect width="1024" height="1024" fill="url(#background)"/>
+  <path d="M512 88 914 512 512 936 110 512Z" fill="#09121a" fill-opacity="0.7" stroke="#6f4b13" stroke-width="58"/>
+  <path d="M512 98 904 512 512 926 120 512Z" fill="none" stroke="url(#gold)" stroke-width="32"/>
   <g filter="url(#shadow)">
-    <circle cx="512" cy="275" r="83" fill="url(#ball)" stroke="#77736d" stroke-width="6"/>
-    <path d="M476 210c43 35 43 96 0 130M548 210c-43 35-43 96 0 130" fill="none" stroke="#b62932" stroke-width="10" stroke-dasharray="11 8"/>
-    <text x="512" y="548" fill="url(#silver)" stroke="#111820" stroke-width="12" paint-order="stroke fill" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-size="178" letter-spacing="4">DIAMOND</text>
-    <text x="512" y="710" fill="url(#gold)" stroke="#50350d" stroke-width="12" paint-order="stroke fill" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-size="210" letter-spacing="7">DRAFT</text>
+    <circle cx="512" cy="252" r="106" fill="url(#ball)" stroke="#77736d" stroke-width="8"/>
+    <path d="M466 170c55 44 55 120 0 164M558 170c-55 44-55 120 0 164" fill="none" stroke="#b62932" stroke-width="13" stroke-dasharray="15 10"/>
+    <text x="512" y="560" fill="url(#silver)" stroke="#111820" stroke-width="18" paint-order="stroke fill" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-size="196" letter-spacing="1">DIAMOND</text>
+    <text x="512" y="748" fill="url(#gold)" stroke="#50350d" stroke-width="18" paint-order="stroke fill" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-size="236" letter-spacing="3">DRAFT</text>
   </g>
-  <path d="m512 760 18 37 41 6-30 29 7 41-36-19-36 19 7-41-30-29 41-6Z" fill="url(#gold)" stroke="#6c4912" stroke-width="4"/>
+  <path d="m512 800 22 45 50 7-36 35 8 50-44-23-44 23 8-50-36-35 50-7Z" fill="url(#gold)" stroke="#6c4912" stroke-width="7"/>
 </svg>

@@ -86,86 +86,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "phi-1950s-lopatst01",
-    "playerId": "lopatst01",
-    "playerSlug": "lopatst01",
-    "name": "Stan Lopata",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "historicalTeamName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "1950s",
-    "featuredSeason": 1955,
-    "eligiblePositions": [
-      "C",
-      "1B"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "lopatst01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 55.737,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.926,
-      "hr": 22,
-      "avg": 0.271,
-      "obp": 0.388,
-      "slg": 0.538,
-      "rbi": 58,
-      "sb": 4,
-      "games": 99,
-      "plateAppearances": 366
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.926,
-      "hr": 22,
-      "avg": 0.271,
-      "obp": 0.388,
-      "slg": 0.538,
-      "rbi": 58,
-      "sb": 4,
-      "games": 99,
-      "plateAppearances": 366
-    },
-    "scoringStats": {
-      "obp": 0.388,
-      "slg": 0.538,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 99,
-      "plateAppearances": 366,
-      "eraAdjustedOffense": 126.2
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "phi-1950s-seminan01",
     "playerId": "seminan01",
     "playerSlug": "seminan01",
@@ -241,6 +161,86 @@
       "games": 130,
       "plateAppearances": 467,
       "eraAdjustedOffense": 126
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-1950s-lopatst01",
+    "playerId": "lopatst01",
+    "playerSlug": "lopatst01",
+    "name": "Stan Lopata",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1950s",
+    "featuredSeason": 1956,
+    "eligiblePositions": [
+      "C",
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "lopatst01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 55.549,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.888,
+      "hr": 32,
+      "avg": 0.267,
+      "obp": 0.353,
+      "slg": 0.535,
+      "rbi": 95,
+      "sb": 5,
+      "games": 146,
+      "plateAppearances": 624
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.888,
+      "hr": 32,
+      "avg": 0.267,
+      "obp": 0.353,
+      "slg": 0.535,
+      "rbi": 95,
+      "sb": 5,
+      "games": 146,
+      "plateAppearances": 624
+    },
+    "scoringStats": {
+      "obp": 0.353,
+      "slg": 0.535,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 146,
+      "plateAppearances": 624,
+      "eraAdjustedOffense": 123
     },
     "pitchingScoringStats": null
   },

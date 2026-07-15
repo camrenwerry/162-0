@@ -2644,10 +2644,10 @@
     "historicalTeamName": "Cincinnati Reds",
     "team": "CIN",
     "decade": "1920s",
-    "featuredSeason": 1927,
+    "featuredSeason": 1928,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2668,7 +2668,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 33.579,
+      "score": 33.361,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2676,40 +2676,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.754,
-      "hr": 5,
-      "avg": 0.27,
-      "obp": 0.308,
-      "slg": 0.446,
-      "rbi": 21,
-      "sb": 1,
-      "games": 61,
-      "plateAppearances": 236
+      "ops": 0.78,
+      "hr": 3,
+      "avg": 0.296,
+      "obp": 0.345,
+      "slg": 0.435,
+      "rbi": 58,
+      "sb": 2,
+      "games": 116,
+      "plateAppearances": 449
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.754,
-      "hr": 5,
-      "avg": 0.27,
-      "obp": 0.308,
-      "slg": 0.446,
-      "rbi": 21,
-      "sb": 1,
-      "games": 61,
-      "plateAppearances": 236
+      "ops": 0.78,
+      "hr": 3,
+      "avg": 0.296,
+      "obp": 0.345,
+      "slg": 0.435,
+      "rbi": 58,
+      "sb": 2,
+      "games": 116,
+      "plateAppearances": 449
     },
     "scoringStats": {
-      "obp": 0.308,
-      "slg": 0.446,
+      "obp": 0.345,
+      "slg": 0.435,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 61,
-      "plateAppearances": 236,
-      "eraAdjustedOffense": 104.4
+      "games": 116,
+      "plateAppearances": 449,
+      "eraAdjustedOffense": 105.8
     },
     "pitchingScoringStats": null
   },

@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs'
 
 const read = (file) => readFileSync(new URL(`../${file}`, import.meta.url), 'utf8')
 const classic = read('src/components/draft/ClassicMode.tsx')
+const classicCss = read('src/components/draft/ClassicMode.css')
 const simulation = read('src/components/results/SeasonSimulation.tsx')
 const simulationCss = read('src/components/results/SeasonSimulation.css')
 const playerList = read('src/components/draft/PlayerList.tsx')
@@ -18,6 +19,9 @@ assert(!simulation.includes('calculateDraftResult') && !simulation.includes('Dia
 assert(simulation.includes('getSimulationReveal(result)'), 'the reveal must derive only from the supplied result payload')
 assert(simulation.includes('<GameMenu') && simulation.includes('onRestart={onRestart}') && simulation.includes('onHome={onHome}'), 'simulation must expose safe restart and Home controls')
 assert(engine.match(/this\.scoring\.calculate/g)?.length === 1, 'DraftEngine must have exactly one scoring call site')
+assert(engine.includes('resultsReveal: 700'), 'completed rosters need a brief 700ms presentation window before simulation')
+assert(classicCss.includes('roster-complete-glow 200ms') && classicCss.includes('nth-child(14)::after { animation-delay: 390ms; }'), 'all 14 roster slots must receive a quick sequential completion glow')
+assert(classicCss.includes('@keyframes roster-complete-glow') && classicCss.includes('nth-child(n)::after { animation-delay: 0ms; animation-duration: 120ms; }'), 'the completion glow must remain subtle and respect reduced motion')
 assert(playerList.includes('Unavailable for your remaining roster') && playerList.includes('!isAvailable'), 'unavailable cards need one compact divider and must remain rendered')
 for (const inset of ['top', 'right', 'bottom', 'left']) assert(simulationCss.includes(`env(safe-area-inset-${inset})`), `simulation must respect the ${inset} safe area`)
 assert(simulationCss.includes('min-height: 2.75rem') && simulationCss.includes('overflow: hidden'), 'simulation must preserve mobile touch and overflow contracts')
@@ -25,4 +29,4 @@ assert(simulationCss.includes('@media (prefers-reduced-motion: reduce)'), 'simul
 assert(simulationCss.includes('animation: simulation-progress var(--simulation-duration) linear forwards'), 'one continuous progress animation must span the sequence')
 assert(simulationCss.includes('grid-template-rows: 3.2rem minmax(19rem, 1fr) 3.8rem'), 'the simulation card must keep a stable layout across phases and reveal')
 
-console.log('Presentation contract passed: continuous three-phase simulation, stable reveal, idempotent Skip/continue, menu safety, mobile safe areas, and reduced motion.')
+console.log('Presentation contract passed: roster completion glow, continuous three-phase simulation, stable reveal, idempotent Skip/continue, menu safety, mobile safe areas, and reduced motion.')

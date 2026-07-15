@@ -2864,23 +2864,23 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "atl-1970s-jacksso01",
-    "playerId": "jacksso01",
-    "playerSlug": "jacksso01",
-    "name": "Sonny Jackson",
+    "id": "atl-1970s-friaspe01",
+    "playerId": "friaspe01",
+    "playerSlug": "friaspe01",
+    "name": "Pepe Frias",
     "franchiseId": "atl",
     "teamAbbreviation": "ATL",
     "teamDisplayName": "Atlanta Braves",
     "historicalTeamName": "Atlanta Braves",
     "team": "ATL",
     "decade": "1970s",
-    "featuredSeason": 1970,
+    "featuredSeason": 1979,
     "eligiblePositions": [
       "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
-    "bats": "L",
+    "bats": "R",
     "throws": "R",
     "sourceMetadata": {
       "verified": true,
@@ -2891,13 +2891,13 @@
       "lahmanTeamIds": [
         "ATL"
       ],
-      "sourcePlayerId": "jacksso01"
+      "sourcePlayerId": "friaspe01"
     },
     "sourceNotes": "",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 27.309,
+      "score": 24.842,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2905,40 +2905,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.668,
-      "hr": 0,
+      "ops": 0.61,
+      "hr": 1,
       "avg": 0.259,
-      "obp": 0.347,
+      "obp": 0.29,
       "slg": 0.32,
-      "rbi": 20,
-      "sb": 11,
-      "games": 103,
-      "plateAppearances": 380
+      "rbi": 44,
+      "sb": 3,
+      "games": 140,
+      "plateAppearances": 510
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.668,
-      "hr": 0,
+      "ops": 0.61,
+      "hr": 1,
       "avg": 0.259,
-      "obp": 0.347,
+      "obp": 0.29,
       "slg": 0.32,
-      "rbi": 20,
-      "sb": 11,
-      "games": 103,
-      "plateAppearances": 380
+      "rbi": 44,
+      "sb": 3,
+      "games": 140,
+      "plateAppearances": 510
     },
     "scoringStats": {
-      "obp": 0.347,
+      "obp": 0.29,
       "slg": 0.32,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 103,
-      "plateAppearances": 380,
-      "eraAdjustedOffense": 92.6
+      "games": 140,
+      "plateAppearances": 510,
+      "eraAdjustedOffense": 86
     },
     "pitchingScoringStats": null
   }

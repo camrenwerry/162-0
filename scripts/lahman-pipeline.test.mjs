@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import { aggregateAppearances, aggregateRows, buildCandidate, buildLahmanData, canCompleteRoster, curatePool, FIELD_POSITIONS, hitterStats, parseCsv, POSITION_ORDER, selectFeatured, validateGeneratedData, validatePool } from './lib/lahman-pipeline.mjs'
+import { runHistoricalAudits } from './lib/historical-audits.mjs'
 
 assert.deepEqual(parseCsv('id,name\n1,"Last, First"\n'), [{ id: '1', name: 'Last, First' }])
 
@@ -54,6 +55,8 @@ assert(dhOnly, 'ten DH games and sufficient plate appearances must create a hitt
 assert.equal(dhOnly.playerType, 'hitter')
 assert.deepEqual(dhOnly.eligiblePositions, ['DH'])
 assert.equal(dhOnly.hitter.plateAppearances, 169)
+assert.equal(dhOnly.selectionRole, 'H')
+assert.equal(dhOnly.selectionWorkload, 169)
 const belowDhThreshold = aggregateAppearances([appearanceRow('A', '5'), appearanceRow('B', '4')], teamByYear).get('player01:test:2001')
 assert.equal(candidateFrom(belowDhThreshold), null, 'fewer than ten DH games must not grant hitter eligibility')
 const nonDhBoundary = candidateFrom(new Map([['RF', 10], ['DH', 9]]))
@@ -97,9 +100,37 @@ assert.deepEqual(syntheticTwoWay.eligiblePositions, ['DH', 'SP'])
 assert.deepEqual(syntheticTwoWay.selectionEligiblePositions, ['DH', 'SP'])
 assert(syntheticTwoWay.hitter && syntheticTwoWay.pitcher, 'two-way candidates must preserve both stat records')
 
-const candidate = (year, score) => ({ franchiseId: 'test', decade: '2000s', playerId: 'player01', featuredSeason: year, selectionScore: score })
-assert.equal(selectFeatured([candidate(2001, .5), candidate(2004, .8)], { featuredSeasons: {} })[0].featuredSeason, 2004)
-assert.equal(selectFeatured([candidate(2001, .5), candidate(2004, .8)], { featuredSeasons: { 'test-2000s-player01': 2001 } })[0].featuredSeason, 2001)
+const candidate = (year, score, selectionWorkload = 100, selectionRole = 'H') => ({
+  franchiseId: 'test', decade: '2000s', playerId: 'player01', featuredSeason: year,
+  selectionScore: score, selectionRole, selectionWorkload,
+})
+const rawFormulaWinner = candidate(2001, .8)
+const exactGuardBoundary = candidate(2002, .8 * .98, 150)
+const guardedSelection = selectFeatured([rawFormulaWinner, exactGuardBoundary], { featuredSeasons: {} })[0]
+assert.equal(guardedSelection.featuredSeason, 2002, '98% score retention and 1.5x workload must apply inclusively')
+assert.deepEqual(guardedSelection.featuredSelection, {
+  rawWinnerSeason: 2001, rawWinnerScore: .8, rawWinnerRole: 'H', rawWinnerWorkload: 100,
+  formulaWinnerSeason: 2002, formulaWinnerScore: .8 * .98, formulaWinnerRole: 'H', formulaWinnerWorkload: 150,
+  workloadGuardApplied: true, manualOverrideSeason: null, manualOverrideApplied: false,
+})
+assert.equal(selectFeatured([rawFormulaWinner, candidate(2002, .7839, 150)], { featuredSeasons: {} })[0].featuredSeason, 2001, 'an alternative below 98% must not replace the raw winner')
+assert.equal(selectFeatured([rawFormulaWinner, candidate(2002, .79, 149.9)], { featuredSeasons: {} })[0].featuredSeason, 2001, 'an alternative below 1.5x workload must not replace the raw winner')
+assert.equal(selectFeatured([rawFormulaWinner, candidate(2002, .79, 160), candidate(2003, .792, 150)], { featuredSeasons: {} })[0].featuredSeason, 2003, 'the highest-scoring qualifying alternative must win')
+assert.equal(selectFeatured([
+  { ...rawFormulaWinner, playerType: 'twoWay' }, { ...candidate(2002, .79, 200, 'SP'), playerType: 'twoWay' },
+], { featuredSeasons: {} })[0].featuredSeason, 2001, 'a two-way pitcher half must not replace a two-way hitter winner')
+assert.equal(selectFeatured([candidate(2001, .8, 100, 'SP'), candidate(2002, .79, 200, 'RP')], { featuredSeasons: {} })[0].featuredSeason, 2001, 'SP and RP seasons must never cross workload tracks')
+const manuallySelected = selectFeatured([
+  rawFormulaWinner, candidate(2002, .792, 160), candidate(2004, .6, 700),
+], { featuredSeasons: { 'test-2000s-player01': 2004 } })[0]
+assert.equal(manuallySelected.featuredSeason, 2004, 'manual overrides must apply after the workload guard')
+assert.equal(manuallySelected.featuredSelection.formulaWinnerSeason, 2002)
+assert.equal(manuallySelected.featuredSelection.manualOverrideSeason, 2004)
+assert.equal(manuallySelected.featuredSelection.manualOverrideApplied, true)
+const redundantOverride = selectFeatured([
+  rawFormulaWinner, exactGuardBoundary,
+], { featuredSeasons: { 'test-2000s-player01': 2002 } })[0]
+assert.equal(redundantOverride.featuredSelection.manualOverrideApplied, false, 'an override matching the post-guard winner must not be reported as selection-changing')
 
 const poolCandidate = (id, score, eligiblePositions, playerType = 'hitter') => ({ id, name: id, selectionScore: score, eligiblePositions, playerType })
 const curationCandidates = [
@@ -157,7 +188,7 @@ const featuredCandidate = (playerId, poolId) => built.auditContext.selected.find
 const playableCard = (playerId, poolId) => built.pools[poolId]?.find((value) => value.playerId === playerId)
 
 const namedPositionCases = [
-  ['machama01', 'bal-2010s', 2018, ['SS'], 'Manny Machado — Baltimore 2010s'],
+  ['machama01', 'bal-2010s', 2016, ['3B', 'SS'], 'Manny Machado — Baltimore 2010s'],
   ['cabremi01', 'fla-2000s', 2006, ['3B'], 'Miguel Cabrera — Florida 2000s'],
   ['winfida01', 'sdp-1970s', 1979, ['RF'], 'Dave Winfield — San Diego 1970s'],
   ['thomeji01', 'cle-1990s', 1996, ['3B'], 'Jim Thome — Cleveland 1990s'],
@@ -170,6 +201,18 @@ for (const [playerId, poolId, year, positions, label] of namedPositionCases) {
   assert.equal(card.featuredSeason, year, `${label} must retain its featured season`)
   assert.deepEqual(card.eligiblePositions, positions, `${label} must use only its featured-season positions`)
 }
+
+const machadoBaltimore = featuredCandidate('machama01', 'bal-2010s')
+const machadoRawWinner = sourceCandidate('machama01', 'bal', '2010s', 2018)
+assert(machadoBaltimore)
+assert(machadoRawWinner)
+assert.deepEqual(machadoBaltimore.featuredSelection, {
+  rawWinnerSeason: 2018, rawWinnerScore: machadoRawWinner.selectionScore,
+  rawWinnerRole: 'H', rawWinnerWorkload: 413,
+  formulaWinnerSeason: 2018, formulaWinnerScore: machadoRawWinner.selectionScore,
+  formulaWinnerRole: 'H', formulaWinnerWorkload: 413,
+  workloadGuardApplied: false, manualOverrideSeason: 2016, manualOverrideApplied: true,
+}, 'the documented Machado override must apply after the raw workload-guard decision')
 
 const ohtani2018 = sourceCandidate('ohtansh01', 'ana', '2010s', 2018)
 assert(ohtani2018)
@@ -186,7 +229,16 @@ assert.deepEqual(ohtaniAngels2010s.eligiblePositions, ['DH', 'SP'])
 assert(ohtaniAngels2010s.visibleStats.ops && ohtaniAngels2010s.pitchingVisibleStats?.era)
 
 const ohtaniAngels2020s = playableCard('ohtansh01', 'ana-2020s')
+const ohtaniAngels2022 = sourceCandidate('ohtansh01', 'ana', '2020s', 2022)
+const ohtaniAngels2023 = sourceCandidate('ohtansh01', 'ana', '2020s', 2023)
+const featuredOhtaniAngels2020s = featuredCandidate('ohtansh01', 'ana-2020s')
 assert(ohtaniAngels2020s)
+assert(ohtaniAngels2022 && ohtaniAngels2023 && featuredOhtaniAngels2020s)
+assert.equal(ohtaniAngels2022.selectionRole, 'SP', 'Ohtani 2022 must use his pitching half for featured-season comparison')
+assert.equal(ohtaniAngels2023.selectionRole, 'H', 'Ohtani 2023 must use his hitting half for featured-season comparison')
+assert.equal(featuredOhtaniAngels2020s.featuredSelection.rawWinnerSeason, 2023)
+assert.equal(featuredOhtaniAngels2020s.featuredSelection.formulaWinnerSeason, 2023, 'Ohtani 2022 must not cross from the SP workload track into the 2023 hitter comparison')
+assert.equal(featuredOhtaniAngels2020s.featuredSelection.workloadGuardApplied, false)
 assert.equal(ohtaniAngels2020s.featuredSeason, 2023, 'DH offense must participate in the unchanged featured-season formula')
 assert.equal(ohtaniAngels2020s.playerType, 'twoWay')
 assert.deepEqual(ohtaniAngels2020s.eligiblePositions, ['DH', 'SP'])
@@ -240,6 +292,7 @@ for (const [id, cards] of Object.entries(built.pools)) {
   assert.equal(new Set(cards.map(({ id: cardId }) => cardId)).size, cards.length, `${id} must not contain duplicate cards`)
   assert(cards.every(({ eligiblePositions }) => !eligiblePositions.includes('OF')), `${id} must use split outfield positions only`)
   for (const card of cards) {
+    assert(!('selectionRole' in card) && !('selectionWorkload' in card) && !('featuredSelection' in card), `${card.id} must not serialize featured-season audit metadata`)
     const source = selectedById.get(card.id)
     assert(source, `${card.id} must map to one featured-season candidate`)
     assert.equal(new Set(card.eligiblePositions).size, card.eligiblePositions.length, `${card.id} must not contain duplicate positions`)
@@ -290,6 +343,36 @@ for (const [id, cards] of Object.entries(built.pools)) {
   assert(expandedCandidates.filter(({ id: cardId }) => !legacyIds.has(cardId)).every(({ selectionScore }) => selectionScore >= qualityFloor), `${id} expansion must respect its legacy-core quality floor`)
 }
 assert(Object.values(built.pools).some((cards) => cards.length === built.config.pool.targetCards), 'eligible pools must expand to the 36-card target')
+
+const historicalAudit = runHistoricalAudits(process.cwd())
+assert.equal(historicalAudit.summary.eligibleWorkloadGuardChanges, 113)
+assert.equal(historicalAudit.summary.workloadGuardChanges, 110)
+assert.equal(historicalAudit.summary.playableWorkloadGuardChanges, 46)
+assert.equal(historicalAudit.summary.eligibleManualOverrideChanges, 1)
+assert.equal(historicalAudit.summary.manualOverrideChanges, 1)
+assert.equal(historicalAudit.summary.playableManualOverrideChanges, 1)
+const machadoSeasonAudit = historicalAudit.featuredSeasons.find(({ player, franchise, decade }) => player === 'Manny Machado' && franchise === 'Baltimore Orioles' && decade === '2010s')
+assert(machadoSeasonAudit)
+assert.equal(machadoSeasonAudit.rawFormulaWinner, 2018)
+assert.equal(machadoSeasonAudit.finalSelectedSeason, 2016)
+assert.equal(machadoSeasonAudit.workloadGuardChanged, false)
+assert.equal(machadoSeasonAudit.manualOverrideChanged, true)
+assert(machadoSeasonAudit.scorePercentage >= 89 && machadoSeasonAudit.scorePercentage < 90)
+assert.equal(machadoSeasonAudit.workloadRatio, 1.685)
+assert.equal(machadoSeasonAudit.positionDifferences, 'SS → 3B, SS')
+assert.equal(machadoSeasonAudit.roleDifferences, 'none')
+const williamsSeasonAudit = historicalAudit.featuredSeasons.find(({ player, franchise, decade }) => player === 'Ted Williams' && franchise === 'Boston Red Sox' && decade === '1950s')
+assert(williamsSeasonAudit)
+assert.equal(williamsSeasonAudit.rawFormulaWinner, 1953)
+assert.equal(williamsSeasonAudit.finalSelectedSeason, 1957)
+assert.equal(williamsSeasonAudit.workloadGuardChanged, true)
+assert.equal(williamsSeasonAudit.manualOverrideChanged, false)
+assert(williamsSeasonAudit.scorePercentage >= 98 && williamsSeasonAudit.workloadRatio >= 1.5)
+for (const finding of historicalAudit.featuredSeasons) {
+  for (const field of ['rawFormulaWinner', 'finalSelectedSeason', 'workloadGuardChanged', 'manualOverrideChanged', 'scorePercentage', 'workloadRatio', 'positionDifferences', 'roleDifferences']) {
+    assert(Object.hasOwn(finding, field), `${finding.player}: featured-season audit must report ${field}`)
+  }
+}
 
 const checkedIn = validateGeneratedData(process.cwd())
 assert.deepEqual(checkedIn.errors, [])

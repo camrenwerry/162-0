@@ -1877,87 +1877,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "bos-1940s-culbele01",
-    "playerId": "culbele01",
-    "playerSlug": "culbele01",
-    "name": "Leon Culberson",
-    "franchiseId": "bos",
-    "teamAbbreviation": "BOS",
-    "teamDisplayName": "Boston Red Sox",
-    "historicalTeamName": "Boston Red Sox",
-    "team": "BOS",
-    "decade": "1940s",
-    "featuredSeason": 1946,
-    "eligiblePositions": [
-      "LF",
-      "CF",
-      "RF"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BOS"
-      ],
-      "sourcePlayerId": "culbele01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 39.365,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.799,
-      "hr": 3,
-      "avg": 0.313,
-      "obp": 0.369,
-      "slg": 0.43,
-      "rbi": 18,
-      "sb": 3,
-      "games": 59,
-      "plateAppearances": 204
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.799,
-      "hr": 3,
-      "avg": 0.313,
-      "obp": 0.369,
-      "slg": 0.43,
-      "rbi": 18,
-      "sb": 3,
-      "games": 59,
-      "plateAppearances": 204
-    },
-    "scoringStats": {
-      "obp": 0.369,
-      "slg": 0.43,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 59,
-      "plateAppearances": 204,
-      "eraAdjustedOffense": 115.9
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "bos-1940s-foxpe01",
     "playerId": "foxpe01",
     "playerSlug": "foxpe01",
@@ -2199,6 +2118,85 @@
       "games": 49,
       "reliefAppearances": 49,
       "eraAdjustedPitching": 155.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1940s-culbele01",
+    "playerId": "culbele01",
+    "playerSlug": "culbele01",
+    "name": "Leon Culberson",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1940s",
+    "featuredSeason": 1945,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "culbele01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.858,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.745,
+      "hr": 6,
+      "avg": 0.275,
+      "obp": 0.316,
+      "slg": 0.429,
+      "rbi": 45,
+      "sb": 4,
+      "games": 97,
+      "plateAppearances": 355
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.745,
+      "hr": 6,
+      "avg": 0.275,
+      "obp": 0.316,
+      "slg": 0.429,
+      "rbi": 45,
+      "sb": 4,
+      "games": 97,
+      "plateAppearances": 355
+    },
+    "scoringStats": {
+      "obp": 0.316,
+      "slg": 0.429,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 97,
+      "plateAppearances": 355,
+      "eraAdjustedOffense": 111.5
     },
     "pitchingScoringStats": null
   },

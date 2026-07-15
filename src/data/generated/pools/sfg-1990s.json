@@ -2484,7 +2484,7 @@
     "historicalTeamName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1990s",
-    "featuredSeason": 1997,
+    "featuredSeason": 1999,
     "eligiblePositions": [
       "SS"
     ],
@@ -2507,7 +2507,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 41.629,
+      "score": 40.995,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2515,40 +2515,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.821,
-      "hr": 5,
-      "avg": 0.275,
-      "obp": 0.321,
-      "slg": 0.5,
-      "rbi": 19,
-      "sb": 1,
-      "games": 46,
-      "plateAppearances": 113
+      "ops": 0.78,
+      "hr": 22,
+      "avg": 0.281,
+      "obp": 0.336,
+      "slg": 0.444,
+      "rbi": 80,
+      "sb": 2,
+      "games": 152,
+      "plateAppearances": 614
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.821,
-      "hr": 5,
-      "avg": 0.275,
-      "obp": 0.321,
-      "slg": 0.5,
-      "rbi": 19,
-      "sb": 1,
-      "games": 46,
-      "plateAppearances": 113
+      "ops": 0.78,
+      "hr": 22,
+      "avg": 0.281,
+      "obp": 0.336,
+      "slg": 0.444,
+      "rbi": 80,
+      "sb": 2,
+      "games": 152,
+      "plateAppearances": 614
     },
     "scoringStats": {
-      "obp": 0.321,
-      "slg": 0.5,
+      "obp": 0.336,
+      "slg": 0.444,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 46,
-      "plateAppearances": 113,
-      "eraAdjustedOffense": 110.5
+      "games": 152,
+      "plateAppearances": 614,
+      "eraAdjustedOffense": 101.1
     },
     "pitchingScoringStats": null
   },

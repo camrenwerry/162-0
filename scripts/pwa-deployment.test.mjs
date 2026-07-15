@@ -29,10 +29,26 @@ assert.deepEqual({
   scope: '/',
 })
 
-for (const icon of ['pwa-192x192.png', 'pwa-512x512.png', 'maskable-icon-512x512.png', 'apple-touch-icon-180x180.png', 'favicon.ico']) {
+const requiredIcons = {
+  'pwa-64x64.png': [64, 64],
+  'pwa-192x192.png': [192, 192],
+  'pwa-512x512.png': [512, 512],
+  'maskable-icon-512x512.png': [512, 512],
+  'apple-touch-icon-180x180.png': [180, 180],
+}
+
+for (const icon of [...Object.keys(requiredIcons), 'app-icon.svg', 'favicon.svg', 'favicon.ico']) {
   assert.ok(existsSync(join(dist, icon)), `${icon} is missing`)
 }
+for (const [icon, [expectedWidth, expectedHeight]] of Object.entries(requiredIcons)) {
+  const png = readFileSync(join(dist, icon))
+  assert.equal(png.toString('ascii', 1, 4), 'PNG', `${icon} is not a PNG`)
+  assert.equal(png.readUInt32BE(16), expectedWidth, `${icon} has the wrong width`)
+  assert.equal(png.readUInt32BE(20), expectedHeight, `${icon} has the wrong height`)
+}
 assert.ok(manifest.icons.some((icon) => icon.purpose === 'maskable' && icon.sizes === '512x512'))
+assert.ok(manifest.icons.some((icon) => icon.src === '/pwa-192x192.png' && icon.sizes === '192x192'))
+assert.ok(manifest.icons.some((icon) => icon.src === '/pwa-512x512.png' && icon.sizes === '512x512'))
 assert.ok(existsSync(join(dist, 'sw.js')), 'service worker is missing')
 assert.ok(existsSync(join(dist, 'registerSW.js')), 'service-worker registration is missing')
 assert.equal(readFileSync(join(dist, '_redirects'), 'utf8').trim(), '/* /index.html 200')
@@ -41,6 +57,7 @@ const index = readFileSync(join(dist, 'index.html'), 'utf8')
 for (const metadata of ['manifest.webmanifest', 'apple-touch-icon', 'apple-mobile-web-app-capable', 'apple-mobile-web-app-status-bar-style', 'apple-mobile-web-app-title']) {
   assert.ok(index.includes(metadata), `index is missing ${metadata}`)
 }
+assert.ok(index.includes('href="/favicon.svg"'), 'index is not using the dedicated small-size favicon')
 
 function files(directory) {
   return readdirSync(directory).flatMap((name) => {

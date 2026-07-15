@@ -1839,92 +1839,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "min-2020s-thielca01",
-    "playerId": "thielca01",
-    "playerSlug": "thielca01",
-    "name": "Caleb Thielbar",
-    "franchiseId": "min",
-    "teamAbbreviation": "MIN",
-    "teamDisplayName": "Minnesota Twins",
-    "historicalTeamName": "Minnesota Twins",
-    "team": "MIN",
-    "decade": "2020s",
-    "featuredSeason": 2023,
-    "eligiblePositions": [
-      "RP"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": "RP",
-    "bats": "R",
-    "throws": "L",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "MIN"
-      ],
-      "sourcePlayerId": "thielca01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 47.514,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "pitcher",
-    "type": "pitcher",
-    "visibleStats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.23,
-      "whip": 0.946,
-      "so": 36,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0,
-      "inningsPitched": 30.7,
-      "games": 36,
-      "starts": 0,
-      "reliefAppearances": 36,
-      "k9": 10.57,
-      "bb9": 1.76
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "eraPlus": null,
-      "era": 3.23,
-      "whip": 0.946,
-      "so": 36,
-      "wins": 3,
-      "saves": 0,
-      "sv": 0,
-      "inningsPitched": 30.7,
-      "games": 36,
-      "starts": 0,
-      "reliefAppearances": 36,
-      "k9": 10.57,
-      "bb9": 1.76
-    },
-    "scoringStats": {
-      "whip": 0.946,
-      "fip": null,
-      "inningsPitched": 30.7,
-      "strikeoutRate": 10.57,
-      "walkRate": 1.76,
-      "starts": 0,
-      "gamesStarted": 0,
-      "games": 36,
-      "reliefAppearances": 36,
-      "eraAdjustedPitching": 132.5
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "min-2020s-berrijo01",
     "playerId": "berrijo01",
     "playerSlug": "berrijo01",
@@ -2007,6 +1921,92 @@
       "games": 20,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 124.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-2020s-minayju01",
+    "playerId": "minayju01",
+    "playerSlug": "minayju01",
+    "name": "Juan Minaya",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIN"
+      ],
+      "sourcePlayerId": "minayju01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.948,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.175,
+      "so": 43,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 40,
+      "games": 29,
+      "starts": 0,
+      "reliefAppearances": 29,
+      "k9": 9.68,
+      "bb9": 4.5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.175,
+      "so": 43,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 40,
+      "games": 29,
+      "starts": 0,
+      "reliefAppearances": 29,
+      "k9": 9.68,
+      "bb9": 4.5
+    },
+    "scoringStats": {
+      "whip": 1.175,
+      "fip": null,
+      "inningsPitched": 40,
+      "strikeoutRate": 9.68,
+      "walkRate": 4.5,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 29,
+      "reliefAppearances": 29,
+      "eraAdjustedPitching": 174.6
     },
     "pitchingScoringStats": null
   },

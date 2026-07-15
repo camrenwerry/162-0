@@ -10,9 +10,10 @@ interface ResultsScreenProps {
   result: DraftResult
   onPlayAgain: () => void
   onHome: () => void
+  onGameUpdates: () => void
 }
 
-export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: ResultsScreenProps) {
+export default function ResultsScreen({ roster, result, onPlayAgain, onHome, onGameUpdates }: ResultsScreenProps) {
   const [shareStatus, setShareStatus] = useState<string | null>(null)
   const [isSharing, setIsSharing] = useState(false)
   const [fallbackShareText, setFallbackShareText] = useState<string | null>(null)
@@ -49,20 +50,28 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
       <div className="results-screen__glow" aria-hidden="true" />
       <div className="results-particles" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
       <div className="results-shell">
-        <GameMenu className="results-game-menu" confirmHome={false} onHome={onHome} onRestart={onPlayAgain} feedbackContext={feedbackContext} />
+        <GameMenu className="results-game-menu" confirmHome={false} onHome={onHome} onRestart={onPlayAgain} onGameUpdates={onGameUpdates} feedbackContext={feedbackContext} />
         <button className="results-home" type="button" onClick={onHome}>Home</button>
-        <DiamondDraftLogo className="results-logo" compact />
-        <span className="results-kicker">Season Complete</span>
         <section className="projected-record" aria-label={`Projected record ${result.wins} wins and ${result.losses} losses`}>
           <div className="results-trophy" aria-hidden="true">
-            <span>⚾</span>
             <svg viewBox="0 0 48 48"><path d="M14 7h20v10c0 8-4 14-10 14s-10-6-10-14V7Zm4 25h12M24 31v8M17 41h14M14 11H7v4c0 5 3 8 8 8m19-12h7v4c0 5-3 8-8 8" /></svg>
           </div>
+          <span className="results-kicker">Season Complete</span>
           <small>Projected record</small>
-          <strong>{result.wins}–{result.losses}</strong>
-          <b>{result.tierLabel}</b>
-          <span>Overall grade {result.overallGrade} · Team strength {result.overallScore}</span>
+          <h1>{result.wins}–{result.losses}</h1>
+          <div className="results-honors">
+            <div className="results-overall">
+              <span>Overall grade</span>
+              <strong>{result.overallGrade}</strong>
+              <small>Team strength {result.overallScore}</small>
+            </div>
+            <div className="results-tier">
+              <span>Season tier</span>
+              <strong>{result.tierLabel}</strong>
+            </div>
+          </div>
         </section>
+        <DiamondDraftLogo className="results-logo" compact />
         <section className="results-grades" aria-label="Team category grades">
           {grades.map(([label, key]) => (
             <div key={label}>
@@ -76,8 +85,17 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
           <p><span>Strongest category</span><strong>{categoryLabel[result.strongestCategory] ?? 'Overall'}</strong></p>
           <p><span>Weakest category</span><strong>{categoryLabel[result.weakestCategory] ?? 'Overall'}</strong></p>
         </section>
+        <div className="results-actions">
+          <button className="results-play-again" type="button" onClick={onPlayAgain}>Play Again</button>
+          <button type="button" aria-label="Share Diamond Draft result" aria-busy={isSharing} disabled={isSharing} onClick={handleShare}>
+            {isSharing ? 'Sharing…' : 'Share Result'}
+          </button>
+          <button type="button" onClick={onHome}>Home</button>
+          {feedbackUrl && <a href={feedbackUrl} target="_blank" rel="noreferrer">Send Feedback</a>}
+        </div>
+        <p className="results-share-status" role="status" aria-live="polite">{shareStatus}</p>
         <section className="results-roster">
-          <div className="results-roster__heading"><h1>Completed roster</h1><span>14 / 14</span></div>
+          <div className="results-roster__heading"><h2>Completed roster</h2><span>14 / 14</span></div>
           <div className="results-roster__list">
             {ROSTER_SLOTS.map((slot) => (
               <div key={slot.id}>
@@ -88,15 +106,6 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
             ))}
           </div>
         </section>
-        <div className="results-actions">
-          <button className="results-play-again" type="button" onClick={onPlayAgain}>Play Again</button>
-          <button type="button" aria-label="Share Diamond Draft result" aria-busy={isSharing} disabled={isSharing} onClick={handleShare}>
-            {isSharing ? 'Sharing…' : 'Share Result'}
-          </button>
-          <button type="button" onClick={onHome}>Home</button>
-          {feedbackUrl && <a href={feedbackUrl} target="_blank" rel="noreferrer">Send Feedback</a>}
-        </div>
-        <p className="results-share-status" role="status" aria-live="polite">{shareStatus}</p>
       </div>
       {fallbackShareText && <ShareFallbackDialog text={fallbackShareText} onClose={() => setFallbackShareText(null)} />}
     </main>

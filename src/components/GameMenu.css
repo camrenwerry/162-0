@@ -14,6 +14,7 @@
 .game-menu__popover svg { width: 1rem; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.35; }
 .game-menu__home svg { stroke: #48aaff; }
 .game-menu__restart svg { stroke: #e63946; }
+.game-menu__updates svg { stroke: #43b978; }
 .game-menu__feedback svg { stroke: #f5c542; }
 
 .game-confirmation { position: fixed; z-index: 100; display: flex; inset: 0; padding: calc(1rem + env(safe-area-inset-top)) calc(1rem + env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-left)); align-items: center; justify-content: center; background: rgb(0 0 0 / 76%); backdrop-filter: blur(7px); animation: game-menu-fade 160ms ease-out; }
@@ -27,6 +28,7 @@
 .game-confirmation section button:active { transform: scale(0.97); }
 .game-confirmation__cancel { border: 1px solid #3a4653; background: transparent; color: #96a1ae; }
 .game-confirmation__confirm { border: 1px solid #f0525c; background: linear-gradient(180deg, #e33c47, #a91420); box-shadow: 0 0.6rem 1.5rem rgb(208 32 45 / 18%); color: #fff; }
+.game-confirmation__confirm:active { filter: brightness(0.88); transform: translateY(1px) scale(0.98); }
 
 @keyframes game-menu-in { from { opacity: 0; transform: translateY(-0.25rem) scale(0.98); } }
 @keyframes game-menu-fade { from { opacity: 0; } }
@@ -39,4 +41,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .game-menu__popover, .game-confirmation, .game-confirmation > section { animation: none; }
+  .game-confirmation section button { transition: none; }
 }

@@ -51,7 +51,7 @@ interface DraftTimings {
   resultsReveal: number
 }
 
-const DEFAULT_TIMINGS: DraftTimings = { reducedRoll: 180, reducedCommit: 120, rosterEffect: 850, resultsReveal: 600 }
+const DEFAULT_TIMINGS: DraftTimings = { reducedRoll: 180, reducedCommit: 120, rosterEffect: 850, resultsReveal: 700 }
 const REQUIRED_COMBINATION_CAPACITY = ROSTER_SLOTS.length + 2
 
 type Listener = () => void

@@ -20,18 +20,19 @@ const FILTERS: PositionFilter[] = ['ALL', 'C', '1B', '2B', '3B', 'SS', 'OF', 'DH
 
 interface ClassicModeProps {
   onHome: () => void
+  onGameUpdates: () => void
 }
 
-export default function ClassicMode({ onHome }: ClassicModeProps) {
+export default function ClassicMode({ onHome, onGameUpdates }: ClassicModeProps) {
   const [readiness] = useState(() => checkProductionData())
   if (!readiness.ready) {
     if (import.meta.env.DEV) console.error('Diamond Draft data readiness failed:', readiness.issues)
     return <BetaRecovery title="Player data unavailable" message="Diamond Draft could not verify its historical player pools. Reload the game, or return home and try again shortly." onHome={onHome} />
   }
-  return <BetaErrorBoundary onHome={onHome}><ClassicDraft onHome={onHome} /></BetaErrorBoundary>
+  return <BetaErrorBoundary onHome={onHome}><ClassicDraft onHome={onHome} onGameUpdates={onGameUpdates} /></BetaErrorBoundary>
 }
 
-function ClassicDraft({ onHome }: ClassicModeProps) {
+function ClassicDraft({ onHome, onGameUpdates }: ClassicModeProps) {
   const [engine] = useState(() => new DraftEngine())
   const [showResults, setShowResults] = useState(false)
   const draft = useDraftEngine(engine)
@@ -48,8 +49,8 @@ function ClassicDraft({ onHome }: ClassicModeProps) {
 
   if (draft.complete && draft.result) {
     return showResults
-      ? <ResultsScreen roster={draft.roster} result={draft.result} onPlayAgain={restartGame} onHome={onHome} />
-      : <SeasonSimulation result={draft.result} onContinue={() => setShowResults(true)} onRestart={restartGame} onHome={leaveGame} />
+      ? <ResultsScreen roster={draft.roster} result={draft.result} onPlayAgain={restartGame} onHome={onHome} onGameUpdates={onGameUpdates} />
+      : <SeasonSimulation result={draft.result} onContinue={() => setShowResults(true)} onRestart={restartGame} onHome={leaveGame} onGameUpdates={onGameUpdates} />
   }
 
   if (draft.complete) {
@@ -68,7 +69,7 @@ function ClassicDraft({ onHome }: ClassicModeProps) {
           interactionsDisabled={draft.interactionsDisabled}
           onTeamReroll={() => engine.rerollTeam()}
           onEraReroll={() => engine.rerollEra()}
-          menu={<GameMenu onHome={leaveGame} onRestart={() => engine.restart()} feedbackContext={{ screen: 'draft', round: draft.round, team: draft.combination.team, decade: draft.combination.decade }} />}
+          menu={<GameMenu onHome={leaveGame} onRestart={() => engine.restart()} onGameUpdates={onGameUpdates} feedbackContext={{ screen: 'draft', round: draft.round, team: draft.combination.team, decade: draft.combination.decade }} />}
         />
         <div className="draft-workspace">
           <div className="draft-primary">

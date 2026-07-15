@@ -1,6 +1,13 @@
 {
   "schemaVersion": 1,
-  "featuredSeasons": {},
+  "featuredSeasons": {
+    "bal-2010s-machama01": {
+      "season": 2016,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "reason": "The formula prefers the higher-rate partial 2018 Baltimore stint; 2016 is the more representative Orioles card with 696 PA, 37 HR, 114 games at 3B, and 45 games at SS.",
+      "verified": true
+    }
+  },
   "positions": {},
   "names": {
     "griffke02": {

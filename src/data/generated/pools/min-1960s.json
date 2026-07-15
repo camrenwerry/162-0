@@ -2336,12 +2336,12 @@
     "playerSlug": "greenle01",
     "name": "Lenny Green",
     "franchiseId": "min",
-    "teamAbbreviation": "WSH",
-    "teamDisplayName": "Washington Senators",
-    "historicalTeamName": "Washington Senators",
-    "team": "WSH",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
     "decade": "1960s",
-    "featuredSeason": 1960,
+    "featuredSeason": 1962,
     "eligiblePositions": [
       "LF",
       "CF"
@@ -2357,7 +2357,7 @@
       "advancedStatsSourceUrls": [],
       "verifiedAt": "2026-07-14",
       "lahmanTeamIds": [
-        "WS1"
+        "MIN"
       ],
       "sourcePlayerId": "greenle01"
     },
@@ -2365,7 +2365,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 42.085,
+      "score": 41.524,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2373,40 +2373,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.814,
-      "hr": 5,
-      "avg": 0.294,
-      "obp": 0.383,
-      "slg": 0.43,
-      "rbi": 33,
-      "sb": 21,
-      "games": 127,
-      "plateAppearances": 387
+      "ops": 0.769,
+      "hr": 14,
+      "avg": 0.271,
+      "obp": 0.367,
+      "slg": 0.402,
+      "rbi": 63,
+      "sb": 8,
+      "games": 158,
+      "plateAppearances": 724
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.814,
-      "hr": 5,
-      "avg": 0.294,
-      "obp": 0.383,
-      "slg": 0.43,
-      "rbi": 33,
-      "sb": 21,
-      "games": 127,
-      "plateAppearances": 387
+      "ops": 0.769,
+      "hr": 14,
+      "avg": 0.271,
+      "obp": 0.367,
+      "slg": 0.402,
+      "rbi": 63,
+      "sb": 8,
+      "games": 158,
+      "plateAppearances": 724
     },
     "scoringStats": {
-      "obp": 0.383,
-      "slg": 0.43,
+      "obp": 0.367,
+      "slg": 0.402,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 127,
-      "plateAppearances": 387,
-      "eraAdjustedOffense": 113.8
+      "games": 158,
+      "plateAppearances": 724,
+      "eraAdjustedOffense": 107.1
     },
     "pitchingScoringStats": null
   },

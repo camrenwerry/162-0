@@ -1676,85 +1676,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "cin-2010s-bruceja01",
-    "playerId": "bruceja01",
-    "playerSlug": "bruceja01",
-    "name": "Jay Bruce",
-    "franchiseId": "cin",
-    "teamAbbreviation": "CIN",
-    "teamDisplayName": "Cincinnati Reds",
-    "historicalTeamName": "Cincinnati Reds",
-    "team": "CIN",
-    "decade": "2010s",
-    "featuredSeason": 2016,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "L",
-    "throws": "L",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "CIN"
-      ],
-      "sourcePlayerId": "bruceja01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 48.947,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.875,
-      "hr": 25,
-      "avg": 0.265,
-      "obp": 0.316,
-      "slg": 0.559,
-      "rbi": 80,
-      "sb": 4,
-      "games": 97,
-      "plateAppearances": 402
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.875,
-      "hr": 25,
-      "avg": 0.265,
-      "obp": 0.316,
-      "slg": 0.559,
-      "rbi": 80,
-      "sb": 4,
-      "games": 97,
-      "plateAppearances": 402
-    },
-    "scoringStats": {
-      "obp": 0.316,
-      "slg": 0.559,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 97,
-      "plateAppearances": 402,
-      "eraAdjustedOffense": 119.2
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "cin-2010s-latosma01",
     "playerId": "latosma01",
     "playerSlug": "latosma01",
@@ -1916,6 +1837,85 @@
       "games": 125,
       "plateAppearances": 472,
       "eraAdjustedOffense": 122.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-2010s-bruceja01",
+    "playerId": "bruceja01",
+    "playerSlug": "bruceja01",
+    "name": "Jay Bruce",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "bruceja01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.336,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.841,
+      "hr": 34,
+      "avg": 0.252,
+      "obp": 0.327,
+      "slg": 0.514,
+      "rbi": 99,
+      "sb": 9,
+      "games": 155,
+      "plateAppearances": 633
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.841,
+      "hr": 34,
+      "avg": 0.252,
+      "obp": 0.327,
+      "slg": 0.514,
+      "rbi": 99,
+      "sb": 9,
+      "games": 155,
+      "plateAppearances": 633
+    },
+    "scoringStats": {
+      "obp": 0.327,
+      "slg": 0.514,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 155,
+      "plateAppearances": 633,
+      "eraAdjustedOffense": 117.1
     },
     "pitchingScoringStats": null
   },

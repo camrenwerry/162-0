@@ -667,85 +667,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "mil-1990s-jahajo01",
-    "playerId": "jahajo01",
-    "playerSlug": "jahajo01",
-    "name": "John Jaha",
-    "franchiseId": "mil",
-    "teamAbbreviation": "MIL",
-    "teamDisplayName": "Milwaukee Brewers",
-    "historicalTeamName": "Milwaukee Brewers",
-    "team": "MIL",
-    "decade": "1990s",
-    "featuredSeason": 1995,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ML4"
-      ],
-      "sourcePlayerId": "jahajo01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 51.112,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.968,
-      "hr": 20,
-      "avg": 0.313,
-      "obp": 0.389,
-      "slg": 0.579,
-      "rbi": 65,
-      "sb": 2,
-      "games": 88,
-      "plateAppearances": 357
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.968,
-      "hr": 20,
-      "avg": 0.313,
-      "obp": 0.389,
-      "slg": 0.579,
-      "rbi": 65,
-      "sb": 2,
-      "games": 88,
-      "plateAppearances": 357
-    },
-    "scoringStats": {
-      "obp": 0.389,
-      "slg": 0.579,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 88,
-      "plateAppearances": 357,
-      "eraAdjustedOffense": 125.6
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "mil-1990s-austiji02",
     "playerId": "austiji02",
     "playerSlug": "austiji02",
@@ -828,6 +749,86 @@
       "games": 47,
       "reliefAppearances": 47,
       "eraAdjustedPitching": 212.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-1990s-jahajo01",
+    "playerId": "jahajo01",
+    "playerSlug": "jahajo01",
+    "name": "John Jaha",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "jahajo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.623,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.941,
+      "hr": 34,
+      "avg": 0.3,
+      "obp": 0.398,
+      "slg": 0.543,
+      "rbi": 118,
+      "sb": 3,
+      "games": 148,
+      "plateAppearances": 636
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.941,
+      "hr": 34,
+      "avg": 0.3,
+      "obp": 0.398,
+      "slg": 0.543,
+      "rbi": 118,
+      "sb": 3,
+      "games": 148,
+      "plateAppearances": 636
+    },
+    "scoringStats": {
+      "obp": 0.398,
+      "slg": 0.543,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 148,
+      "plateAppearances": 636,
+      "eraAdjustedOffense": 118.3
     },
     "pitchingScoringStats": null
   },

@@ -1280,7 +1280,7 @@
     "historicalTeamName": "Detroit Tigers",
     "team": "DET",
     "decade": "2000s",
-    "featuredSeason": 2002,
+    "featuredSeason": 2001,
     "eligiblePositions": [
       "SP"
     ],
@@ -1293,31 +1293,31 @@
     "visibleStats": {
       "war": null,
       "eraPlus": null,
-      "era": 3.18,
-      "whip": 1.192,
-      "so": 75,
-      "wins": 6,
+      "era": 4.08,
+      "whip": 1.321,
+      "so": 152,
+      "wins": 13,
       "saves": 0,
       "sv": 0,
-      "inningsPitched": 121.7,
-      "games": 17,
-      "starts": 17,
+      "inningsPitched": 229.3,
+      "games": 33,
+      "starts": 33,
       "reliefAppearances": 0,
-      "k9": 5.55,
-      "bb9": 2.44
+      "k9": 5.97,
+      "bb9": 2.67
     },
     "pitchingVisibleStats": null,
     "scoringStats": {
-      "whip": 1.192,
+      "whip": 1.321,
       "fip": null,
-      "inningsPitched": 121.7,
-      "strikeoutRate": 5.55,
-      "walkRate": 2.44,
-      "starts": 17,
-      "gamesStarted": 17,
-      "games": 17,
+      "inningsPitched": 229.3,
+      "strikeoutRate": 5.97,
+      "walkRate": 2.67,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 33,
       "reliefAppearances": 0,
-      "eraAdjustedPitching": 140.2
+      "eraAdjustedPitching": 109.6
     },
     "pitchingScoringStats": null
   },

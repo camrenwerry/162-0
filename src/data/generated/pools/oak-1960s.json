@@ -833,85 +833,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "oak-1960s-gentiji01",
-    "playerId": "gentiji01",
-    "playerSlug": "gentiji01",
-    "name": "Jim Gentile",
-    "franchiseId": "oak",
-    "teamAbbreviation": "KCA",
-    "teamDisplayName": "Kansas City Athletics",
-    "historicalTeamName": "Kansas City Athletics",
-    "team": "KCA",
-    "decade": "1960s",
-    "featuredSeason": 1965,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "L",
-    "throws": "L",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "KC1"
-      ],
-      "sourcePlayerId": "gentiji01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 45.781,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.847,
-      "hr": 10,
-      "avg": 0.246,
-      "obp": 0.305,
-      "slg": 0.542,
-      "rbi": 22,
-      "sb": 0,
-      "games": 38,
-      "plateAppearances": 128
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.847,
-      "hr": 10,
-      "avg": 0.246,
-      "obp": 0.305,
-      "slg": 0.542,
-      "rbi": 22,
-      "sb": 0,
-      "games": 38,
-      "plateAppearances": 128
-    },
-    "scoringStats": {
-      "obp": 0.305,
-      "slg": 0.542,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 38,
-      "plateAppearances": 128,
-      "eraAdjustedOffense": 124.8
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "oak-1960s-mondari01",
     "playerId": "mondari01",
     "playerSlug": "mondari01",
@@ -987,6 +908,85 @@
       "games": 148,
       "plateAppearances": 563,
       "eraAdjustedOffense": 122.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1960s-gentiji01",
+    "playerId": "gentiji01",
+    "playerSlug": "gentiji01",
+    "name": "Jim Gentile",
+    "franchiseId": "oak",
+    "teamAbbreviation": "KCA",
+    "teamDisplayName": "Kansas City Athletics",
+    "historicalTeamName": "Kansas City Athletics",
+    "team": "KCA",
+    "decade": "1960s",
+    "featuredSeason": 1964,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KC1"
+      ],
+      "sourcePlayerId": "gentiji01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.764,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.837,
+      "hr": 28,
+      "avg": 0.251,
+      "obp": 0.372,
+      "slg": 0.465,
+      "rbi": 71,
+      "sb": 0,
+      "games": 136,
+      "plateAppearances": 533
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.837,
+      "hr": 28,
+      "avg": 0.251,
+      "obp": 0.372,
+      "slg": 0.465,
+      "rbi": 71,
+      "sb": 0,
+      "games": 136,
+      "plateAppearances": 533
+    },
+    "scoringStats": {
+      "obp": 0.372,
+      "slg": 0.465,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 136,
+      "plateAppearances": 533,
+      "eraAdjustedOffense": 120.6
     },
     "pitchingScoringStats": null
   },

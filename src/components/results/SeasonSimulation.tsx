@@ -10,10 +10,11 @@ interface SeasonSimulationProps {
   onContinue: () => void
   onRestart: () => void
   onHome: () => void
+  onGameUpdates: () => void
   reducedMotion?: boolean
 }
 
-export default function SeasonSimulation({ result, onContinue, onRestart, onHome, reducedMotion }: SeasonSimulationProps) {
+export default function SeasonSimulation({ result, onContinue, onRestart, onHome, onGameUpdates, reducedMotion }: SeasonSimulationProps) {
   const prefersReducedMotion = reducedMotion ?? (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   const duration = getSimulationDuration(prefersReducedMotion)
   const reveal = getSimulationReveal(result)
@@ -80,7 +81,7 @@ export default function SeasonSimulation({ result, onContinue, onRestart, onHome
     <main className={`season-simulation${isRevealed ? ' is-revealed' : ''}${prefersReducedMotion ? ' is-reduced-motion' : ''}`} style={style}>
       <div className="season-simulation__lights" aria-hidden="true" />
       <div className="season-simulation__particles" aria-hidden="true"><i /><i /><i /><i /><i /></div>
-      <GameMenu className="season-simulation__menu" onHome={onHome} onRestart={onRestart} />
+      <GameMenu className="season-simulation__menu" onHome={onHome} onRestart={onRestart} onGameUpdates={onGameUpdates} />
       <button className="season-simulation__skip" type="button" disabled={isRevealed} onClick={skip}>Skip</button>
       <section className="season-simulation__shell" aria-live="polite">
         <DiamondDraftLogo className="season-simulation__logo" compact />

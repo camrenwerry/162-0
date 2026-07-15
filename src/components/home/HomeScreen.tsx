@@ -7,9 +7,10 @@ import './HomeScreen.css'
 
 interface HomeScreenProps {
   onPlay: () => void
+  onGameUpdates: () => void
 }
 
-export default function HomeScreen({ onPlay }: HomeScreenProps) {
+export default function HomeScreen({ onPlay, onGameUpdates }: HomeScreenProps) {
   const [showHowToPlay, setShowHowToPlay] = useState(false)
   const closeHowToPlay = useCallback(() => setShowHowToPlay(false), [])
 
@@ -30,6 +31,7 @@ export default function HomeScreen({ onPlay }: HomeScreenProps) {
           <button className="dd-home__how" type="button" onClick={() => setShowHowToPlay(true)}>
             <span aria-hidden="true">ⓘ</span> How to Play
           </button>
+          <button className="dd-home__updates" type="button" onClick={onGameUpdates}>Game Updates</button>
         </div>
       </section>
       {showHowToPlay && <HowToPlayModal onClose={closeHowToPlay} onReplayTutorial={() => { resetTutorial(); closeHowToPlay() }} />}

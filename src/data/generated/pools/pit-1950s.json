@@ -2446,10 +2446,10 @@
     "historicalTeamName": "Pittsburgh Pirates",
     "team": "PIT",
     "decade": "1950s",
-    "featuredSeason": 1950,
+    "featuredSeason": 1953,
     "eligiblePositions": [
-      "3B",
-      "SS"
+      "2B",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2470,7 +2470,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 37.314,
+      "score": 37.233,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2478,40 +2478,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.768,
-      "hr": 8,
-      "avg": 0.292,
-      "obp": 0.342,
-      "slg": 0.425,
-      "rbi": 32,
-      "sb": 7,
-      "games": 79,
-      "plateAppearances": 344
+      "ops": 0.762,
+      "hr": 7,
+      "avg": 0.294,
+      "obp": 0.361,
+      "slg": 0.401,
+      "rbi": 55,
+      "sb": 3,
+      "games": 149,
+      "plateAppearances": 654
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.768,
-      "hr": 8,
-      "avg": 0.292,
-      "obp": 0.342,
-      "slg": 0.425,
-      "rbi": 32,
-      "sb": 7,
-      "games": 79,
-      "plateAppearances": 344
+      "ops": 0.762,
+      "hr": 7,
+      "avg": 0.294,
+      "obp": 0.361,
+      "slg": 0.401,
+      "rbi": 55,
+      "sb": 3,
+      "games": 149,
+      "plateAppearances": 654
     },
     "scoringStats": {
-      "obp": 0.342,
-      "slg": 0.425,
+      "obp": 0.361,
+      "slg": 0.401,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 79,
-      "plateAppearances": 344,
-      "eraAdjustedOffense": 104.6
+      "games": 149,
+      "plateAppearances": 654,
+      "eraAdjustedOffense": 102.5
     },
     "pitchingScoringStats": null
   },
@@ -2682,85 +2682,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "pit-1950s-murtada01",
-    "playerId": "murtada01",
-    "playerSlug": "murtada01",
-    "name": "Danny Murtaugh",
-    "franchiseId": "pit",
-    "teamAbbreviation": "PIT",
-    "teamDisplayName": "Pittsburgh Pirates",
-    "historicalTeamName": "Pittsburgh Pirates",
-    "team": "PIT",
-    "decade": "1950s",
-    "featuredSeason": 1950,
-    "eligiblePositions": [
-      "2B"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PIT"
-      ],
-      "sourcePlayerId": "murtada01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 35.033,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.768,
-      "hr": 2,
-      "avg": 0.294,
-      "obp": 0.376,
-      "slg": 0.392,
-      "rbi": 37,
-      "sb": 2,
-      "games": 118,
-      "plateAppearances": 416
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.768,
-      "hr": 2,
-      "avg": 0.294,
-      "obp": 0.376,
-      "slg": 0.392,
-      "rbi": 37,
-      "sb": 2,
-      "games": 118,
-      "plateAppearances": 416
-    },
-    "scoringStats": {
-      "obp": 0.376,
-      "slg": 0.392,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 118,
-      "plateAppearances": 416,
-      "eraAdjustedOffense": 104.7
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "pit-1950s-portebo01",
     "playerId": "portebo01",
     "playerSlug": "portebo01",
@@ -2923,6 +2844,86 @@
       "games": 132,
       "plateAppearances": 533,
       "eraAdjustedOffense": 93.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1950s-stricge01",
+    "playerId": "stricge01",
+    "playerSlug": "stricge01",
+    "name": "George Strickland",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1950s",
+    "featuredSeason": 1951,
+    "eligiblePositions": [
+      "2B",
+      "SS"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "stricge01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 29.469,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.651,
+      "hr": 9,
+      "avg": 0.216,
+      "obp": 0.318,
+      "slg": 0.333,
+      "rbi": 47,
+      "sb": 4,
+      "games": 138,
+      "plateAppearances": 528
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.651,
+      "hr": 9,
+      "avg": 0.216,
+      "obp": 0.318,
+      "slg": 0.333,
+      "rbi": 47,
+      "sb": 4,
+      "games": 138,
+      "plateAppearances": 528
+    },
+    "scoringStats": {
+      "obp": 0.318,
+      "slg": 0.333,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 138,
+      "plateAppearances": 528,
+      "eraAdjustedOffense": 90.6
     },
     "pitchingScoringStats": null
   }

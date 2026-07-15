@@ -10,9 +10,10 @@
       <stop offset="1" stop-color="#a66e12"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="12" fill="#070c12"/>
-  <path d="M32 6 57 32 32 58 7 32Z" fill="url(#bg)" stroke="url(#gold)" stroke-width="3"/>
-  <circle cx="32" cy="18" r="8" fill="#f3f1eb" stroke="#aaa59a"/>
-  <path d="M28 12c3 3 3 9 0 12m8-12c-3 3-3 9 0 12" fill="none" stroke="#c22f38" stroke-width="1.2" stroke-dasharray="2 1"/>
-  <path d="m32 28 8 8-8 13-8-13Z" fill="url(#gold)" opacity=".92"/>
+  <rect width="64" height="64" rx="10" fill="#070c12"/>
+  <path d="M32 4 60 32 32 60 4 32Z" fill="url(#bg)" stroke="#765017" stroke-width="6"/>
+  <path d="M32 5 59 32 32 59 5 32Z" fill="none" stroke="url(#gold)" stroke-width="3"/>
+  <circle cx="32" cy="18" r="10" fill="#f3f1eb" stroke="#8f8a82" stroke-width="1.5"/>
+  <path d="M27 10c5 4 5 12 0 16m10-16c-5 4-5 12 0 16" fill="none" stroke="#c22f38" stroke-width="2"/>
+  <text x="32" y="48" fill="url(#gold)" stroke="#3f2a0a" stroke-width="1.5" paint-order="stroke fill" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-size="21" letter-spacing="1">DD</text>
 </svg>

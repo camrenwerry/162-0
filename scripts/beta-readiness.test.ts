@@ -4,6 +4,7 @@ import { checkProductionData } from '../src/game/DataReadiness'
 import { TeamPool } from '../src/game/TeamPool'
 import { buildFeedbackUrl, buildShareText, shareResult } from '../src/utils/betaActions'
 import { APP_VERSION } from '../src/config/beta'
+import { GAME_UPDATES } from '../src/config/gameUpdates'
 import { dismissTutorial, isTutorialDismissed, resetTutorial } from '../src/utils/onboarding'
 import type { DraftResult } from '../src/types/draft'
 
@@ -46,14 +47,37 @@ resetTutorial(storage)
 assert.equal(isTutorialDismissed(storage), false)
 
 const read = (path: string) => readFileSync(path, 'utf8')
+const expectedUpdateHighlights = [
+  'Expanded every historical player pool with more stars and depth.',
+  'Added proper DH and two-way player support including Shohei Ohtani.',
+  'Improved historical position eligibility using featured-season appearances.',
+  'Improved projected records for elite teams.',
+  '162–0 is now possible, but remains extremely rare.',
+  'Improved historical featured-season accuracy.',
+]
+assert.equal(APP_VERSION, '0.12.0')
+assert.equal(GAME_UPDATES[0]?.version, APP_VERSION)
+assert.equal(GAME_UPDATES[0]?.heading, "What's New")
+assert.deepEqual(GAME_UPDATES[0]?.highlights, expectedUpdateHighlights)
+const numericVersions = GAME_UPDATES.map(({ version }) => version.split('.').reduce((total, part) => total * 1000 + Number(part), 0))
+assert.deepEqual(numericVersions, [...numericVersions].sort((left, right) => right - left), 'game updates must remain newest-first')
+
+const app = read('src/App.tsx')
 const header = read('src/components/draft/DraftHeader.tsx')
 const home = read('src/components/home/HomeScreen.tsx')
+const menu = read('src/components/GameMenu.tsx')
+const updatesScreen = read('src/components/updates/GameUpdatesScreen.tsx')
 const recovery = read('src/components/BetaRecovery.tsx')
 const resultsScreen = read('src/components/draft/ResultsScreen.tsx')
 assert.match(header, /1 per game/i)
 assert.match(header, /Changes only the franchise/)
 assert.match(header, /Changes only the decade/)
 assert.match(home, /resetTutorial/)
+assert.match(app, /['"]\/updates['"]/, 'Game Updates must have an in-app route')
+assert.match(home, />Game Updates</, 'Game Updates must be discoverable from Home')
+assert.match(menu, />\s*Game Updates\s*</, 'Game Updates must be discoverable from the game menu')
+assert.match(updatesScreen, /<h1>Version \{update\.version\}<\/h1>/)
+assert.match(updatesScreen, /<h2>\{update\.heading\}<\/h2>/)
 assert.match(recovery, /componentDidCatch/)
 assert.match(recovery, /Restart Game/)
 assert.match(resultsScreen, /AbortError/)

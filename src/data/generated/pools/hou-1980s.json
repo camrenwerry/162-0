@@ -2021,7 +2021,7 @@
     "historicalTeamName": "Houston Astros",
     "team": "HOU",
     "decade": "1980s",
-    "featuredSeason": 1985,
+    "featuredSeason": 1987,
     "eligiblePositions": [
       "C"
     ],
@@ -2044,7 +2044,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 43.743,
+      "score": 43.529,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2052,40 +2052,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.813,
-      "hr": 8,
-      "avg": 0.28,
-      "obp": 0.363,
-      "slg": 0.45,
-      "rbi": 25,
+      "ops": 0.805,
+      "hr": 14,
+      "avg": 0.288,
+      "obp": 0.367,
+      "slg": 0.438,
+      "rbi": 63,
       "sb": 0,
-      "games": 65,
-      "plateAppearances": 216
+      "games": 125,
+      "plateAppearances": 441
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.813,
-      "hr": 8,
-      "avg": 0.28,
-      "obp": 0.363,
-      "slg": 0.45,
-      "rbi": 25,
+      "ops": 0.805,
+      "hr": 14,
+      "avg": 0.288,
+      "obp": 0.367,
+      "slg": 0.438,
+      "rbi": 63,
       "sb": 0,
-      "games": 65,
-      "plateAppearances": 216
+      "games": 125,
+      "plateAppearances": 441
     },
     "scoringStats": {
-      "obp": 0.363,
-      "slg": 0.45,
+      "obp": 0.367,
+      "slg": 0.438,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 65,
-      "plateAppearances": 216,
-      "eraAdjustedOffense": 117.3
+      "games": 125,
+      "plateAppearances": 441,
+      "eraAdjustedOffense": 110
     },
     "pitchingScoringStats": null
   },
@@ -2817,7 +2817,7 @@
     "historicalTeamName": "Houston Astros",
     "team": "HOU",
     "decade": "1980s",
-    "featuredSeason": 1981,
+    "featuredSeason": 1984,
     "eligiblePositions": [
       "SS"
     ],
@@ -2840,7 +2840,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 32.074,
+      "score": 31.633,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2848,40 +2848,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.688,
-      "hr": 4,
+      "ops": 0.651,
+      "hr": 6,
       "avg": 0.26,
       "obp": 0.286,
-      "slg": 0.402,
-      "rbi": 31,
-      "sb": 3,
-      "games": 87,
-      "plateAppearances": 354
+      "slg": 0.364,
+      "rbi": 60,
+      "sb": 7,
+      "games": 146,
+      "plateAppearances": 571
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.688,
-      "hr": 4,
+      "ops": 0.651,
+      "hr": 6,
       "avg": 0.26,
       "obp": 0.286,
-      "slg": 0.402,
-      "rbi": 31,
-      "sb": 3,
-      "games": 87,
-      "plateAppearances": 354
+      "slg": 0.364,
+      "rbi": 60,
+      "sb": 7,
+      "games": 146,
+      "plateAppearances": 571
     },
     "scoringStats": {
       "obp": 0.286,
-      "slg": 0.402,
+      "slg": 0.364,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 87,
-      "plateAppearances": 354,
-      "eraAdjustedOffense": 100.7
+      "games": 146,
+      "plateAppearances": 571,
+      "eraAdjustedOffense": 94.6
     },
     "pitchingScoringStats": null
   },

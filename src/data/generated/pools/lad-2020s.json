@@ -2282,11 +2282,10 @@
     "historicalTeamName": "Los Angeles Dodgers",
     "team": "LAD",
     "decade": "2020s",
-    "featuredSeason": 2020,
+    "featuredSeason": 2021,
     "eligiblePositions": [
       "LF",
-      "CF",
-      "DH"
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2307,7 +2306,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 49.273,
+      "score": 48.904,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2315,40 +2314,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.881,
-      "hr": 16,
-      "avg": 0.276,
-      "obp": 0.314,
-      "slg": 0.566,
-      "rbi": 34,
-      "sb": 2,
-      "games": 55,
-      "plateAppearances": 210
+      "ops": 0.892,
+      "hr": 21,
+      "avg": 0.297,
+      "obp": 0.355,
+      "slg": 0.536,
+      "rbi": 69,
+      "sb": 9,
+      "games": 117,
+      "plateAppearances": 422
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.881,
-      "hr": 16,
-      "avg": 0.276,
-      "obp": 0.314,
-      "slg": 0.566,
-      "rbi": 34,
-      "sb": 2,
-      "games": 55,
-      "plateAppearances": 210
+      "ops": 0.892,
+      "hr": 21,
+      "avg": 0.297,
+      "obp": 0.355,
+      "slg": 0.536,
+      "rbi": 69,
+      "sb": 9,
+      "games": 117,
+      "plateAppearances": 422
     },
     "scoringStats": {
-      "obp": 0.314,
-      "slg": 0.566,
+      "obp": 0.355,
+      "slg": 0.536,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 55,
-      "plateAppearances": 210,
-      "eraAdjustedOffense": 118
+      "games": 117,
+      "plateAppearances": 422,
+      "eraAdjustedOffense": 123
     },
     "pitchingScoringStats": null
   },

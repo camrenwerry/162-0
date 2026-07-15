@@ -595,85 +595,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "bal-2010s-machama01",
-    "playerId": "machama01",
-    "playerSlug": "machama01",
-    "name": "Manny Machado",
-    "franchiseId": "bal",
-    "teamAbbreviation": "BAL",
-    "teamDisplayName": "Baltimore Orioles",
-    "historicalTeamName": "Baltimore Orioles",
-    "team": "BAL",
-    "decade": "2010s",
-    "featuredSeason": 2018,
-    "eligiblePositions": [
-      "SS"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "BAL"
-      ],
-      "sourcePlayerId": "machama01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 59.095,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.963,
-      "hr": 24,
-      "avg": 0.315,
-      "obp": 0.387,
-      "slg": 0.575,
-      "rbi": 65,
-      "sb": 8,
-      "games": 96,
-      "plateAppearances": 413
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.963,
-      "hr": 24,
-      "avg": 0.315,
-      "obp": 0.387,
-      "slg": 0.575,
-      "rbi": 65,
-      "sb": 8,
-      "games": 96,
-      "plateAppearances": 413
-    },
-    "scoringStats": {
-      "obp": 0.387,
-      "slg": 0.575,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 96,
-      "plateAppearances": 413,
-      "eraAdjustedOffense": 131.2
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "bal-2010s-bleieri01",
     "playerId": "bleieri01",
     "playerSlug": "bleieri01",
@@ -842,6 +763,86 @@
       "games": 54,
       "reliefAppearances": 54,
       "eraAdjustedPitching": 168.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-2010s-machama01",
+    "playerId": "machama01",
+    "playerSlug": "machama01",
+    "name": "Manny Machado",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "eligiblePositions": [
+      "3B",
+      "SS"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "machama01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.134,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.876,
+      "hr": 37,
+      "avg": 0.294,
+      "obp": 0.343,
+      "slg": 0.533,
+      "rbi": 96,
+      "sb": 0,
+      "games": 157,
+      "plateAppearances": 696
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.876,
+      "hr": 37,
+      "avg": 0.294,
+      "obp": 0.343,
+      "slg": 0.533,
+      "rbi": 96,
+      "sb": 0,
+      "games": 157,
+      "plateAppearances": 696
+    },
+    "scoringStats": {
+      "obp": 0.343,
+      "slg": 0.533,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 157,
+      "plateAppearances": 696,
+      "eraAdjustedOffense": 117.8
     },
     "pitchingScoringStats": null
   },

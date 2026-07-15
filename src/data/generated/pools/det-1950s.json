@@ -2216,7 +2216,7 @@
     "historicalTeamName": "Detroit Tigers",
     "team": "DET",
     "decade": "1950s",
-    "featuredSeason": 1952,
+    "featuredSeason": 1950,
     "eligiblePositions": [
       "2B"
     ],
@@ -2239,7 +2239,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 39.981,
+      "score": 39.696,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2247,40 +2247,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.809,
-      "hr": 4,
-      "avg": 0.283,
-      "obp": 0.379,
-      "slg": 0.43,
-      "rbi": 20,
-      "sb": 1,
-      "games": 75,
-      "plateAppearances": 323
+      "ops": 0.777,
+      "hr": 13,
+      "avg": 0.277,
+      "obp": 0.376,
+      "slg": 0.401,
+      "rbi": 75,
+      "sb": 2,
+      "games": 157,
+      "plateAppearances": 729
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.809,
-      "hr": 4,
-      "avg": 0.283,
-      "obp": 0.379,
-      "slg": 0.43,
-      "rbi": 20,
-      "sb": 1,
-      "games": 75,
-      "plateAppearances": 323
+      "ops": 0.777,
+      "hr": 13,
+      "avg": 0.277,
+      "obp": 0.376,
+      "slg": 0.401,
+      "rbi": 75,
+      "sb": 2,
+      "games": 157,
+      "plateAppearances": 729
     },
     "scoringStats": {
-      "obp": 0.379,
-      "slg": 0.43,
+      "obp": 0.376,
+      "slg": 0.401,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 75,
-      "plateAppearances": 323,
-      "eraAdjustedOffense": 116.9
+      "games": 157,
+      "plateAppearances": 729,
+      "eraAdjustedOffense": 102.8
     },
     "pitchingScoringStats": null
   },
@@ -2453,7 +2453,7 @@
     "historicalTeamName": "Detroit Tigers",
     "team": "DET",
     "decade": "1950s",
-    "featuredSeason": 1956,
+    "featuredSeason": 1958,
     "eligiblePositions": [
       "2B"
     ],
@@ -2476,7 +2476,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 38.545,
+      "score": 37.792,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2484,40 +2484,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.789,
-      "hr": 7,
-      "avg": 0.281,
-      "obp": 0.354,
-      "slg": 0.434,
-      "rbi": 45,
+      "ops": 0.72,
+      "hr": 14,
+      "avg": 0.269,
+      "obp": 0.328,
+      "slg": 0.392,
+      "rbi": 75,
       "sb": 6,
-      "games": 102,
-      "plateAppearances": 422
+      "games": 154,
+      "plateAppearances": 681
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.789,
-      "hr": 7,
-      "avg": 0.281,
-      "obp": 0.354,
-      "slg": 0.434,
-      "rbi": 45,
+      "ops": 0.72,
+      "hr": 14,
+      "avg": 0.269,
+      "obp": 0.328,
+      "slg": 0.392,
+      "rbi": 75,
       "sb": 6,
-      "games": 102,
-      "plateAppearances": 422
+      "games": 154,
+      "plateAppearances": 681
     },
     "scoringStats": {
-      "obp": 0.354,
-      "slg": 0.434,
+      "obp": 0.328,
+      "slg": 0.392,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 102,
-      "plateAppearances": 422,
-      "eraAdjustedOffense": 107.6
+      "games": 154,
+      "plateAppearances": 681,
+      "eraAdjustedOffense": 102.3
     },
     "pitchingScoringStats": null
   },

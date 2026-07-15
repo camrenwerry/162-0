@@ -1631,7 +1631,7 @@
     "historicalTeamName": "Chicago White Sox",
     "team": "CHW",
     "decade": "2000s",
-    "featuredSeason": 2002,
+    "featuredSeason": 2001,
     "eligiblePositions": [
       "2B"
     ],
@@ -1644,27 +1644,27 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.836,
-      "hr": 9,
-      "avg": 0.299,
-      "obp": 0.39,
-      "slg": 0.446,
-      "rbi": 48,
-      "sb": 20,
-      "games": 96,
-      "plateAppearances": 411
+      "ops": 0.804,
+      "hr": 20,
+      "avg": 0.267,
+      "obp": 0.337,
+      "slg": 0.466,
+      "rbi": 65,
+      "sb": 23,
+      "games": 152,
+      "plateAppearances": 691
     },
     "pitchingVisibleStats": null,
     "scoringStats": {
-      "obp": 0.39,
-      "slg": 0.446,
+      "obp": 0.337,
+      "slg": 0.466,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 96,
-      "plateAppearances": 411,
-      "eraAdjustedOffense": 110.7
+      "games": 152,
+      "plateAppearances": 691,
+      "eraAdjustedOffense": 105.5
     },
     "pitchingScoringStats": null
   },

@@ -2881,8 +2881,9 @@
     "historicalTeamName": "Toronto Blue Jays",
     "team": "TOR",
     "decade": "1990s",
-    "featuredSeason": 1999,
+    "featuredSeason": 1995,
     "eligiblePositions": [
+      "3B",
       "SS"
     ],
     "isTwoWay": false,
@@ -2904,7 +2905,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 32.379,
+      "score": 32.179,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2912,40 +2913,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.786,
-      "hr": 2,
-      "avg": 0.292,
-      "obp": 0.37,
-      "slg": 0.416,
-      "rbi": 12,
+      "ops": 0.72,
+      "hr": 10,
+      "avg": 0.243,
+      "obp": 0.322,
+      "slg": 0.398,
+      "rbi": 42,
       "sb": 4,
-      "games": 38,
-      "plateAppearances": 173
+      "games": 111,
+      "plateAppearances": 425
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.786,
-      "hr": 2,
-      "avg": 0.292,
-      "obp": 0.37,
-      "slg": 0.416,
-      "rbi": 12,
+      "ops": 0.72,
+      "hr": 10,
+      "avg": 0.243,
+      "obp": 0.322,
+      "slg": 0.398,
+      "rbi": 42,
       "sb": 4,
-      "games": 38,
-      "plateAppearances": 173
+      "games": 111,
+      "plateAppearances": 425
     },
     "scoringStats": {
-      "obp": 0.37,
-      "slg": 0.416,
+      "obp": 0.322,
+      "slg": 0.398,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 38,
-      "plateAppearances": 173,
-      "eraAdjustedOffense": 99.9
+      "games": 111,
+      "plateAppearances": 425,
+      "eraAdjustedOffense": 93.4
     },
     "pitchingScoringStats": null
   }

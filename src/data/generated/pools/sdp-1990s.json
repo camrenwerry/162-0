@@ -2907,9 +2907,8 @@
     "historicalTeamName": "San Diego Padres",
     "team": "SDP",
     "decade": "1990s",
-    "featuredSeason": 1993,
+    "featuredSeason": 1991,
     "eligiblePositions": [
-      "1B",
       "2B",
       "3B"
     ],
@@ -2932,7 +2931,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 36.415,
+      "score": 36.203,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -2940,40 +2939,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.768,
-      "hr": 7,
-      "avg": 0.25,
-      "obp": 0.338,
-      "slg": 0.43,
-      "rbi": 31,
-      "sb": 2,
-      "games": 96,
-      "plateAppearances": 231
+      "ops": 0.722,
+      "hr": 11,
+      "avg": 0.228,
+      "obp": 0.334,
+      "slg": 0.388,
+      "rbi": 42,
+      "sb": 8,
+      "games": 97,
+      "plateAppearances": 363
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.768,
-      "hr": 7,
-      "avg": 0.25,
-      "obp": 0.338,
-      "slg": 0.43,
-      "rbi": 31,
-      "sb": 2,
-      "games": 96,
-      "plateAppearances": 231
+      "ops": 0.722,
+      "hr": 11,
+      "avg": 0.228,
+      "obp": 0.334,
+      "slg": 0.388,
+      "rbi": 42,
+      "sb": 8,
+      "games": 97,
+      "plateAppearances": 363
     },
     "scoringStats": {
-      "obp": 0.338,
-      "slg": 0.43,
+      "obp": 0.334,
+      "slg": 0.388,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 96,
-      "plateAppearances": 231,
-      "eraAdjustedOffense": 105.7
+      "games": 97,
+      "plateAppearances": 363,
+      "eraAdjustedOffense": 104.7
     },
     "pitchingScoringStats": null
   }

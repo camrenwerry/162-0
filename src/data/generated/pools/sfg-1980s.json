@@ -924,9 +924,8 @@
     "historicalTeamName": "San Francisco Giants",
     "team": "SFG",
     "decade": "1980s",
-    "featuredSeason": 1981,
+    "featuredSeason": 1984,
     "eligiblePositions": [
-      "1B",
       "LF",
       "CF"
     ],
@@ -949,7 +948,7 @@
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 52.448,
+      "score": 51.401,
       "formulaVersion": "lahman-1.0"
     },
     "playerType": "hitter",
@@ -957,40 +956,40 @@
     "visibleStats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.907,
-      "hr": 4,
-      "avg": 0.307,
-      "obp": 0.371,
-      "slg": 0.535,
-      "rbi": 26,
-      "sb": 4,
-      "games": 37,
-      "plateAppearances": 141
+      "ops": 0.841,
+      "hr": 21,
+      "avg": 0.302,
+      "obp": 0.357,
+      "slg": 0.484,
+      "rbi": 86,
+      "sb": 17,
+      "games": 136,
+      "plateAppearances": 566
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
       "opsPlus": null,
-      "ops": 0.907,
-      "hr": 4,
-      "avg": 0.307,
-      "obp": 0.371,
-      "slg": 0.535,
-      "rbi": 26,
-      "sb": 4,
-      "games": 37,
-      "plateAppearances": 141
+      "ops": 0.841,
+      "hr": 21,
+      "avg": 0.302,
+      "obp": 0.357,
+      "slg": 0.484,
+      "rbi": 86,
+      "sb": 17,
+      "games": 136,
+      "plateAppearances": 566
     },
     "scoringStats": {
-      "obp": 0.371,
-      "slg": 0.535,
+      "obp": 0.357,
+      "slg": 0.484,
       "wrcPlus": null,
       "offensiveValue": null,
       "defensiveValue": null,
       "baserunningValue": null,
-      "games": 37,
-      "plateAppearances": 141,
-      "eraAdjustedOffense": 132.7
+      "games": 136,
+      "plateAppearances": 566,
+      "eraAdjustedOffense": 122.2
     },
     "pitchingScoringStats": null
   },

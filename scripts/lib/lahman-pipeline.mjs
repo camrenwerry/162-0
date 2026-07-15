@@ -5,6 +5,8 @@ export const FIELD_POSITIONS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF']
 export const POSITION_ORDER = [...FIELD_POSITIONS, 'DH', 'SP', 'RP']
 const FIELD_POSITION_SET = new Set(FIELD_POSITIONS)
 const HITTER_POSITIONS = new Set([...FIELD_POSITIONS, 'DH'])
+const FEATURED_SCORE_RETENTION = .98
+const FEATURED_WORKLOAD_MULTIPLIER = 1.5
 const ROUND = (value, places = 3) => Number.isFinite(value) ? Number(value.toFixed(places)) : null
 const NUMBER = (value) => value === '' || value === undefined ? 0 : Number(value)
 const decadeFor = (year) => `${Math.floor(year / 10) * 10}s`
@@ -272,6 +274,8 @@ export function buildCandidate({ player, franchise, year, batting, pitching, pos
   const team = primaryTeam(batting ?? pitching)
   const hitterSelection = isHitter ? hitterScore(hitter, selectionEligiblePositions, config.selection.hitter) : 0
   const pitcherSelection = isPitcher ? Math.max(...pitcherPositions.map((role) => pitcherScore(pitcher, role, config.selection[role === 'SP' ? 'starter' : 'reliever']))) : 0
+  const selectionRole = isHitter && hitterSelection >= pitcherSelection ? 'H' : primaryPitchingRole
+  const selectionWorkload = selectionRole === 'H' ? hitter.plateAppearances : pitcher.inningsPitched
   return {
     id: cardId, playerId: player.playerID, playerSlug: player.bbrefID || player.playerID,
     name: overrideValue(overrides.names?.[player.playerID], 'name') ?? [player.nameFirst, player.nameLast].filter(Boolean).join(' '),
@@ -280,7 +284,7 @@ export function buildCandidate({ player, franchise, year, batting, pitching, pos
     team: team?.teamIDBR || team?.teamID || franchise.team, decade: decadeFor(year), featuredSeason: year,
     eligiblePositions, isTwoWay: playerType === 'twoWay', pitchingRole: primaryPitchingRole,
     bats: player.bats || null, throws: player.throws || null, playerType, type: playerType === 'pitcher' ? 'pitcher' : 'hitter',
-    hitter, pitcher, selectionScore: Math.max(hitterSelection, pitcherSelection),
+    hitter, pitcher, selectionScore: Math.max(hitterSelection, pitcherSelection), selectionRole, selectionWorkload,
     sourceTeamIds: [...(batting ?? pitching).teamRows.keys()].sort(compareText),
     sourceNote: overrides.notes?.[cardId] ?? '', manualPositionOverride: Boolean(overrides.positions?.[cardId]),
     sourceEligiblePositions, selectionEligiblePositions, selectionSourceEligiblePositions,
@@ -298,7 +302,31 @@ export function selectFeatured(candidates, overrides) {
   return [...groups].map(([key, seasons]) => {
     const requested = overrideValue(overrides.featuredSeasons?.[key], 'season')
     const sorted = seasons.sort((a, b) => b.selectionScore - a.selectionScore || b.featuredSeason - a.featuredSeason)
-    return requested ? sorted.find(({ featuredSeason }) => featuredSeason === requested) ?? sorted[0] : sorted[0]
+    const rawWinner = sorted[0]
+    const formulaWinner = sorted.find((candidate, index) => (
+      index > 0
+      && candidate.selectionRole === rawWinner.selectionRole
+      && candidate.selectionScore >= rawWinner.selectionScore * FEATURED_SCORE_RETENTION
+      && candidate.selectionWorkload >= rawWinner.selectionWorkload * FEATURED_WORKLOAD_MULTIPLIER
+    )) ?? rawWinner
+    const overrideWinner = requested ? sorted.find(({ featuredSeason }) => featuredSeason === requested) : null
+    const chosen = overrideWinner ?? formulaWinner
+    return {
+      ...chosen,
+      featuredSelection: {
+        rawWinnerSeason: rawWinner.featuredSeason,
+        rawWinnerScore: rawWinner.selectionScore,
+        rawWinnerRole: rawWinner.selectionRole,
+        rawWinnerWorkload: rawWinner.selectionWorkload,
+        formulaWinnerSeason: formulaWinner.featuredSeason,
+        formulaWinnerScore: formulaWinner.selectionScore,
+        formulaWinnerRole: formulaWinner.selectionRole,
+        formulaWinnerWorkload: formulaWinner.selectionWorkload,
+        workloadGuardApplied: formulaWinner !== rawWinner,
+        manualOverrideSeason: requested ?? null,
+        manualOverrideApplied: Boolean(overrideWinner && overrideWinner !== formulaWinner),
+      },
+    }
   })
 }
 

@@ -7,6 +7,7 @@ import { getFeedbackUrl, type FeedbackContext } from '../utils/betaActions'
 export interface GameMenuProps {
   onHome: () => void
   onRestart: () => void
+  onGameUpdates: () => void
   confirmHome?: boolean
   className?: string
   feedbackContext?: FeedbackContext
@@ -14,7 +15,7 @@ export interface GameMenuProps {
 
 type Confirmation = 'home' | 'restart' | null
 
-export default function GameMenu({ onHome, onRestart, confirmHome = true, className, feedbackContext }: GameMenuProps) {
+export default function GameMenu({ onHome, onRestart, onGameUpdates, confirmHome = true, className, feedbackContext }: GameMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [confirmation, setConfirmation] = useState<Confirmation>(null)
   const confirmationRef = useRef<HTMLElement>(null)
@@ -42,6 +43,11 @@ export default function GameMenu({ onHome, onRestart, confirmHome = true, classN
   const chooseRestart = () => {
     setIsOpen(false)
     setConfirmation('restart')
+  }
+
+  const chooseGameUpdates = () => {
+    setIsOpen(false)
+    onGameUpdates()
   }
 
   const confirmAction = () => {
@@ -76,6 +82,10 @@ export default function GameMenu({ onHome, onRestart, confirmHome = true, classN
             <button className="game-menu__restart" type="button" onClick={chooseRestart}>
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.7 7.2A6.2 6.2 0 1 0 16 12M15.7 3.8v3.7h-3.8" /></svg>
               Restart Game
+            </button>
+            <button className="game-menu__updates" type="button" onClick={chooseGameUpdates}>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3h12v14H4Zm3 4h6M7 10h6M7 13h4" /></svg>
+              Game Updates
             </button>
             {feedbackUrl && <a className="game-menu__feedback" href={feedbackUrl} target="_blank" rel="noreferrer">
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4h12v9H9l-4 3v-3H4Z" /></svg>

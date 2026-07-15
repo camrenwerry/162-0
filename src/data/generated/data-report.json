@@ -1716,11 +1716,11 @@
         "2B": 5,
         "3B": 6,
         "SS": 4,
-        "LF": 6,
+        "LF": 5,
         "CF": 5,
-        "RF": 3,
+        "RF": 4,
         "SP": 5,
-        "RP": 9
+        "RP": 10
       },
       "rosterCompletable": true
     },
@@ -2276,7 +2276,7 @@
         "C": 3,
         "1B": 7,
         "2B": 3,
-        "3B": 3,
+        "3B": 4,
         "SS": 5,
         "LF": 6,
         "CF": 3,
@@ -2625,9 +2625,9 @@
         "2B": 3,
         "3B": 4,
         "SS": 5,
-        "LF": 5,
+        "LF": 4,
         "CF": 5,
-        "RF": 7,
+        "RF": 6,
         "SP": 9,
         "RP": 3
       },
@@ -3517,10 +3517,10 @@
       "coverage": {
         "C": 3,
         "1B": 3,
-        "2B": 5,
+        "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 5,
         "RF": 3,
         "SP": 14,
@@ -3658,7 +3658,7 @@
         "C": 3,
         "1B": 5,
         "2B": 4,
-        "3B": 3,
+        "3B": 4,
         "SS": 3,
         "LF": 9,
         "CF": 5,
@@ -5136,12 +5136,12 @@
         "RP: 0 choices; target is 3"
       ],
       "coverage": {
-        "C": 5,
+        "C": 4,
         "1B": 4,
         "2B": 4,
         "3B": 4,
         "SS": 4,
-        "LF": 6,
+        "LF": 7,
         "CF": 4,
         "RF": 8,
         "SP": 11,
@@ -5182,18 +5182,19 @@
       ],
       "warnings": [
         "C: 2 choices; target is 3",
+        "1B: 2 choices; target is 3",
         "SP: 4 choices; target is 5",
         "RP: 0 choices; target is 3"
       ],
       "coverage": {
         "C": 2,
-        "1B": 3,
-        "2B": 7,
+        "1B": 2,
+        "2B": 8,
         "3B": 3,
         "SS": 5,
-        "LF": 3,
+        "LF": 4,
         "CF": 4,
-        "RF": 4,
+        "RF": 5,
         "SP": 4,
         "RP": 0
       },
@@ -5408,7 +5409,7 @@
       "coverage": {
         "C": 3,
         "1B": 3,
-        "2B": 4,
+        "2B": 3,
         "3B": 5,
         "SS": 4,
         "LF": 7,
@@ -6793,7 +6794,7 @@
         "SS": 3,
         "LF": 4,
         "CF": 8,
-        "RF": 6,
+        "RF": 5,
         "SP": 10,
         "RP": 3
       },
@@ -7330,7 +7331,7 @@
       "coverage": {
         "C": 4,
         "1B": 5,
-        "2B": 3,
+        "2B": 4,
         "3B": 7,
         "SS": 3,
         "LF": 7,
@@ -7393,9 +7394,9 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 4,
-        "RF": 4,
+        "RF": 5,
         "SP": 9,
         "RP": 5
       },
@@ -7601,7 +7602,7 @@
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 8,
+        "1B": 7,
         "2B": 4,
         "3B": 7,
         "SS": 4,
@@ -7925,7 +7926,7 @@
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 6,
+        "1B": 5,
         "2B": 4,
         "3B": 5,
         "SS": 4,
@@ -8056,9 +8057,7 @@
       "cards": 36,
       "candidateCards": 50,
       "errors": [],
-      "warnings": [
-        "RP: 2 choices; target is 3"
-      ],
+      "warnings": [],
       "coverage": {
         "C": 7,
         "1B": 5,
@@ -8069,7 +8068,7 @@
         "CF": 5,
         "RF": 6,
         "SP": 8,
-        "RP": 2
+        "RP": 3
       },
       "rosterCompletable": true
     },
@@ -8481,13 +8480,13 @@
       "coverage": {
         "C": 3,
         "1B": 3,
-        "2B": 5,
+        "2B": 4,
         "3B": 5,
         "SS": 3,
         "LF": 8,
         "CF": 4,
         "RF": 10,
-        "SP": 10,
+        "SP": 11,
         "RP": 5
       },
       "rosterCompletable": true
@@ -8664,7 +8663,7 @@
         "C": 3,
         "1B": 4,
         "2B": 4,
-        "3B": 4,
+        "3B": 5,
         "SS": 3,
         "LF": 4,
         "CF": 3,
@@ -8727,10 +8726,10 @@
         "3B": 4,
         "SS": 3,
         "LF": 3,
-        "CF": 4,
-        "RF": 5,
+        "CF": 3,
+        "RF": 4,
         "SP": 7,
-        "RP": 9
+        "RP": 10
       },
       "rosterCompletable": true
     },
@@ -8968,9 +8967,9 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 6,
+        "LF": 5,
         "CF": 3,
-        "RF": 4,
+        "RF": 5,
         "SP": 5,
         "RP": 10
       },
@@ -10239,12 +10238,12 @@
         "RP: 0 choices; target is 3"
       ],
       "coverage": {
-        "C": 5,
+        "C": 4,
         "1B": 4,
         "2B": 4,
         "3B": 4,
         "SS": 4,
-        "LF": 6,
+        "LF": 7,
         "CF": 4,
         "RF": 8,
         "SP": 11,
@@ -10285,18 +10284,19 @@
       ],
       "warnings": [
         "C: 2 choices; target is 3",
+        "1B: 2 choices; target is 3",
         "SP: 4 choices; target is 5",
         "RP: 0 choices; target is 3"
       ],
       "coverage": {
         "C": 2,
-        "1B": 3,
-        "2B": 7,
+        "1B": 2,
+        "2B": 8,
         "3B": 3,
         "SS": 5,
-        "LF": 3,
+        "LF": 4,
         "CF": 4,
-        "RF": 4,
+        "RF": 5,
         "SP": 4,
         "RP": 0
       },
@@ -11112,7 +11112,7 @@
     }
   ],
   "overrides": {
-    "featuredSeasons": 0,
+    "featuredSeasons": 1,
     "positions": 0,
     "names": 1,
     "notes": 0,

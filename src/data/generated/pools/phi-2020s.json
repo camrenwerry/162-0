@@ -2005,86 +2005,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "phi-2020s-bohmal01",
-    "playerId": "bohmal01",
-    "playerSlug": "bohmal01",
-    "name": "Alec Bohm",
-    "franchiseId": "phi",
-    "teamAbbreviation": "PHI",
-    "teamDisplayName": "Philadelphia Phillies",
-    "historicalTeamName": "Philadelphia Phillies",
-    "team": "PHI",
-    "decade": "2020s",
-    "featuredSeason": 2020,
-    "eligiblePositions": [
-      "1B",
-      "3B"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "PHI"
-      ],
-      "sourcePlayerId": "bohmal01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 42.085,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.881,
-      "hr": 4,
-      "avg": 0.338,
-      "obp": 0.4,
-      "slg": 0.481,
-      "rbi": 23,
-      "sb": 1,
-      "games": 44,
-      "plateAppearances": 180
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.881,
-      "hr": 4,
-      "avg": 0.338,
-      "obp": 0.4,
-      "slg": 0.481,
-      "rbi": 23,
-      "sb": 1,
-      "games": 44,
-      "plateAppearances": 180
-    },
-    "scoringStats": {
-      "obp": 0.4,
-      "slg": 0.481,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 44,
-      "plateAppearances": 180,
-      "eraAdjustedOffense": 118.1
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "phi-2020s-brogdco01",
     "playerId": "brogdco01",
     "playerSlug": "brogdco01",
@@ -2167,6 +2087,86 @@
       "games": 47,
       "reliefAppearances": 47,
       "eraAdjustedPitching": 123.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-2020s-bohmal01",
+    "playerId": "bohmal01",
+    "playerSlug": "bohmal01",
+    "name": "Alec Bohm",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "bohmal01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.432,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.779,
+      "hr": 15,
+      "avg": 0.28,
+      "obp": 0.332,
+      "slg": 0.448,
+      "rbi": 97,
+      "sb": 5,
+      "games": 143,
+      "plateAppearances": 606
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.779,
+      "hr": 15,
+      "avg": 0.28,
+      "obp": 0.332,
+      "slg": 0.448,
+      "rbi": 97,
+      "sb": 5,
+      "games": 143,
+      "plateAppearances": 606
+    },
+    "scoringStats": {
+      "obp": 0.332,
+      "slg": 0.448,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 143,
+      "plateAppearances": 606,
+      "eraAdjustedOffense": 108.4
     },
     "pitchingScoringStats": null
   },
