@@ -269,7 +269,8 @@
     "featuredSeason": 1986,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -466,7 +467,8 @@
     "decade": "1980s",
     "featuredSeason": 1987,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -566,7 +568,8 @@
     "decade": "1980s",
     "featuredSeason": 1985,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -763,7 +766,8 @@
     "featuredSeason": 1980,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -914,7 +918,8 @@
     "eligiblePositions": [
       "C",
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1066,7 +1071,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1115,7 +1121,8 @@
     "featuredSeason": 1987,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1405,6 +1412,209 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-1980s-gumpeda01",
+    "playerId": "gumpeda01",
+    "playerSlug": "gumpeda01",
+    "name": "Dave Gumpert",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.128,
+      "so": 14,
+      "wins": 0,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 44.3,
+      "games": 26,
+      "starts": 0,
+      "reliefAppearances": 26,
+      "k9": 2.84,
+      "bb9": 1.42
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.128,
+      "fip": null,
+      "inningsPitched": 44.3,
+      "strikeoutRate": 2.84,
+      "walkRate": 1.42,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 26,
+      "reliefAppearances": 26,
+      "eraAdjustedPitching": 153.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1980s-ujdurje01",
+    "playerId": "ujdurje01",
+    "playerSlug": "ujdurje01",
+    "name": "Jerry Ujdur",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.69,
+      "whip": 1.23,
+      "so": 86,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 178,
+      "games": 25,
+      "starts": 25,
+      "reliefAppearances": 0,
+      "k9": 4.35,
+      "bb9": 3.49
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.23,
+      "fip": null,
+      "inningsPitched": 178,
+      "strikeoutRate": 4.35,
+      "walkRate": 3.49,
+      "starts": 25,
+      "gamesStarted": 25,
+      "games": 25,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 110.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1980s-wilsogl01",
+    "playerId": "wilsogl01",
+    "playerSlug": "wilsogl01",
+    "name": "Glenn Wilson",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.778,
+      "hr": 12,
+      "avg": 0.292,
+      "obp": 0.322,
+      "slg": 0.457,
+      "rbi": 34,
+      "sb": 2,
+      "games": 84,
+      "plateAppearances": 342
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.322,
+      "slg": 0.457,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 84,
+      "plateAppearances": 342,
+      "eraAdjustedOffense": 106.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1980s-kuntzru01",
+    "playerId": "kuntzru01",
+    "playerSlug": "kuntzru01",
+    "name": "Rusty Kuntz",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.807,
+      "hr": 2,
+      "avg": 0.286,
+      "obp": 0.393,
+      "slg": 0.414,
+      "rbi": 22,
+      "sb": 2,
+      "games": 84,
+      "plateAppearances": 168
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.393,
+      "slg": 0.414,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 84,
+      "plateAppearances": 168,
+      "eraAdjustedOffense": 111.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-1980s-johnsho01",
     "playerId": "johnsho01",
     "playerSlug": "johnsho01",
@@ -1417,7 +1627,8 @@
     "decade": "1980s",
     "featuredSeason": 1982,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

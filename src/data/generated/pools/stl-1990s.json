@@ -919,6 +919,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "stl-1990s-mathetj01",
+    "playerId": "mathetj01",
+    "playerSlug": "mathet.01",
+    "name": "T. J. Mathews",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "mathetj01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.623,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.15,
+      "whip": 1.283,
+      "so": 46,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 46,
+      "games": 40,
+      "starts": 0,
+      "reliefAppearances": 40,
+      "k9": 9,
+      "bb9": 3.52
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.15,
+      "whip": 1.283,
+      "so": 46,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 46,
+      "games": 40,
+      "starts": 0,
+      "reliefAppearances": 40,
+      "k9": 9,
+      "bb9": 3.52
+    },
+    "scoringStats": {
+      "whip": 1.283,
+      "fip": null,
+      "inningsPitched": 46,
+      "strikeoutRate": 9,
+      "walkRate": 3.52,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 40,
+      "reliefAppearances": 40,
+      "eraAdjustedPitching": 195.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "stl-1990s-eckerde01",
+    "playerId": "eckerde01",
+    "playerSlug": "eckerde01",
+    "name": "Dennis Eckersley",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "eckerde01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.343,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.3,
+      "whip": 1.183,
+      "so": 49,
+      "wins": 0,
+      "saves": 30,
+      "sv": 30,
+      "inningsPitched": 60,
+      "games": 63,
+      "starts": 0,
+      "reliefAppearances": 63,
+      "k9": 7.35,
+      "bb9": 0.9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.3,
+      "whip": 1.183,
+      "so": 49,
+      "wins": 0,
+      "saves": 30,
+      "sv": 30,
+      "inningsPitched": 60,
+      "games": 63,
+      "starts": 0,
+      "reliefAppearances": 63,
+      "k9": 7.35,
+      "bb9": 0.9
+    },
+    "scoringStats": {
+      "whip": 1.183,
+      "fip": null,
+      "inningsPitched": 60,
+      "strikeoutRate": 7.35,
+      "walkRate": 0.9,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 63,
+      "reliefAppearances": 63,
+      "eraAdjustedPitching": 127.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "stl-1990s-benesan01",
     "playerId": "benesan01",
     "playerSlug": "benesan01",
@@ -1256,6 +1428,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "stl-1990s-honeyri01",
+    "playerId": "honeyri01",
+    "playerSlug": "honeyri01",
+    "name": "Rick Honeycutt",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "honeyri01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.113,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.85,
+      "whip": 1.035,
+      "so": 30,
+      "wins": 2,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 47.3,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 5.7,
+      "bb9": 1.33
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.85,
+      "whip": 1.035,
+      "so": 30,
+      "wins": 2,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 47.3,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 5.7,
+      "bb9": 1.33
+    },
+    "scoringStats": {
+      "whip": 1.035,
+      "fip": null,
+      "inningsPitched": 47.3,
+      "strikeoutRate": 5.7,
+      "walkRate": 1.33,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 61,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 147.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "stl-1990s-penage01",
     "playerId": "penage01",
     "playerSlug": "penage01",
@@ -1331,6 +1589,92 @@
       "games": 62,
       "plateAppearances": 236,
       "eraAdjustedOffense": 126.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "stl-1990s-aceveju01",
+    "playerId": "aceveju01",
+    "playerSlug": "aceveju01",
+    "name": "Juan Acevedo",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "aceveju01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.053,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.139,
+      "so": 56,
+      "wins": 8,
+      "saves": 15,
+      "sv": 15,
+      "inningsPitched": 98.3,
+      "games": 50,
+      "starts": 9,
+      "reliefAppearances": 41,
+      "k9": 5.13,
+      "bb9": 2.65
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.139,
+      "so": 56,
+      "wins": 8,
+      "saves": 15,
+      "sv": 15,
+      "inningsPitched": 98.3,
+      "games": 50,
+      "starts": 9,
+      "reliefAppearances": 41,
+      "k9": 5.13,
+      "bb9": 2.65
+    },
+    "scoringStats": {
+      "whip": 1.139,
+      "fip": null,
+      "inningsPitched": 98.3,
+      "strikeoutRate": 5.13,
+      "walkRate": 2.65,
+      "starts": 9,
+      "gamesStarted": 9,
+      "games": 50,
+      "reliefAppearances": 41,
+      "eraAdjustedPitching": 165
     },
     "pitchingScoringStats": null
   },

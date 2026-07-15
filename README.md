@@ -83,9 +83,10 @@ Hitter cards support AVG, OBP, SLG, OPS, HR, RBI, SB, games, and plate appearanc
 Eligibility is derived from the featured season only:
 
 - Fielding position: at least 10 appearances
+- DH: at least 10 appearances recorded in Lahman `G_dh`
 - SP: at least 10 starts
 - RP: at least 15 derived relief appearances
-- DH: supplied at draft time to hitters under the game rule; it is not stored as a fielding position
+- Source-qualified DH is retained in `eligiblePositions`; other hitters may still use the DH slot under the game rule
 
 `FieldingOFsplit.csv` is preferred for LF/CF/RF. Generic OF records never grant all three outfield positions. Normal pitchers cannot fill DH; verified two-way seasons can expose both batting and pitching views.
 
@@ -122,7 +123,7 @@ npm run data:lahman:report
 npm run data:lahman:all
 ```
 
-The build scans every franchise/decade from the 1920s through the 2020s, creates all eligible season candidates, selects one featured season per player/franchise/decade, and curates 24–40 cards. Coverage targets are three players per fielding position, five SP, and three RP. Multi-position cards can satisfy multiple depth targets but the final roster-feasibility check uses distinct-player bipartite matching.
+The build scans every franchise/decade from the 1920s through the 2020s, creates all eligible season candidates, selects one featured season per player/franchise/decade, and curates 24–40 cards toward a target of 36. Coverage targets are three players per fielding position, five SP, and three RP. Curation preserves the legacy coverage-sized core, then adds the highest-ranked remaining cards without dropping below either that core's weakest selection score or the configured expansion-quality floor; it can continue beyond 36 only when roster completion requires it, and never beyond 40. Multi-position cards can satisfy multiple depth targets but the final roster-feasibility check uses distinct-player bipartite matching.
 
 Pools with blocking identity, season, stat, duplicate, size, pitching-depth, or roster-feasibility errors are written to the report and omitted from the runtime index. Historically thin but still playable depth is a warning. Run the report command for exact counts by decade, franchise, exclusion reason, and position.
 

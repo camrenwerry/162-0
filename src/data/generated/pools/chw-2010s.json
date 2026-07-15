@@ -442,7 +442,8 @@
     "decade": "2010s",
     "featuredSeason": 2014,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -681,6 +682,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-2010s-roberda08",
+    "playerId": "roberda08",
+    "playerSlug": "roberda08",
+    "name": "David Robertson",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "roberda08"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.173,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.41,
+      "whip": 0.932,
+      "so": 86,
+      "wins": 6,
+      "saves": 34,
+      "sv": 34,
+      "inningsPitched": 63.3,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 12.22,
+      "bb9": 1.85
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.41,
+      "whip": 0.932,
+      "so": 86,
+      "wins": 6,
+      "saves": 34,
+      "sv": 34,
+      "inningsPitched": 63.3,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 12.22,
+      "bb9": 1.85
+    },
+    "scoringStats": {
+      "whip": 0.932,
+      "fip": null,
+      "inningsPitched": 63.3,
+      "strikeoutRate": 12.22,
+      "walkRate": 1.85,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 60,
+      "reliefAppearances": 60,
+      "eraAdjustedPitching": 117.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-2010s-konerpa01",
     "playerId": "konerpa01",
     "playerSlug": "konerpa01",
@@ -693,7 +780,8 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -756,6 +844,264 @@
       "games": 149,
       "plateAppearances": 631,
       "eraAdjustedOffense": 133.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-2010s-alberma01",
+    "playerId": "alberma01",
+    "playerSlug": "alberma01",
+    "name": "Matt Albers",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "alberma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.702,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.21,
+      "whip": 1.071,
+      "so": 28,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 37.3,
+      "games": 30,
+      "starts": 0,
+      "reliefAppearances": 30,
+      "k9": 6.75,
+      "bb9": 2.17
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.21,
+      "whip": 1.071,
+      "so": 28,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 37.3,
+      "games": 30,
+      "starts": 0,
+      "reliefAppearances": 30,
+      "k9": 6.75,
+      "bb9": 2.17
+    },
+    "scoringStats": {
+      "whip": 1.071,
+      "fip": null,
+      "inningsPitched": 37.3,
+      "strikeoutRate": 6.75,
+      "walkRate": 2.17,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 30,
+      "reliefAppearances": 30,
+      "eraAdjustedPitching": 332.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-2010s-thornma01",
+    "playerId": "thornma01",
+    "playerSlug": "thornma01",
+    "name": "Matt Thornton",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "thornma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.228,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.67,
+      "whip": 1.005,
+      "so": 81,
+      "wins": 5,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 60.7,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 12.02,
+      "bb9": 2.97
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.67,
+      "whip": 1.005,
+      "so": 81,
+      "wins": 5,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 60.7,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 12.02,
+      "bb9": 2.97
+    },
+    "scoringStats": {
+      "whip": 1.005,
+      "fip": null,
+      "inningsPitched": 60.7,
+      "strikeoutRate": 12.02,
+      "walkRate": 2.97,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 61,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 155
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-2010s-putnaza01",
+    "playerId": "putnaza01",
+    "playerSlug": "putnaza01",
+    "name": "Zach Putnam",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "putnaza01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.017,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.98,
+      "whip": 1.079,
+      "so": 46,
+      "wins": 5,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 54.7,
+      "games": 49,
+      "starts": 0,
+      "reliefAppearances": 49,
+      "k9": 7.57,
+      "bb9": 3.29
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.98,
+      "whip": 1.079,
+      "so": 46,
+      "wins": 5,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 54.7,
+      "games": 49,
+      "starts": 0,
+      "reliefAppearances": 49,
+      "k9": 7.57,
+      "bb9": 3.29
+    },
+    "scoringStats": {
+      "whip": 1.079,
+      "fip": null,
+      "inningsPitched": 54.7,
+      "strikeoutRate": 7.57,
+      "walkRate": 3.29,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 49,
+      "reliefAppearances": 49,
+      "eraAdjustedPitching": 193.1
     },
     "pitchingScoringStats": null
   },
@@ -1669,7 +2015,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2071,7 +2418,8 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2308,7 +2656,8 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

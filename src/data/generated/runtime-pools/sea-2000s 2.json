@@ -616,6 +616,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-2000s-guarded01",
+    "playerId": "guarded01",
+    "playerSlug": "guarded01",
+    "name": "Eddie Guardado",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 1.189,
+      "so": 48,
+      "wins": 2,
+      "saves": 36,
+      "sv": 36,
+      "inningsPitched": 56.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 7.67,
+      "bb9": 2.4
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.189,
+      "fip": null,
+      "inningsPitched": 56.3,
+      "strikeoutRate": 7.67,
+      "walkRate": 2.4,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 58,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 160.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-2000s-moyerja01",
     "playerId": "moyerja01",
     "playerSlug": "moyerja01",
@@ -664,6 +716,54 @@
       "games": 34,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 134.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-2000s-martied01",
+    "playerId": "martied01",
+    "playerSlug": "martied01",
+    "name": "Edgar Martinez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.002,
+      "hr": 37,
+      "avg": 0.324,
+      "obp": 0.423,
+      "slg": 0.579,
+      "rbi": 145,
+      "sb": 3,
+      "games": 153,
+      "plateAppearances": 665
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.423,
+      "slg": 0.579,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 153,
+      "plateAppearances": 665,
+      "eraAdjustedOffense": 126.5
     },
     "pitchingScoringStats": null
   },
@@ -720,6 +820,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-2000s-nelsoje01",
+    "playerId": "nelsoje01",
+    "playerSlug": "nelsoje01",
+    "name": "Jeff Nelson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.76,
+      "whip": 1.133,
+      "so": 88,
+      "wins": 4,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 65.3,
+      "games": 69,
+      "starts": 0,
+      "reliefAppearances": 69,
+      "k9": 12.12,
+      "bb9": 6.06
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.133,
+      "fip": null,
+      "inningsPitched": 65.3,
+      "strikeoutRate": 12.12,
+      "walkRate": 6.06,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 69,
+      "reliefAppearances": 69,
+      "eraAdjustedPitching": 162.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-2000s-sexsori01",
     "playerId": "sexsori01",
     "playerSlug": "sexsori01",
@@ -764,6 +916,58 @@
       "games": 156,
       "plateAppearances": 656,
       "eraAdjustedOffense": 120.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-2000s-charlno01",
+    "playerId": "charlno01",
+    "playerSlug": "charlno01",
+    "name": "Norm Charlton",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "B",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.02,
+      "whip": 0.986,
+      "so": 48,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 47.7,
+      "games": 44,
+      "starts": 0,
+      "reliefAppearances": 44,
+      "k9": 9.06,
+      "bb9": 2.08
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 0.986,
+      "fip": null,
+      "inningsPitched": 47.7,
+      "strikeoutRate": 9.06,
+      "walkRate": 2.08,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 44,
+      "reliefAppearances": 44,
+      "eraAdjustedPitching": 148.1
     },
     "pitchingScoringStats": null
   },
@@ -1505,7 +1709,8 @@
     "featuredSeason": 2007,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -1686,6 +1686,86 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "oak-1950s-skizalo01",
+    "playerId": "skizalo01",
+    "playerSlug": "skizalo01",
+    "name": "Lou Skizas",
+    "franchiseId": "oak",
+    "teamAbbreviation": "KCA",
+    "teamDisplayName": "Kansas City Athletics",
+    "historicalTeamName": "Kansas City Athletics",
+    "team": "KCA",
+    "decade": "1950s",
+    "featuredSeason": 1956,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KC1"
+      ],
+      "sourcePlayerId": "skizalo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.132,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.831,
+      "hr": 11,
+      "avg": 0.316,
+      "obp": 0.346,
+      "slg": 0.485,
+      "rbi": 39,
+      "sb": 3,
+      "games": 83,
+      "plateAppearances": 317
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.831,
+      "hr": 11,
+      "avg": 0.316,
+      "obp": 0.346,
+      "slg": 0.485,
+      "rbi": 39,
+      "sb": 3,
+      "games": 83,
+      "plateAppearances": 317
+    },
+    "scoringStats": {
+      "obp": 0.346,
+      "slg": 0.485,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 83,
+      "plateAppearances": 317,
+      "eraAdjustedOffense": 113.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "oak-1950s-zoldasa01",
     "playerId": "zoldasa01",
     "playerSlug": "zoldasa01",
@@ -1768,6 +1848,86 @@
       "games": 26,
       "reliefAppearances": 8,
       "eraAdjustedPitching": 130.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1950s-herzowh01",
+    "playerId": "herzowh01",
+    "playerSlug": "herzowh01",
+    "name": "Whitey Herzog",
+    "franchiseId": "oak",
+    "teamAbbreviation": "KCA",
+    "teamDisplayName": "Kansas City Athletics",
+    "historicalTeamName": "Kansas City Athletics",
+    "team": "KCA",
+    "decade": "1950s",
+    "featuredSeason": 1959,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KC1"
+      ],
+      "sourcePlayerId": "herzowh01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.282,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.836,
+      "hr": 1,
+      "avg": 0.293,
+      "obp": 0.446,
+      "slg": 0.39,
+      "rbi": 9,
+      "sb": 1,
+      "games": 38,
+      "plateAppearances": 158
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.836,
+      "hr": 1,
+      "avg": 0.293,
+      "obp": 0.446,
+      "slg": 0.39,
+      "rbi": 9,
+      "sb": 1,
+      "games": 38,
+      "plateAppearances": 158
+    },
+    "scoringStats": {
+      "obp": 0.446,
+      "slg": 0.39,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 38,
+      "plateAppearances": 158,
+      "eraAdjustedOffense": 118.5
     },
     "pitchingScoringStats": null
   },
@@ -1855,6 +2015,178 @@
       "games": 46,
       "reliefAppearances": 15,
       "eraAdjustedPitching": 113.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1950s-garvene01",
+    "playerId": "garvene01",
+    "playerSlug": "garvene01",
+    "name": "Ned Garver",
+    "franchiseId": "oak",
+    "teamAbbreviation": "KCA",
+    "teamDisplayName": "Kansas City Athletics",
+    "historicalTeamName": "Kansas City Athletics",
+    "team": "KCA",
+    "decade": "1950s",
+    "featuredSeason": 1959,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KC1"
+      ],
+      "sourcePlayerId": "garvene01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.86,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.71,
+      "whip": 1.272,
+      "so": 61,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 201.3,
+      "games": 32,
+      "starts": 30,
+      "reliefAppearances": 2,
+      "k9": 2.73,
+      "bb9": 1.88
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.71,
+      "whip": 1.272,
+      "so": 61,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 201.3,
+      "games": 32,
+      "starts": 30,
+      "reliefAppearances": 2,
+      "k9": 2.73,
+      "bb9": 1.88
+    },
+    "scoringStats": {
+      "whip": 1.272,
+      "fip": null,
+      "inningsPitched": 201.3,
+      "strikeoutRate": 2.73,
+      "walkRate": 1.88,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 32,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 104.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1950s-terryra01",
+    "playerId": "terryra01",
+    "playerSlug": "terryra01",
+    "name": "Ralph Terry",
+    "franchiseId": "oak",
+    "teamAbbreviation": "KCA",
+    "teamDisplayName": "Kansas City Athletics",
+    "historicalTeamName": "Kansas City Athletics",
+    "team": "KCA",
+    "decade": "1950s",
+    "featuredSeason": 1958,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KC1"
+      ],
+      "sourcePlayerId": "terryra01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.562,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.24,
+      "whip": 1.283,
+      "so": 134,
+      "wins": 11,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 216.7,
+      "games": 40,
+      "starts": 33,
+      "reliefAppearances": 7,
+      "k9": 5.57,
+      "bb9": 2.53
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.24,
+      "whip": 1.283,
+      "so": 134,
+      "wins": 11,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 216.7,
+      "games": 40,
+      "starts": 33,
+      "reliefAppearances": 7,
+      "k9": 5.57,
+      "bb9": 2.53
+    },
+    "scoringStats": {
+      "whip": 1.283,
+      "fip": null,
+      "inningsPitched": 216.7,
+      "strikeoutRate": 5.57,
+      "walkRate": 2.53,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 40,
+      "reliefAppearances": 7,
+      "eraAdjustedPitching": 89
     },
     "pitchingScoringStats": null
   },

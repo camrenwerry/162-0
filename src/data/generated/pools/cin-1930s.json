@@ -2219,6 +2219,332 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cin-1930s-roettwa01",
+    "playerId": "roettwa01",
+    "playerSlug": "roettwa01",
+    "name": "Wally Roettger",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "1930s",
+    "featuredSeason": 1931,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "roettwa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.128,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.849,
+      "hr": 1,
+      "avg": 0.351,
+      "obp": 0.378,
+      "slg": 0.47,
+      "rbi": 20,
+      "sb": 1,
+      "games": 44,
+      "plateAppearances": 198
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.849,
+      "hr": 1,
+      "avg": 0.351,
+      "obp": 0.378,
+      "slg": 0.47,
+      "rbi": 20,
+      "sb": 1,
+      "games": 44,
+      "plateAppearances": 198
+    },
+    "scoringStats": {
+      "obp": 0.378,
+      "slg": 0.47,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 44,
+      "plateAppearances": 198,
+      "eraAdjustedOffense": 118.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-1930s-walkecu01",
+    "playerId": "walkecu01",
+    "playerSlug": "walkecu01",
+    "name": "Curt Walker",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "1930s",
+    "featuredSeason": 1930,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "walkecu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.008,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.851,
+      "hr": 8,
+      "avg": 0.307,
+      "obp": 0.391,
+      "slg": 0.46,
+      "rbi": 51,
+      "sb": 4,
+      "games": 134,
+      "plateAppearances": 547
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.851,
+      "hr": 8,
+      "avg": 0.307,
+      "obp": 0.391,
+      "slg": 0.46,
+      "rbi": 51,
+      "sb": 4,
+      "games": 134,
+      "plateAppearances": 547
+    },
+    "scoringStats": {
+      "obp": 0.391,
+      "slg": 0.46,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 134,
+      "plateAppearances": 547,
+      "eraAdjustedOffense": 105.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-1930s-kolpra01",
+    "playerId": "kolpra01",
+    "playerSlug": "kolpra01",
+    "name": "Ray Kolp",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "1930s",
+    "featuredSeason": 1930,
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "kolpra01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.168,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.22,
+      "whip": 1.271,
+      "so": 40,
+      "wins": 7,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 168.3,
+      "games": 37,
+      "starts": 19,
+      "reliefAppearances": 18,
+      "k9": 2.14,
+      "bb9": 1.82
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.22,
+      "whip": 1.271,
+      "so": 40,
+      "wins": 7,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 168.3,
+      "games": 37,
+      "starts": 19,
+      "reliefAppearances": 18,
+      "k9": 2.14,
+      "bb9": 1.82
+    },
+    "scoringStats": {
+      "whip": 1.271,
+      "fip": null,
+      "inningsPitched": 168.3,
+      "strikeoutRate": 2.14,
+      "walkRate": 1.82,
+      "starts": 19,
+      "gamesStarted": 19,
+      "games": 37,
+      "reliefAppearances": 18,
+      "eraAdjustedPitching": 117.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-1930s-hendrha01",
+    "playerId": "hendrha01",
+    "playerSlug": "hendrha01",
+    "name": "Harvey Hendrick",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "1930s",
+    "featuredSeason": 1931,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "hendrha01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.089,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.795,
+      "hr": 1,
+      "avg": 0.315,
+      "obp": 0.379,
+      "slg": 0.415,
+      "rbi": 75,
+      "sb": 3,
+      "games": 137,
+      "plateAppearances": 593
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.795,
+      "hr": 1,
+      "avg": 0.315,
+      "obp": 0.379,
+      "slg": 0.415,
+      "rbi": 75,
+      "sb": 3,
+      "games": 137,
+      "plateAppearances": 593
+    },
+    "scoringStats": {
+      "obp": 0.379,
+      "slg": 0.415,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 137,
+      "plateAppearances": 593,
+      "eraAdjustedOffense": 110.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cin-1930s-stripjo01",
     "playerId": "stripjo01",
     "playerSlug": "stripjo01",

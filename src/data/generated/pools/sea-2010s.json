@@ -786,7 +786,8 @@
     "decade": "2010s",
     "featuredSeason": 2015,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1355,6 +1356,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-2010s-pauleda01",
+    "playerId": "pauleda01",
+    "playerSlug": "pauleda01",
+    "name": "David Pauley",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "pauleda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.193,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.15,
+      "whip": 0.994,
+      "so": 34,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 54.3,
+      "games": 39,
+      "starts": 0,
+      "reliefAppearances": 39,
+      "k9": 5.63,
+      "bb9": 2.65
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.15,
+      "whip": 0.994,
+      "so": 34,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 54.3,
+      "games": 39,
+      "starts": 0,
+      "reliefAppearances": 39,
+      "k9": 5.63,
+      "bb9": 2.65
+    },
+    "scoringStats": {
+      "whip": 0.994,
+      "fip": null,
+      "inningsPitched": 54.3,
+      "strikeoutRate": 5.63,
+      "walkRate": 2.65,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 39,
+      "reliefAppearances": 39,
+      "eraAdjustedPitching": 189.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-2010s-furbuch01",
+    "playerId": "furbuch01",
+    "playerSlug": "furbuch01",
+    "name": "Charlie Furbush",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "furbuch01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.999,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 0.95,
+      "so": 53,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 46.3,
+      "games": 48,
+      "starts": 0,
+      "reliefAppearances": 48,
+      "k9": 10.29,
+      "bb9": 3.11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 0.95,
+      "so": 53,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 46.3,
+      "games": 48,
+      "starts": 0,
+      "reliefAppearances": 48,
+      "k9": 10.29,
+      "bb9": 3.11
+    },
+    "scoringStats": {
+      "whip": 0.95,
+      "fip": null,
+      "inningsPitched": 46.3,
+      "strikeoutRate": 10.29,
+      "walkRate": 3.11,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 48,
+      "reliefAppearances": 48,
+      "eraAdjustedPitching": 150
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-2010s-hanigmi01",
     "playerId": "hanigmi01",
     "playerSlug": "hanigmi01",
@@ -1431,6 +1604,178 @@
       "games": 157,
       "plateAppearances": 683,
       "eraAdjustedOffense": 117.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-2010s-farquda01",
+    "playerId": "farquda01",
+    "playerSlug": "farquda01",
+    "name": "Danny Farquhar",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "farquda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.204,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.66,
+      "whip": 1.127,
+      "so": 81,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 71,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 10.27,
+      "bb9": 2.79
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.66,
+      "whip": 1.127,
+      "so": 81,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 71,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 10.27,
+      "bb9": 2.79
+    },
+    "scoringStats": {
+      "whip": 1.127,
+      "fip": null,
+      "inningsPitched": 71,
+      "strikeoutRate": 10.27,
+      "walkRate": 2.79,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 66,
+      "reliefAppearances": 66,
+      "eraAdjustedPitching": 143.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-2010s-montgmi01",
+    "playerId": "montgmi01",
+    "playerSlug": "montgmi01",
+    "name": "Mike Montgomery",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "montgmi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.903,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 1.086,
+      "so": 54,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 61.7,
+      "games": 32,
+      "starts": 2,
+      "reliefAppearances": 30,
+      "k9": 7.88,
+      "bb9": 2.63
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 1.086,
+      "so": 54,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 61.7,
+      "games": 32,
+      "starts": 2,
+      "reliefAppearances": 30,
+      "k9": 7.88,
+      "bb9": 2.63
+    },
+    "scoringStats": {
+      "whip": 1.086,
+      "fip": null,
+      "inningsPitched": 61.7,
+      "strikeoutRate": 7.88,
+      "walkRate": 2.63,
+      "starts": 2,
+      "gamesStarted": 2,
+      "games": 32,
+      "reliefAppearances": 30,
+      "eraAdjustedPitching": 179.9
     },
     "pitchingScoringStats": null
   },
@@ -1684,7 +2029,8 @@
     "decade": "2010s",
     "featuredSeason": 2012,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1849,7 +2195,8 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1928,7 +2275,8 @@
     "decade": "2010s",
     "featuredSeason": 2013,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2246,7 +2594,8 @@
     "decade": "2010s",
     "featuredSeason": 2013,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2407,7 +2756,8 @@
     "eligiblePositions": [
       "3B",
       "SS",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2489,7 +2839,8 @@
       "2B",
       "SS",
       "LF",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

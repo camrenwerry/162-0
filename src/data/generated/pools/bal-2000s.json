@@ -773,7 +773,8 @@
     "featuredSeason": 2008,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1096,7 +1097,8 @@
     "decade": "2000s",
     "featuredSeason": 2004,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1744,6 +1746,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bal-2000s-ligteke01",
+    "playerId": "ligteke01",
+    "playerSlug": "ligteke01",
+    "name": "Kerry Ligtenberg",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "ligteke01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.207,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 1.247,
+      "so": 47,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 59.3,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 7.13,
+      "bb9": 2.12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 1.247,
+      "so": 47,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 59.3,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 7.13,
+      "bb9": 2.12
+    },
+    "scoringStats": {
+      "whip": 1.247,
+      "fip": null,
+      "inningsPitched": 59.3,
+      "strikeoutRate": 7.13,
+      "walkRate": 2.12,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 68,
+      "reliefAppearances": 68,
+      "eraAdjustedPitching": 135.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bal-2000s-chenbr01",
     "playerId": "chenbr01",
     "playerSlug": "chenbr01",
@@ -1845,7 +1933,8 @@
       "1B",
       "3B",
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1925,7 +2014,8 @@
     "featuredSeason": 2005,
     "eligiblePositions": [
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1988,6 +2078,85 @@
       "games": 139,
       "plateAppearances": 518,
       "eraAdjustedOffense": 110.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-2000s-richach01",
+    "playerId": "richach01",
+    "playerSlug": "richach01",
+    "name": "Chris Richard",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "richach01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.836,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.898,
+      "hr": 13,
+      "avg": 0.276,
+      "obp": 0.335,
+      "slg": 0.563,
+      "rbi": 36,
+      "sb": 7,
+      "games": 56,
+      "plateAppearances": 221
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.898,
+      "hr": 13,
+      "avg": 0.276,
+      "obp": 0.335,
+      "slg": 0.563,
+      "rbi": 36,
+      "sb": 7,
+      "games": 56,
+      "plateAppearances": 221
+    },
+    "scoringStats": {
+      "obp": 0.335,
+      "slg": 0.563,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 56,
+      "plateAppearances": 221,
+      "eraAdjustedOffense": 113.3
     },
     "pitchingScoringStats": null
   },
@@ -2071,6 +2240,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bal-2000s-brittch01",
+    "playerId": "brittch01",
+    "playerSlug": "brittch01",
+    "name": "Chris Britton",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "brittch01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.719,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.174,
+      "so": 41,
+      "wins": 0,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 53.7,
+      "games": 52,
+      "starts": 0,
+      "reliefAppearances": 52,
+      "k9": 6.88,
+      "bb9": 2.85
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.174,
+      "so": 41,
+      "wins": 0,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 53.7,
+      "games": 52,
+      "starts": 0,
+      "reliefAppearances": 52,
+      "k9": 6.88,
+      "bb9": 2.85
+    },
+    "scoringStats": {
+      "whip": 1.174,
+      "fip": null,
+      "inningsPitched": 53.7,
+      "strikeoutRate": 6.88,
+      "walkRate": 2.85,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 52,
+      "reliefAppearances": 52,
+      "eraAdjustedPitching": 135.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bal-2000s-deshide01",
     "playerId": "deshide01",
     "playerSlug": "deshide01",
@@ -2084,7 +2339,8 @@
     "featuredSeason": 2000,
     "eligiblePositions": [
       "2B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2164,7 +2420,8 @@
     "featuredSeason": 2009,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2389,6 +2646,86 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bal-2000s-seguida01",
+    "playerId": "seguida01",
+    "playerSlug": "seguida01",
+    "name": "David Segui",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "B",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "seguida01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.747,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.879,
+      "hr": 10,
+      "avg": 0.301,
+      "obp": 0.406,
+      "slg": 0.473,
+      "rbi": 46,
+      "sb": 1,
+      "games": 82,
+      "plateAppearances": 347
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.879,
+      "hr": 10,
+      "avg": 0.301,
+      "obp": 0.406,
+      "slg": 0.473,
+      "rbi": 46,
+      "sb": 1,
+      "games": 82,
+      "plateAppearances": 347
+    },
+    "scoringStats": {
+      "obp": 0.406,
+      "slg": 0.473,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 82,
+      "plateAppearances": 347,
+      "eraAdjustedOffense": 115.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bal-2000s-anderbr01",
     "playerId": "anderbr01",
     "playerSlug": "anderbr01",
@@ -2403,7 +2740,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

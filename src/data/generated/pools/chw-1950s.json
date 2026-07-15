@@ -2232,6 +2232,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1950s-lenhado01",
+    "playerId": "lenhado01",
+    "playerSlug": "lenhado01",
+    "name": "Don Lenhardt",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1950s",
+    "featuredSeason": 1951,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "lenhado01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.88,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.823,
+      "hr": 10,
+      "avg": 0.266,
+      "obp": 0.351,
+      "slg": 0.472,
+      "rbi": 45,
+      "sb": 1,
+      "games": 64,
+      "plateAppearances": 227
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.823,
+      "hr": 10,
+      "avg": 0.266,
+      "obp": 0.351,
+      "slg": 0.472,
+      "rbi": 45,
+      "sb": 1,
+      "games": 64,
+      "plateAppearances": 227
+    },
+    "scoringStats": {
+      "obp": 0.351,
+      "slg": 0.472,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 64,
+      "plateAppearances": 227,
+      "eraAdjustedOffense": 114.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1950s-michaca01",
     "playerId": "michaca01",
     "playerSlug": "michaca01",
@@ -2307,6 +2386,258 @@
       "games": 36,
       "plateAppearances": 158,
       "eraAdjustedOffense": 113.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1950s-wilsoji02",
+    "playerId": "wilsoji02",
+    "playerSlug": "wilsoji02",
+    "name": "Jim Wilson",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1950s",
+    "featuredSeason": 1957,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "wilsoji02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.461,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.48,
+      "whip": 1.26,
+      "so": 100,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 201.7,
+      "games": 30,
+      "starts": 29,
+      "reliefAppearances": 1,
+      "k9": 4.46,
+      "bb9": 2.9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.48,
+      "whip": 1.26,
+      "so": 100,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 201.7,
+      "games": 30,
+      "starts": 29,
+      "reliefAppearances": 1,
+      "k9": 4.46,
+      "bb9": 2.9
+    },
+    "scoringStats": {
+      "whip": 1.26,
+      "fip": null,
+      "inningsPitched": 201.7,
+      "strikeoutRate": 4.46,
+      "walkRate": 2.9,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 30,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 108.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1950s-stewabu01",
+    "playerId": "stewabu01",
+    "playerSlug": "stewabu01",
+    "name": "Bud Stewart",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1950s",
+    "featuredSeason": 1951,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "stewabu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.137,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.832,
+      "hr": 6,
+      "avg": 0.276,
+      "obp": 0.367,
+      "slg": 0.465,
+      "rbi": 40,
+      "sb": 1,
+      "games": 95,
+      "plateAppearances": 253
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.832,
+      "hr": 6,
+      "avg": 0.276,
+      "obp": 0.367,
+      "slg": 0.465,
+      "rbi": 40,
+      "sb": 1,
+      "games": 95,
+      "plateAppearances": 253
+    },
+    "scoringStats": {
+      "obp": 0.367,
+      "slg": 0.465,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 95,
+      "plateAppearances": 253,
+      "eraAdjustedOffense": 115.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1950s-dorisha01",
+    "playerId": "dorisha01",
+    "playerSlug": "dorisha01",
+    "name": "Fritz Dorish",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1950s",
+    "featuredSeason": 1952,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "dorisha01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.053,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 1.187,
+      "so": 47,
+      "wins": 8,
+      "saves": 11,
+      "sv": 11,
+      "inningsPitched": 91,
+      "games": 39,
+      "starts": 1,
+      "reliefAppearances": 38,
+      "k9": 4.65,
+      "bb9": 4.15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 1.187,
+      "so": 47,
+      "wins": 8,
+      "saves": 11,
+      "sv": 11,
+      "inningsPitched": 91,
+      "games": 39,
+      "starts": 1,
+      "reliefAppearances": 38,
+      "k9": 4.65,
+      "bb9": 4.15
+    },
+    "scoringStats": {
+      "whip": 1.187,
+      "fip": null,
+      "inningsPitched": 91,
+      "strikeoutRate": 4.65,
+      "walkRate": 4.15,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 39,
+      "reliefAppearances": 38,
+      "eraAdjustedPitching": 148.5
     },
     "pitchingScoringStats": null
   },

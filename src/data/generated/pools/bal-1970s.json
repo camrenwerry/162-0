@@ -688,7 +688,8 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -848,7 +849,8 @@
     "featuredSeason": 1976,
     "eligiblePositions": [
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1908,6 +1910,264 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bal-1970s-garlawa01",
+    "playerId": "garlawa01",
+    "playerSlug": "garlawa01",
+    "name": "Wayne Garland",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1970s",
+    "featuredSeason": 1976,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "garlawa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.201,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.67,
+      "whip": 1.24,
+      "so": 113,
+      "wins": 20,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 232.3,
+      "games": 38,
+      "starts": 25,
+      "reliefAppearances": 13,
+      "k9": 4.38,
+      "bb9": 2.48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.67,
+      "whip": 1.24,
+      "so": 113,
+      "wins": 20,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 232.3,
+      "games": 38,
+      "starts": 25,
+      "reliefAppearances": 13,
+      "k9": 4.38,
+      "bb9": 2.48
+    },
+    "scoringStats": {
+      "whip": 1.24,
+      "fip": null,
+      "inningsPitched": 232.3,
+      "strikeoutRate": 4.38,
+      "walkRate": 2.48,
+      "starts": 25,
+      "gamesStarted": 25,
+      "games": 38,
+      "reliefAppearances": 13,
+      "eraAdjustedPitching": 131.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1970s-mcgresc01",
+    "playerId": "mcgresc01",
+    "playerSlug": "mcgresc01",
+    "name": "Scott McGregor",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "B",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "mcgresc01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.551,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.076,
+      "so": 81,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 174.7,
+      "games": 27,
+      "starts": 23,
+      "reliefAppearances": 4,
+      "k9": 4.17,
+      "bb9": 1.19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.076,
+      "so": 81,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 174.7,
+      "games": 27,
+      "starts": 23,
+      "reliefAppearances": 4,
+      "k9": 4.17,
+      "bb9": 1.19
+    },
+    "scoringStats": {
+      "whip": 1.076,
+      "fip": null,
+      "inningsPitched": 174.7,
+      "strikeoutRate": 4.17,
+      "walkRate": 1.19,
+      "starts": 23,
+      "gamesStarted": 23,
+      "games": 27,
+      "reliefAppearances": 4,
+      "eraAdjustedPitching": 125.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1970s-holdsfr01",
+    "playerId": "holdsfr01",
+    "playerSlug": "holdsfr01",
+    "name": "Fred Holdsworth",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1970s",
+    "featuredSeason": 1976,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "holdsfr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.894,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.04,
+      "whip": 0.933,
+      "so": 24,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 39.7,
+      "games": 16,
+      "starts": 0,
+      "reliefAppearances": 16,
+      "k9": 5.45,
+      "bb9": 2.95
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.04,
+      "whip": 0.933,
+      "so": 24,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 39.7,
+      "games": 16,
+      "starts": 0,
+      "reliefAppearances": 16,
+      "k9": 5.45,
+      "bb9": 2.95
+    },
+    "scoringStats": {
+      "whip": 0.933,
+      "fip": null,
+      "inningsPitched": 39.7,
+      "strikeoutRate": 5.45,
+      "walkRate": 2.95,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 16,
+      "reliefAppearances": 16,
+      "eraAdjustedPitching": 172.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bal-1970s-murraed02",
     "playerId": "murraed02",
     "playerSlug": "murraed02",
@@ -2062,6 +2322,86 @@
       "games": 142,
       "plateAppearances": 574,
       "eraAdjustedOffense": 116.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1970s-kellypa01",
+    "playerId": "kellypa01",
+    "playerSlug": "kellypa01",
+    "name": "Pat Kelly",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "LF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "kellypa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.218,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.903,
+      "hr": 9,
+      "avg": 0.288,
+      "obp": 0.367,
+      "slg": 0.536,
+      "rbi": 25,
+      "sb": 4,
+      "games": 68,
+      "plateAppearances": 177
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.903,
+      "hr": 9,
+      "avg": 0.288,
+      "obp": 0.367,
+      "slg": 0.536,
+      "rbi": 25,
+      "sb": 4,
+      "games": 68,
+      "plateAppearances": 177
+    },
+    "scoringStats": {
+      "obp": 0.367,
+      "slg": 0.536,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 68,
+      "plateAppearances": 177,
+      "eraAdjustedOffense": 121.6
     },
     "pitchingScoringStats": null
   },

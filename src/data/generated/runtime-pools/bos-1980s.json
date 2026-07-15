@@ -265,7 +265,8 @@
     "decade": "1980s",
     "featuredSeason": 1988,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -413,7 +414,8 @@
     "decade": "1980s",
     "featuredSeason": 1984,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -561,7 +563,8 @@
     "decade": "1980s",
     "featuredSeason": 1984,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -897,6 +900,106 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-1980s-hornsa01",
+    "playerId": "hornsa01",
+    "playerSlug": "hornsa01",
+    "name": "Sam Horn",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.945,
+      "hr": 14,
+      "avg": 0.278,
+      "obp": 0.356,
+      "slg": 0.589,
+      "rbi": 34,
+      "sb": 0,
+      "games": 46,
+      "plateAppearances": 177
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.356,
+      "slg": 0.589,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 46,
+      "plateAppearances": 177,
+      "eraAdjustedOffense": 124.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1980s-lampde01",
+    "playerId": "lampde01",
+    "playerSlug": "lampde01",
+    "name": "Dennis Lamp",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.32,
+      "whip": 1.095,
+      "so": 61,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 112.3,
+      "games": 42,
+      "starts": 0,
+      "reliefAppearances": 42,
+      "k9": 4.89,
+      "bb9": 2.16
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.095,
+      "fip": null,
+      "inningsPitched": 112.3,
+      "strikeoutRate": 4.89,
+      "walkRate": 2.16,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 42,
+      "reliefAppearances": 42,
+      "eraAdjustedPitching": 167.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-1980s-fiskca01",
     "playerId": "fiskca01",
     "playerSlug": "fiskca01",
@@ -1009,7 +1112,8 @@
     "decade": "1980s",
     "featuredSeason": 1981,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1141,6 +1245,110 @@
       "games": 15,
       "reliefAppearances": 1,
       "eraAdjustedPitching": 150.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1980s-tudorjo01",
+    "playerId": "tudorjo01",
+    "playerSlug": "tudorjo01",
+    "name": "John Tudor",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.63,
+      "whip": 1.4,
+      "so": 146,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 195.7,
+      "games": 32,
+      "starts": 30,
+      "reliefAppearances": 2,
+      "k9": 6.72,
+      "bb9": 2.71
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.4,
+      "fip": null,
+      "inningsPitched": 195.7,
+      "strikeoutRate": 6.72,
+      "walkRate": 2.71,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 32,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 112.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1980s-clearma01",
+    "playerId": "clearma01",
+    "playerSlug": "clearma01",
+    "name": "Mark Clear",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 1.457,
+      "so": 109,
+      "wins": 14,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 105,
+      "games": 55,
+      "starts": 0,
+      "reliefAppearances": 55,
+      "k9": 9.34,
+      "bb9": 5.23
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.457,
+      "fip": null,
+      "inningsPitched": 105,
+      "strikeoutRate": 9.34,
+      "walkRate": 5.23,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 55,
+      "reliefAppearances": 55,
+      "eraAdjustedPitching": 135.8
     },
     "pitchingScoringStats": null
   },
@@ -1305,7 +1513,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

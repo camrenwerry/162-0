@@ -684,7 +684,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -932,7 +933,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -964,6 +966,58 @@
       "games": 95,
       "plateAppearances": 388,
       "eraAdjustedOffense": 119
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2020s-montgjo01",
+    "playerId": "montgjo01",
+    "playerSlug": "montgjo01",
+    "name": "Jordan Montgomery",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.79,
+      "whip": 1.094,
+      "so": 58,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 67.7,
+      "games": 11,
+      "starts": 11,
+      "reliefAppearances": 0,
+      "k9": 7.71,
+      "bb9": 1.73
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.094,
+      "fip": null,
+      "inningsPitched": 67.7,
+      "strikeoutRate": 7.71,
+      "walkRate": 1.73,
+      "starts": 11,
+      "gamesStarted": 11,
+      "games": 11,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 153.1
     },
     "pitchingScoringStats": null
   },
@@ -1012,6 +1066,162 @@
       "games": 157,
       "plateAppearances": 645,
       "eraAdjustedOffense": 121.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2020s-hernajo02",
+    "playerId": "hernajo02",
+    "playerSlug": "hernajo02",
+    "name": "Jonathan Hernandez",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2020s",
+    "featuredSeason": 2020,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.9,
+      "whip": 1.032,
+      "so": 31,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 31,
+      "games": 27,
+      "starts": 0,
+      "reliefAppearances": 27,
+      "k9": 9,
+      "bb9": 2.32
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.032,
+      "fip": null,
+      "inningsPitched": 31,
+      "strikeoutRate": 9,
+      "walkRate": 2.32,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 27,
+      "reliefAppearances": 27,
+      "eraAdjustedPitching": 152.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2020s-webbja01",
+    "playerId": "webbja01",
+    "playerSlug": "webbja01",
+    "name": "Jacob Webb",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 1.03,
+      "so": 58,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 66,
+      "games": 55,
+      "starts": 0,
+      "reliefAppearances": 55,
+      "k9": 7.91,
+      "bb9": 2.59
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.03,
+      "fip": null,
+      "inningsPitched": 66,
+      "strikeoutRate": 7.91,
+      "walkRate": 2.59,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 55,
+      "reliefAppearances": 55,
+      "eraAdjustedPitching": 136.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2020s-bushma01",
+    "playerId": "bushma01",
+    "playerSlug": "bushma01",
+    "name": "Matt Bush",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.009,
+      "so": 45,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 36.7,
+      "games": 40,
+      "starts": 5,
+      "reliefAppearances": 35,
+      "k9": 11.05,
+      "bb9": 2.45
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.009,
+      "fip": null,
+      "inningsPitched": 36.7,
+      "strikeoutRate": 11.05,
+      "walkRate": 2.45,
+      "starts": 5,
+      "gamesStarted": 5,
+      "games": 40,
+      "reliefAppearances": 35,
+      "eraAdjustedPitching": 131.6
     },
     "pitchingScoringStats": null
   },
@@ -1175,7 +1385,8 @@
     "eligiblePositions": [
       "3B",
       "SS",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1224,7 +1435,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "3B",
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1418,7 +1630,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1466,7 +1679,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1515,7 +1729,8 @@
     "featuredSeason": 2023,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

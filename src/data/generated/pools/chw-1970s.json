@@ -263,7 +263,8 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1167,7 +1168,8 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2068,7 +2070,8 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2379,6 +2382,173 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1970s-johnsja01",
+    "playerId": "johnsja01",
+    "playerSlug": "johnsja01",
+    "name": "Jay Johnstone",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1970s",
+    "featuredSeason": 1971,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "johnsja01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.917,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.755,
+      "hr": 16,
+      "avg": 0.26,
+      "obp": 0.329,
+      "slg": 0.425,
+      "rbi": 40,
+      "sb": 10,
+      "games": 124,
+      "plateAppearances": 436
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.755,
+      "hr": 16,
+      "avg": 0.26,
+      "obp": 0.329,
+      "slg": 0.425,
+      "rbi": 40,
+      "sb": 10,
+      "games": 124,
+      "plateAppearances": 436
+    },
+    "scoringStats": {
+      "obp": 0.329,
+      "slg": 0.425,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 124,
+      "plateAppearances": 436,
+      "eraAdjustedOffense": 110.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1970s-barrifr01",
+    "playerId": "barrifr01",
+    "playerSlug": "barrifr01",
+    "name": "Francisco Barrios",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "barrifr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.267,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.12,
+      "whip": 1.293,
+      "so": 119,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 231.3,
+      "games": 33,
+      "starts": 31,
+      "reliefAppearances": 2,
+      "k9": 4.63,
+      "bb9": 2.26
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.12,
+      "whip": 1.293,
+      "so": 119,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 231.3,
+      "games": 33,
+      "starts": 31,
+      "reliefAppearances": 2,
+      "k9": 4.63,
+      "bb9": 2.26
+    },
+    "scoringStats": {
+      "whip": 1.293,
+      "fip": null,
+      "inningsPitched": 231.3,
+      "strikeoutRate": 4.63,
+      "walkRate": 2.26,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 33,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 98.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1970s-josepdu01",
     "playerId": "josepdu01",
     "playerSlug": "josepdu01",
@@ -2454,6 +2624,165 @@
       "games": 96,
       "plateAppearances": 317,
       "eraAdjustedOffense": 110.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1970s-nordhwa01",
+    "playerId": "nordhwa01",
+    "playerSlug": "nordhwa01",
+    "name": "Wayne Nordhagen",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "nordhwa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.237,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.839,
+      "hr": 4,
+      "avg": 0.315,
+      "obp": 0.323,
+      "slg": 0.516,
+      "rbi": 22,
+      "sb": 1,
+      "games": 52,
+      "plateAppearances": 128
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.839,
+      "hr": 4,
+      "avg": 0.315,
+      "obp": 0.323,
+      "slg": 0.516,
+      "rbi": 22,
+      "sb": 1,
+      "games": 52,
+      "plateAppearances": 128
+    },
+    "scoringStats": {
+      "obp": 0.323,
+      "slg": 0.516,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 52,
+      "plateAppearances": 128,
+      "eraAdjustedOffense": 114.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1970s-downibr01",
+    "playerId": "downibr01",
+    "playerSlug": "downibr01",
+    "name": "Brian Downing",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "C"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "downibr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.912,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.804,
+      "hr": 4,
+      "avg": 0.284,
+      "obp": 0.402,
+      "slg": 0.402,
+      "rbi": 25,
+      "sb": 1,
+      "games": 69,
+      "plateAppearances": 214
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.804,
+      "hr": 4,
+      "avg": 0.284,
+      "obp": 0.402,
+      "slg": 0.402,
+      "rbi": 25,
+      "sb": 1,
+      "games": 69,
+      "plateAppearances": 214
+    },
+    "scoringStats": {
+      "obp": 0.402,
+      "slg": 0.402,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 69,
+      "plateAppearances": 214,
+      "eraAdjustedOffense": 109.4
     },
     "pitchingScoringStats": null
   },

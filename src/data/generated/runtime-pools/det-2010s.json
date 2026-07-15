@@ -424,7 +424,8 @@
     "decade": "2010s",
     "featuredSeason": 2014,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -612,6 +613,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-2010s-smylydr01",
+    "playerId": "smylydr01",
+    "playerSlug": "smylydr01",
+    "name": "Drew Smyly",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.37,
+      "whip": 1.039,
+      "so": 81,
+      "wins": 6,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 76,
+      "games": 63,
+      "starts": 0,
+      "reliefAppearances": 63,
+      "k9": 9.59,
+      "bb9": 2.01
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.039,
+      "fip": null,
+      "inningsPitched": 76,
+      "strikeoutRate": 9.59,
+      "walkRate": 2.01,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 63,
+      "reliefAppearances": 63,
+      "eraAdjustedPitching": 168.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-2010s-priceda01",
     "playerId": "priceda01",
     "playerSlug": "priceda01",
@@ -664,6 +717,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-2010s-wilsoal01",
+    "playerId": "wilsoal01",
+    "playerSlug": "wilsoal01",
+    "name": "Alex Wilson",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.19,
+      "whip": 1.029,
+      "so": 38,
+      "wins": 3,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 70,
+      "games": 59,
+      "starts": 1,
+      "reliefAppearances": 58,
+      "k9": 4.89,
+      "bb9": 1.41
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.029,
+      "fip": null,
+      "inningsPitched": 70,
+      "strikeoutRate": 4.89,
+      "walkRate": 1.41,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 59,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 183.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-2010s-fieldpr01",
     "playerId": "fieldpr01",
     "playerSlug": "fieldpr01",
@@ -712,6 +817,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-2010s-rodrifr03",
+    "playerId": "rodrifr03",
+    "playerSlug": "rodrifr03",
+    "name": "Francisco Rodriguez",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.24,
+      "whip": 1.131,
+      "so": 52,
+      "wins": 3,
+      "saves": 44,
+      "sv": 44,
+      "inningsPitched": 58.3,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 8.02,
+      "bb9": 3.24
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.131,
+      "fip": null,
+      "inningsPitched": 58.3,
+      "strikeoutRate": 8.02,
+      "walkRate": 3.24,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 61,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 129.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-2010s-avilaal01",
     "playerId": "avilaal01",
     "playerSlug": "avilaal01",
@@ -756,6 +913,58 @@
       "games": 141,
       "plateAppearances": 551,
       "eraAdjustedOffense": 122.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-2010s-fulmemi01",
+    "playerId": "fulmemi01",
+    "playerSlug": "fulmemi01",
+    "name": "Michael Fulmer",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.06,
+      "whip": 1.119,
+      "so": 132,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 159,
+      "games": 26,
+      "starts": 26,
+      "reliefAppearances": 0,
+      "k9": 7.47,
+      "bb9": 2.38
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.119,
+      "fip": null,
+      "inningsPitched": 159,
+      "strikeoutRate": 7.47,
+      "walkRate": 2.38,
+      "starts": 26,
+      "gamesStarted": 26,
+      "games": 26,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 137.5
     },
     "pitchingScoringStats": null
   },
@@ -964,7 +1173,8 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1060,7 +1270,8 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1453,7 +1664,8 @@
     "featuredSeason": 2017,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

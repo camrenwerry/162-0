@@ -507,7 +507,8 @@
     "decade": "1980s",
     "featuredSeason": 1989,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1337,7 +1338,8 @@
     "featuredSeason": 1985,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1661,7 +1663,8 @@
     "decade": "1980s",
     "featuredSeason": 1983,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2298,6 +2301,344 @@
       "games": 37,
       "reliefAppearances": 1,
       "eraAdjustedPitching": 103.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1980s-ayalabe01",
+    "playerId": "ayalabe01",
+    "playerSlug": "ayalabe01",
+    "name": "Benny Ayala",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "eligiblePositions": [
+      "LF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "ayalabe01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.669,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.835,
+      "hr": 10,
+      "avg": 0.265,
+      "obp": 0.335,
+      "slg": 0.5,
+      "rbi": 33,
+      "sb": 0,
+      "games": 76,
+      "plateAppearances": 191
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.835,
+      "hr": 10,
+      "avg": 0.265,
+      "obp": 0.335,
+      "slg": 0.5,
+      "rbi": 33,
+      "sb": 0,
+      "games": 76,
+      "plateAppearances": 191
+    },
+    "scoringStats": {
+      "obp": 0.335,
+      "slg": 0.5,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 76,
+      "plateAppearances": 191,
+      "eraAdjustedOffense": 114.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1980s-ballaje01",
+    "playerId": "ballaje01",
+    "playerSlug": "ballaje01",
+    "name": "Jeff Ballard",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "ballaje01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.619,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.43,
+      "whip": 1.379,
+      "so": 62,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 215.3,
+      "games": 35,
+      "starts": 35,
+      "reliefAppearances": 0,
+      "k9": 2.59,
+      "bb9": 2.38
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.43,
+      "whip": 1.379,
+      "so": 62,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 215.3,
+      "games": 35,
+      "starts": 35,
+      "reliefAppearances": 0,
+      "k9": 2.59,
+      "bb9": 2.38
+    },
+    "scoringStats": {
+      "whip": 1.379,
+      "fip": null,
+      "inningsPitched": 215.3,
+      "strikeoutRate": 2.59,
+      "walkRate": 2.38,
+      "starts": 35,
+      "gamesStarted": 35,
+      "games": 35,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 113.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1980s-martide01",
+    "playerId": "martide01",
+    "playerSlug": "martide01",
+    "name": "Dennis Martinez",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "martide01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.761,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.21,
+      "whip": 1.385,
+      "so": 111,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 252,
+      "games": 40,
+      "starts": 39,
+      "reliefAppearances": 1,
+      "k9": 3.96,
+      "bb9": 3.11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.21,
+      "whip": 1.385,
+      "so": 111,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 252,
+      "games": 40,
+      "starts": 39,
+      "reliefAppearances": 1,
+      "k9": 3.96,
+      "bb9": 3.11
+    },
+    "scoringStats": {
+      "whip": 1.385,
+      "fip": null,
+      "inningsPitched": 252,
+      "strikeoutRate": 3.96,
+      "walkRate": 3.11,
+      "starts": 39,
+      "gamesStarted": 39,
+      "games": 40,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 96.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1980s-snellna01",
+    "playerId": "snellna01",
+    "playerSlug": "snellna01",
+    "name": "Nate Snell",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "snellna01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.513,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.69,
+      "whip": 1.296,
+      "so": 41,
+      "wins": 3,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 100.3,
+      "games": 43,
+      "starts": 0,
+      "reliefAppearances": 43,
+      "k9": 3.68,
+      "bb9": 2.69
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.69,
+      "whip": 1.296,
+      "so": 41,
+      "wins": 3,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 100.3,
+      "games": 43,
+      "starts": 0,
+      "reliefAppearances": 43,
+      "k9": 3.68,
+      "bb9": 2.69
+    },
+    "scoringStats": {
+      "whip": 1.296,
+      "fip": null,
+      "inningsPitched": 100.3,
+      "strikeoutRate": 3.68,
+      "walkRate": 2.69,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 43,
+      "reliefAppearances": 43,
+      "eraAdjustedPitching": 154.1
     },
     "pitchingScoringStats": null
   },

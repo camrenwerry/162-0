@@ -356,7 +356,8 @@
     "decade": "2000s",
     "featuredSeason": 2002,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -521,7 +522,8 @@
     "decade": "2000s",
     "featuredSeason": 2006,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1667,6 +1669,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-2000s-saitota01",
+    "playerId": "saitota01",
+    "playerSlug": "saitota01",
+    "name": "Takashi Saito",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "saitota01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.893,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.43,
+      "whip": 1.347,
+      "so": 52,
+      "wins": 3,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 55.7,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 8.41,
+      "bb9": 4.04
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.43,
+      "whip": 1.347,
+      "so": 52,
+      "wins": 3,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 55.7,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 8.41,
+      "bb9": 4.04
+    },
+    "scoringStats": {
+      "whip": 1.347,
+      "fip": null,
+      "inningsPitched": 55.7,
+      "strikeoutRate": 8.41,
+      "walkRate": 4.04,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 56,
+      "reliefAppearances": 56,
+      "eraAdjustedPitching": 183.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-2000s-varitja01",
     "playerId": "varitja01",
     "playerSlug": "varitja01",
@@ -1905,6 +1993,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-2000s-matsuda01",
+    "playerId": "matsuda01",
+    "playerSlug": "matsuda01",
+    "name": "Daisuke Matsuzaka",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "matsuda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.012,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.9,
+      "whip": 1.324,
+      "so": 154,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 167.7,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 8.27,
+      "bb9": 5.05
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.9,
+      "whip": 1.324,
+      "so": 154,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 167.7,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 8.27,
+      "bb9": 5.05
+    },
+    "scoringStats": {
+      "whip": 1.324,
+      "fip": null,
+      "inningsPitched": 167.7,
+      "strikeoutRate": 8.27,
+      "walkRate": 5.05,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 29,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 150
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2000s-embreal01",
+    "playerId": "embreal01",
+    "playerSlug": "embreal01",
+    "name": "Alan Embree",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "embreal01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.971,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.97,
+      "whip": 1.05,
+      "so": 43,
+      "wins": 1,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 33.3,
+      "games": 32,
+      "starts": 0,
+      "reliefAppearances": 32,
+      "k9": 11.61,
+      "bb9": 2.97
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.97,
+      "whip": 1.05,
+      "so": 43,
+      "wins": 1,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 33.3,
+      "games": 32,
+      "starts": 0,
+      "reliefAppearances": 32,
+      "k9": 11.61,
+      "bb9": 2.97
+    },
+    "scoringStats": {
+      "whip": 1.05,
+      "fip": null,
+      "inningsPitched": 33.3,
+      "strikeoutRate": 11.61,
+      "walkRate": 2.97,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 32,
+      "reliefAppearances": 32,
+      "eraAdjustedPitching": 150.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-2000s-lowelmi01",
     "playerId": "lowelmi01",
     "playerSlug": "lowelmi01",
@@ -2059,6 +2319,92 @@
       "games": 157,
       "plateAppearances": 726,
       "eraAdjustedOffense": 115
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2000s-garceri01",
+    "playerId": "garceri01",
+    "playerSlug": "garceri01",
+    "name": "Rich Garces",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "garceri01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.627,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.25,
+      "whip": 1.165,
+      "so": 69,
+      "wins": 8,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 74.7,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 8.32,
+      "bb9": 2.77
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.25,
+      "whip": 1.165,
+      "so": 69,
+      "wins": 8,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 74.7,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 8.32,
+      "bb9": 2.77
+    },
+    "scoringStats": {
+      "whip": 1.165,
+      "fip": null,
+      "inningsPitched": 74.7,
+      "strikeoutRate": 8.32,
+      "walkRate": 2.77,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 64,
+      "reliefAppearances": 64,
+      "eraAdjustedPitching": 150.9
     },
     "pitchingScoringStats": null
   },

@@ -12,7 +12,8 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -91,7 +92,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -588,7 +590,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1508,6 +1511,264 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-2020s-chapmar01",
+    "playerId": "chapmar01",
+    "playerSlug": "chapmar01",
+    "name": "Aroldis Chapman",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "chapmar01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.058,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.36,
+      "whip": 1.314,
+      "so": 97,
+      "wins": 6,
+      "saves": 30,
+      "sv": 30,
+      "inningsPitched": 56.3,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 15.5,
+      "bb9": 6.07
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.36,
+      "whip": 1.314,
+      "so": 97,
+      "wins": 6,
+      "saves": 30,
+      "sv": 30,
+      "inningsPitched": 56.3,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 15.5,
+      "bb9": 6.07
+    },
+    "scoringStats": {
+      "whip": 1.314,
+      "fip": null,
+      "inningsPitched": 56.3,
+      "strikeoutRate": 15.5,
+      "walkRate": 6.07,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 61,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 128.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-2020s-luetglu01",
+    "playerId": "luetglu01",
+    "playerSlug": "luetglu01",
+    "name": "Lucas Luetge",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "luetglu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.975,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.134,
+      "so": 78,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 72.3,
+      "games": 57,
+      "starts": 1,
+      "reliefAppearances": 56,
+      "k9": 9.71,
+      "bb9": 1.87
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.134,
+      "so": 78,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 72.3,
+      "games": 57,
+      "starts": 1,
+      "reliefAppearances": 56,
+      "k9": 9.71,
+      "bb9": 1.87
+    },
+    "scoringStats": {
+      "whip": 1.134,
+      "fip": null,
+      "inningsPitched": 72.3,
+      "strikeoutRate": 9.71,
+      "walkRate": 1.87,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 57,
+      "reliefAppearances": 56,
+      "eraAdjustedPitching": 157.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-2020s-hillti01",
+    "playerId": "hillti01",
+    "playerSlug": "hillti01",
+    "name": "Tim Hill",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "hillti01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.334,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.05,
+      "whip": 1.023,
+      "so": 18,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 44,
+      "games": 35,
+      "starts": 0,
+      "reliefAppearances": 35,
+      "k9": 3.68,
+      "bb9": 1.84
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.05,
+      "whip": 1.023,
+      "so": 18,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 44,
+      "games": 35,
+      "starts": 0,
+      "reliefAppearances": 35,
+      "k9": 3.68,
+      "bb9": 1.84
+    },
+    "scoringStats": {
+      "whip": 1.023,
+      "fip": null,
+      "inningsPitched": 44,
+      "strikeoutRate": 3.68,
+      "walkRate": 1.84,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 35,
+      "reliefAppearances": 35,
+      "eraAdjustedPitching": 196.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-2020s-ricebe01",
     "playerId": "ricebe01",
     "playerSlug": "ricebe01",
@@ -1521,7 +1782,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1749,6 +2011,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-2020s-peralwa01",
+    "playerId": "peralwa01",
+    "playerSlug": "peralwa01",
+    "name": "Wandy Peralta",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "peralwa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.421,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 1.047,
+      "so": 47,
+      "wins": 3,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 56.3,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 7.51,
+      "bb9": 2.72
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 1.047,
+      "so": 47,
+      "wins": 3,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 56.3,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 7.51,
+      "bb9": 2.72
+    },
+    "scoringStats": {
+      "whip": 1.047,
+      "fip": null,
+      "inningsPitched": 56.3,
+      "strikeoutRate": 7.51,
+      "walkRate": 2.72,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 56,
+      "reliefAppearances": 56,
+      "eraAdjustedPitching": 142.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-2020s-grishtr01",
     "playerId": "grishtr01",
     "playerSlug": "grishtr01",
@@ -1926,7 +2274,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2401,7 +2750,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

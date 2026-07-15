@@ -1820,6 +1820,257 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sfg-1970s-heaveda01",
+    "playerId": "heaveda01",
+    "playerSlug": "heaveda01",
+    "name": "Dave Heaverlo",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "heaveda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.692,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.55,
+      "whip": 1.145,
+      "so": 58,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 98.7,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 5.29,
+      "bb9": 1.92
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.55,
+      "whip": 1.145,
+      "so": 58,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 98.7,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 5.29,
+      "bb9": 1.92
+    },
+    "scoringStats": {
+      "whip": 1.145,
+      "fip": null,
+      "inningsPitched": 98.7,
+      "strikeoutRate": 5.29,
+      "walkRate": 1.92,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 56,
+      "reliefAppearances": 56,
+      "eraAdjustedPitching": 153
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1970s-murcebo01",
+    "playerId": "murcebo01",
+    "playerSlug": "murcebo01",
+    "name": "Bobby Murcer",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1970s",
+    "featuredSeason": 1975,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "murcebo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.472,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.828,
+      "hr": 11,
+      "avg": 0.298,
+      "obp": 0.396,
+      "slg": 0.432,
+      "rbi": 91,
+      "sb": 9,
+      "games": 147,
+      "plateAppearances": 632
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.828,
+      "hr": 11,
+      "avg": 0.298,
+      "obp": 0.396,
+      "slg": 0.432,
+      "rbi": 91,
+      "sb": 9,
+      "games": 147,
+      "plateAppearances": 632
+    },
+    "scoringStats": {
+      "obp": 0.396,
+      "slg": 0.432,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 147,
+      "plateAppearances": 632,
+      "eraAdjustedOffense": 118.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1970s-willoji01",
+    "playerId": "willoji01",
+    "playerSlug": "willoji01",
+    "name": "Jim Willoughby",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1970s",
+    "featuredSeason": 1972,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "willoji01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.339,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.36,
+      "whip": 0.981,
+      "so": 40,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 87.7,
+      "games": 11,
+      "starts": 11,
+      "reliefAppearances": 0,
+      "k9": 4.11,
+      "bb9": 1.44
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.36,
+      "whip": 0.981,
+      "so": 40,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 87.7,
+      "games": 11,
+      "starts": 11,
+      "reliefAppearances": 0,
+      "k9": 4.11,
+      "bb9": 1.44
+    },
+    "scoringStats": {
+      "whip": 0.981,
+      "fip": null,
+      "inningsPitched": 87.7,
+      "strikeoutRate": 4.11,
+      "walkRate": 1.44,
+      "starts": 11,
+      "gamesStarted": 11,
+      "games": 11,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 146.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sfg-1970s-thomaga01",
     "playerId": "thomaga01",
     "playerSlug": "thomaga01",
@@ -1898,6 +2149,85 @@
       "games": 145,
       "plateAppearances": 534,
       "eraAdjustedOffense": 111.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1970s-matthga01",
+    "playerId": "matthga01",
+    "playerSlug": "matthga01",
+    "name": "Gary Matthews",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1970s",
+    "featuredSeason": 1976,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "matthga01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.534,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.802,
+      "hr": 20,
+      "avg": 0.279,
+      "obp": 0.359,
+      "slg": 0.443,
+      "rbi": 84,
+      "sb": 12,
+      "games": 156,
+      "plateAppearances": 671
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.802,
+      "hr": 20,
+      "avg": 0.279,
+      "obp": 0.359,
+      "slg": 0.443,
+      "rbi": 84,
+      "sb": 12,
+      "games": 156,
+      "plateAppearances": 671
+    },
+    "scoringStats": {
+      "obp": 0.359,
+      "slg": 0.443,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 156,
+      "plateAppearances": 671,
+      "eraAdjustedOffense": 117.7
     },
     "pitchingScoringStats": null
   },

@@ -1668,6 +1668,258 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1960s-herbera01",
+    "playerId": "herbera01",
+    "playerSlug": "herbera01",
+    "name": "Ray Herbert",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1960s",
+    "featuredSeason": 1962,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "herbera01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.549,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.276,
+      "so": 115,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 236.7,
+      "games": 35,
+      "starts": 35,
+      "reliefAppearances": 0,
+      "k9": 4.37,
+      "bb9": 2.81
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.276,
+      "so": 115,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 236.7,
+      "games": 35,
+      "starts": 35,
+      "reliefAppearances": 0,
+      "k9": 4.37,
+      "bb9": 2.81
+    },
+    "scoringStats": {
+      "whip": 1.276,
+      "fip": null,
+      "inningsPitched": 236.7,
+      "strikeoutRate": 4.37,
+      "walkRate": 2.81,
+      "starts": 35,
+      "gamesStarted": 35,
+      "games": 35,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 121.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1960s-baumafr01",
+    "playerId": "baumafr01",
+    "playerSlug": "baumafr01",
+    "name": "Frank Baumann",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1960s",
+    "featuredSeason": 1960,
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "baumafr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.53,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.67,
+      "whip": 1.198,
+      "so": 71,
+      "wins": 13,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 185.3,
+      "games": 47,
+      "starts": 20,
+      "reliefAppearances": 27,
+      "k9": 3.45,
+      "bb9": 2.57
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.67,
+      "whip": 1.198,
+      "so": 71,
+      "wins": 13,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 185.3,
+      "games": 47,
+      "starts": 20,
+      "reliefAppearances": 27,
+      "k9": 3.45,
+      "bb9": 2.57
+    },
+    "scoringStats": {
+      "whip": 1.198,
+      "fip": null,
+      "inningsPitched": 185.3,
+      "strikeoutRate": 3.45,
+      "walkRate": 2.57,
+      "starts": 20,
+      "gamesStarted": 20,
+      "games": 47,
+      "reliefAppearances": 27,
+      "eraAdjustedPitching": 145
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1960s-maxwech01",
+    "playerId": "maxwech01",
+    "playerSlug": "maxwech01",
+    "name": "Charlie Maxwell",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1960s",
+    "featuredSeason": 1962,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "maxwech01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.715,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.889,
+      "hr": 9,
+      "avg": 0.296,
+      "obp": 0.394,
+      "slg": 0.495,
+      "rbi": 43,
+      "sb": 0,
+      "games": 69,
+      "plateAppearances": 242
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.889,
+      "hr": 9,
+      "avg": 0.296,
+      "obp": 0.394,
+      "slg": 0.495,
+      "rbi": 43,
+      "sb": 0,
+      "games": 69,
+      "plateAppearances": 242
+    },
+    "scoringStats": {
+      "obp": 0.394,
+      "slg": 0.495,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 69,
+      "plateAppearances": 242,
+      "eraAdjustedOffense": 123.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1960s-romanjo01",
     "playerId": "romanjo01",
     "playerSlug": "romanjo01",
@@ -1743,6 +1995,92 @@
       "games": 122,
       "plateAppearances": 425,
       "eraAdjustedOffense": 114.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1960s-higgide01",
+    "playerId": "higgide01",
+    "playerSlug": "higgide01",
+    "name": "Dennis Higgins",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1960s",
+    "featuredSeason": 1966,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "higgide01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.027,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.52,
+      "whip": 1.065,
+      "so": 86,
+      "wins": 1,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 93,
+      "games": 42,
+      "starts": 1,
+      "reliefAppearances": 41,
+      "k9": 8.32,
+      "bb9": 3.19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.52,
+      "whip": 1.065,
+      "so": 86,
+      "wins": 1,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 93,
+      "games": 42,
+      "starts": 1,
+      "reliefAppearances": 41,
+      "k9": 8.32,
+      "bb9": 3.19
+    },
+    "scoringStats": {
+      "whip": 1.065,
+      "fip": null,
+      "inningsPitched": 93,
+      "strikeoutRate": 8.32,
+      "walkRate": 3.19,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 42,
+      "reliefAppearances": 41,
+      "eraAdjustedPitching": 136.5
     },
     "pitchingScoringStats": null
   },

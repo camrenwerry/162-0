@@ -2466,6 +2466,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "oak-1920s-welchfr01",
+    "playerId": "welchfr01",
+    "playerSlug": "welchfr01",
+    "name": "Frank Welch",
+    "franchiseId": "oak",
+    "teamAbbreviation": "PHA",
+    "teamDisplayName": "Philadelphia Athletics",
+    "historicalTeamName": "Philadelphia Athletics",
+    "team": "PHA",
+    "decade": "1920s",
+    "featuredSeason": 1923,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHA"
+      ],
+      "sourcePlayerId": "welchfr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.953,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.788,
+      "hr": 4,
+      "avg": 0.297,
+      "obp": 0.374,
+      "slg": 0.413,
+      "rbi": 55,
+      "sb": 1,
+      "games": 125,
+      "plateAppearances": 490
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.788,
+      "hr": 4,
+      "avg": 0.297,
+      "obp": 0.374,
+      "slg": 0.413,
+      "rbi": 55,
+      "sb": 1,
+      "games": 125,
+      "plateAppearances": 490
+    },
+    "scoringStats": {
+      "obp": 0.374,
+      "slg": 0.413,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 125,
+      "plateAppearances": 490,
+      "eraAdjustedOffense": 107.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "oak-1920s-pooleji01",
     "playerId": "pooleji01",
     "playerSlug": "pooleji01",
@@ -2541,6 +2620,250 @@
       "games": 112,
       "plateAppearances": 394,
       "eraAdjustedOffense": 107
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1920s-hastybo01",
+    "playerId": "hastybo01",
+    "playerSlug": "hastybo01",
+    "name": "Bob Hasty",
+    "franchiseId": "oak",
+    "teamAbbreviation": "PHA",
+    "teamDisplayName": "Philadelphia Athletics",
+    "historicalTeamName": "Philadelphia Athletics",
+    "team": "PHA",
+    "decade": "1920s",
+    "featuredSeason": 1923,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHA"
+      ],
+      "sourcePlayerId": "hastybo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 34.883,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.44,
+      "whip": 1.422,
+      "so": 56,
+      "wins": 13,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 243.3,
+      "games": 44,
+      "starts": 36,
+      "reliefAppearances": 8,
+      "k9": 2.07,
+      "bb9": 2.66
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.44,
+      "whip": 1.422,
+      "so": 56,
+      "wins": 13,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 243.3,
+      "games": 44,
+      "starts": 36,
+      "reliefAppearances": 8,
+      "k9": 2.07,
+      "bb9": 2.66
+    },
+    "scoringStats": {
+      "whip": 1.422,
+      "fip": null,
+      "inningsPitched": 243.3,
+      "strikeoutRate": 2.07,
+      "walkRate": 2.66,
+      "starts": 36,
+      "gamesStarted": 36,
+      "games": 44,
+      "reliefAppearances": 8,
+      "eraAdjustedPitching": 89.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1920s-speaktr01",
+    "playerId": "speaktr01",
+    "playerSlug": "speaktr01",
+    "name": "Tris Speaker",
+    "franchiseId": "oak",
+    "teamAbbreviation": "PHA",
+    "teamDisplayName": "Philadelphia Athletics",
+    "historicalTeamName": "Philadelphia Athletics",
+    "team": "PHA",
+    "decade": "1920s",
+    "featuredSeason": 1928,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHA"
+      ],
+      "sourcePlayerId": "speaktr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 34.614,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.761,
+      "hr": 3,
+      "avg": 0.267,
+      "obp": 0.31,
+      "slg": 0.45,
+      "rbi": 30,
+      "sb": 5,
+      "games": 64,
+      "plateAppearances": 212
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.761,
+      "hr": 3,
+      "avg": 0.267,
+      "obp": 0.31,
+      "slg": 0.45,
+      "rbi": 30,
+      "sb": 5,
+      "games": 64,
+      "plateAppearances": 212
+    },
+    "scoringStats": {
+      "obp": 0.31,
+      "slg": 0.45,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 64,
+      "plateAppearances": 212,
+      "eraAdjustedOffense": 103.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1920s-frencwa01",
+    "playerId": "frencwa01",
+    "playerSlug": "frencwa01",
+    "name": "Walt French",
+    "franchiseId": "oak",
+    "teamAbbreviation": "PHA",
+    "teamDisplayName": "Philadelphia Athletics",
+    "historicalTeamName": "Philadelphia Athletics",
+    "team": "PHA",
+    "decade": "1920s",
+    "featuredSeason": 1925,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHA"
+      ],
+      "sourcePlayerId": "frencwa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 33.613,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.836,
+      "hr": 0,
+      "avg": 0.37,
+      "obp": 0.376,
+      "slg": 0.46,
+      "rbi": 14,
+      "sb": 1,
+      "games": 67,
+      "plateAppearances": 104
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.836,
+      "hr": 0,
+      "avg": 0.37,
+      "obp": 0.376,
+      "slg": 0.46,
+      "rbi": 14,
+      "sb": 1,
+      "games": 67,
+      "plateAppearances": 104
+    },
+    "scoringStats": {
+      "obp": 0.376,
+      "slg": 0.46,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 67,
+      "plateAppearances": 104,
+      "eraAdjustedOffense": 109.5
     },
     "pitchingScoringStats": null
   },

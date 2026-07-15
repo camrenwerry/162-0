@@ -1857,6 +1857,171 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-1920s-shautjo01",
+    "playerId": "shautjo01",
+    "playerSlug": "shautjo01",
+    "name": "Joe Shaute",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1920s",
+    "featuredSeason": 1924,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "shautjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.167,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.75,
+      "whip": 1.413,
+      "so": 68,
+      "wins": 20,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 283,
+      "games": 46,
+      "starts": 34,
+      "reliefAppearances": 12,
+      "k9": 2.16,
+      "bb9": 2.64
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.75,
+      "whip": 1.413,
+      "so": 68,
+      "wins": 20,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 283,
+      "games": 46,
+      "starts": 34,
+      "reliefAppearances": 12,
+      "k9": 2.16,
+      "bb9": 2.64
+    },
+    "scoringStats": {
+      "whip": 1.413,
+      "fip": null,
+      "inningsPitched": 283,
+      "strikeoutRate": 2.16,
+      "walkRate": 2.64,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 46,
+      "reliefAppearances": 12,
+      "eraAdjustedPitching": 112.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1920s-connojo05",
+    "playerId": "connojo05",
+    "playerSlug": "connojo05",
+    "name": "Joe Connolly",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1920s",
+    "featuredSeason": 1923,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "connojo05"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.074,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.872,
+      "hr": 3,
+      "avg": 0.303,
+      "obp": 0.377,
+      "slg": 0.495,
+      "rbi": 25,
+      "sb": 1,
+      "games": 52,
+      "plateAppearances": 129
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.872,
+      "hr": 3,
+      "avg": 0.303,
+      "obp": 0.377,
+      "slg": 0.495,
+      "rbi": 25,
+      "sb": 1,
+      "games": 52,
+      "plateAppearances": 129
+    },
+    "scoringStats": {
+      "obp": 0.377,
+      "slg": 0.495,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 52,
+      "plateAppearances": 129,
+      "eraAdjustedOffense": 118.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-1920s-chapmra01",
     "playerId": "chapmra01",
     "playerSlug": "chapmra01",
@@ -1932,6 +2097,178 @@
       "games": 111,
       "plateAppearances": 530,
       "eraAdjustedOffense": 110
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1920s-milleja02",
+    "playerId": "milleja02",
+    "playerSlug": "milleja02",
+    "name": "Jake Miller",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1920s",
+    "featuredSeason": 1927,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "milleja02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.522,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.21,
+      "whip": 1.279,
+      "so": 53,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 185.3,
+      "games": 34,
+      "starts": 23,
+      "reliefAppearances": 11,
+      "k9": 2.57,
+      "bb9": 2.33
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.21,
+      "whip": 1.279,
+      "so": 53,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 185.3,
+      "games": 34,
+      "starts": 23,
+      "reliefAppearances": 11,
+      "k9": 2.57,
+      "bb9": 2.33
+    },
+    "scoringStats": {
+      "whip": 1.279,
+      "fip": null,
+      "inningsPitched": 185.3,
+      "strikeoutRate": 2.57,
+      "walkRate": 2.33,
+      "starts": 23,
+      "gamesStarted": 23,
+      "games": 34,
+      "reliefAppearances": 11,
+      "eraAdjustedPitching": 129.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1920s-levsedu01",
+    "playerId": "levsedu01",
+    "playerSlug": "levsedu01",
+    "name": "Emil Levsen",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1920s",
+    "featuredSeason": 1926,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "levsedu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.586,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.41,
+      "whip": 1.348,
+      "so": 53,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 237.3,
+      "games": 33,
+      "starts": 31,
+      "reliefAppearances": 2,
+      "k9": 2.01,
+      "bb9": 3.22
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.41,
+      "whip": 1.348,
+      "so": 53,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 237.3,
+      "games": 33,
+      "starts": 31,
+      "reliefAppearances": 2,
+      "k9": 2.01,
+      "bb9": 3.22
+    },
+    "scoringStats": {
+      "whip": 1.348,
+      "fip": null,
+      "inningsPitched": 237.3,
+      "strikeoutRate": 2.01,
+      "walkRate": 3.22,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 33,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 117.7
     },
     "pitchingScoringStats": null
   },

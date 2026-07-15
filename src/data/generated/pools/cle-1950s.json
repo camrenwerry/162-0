@@ -2378,6 +2378,165 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-1950s-wardpr01",
+    "playerId": "wardpr01",
+    "playerSlug": "wardpr01",
+    "name": "Preston Ward",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1950s",
+    "featuredSeason": 1958,
+    "eligiblePositions": [
+      "1B",
+      "3B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "wardpr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.555,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.832,
+      "hr": 4,
+      "avg": 0.338,
+      "obp": 0.379,
+      "slg": 0.453,
+      "rbi": 21,
+      "sb": 0,
+      "games": 48,
+      "plateAppearances": 162
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.832,
+      "hr": 4,
+      "avg": 0.338,
+      "obp": 0.379,
+      "slg": 0.453,
+      "rbi": 21,
+      "sb": 0,
+      "games": 48,
+      "plateAppearances": 162
+    },
+    "scoringStats": {
+      "obp": 0.379,
+      "slg": 0.453,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 48,
+      "plateAppearances": 162,
+      "eraAdjustedOffense": 118.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1950s-mitchda01",
+    "playerId": "mitchda01",
+    "playerSlug": "mitchda01",
+    "name": "Dale Mitchell",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1950s",
+    "featuredSeason": 1952,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "mitchda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.032,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.801,
+      "hr": 5,
+      "avg": 0.323,
+      "obp": 0.387,
+      "slg": 0.415,
+      "rbi": 58,
+      "sb": 6,
+      "games": 134,
+      "plateAppearances": 571
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.801,
+      "hr": 5,
+      "avg": 0.323,
+      "obp": 0.387,
+      "slg": 0.415,
+      "rbi": 58,
+      "sb": 6,
+      "games": 134,
+      "plateAppearances": 571
+    },
+    "scoringStats": {
+      "obp": 0.387,
+      "slg": 0.415,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 134,
+      "plateAppearances": 571,
+      "eraAdjustedOffense": 115.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-1950s-nixonru01",
     "playerId": "nixonru01",
     "playerSlug": "nixonru01",
@@ -2533,6 +2692,178 @@
       "games": 77,
       "plateAppearances": 270,
       "eraAdjustedOffense": 108.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1950s-wilheho01",
+    "playerId": "wilheho01",
+    "playerSlug": "wilheho01",
+    "name": "Hoyt Wilhelm",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1950s",
+    "featuredSeason": 1958,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "wilheho01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.389,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.49,
+      "whip": 1.162,
+      "so": 57,
+      "wins": 2,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 90.3,
+      "games": 30,
+      "starts": 6,
+      "reliefAppearances": 24,
+      "k9": 5.68,
+      "bb9": 3.49
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.49,
+      "whip": 1.162,
+      "so": 57,
+      "wins": 2,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 90.3,
+      "games": 30,
+      "starts": 6,
+      "reliefAppearances": 24,
+      "k9": 5.68,
+      "bb9": 3.49
+    },
+    "scoringStats": {
+      "whip": 1.162,
+      "fip": null,
+      "inningsPitched": 90.3,
+      "strikeoutRate": 5.68,
+      "walkRate": 3.49,
+      "starts": 6,
+      "gamesStarted": 6,
+      "games": 30,
+      "reliefAppearances": 24,
+      "eraAdjustedPitching": 151.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1950s-newhoha01",
+    "playerId": "newhoha01",
+    "playerSlug": "newhoha01",
+    "name": "Hal Newhouser",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1950s",
+    "featuredSeason": 1954,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "newhoha01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.265,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.51,
+      "whip": 1.114,
+      "so": 25,
+      "wins": 7,
+      "saves": 7,
+      "sv": 7,
+      "inningsPitched": 46.7,
+      "games": 26,
+      "starts": 1,
+      "reliefAppearances": 25,
+      "k9": 4.82,
+      "bb9": 3.47
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.51,
+      "whip": 1.114,
+      "so": 25,
+      "wins": 7,
+      "saves": 7,
+      "sv": 7,
+      "inningsPitched": 46.7,
+      "games": 26,
+      "starts": 1,
+      "reliefAppearances": 25,
+      "k9": 4.82,
+      "bb9": 3.47
+    },
+    "scoringStats": {
+      "whip": 1.114,
+      "fip": null,
+      "inningsPitched": 46.7,
+      "strikeoutRate": 4.82,
+      "walkRate": 3.47,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 26,
+      "reliefAppearances": 25,
+      "eraAdjustedPitching": 148.5
     },
     "pitchingScoringStats": null
   },

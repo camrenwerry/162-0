@@ -607,7 +607,8 @@
     "decade": "1980s",
     "featuredSeason": 1986,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -772,7 +773,8 @@
     "decade": "1980s",
     "featuredSeason": 1989,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -930,7 +932,8 @@
     "decade": "1980s",
     "featuredSeason": 1986,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1833,6 +1836,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tex-1980s-jenkife01",
+    "playerId": "jenkife01",
+    "playerSlug": "jenkife01",
+    "name": "Fergie Jenkins",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "jenkife01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.478,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.77,
+      "whip": 1.222,
+      "so": 129,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 198,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 5.86,
+      "bb9": 2.36
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.77,
+      "whip": 1.222,
+      "so": 129,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 198,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 5.86,
+      "bb9": 2.36
+    },
+    "scoringStats": {
+      "whip": 1.222,
+      "fip": null,
+      "inningsPitched": 198,
+      "strikeoutRate": 5.86,
+      "walkRate": 2.36,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 29,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 106.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tex-1980s-incavpe01",
     "playerId": "incavpe01",
     "playerSlug": "incavpe01",
@@ -1912,6 +2001,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tex-1980s-masonmi01",
+    "playerId": "masonmi01",
+    "playerSlug": "masonmi01",
+    "name": "Mike Mason",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "masonmi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.224,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.61,
+      "whip": 1.139,
+      "so": 113,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 184.3,
+      "games": 36,
+      "starts": 24,
+      "reliefAppearances": 12,
+      "k9": 5.52,
+      "bb9": 2.49
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.61,
+      "whip": 1.139,
+      "so": 113,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 184.3,
+      "games": 36,
+      "starts": 24,
+      "reliefAppearances": 12,
+      "k9": 5.52,
+      "bb9": 2.49
+    },
+    "scoringStats": {
+      "whip": 1.139,
+      "fip": null,
+      "inningsPitched": 184.3,
+      "strikeoutRate": 5.52,
+      "walkRate": 2.49,
+      "starts": 24,
+      "gamesStarted": 24,
+      "games": 36,
+      "reliefAppearances": 12,
+      "eraAdjustedPitching": 110.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tex-1980s-harrato01",
     "playerId": "harrato01",
     "playerSlug": "harrato01",
@@ -1987,6 +2162,178 @@
       "games": 126,
       "plateAppearances": 521,
       "eraAdjustedOffense": 112
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-1980s-guzmajo01",
+    "playerId": "guzmajo01",
+    "playerSlug": "guzmajo01",
+    "name": "Jose Guzman",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "guzmajo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.952,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.7,
+      "whip": 1.268,
+      "so": 157,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 206.7,
+      "games": 30,
+      "starts": 30,
+      "reliefAppearances": 0,
+      "k9": 6.84,
+      "bb9": 3.57
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.7,
+      "whip": 1.268,
+      "so": 157,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 206.7,
+      "games": 30,
+      "starts": 30,
+      "reliefAppearances": 0,
+      "k9": 6.84,
+      "bb9": 3.57
+    },
+    "scoringStats": {
+      "whip": 1.268,
+      "fip": null,
+      "inningsPitched": 206.7,
+      "strikeoutRate": 6.84,
+      "walkRate": 3.57,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 30,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 107.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-1980s-brownke01",
+    "playerId": "brownke01",
+    "playerSlug": "brownke01",
+    "name": "Kevin Brown",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "brownke01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.701,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.241,
+      "so": 104,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 191,
+      "games": 28,
+      "starts": 28,
+      "reliefAppearances": 0,
+      "k9": 4.9,
+      "bb9": 3.3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.241,
+      "so": 104,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 191,
+      "games": 28,
+      "starts": 28,
+      "reliefAppearances": 0,
+      "k9": 4.9,
+      "bb9": 3.3
+    },
+    "scoringStats": {
+      "whip": 1.241,
+      "fip": null,
+      "inningsPitched": 191,
+      "strikeoutRate": 4.9,
+      "walkRate": 3.3,
+      "starts": 28,
+      "gamesStarted": 28,
+      "games": 28,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 116.1
     },
     "pitchingScoringStats": null
   },
@@ -2162,7 +2509,8 @@
     "featuredSeason": 1980,
     "eligiblePositions": [
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

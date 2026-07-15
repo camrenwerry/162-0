@@ -1104,7 +1104,8 @@
     "featuredSeason": 2022,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1829,6 +1830,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cin-2020s-andujmi01",
+    "playerId": "andujmi01",
+    "playerSlug": "andujmi01",
+    "name": "Miguel Andujar",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "andujmi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.86,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.944,
+      "hr": 4,
+      "avg": 0.359,
+      "obp": 0.4,
+      "slg": 0.544,
+      "rbi": 17,
+      "sb": 0,
+      "games": 34,
+      "plateAppearances": 110
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.944,
+      "hr": 4,
+      "avg": 0.359,
+      "obp": 0.4,
+      "slg": 0.544,
+      "rbi": 17,
+      "sb": 0,
+      "games": 34,
+      "plateAppearances": 110
+    },
+    "scoringStats": {
+      "obp": 0.4,
+      "slg": 0.544,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 34,
+      "plateAppearances": 110,
+      "eraAdjustedOffense": 131.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cin-2020s-naquity01",
     "playerId": "naquity01",
     "playerSlug": "naquity01",
@@ -2244,6 +2324,264 @@
       "games": 108,
       "plateAppearances": 329,
       "eraAdjustedOffense": 116.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-2020s-singebr01",
+    "playerId": "singebr01",
+    "playerSlug": "singebr01",
+    "name": "Brady Singer",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "singebr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.892,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.03,
+      "whip": 1.238,
+      "so": 163,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 169.7,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 8.65,
+      "bb9": 3.18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.03,
+      "whip": 1.238,
+      "so": 163,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 169.7,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 8.65,
+      "bb9": 3.18
+    },
+    "scoringStats": {
+      "whip": 1.238,
+      "fip": null,
+      "inningsPitched": 169.7,
+      "strikeoutRate": 8.65,
+      "walkRate": 3.18,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 104.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-2020s-rogerta01",
+    "playerId": "rogerta01",
+    "playerSlug": "rogerta01",
+    "name": "Taylor Rogers",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "rogerta01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.284,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.45,
+      "whip": 1.455,
+      "so": 34,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 33,
+      "games": 40,
+      "starts": 0,
+      "reliefAppearances": 40,
+      "k9": 9.27,
+      "bb9": 5.18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.45,
+      "whip": 1.455,
+      "so": 34,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 33,
+      "games": 40,
+      "starts": 0,
+      "reliefAppearances": 40,
+      "k9": 9.27,
+      "bb9": 5.18
+    },
+    "scoringStats": {
+      "whip": 1.455,
+      "fip": null,
+      "inningsPitched": 33,
+      "strikeoutRate": 9.27,
+      "walkRate": 5.18,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 40,
+      "reliefAppearances": 40,
+      "eraAdjustedPitching": 172
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-2020s-suterbr01",
+    "playerId": "suterbr01",
+    "playerSlug": "suterbr01",
+    "name": "Brent Suter",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "suterbr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.701,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.15,
+      "whip": 1.142,
+      "so": 50,
+      "wins": 1,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 65.7,
+      "games": 47,
+      "starts": 3,
+      "reliefAppearances": 44,
+      "k9": 6.85,
+      "bb9": 1.64
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.15,
+      "whip": 1.142,
+      "so": 50,
+      "wins": 1,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 65.7,
+      "games": 47,
+      "starts": 3,
+      "reliefAppearances": 44,
+      "k9": 6.85,
+      "bb9": 1.64
+    },
+    "scoringStats": {
+      "whip": 1.142,
+      "fip": null,
+      "inningsPitched": 65.7,
+      "strikeoutRate": 6.85,
+      "walkRate": 1.64,
+      "starts": 3,
+      "gamesStarted": 3,
+      "games": 47,
+      "reliefAppearances": 44,
+      "eraAdjustedPitching": 131.3
     },
     "pitchingScoringStats": null
   },

@@ -1111,6 +1111,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "mil-2020s-wilsobr02",
+    "playerId": "wilsobr02",
+    "playerSlug": "wilsobr02",
+    "name": "Bryse Wilson",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIL"
+      ],
+      "sourcePlayerId": "wilsobr02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.616,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.58,
+      "whip": 1.07,
+      "so": 61,
+      "wins": 6,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 76.7,
+      "games": 53,
+      "starts": 0,
+      "reliefAppearances": 53,
+      "k9": 7.16,
+      "bb9": 2.58
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.58,
+      "whip": 1.07,
+      "so": 61,
+      "wins": 6,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 76.7,
+      "games": 53,
+      "starts": 0,
+      "reliefAppearances": 53,
+      "k9": 7.16,
+      "bb9": 2.58
+    },
+    "scoringStats": {
+      "whip": 1.07,
+      "fip": null,
+      "inningsPitched": 76.7,
+      "strikeoutRate": 7.16,
+      "walkRate": 2.58,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 53,
+      "reliefAppearances": 53,
+      "eraAdjustedPitching": 169.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-2020s-koenija01",
+    "playerId": "koenija01",
+    "playerSlug": "koenija01",
+    "name": "Jared Koenig",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIL"
+      ],
+      "sourcePlayerId": "koenija01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.541,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.86,
+      "whip": 1.167,
+      "so": 68,
+      "wins": 6,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 66,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 9.27,
+      "bb9": 2.73
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.86,
+      "whip": 1.167,
+      "so": 68,
+      "wins": 6,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 66,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 9.27,
+      "bb9": 2.73
+    },
+    "scoringStats": {
+      "whip": 1.167,
+      "fip": null,
+      "inningsPitched": 66,
+      "strikeoutRate": 9.27,
+      "walkRate": 2.73,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 147.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "mil-2020s-contrwi02",
     "playerId": "contrwi02",
     "playerSlug": "contrwi02",
@@ -1123,7 +1295,8 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1186,6 +1359,92 @@
       "games": 155,
       "plateAppearances": 679,
       "eraAdjustedOffense": 115.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-2020s-boxbebr01",
+    "playerId": "boxbebr01",
+    "playerSlug": "boxbebr01",
+    "name": "Brad Boxberger",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIL"
+      ],
+      "sourcePlayerId": "boxbebr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.645,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 1.067,
+      "so": 83,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 64.7,
+      "games": 71,
+      "starts": 0,
+      "reliefAppearances": 71,
+      "k9": 11.55,
+      "bb9": 3.48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 1.067,
+      "so": 83,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 64.7,
+      "games": 71,
+      "starts": 0,
+      "reliefAppearances": 71,
+      "k9": 11.55,
+      "bb9": 3.48
+    },
+    "scoringStats": {
+      "whip": 1.067,
+      "fip": null,
+      "inningsPitched": 64.7,
+      "strikeoutRate": 11.55,
+      "walkRate": 3.48,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 71,
+      "reliefAppearances": 71,
+      "eraAdjustedPitching": 125.6
     },
     "pitchingScoringStats": null
   },
@@ -1288,7 +1547,8 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1437,6 +1697,92 @@
       "games": 23,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 139.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-2020s-cousija01",
+    "playerId": "cousija01",
+    "playerSlug": "cousija01",
+    "name": "Jake Cousins",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIL"
+      ],
+      "sourcePlayerId": "cousija01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.821,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.7,
+      "whip": 1.167,
+      "so": 44,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30,
+      "games": 30,
+      "starts": 0,
+      "reliefAppearances": 30,
+      "k9": 13.2,
+      "bb9": 5.7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.7,
+      "whip": 1.167,
+      "so": 44,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30,
+      "games": 30,
+      "starts": 0,
+      "reliefAppearances": 30,
+      "k9": 13.2,
+      "bb9": 5.7
+    },
+    "scoringStats": {
+      "whip": 1.167,
+      "fip": null,
+      "inningsPitched": 30,
+      "strikeoutRate": 13.2,
+      "walkRate": 5.7,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 30,
+      "reliefAppearances": 30,
+      "eraAdjustedPitching": 155.4
     },
     "pitchingScoringStats": null
   },

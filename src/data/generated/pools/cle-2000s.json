@@ -98,7 +98,8 @@
     "decade": "2000s",
     "featuredSeason": 2000,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -177,7 +178,8 @@
     "decade": "2000s",
     "featuredSeason": 2002,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -674,6 +676,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-2000s-hafnetr01",
+    "playerId": "hafnetr01",
+    "playerSlug": "hafnetr01",
+    "name": "Travis Hafner",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "hafnetr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 63.412,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.097,
+      "hr": 42,
+      "avg": 0.308,
+      "obp": 0.439,
+      "slg": 0.659,
+      "rbi": 117,
+      "sb": 0,
+      "games": 129,
+      "plateAppearances": 563
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.097,
+      "hr": 42,
+      "avg": 0.308,
+      "obp": 0.439,
+      "slg": 0.659,
+      "rbi": 117,
+      "sb": 0,
+      "games": 129,
+      "plateAppearances": 563
+    },
+    "scoringStats": {
+      "obp": 0.439,
+      "slg": 0.659,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 129,
+      "plateAppearances": 563,
+      "eraAdjustedOffense": 141.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-2000s-rhodear01",
     "playerId": "rhodear01",
     "playerSlug": "rhodear01",
@@ -756,6 +837,92 @@
       "games": 47,
       "reliefAppearances": 47,
       "eraAdjustedPitching": 209.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-2000s-howrybo01",
+    "playerId": "howrybo01",
+    "playerSlug": "howrybo01",
+    "name": "Bob Howry",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "howrybo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.5,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 0.89,
+      "so": 48,
+      "wins": 7,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 73,
+      "games": 79,
+      "starts": 0,
+      "reliefAppearances": 79,
+      "k9": 5.92,
+      "bb9": 1.97
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 0.89,
+      "so": 48,
+      "wins": 7,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 73,
+      "games": 79,
+      "starts": 0,
+      "reliefAppearances": 79,
+      "k9": 5.92,
+      "bb9": 1.97
+    },
+    "scoringStats": {
+      "whip": 0.89,
+      "fip": null,
+      "inningsPitched": 73,
+      "strikeoutRate": 5.92,
+      "walkRate": 1.97,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 79,
+      "reliefAppearances": 79,
+      "eraAdjustedPitching": 176.4
     },
     "pitchingScoringStats": null
   },
@@ -858,7 +1025,8 @@
     "decade": "2000s",
     "featuredSeason": 2001,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1004,23 +1172,23 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "cle-2000s-hafnetr01",
-    "playerId": "hafnetr01",
-    "playerSlug": "hafnetr01",
-    "name": "Travis Hafner",
+    "id": "cle-2000s-cabrefe01",
+    "playerId": "cabrefe01",
+    "playerSlug": "cabrefe01",
+    "name": "Fernando Cabrera",
     "franchiseId": "cle",
     "teamAbbreviation": "CLE",
     "teamDisplayName": "Cleveland Indians",
     "historicalTeamName": "Cleveland Indians",
     "team": "CLE",
     "decade": "2000s",
-    "featuredSeason": 2004,
+    "featuredSeason": 2005,
     "eligiblePositions": [
-      "1B"
+      "RP"
     ],
     "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "L",
+    "pitchingRole": "RP",
+    "bats": "R",
     "throws": "R",
     "sourceMetadata": {
       "verified": true,
@@ -1031,54 +1199,61 @@
       "lahmanTeamIds": [
         "CLE"
       ],
-      "sourcePlayerId": "hafnetr01"
+      "sourcePlayerId": "cabrefe01"
     },
     "sourceNotes": "",
     "notes": null,
     "manualPositionOverride": false,
     "selectionMetadata": {
-      "score": 55.429,
+      "score": 54.864,
       "formulaVersion": "lahman-1.0"
     },
-    "playerType": "hitter",
-    "type": "hitter",
+    "playerType": "pitcher",
+    "type": "pitcher",
     "visibleStats": {
       "war": null,
-      "opsPlus": null,
-      "ops": 0.993,
-      "hr": 28,
-      "avg": 0.311,
-      "obp": 0.41,
-      "slg": 0.583,
-      "rbi": 109,
-      "sb": 3,
-      "games": 140,
-      "plateAppearances": 573
+      "eraPlus": null,
+      "era": 1.47,
+      "whip": 1.141,
+      "so": 29,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30.7,
+      "games": 15,
+      "starts": 0,
+      "reliefAppearances": 15,
+      "k9": 8.51,
+      "bb9": 3.23
     },
     "pitchingVisibleStats": null,
     "stats": {
       "war": null,
-      "opsPlus": null,
-      "ops": 0.993,
-      "hr": 28,
-      "avg": 0.311,
-      "obp": 0.41,
-      "slg": 0.583,
-      "rbi": 109,
-      "sb": 3,
-      "games": 140,
-      "plateAppearances": 573
+      "eraPlus": null,
+      "era": 1.47,
+      "whip": 1.141,
+      "so": 29,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30.7,
+      "games": 15,
+      "starts": 0,
+      "reliefAppearances": 15,
+      "k9": 8.51,
+      "bb9": 3.23
     },
     "scoringStats": {
-      "obp": 0.41,
-      "slg": 0.583,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 140,
-      "plateAppearances": 573,
-      "eraAdjustedOffense": 128.8
+      "whip": 1.141,
+      "fip": null,
+      "inningsPitched": 30.7,
+      "strikeoutRate": 8.51,
+      "walkRate": 3.23,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 15,
+      "reliefAppearances": 15,
+      "eraAdjustedPitching": 296.5
     },
     "pitchingScoringStats": null
   },
@@ -1165,6 +1340,92 @@
       "games": 30,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 152.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-2000s-shueypa01",
+    "playerId": "shueypa01",
+    "playerSlug": "shueypa01",
+    "name": "Paul Shuey",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "shueypa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.187,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.41,
+      "whip": 1.098,
+      "so": 39,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 37.3,
+      "games": 39,
+      "starts": 0,
+      "reliefAppearances": 39,
+      "k9": 9.4,
+      "bb9": 2.41
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.41,
+      "whip": 1.098,
+      "so": 39,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 37.3,
+      "games": 39,
+      "starts": 0,
+      "reliefAppearances": 39,
+      "k9": 9.4,
+      "bb9": 2.41
+    },
+    "scoringStats": {
+      "whip": 1.098,
+      "fip": null,
+      "inningsPitched": 37.3,
+      "strikeoutRate": 9.4,
+      "walkRate": 2.41,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 39,
+      "reliefAppearances": 39,
+      "eraAdjustedPitching": 184.9
     },
     "pitchingScoringStats": null
   },
@@ -1592,7 +1853,8 @@
     "featuredSeason": 2008,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1655,6 +1917,85 @@
       "games": 94,
       "plateAppearances": 370,
       "eraAdjustedOffense": 125.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-2000s-perezed01",
+    "playerId": "perezed01",
+    "playerSlug": "perezed01",
+    "name": "Eduardo Perez",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "perezed01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.39,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.979,
+      "hr": 8,
+      "avg": 0.303,
+      "obp": 0.343,
+      "slg": 0.636,
+      "rbi": 22,
+      "sb": 0,
+      "games": 37,
+      "plateAppearances": 108
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.979,
+      "hr": 8,
+      "avg": 0.303,
+      "obp": 0.343,
+      "slg": 0.636,
+      "rbi": 22,
+      "sb": 0,
+      "games": 37,
+      "plateAppearances": 108
+    },
+    "scoringStats": {
+      "obp": 0.343,
+      "slg": 0.636,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 37,
+      "plateAppearances": 108,
+      "eraAdjustedOffense": 126.1
     },
     "pitchingScoringStats": null
   },
@@ -1751,7 +2092,8 @@
     "featuredSeason": 2000,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1909,7 +2251,8 @@
     "decade": "2000s",
     "featuredSeason": 2001,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2148,7 +2491,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -1948,6 +1948,172 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-1930s-hildeor01",
+    "playerId": "hildeor01",
+    "playerSlug": "hildeor01",
+    "name": "Oral Hildebrand",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1930s",
+    "featuredSeason": 1933,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "hildeor01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.343,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.76,
+      "whip": 1.33,
+      "so": 90,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 220.3,
+      "games": 36,
+      "starts": 31,
+      "reliefAppearances": 5,
+      "k9": 3.68,
+      "bb9": 3.59
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.76,
+      "whip": 1.33,
+      "so": 90,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 220.3,
+      "games": 36,
+      "starts": 31,
+      "reliefAppearances": 5,
+      "k9": 3.68,
+      "bb9": 3.59
+    },
+    "scoringStats": {
+      "whip": 1.33,
+      "fip": null,
+      "inningsPitched": 220.3,
+      "strikeoutRate": 3.68,
+      "walkRate": 3.59,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 36,
+      "reliefAppearances": 5,
+      "eraAdjustedPitching": 113.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1930s-falkbi01",
+    "playerId": "falkbi01",
+    "playerSlug": "falkbi01",
+    "name": "Bibb Falk",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1930s",
+    "featuredSeason": 1930,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "falkbi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.721,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.858,
+      "hr": 4,
+      "avg": 0.325,
+      "obp": 0.397,
+      "slg": 0.461,
+      "rbi": 36,
+      "sb": 2,
+      "games": 82,
+      "plateAppearances": 218
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.858,
+      "hr": 4,
+      "avg": 0.325,
+      "obp": 0.397,
+      "slg": 0.461,
+      "rbi": 36,
+      "sb": 2,
+      "games": 82,
+      "plateAppearances": 218
+    },
+    "scoringStats": {
+      "obp": 0.397,
+      "slg": 0.461,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 82,
+      "plateAppearances": 218,
+      "eraAdjustedOffense": 111.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-1930s-eisenha01",
     "playerId": "eisenha01",
     "playerSlug": "eisenha01",
@@ -2272,6 +2438,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-1930s-milnaal01",
+    "playerId": "milnaal01",
+    "playerSlug": "milnaal01",
+    "name": "Al Milnar",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1930s",
+    "featuredSeason": 1939,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "milnaal01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.605,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.79,
+      "whip": 1.488,
+      "so": 76,
+      "wins": 14,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 209,
+      "games": 37,
+      "starts": 26,
+      "reliefAppearances": 11,
+      "k9": 3.27,
+      "bb9": 4.26
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.79,
+      "whip": 1.488,
+      "so": 76,
+      "wins": 14,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 209,
+      "games": 37,
+      "starts": 26,
+      "reliefAppearances": 11,
+      "k9": 3.27,
+      "bb9": 4.26
+    },
+    "scoringStats": {
+      "whip": 1.488,
+      "fip": null,
+      "inningsPitched": 209,
+      "strikeoutRate": 3.27,
+      "walkRate": 4.26,
+      "starts": 26,
+      "gamesStarted": 26,
+      "games": 37,
+      "reliefAppearances": 11,
+      "eraAdjustedPitching": 121.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-1930s-burnejo01",
     "playerId": "burnejo01",
     "playerSlug": "burnejo01",
@@ -2348,6 +2600,87 @@
       "games": 129,
       "plateAppearances": 573,
       "eraAdjustedOffense": 99.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1930s-grimeos01",
+    "playerId": "grimeos01",
+    "playerSlug": "grimeos01",
+    "name": "Oscar Grimes",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1930s",
+    "featuredSeason": 1939,
+    "eligiblePositions": [
+      "1B",
+      "2B",
+      "SS"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "grimeos01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.551,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.753,
+      "hr": 4,
+      "avg": 0.269,
+      "obp": 0.368,
+      "slg": 0.385,
+      "rbi": 56,
+      "sb": 8,
+      "games": 119,
+      "plateAppearances": 432
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.753,
+      "hr": 4,
+      "avg": 0.269,
+      "obp": 0.368,
+      "slg": 0.385,
+      "rbi": 56,
+      "sb": 8,
+      "games": 119,
+      "plateAppearances": 432
+    },
+    "scoringStats": {
+      "obp": 0.368,
+      "slg": 0.385,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 119,
+      "plateAppearances": 432,
+      "eraAdjustedOffense": 99.4
     },
     "pitchingScoringStats": null
   },

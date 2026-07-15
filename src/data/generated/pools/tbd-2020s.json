@@ -1462,6 +1462,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tbd-2020s-thompry02",
+    "playerId": "thompry02",
+    "playerSlug": "thompry02",
+    "name": "Ryan Thompson",
+    "franchiseId": "tbd",
+    "teamAbbreviation": "TBR",
+    "teamDisplayName": "Tampa Bay Rays",
+    "historicalTeamName": "Tampa Bay Rays",
+    "team": "TBR",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TBA"
+      ],
+      "sourcePlayerId": "thompry02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.576,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.38,
+      "whip": 1.029,
+      "so": 37,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 34,
+      "games": 36,
+      "starts": 0,
+      "reliefAppearances": 36,
+      "k9": 9.79,
+      "bb9": 2.38
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.38,
+      "whip": 1.029,
+      "so": 37,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 34,
+      "games": 36,
+      "starts": 0,
+      "reliefAppearances": 36,
+      "k9": 9.79,
+      "bb9": 2.38
+    },
+    "scoringStats": {
+      "whip": 1.029,
+      "fip": null,
+      "inningsPitched": 34,
+      "strikeoutRate": 9.79,
+      "walkRate": 2.38,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 36,
+      "reliefAppearances": 36,
+      "eraAdjustedPitching": 181.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tbd-2020s-kellyke02",
+    "playerId": "kellyke02",
+    "playerSlug": "kellyke02",
+    "name": "Kevin Kelly",
+    "franchiseId": "tbd",
+    "teamAbbreviation": "TBR",
+    "teamDisplayName": "Tampa Bay Rays",
+    "historicalTeamName": "Tampa Bay Rays",
+    "team": "TBR",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TBA"
+      ],
+      "sourcePlayerId": "kellyke02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.116,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.67,
+      "whip": 0.962,
+      "so": 63,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 70.7,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 8.02,
+      "bb9": 1.15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.67,
+      "whip": 0.962,
+      "so": 63,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 70.7,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 8.02,
+      "bb9": 1.15
+    },
+    "scoringStats": {
+      "whip": 0.962,
+      "fip": null,
+      "inningsPitched": 70.7,
+      "strikeoutRate": 8.02,
+      "walkRate": 1.15,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 68,
+      "reliefAppearances": 68,
+      "eraAdjustedPitching": 150.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tbd-2020s-eflinza01",
     "playerId": "eflinza01",
     "playerSlug": "eflinza01",
@@ -1544,6 +1716,92 @@
       "games": 31,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 122.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tbd-2020s-raleybr01",
+    "playerId": "raleybr01",
+    "playerSlug": "raleybr01",
+    "name": "Brooks Raley",
+    "franchiseId": "tbd",
+    "teamAbbreviation": "TBR",
+    "teamDisplayName": "Tampa Bay Rays",
+    "historicalTeamName": "Tampa Bay Rays",
+    "team": "TBR",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TBA"
+      ],
+      "sourcePlayerId": "raleybr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.531,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 0.969,
+      "so": 61,
+      "wins": 1,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 53.7,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 10.23,
+      "bb9": 2.52
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 0.969,
+      "so": 61,
+      "wins": 1,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 53.7,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 10.23,
+      "bb9": 2.52
+    },
+    "scoringStats": {
+      "whip": 0.969,
+      "fip": null,
+      "inningsPitched": 53.7,
+      "strikeoutRate": 10.23,
+      "walkRate": 2.52,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 60,
+      "reliefAppearances": 60,
+      "eraAdjustedPitching": 144.5
     },
     "pitchingScoringStats": null
   },
@@ -1798,7 +2056,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1861,6 +2120,92 @@
       "games": 136,
       "plateAppearances": 600,
       "eraAdjustedOffense": 127.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tbd-2020s-wislema01",
+    "playerId": "wislema01",
+    "playerSlug": "wislema01",
+    "name": "Matt Wisler",
+    "franchiseId": "tbd",
+    "teamAbbreviation": "TBR",
+    "teamDisplayName": "Tampa Bay Rays",
+    "historicalTeamName": "Tampa Bay Rays",
+    "team": "TBR",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TBA"
+      ],
+      "sourcePlayerId": "wislema01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.509,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.25,
+      "whip": 1,
+      "so": 35,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 44,
+      "games": 39,
+      "starts": 5,
+      "reliefAppearances": 34,
+      "k9": 7.16,
+      "bb9": 2.86
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.25,
+      "whip": 1,
+      "so": 35,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 44,
+      "games": 39,
+      "starts": 5,
+      "reliefAppearances": 34,
+      "k9": 7.16,
+      "bb9": 2.86
+    },
+    "scoringStats": {
+      "whip": 1,
+      "fip": null,
+      "inningsPitched": 44,
+      "strikeoutRate": 7.16,
+      "walkRate": 2.86,
+      "starts": 5,
+      "gamesStarted": 5,
+      "games": 39,
+      "reliefAppearances": 34,
+      "eraAdjustedPitching": 172.3
     },
     "pitchingScoringStats": null
   },
@@ -1959,7 +2304,8 @@
     "featuredSeason": 2023,
     "eligiblePositions": [
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2120,7 +2466,8 @@
       "1B",
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2200,7 +2547,8 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

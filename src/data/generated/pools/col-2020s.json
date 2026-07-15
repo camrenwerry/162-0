@@ -265,7 +265,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -504,7 +505,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -666,7 +668,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1811,7 +1814,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2046,6 +2050,85 @@
       "games": 55,
       "reliefAppearances": 55,
       "eraAdjustedPitching": 106.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "col-2020s-blackch02",
+    "playerId": "blackch02",
+    "playerSlug": "blackch02",
+    "name": "Charlie Blackmon",
+    "franchiseId": "col",
+    "teamAbbreviation": "COL",
+    "teamDisplayName": "Colorado Rockies",
+    "historicalTeamName": "Colorado Rockies",
+    "team": "COL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "COL"
+      ],
+      "sourcePlayerId": "blackch02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.104,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.761,
+      "hr": 13,
+      "avg": 0.27,
+      "obp": 0.351,
+      "slg": 0.411,
+      "rbi": 78,
+      "sb": 3,
+      "games": 150,
+      "plateAppearances": 582
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.761,
+      "hr": 13,
+      "avg": 0.27,
+      "obp": 0.351,
+      "slg": 0.411,
+      "rbi": 78,
+      "sb": 3,
+      "games": 150,
+      "plateAppearances": 582
+    },
+    "scoringStats": {
+      "obp": 0.351,
+      "slg": 0.411,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 150,
+      "plateAppearances": 582,
+      "eraAdjustedOffense": 105
     },
     "pitchingScoringStats": null
   },
@@ -2308,6 +2391,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "col-2020s-gilbrlu01",
+    "playerId": "gilbrlu01",
+    "playerSlug": "gilbrlu01",
+    "name": "Lucas Gilbreath",
+    "franchiseId": "col",
+    "teamAbbreviation": "COL",
+    "teamDisplayName": "Colorado Rockies",
+    "historicalTeamName": "Colorado Rockies",
+    "team": "COL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "COL"
+      ],
+      "sourcePlayerId": "gilbrlu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.371,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.38,
+      "whip": 1.313,
+      "so": 44,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 42.7,
+      "games": 47,
+      "starts": 1,
+      "reliefAppearances": 46,
+      "k9": 9.28,
+      "bb9": 4.85
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.38,
+      "whip": 1.313,
+      "so": 44,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 42.7,
+      "games": 47,
+      "starts": 1,
+      "reliefAppearances": 46,
+      "k9": 9.28,
+      "bb9": 4.85
+    },
+    "scoringStats": {
+      "whip": 1.313,
+      "fip": null,
+      "inningsPitched": 42.7,
+      "strikeoutRate": 9.28,
+      "walkRate": 4.85,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 47,
+      "reliefAppearances": 46,
+      "eraAdjustedPitching": 124.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "col-2020s-gombeau01",
     "playerId": "gombeau01",
     "playerSlug": "gombeau01",
@@ -2394,6 +2563,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "col-2020s-kinlety01",
+    "playerId": "kinlety01",
+    "playerSlug": "kinlety01",
+    "name": "Tyler Kinley",
+    "franchiseId": "col",
+    "teamAbbreviation": "COL",
+    "teamDisplayName": "Colorado Rockies",
+    "historicalTeamName": "Colorado Rockies",
+    "team": "COL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "COL"
+      ],
+      "sourcePlayerId": "kinlety01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.517,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.73,
+      "whip": 1.209,
+      "so": 68,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 70.3,
+      "games": 70,
+      "starts": 0,
+      "reliefAppearances": 70,
+      "k9": 8.7,
+      "bb9": 3.33
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.73,
+      "whip": 1.209,
+      "so": 68,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 70.3,
+      "games": 70,
+      "starts": 0,
+      "reliefAppearances": 70,
+      "k9": 8.7,
+      "bb9": 3.33
+    },
+    "scoringStats": {
+      "whip": 1.209,
+      "fip": null,
+      "inningsPitched": 70.3,
+      "strikeoutRate": 8.7,
+      "walkRate": 3.33,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 70,
+      "reliefAppearances": 70,
+      "eraAdjustedPitching": 88.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "col-2020s-moustmi01",
     "playerId": "moustmi01",
     "playerSlug": "moustmi01",
@@ -2470,6 +2725,92 @@
       "games": 47,
       "plateAppearances": 136,
       "eraAdjustedOffense": 107.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "col-2020s-freelky01",
+    "playerId": "freelky01",
+    "playerSlug": "freelky01",
+    "name": "Kyle Freeland",
+    "franchiseId": "col",
+    "teamAbbreviation": "COL",
+    "teamDisplayName": "Colorado Rockies",
+    "historicalTeamName": "Colorado Rockies",
+    "team": "COL",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "COL"
+      ],
+      "sourcePlayerId": "freelky01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 34.963,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.53,
+      "whip": 1.408,
+      "so": 131,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 174.7,
+      "games": 31,
+      "starts": 31,
+      "reliefAppearances": 0,
+      "k9": 6.75,
+      "bb9": 2.73
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.53,
+      "whip": 1.408,
+      "so": 131,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 174.7,
+      "games": 31,
+      "starts": 31,
+      "reliefAppearances": 0,
+      "k9": 6.75,
+      "bb9": 2.73
+    },
+    "scoringStats": {
+      "whip": 1.408,
+      "fip": null,
+      "inningsPitched": 174.7,
+      "strikeoutRate": 6.75,
+      "walkRate": 2.73,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 31,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 89.3
     },
     "pitchingScoringStats": null
   },

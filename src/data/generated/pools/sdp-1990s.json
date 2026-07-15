@@ -2072,6 +2072,93 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sdp-1990s-sandesc02",
+    "playerId": "sandesc02",
+    "playerSlug": "sandesc02",
+    "name": "Scott Sanders",
+    "franchiseId": "sdp",
+    "teamAbbreviation": "SDP",
+    "teamDisplayName": "San Diego Padres",
+    "historicalTeamName": "San Diego Padres",
+    "team": "SDP",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SDN"
+      ],
+      "sourcePlayerId": "sandesc02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.224,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.38,
+      "whip": 1.146,
+      "so": 157,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 144,
+      "games": 46,
+      "starts": 16,
+      "reliefAppearances": 30,
+      "k9": 9.81,
+      "bb9": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.38,
+      "whip": 1.146,
+      "so": 157,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 144,
+      "games": 46,
+      "starts": 16,
+      "reliefAppearances": 30,
+      "k9": 9.81,
+      "bb9": 3
+    },
+    "scoringStats": {
+      "whip": 1.146,
+      "fip": null,
+      "inningsPitched": 144,
+      "strikeoutRate": 9.81,
+      "walkRate": 3,
+      "starts": 16,
+      "gamesStarted": 16,
+      "games": 46,
+      "reliefAppearances": 30,
+      "eraAdjustedPitching": 124.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sdp-1990s-jacksda03",
     "playerId": "jacksda03",
     "playerSlug": "jacksda03",
@@ -2230,6 +2317,257 @@
       "games": 102,
       "plateAppearances": 256,
       "eraAdjustedOffense": 115.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sdp-1990s-rodriri02",
+    "playerId": "rodriri02",
+    "playerSlug": "rodriri02",
+    "name": "Rich Rodriguez",
+    "franchiseId": "sdp",
+    "teamAbbreviation": "SDP",
+    "teamDisplayName": "San Diego Padres",
+    "historicalTeamName": "San Diego Padres",
+    "team": "SDP",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SDN"
+      ],
+      "sourcePlayerId": "rodriri02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.675,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.37,
+      "whip": 1.165,
+      "so": 64,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 91,
+      "games": 61,
+      "starts": 1,
+      "reliefAppearances": 60,
+      "k9": 6.33,
+      "bb9": 2.87
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.37,
+      "whip": 1.165,
+      "so": 64,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 91,
+      "games": 61,
+      "starts": 1,
+      "reliefAppearances": 60,
+      "k9": 6.33,
+      "bb9": 2.87
+    },
+    "scoringStats": {
+      "whip": 1.165,
+      "fip": null,
+      "inningsPitched": 91,
+      "strikeoutRate": 6.33,
+      "walkRate": 2.87,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 61,
+      "reliefAppearances": 60,
+      "eraAdjustedPitching": 147.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sdp-1990s-hitchst01",
+    "playerId": "hitchst01",
+    "playerSlug": "hitchst01",
+    "name": "Sterling Hitchcock",
+    "franchiseId": "sdp",
+    "teamAbbreviation": "SDP",
+    "teamDisplayName": "San Diego Padres",
+    "historicalTeamName": "San Diego Padres",
+    "team": "SDP",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SDN"
+      ],
+      "sourcePlayerId": "hitchst01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.206,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.11,
+      "whip": 1.352,
+      "so": 194,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 205.7,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 8.49,
+      "bb9": 3.33
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.11,
+      "whip": 1.352,
+      "so": 194,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 205.7,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 8.49,
+      "bb9": 3.33
+    },
+    "scoringStats": {
+      "whip": 1.352,
+      "fip": null,
+      "inningsPitched": 205.7,
+      "strikeoutRate": 8.49,
+      "walkRate": 3.33,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 33,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 110.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sdp-1990s-joynewa01",
+    "playerId": "joynewa01",
+    "playerSlug": "joynewa01",
+    "name": "Wally Joyner",
+    "franchiseId": "sdp",
+    "teamAbbreviation": "SDP",
+    "teamDisplayName": "San Diego Padres",
+    "historicalTeamName": "San Diego Padres",
+    "team": "SDP",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SDN"
+      ],
+      "sourcePlayerId": "joynewa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.203,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.876,
+      "hr": 13,
+      "avg": 0.327,
+      "obp": 0.39,
+      "slg": 0.486,
+      "rbi": 83,
+      "sb": 3,
+      "games": 135,
+      "plateAppearances": 518
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.876,
+      "hr": 13,
+      "avg": 0.327,
+      "obp": 0.39,
+      "slg": 0.486,
+      "rbi": 83,
+      "sb": 3,
+      "games": 135,
+      "plateAppearances": 518
+    },
+    "scoringStats": {
+      "obp": 0.39,
+      "slg": 0.486,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 135,
+      "plateAppearances": 518,
+      "eraAdjustedOffense": 117.8
     },
     "pitchingScoringStats": null
   },

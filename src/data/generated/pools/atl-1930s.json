@@ -1582,6 +1582,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "atl-1930s-smithbo02",
+    "playerId": "smithbo02",
+    "playerSlug": "smithbo02",
+    "name": "Bob Smith",
+    "franchiseId": "atl",
+    "teamAbbreviation": "BSN",
+    "teamDisplayName": "Boston Braves",
+    "historicalTeamName": "Boston Braves",
+    "team": "BSN",
+    "decade": "1930s",
+    "featuredSeason": 1930,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BSN"
+      ],
+      "sourcePlayerId": "smithbo02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.043,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.26,
+      "whip": 1.511,
+      "so": 84,
+      "wins": 10,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 219.7,
+      "games": 38,
+      "starts": 24,
+      "reliefAppearances": 14,
+      "k9": 3.44,
+      "bb9": 3.48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.26,
+      "whip": 1.511,
+      "so": 84,
+      "wins": 10,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 219.7,
+      "games": 38,
+      "starts": 24,
+      "reliefAppearances": 14,
+      "k9": 3.44,
+      "bb9": 3.48
+    },
+    "scoringStats": {
+      "whip": 1.511,
+      "fip": null,
+      "inningsPitched": 219.7,
+      "strikeoutRate": 3.44,
+      "walkRate": 3.48,
+      "starts": 24,
+      "gamesStarted": 24,
+      "games": 38,
+      "reliefAppearances": 14,
+      "eraAdjustedPitching": 116.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "atl-1930s-jordabu01",
     "playerId": "jordabu01",
     "playerSlug": "jordabu01",
@@ -1657,6 +1743,92 @@
       "games": 138,
       "plateAppearances": 610,
       "eraAdjustedOffense": 108.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1930s-posedbi01",
+    "playerId": "posedbi01",
+    "playerSlug": "posedbi01",
+    "name": "Bill Posedel",
+    "franchiseId": "atl",
+    "teamAbbreviation": "BSN",
+    "teamDisplayName": "Boston Bees",
+    "historicalTeamName": "Boston Bees",
+    "team": "BSN",
+    "decade": "1930s",
+    "featuredSeason": 1939,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BSN"
+      ],
+      "sourcePlayerId": "posedbi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.817,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.92,
+      "whip": 1.355,
+      "so": 73,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 220.7,
+      "games": 33,
+      "starts": 29,
+      "reliefAppearances": 4,
+      "k9": 2.98,
+      "bb9": 3.18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.92,
+      "whip": 1.355,
+      "so": 73,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 220.7,
+      "games": 33,
+      "starts": 29,
+      "reliefAppearances": 4,
+      "k9": 2.98,
+      "bb9": 3.18
+    },
+    "scoringStats": {
+      "whip": 1.355,
+      "fip": null,
+      "inningsPitched": 220.7,
+      "strikeoutRate": 2.98,
+      "walkRate": 3.18,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 33,
+      "reliefAppearances": 4,
+      "eraAdjustedPitching": 100
     },
     "pitchingScoringStats": null
   },
@@ -1815,6 +1987,171 @@
       "games": 82,
       "plateAppearances": 244,
       "eraAdjustedOffense": 103.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1930s-leeha01",
+    "playerId": "leeha01",
+    "playerSlug": "leeha01",
+    "name": "Hal Lee",
+    "franchiseId": "atl",
+    "teamAbbreviation": "BSN",
+    "teamDisplayName": "Boston Braves",
+    "historicalTeamName": "Boston Braves",
+    "team": "BSN",
+    "decade": "1930s",
+    "featuredSeason": 1934,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BSN"
+      ],
+      "sourcePlayerId": "leeha01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.413,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.758,
+      "hr": 8,
+      "avg": 0.292,
+      "obp": 0.353,
+      "slg": 0.405,
+      "rbi": 79,
+      "sb": 3,
+      "games": 139,
+      "plateAppearances": 574
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.758,
+      "hr": 8,
+      "avg": 0.292,
+      "obp": 0.353,
+      "slg": 0.405,
+      "rbi": 79,
+      "sb": 3,
+      "games": 139,
+      "plateAppearances": 574
+    },
+    "scoringStats": {
+      "obp": 0.353,
+      "slg": 0.405,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 139,
+      "plateAppearances": 574,
+      "eraAdjustedOffense": 104.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1930s-rhemfl01",
+    "playerId": "rhemfl01",
+    "playerSlug": "rhemfl01",
+    "name": "Flint Rhem",
+    "franchiseId": "atl",
+    "teamAbbreviation": "BSN",
+    "teamDisplayName": "Boston Braves",
+    "historicalTeamName": "Boston Braves",
+    "team": "BSN",
+    "decade": "1930s",
+    "featuredSeason": 1934,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BSN"
+      ],
+      "sourcePlayerId": "rhemfl01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.322,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.6,
+      "whip": 1.323,
+      "so": 56,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 152.7,
+      "games": 25,
+      "starts": 20,
+      "reliefAppearances": 5,
+      "k9": 3.3,
+      "bb9": 2.24
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.6,
+      "whip": 1.323,
+      "so": 56,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 152.7,
+      "games": 25,
+      "starts": 20,
+      "reliefAppearances": 5,
+      "k9": 3.3,
+      "bb9": 2.24
+    },
+    "scoringStats": {
+      "whip": 1.323,
+      "fip": null,
+      "inningsPitched": 152.7,
+      "strikeoutRate": 3.3,
+      "walkRate": 2.24,
+      "starts": 20,
+      "gamesStarted": 20,
+      "games": 25,
+      "reliefAppearances": 5,
+      "eraAdjustedPitching": 113
     },
     "pitchingScoringStats": null
   },

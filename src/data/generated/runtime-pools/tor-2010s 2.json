@@ -525,7 +525,8 @@
     "decade": "2010s",
     "featuredSeason": 2012,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -557,6 +558,58 @@
       "games": 151,
       "plateAppearances": 644,
       "eraAdjustedOffense": 128.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-2010s-ohse01",
+    "playerId": "ohse01",
+    "playerSlug": "ohse01",
+    "name": "Seunghwan Oh",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 1,
+      "so": 55,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 47,
+      "games": 48,
+      "starts": 0,
+      "reliefAppearances": 48,
+      "k9": 10.53,
+      "bb9": 1.91
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1,
+      "fip": null,
+      "inningsPitched": 47,
+      "strikeoutRate": 10.53,
+      "walkRate": 1.91,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 48,
+      "reliefAppearances": 48,
+      "eraAdjustedPitching": 159.1
     },
     "pitchingScoringStats": null
   },
@@ -661,6 +714,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tor-2010s-downssc01",
+    "playerId": "downssc01",
+    "playerSlug": "downssc01",
+    "name": "Scott Downs",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 0.995,
+      "so": 48,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 61.3,
+      "games": 67,
+      "starts": 0,
+      "reliefAppearances": 67,
+      "k9": 7.04,
+      "bb9": 2.05
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 0.995,
+      "fip": null,
+      "inningsPitched": 61.3,
+      "strikeoutRate": 7.04,
+      "walkRate": 2.05,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 67,
+      "reliefAppearances": 67,
+      "eraAdjustedPitching": 156.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tor-2010s-stromma01",
     "playerId": "stromma01",
     "playerSlug": "stromma01",
@@ -761,6 +866,58 @@
       "games": 32,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 131.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-2010s-loupaa01",
+    "playerId": "loupaa01",
+    "playerSlug": "loupaa01",
+    "name": "Aaron Loup",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 1.139,
+      "so": 53,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 69.3,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 6.88,
+      "bb9": 1.69
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.139,
+      "fip": null,
+      "inningsPitched": 69.3,
+      "strikeoutRate": 6.88,
+      "walkRate": 1.69,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 64,
+      "reliefAppearances": 64,
+      "eraAdjustedPitching": 161.7
     },
     "pitchingScoringStats": null
   },
@@ -913,6 +1070,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tor-2010s-hendrli01",
+    "playerId": "hendrli01",
+    "playerSlug": "hendrli01",
+    "name": "Liam Hendriks",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.92,
+      "whip": 1.082,
+      "so": 71,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 64.7,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 9.88,
+      "bb9": 1.53
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.082,
+      "fip": null,
+      "inningsPitched": 64.7,
+      "strikeoutRate": 9.88,
+      "walkRate": 1.53,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 58,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 137
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tor-2010s-smoakju01",
     "playerId": "smoakju01",
     "playerSlug": "smoakju01",
@@ -1023,7 +1232,8 @@
     "eligiblePositions": [
       "1B",
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1504,7 +1714,8 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

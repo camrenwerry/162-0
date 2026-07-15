@@ -1811,6 +1811,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "phi-1950s-haddiha01",
+    "playerId": "haddiha01",
+    "playerSlug": "haddiha01",
+    "name": "Harvey Haddix",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1950s",
+    "featuredSeason": 1956,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "haddiha01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.357,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.48,
+      "whip": 1.215,
+      "so": 154,
+      "wins": 12,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 206.7,
+      "games": 31,
+      "starts": 26,
+      "reliefAppearances": 5,
+      "k9": 6.71,
+      "bb9": 2.4
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.48,
+      "whip": 1.215,
+      "so": 154,
+      "wins": 12,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 206.7,
+      "games": 31,
+      "starts": 26,
+      "reliefAppearances": 5,
+      "k9": 6.71,
+      "bb9": 2.4
+    },
+    "scoringStats": {
+      "whip": 1.215,
+      "fip": null,
+      "inningsPitched": 206.7,
+      "strikeoutRate": 6.71,
+      "walkRate": 2.4,
+      "starts": 26,
+      "gamesStarted": 26,
+      "games": 31,
+      "reliefAppearances": 5,
+      "eraAdjustedPitching": 108.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "phi-1950s-hemusso01",
     "playerId": "hemusso01",
     "playerSlug": "hemusso01",
@@ -1976,6 +2062,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "phi-1950s-dicksmu01",
+    "playerId": "dicksmu01",
+    "playerSlug": "dicksmu01",
+    "name": "Murry Dickson",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1950s",
+    "featuredSeason": 1955,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "dicksmu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.2,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.5,
+      "whip": 1.259,
+      "so": 92,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 216,
+      "games": 36,
+      "starts": 28,
+      "reliefAppearances": 8,
+      "k9": 3.83,
+      "bb9": 3.42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.5,
+      "whip": 1.259,
+      "so": 92,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 216,
+      "games": 36,
+      "starts": 28,
+      "reliefAppearances": 8,
+      "k9": 3.83,
+      "bb9": 3.42
+    },
+    "scoringStats": {
+      "whip": 1.259,
+      "fip": null,
+      "inningsPitched": 216,
+      "strikeoutRate": 3.83,
+      "walkRate": 3.42,
+      "starts": 28,
+      "gamesStarted": 28,
+      "games": 36,
+      "reliefAppearances": 8,
+      "eraAdjustedPitching": 115.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "phi-1950s-sisledi01",
     "playerId": "sisledi01",
     "playerSlug": "sisledi01",
@@ -2135,6 +2307,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "phi-1950s-torgeea01",
+    "playerId": "torgeea01",
+    "playerSlug": "torgeea01",
+    "name": "Earl Torgeson",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1950s",
+    "featuredSeason": 1953,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "torgeea01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.82,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.836,
+      "hr": 11,
+      "avg": 0.274,
+      "obp": 0.366,
+      "slg": 0.47,
+      "rbi": 64,
+      "sb": 7,
+      "games": 111,
+      "plateAppearances": 437
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.836,
+      "hr": 11,
+      "avg": 0.274,
+      "obp": 0.366,
+      "slg": 0.47,
+      "rbi": 64,
+      "sb": 7,
+      "games": 111,
+      "plateAppearances": 437
+    },
+    "scoringStats": {
+      "obp": 0.366,
+      "slg": 0.47,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 111,
+      "plateAppearances": 437,
+      "eraAdjustedOffense": 112.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "phi-1950s-ryanco01",
     "playerId": "ryanco01",
     "playerSlug": "ryanco01",
@@ -2210,6 +2461,92 @@
       "games": 90,
       "plateAppearances": 281,
       "eraAdjustedOffense": 112.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-1950s-hansean01",
+    "playerId": "hansean01",
+    "playerSlug": "hansean01",
+    "name": "Andy Hansen",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1950s",
+    "featuredSeason": 1951,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "hansean01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.722,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.54,
+      "whip": 1.051,
+      "so": 11,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 39,
+      "games": 24,
+      "starts": 0,
+      "reliefAppearances": 24,
+      "k9": 2.54,
+      "bb9": 1.62
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.54,
+      "whip": 1.051,
+      "so": 11,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 39,
+      "games": 24,
+      "starts": 0,
+      "reliefAppearances": 24,
+      "k9": 2.54,
+      "bb9": 1.62
+    },
+    "scoringStats": {
+      "whip": 1.051,
+      "fip": null,
+      "inningsPitched": 39,
+      "strikeoutRate": 2.54,
+      "walkRate": 1.62,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 24,
+      "reliefAppearances": 24,
+      "eraAdjustedPitching": 156
     },
     "pitchingScoringStats": null
   },

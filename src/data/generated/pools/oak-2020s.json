@@ -337,6 +337,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "oak-2020s-rookebr01",
+    "playerId": "rookebr01",
+    "playerSlug": "rookebr01",
+    "name": "Brent Rooker",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "rookebr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.16,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.927,
+      "hr": 39,
+      "avg": 0.293,
+      "obp": 0.365,
+      "slg": 0.562,
+      "rbi": 112,
+      "sb": 11,
+      "games": 145,
+      "plateAppearances": 614
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.927,
+      "hr": 39,
+      "avg": 0.293,
+      "obp": 0.365,
+      "slg": 0.562,
+      "rbi": 112,
+      "sb": 11,
+      "games": 145,
+      "plateAppearances": 614
+    },
+    "scoringStats": {
+      "obp": 0.365,
+      "slg": 0.562,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 145,
+      "plateAppearances": 614,
+      "eraAdjustedOffense": 131.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "oak-2020s-olsonma02",
     "playerId": "olsonma02",
     "playerSlug": "olsonma02",
@@ -428,7 +507,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1011,85 +1091,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "oak-2020s-rookebr01",
-    "playerId": "rookebr01",
-    "playerSlug": "rookebr01",
-    "name": "Brent Rooker",
-    "franchiseId": "oak",
-    "teamAbbreviation": "ATH",
-    "teamDisplayName": "Athletics",
-    "historicalTeamName": "Athletics",
-    "team": "ATH",
-    "decade": "2020s",
-    "featuredSeason": 2025,
-    "eligiblePositions": [
-      "RF"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "ATH"
-      ],
-      "sourcePlayerId": "rookebr01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 45.07,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.814,
-      "hr": 30,
-      "avg": 0.262,
-      "obp": 0.335,
-      "slg": 0.479,
-      "rbi": 89,
-      "sb": 6,
-      "games": 162,
-      "plateAppearances": 698
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.814,
-      "hr": 30,
-      "avg": 0.262,
-      "obp": 0.335,
-      "slg": 0.479,
-      "rbi": 89,
-      "sb": 6,
-      "games": 162,
-      "plateAppearances": 698
-    },
-    "scoringStats": {
-      "obp": 0.335,
-      "slg": 0.479,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 162,
-      "plateAppearances": 698,
-      "eraAdjustedOffense": 113.3
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "oak-2020s-gelofza01",
     "playerId": "gelofza01",
     "playerSlug": "gelofza01",
@@ -1584,7 +1585,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1729,6 +1731,178 @@
       "games": 150,
       "plateAppearances": 555,
       "eraAdjustedOffense": 106.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-2020s-jacksza02",
+    "playerId": "jacksza02",
+    "playerSlug": "jacksza02",
+    "name": "Zach Jackson",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "jacksza02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.916,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 1.271,
+      "so": 67,
+      "wins": 2,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 48,
+      "games": 54,
+      "starts": 0,
+      "reliefAppearances": 54,
+      "k9": 12.56,
+      "bb9": 6.19
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 1.271,
+      "so": 67,
+      "wins": 2,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 48,
+      "games": 54,
+      "starts": 0,
+      "reliefAppearances": 54,
+      "k9": 12.56,
+      "bb9": 6.19
+    },
+    "scoringStats": {
+      "whip": 1.271,
+      "fip": null,
+      "inningsPitched": 48,
+      "strikeoutRate": 12.56,
+      "walkRate": 6.19,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 54,
+      "reliefAppearances": 54,
+      "eraAdjustedPitching": 129.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-2020s-petityu01",
+    "playerId": "petityu01",
+    "playerSlug": "petityu01",
+    "name": "Yusmeiro Petit",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "petityu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.838,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.92,
+      "whip": 1.038,
+      "so": 37,
+      "wins": 8,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 78,
+      "games": 78,
+      "starts": 0,
+      "reliefAppearances": 78,
+      "k9": 4.27,
+      "bb9": 1.38
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.92,
+      "whip": 1.038,
+      "so": 37,
+      "wins": 8,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 78,
+      "games": 78,
+      "starts": 0,
+      "reliefAppearances": 78,
+      "k9": 4.27,
+      "bb9": 1.38
+    },
+    "scoringStats": {
+      "whip": 1.038,
+      "fip": null,
+      "inningsPitched": 78,
+      "strikeoutRate": 4.27,
+      "walkRate": 1.38,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 78,
+      "reliefAppearances": 78,
+      "eraAdjustedPitching": 110.1
     },
     "pitchingScoringStats": null
   },
@@ -1894,6 +2068,92 @@
       "games": 159,
       "plateAppearances": 642,
       "eraAdjustedOffense": 108.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-2020s-diekmja01",
+    "playerId": "diekmja01",
+    "playerSlug": "diekmja01",
+    "name": "Jake Diekman",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "diekmja01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.461,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.86,
+      "whip": 1.335,
+      "so": 83,
+      "wins": 3,
+      "saves": 7,
+      "sv": 7,
+      "inningsPitched": 60.7,
+      "games": 67,
+      "starts": 0,
+      "reliefAppearances": 67,
+      "k9": 12.31,
+      "bb9": 5.04
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.86,
+      "whip": 1.335,
+      "so": 83,
+      "wins": 3,
+      "saves": 7,
+      "sv": 7,
+      "inningsPitched": 60.7,
+      "games": 67,
+      "starts": 0,
+      "reliefAppearances": 67,
+      "k9": 12.31,
+      "bb9": 5.04
+    },
+    "scoringStats": {
+      "whip": 1.335,
+      "fip": null,
+      "inningsPitched": 60.7,
+      "strikeoutRate": 12.31,
+      "walkRate": 5.04,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 67,
+      "reliefAppearances": 67,
+      "eraAdjustedPitching": 112
     },
     "pitchingScoringStats": null
   },
@@ -2143,6 +2403,87 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "oak-2020s-canhama01",
+    "playerId": "canhama01",
+    "playerSlug": "canhama01",
+    "name": "Mark Canha",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "canhama01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.699,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.746,
+      "hr": 17,
+      "avg": 0.231,
+      "obp": 0.358,
+      "slg": 0.387,
+      "rbi": 61,
+      "sb": 12,
+      "games": 141,
+      "plateAppearances": 625
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.746,
+      "hr": 17,
+      "avg": 0.231,
+      "obp": 0.358,
+      "slg": 0.387,
+      "rbi": 61,
+      "sb": 12,
+      "games": 141,
+      "plateAppearances": 625
+    },
+    "scoringStats": {
+      "obp": 0.358,
+      "slg": 0.387,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 141,
+      "plateAppearances": 625,
+      "eraAdjustedOffense": 102.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "oak-2020s-lowrije01",
     "playerId": "lowrije01",
     "playerSlug": "lowrije01",
@@ -2155,7 +2496,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

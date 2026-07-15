@@ -64,7 +64,8 @@
     "decade": "1990s",
     "featuredSeason": 1994,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -677,7 +678,8 @@
     "decade": "1990s",
     "featuredSeason": 1990,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -829,7 +831,8 @@
     "decade": "1990s",
     "featuredSeason": 1994,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1228,7 +1231,8 @@
     "featuredSeason": 1990,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1314,6 +1318,106 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1990s-baineha01",
+    "playerId": "baineha01",
+    "playerSlug": "baineha01",
+    "name": "Harold Baines",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.902,
+      "hr": 22,
+      "avg": 0.311,
+      "obp": 0.399,
+      "slg": 0.503,
+      "rbi": 95,
+      "sb": 3,
+      "games": 143,
+      "plateAppearances": 572
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.399,
+      "slg": 0.503,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 143,
+      "plateAppearances": 572,
+      "eraAdjustedOffense": 113.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1990s-deleojo01",
+    "playerId": "deleojo01",
+    "playerSlug": "deleojo01",
+    "name": "Jose DeLeon",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.36,
+      "whip": 1.179,
+      "so": 67,
+      "wins": 3,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 67,
+      "games": 42,
+      "starts": 0,
+      "reliefAppearances": 42,
+      "k9": 9,
+      "bb9": 4.16
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.179,
+      "fip": null,
+      "inningsPitched": 67,
+      "strikeoutRate": 9,
+      "walkRate": 4.16,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 42,
+      "reliefAppearances": 42,
+      "eraAdjustedPitching": 142.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1990s-singlch01",
     "playerId": "singlch01",
     "playerSlug": "singlch01",
@@ -1359,6 +1463,107 @@
       "games": 133,
       "plateAppearances": 529,
       "eraAdjustedOffense": 104
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1990s-tapanke01",
+    "playerId": "tapanke01",
+    "playerSlug": "tapanke01",
+    "name": "Kevin Tapani",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.59,
+      "whip": 1.385,
+      "so": 150,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 225.3,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 5.99,
+      "bb9": 3.04
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.385,
+      "fip": null,
+      "inningsPitched": 225.3,
+      "strikeoutRate": 5.99,
+      "walkRate": 3.04,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 34,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 108.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1990s-konerpa01",
+    "playerId": "konerpa01",
+    "playerSlug": "konerpa01",
+    "name": "Paul Konerko",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.862,
+      "hr": 24,
+      "avg": 0.294,
+      "obp": 0.352,
+      "slg": 0.511,
+      "rbi": 81,
+      "sb": 1,
+      "games": 142,
+      "plateAppearances": 564
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.352,
+      "slg": 0.511,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 142,
+      "plateAppearances": 564,
+      "eraAdjustedOffense": 109.7
     },
     "pitchingScoringStats": null
   },
@@ -1570,7 +1775,8 @@
     "featuredSeason": 1996,
     "eligiblePositions": [
       "2B",
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -2124,6 +2124,257 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "lad-1940s-riggsle01",
+    "playerId": "riggsle01",
+    "playerSlug": "riggsle01",
+    "name": "Lew Riggs",
+    "franchiseId": "lad",
+    "teamAbbreviation": "BRO",
+    "teamDisplayName": "Brooklyn Dodgers",
+    "historicalTeamName": "Brooklyn Dodgers",
+    "team": "BRO",
+    "decade": "1940s",
+    "featuredSeason": 1941,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BRO"
+      ],
+      "sourcePlayerId": "riggsle01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.465,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.844,
+      "hr": 5,
+      "avg": 0.305,
+      "obp": 0.357,
+      "slg": 0.487,
+      "rbi": 36,
+      "sb": 1,
+      "games": 77,
+      "plateAppearances": 220
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.844,
+      "hr": 5,
+      "avg": 0.305,
+      "obp": 0.357,
+      "slg": 0.487,
+      "rbi": 36,
+      "sb": 1,
+      "games": 77,
+      "plateAppearances": 220
+    },
+    "scoringStats": {
+      "obp": 0.357,
+      "slg": 0.487,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 77,
+      "plateAppearances": 220,
+      "eraAdjustedOffense": 123.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "lad-1940s-fitzsfr01",
+    "playerId": "fitzsfr01",
+    "playerSlug": "fitzsfr01",
+    "name": "Freddie Fitzsimmons",
+    "franchiseId": "lad",
+    "teamAbbreviation": "BRO",
+    "teamDisplayName": "Brooklyn Dodgers",
+    "historicalTeamName": "Brooklyn Dodgers",
+    "team": "BRO",
+    "decade": "1940s",
+    "featuredSeason": 1941,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BRO"
+      ],
+      "sourcePlayerId": "fitzsfr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.264,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.07,
+      "whip": 1.258,
+      "so": 19,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 82.7,
+      "games": 13,
+      "starts": 12,
+      "reliefAppearances": 1,
+      "k9": 2.07,
+      "bb9": 2.83
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.07,
+      "whip": 1.258,
+      "so": 19,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 82.7,
+      "games": 13,
+      "starts": 12,
+      "reliefAppearances": 1,
+      "k9": 2.07,
+      "bb9": 2.83
+    },
+    "scoringStats": {
+      "whip": 1.258,
+      "fip": null,
+      "inningsPitched": 82.7,
+      "strikeoutRate": 2.07,
+      "walkRate": 2.83,
+      "starts": 12,
+      "gamesStarted": 12,
+      "games": 13,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 175.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "lad-1940s-meltoru01",
+    "playerId": "meltoru01",
+    "playerSlug": "meltoru01",
+    "name": "Rube Melton",
+    "franchiseId": "lad",
+    "teamAbbreviation": "BRO",
+    "teamDisplayName": "Brooklyn Dodgers",
+    "historicalTeamName": "Brooklyn Dodgers",
+    "team": "BRO",
+    "decade": "1940s",
+    "featuredSeason": 1946,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BRO"
+      ],
+      "sourcePlayerId": "meltoru01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.005,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.99,
+      "whip": 1.244,
+      "so": 44,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 99.7,
+      "games": 24,
+      "starts": 12,
+      "reliefAppearances": 12,
+      "k9": 3.97,
+      "bb9": 4.7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.99,
+      "whip": 1.244,
+      "so": 44,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 99.7,
+      "games": 24,
+      "starts": 12,
+      "reliefAppearances": 12,
+      "k9": 3.97,
+      "bb9": 4.7
+    },
+    "scoringStats": {
+      "whip": 1.244,
+      "fip": null,
+      "inningsPitched": 99.7,
+      "strikeoutRate": 3.97,
+      "walkRate": 4.7,
+      "starts": 12,
+      "gamesStarted": 12,
+      "games": 24,
+      "reliefAppearances": 12,
+      "eraAdjustedPitching": 171.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "lad-1940s-hodgegi01",
     "playerId": "hodgegi01",
     "playerSlug": "hodgegi01",
@@ -2278,6 +2529,92 @@
       "games": 130,
       "plateAppearances": 528,
       "eraAdjustedOffense": 107.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "lad-1940s-lombavi01",
+    "playerId": "lombavi01",
+    "playerSlug": "lombavi01",
+    "name": "Vic Lombardi",
+    "franchiseId": "lad",
+    "teamAbbreviation": "BRO",
+    "teamDisplayName": "Brooklyn Dodgers",
+    "historicalTeamName": "Brooklyn Dodgers",
+    "team": "BRO",
+    "decade": "1940s",
+    "featuredSeason": 1947,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BRO"
+      ],
+      "sourcePlayerId": "lombavi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.991,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.99,
+      "whip": 1.265,
+      "so": 72,
+      "wins": 12,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 174.7,
+      "games": 33,
+      "starts": 20,
+      "reliefAppearances": 13,
+      "k9": 3.71,
+      "bb9": 3.35
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.99,
+      "whip": 1.265,
+      "so": 72,
+      "wins": 12,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 174.7,
+      "games": 33,
+      "starts": 20,
+      "reliefAppearances": 13,
+      "k9": 3.71,
+      "bb9": 3.35
+    },
+    "scoringStats": {
+      "whip": 1.265,
+      "fip": null,
+      "inningsPitched": 174.7,
+      "strikeoutRate": 3.71,
+      "walkRate": 3.35,
+      "starts": 20,
+      "gamesStarted": 20,
+      "games": 33,
+      "reliefAppearances": 13,
+      "eraAdjustedPitching": 135.9
     },
     "pitchingScoringStats": null
   },

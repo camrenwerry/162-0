@@ -350,7 +350,8 @@
     "featuredSeason": 1987,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -938,7 +939,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1262,7 +1264,8 @@
     "featuredSeason": 1982,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1341,7 +1344,8 @@
     "decade": "1980s",
     "featuredSeason": 1983,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1917,6 +1921,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "mil-1980s-darwida01",
+    "playerId": "darwida01",
+    "playerSlug": "darwida01",
+    "name": "Danny Darwin",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "darwida01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.013,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.8,
+      "whip": 1.273,
+      "so": 125,
+      "wins": 8,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 217.7,
+      "games": 39,
+      "starts": 29,
+      "reliefAppearances": 10,
+      "k9": 5.17,
+      "bb9": 2.69
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.8,
+      "whip": 1.273,
+      "so": 125,
+      "wins": 8,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 217.7,
+      "games": 39,
+      "starts": 29,
+      "reliefAppearances": 10,
+      "k9": 5.17,
+      "bb9": 2.69
+    },
+    "scoringStats": {
+      "whip": 1.273,
+      "fip": null,
+      "inningsPitched": 217.7,
+      "strikeoutRate": 5.17,
+      "walkRate": 2.69,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 39,
+      "reliefAppearances": 10,
+      "eraAdjustedPitching": 109
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-1980s-castrbi01",
+    "playerId": "castrbi01",
+    "playerSlug": "castrbi01",
+    "name": "Bill Castro",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "castrbi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.921,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.77,
+      "whip": 1.257,
+      "so": 32,
+      "wins": 2,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 84.3,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 3.42,
+      "bb9": 1.81
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.77,
+      "whip": 1.257,
+      "so": 32,
+      "wins": 2,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 84.3,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 3.42,
+      "bb9": 1.81
+    },
+    "scoringStats": {
+      "whip": 1.257,
+      "fip": null,
+      "inningsPitched": 84.3,
+      "strikeoutRate": 3.42,
+      "walkRate": 1.81,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 56,
+      "reliefAppearances": 56,
+      "eraAdjustedPitching": 145.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "mil-1980s-sveumda01",
     "playerId": "sveumda01",
     "playerSlug": "sveumda01",
@@ -1993,6 +2169,178 @@
       "games": 153,
       "plateAppearances": 586,
       "eraAdjustedOffense": 99.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-1980s-augusdo01",
+    "playerId": "augusdo01",
+    "playerSlug": "augusdo01",
+    "name": "Don August",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "augusdo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.464,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.09,
+      "whip": 1.247,
+      "so": 66,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 148.3,
+      "games": 24,
+      "starts": 22,
+      "reliefAppearances": 2,
+      "k9": 4,
+      "bb9": 2.91
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.09,
+      "whip": 1.247,
+      "so": 66,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 148.3,
+      "games": 24,
+      "starts": 22,
+      "reliefAppearances": 2,
+      "k9": 4,
+      "bb9": 2.91
+    },
+    "scoringStats": {
+      "whip": 1.247,
+      "fip": null,
+      "inningsPitched": 148.3,
+      "strikeoutRate": 4,
+      "walkRate": 2.91,
+      "starts": 22,
+      "gamesStarted": 22,
+      "games": 24,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 128.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-1980s-vuckope01",
+    "playerId": "vuckope01",
+    "playerSlug": "vuckope01",
+    "name": "Pete Vuckovich",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "vuckope01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.334,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 1.502,
+      "so": 105,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 223.7,
+      "games": 30,
+      "starts": 30,
+      "reliefAppearances": 0,
+      "k9": 4.23,
+      "bb9": 4.1
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 1.502,
+      "so": 105,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 223.7,
+      "games": 30,
+      "starts": 30,
+      "reliefAppearances": 0,
+      "k9": 4.23,
+      "bb9": 4.1
+    },
+    "scoringStats": {
+      "whip": 1.502,
+      "fip": null,
+      "inningsPitched": 223.7,
+      "strikeoutRate": 4.23,
+      "walkRate": 4.1,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 30,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 122
     },
     "pitchingScoringStats": null
   },
@@ -2326,7 +2674,8 @@
     "decade": "1980s",
     "featuredSeason": 1989,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

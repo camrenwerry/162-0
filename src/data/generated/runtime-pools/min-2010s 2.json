@@ -356,6 +356,102 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "min-2010s-cruzne02",
+    "playerId": "cruzne02",
+    "playerSlug": "cruzne02",
+    "name": "Nelson Cruz",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.031,
+      "hr": 41,
+      "avg": 0.311,
+      "obp": 0.392,
+      "slg": 0.639,
+      "rbi": 108,
+      "sb": 0,
+      "games": 120,
+      "plateAppearances": 520
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.392,
+      "slg": 0.639,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 120,
+      "plateAppearances": 520,
+      "eraAdjustedOffense": 135.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-2010s-thomeji01",
+    "playerId": "thomeji01",
+    "playerSlug": "thomeji01",
+    "name": "Jim Thome",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.039,
+      "hr": 25,
+      "avg": 0.283,
+      "obp": 0.412,
+      "slg": 0.627,
+      "rbi": 59,
+      "sb": 0,
+      "games": 108,
+      "plateAppearances": 340
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.412,
+      "slg": 0.627,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 108,
+      "plateAppearances": 340,
+      "eraAdjustedOffense": 141.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "min-2010s-busenal01",
     "playerId": "busenal01",
     "playerSlug": "busenal01",
@@ -672,7 +768,8 @@
     "decade": "2010s",
     "featuredSeason": 2012,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -929,7 +1026,8 @@
     "featuredSeason": 2012,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1232,7 +1330,8 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1314,6 +1413,110 @@
       "games": 151,
       "plateAppearances": 589,
       "eraAdjustedOffense": 111
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-2010s-bakersc02",
+    "playerId": "bakersc02",
+    "playerSlug": "bakersc02",
+    "name": "Scott Baker",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.14,
+      "whip": 1.173,
+      "so": 123,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 134.7,
+      "games": 23,
+      "starts": 21,
+      "reliefAppearances": 2,
+      "k9": 8.22,
+      "bb9": 2.14
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.173,
+      "fip": null,
+      "inningsPitched": 134.7,
+      "strikeoutRate": 8.22,
+      "walkRate": 2.14,
+      "starts": 21,
+      "gamesStarted": 21,
+      "games": 23,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 129.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-2010s-hildetr01",
+    "playerId": "hildetr01",
+    "playerSlug": "hildetr01",
+    "name": "Trevor Hildenberger",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.21,
+      "whip": 1.048,
+      "so": 44,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 42,
+      "games": 37,
+      "starts": 0,
+      "reliefAppearances": 37,
+      "k9": 9.43,
+      "bb9": 1.29
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.048,
+      "fip": null,
+      "inningsPitched": 42,
+      "strikeoutRate": 9.43,
+      "walkRate": 1.29,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 37,
+      "reliefAppearances": 37,
+      "eraAdjustedPitching": 135.8
     },
     "pitchingScoringStats": null
   },
@@ -1478,7 +1681,8 @@
     "featuredSeason": 2012,
     "eligiblePositions": [
       "C",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

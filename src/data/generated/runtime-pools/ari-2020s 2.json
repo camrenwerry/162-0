@@ -116,7 +116,8 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -712,6 +713,54 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "ari-2020s-pederjo01",
+    "playerId": "pederjo01",
+    "playerSlug": "pederjo01",
+    "name": "Joc Pederson",
+    "franchiseId": "ari",
+    "teamAbbreviation": "ARI",
+    "teamDisplayName": "Arizona Diamondbacks",
+    "historicalTeamName": "Arizona Diamondbacks",
+    "team": "ARI",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.908,
+      "hr": 23,
+      "avg": 0.275,
+      "obp": 0.393,
+      "slg": 0.515,
+      "rbi": 64,
+      "sb": 7,
+      "games": 132,
+      "plateAppearances": 444
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.393,
+      "slg": 0.515,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 132,
+      "plateAppearances": 444,
+      "eraAdjustedOffense": 126.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "ari-2020s-burneco01",
     "playerId": "burneco01",
     "playerSlug": "burneco01",
@@ -777,7 +826,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -975,7 +1025,8 @@
     "eligiblePositions": [
       "C",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1278,7 +1329,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1378,7 +1430,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1558,6 +1611,155 @@
       "games": 58,
       "plateAppearances": 104,
       "eraAdjustedOffense": 107.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ari-2020s-martest01",
+    "playerId": "martest01",
+    "playerSlug": "martest01",
+    "name": "Starling Marte",
+    "franchiseId": "ari",
+    "teamAbbreviation": "ARI",
+    "teamDisplayName": "Arizona Diamondbacks",
+    "historicalTeamName": "Arizona Diamondbacks",
+    "team": "ARI",
+    "decade": "2020s",
+    "featuredSeason": 2020,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.827,
+      "hr": 2,
+      "avg": 0.311,
+      "obp": 0.384,
+      "slg": 0.443,
+      "rbi": 14,
+      "sb": 5,
+      "games": 33,
+      "plateAppearances": 138
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.384,
+      "slg": 0.443,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 33,
+      "plateAppearances": 138,
+      "eraAdjustedOffense": 110.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ari-2020s-gurrilo01",
+    "playerId": "gurrilo01",
+    "playerSlug": "gurrilo01",
+    "name": "Lourdes Gurriel",
+    "franchiseId": "ari",
+    "teamAbbreviation": "ARI",
+    "teamDisplayName": "Arizona Diamondbacks",
+    "historicalTeamName": "Arizona Diamondbacks",
+    "team": "ARI",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "LF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.772,
+      "hr": 24,
+      "avg": 0.261,
+      "obp": 0.309,
+      "slg": 0.463,
+      "rbi": 82,
+      "sb": 5,
+      "games": 145,
+      "plateAppearances": 592
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.309,
+      "slg": 0.463,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 145,
+      "plateAppearances": 592,
+      "eraAdjustedOffense": 104.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ari-2020s-mcgousc01",
+    "playerId": "mcgousc01",
+    "playerSlug": "mcgousc01",
+    "name": "Scott McGough",
+    "franchiseId": "ari",
+    "teamAbbreviation": "ARI",
+    "teamDisplayName": "Arizona Diamondbacks",
+    "historicalTeamName": "Arizona Diamondbacks",
+    "team": "ARI",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.73,
+      "whip": 1.28,
+      "so": 86,
+      "wins": 2,
+      "saves": 9,
+      "sv": 9,
+      "inningsPitched": 70.3,
+      "games": 63,
+      "starts": 1,
+      "reliefAppearances": 62,
+      "k9": 11,
+      "bb9": 3.84
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.28,
+      "fip": null,
+      "inningsPitched": 70.3,
+      "strikeoutRate": 11,
+      "walkRate": 3.84,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 63,
+      "reliefAppearances": 62,
+      "eraAdjustedPitching": 92.4
     },
     "pitchingScoringStats": null
   },

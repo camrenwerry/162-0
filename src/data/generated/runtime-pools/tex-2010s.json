@@ -169,7 +169,8 @@
     "featuredSeason": 2011,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -270,7 +271,8 @@
     "featuredSeason": 2010,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -823,6 +825,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tex-2010s-barneto01",
+    "playerId": "barneto01",
+    "playerSlug": "barneto01",
+    "name": "Tony Barnette",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.09,
+      "whip": 1.16,
+      "so": 49,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 60.3,
+      "games": 53,
+      "starts": 0,
+      "reliefAppearances": 53,
+      "k9": 7.31,
+      "bb9": 2.39
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.16,
+      "fip": null,
+      "inningsPitched": 60.3,
+      "strikeoutRate": 7.31,
+      "walkRate": 2.39,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 53,
+      "reliefAppearances": 53,
+      "eraAdjustedPitching": 201.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2010s-soriajo01",
+    "playerId": "soriajo01",
+    "playerSlug": "soriajo01",
+    "name": "Joakim Soria",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.7,
+      "whip": 0.87,
+      "so": 42,
+      "wins": 1,
+      "saves": 17,
+      "sv": 17,
+      "inningsPitched": 33.3,
+      "games": 35,
+      "starts": 0,
+      "reliefAppearances": 35,
+      "k9": 11.34,
+      "bb9": 1.08
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 0.87,
+      "fip": null,
+      "inningsPitched": 33.3,
+      "strikeoutRate": 11.34,
+      "walkRate": 1.08,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 35,
+      "reliefAppearances": 35,
+      "eraAdjustedPitching": 141.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tex-2010s-beltrad01",
     "playerId": "beltrad01",
     "playerSlug": "beltrad01",
@@ -835,7 +941,8 @@
     "decade": "2010s",
     "featuredSeason": 2012,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -968,6 +1075,110 @@
       "games": 108,
       "plateAppearances": 445,
       "eraAdjustedOffense": 129.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2010s-kelake01",
+    "playerId": "kelake01",
+    "playerSlug": "kelake01",
+    "name": "Keone Kela",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.39,
+      "whip": 1.16,
+      "so": 68,
+      "wins": 7,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 60.3,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 10.14,
+      "bb9": 2.69
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.16,
+      "fip": null,
+      "inningsPitched": 60.3,
+      "strikeoutRate": 10.14,
+      "walkRate": 2.69,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 68,
+      "reliefAppearances": 68,
+      "eraAdjustedPitching": 167.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2010s-oliveda02",
+    "playerId": "oliveda02",
+    "playerSlug": "oliveda02",
+    "name": "Darren Oliver",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.103,
+      "so": 65,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 61.7,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 9.49,
+      "bb9": 2.19
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.103,
+      "fip": null,
+      "inningsPitched": 61.7,
+      "strikeoutRate": 9.49,
+      "walkRate": 2.19,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 64,
+      "reliefAppearances": 64,
+      "eraAdjustedPitching": 166.8
     },
     "pitchingScoringStats": null
   },
@@ -1188,7 +1399,8 @@
     "decade": "2010s",
     "featuredSeason": 2011,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1290,7 +1502,8 @@
     "eligiblePositions": [
       "1B",
       "3B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1340,7 +1553,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1436,7 +1650,8 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

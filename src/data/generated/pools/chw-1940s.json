@@ -1746,6 +1746,171 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1940s-soltemo01",
+    "playerId": "soltemo01",
+    "playerSlug": "soltemo01",
+    "name": "Moose Solters",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1940s",
+    "featuredSeason": 1940,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "soltemo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.024,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.823,
+      "hr": 12,
+      "avg": 0.308,
+      "obp": 0.351,
+      "slg": 0.472,
+      "rbi": 80,
+      "sb": 3,
+      "games": 116,
+      "plateAppearances": 457
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.823,
+      "hr": 12,
+      "avg": 0.308,
+      "obp": 0.351,
+      "slg": 0.472,
+      "rbi": 80,
+      "sb": 3,
+      "games": 116,
+      "plateAppearances": 457
+    },
+    "scoringStats": {
+      "obp": 0.351,
+      "slg": 0.472,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 116,
+      "plateAppearances": 457,
+      "eraAdjustedOffense": 110.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1940s-dietrbi01",
+    "playerId": "dietrbi01",
+    "playerSlug": "dietrbi01",
+    "name": "Bill Dietrich",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1940s",
+    "featuredSeason": 1943,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "dietrbi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.783,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.8,
+      "whip": 1.248,
+      "so": 52,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 186.7,
+      "games": 26,
+      "starts": 26,
+      "reliefAppearances": 0,
+      "k9": 2.51,
+      "bb9": 2.56
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.8,
+      "whip": 1.248,
+      "so": 52,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 186.7,
+      "games": 26,
+      "starts": 26,
+      "reliefAppearances": 0,
+      "k9": 2.51,
+      "bb9": 2.56
+    },
+    "scoringStats": {
+      "whip": 1.248,
+      "fip": null,
+      "inningsPitched": 186.7,
+      "strikeoutRate": 2.51,
+      "walkRate": 2.56,
+      "starts": 26,
+      "gamesStarted": 26,
+      "games": 26,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 117.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1940s-hodgira01",
     "playerId": "hodgira01",
     "playerSlug": "hodgira01",
@@ -1827,6 +1992,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1940s-dicksjo01",
+    "playerId": "dicksjo01",
+    "playerSlug": "dicksjo01",
+    "name": "Johnny Dickshot",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1940s",
+    "featuredSeason": 1945,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "dicksjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.538,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.774,
+      "hr": 4,
+      "avg": 0.302,
+      "obp": 0.366,
+      "slg": 0.407,
+      "rbi": 58,
+      "sb": 18,
+      "games": 130,
+      "plateAppearances": 542
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.774,
+      "hr": 4,
+      "avg": 0.302,
+      "obp": 0.366,
+      "slg": 0.407,
+      "rbi": 58,
+      "sb": 18,
+      "games": 130,
+      "plateAppearances": 542
+    },
+    "scoringStats": {
+      "obp": 0.366,
+      "slg": 0.407,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 130,
+      "plateAppearances": 542,
+      "eraAdjustedOffense": 115.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1940s-curtrgu01",
     "playerId": "curtrgu01",
     "playerSlug": "curtrgu01",
@@ -1904,6 +2148,85 @@
       "games": 98,
       "plateAppearances": 367,
       "eraAdjustedOffense": 114.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1940s-tucketh01",
+    "playerId": "tucketh01",
+    "playerSlug": "tucketh01",
+    "name": "Thurman Tucker",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1940s",
+    "featuredSeason": 1944,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "tucketh01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.255,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.729,
+      "hr": 2,
+      "avg": 0.287,
+      "obp": 0.368,
+      "slg": 0.361,
+      "rbi": 46,
+      "sb": 13,
+      "games": 124,
+      "plateAppearances": 504
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.729,
+      "hr": 2,
+      "avg": 0.287,
+      "obp": 0.368,
+      "slg": 0.361,
+      "rbi": 46,
+      "sb": 13,
+      "games": 124,
+      "plateAppearances": 504
+    },
+    "scoringStats": {
+      "obp": 0.368,
+      "slg": 0.361,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 124,
+      "plateAppearances": 504,
+      "eraAdjustedOffense": 107.9
     },
     "pitchingScoringStats": null
   },

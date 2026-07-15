@@ -1985,6 +1985,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "hou-1970s-lemonma01",
+    "playerId": "lemonma01",
+    "playerSlug": "lemonma01",
+    "name": "Mark Lemongello",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "HOU"
+      ],
+      "sourcePlayerId": "lemonma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.687,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.48,
+      "whip": 1.346,
+      "so": 83,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 214.7,
+      "games": 34,
+      "starts": 30,
+      "reliefAppearances": 4,
+      "k9": 3.48,
+      "bb9": 2.18
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.48,
+      "whip": 1.346,
+      "so": 83,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 214.7,
+      "games": 34,
+      "starts": 30,
+      "reliefAppearances": 4,
+      "k9": 3.48,
+      "bb9": 2.18
+    },
+    "scoringStats": {
+      "whip": 1.346,
+      "fip": null,
+      "inningsPitched": 214.7,
+      "strikeoutRate": 3.48,
+      "walkRate": 2.18,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 34,
+      "reliefAppearances": 4,
+      "eraAdjustedPitching": 112.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "hou-1970s-raderdo02",
     "playerId": "raderdo02",
     "playerSlug": "raderdo02",
@@ -2060,6 +2146,92 @@
       "games": 152,
       "plateAppearances": 626,
       "eraAdjustedOffense": 108.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "hou-1970s-gladdfr01",
+    "playerId": "gladdfr01",
+    "playerSlug": "gladdfr01",
+    "name": "Fred Gladding",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "1970s",
+    "featuredSeason": 1972,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "HOU"
+      ],
+      "sourcePlayerId": "gladdfr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.923,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.77,
+      "whip": 1.027,
+      "so": 18,
+      "wins": 5,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 48.7,
+      "games": 42,
+      "starts": 0,
+      "reliefAppearances": 42,
+      "k9": 3.33,
+      "bb9": 2.22
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.77,
+      "whip": 1.027,
+      "so": 18,
+      "wins": 5,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 48.7,
+      "games": 42,
+      "starts": 0,
+      "reliefAppearances": 42,
+      "k9": 3.33,
+      "bb9": 2.22
+    },
+    "scoringStats": {
+      "whip": 1.027,
+      "fip": null,
+      "inningsPitched": 48.7,
+      "strikeoutRate": 3.33,
+      "walkRate": 2.22,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 42,
+      "reliefAppearances": 42,
+      "eraAdjustedPitching": 124.5
     },
     "pitchingScoringStats": null
   },
@@ -2302,6 +2474,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "hou-1970s-culvege01",
+    "playerId": "culvege01",
+    "playerSlug": "culvege01",
+    "name": "George Culver",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "1970s",
+    "featuredSeason": 1971,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "HOU"
+      ],
+      "sourcePlayerId": "culvege01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.038,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.332,
+      "so": 57,
+      "wins": 5,
+      "saves": 7,
+      "sv": 7,
+      "inningsPitched": 95.3,
+      "games": 59,
+      "starts": 0,
+      "reliefAppearances": 59,
+      "k9": 5.38,
+      "bb9": 3.59
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.332,
+      "so": 57,
+      "wins": 5,
+      "saves": 7,
+      "sv": 7,
+      "inningsPitched": 95.3,
+      "games": 59,
+      "starts": 0,
+      "reliefAppearances": 59,
+      "k9": 5.38,
+      "bb9": 3.59
+    },
+    "scoringStats": {
+      "whip": 1.332,
+      "fip": null,
+      "inningsPitched": 95.3,
+      "strikeoutRate": 5.38,
+      "walkRate": 3.59,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 59,
+      "reliefAppearances": 59,
+      "eraAdjustedPitching": 131.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "hou-1970s-puhlte01",
     "playerId": "puhlte01",
     "playerSlug": "puhlte01",
@@ -2378,6 +2636,92 @@
       "games": 157,
       "plateAppearances": 672,
       "eraAdjustedOffense": 102.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "hou-1970s-griffto02",
+    "playerId": "griffto02",
+    "playerSlug": "griffto02",
+    "name": "Tom Griffin",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "1970s",
+    "featuredSeason": 1974,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "HOU"
+      ],
+      "sourcePlayerId": "griffto02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.775,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.54,
+      "whip": 1.379,
+      "so": 110,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 211,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 4.69,
+      "bb9": 3.8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.54,
+      "whip": 1.379,
+      "so": 110,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 211,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 4.69,
+      "bb9": 3.8
+    },
+    "scoringStats": {
+      "whip": 1.379,
+      "fip": null,
+      "inningsPitched": 211,
+      "strikeoutRate": 4.69,
+      "walkRate": 3.8,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 34,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 102.2
     },
     "pitchingScoringStats": null
   },

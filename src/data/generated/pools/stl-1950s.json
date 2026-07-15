@@ -1911,6 +1911,86 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "stl-1950s-repulri01",
+    "playerId": "repulri01",
+    "playerSlug": "repulri01",
+    "name": "Rip Repulski",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1950s",
+    "featuredSeason": 1954,
+    "eligiblePositions": [
+      "LF",
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "repulri01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.19,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.783,
+      "hr": 19,
+      "avg": 0.283,
+      "obp": 0.329,
+      "slg": 0.454,
+      "rbi": 79,
+      "sb": 8,
+      "games": 152,
+      "plateAppearances": 678
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.783,
+      "hr": 19,
+      "avg": 0.283,
+      "obp": 0.329,
+      "slg": 0.454,
+      "rbi": 79,
+      "sb": 8,
+      "games": 152,
+      "plateAppearances": 678
+    },
+    "scoringStats": {
+      "obp": 0.329,
+      "slg": 0.454,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 152,
+      "plateAppearances": 678,
+      "eraAdjustedOffense": 105.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "stl-1950s-brazlal01",
     "playerId": "brazlal01",
     "playerSlug": "brazlal01",
@@ -1993,6 +2073,172 @@
       "games": 46,
       "reliefAppearances": 40,
       "eraAdjustedPitching": 137.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "stl-1950s-poholto01",
+    "playerId": "poholto01",
+    "playerSlug": "poholto01",
+    "name": "Tom Poholsky",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1950s",
+    "featuredSeason": 1954,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "poholto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.149,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.06,
+      "whip": 1.142,
+      "so": 55,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 106,
+      "games": 25,
+      "starts": 13,
+      "reliefAppearances": 12,
+      "k9": 4.67,
+      "bb9": 1.7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.06,
+      "whip": 1.142,
+      "so": 55,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 106,
+      "games": 25,
+      "starts": 13,
+      "reliefAppearances": 12,
+      "k9": 4.67,
+      "bb9": 1.7
+    },
+    "scoringStats": {
+      "whip": 1.142,
+      "fip": null,
+      "inningsPitched": 106,
+      "strikeoutRate": 4.67,
+      "walkRate": 1.7,
+      "starts": 13,
+      "gamesStarted": 13,
+      "games": 25,
+      "reliefAppearances": 12,
+      "eraAdjustedPitching": 133.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "stl-1950s-whitebi03",
+    "playerId": "whitebi03",
+    "playerSlug": "whitebi03",
+    "name": "Bill White",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1950s",
+    "featuredSeason": 1959,
+    "eligiblePositions": [
+      "1B",
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "whitebi03"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.055,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.814,
+      "hr": 12,
+      "avg": 0.302,
+      "obp": 0.344,
+      "slg": 0.47,
+      "rbi": 72,
+      "sb": 15,
+      "games": 138,
+      "plateAppearances": 561
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.814,
+      "hr": 12,
+      "avg": 0.302,
+      "obp": 0.344,
+      "slg": 0.47,
+      "rbi": 72,
+      "sb": 15,
+      "games": 138,
+      "plateAppearances": 561
+    },
+    "scoringStats": {
+      "obp": 0.344,
+      "slg": 0.47,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 138,
+      "plateAppearances": 561,
+      "eraAdjustedOffense": 112.5
     },
     "pitchingScoringStats": null
   },
@@ -2236,6 +2482,86 @@
       "baserunningValue": null,
       "games": 152,
       "plateAppearances": 674,
+      "eraAdjustedOffense": 102.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "stl-1950s-virdobi01",
+    "playerId": "virdobi01",
+    "playerSlug": "virdobi01",
+    "name": "Bill Virdon",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "1950s",
+    "featuredSeason": 1955,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "virdobi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.965,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.755,
+      "hr": 17,
+      "avg": 0.281,
+      "obp": 0.322,
+      "slg": 0.433,
+      "rbi": 68,
+      "sb": 2,
+      "games": 144,
+      "plateAppearances": 586
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.755,
+      "hr": 17,
+      "avg": 0.281,
+      "obp": 0.322,
+      "slg": 0.433,
+      "rbi": 68,
+      "sb": 2,
+      "games": 144,
+      "plateAppearances": 586
+    },
+    "scoringStats": {
+      "obp": 0.322,
+      "slg": 0.433,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 144,
+      "plateAppearances": 586,
       "eraAdjustedOffense": 102.9
     },
     "pitchingScoringStats": null

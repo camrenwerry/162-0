@@ -528,7 +528,8 @@
     "decade": "2010s",
     "featuredSeason": 2017,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -858,7 +859,8 @@
     "decade": "2010s",
     "featuredSeason": 2016,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1007,6 +1009,92 @@
       "games": 73,
       "reliefAppearances": 73,
       "eraAdjustedPitching": 242.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-2010s-brittza01",
+    "playerId": "brittza01",
+    "playerSlug": "brittza01",
+    "name": "Zack Britton",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "brittza01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 61.08,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.91,
+      "whip": 1.141,
+      "so": 53,
+      "wins": 3,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 61.3,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 7.78,
+      "bb9": 4.7
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.91,
+      "whip": 1.141,
+      "so": 53,
+      "wins": 3,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 61.3,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 7.78,
+      "bb9": 4.7
+    },
+    "scoringStats": {
+      "whip": 1.141,
+      "fip": null,
+      "inningsPitched": 61.3,
+      "strikeoutRate": 7.78,
+      "walkRate": 4.7,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 66,
+      "reliefAppearances": 66,
+      "eraAdjustedPitching": 241.4
     },
     "pitchingScoringStats": null
   },
@@ -1176,6 +1264,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-2010s-warread01",
+    "playerId": "warread01",
+    "playerSlug": "warread01",
+    "name": "Adam Warren",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "warread01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.364,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.35,
+      "whip": 0.872,
+      "so": 54,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 57.3,
+      "games": 46,
+      "starts": 0,
+      "reliefAppearances": 46,
+      "k9": 8.48,
+      "bb9": 2.35
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.35,
+      "whip": 0.872,
+      "so": 54,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 57.3,
+      "games": 46,
+      "starts": 0,
+      "reliefAppearances": 46,
+      "k9": 8.48,
+      "bb9": 2.35
+    },
+    "scoringStats": {
+      "whip": 0.872,
+      "fip": null,
+      "inningsPitched": 57.3,
+      "strikeoutRate": 8.48,
+      "walkRate": 2.35,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 46,
+      "reliefAppearances": 46,
+      "eraAdjustedPitching": 185.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-2010s-canoro01",
     "playerId": "canoro01",
     "playerSlug": "canoro01",
@@ -1251,6 +1425,92 @@
       "games": 161,
       "plateAppearances": 697,
       "eraAdjustedOffense": 127.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-2010s-wadeco01",
+    "playerId": "wadeco01",
+    "playerSlug": "wadeco01",
+    "name": "Cory Wade",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "wadeco01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.216,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.04,
+      "whip": 1.034,
+      "so": 30,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 39.7,
+      "games": 40,
+      "starts": 0,
+      "reliefAppearances": 40,
+      "k9": 6.81,
+      "bb9": 1.82
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.04,
+      "whip": 1.034,
+      "so": 30,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 39.7,
+      "games": 40,
+      "starts": 0,
+      "reliefAppearances": 40,
+      "k9": 6.81,
+      "bb9": 1.82
+    },
+    "scoringStats": {
+      "whip": 1.034,
+      "fip": null,
+      "inningsPitched": 39.7,
+      "strikeoutRate": 6.81,
+      "walkRate": 1.82,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 40,
+      "reliefAppearances": 40,
+      "eraAdjustedPitching": 199.7
     },
     "pitchingScoringStats": null
   },
@@ -1588,6 +1848,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-2010s-kahnlto01",
+    "playerId": "kahnlto01",
+    "playerSlug": "kahnlto01",
+    "name": "Tommy Kahnle",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "kahnlto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.197,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.67,
+      "whip": 1.06,
+      "so": 88,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 61.3,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 12.91,
+      "bb9": 2.93
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.67,
+      "whip": 1.06,
+      "so": 88,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 61.3,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 12.91,
+      "bb9": 2.93
+    },
+    "scoringStats": {
+      "whip": 1.06,
+      "fip": null,
+      "inningsPitched": 61.3,
+      "strikeoutRate": 12.91,
+      "walkRate": 2.93,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 125.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-2010s-kurodhi01",
     "playerId": "kurodhi01",
     "playerSlug": "kurodhi01",
@@ -1765,7 +2111,8 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1845,7 +2192,8 @@
     "featuredSeason": 2018,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2003,7 +2351,8 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2082,7 +2431,8 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2399,7 +2749,8 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2478,7 +2829,8 @@
     "decade": "2010s",
     "featuredSeason": 2012,
     "eligiblePositions": [
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

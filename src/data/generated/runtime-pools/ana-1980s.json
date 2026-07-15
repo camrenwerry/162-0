@@ -416,7 +416,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -912,6 +913,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "ana-1980s-buicede01",
+    "playerId": "buicede01",
+    "playerSlug": "buicede01",
+    "name": "DeWayne Buice",
+    "franchiseId": "ana",
+    "teamAbbreviation": "CAL",
+    "teamDisplayName": "California Angels",
+    "historicalTeamName": "California Angels",
+    "team": "CAL",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.39,
+      "whip": 1.114,
+      "so": 109,
+      "wins": 6,
+      "saves": 17,
+      "sv": 17,
+      "inningsPitched": 114,
+      "games": 57,
+      "starts": 0,
+      "reliefAppearances": 57,
+      "k9": 8.61,
+      "bb9": 3.16
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.114,
+      "fip": null,
+      "inningsPitched": 114,
+      "strikeoutRate": 8.61,
+      "walkRate": 3.16,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 57,
+      "reliefAppearances": 57,
+      "eraAdjustedPitching": 131.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "ana-1980s-downibr01",
     "playerId": "downibr01",
     "playerSlug": "downibr01",
@@ -924,7 +977,8 @@
     "decade": "1980s",
     "featuredSeason": 1987,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -956,6 +1010,162 @@
       "games": 155,
       "plateAppearances": 695,
       "eraAdjustedOffense": 116.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ana-1980s-hasslan01",
+    "playerId": "hasslan01",
+    "playerSlug": "hasslan01",
+    "name": "Andy Hassler",
+    "franchiseId": "ana",
+    "teamAbbreviation": "CAL",
+    "teamDisplayName": "California Angels",
+    "historicalTeamName": "California Angels",
+    "team": "CAL",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.49,
+      "whip": 1.253,
+      "so": 75,
+      "wins": 5,
+      "saves": 10,
+      "sv": 10,
+      "inningsPitched": 83,
+      "games": 41,
+      "starts": 0,
+      "reliefAppearances": 41,
+      "k9": 8.13,
+      "bb9": 4.01
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.253,
+      "fip": null,
+      "inningsPitched": 83,
+      "strikeoutRate": 8.13,
+      "walkRate": 4.01,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 41,
+      "reliefAppearances": 41,
+      "eraAdjustedPitching": 161.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ana-1980s-suttodo01",
+    "playerId": "suttodo01",
+    "playerSlug": "suttodo01",
+    "name": "Don Sutton",
+    "franchiseId": "ana",
+    "teamAbbreviation": "CAL",
+    "teamDisplayName": "California Angels",
+    "historicalTeamName": "California Angels",
+    "team": "CAL",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.74,
+      "whip": 1.164,
+      "so": 116,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 207,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 5.04,
+      "bb9": 2.13
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.164,
+      "fip": null,
+      "inningsPitched": 207,
+      "strikeoutRate": 5.04,
+      "walkRate": 2.13,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 34,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 111.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ana-1980s-zahnge01",
+    "playerId": "zahnge01",
+    "playerSlug": "zahnge01",
+    "name": "Geoff Zahn",
+    "franchiseId": "ana",
+    "teamAbbreviation": "CAL",
+    "teamDisplayName": "California Angels",
+    "historicalTeamName": "California Angels",
+    "team": "CAL",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.12,
+      "whip": 1.244,
+      "so": 61,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 199.3,
+      "games": 28,
+      "starts": 27,
+      "reliefAppearances": 1,
+      "k9": 2.75,
+      "bb9": 2.17
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.244,
+      "fip": null,
+      "inningsPitched": 199.3,
+      "strikeoutRate": 2.75,
+      "walkRate": 2.17,
+      "starts": 27,
+      "gamesStarted": 27,
+      "games": 28,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 128.1
     },
     "pitchingScoringStats": null
   },
@@ -1022,7 +1232,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1170,7 +1381,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

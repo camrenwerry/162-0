@@ -1455,6 +1455,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tbd-2010s-cedenxa01",
+    "playerId": "cedenxa01",
+    "playerSlug": "cedenxa01",
+    "name": "Xavier Cedeno",
+    "franchiseId": "tbd",
+    "teamAbbreviation": "TBR",
+    "teamDisplayName": "Tampa Bay Rays",
+    "historicalTeamName": "Tampa Bay Rays",
+    "team": "TBR",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TBA"
+      ],
+      "sourcePlayerId": "cedenxa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 58.015,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.09,
+      "whip": 1.14,
+      "so": 43,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 43,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 9,
+      "bb9": 2.51
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.09,
+      "whip": 1.14,
+      "so": 43,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 43,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 9,
+      "bb9": 2.51
+    },
+    "scoringStats": {
+      "whip": 1.14,
+      "fip": null,
+      "inningsPitched": 43,
+      "strikeoutRate": 9,
+      "walkRate": 2.51,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 61,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 191.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tbd-2010s-mahtomi01",
     "playerId": "mahtomi01",
     "playerSlug": "mahtomi01",
@@ -1532,6 +1618,264 @@
       "games": 41,
       "plateAppearances": 115,
       "eraAdjustedOffense": 132.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tbd-2010s-hunteto02",
+    "playerId": "hunteto02",
+    "playerSlug": "hunteto02",
+    "name": "Tommy Hunter",
+    "franchiseId": "tbd",
+    "teamAbbreviation": "TBR",
+    "teamDisplayName": "Tampa Bay Rays",
+    "historicalTeamName": "Tampa Bay Rays",
+    "team": "TBR",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TBA"
+      ],
+      "sourcePlayerId": "hunteto02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 57.189,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.61,
+      "whip": 0.972,
+      "so": 64,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 58.7,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 9.82,
+      "bb9": 2.15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.61,
+      "whip": 0.972,
+      "so": 64,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 58.7,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 9.82,
+      "bb9": 2.15
+    },
+    "scoringStats": {
+      "whip": 0.972,
+      "fip": null,
+      "inningsPitched": 58.7,
+      "strikeoutRate": 9.82,
+      "walkRate": 2.15,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 61,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 167.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tbd-2010s-nunovi01",
+    "playerId": "nunovi01",
+    "playerSlug": "nunovi01",
+    "name": "Vidal Nuno",
+    "franchiseId": "tbd",
+    "teamAbbreviation": "TBR",
+    "teamDisplayName": "Tampa Bay Rays",
+    "historicalTeamName": "Tampa Bay Rays",
+    "team": "TBR",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TBA"
+      ],
+      "sourcePlayerId": "nunovi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.93,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.64,
+      "whip": 1.03,
+      "so": 29,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 33,
+      "games": 17,
+      "starts": 0,
+      "reliefAppearances": 17,
+      "k9": 7.91,
+      "bb9": 2.73
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.64,
+      "whip": 1.03,
+      "so": 29,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 33,
+      "games": 17,
+      "starts": 0,
+      "reliefAppearances": 17,
+      "k9": 7.91,
+      "bb9": 2.73
+    },
+    "scoringStats": {
+      "whip": 1.03,
+      "fip": null,
+      "inningsPitched": 33,
+      "strikeoutRate": 7.91,
+      "walkRate": 2.73,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 17,
+      "reliefAppearances": 17,
+      "eraAdjustedPitching": 260.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tbd-2010s-balfogr01",
+    "playerId": "balfogr01",
+    "playerSlug": "balfogr01",
+    "name": "Grant Balfour",
+    "franchiseId": "tbd",
+    "teamAbbreviation": "TBR",
+    "teamDisplayName": "Tampa Bay Rays",
+    "historicalTeamName": "Tampa Bay Rays",
+    "team": "TBR",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TBA"
+      ],
+      "sourcePlayerId": "balfogr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 55.861,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.28,
+      "whip": 1.084,
+      "so": 56,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55.3,
+      "games": 57,
+      "starts": 0,
+      "reliefAppearances": 57,
+      "k9": 9.11,
+      "bb9": 2.77
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.28,
+      "whip": 1.084,
+      "so": 56,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55.3,
+      "games": 57,
+      "starts": 0,
+      "reliefAppearances": 57,
+      "k9": 9.11,
+      "bb9": 2.77
+    },
+    "scoringStats": {
+      "whip": 1.084,
+      "fip": null,
+      "inningsPitched": 55.3,
+      "strikeoutRate": 9.11,
+      "walkRate": 2.77,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 57,
+      "reliefAppearances": 57,
+      "eraAdjustedPitching": 181.7
     },
     "pitchingScoringStats": null
   },
@@ -1628,7 +1972,8 @@
     "featuredSeason": 2019,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1868,7 +2213,8 @@
     "featuredSeason": 2016,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1947,7 +2293,8 @@
     "decade": "2010s",
     "featuredSeason": 2017,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2344,7 +2691,8 @@
     "featuredSeason": 2019,
     "eligiblePositions": [
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2587,7 +2935,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

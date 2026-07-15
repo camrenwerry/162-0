@@ -944,7 +944,8 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1195,7 +1196,8 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1440,7 +1442,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1939,7 +1942,8 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2019,7 +2023,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2253,6 +2258,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bal-2020s-vothau01",
+    "playerId": "vothau01",
+    "playerSlug": "vothau01",
+    "name": "Austin Voth",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "vothau01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.231,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.04,
+      "whip": 1.229,
+      "so": 72,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 83,
+      "games": 22,
+      "starts": 17,
+      "reliefAppearances": 5,
+      "k9": 7.81,
+      "bb9": 2.71
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.04,
+      "whip": 1.229,
+      "so": 72,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 83,
+      "games": 22,
+      "starts": 17,
+      "reliefAppearances": 5,
+      "k9": 7.81,
+      "bb9": 2.71
+    },
+    "scoringStats": {
+      "whip": 1.229,
+      "fip": null,
+      "inningsPitched": 83,
+      "strikeoutRate": 7.81,
+      "walkRate": 2.71,
+      "starts": 17,
+      "gamesStarted": 17,
+      "games": 22,
+      "reliefAppearances": 5,
+      "eraAdjustedPitching": 127.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-2020s-kittran01",
+    "playerId": "kittran01",
+    "playerSlug": "kittran01",
+    "name": "Andrew Kittredge",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "kittran01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.369,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.45,
+      "whip": 1.085,
+      "so": 32,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 31.3,
+      "games": 31,
+      "starts": 0,
+      "reliefAppearances": 31,
+      "k9": 9.19,
+      "bb9": 2.3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.45,
+      "whip": 1.085,
+      "so": 32,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 31.3,
+      "games": 31,
+      "starts": 0,
+      "reliefAppearances": 31,
+      "k9": 9.19,
+      "bb9": 2.3
+    },
+    "scoringStats": {
+      "whip": 1.085,
+      "fip": null,
+      "inningsPitched": 31.3,
+      "strikeoutRate": 9.19,
+      "walkRate": 2.3,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 31,
+      "reliefAppearances": 31,
+      "eraAdjustedPitching": 118.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bal-2020s-valaipa01",
     "playerId": "valaipa01",
     "playerSlug": "valaipa01",
@@ -2330,6 +2507,178 @@
       "games": 52,
       "plateAppearances": 150,
       "eraAdjustedOffense": 107.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-2020s-gibsoky01",
+    "playerId": "gibsoky01",
+    "playerSlug": "gibsoky01",
+    "name": "Kyle Gibson",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "gibsoky01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.844,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.73,
+      "whip": 1.318,
+      "so": 157,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 192,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 7.36,
+      "bb9": 2.58
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.73,
+      "whip": 1.318,
+      "so": 157,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 192,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 7.36,
+      "bb9": 2.58
+    },
+    "scoringStats": {
+      "whip": 1.318,
+      "fip": null,
+      "inningsPitched": 192,
+      "strikeoutRate": 7.36,
+      "walkRate": 2.58,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 33,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 90.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-2020s-rodrigr01",
+    "playerId": "rodrigr01",
+    "playerSlug": "rodrigr01",
+    "name": "Grayson Rodriguez",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "rodrigr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.801,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.86,
+      "whip": 1.243,
+      "so": 130,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 116.7,
+      "games": 20,
+      "starts": 20,
+      "reliefAppearances": 0,
+      "k9": 10.03,
+      "bb9": 2.78
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.86,
+      "whip": 1.243,
+      "so": 130,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 116.7,
+      "games": 20,
+      "starts": 20,
+      "reliefAppearances": 0,
+      "k9": 10.03,
+      "bb9": 2.78
+    },
+    "scoringStats": {
+      "whip": 1.243,
+      "fip": null,
+      "inningsPitched": 116.7,
+      "strikeoutRate": 10.03,
+      "walkRate": 2.78,
+      "starts": 20,
+      "gamesStarted": 20,
+      "games": 20,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 104.2
     },
     "pitchingScoringStats": null
   },

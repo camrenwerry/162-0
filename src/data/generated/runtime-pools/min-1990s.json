@@ -403,6 +403,54 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "min-1990s-davisch01",
+    "playerId": "davisch01",
+    "playerSlug": "davisch01",
+    "name": "Chili Davis",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "B",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.892,
+      "hr": 29,
+      "avg": 0.277,
+      "obp": 0.385,
+      "slg": 0.507,
+      "rbi": 93,
+      "sb": 5,
+      "games": 153,
+      "plateAppearances": 634
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.385,
+      "slg": 0.507,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 153,
+      "plateAppearances": 634,
+      "eraAdjustedOffense": 123.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "min-1990s-morrija02",
     "playerId": "morrija02",
     "playerSlug": "morrija02",
@@ -828,7 +876,8 @@
     "decade": "1990s",
     "featuredSeason": 1990,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -975,7 +1024,8 @@
     "featuredSeason": 1991,
     "eligiblePositions": [
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1123,7 +1173,8 @@
     "decade": "1990s",
     "featuredSeason": 1996,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1224,7 +1275,8 @@
     "featuredSeason": 1999,
     "eligiblePositions": [
       "3B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1309,6 +1361,160 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "min-1990s-casiala01",
+    "playerId": "casiala01",
+    "playerSlug": "casiala01",
+    "name": "Larry Casian",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.02,
+      "whip": 1.288,
+      "so": 31,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 56.7,
+      "games": 54,
+      "starts": 0,
+      "reliefAppearances": 54,
+      "k9": 4.92,
+      "bb9": 2.22
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.288,
+      "fip": null,
+      "inningsPitched": 56.7,
+      "strikeoutRate": 4.92,
+      "walkRate": 2.22,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 54,
+      "reliefAppearances": 54,
+      "eraAdjustedPitching": 143.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1990s-wellsbo01",
+    "playerId": "wellsbo01",
+    "playerSlug": "wellsbo01",
+    "name": "Bob Wells",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.81,
+      "whip": 1.225,
+      "so": 44,
+      "wins": 8,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 87.3,
+      "games": 76,
+      "starts": 0,
+      "reliefAppearances": 76,
+      "k9": 4.53,
+      "bb9": 2.89
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.225,
+      "fip": null,
+      "inningsPitched": 87.3,
+      "strikeoutRate": 4.53,
+      "walkRate": 2.89,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 76,
+      "reliefAppearances": 76,
+      "eraAdjustedPitching": 127.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1990s-beckeri01",
+    "playerId": "beckeri01",
+    "playerSlug": "beckeri01",
+    "name": "Rich Becker",
+    "franchiseId": "min",
+    "teamAbbreviation": "MIN",
+    "teamDisplayName": "Minnesota Twins",
+    "historicalTeamName": "Minnesota Twins",
+    "team": "MIN",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.807,
+      "hr": 12,
+      "avg": 0.291,
+      "obp": 0.372,
+      "slg": 0.434,
+      "rbi": 71,
+      "sb": 19,
+      "games": 148,
+      "plateAppearances": 604
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.372,
+      "slg": 0.434,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 148,
+      "plateAppearances": 604,
+      "eraAdjustedOffense": 101.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "min-1990s-halech01",
     "playerId": "halech01",
     "playerSlug": "halech01",
@@ -1322,7 +1528,8 @@
     "featuredSeason": 1993,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1515,7 +1722,8 @@
     "decade": "1990s",
     "featuredSeason": 1997,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

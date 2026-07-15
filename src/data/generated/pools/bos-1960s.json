@@ -2287,6 +2287,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-1960s-hortoto01",
+    "playerId": "hortoto01",
+    "playerSlug": "hortoto01",
+    "name": "Tony Horton",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1960s",
+    "featuredSeason": 1965,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "hortoto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.961,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.845,
+      "hr": 7,
+      "avg": 0.294,
+      "obp": 0.361,
+      "slg": 0.485,
+      "rbi": 23,
+      "sb": 0,
+      "games": 60,
+      "plateAppearances": 183
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.845,
+      "hr": 7,
+      "avg": 0.294,
+      "obp": 0.361,
+      "slg": 0.485,
+      "rbi": 23,
+      "sb": 0,
+      "games": 60,
+      "plateAppearances": 183
+    },
+    "scoringStats": {
+      "obp": 0.361,
+      "slg": 0.485,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 60,
+      "plateAppearances": 183,
+      "eraAdjustedOffense": 124.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-1960s-demetdo01",
     "playerId": "demetdo01",
     "playerSlug": "demetdo01",
@@ -2366,6 +2445,172 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-1960s-nichoch02",
+    "playerId": "nichoch02",
+    "playerSlug": "nichoch02",
+    "name": "Chet Nichols",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1960s",
+    "featuredSeason": 1961,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "B",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "nichoch02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.752,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.09,
+      "whip": 1.277,
+      "so": 20,
+      "wins": 3,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 51.7,
+      "games": 26,
+      "starts": 2,
+      "reliefAppearances": 24,
+      "k9": 3.48,
+      "bb9": 4.53
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.09,
+      "whip": 1.277,
+      "so": 20,
+      "wins": 3,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 51.7,
+      "games": 26,
+      "starts": 2,
+      "reliefAppearances": 24,
+      "k9": 3.48,
+      "bb9": 4.53
+    },
+    "scoringStats": {
+      "whip": 1.277,
+      "fip": null,
+      "inningsPitched": 51.7,
+      "strikeoutRate": 3.48,
+      "walkRate": 4.53,
+      "starts": 2,
+      "gamesStarted": 2,
+      "games": 26,
+      "reliefAppearances": 24,
+      "eraAdjustedPitching": 192.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1960s-greenle01",
+    "playerId": "greenle01",
+    "playerSlug": "greenle01",
+    "name": "Lenny Green",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1960s",
+    "featuredSeason": 1965,
+    "eligiblePositions": [
+      "LF",
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "greenle01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.476,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.79,
+      "hr": 7,
+      "avg": 0.276,
+      "obp": 0.361,
+      "slg": 0.429,
+      "rbi": 24,
+      "sb": 8,
+      "games": 119,
+      "plateAppearances": 427
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.79,
+      "hr": 7,
+      "avg": 0.276,
+      "obp": 0.361,
+      "slg": 0.429,
+      "rbi": 24,
+      "sb": 8,
+      "games": 119,
+      "plateAppearances": 427
+    },
+    "scoringStats": {
+      "obp": 0.361,
+      "slg": 0.429,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 119,
+      "plateAppearances": 427,
+      "eraAdjustedOffense": 116.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-1960s-mosesje01",
     "playerId": "mosesje01",
     "playerSlug": "mosesje01",
@@ -2441,6 +2686,85 @@
       "games": 53,
       "plateAppearances": 144,
       "eraAdjustedOffense": 116.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1960s-wertzvi01",
+    "playerId": "wertzvi01",
+    "playerSlug": "wertzvi01",
+    "name": "Vic Wertz",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1960s",
+    "featuredSeason": 1960,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "wertzvi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.059,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.796,
+      "hr": 19,
+      "avg": 0.282,
+      "obp": 0.335,
+      "slg": 0.46,
+      "rbi": 103,
+      "sb": 0,
+      "games": 131,
+      "plateAppearances": 487
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.796,
+      "hr": 19,
+      "avg": 0.282,
+      "obp": 0.335,
+      "slg": 0.46,
+      "rbi": 103,
+      "sb": 0,
+      "games": 131,
+      "plateAppearances": 487
+    },
+    "scoringStats": {
+      "obp": 0.335,
+      "slg": 0.46,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 131,
+      "plateAppearances": 487,
+      "eraAdjustedOffense": 111.4
     },
     "pitchingScoringStats": null
   },

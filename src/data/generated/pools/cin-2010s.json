@@ -925,6 +925,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cin-2010s-rhodear01",
+    "playerId": "rhodear01",
+    "playerSlug": "rhodear01",
+    "name": "Arthur Rhodes",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "rhodear01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.255,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.29,
+      "whip": 1.018,
+      "so": 50,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55,
+      "games": 69,
+      "starts": 0,
+      "reliefAppearances": 69,
+      "k9": 8.18,
+      "bb9": 2.95
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.29,
+      "whip": 1.018,
+      "so": 50,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55,
+      "games": 69,
+      "starts": 0,
+      "reliefAppearances": 69,
+      "k9": 8.18,
+      "bb9": 2.95
+    },
+    "scoringStats": {
+      "whip": 1.018,
+      "fip": null,
+      "inningsPitched": 55,
+      "strikeoutRate": 8.18,
+      "walkRate": 2.95,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 69,
+      "reliefAppearances": 69,
+      "eraAdjustedPitching": 175.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cin-2010s-cozarza01",
     "playerId": "cozarza01",
     "playerSlug": "cozarza01",
@@ -1004,6 +1090,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cin-2010s-hoovejj01",
+    "playerId": "hoovejj01",
+    "playerSlug": "hoovejj01",
+    "name": "J. J. Hoover",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "hoovejj01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.991,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.05,
+      "whip": 0.978,
+      "so": 31,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 30.7,
+      "games": 28,
+      "starts": 0,
+      "reliefAppearances": 28,
+      "k9": 9.1,
+      "bb9": 3.82
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.05,
+      "whip": 0.978,
+      "so": 31,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 30.7,
+      "games": 28,
+      "starts": 0,
+      "reliefAppearances": 28,
+      "k9": 9.1,
+      "bb9": 3.82
+    },
+    "scoringStats": {
+      "whip": 0.978,
+      "fip": null,
+      "inningsPitched": 30.7,
+      "strikeoutRate": 9.1,
+      "walkRate": 3.82,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 28,
+      "reliefAppearances": 28,
+      "eraAdjustedPitching": 191.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cin-2010s-choosh01",
     "playerId": "choosh01",
     "playerSlug": "choosh01",
@@ -1079,6 +1251,92 @@
       "games": 154,
       "plateAppearances": 712,
       "eraAdjustedOffense": 125.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-2010s-hernada01",
+    "playerId": "hernada01",
+    "playerSlug": "hernada01",
+    "name": "David Hernandez",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "hernada01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.313,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.53,
+      "whip": 0.984,
+      "so": 65,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 64,
+      "games": 57,
+      "starts": 0,
+      "reliefAppearances": 57,
+      "k9": 9.14,
+      "bb9": 2.39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.53,
+      "whip": 0.984,
+      "so": 65,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 64,
+      "games": 57,
+      "starts": 0,
+      "reliefAppearances": 57,
+      "k9": 9.14,
+      "bb9": 2.39
+    },
+    "scoringStats": {
+      "whip": 0.984,
+      "fip": null,
+      "inningsPitched": 64,
+      "strikeoutRate": 9.14,
+      "walkRate": 2.39,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 57,
+      "reliefAppearances": 57,
+      "eraAdjustedPitching": 159
     },
     "pitchingScoringStats": null
   },
@@ -1820,6 +2078,92 @@
       "games": 133,
       "plateAppearances": 537,
       "eraAdjustedOffense": 118.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-2010s-braybi01",
+    "playerId": "braybi01",
+    "playerSlug": "braybi01",
+    "name": "Bill Bray",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "braybi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.861,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.98,
+      "whip": 1.076,
+      "so": 44,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 48.3,
+      "games": 79,
+      "starts": 0,
+      "reliefAppearances": 79,
+      "k9": 8.19,
+      "bb9": 3.17
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.98,
+      "whip": 1.076,
+      "so": 44,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 48.3,
+      "games": 79,
+      "starts": 0,
+      "reliefAppearances": 79,
+      "k9": 8.19,
+      "bb9": 3.17
+    },
+    "scoringStats": {
+      "whip": 1.076,
+      "fip": null,
+      "inningsPitched": 48.3,
+      "strikeoutRate": 8.19,
+      "walkRate": 3.17,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 79,
+      "reliefAppearances": 79,
+      "eraAdjustedPitching": 127.9
     },
     "pitchingScoringStats": null
   },

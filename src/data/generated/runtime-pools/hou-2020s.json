@@ -272,7 +272,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -820,6 +821,162 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "hou-2020s-scottta02",
+    "playerId": "scottta02",
+    "playerSlug": "scottta02",
+    "name": "Tayler Scott",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.23,
+      "whip": 1.165,
+      "so": 71,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 68.7,
+      "games": 62,
+      "starts": 1,
+      "reliefAppearances": 61,
+      "k9": 9.31,
+      "bb9": 4.59
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.165,
+      "fip": null,
+      "inningsPitched": 68.7,
+      "strikeoutRate": 9.31,
+      "walkRate": 4.59,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 62,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 180.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "hou-2020s-martise01",
+    "playerId": "martise01",
+    "playerSlug": "martise01",
+    "name": "Seth Martinez",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.09,
+      "whip": 1.034,
+      "so": 38,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 38.7,
+      "games": 29,
+      "starts": 0,
+      "reliefAppearances": 29,
+      "k9": 8.84,
+      "bb9": 3.26
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.034,
+      "fip": null,
+      "inningsPitched": 38.7,
+      "strikeoutRate": 8.84,
+      "walkRate": 3.26,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 29,
+      "reliefAppearances": 29,
+      "eraAdjustedPitching": 185.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "hou-2020s-kikucyu01",
+    "playerId": "kikucyu01",
+    "playerSlug": "kikucyu01",
+    "name": "Yusei Kikuchi",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.7,
+      "whip": 0.933,
+      "so": 76,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 60,
+      "games": 10,
+      "starts": 10,
+      "reliefAppearances": 0,
+      "k9": 11.4,
+      "bb9": 2.1
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 0.933,
+      "fip": null,
+      "inningsPitched": 60,
+      "strikeoutRate": 11.4,
+      "walkRate": 2.1,
+      "starts": 10,
+      "gamesStarted": 10,
+      "games": 10,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 148.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "hou-2020s-springe01",
     "playerId": "springe01",
     "playerSlug": "springe01",
@@ -916,6 +1073,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "hou-2020s-mcculla02",
+    "playerId": "mcculla02",
+    "playerSlug": "mcculla02",
+    "name": "Lance McCullers",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.16,
+      "whip": 1.22,
+      "so": 185,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 162.3,
+      "games": 28,
+      "starts": 28,
+      "reliefAppearances": 0,
+      "k9": 10.26,
+      "bb9": 4.21
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.22,
+      "fip": null,
+      "inningsPitched": 162.3,
+      "strikeoutRate": 10.26,
+      "walkRate": 4.21,
+      "starts": 28,
+      "gamesStarted": 28,
+      "games": 28,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 136.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "hou-2020s-diazya02",
     "playerId": "diazya02",
     "playerSlug": "diazya02",
@@ -928,7 +1137,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1170,7 +1380,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1266,7 +1477,8 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

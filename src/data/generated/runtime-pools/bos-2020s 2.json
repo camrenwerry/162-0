@@ -678,7 +678,8 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -779,7 +780,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -827,7 +829,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1022,7 +1025,8 @@
     "featuredSeason": 2023,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1054,6 +1058,54 @@
       "games": 146,
       "plateAppearances": 626,
       "eraAdjustedOffense": 109.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2020s-renfrhu01",
+    "playerId": "renfrhu01",
+    "playerSlug": "renfrhu01",
+    "name": "Hunter Renfroe",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.816,
+      "hr": 31,
+      "avg": 0.259,
+      "obp": 0.315,
+      "slg": 0.501,
+      "rbi": 96,
+      "sb": 1,
+      "games": 144,
+      "plateAppearances": 572
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.315,
+      "slg": 0.501,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 144,
+      "plateAppearances": 572,
+      "eraAdjustedOffense": 111.6
     },
     "pitchingScoringStats": null
   },
@@ -1307,6 +1359,162 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-2020s-winckjo01",
+    "playerId": "winckjo01",
+    "playerSlug": "winckjo01",
+    "name": "Josh Winckowski",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.88,
+      "whip": 1.423,
+      "so": 82,
+      "wins": 4,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 84.3,
+      "games": 60,
+      "starts": 1,
+      "reliefAppearances": 59,
+      "k9": 8.75,
+      "bb9": 3.31
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.423,
+      "fip": null,
+      "inningsPitched": 84.3,
+      "strikeoutRate": 8.75,
+      "walkRate": 3.31,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 60,
+      "reliefAppearances": 59,
+      "eraAdjustedPitching": 148.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2020s-wachami01",
+    "playerId": "wachami01",
+    "playerSlug": "wachami01",
+    "name": "Michael Wacha",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.32,
+      "whip": 1.115,
+      "so": 104,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 127.3,
+      "games": 23,
+      "starts": 23,
+      "reliefAppearances": 0,
+      "k9": 7.35,
+      "bb9": 2.19
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.115,
+      "fip": null,
+      "inningsPitched": 127.3,
+      "strikeoutRate": 7.35,
+      "walkRate": 2.19,
+      "starts": 23,
+      "gamesStarted": 23,
+      "games": 23,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 116.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2020s-pivetni01",
+    "playerId": "pivetni01",
+    "playerSlug": "pivetni01",
+    "name": "Nick Pivetta",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.14,
+      "whip": 1.126,
+      "so": 172,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 145.7,
+      "games": 27,
+      "starts": 26,
+      "reliefAppearances": 1,
+      "k9": 10.63,
+      "bb9": 2.22
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.126,
+      "fip": null,
+      "inningsPitched": 145.7,
+      "strikeoutRate": 10.63,
+      "walkRate": 2.22,
+      "starts": 26,
+      "gamesStarted": 26,
+      "games": 27,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 97.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-2020s-storytr01",
     "playerId": "storytr01",
     "playerSlug": "storytr01",
@@ -1466,7 +1674,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

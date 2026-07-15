@@ -2224,6 +2224,165 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "min-1940s-cullero01",
+    "playerId": "cullero01",
+    "playerSlug": "cullero01",
+    "name": "Roy Cullenbine",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1940s",
+    "featuredSeason": 1942,
+    "eligiblePositions": [
+      "3B",
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "B",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "cullero01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.998,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.787,
+      "hr": 2,
+      "avg": 0.286,
+      "obp": 0.396,
+      "slg": 0.39,
+      "rbi": 35,
+      "sb": 1,
+      "games": 64,
+      "plateAppearances": 285
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.787,
+      "hr": 2,
+      "avg": 0.286,
+      "obp": 0.396,
+      "slg": 0.39,
+      "rbi": 35,
+      "sb": 1,
+      "games": 64,
+      "plateAppearances": 285
+    },
+    "scoringStats": {
+      "obp": 0.396,
+      "slg": 0.39,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 64,
+      "plateAppearances": 285,
+      "eraAdjustedOffense": 115.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1940s-yosted01",
+    "playerId": "yosted01",
+    "playerSlug": "yosted01",
+    "name": "Eddie Yost",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1940s",
+    "featuredSeason": 1949,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "yosted01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.889,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.774,
+      "hr": 9,
+      "avg": 0.253,
+      "obp": 0.383,
+      "slg": 0.391,
+      "rbi": 45,
+      "sb": 3,
+      "games": 124,
+      "plateAppearances": 531
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.774,
+      "hr": 9,
+      "avg": 0.253,
+      "obp": 0.383,
+      "slg": 0.391,
+      "rbi": 45,
+      "sb": 3,
+      "games": 124,
+      "plateAppearances": 531
+    },
+    "scoringStats": {
+      "obp": 0.383,
+      "slg": 0.391,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 124,
+      "plateAppearances": 531,
+      "eraAdjustedOffense": 106.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "min-1940s-evansal01",
     "playerId": "evansal01",
     "playerSlug": "evansal01",
@@ -2299,6 +2458,164 @@
       "games": 51,
       "plateAppearances": 170,
       "eraAdjustedOffense": 110.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1940s-walkege02",
+    "playerId": "walkege02",
+    "playerSlug": "walkege02",
+    "name": "Gee Walker",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1940s",
+    "featuredSeason": 1940,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "walkege02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.302,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.757,
+      "hr": 13,
+      "avg": 0.294,
+      "obp": 0.325,
+      "slg": 0.432,
+      "rbi": 96,
+      "sb": 21,
+      "games": 140,
+      "plateAppearances": 622
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.757,
+      "hr": 13,
+      "avg": 0.294,
+      "obp": 0.325,
+      "slg": 0.432,
+      "rbi": 96,
+      "sb": 21,
+      "games": 140,
+      "plateAppearances": 622
+    },
+    "scoringStats": {
+      "obp": 0.325,
+      "slg": 0.432,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 140,
+      "plateAppearances": 622,
+      "eraAdjustedOffense": 101.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1940s-kreevmi01",
+    "playerId": "kreevmi01",
+    "playerSlug": "kreevmi01",
+    "name": "Mike Kreevich",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1940s",
+    "featuredSeason": 1945,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "kreevmi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.811,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.737,
+      "hr": 1,
+      "avg": 0.278,
+      "obp": 0.363,
+      "slg": 0.373,
+      "rbi": 23,
+      "sb": 7,
+      "games": 45,
+      "plateAppearances": 181
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.737,
+      "hr": 1,
+      "avg": 0.278,
+      "obp": 0.363,
+      "slg": 0.373,
+      "rbi": 23,
+      "sb": 7,
+      "games": 45,
+      "plateAppearances": 181
+    },
+    "scoringStats": {
+      "obp": 0.363,
+      "slg": 0.373,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 45,
+      "plateAppearances": 181,
+      "eraAdjustedOffense": 110.2
     },
     "pitchingScoringStats": null
   },

@@ -1097,7 +1097,8 @@
     "decade": "1980s",
     "featuredSeason": 1984,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1427,7 +1428,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1992,7 +1994,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2055,6 +2058,85 @@
       "games": 132,
       "plateAppearances": 566,
       "eraAdjustedOffense": 110.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1980s-kittlro01",
+    "playerId": "kittlro01",
+    "playerSlug": "kittlro01",
+    "name": "Ron Kittle",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "kittlro01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.466,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.856,
+      "hr": 18,
+      "avg": 0.258,
+      "obp": 0.323,
+      "slg": 0.533,
+      "rbi": 43,
+      "sb": 0,
+      "games": 75,
+      "plateAppearances": 254
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.856,
+      "hr": 18,
+      "avg": 0.258,
+      "obp": 0.323,
+      "slg": 0.533,
+      "rbi": 43,
+      "sb": 0,
+      "games": 75,
+      "plateAppearances": 254
+    },
+    "scoringStats": {
+      "obp": 0.323,
+      "slg": 0.533,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 75,
+      "plateAppearances": 254,
+      "eraAdjustedOffense": 119.7
     },
     "pitchingScoringStats": null
   },
@@ -2465,6 +2547,252 @@
       "games": 153,
       "plateAppearances": 685,
       "eraAdjustedOffense": 107
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1980s-mongesi01",
+    "playerId": "mongesi01",
+    "playerSlug": "mongesi01",
+    "name": "Sid Monge",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "B",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "mongesi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.684,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.53,
+      "whip": 1.272,
+      "so": 61,
+      "wins": 3,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 94.3,
+      "games": 67,
+      "starts": 0,
+      "reliefAppearances": 67,
+      "k9": 5.82,
+      "bb9": 3.82
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.53,
+      "whip": 1.272,
+      "so": 61,
+      "wins": 3,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 94.3,
+      "games": 67,
+      "starts": 0,
+      "reliefAppearances": 67,
+      "k9": 5.82,
+      "bb9": 3.82
+    },
+    "scoringStats": {
+      "whip": 1.272,
+      "fip": null,
+      "inningsPitched": 94.3,
+      "strikeoutRate": 5.82,
+      "walkRate": 3.82,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 67,
+      "reliefAppearances": 67,
+      "eraAdjustedPitching": 114.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1980s-vukovge01",
+    "playerId": "vukovge01",
+    "playerSlug": "vukovge01",
+    "name": "George Vukovich",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "vukovge01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.09,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.794,
+      "hr": 9,
+      "avg": 0.304,
+      "obp": 0.354,
+      "slg": 0.439,
+      "rbi": 60,
+      "sb": 1,
+      "games": 134,
+      "plateAppearances": 474
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.794,
+      "hr": 9,
+      "avg": 0.304,
+      "obp": 0.354,
+      "slg": 0.439,
+      "rbi": 60,
+      "sb": 1,
+      "games": 134,
+      "plateAppearances": 474
+    },
+    "scoringStats": {
+      "obp": 0.354,
+      "slg": 0.439,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 134,
+      "plateAppearances": 474,
+      "eraAdjustedOffense": 109.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1980s-tablepa01",
+    "playerId": "tablepa01",
+    "playerSlug": "tablepa01",
+    "name": "Pat Tabler",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1980s",
+    "featuredSeason": 1987,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "tablepa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.813,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.809,
+      "hr": 11,
+      "avg": 0.307,
+      "obp": 0.369,
+      "slg": 0.439,
+      "rbi": 86,
+      "sb": 5,
+      "games": 151,
+      "plateAppearances": 618
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.809,
+      "hr": 11,
+      "avg": 0.307,
+      "obp": 0.369,
+      "slg": 0.439,
+      "rbi": 86,
+      "sb": 5,
+      "games": 151,
+      "plateAppearances": 618
+    },
+    "scoringStats": {
+      "obp": 0.369,
+      "slg": 0.439,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 151,
+      "plateAppearances": 618,
+      "eraAdjustedOffense": 106.5
     },
     "pitchingScoringStats": null
   },

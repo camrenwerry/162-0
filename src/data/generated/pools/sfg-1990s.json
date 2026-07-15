@@ -1803,6 +1803,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sfg-1990s-rogerke02",
+    "playerId": "rogerke02",
+    "playerSlug": "rogerke02",
+    "name": "Kevin Rogers",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "rogerke02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.349,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 1.227,
+      "so": 62,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 80.7,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 6.92,
+      "bb9": 3.12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 1.227,
+      "so": 62,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 80.7,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 6.92,
+      "bb9": 3.12
+    },
+    "scoringStats": {
+      "whip": 1.227,
+      "fip": null,
+      "inningsPitched": 80.7,
+      "strikeoutRate": 6.92,
+      "walkRate": 3.12,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 64,
+      "reliefAppearances": 64,
+      "eraAdjustedPitching": 150.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1990s-hernaro01",
+    "playerId": "hernaro01",
+    "playerSlug": "hernaro01",
+    "name": "Roberto Hernandez",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "hernaro01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.083,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.316,
+      "so": 35,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 32.7,
+      "games": 28,
+      "starts": 0,
+      "reliefAppearances": 28,
+      "k9": 9.64,
+      "bb9": 3.86
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.316,
+      "so": 35,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 32.7,
+      "games": 28,
+      "starts": 0,
+      "reliefAppearances": 28,
+      "k9": 9.64,
+      "bb9": 3.86
+    },
+    "scoringStats": {
+      "whip": 1.316,
+      "fip": null,
+      "inningsPitched": 32.7,
+      "strikeoutRate": 9.64,
+      "walkRate": 3.86,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 28,
+      "reliefAppearances": 28,
+      "eraAdjustedPitching": 169.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sfg-1990s-rueteki01",
     "playerId": "rueteki01",
     "playerSlug": "rueteki01",
@@ -1885,6 +2057,171 @@
       "games": 32,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 121.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1990s-embreal01",
+    "playerId": "embreal01",
+    "playerSlug": "embreal01",
+    "name": "Alan Embree",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "embreal01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.152,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.38,
+      "whip": 1.159,
+      "so": 53,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 58.7,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 8.13,
+      "bb9": 3.99
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.38,
+      "whip": 1.159,
+      "so": 53,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 58.7,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 8.13,
+      "bb9": 3.99
+    },
+    "scoringStats": {
+      "whip": 1.159,
+      "fip": null,
+      "inningsPitched": 58.7,
+      "strikeoutRate": 8.13,
+      "walkRate": 3.99,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 68,
+      "reliefAppearances": 68,
+      "eraAdjustedPitching": 135.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1990s-hillgl01",
+    "playerId": "hillgl01",
+    "playerSlug": "hillgl01",
+    "name": "Glenallen Hill",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "hillgl01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.981,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.843,
+      "hr": 19,
+      "avg": 0.28,
+      "obp": 0.344,
+      "slg": 0.499,
+      "rbi": 67,
+      "sb": 6,
+      "games": 98,
+      "plateAppearances": 421
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.843,
+      "hr": 19,
+      "avg": 0.28,
+      "obp": 0.344,
+      "slg": 0.499,
+      "rbi": 67,
+      "sb": 6,
+      "games": 98,
+      "plateAppearances": 421
+    },
+    "scoringStats": {
+      "obp": 0.344,
+      "slg": 0.499,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 98,
+      "plateAppearances": 421,
+      "eraAdjustedOffense": 114.2
     },
     "pitchingScoringStats": null
   },

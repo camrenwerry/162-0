@@ -64,7 +64,8 @@
     "decade": "2000s",
     "featuredSeason": 2007,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -517,7 +518,8 @@
     "featuredSeason": 2003,
     "eligiblePositions": [
       "3B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -665,7 +667,8 @@
     "decade": "2000s",
     "featuredSeason": 2000,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1023,7 +1026,8 @@
     "decade": "2000s",
     "featuredSeason": 2006,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1263,6 +1267,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-2000s-weaveje01",
+    "playerId": "weaveje01",
+    "playerSlug": "weaveje01",
+    "name": "Jeff Weaver",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.18,
+      "whip": 1.192,
+      "so": 75,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 121.7,
+      "games": 17,
+      "starts": 17,
+      "reliefAppearances": 0,
+      "k9": 5.55,
+      "bb9": 2.44
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.192,
+      "fip": null,
+      "inningsPitched": 121.7,
+      "strikeoutRate": 5.55,
+      "walkRate": 2.44,
+      "starts": 17,
+      "gamesStarted": 17,
+      "games": 17,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 140.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-2000s-galarar01",
+    "playerId": "galarar01",
+    "playerSlug": "galarar01",
+    "name": "Armando Galarraga",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.73,
+      "whip": 1.192,
+      "so": 126,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 178.7,
+      "games": 30,
+      "starts": 28,
+      "reliefAppearances": 2,
+      "k9": 6.35,
+      "bb9": 3.07
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.192,
+      "fip": null,
+      "inningsPitched": 178.7,
+      "strikeoutRate": 6.35,
+      "walkRate": 3.07,
+      "starts": 28,
+      "gamesStarted": 28,
+      "games": 30,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 116.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-2000s-fickro01",
     "playerId": "fickro01",
     "playerSlug": "fickro01",
@@ -1308,6 +1416,58 @@
       "games": 124,
       "plateAppearances": 448,
       "eraAdjustedOffense": 107.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-2000s-patteda04",
+    "playerId": "patteda04",
+    "playerSlug": "patteda04",
+    "name": "Danny Patterson",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.06,
+      "whip": 1.175,
+      "so": 27,
+      "wins": 5,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 64.7,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 3.76,
+      "bb9": 1.67
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.175,
+      "fip": null,
+      "inningsPitched": 64.7,
+      "strikeoutRate": 3.76,
+      "walkRate": 1.67,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 60,
+      "reliefAppearances": 60,
+      "eraAdjustedPitching": 146.1
     },
     "pitchingScoringStats": null
   },
@@ -1411,6 +1571,55 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-2000s-sheltch01",
+    "playerId": "sheltch01",
+    "playerSlug": "sheltch01",
+    "name": "Chris Shelton",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.87,
+      "hr": 18,
+      "avg": 0.299,
+      "obp": 0.36,
+      "slg": 0.51,
+      "rbi": 59,
+      "sb": 0,
+      "games": 107,
+      "plateAppearances": 431
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.36,
+      "slg": 0.51,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 107,
+      "plateAppearances": 431,
+      "eraAdjustedOffense": 115.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-2000s-haltesh01",
     "playerId": "haltesh01",
     "playerSlug": "haltesh01",
@@ -1473,7 +1682,8 @@
     "featuredSeason": 2000,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

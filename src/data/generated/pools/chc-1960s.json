@@ -2078,6 +2078,337 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chc-1960s-selmadi01",
+    "playerId": "selmadi01",
+    "playerSlug": "selmadi01",
+    "name": "Dick Selma",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1960s",
+    "featuredSeason": 1969,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "selmadi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.715,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.63,
+      "whip": 1.239,
+      "so": 161,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 168.7,
+      "games": 36,
+      "starts": 25,
+      "reliefAppearances": 11,
+      "k9": 8.59,
+      "bb9": 3.84
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.63,
+      "whip": 1.239,
+      "so": 161,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 168.7,
+      "games": 36,
+      "starts": 25,
+      "reliefAppearances": 11,
+      "k9": 8.59,
+      "bb9": 3.84
+    },
+    "scoringStats": {
+      "whip": 1.239,
+      "fip": null,
+      "inningsPitched": 168.7,
+      "strikeoutRate": 8.59,
+      "walkRate": 3.84,
+      "starts": 25,
+      "gamesStarted": 25,
+      "games": 36,
+      "reliefAppearances": 11,
+      "eraAdjustedPitching": 99.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1960s-ashburi01",
+    "playerId": "ashburi01",
+    "playerSlug": "ashburi01",
+    "name": "Richie Ashburn",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1960s",
+    "featuredSeason": 1960,
+    "eligiblePositions": [
+      "LF",
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "ashburi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.348,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.753,
+      "hr": 0,
+      "avg": 0.291,
+      "obp": 0.415,
+      "slg": 0.338,
+      "rbi": 40,
+      "sb": 16,
+      "games": 151,
+      "plateAppearances": 672
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.753,
+      "hr": 0,
+      "avg": 0.291,
+      "obp": 0.415,
+      "slg": 0.338,
+      "rbi": 40,
+      "sb": 16,
+      "games": 151,
+      "plateAppearances": 672
+    },
+    "scoringStats": {
+      "obp": 0.415,
+      "slg": 0.338,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 151,
+      "plateAppearances": 672,
+      "eraAdjustedOffense": 106.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1960s-schafji01",
+    "playerId": "schafji01",
+    "playerSlug": "schafji01",
+    "name": "Jimmie Schaffer",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1960s",
+    "featuredSeason": 1963,
+    "eligiblePositions": [
+      "C"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "schafji01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.315,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.731,
+      "hr": 7,
+      "avg": 0.239,
+      "obp": 0.294,
+      "slg": 0.437,
+      "rbi": 19,
+      "sb": 0,
+      "games": 57,
+      "plateAppearances": 153
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.731,
+      "hr": 7,
+      "avg": 0.239,
+      "obp": 0.294,
+      "slg": 0.437,
+      "rbi": 19,
+      "sb": 0,
+      "games": 57,
+      "plateAppearances": 153
+    },
+    "scoringStats": {
+      "obp": 0.294,
+      "slg": 0.437,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 57,
+      "plateAppearances": 153,
+      "eraAdjustedOffense": 109.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1960s-schafjo01",
+    "playerId": "schafjo01",
+    "playerSlug": "schafjo01",
+    "name": "Joe Schaffernoth",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1960s",
+    "featuredSeason": 1960,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "schafjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.871,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.78,
+      "whip": 1.145,
+      "so": 33,
+      "wins": 2,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 55,
+      "games": 33,
+      "starts": 0,
+      "reliefAppearances": 33,
+      "k9": 5.4,
+      "bb9": 2.78
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.78,
+      "whip": 1.145,
+      "so": 33,
+      "wins": 2,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 55,
+      "games": 33,
+      "starts": 0,
+      "reliefAppearances": 33,
+      "k9": 5.4,
+      "bb9": 2.78
+    },
+    "scoringStats": {
+      "whip": 1.145,
+      "fip": null,
+      "inningsPitched": 55,
+      "strikeoutRate": 5.4,
+      "walkRate": 2.78,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 33,
+      "reliefAppearances": 33,
+      "eraAdjustedPitching": 135.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chc-1960s-beckegl01",
     "playerId": "beckegl01",
     "playerSlug": "beckegl01",

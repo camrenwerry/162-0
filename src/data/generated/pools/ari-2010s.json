@@ -1588,6 +1588,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "ari-2010s-johnske05",
+    "playerId": "johnske05",
+    "playerSlug": "johnske05",
+    "name": "Kelly Johnson",
+    "franchiseId": "ari",
+    "teamAbbreviation": "ARI",
+    "teamDisplayName": "Arizona Diamondbacks",
+    "historicalTeamName": "Arizona Diamondbacks",
+    "team": "ARI",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ARI"
+      ],
+      "sourcePlayerId": "johnske05"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.685,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.865,
+      "hr": 26,
+      "avg": 0.284,
+      "obp": 0.37,
+      "slg": 0.496,
+      "rbi": 71,
+      "sb": 13,
+      "games": 154,
+      "plateAppearances": 671
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.865,
+      "hr": 26,
+      "avg": 0.284,
+      "obp": 0.37,
+      "slg": 0.496,
+      "rbi": 71,
+      "sb": 13,
+      "games": 154,
+      "plateAppearances": 671
+    },
+    "scoringStats": {
+      "obp": 0.37,
+      "slg": 0.496,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 154,
+      "plateAppearances": 671,
+      "eraAdjustedOffense": 119.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "ari-2010s-peralda01",
     "playerId": "peralda01",
     "playerSlug": "peralda01",
@@ -1742,6 +1821,178 @@
       "games": 37,
       "plateAppearances": 112,
       "eraAdjustedOffense": 122.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ari-2010s-godleza01",
+    "playerId": "godleza01",
+    "playerSlug": "godleza01",
+    "name": "Zack Godley",
+    "franchiseId": "ari",
+    "teamAbbreviation": "ARI",
+    "teamDisplayName": "Arizona Diamondbacks",
+    "historicalTeamName": "Arizona Diamondbacks",
+    "team": "ARI",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ARI"
+      ],
+      "sourcePlayerId": "godleza01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.823,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.37,
+      "whip": 1.142,
+      "so": 165,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 155,
+      "games": 26,
+      "starts": 25,
+      "reliefAppearances": 1,
+      "k9": 9.58,
+      "bb9": 3.08
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.37,
+      "whip": 1.142,
+      "so": 165,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 155,
+      "games": 26,
+      "starts": 25,
+      "reliefAppearances": 1,
+      "k9": 9.58,
+      "bb9": 3.08
+    },
+    "scoringStats": {
+      "whip": 1.142,
+      "fip": null,
+      "inningsPitched": 155,
+      "strikeoutRate": 9.58,
+      "walkRate": 3.08,
+      "starts": 25,
+      "gamesStarted": 25,
+      "games": 26,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 128.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ari-2010s-weavelu01",
+    "playerId": "weavelu01",
+    "playerSlug": "weavelu01",
+    "name": "Luke Weaver",
+    "franchiseId": "ari",
+    "teamAbbreviation": "ARI",
+    "teamDisplayName": "Arizona Diamondbacks",
+    "historicalTeamName": "Arizona Diamondbacks",
+    "team": "ARI",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ARI"
+      ],
+      "sourcePlayerId": "weavelu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.581,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.94,
+      "whip": 1.073,
+      "so": 69,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 64.3,
+      "games": 12,
+      "starts": 12,
+      "reliefAppearances": 0,
+      "k9": 9.65,
+      "bb9": 1.96
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.94,
+      "whip": 1.073,
+      "so": 69,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 64.3,
+      "games": 12,
+      "starts": 12,
+      "reliefAppearances": 0,
+      "k9": 9.65,
+      "bb9": 1.96
+    },
+    "scoringStats": {
+      "whip": 1.073,
+      "fip": null,
+      "inningsPitched": 64.3,
+      "strikeoutRate": 9.65,
+      "walkRate": 1.96,
+      "starts": 12,
+      "gamesStarted": 12,
+      "games": 12,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 149.2
     },
     "pitchingScoringStats": null
   },
@@ -2059,6 +2310,92 @@
       "games": 149,
       "plateAppearances": 635,
       "eraAdjustedOffense": 112.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ari-2010s-mileywa01",
+    "playerId": "mileywa01",
+    "playerSlug": "mileywa01",
+    "name": "Wade Miley",
+    "franchiseId": "ari",
+    "teamAbbreviation": "ARI",
+    "teamDisplayName": "Arizona Diamondbacks",
+    "historicalTeamName": "Arizona Diamondbacks",
+    "team": "ARI",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ARI"
+      ],
+      "sourcePlayerId": "mileywa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.393,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.33,
+      "whip": 1.182,
+      "so": 144,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 194.7,
+      "games": 32,
+      "starts": 29,
+      "reliefAppearances": 3,
+      "k9": 6.66,
+      "bb9": 1.71
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.33,
+      "whip": 1.182,
+      "so": 144,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 194.7,
+      "games": 32,
+      "starts": 29,
+      "reliefAppearances": 3,
+      "k9": 6.66,
+      "bb9": 1.71
+    },
+    "scoringStats": {
+      "whip": 1.182,
+      "fip": null,
+      "inningsPitched": 194.7,
+      "strikeoutRate": 6.66,
+      "walkRate": 1.71,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 32,
+      "reliefAppearances": 3,
+      "eraAdjustedPitching": 118.4
     },
     "pitchingScoringStats": null
   },

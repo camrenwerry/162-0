@@ -164,7 +164,8 @@
     "decade": "2000s",
     "featuredSeason": 2002,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -212,7 +213,8 @@
     "decade": "2000s",
     "featuredSeason": 2000,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -365,7 +367,8 @@
     "featuredSeason": 2000,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -415,7 +418,8 @@
     "eligiblePositions": [
       "1B",
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -970,7 +974,8 @@
     "decade": "2000s",
     "featuredSeason": 2009,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1021,7 +1026,8 @@
       "2B",
       "3B",
       "LF",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1117,7 +1123,8 @@
     "decade": "2000s",
     "featuredSeason": 2009,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1267,7 +1274,8 @@
     "featuredSeason": 2005,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1503,6 +1511,209 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "kcr-2000s-suppaje01",
+    "playerId": "suppaje01",
+    "playerSlug": "suppaje01",
+    "name": "Jeff Suppan",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.37,
+      "whip": 1.379,
+      "so": 120,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 218.3,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 4.95,
+      "bb9": 3.05
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.379,
+      "fip": null,
+      "inningsPitched": 218.3,
+      "strikeoutRate": 4.95,
+      "walkRate": 3.05,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 34,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 102.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-2000s-stairma01",
+    "playerId": "stairma01",
+    "playerSlug": "stairma01",
+    "name": "Matt Stairs",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "eligiblePositions": [
+      "1B",
+      "RF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.818,
+      "hr": 13,
+      "avg": 0.275,
+      "obp": 0.373,
+      "slg": 0.444,
+      "rbi": 66,
+      "sb": 1,
+      "games": 127,
+      "plateAppearances": 466
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.373,
+      "slg": 0.444,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 127,
+      "plateAppearances": 466,
+      "eraAdjustedOffense": 108.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-2000s-quinnma01",
+    "playerId": "quinnma01",
+    "playerSlug": "quinnma01",
+    "name": "Mark Quinn",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "eligiblePositions": [
+      "LF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.83,
+      "hr": 20,
+      "avg": 0.294,
+      "obp": 0.342,
+      "slg": 0.488,
+      "rbi": 78,
+      "sb": 5,
+      "games": 135,
+      "plateAppearances": 544
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.342,
+      "slg": 0.488,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 135,
+      "plateAppearances": 544,
+      "eraAdjustedOffense": 104.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-2000s-nunezle01",
+    "playerId": "nunezle01",
+    "playerSlug": "nunezle01",
+    "name": "Juan Carlos Oviedo",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.98,
+      "whip": 1.241,
+      "so": 26,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 48.3,
+      "games": 45,
+      "starts": 0,
+      "reliefAppearances": 45,
+      "k9": 4.84,
+      "bb9": 2.79
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.241,
+      "fip": null,
+      "inningsPitched": 48.3,
+      "strikeoutRate": 4.84,
+      "walkRate": 2.79,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 45,
+      "reliefAppearances": 45,
+      "eraAdjustedPitching": 145.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "kcr-2000s-buckjo01",
     "playerId": "buckjo01",
     "playerSlug": "buckjo01",
@@ -1515,7 +1726,8 @@
     "decade": "2000s",
     "featuredSeason": 2009,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

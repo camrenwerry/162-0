@@ -866,7 +866,8 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -946,7 +947,8 @@
     "featuredSeason": 2019,
     "eligiblePositions": [
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2206,7 +2208,8 @@
     "decade": "2010s",
     "featuredSeason": 2016,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2354,6 +2357,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "hou-2010s-greinza01",
+    "playerId": "greinza01",
+    "playerSlug": "greinza01",
+    "name": "Zack Greinke",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "HOU"
+      ],
+      "sourcePlayerId": "greinza01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.539,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.02,
+      "whip": 1.069,
+      "so": 52,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 62.7,
+      "games": 10,
+      "starts": 10,
+      "reliefAppearances": 0,
+      "k9": 7.47,
+      "bb9": 1.29
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.02,
+      "whip": 1.069,
+      "so": 52,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 62.7,
+      "games": 10,
+      "starts": 10,
+      "reliefAppearances": 0,
+      "k9": 7.47,
+      "bb9": 1.29
+    },
+    "scoringStats": {
+      "whip": 1.069,
+      "fip": null,
+      "inningsPitched": 62.7,
+      "strikeoutRate": 7.47,
+      "walkRate": 1.29,
+      "starts": 10,
+      "gamesStarted": 10,
+      "games": 10,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 152.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "hou-2010s-rondohe01",
+    "playerId": "rondohe01",
+    "playerSlug": "rondohe01",
+    "name": "Hector Rondon",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "HOU"
+      ],
+      "sourcePlayerId": "rondohe01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.317,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.2,
+      "whip": 1.322,
+      "so": 67,
+      "wins": 2,
+      "saves": 15,
+      "sv": 15,
+      "inningsPitched": 59,
+      "games": 63,
+      "starts": 0,
+      "reliefAppearances": 63,
+      "k9": 10.22,
+      "bb9": 3.05
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.2,
+      "whip": 1.322,
+      "so": 67,
+      "wins": 2,
+      "saves": 15,
+      "sv": 15,
+      "inningsPitched": 59,
+      "games": 63,
+      "starts": 0,
+      "reliefAppearances": 63,
+      "k9": 10.22,
+      "bb9": 3.05
+    },
+    "scoringStats": {
+      "whip": 1.322,
+      "fip": null,
+      "inningsPitched": 59,
+      "strikeoutRate": 10.22,
+      "walkRate": 3.05,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 63,
+      "reliefAppearances": 63,
+      "eraAdjustedPitching": 133.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "hou-2010s-castrja01",
     "playerId": "castrja01",
     "playerSlug": "castrja01",
@@ -2366,7 +2541,8 @@
     "decade": "2010s",
     "featuredSeason": 2013,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2429,6 +2605,178 @@
       "games": 120,
       "plateAppearances": 491,
       "eraAdjustedOffense": 115.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "hou-2010s-quallch01",
+    "playerId": "quallch01",
+    "playerSlug": "quallch01",
+    "name": "Chad Qualls",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "HOU"
+      ],
+      "sourcePlayerId": "quallch01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.049,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.33,
+      "whip": 1.149,
+      "so": 43,
+      "wins": 1,
+      "saves": 19,
+      "sv": 19,
+      "inningsPitched": 51.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 7.54,
+      "bb9": 0.88
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.33,
+      "whip": 1.149,
+      "so": 43,
+      "wins": 1,
+      "saves": 19,
+      "sv": 19,
+      "inningsPitched": 51.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 7.54,
+      "bb9": 0.88
+    },
+    "scoringStats": {
+      "whip": 1.149,
+      "fip": null,
+      "inningsPitched": 51.3,
+      "strikeoutRate": 7.54,
+      "walkRate": 0.88,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 58,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 114.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "hou-2010s-lyonbr01",
+    "playerId": "lyonbr01",
+    "playerSlug": "lyonbr01",
+    "name": "Brandon Lyon",
+    "franchiseId": "hou",
+    "teamAbbreviation": "HOU",
+    "teamDisplayName": "Houston Astros",
+    "historicalTeamName": "Houston Astros",
+    "team": "HOU",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "HOU"
+      ],
+      "sourcePlayerId": "lyonbr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.832,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.12,
+      "whip": 1.269,
+      "so": 54,
+      "wins": 6,
+      "saves": 20,
+      "sv": 20,
+      "inningsPitched": 78,
+      "games": 79,
+      "starts": 0,
+      "reliefAppearances": 79,
+      "k9": 6.23,
+      "bb9": 3.58
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.12,
+      "whip": 1.269,
+      "so": 54,
+      "wins": 6,
+      "saves": 20,
+      "sv": 20,
+      "inningsPitched": 78,
+      "games": 79,
+      "starts": 0,
+      "reliefAppearances": 79,
+      "k9": 6.23,
+      "bb9": 3.58
+    },
+    "scoringStats": {
+      "whip": 1.269,
+      "fip": null,
+      "inningsPitched": 78,
+      "strikeoutRate": 6.23,
+      "walkRate": 3.58,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 79,
+      "reliefAppearances": 79,
+      "eraAdjustedPitching": 128.9
     },
     "pitchingScoringStats": null
   },

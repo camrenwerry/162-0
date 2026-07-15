@@ -2133,6 +2133,171 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1920s-adkingr01",
+    "playerId": "adkingr01",
+    "playerSlug": "adkingr01",
+    "name": "Grady Adkins",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1920s",
+    "featuredSeason": 1928,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "adkingr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 34.812,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.73,
+      "whip": 1.442,
+      "so": 54,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 224.7,
+      "games": 36,
+      "starts": 27,
+      "reliefAppearances": 9,
+      "k9": 2.16,
+      "bb9": 3.57
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.73,
+      "whip": 1.442,
+      "so": 54,
+      "wins": 10,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 224.7,
+      "games": 36,
+      "starts": 27,
+      "reliefAppearances": 9,
+      "k9": 2.16,
+      "bb9": 3.57
+    },
+    "scoringStats": {
+      "whip": 1.442,
+      "fip": null,
+      "inningsPitched": 224.7,
+      "strikeoutRate": 2.16,
+      "walkRate": 3.57,
+      "starts": 27,
+      "gamesStarted": 27,
+      "games": 36,
+      "reliefAppearances": 9,
+      "eraAdjustedPitching": 108.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1920s-archdma01",
+    "playerId": "archdma01",
+    "playerSlug": "archdma01",
+    "name": "Maurice Archdeacon",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1920s",
+    "featuredSeason": 1924,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "archdma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 34.735,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.781,
+      "hr": 0,
+      "avg": 0.319,
+      "obp": 0.41,
+      "slg": 0.372,
+      "rbi": 25,
+      "sb": 11,
+      "games": 95,
+      "plateAppearances": 343
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.781,
+      "hr": 0,
+      "avg": 0.319,
+      "obp": 0.41,
+      "slg": 0.372,
+      "rbi": 25,
+      "sb": 11,
+      "games": 95,
+      "plateAppearances": 343
+    },
+    "scoringStats": {
+      "obp": 0.41,
+      "slg": 0.372,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 95,
+      "plateAppearances": 343,
+      "eraAdjustedOffense": 104.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1920s-mccurha01",
     "playerId": "mccurha01",
     "playerSlug": "mccurha01",
@@ -2291,6 +2456,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1920s-yaryaya01",
+    "playerId": "yaryaya01",
+    "playerSlug": "yaryaya01",
+    "name": "Yam Yaryan",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1920s",
+    "featuredSeason": 1921,
+    "eligiblePositions": [
+      "C"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "yaryaya01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 33.557,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.788,
+      "hr": 0,
+      "avg": 0.304,
+      "obp": 0.366,
+      "slg": 0.422,
+      "rbi": 15,
+      "sb": 0,
+      "games": 45,
+      "plateAppearances": 115
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.788,
+      "hr": 0,
+      "avg": 0.304,
+      "obp": 0.366,
+      "slg": 0.422,
+      "rbi": 15,
+      "sb": 0,
+      "games": 45,
+      "plateAppearances": 115
+    },
+    "scoringStats": {
+      "obp": 0.366,
+      "slg": 0.422,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 45,
+      "plateAppearances": 115,
+      "eraAdjustedOffense": 103.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1920s-shirear01",
     "playerId": "shirear01",
     "playerSlug": "shirear01",
@@ -2366,6 +2610,86 @@
       "games": 100,
       "plateAppearances": 392,
       "eraAdjustedOffense": 106.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1920s-watwojo01",
+    "playerId": "watwojo01",
+    "playerSlug": "watwojo01",
+    "name": "Johnny Watwood",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1920s",
+    "featuredSeason": 1929,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHA"
+      ],
+      "sourcePlayerId": "watwojo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 33.327,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.766,
+      "hr": 2,
+      "avg": 0.302,
+      "obp": 0.355,
+      "slg": 0.41,
+      "rbi": 28,
+      "sb": 6,
+      "games": 85,
+      "plateAppearances": 308
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.766,
+      "hr": 2,
+      "avg": 0.302,
+      "obp": 0.355,
+      "slg": 0.41,
+      "rbi": 28,
+      "sb": 6,
+      "games": 85,
+      "plateAppearances": 308
+    },
+    "scoringStats": {
+      "obp": 0.355,
+      "slg": 0.41,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 85,
+      "plateAppearances": 308,
+      "eraAdjustedOffense": 101.5
     },
     "pitchingScoringStats": null
   },

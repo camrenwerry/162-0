@@ -369,7 +369,8 @@
     "featuredSeason": 1977,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -418,7 +419,8 @@
     "featuredSeason": 1975,
     "eligiblePositions": [
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -518,7 +520,8 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -722,7 +725,8 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1010,6 +1014,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-1970s-klinest01",
+    "playerId": "klinest01",
+    "playerSlug": "klinest01",
+    "name": "Steve Kline",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1970s",
+    "featuredSeason": 1972,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.4,
+      "whip": 1.075,
+      "so": 58,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 236.3,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 2.21,
+      "bb9": 1.68
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.075,
+      "fip": null,
+      "inningsPitched": 236.3,
+      "strikeoutRate": 2.21,
+      "walkRate": 1.68,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 127.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-1970s-whitero01",
     "playerId": "whitero01",
     "playerSlug": "whitero01",
@@ -1054,6 +1110,110 @@
       "games": 162,
       "plateAppearances": 712,
       "eraAdjustedOffense": 122.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1970s-medicdo01",
+    "playerId": "medicdo01",
+    "playerSlug": "medicdo01",
+    "name": "Doc Medich",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1970s",
+    "featuredSeason": 1973,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.238,
+      "so": 145,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 235,
+      "games": 34,
+      "starts": 32,
+      "reliefAppearances": 2,
+      "k9": 5.55,
+      "bb9": 2.83
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.238,
+      "fip": null,
+      "inningsPitched": 235,
+      "strikeoutRate": 5.55,
+      "walkRate": 2.83,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 34,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 129.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1970s-mayru01",
+    "playerId": "mayru01",
+    "playerSlug": "mayru01",
+    "name": "Rudy May",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1970s",
+    "featuredSeason": 1974,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.28,
+      "whip": 1.076,
+      "so": 90,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 114.3,
+      "games": 17,
+      "starts": 15,
+      "reliefAppearances": 2,
+      "k9": 7.08,
+      "bb9": 3.78
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.076,
+      "fip": null,
+      "inningsPitched": 114.3,
+      "strikeoutRate": 7.08,
+      "walkRate": 3.78,
+      "starts": 15,
+      "gamesStarted": 15,
+      "games": 17,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 158.5
     },
     "pitchingScoringStats": null
   },
@@ -1103,6 +1263,58 @@
       "games": 59,
       "plateAppearances": 113,
       "eraAdjustedOffense": 127.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1970s-figueed01",
+    "playerId": "figueed01",
+    "playerSlug": "figueed01",
+    "name": "Ed Figueroa",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1970s",
+    "featuredSeason": 1978,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.99,
+      "whip": 1.225,
+      "so": 92,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 253,
+      "games": 35,
+      "starts": 35,
+      "reliefAppearances": 0,
+      "k9": 3.27,
+      "bb9": 2.74
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.225,
+      "fip": null,
+      "inningsPitched": 253,
+      "strikeoutRate": 3.27,
+      "walkRate": 2.74,
+      "starts": 35,
+      "gamesStarted": 35,
+      "games": 35,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 125.9
     },
     "pitchingScoringStats": null
   },
@@ -1167,7 +1379,8 @@
     "decade": "1970s",
     "featuredSeason": 1973,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1216,7 +1429,8 @@
     "featuredSeason": 1977,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

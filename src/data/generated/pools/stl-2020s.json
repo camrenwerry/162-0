@@ -184,7 +184,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -779,7 +780,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1195,7 +1197,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1274,7 +1277,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1525,7 +1529,8 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1678,6 +1683,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "stl-2020s-mcfartj01",
+    "playerId": "mcfartj01",
+    "playerSlug": "mcfartj01",
+    "name": "T. J. McFarland",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "mcfartj01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.553,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.06,
+      "so": 21,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 38.7,
+      "games": 38,
+      "starts": 0,
+      "reliefAppearances": 38,
+      "k9": 4.89,
+      "bb9": 2.09
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.06,
+      "so": 21,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 38.7,
+      "games": 38,
+      "starts": 0,
+      "reliefAppearances": 38,
+      "k9": 4.89,
+      "bb9": 2.09
+    },
+    "scoringStats": {
+      "whip": 1.06,
+      "fip": null,
+      "inningsPitched": 38.7,
+      "strikeoutRate": 4.89,
+      "walkRate": 2.09,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 38,
+      "reliefAppearances": 38,
+      "eraAdjustedPitching": 163.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "stl-2020s-gormano01",
     "playerId": "gormano01",
     "playerSlug": "gormano01",
@@ -1691,7 +1782,8 @@
     "featuredSeason": 2023,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1840,6 +1932,264 @@
       "games": 17,
       "reliefAppearances": 2,
       "eraAdjustedPitching": 130.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "stl-2020s-garcilu03",
+    "playerId": "garcilu03",
+    "playerSlug": "garcilu03",
+    "name": "Luis Garcia",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "garcilu03"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.24,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.24,
+      "whip": 0.99,
+      "so": 34,
+      "wins": 1,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 33.3,
+      "games": 34,
+      "starts": 0,
+      "reliefAppearances": 34,
+      "k9": 9.18,
+      "bb9": 2.16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.24,
+      "whip": 0.99,
+      "so": 34,
+      "wins": 1,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 33.3,
+      "games": 34,
+      "starts": 0,
+      "reliefAppearances": 34,
+      "k9": 9.18,
+      "bb9": 2.16
+    },
+    "scoringStats": {
+      "whip": 0.99,
+      "fip": null,
+      "inningsPitched": 33.3,
+      "strikeoutRate": 9.18,
+      "walkRate": 2.16,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 34,
+      "reliefAppearances": 34,
+      "eraAdjustedPitching": 129.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "stl-2020s-leahyky01",
+    "playerId": "leahyky01",
+    "playerSlug": "leahyky01",
+    "name": "Kyle Leahy",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "B",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "leahyky01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.116,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.07,
+      "whip": 1.227,
+      "so": 80,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 88,
+      "games": 62,
+      "starts": 1,
+      "reliefAppearances": 61,
+      "k9": 8.18,
+      "bb9": 2.86
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.07,
+      "whip": 1.227,
+      "so": 80,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 88,
+      "games": 62,
+      "starts": 1,
+      "reliefAppearances": 61,
+      "k9": 8.18,
+      "bb9": 2.86
+    },
+    "scoringStats": {
+      "whip": 1.227,
+      "fip": null,
+      "inningsPitched": 88,
+      "strikeoutRate": 8.18,
+      "walkRate": 2.86,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 62,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 137.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "stl-2020s-montgjo01",
+    "playerId": "montgjo01",
+    "playerSlug": "montgjo01",
+    "name": "Jordan Montgomery",
+    "franchiseId": "stl",
+    "teamAbbreviation": "STL",
+    "teamDisplayName": "St. Louis Cardinals",
+    "historicalTeamName": "St. Louis Cardinals",
+    "team": "STL",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLN"
+      ],
+      "sourcePlayerId": "montgjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.225,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.42,
+      "whip": 1.248,
+      "so": 108,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 121,
+      "games": 21,
+      "starts": 21,
+      "reliefAppearances": 0,
+      "k9": 8.03,
+      "bb9": 2.6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.42,
+      "whip": 1.248,
+      "so": 108,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 121,
+      "games": 21,
+      "starts": 21,
+      "reliefAppearances": 0,
+      "k9": 8.03,
+      "bb9": 2.6
+    },
+    "scoringStats": {
+      "whip": 1.248,
+      "fip": null,
+      "inningsPitched": 121,
+      "strikeoutRate": 8.03,
+      "walkRate": 2.6,
+      "starts": 21,
+      "gamesStarted": 21,
+      "games": 21,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 127.9
     },
     "pitchingScoringStats": null
   },
@@ -2098,7 +2448,8 @@
     "eligiblePositions": [
       "1B",
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2416,7 +2767,8 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

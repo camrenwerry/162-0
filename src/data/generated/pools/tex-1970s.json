@@ -933,7 +933,8 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1012,7 +1013,8 @@
     "decade": "1970s",
     "featuredSeason": 1978,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1683,7 +1685,8 @@
     "decade": "1970s",
     "featuredSeason": 1978,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2073,6 +2076,344 @@
       "games": 162,
       "plateAppearances": 720,
       "eraAdjustedOffense": 104.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-1970s-montawi01",
+    "playerId": "montawi01",
+    "playerSlug": "montawi01",
+    "name": "Willie Montanez",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "montawi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.44,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.885,
+      "hr": 8,
+      "avg": 0.319,
+      "obp": 0.357,
+      "slg": 0.528,
+      "rbi": 24,
+      "sb": 0,
+      "games": 38,
+      "plateAppearances": 154
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.885,
+      "hr": 8,
+      "avg": 0.319,
+      "obp": 0.357,
+      "slg": 0.528,
+      "rbi": 24,
+      "sb": 0,
+      "games": 38,
+      "plateAppearances": 154
+    },
+    "scoringStats": {
+      "obp": 0.357,
+      "slg": 0.528,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 38,
+      "plateAppearances": 154,
+      "eraAdjustedOffense": 119.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-1970s-alexado01",
+    "playerId": "alexado01",
+    "playerSlug": "alexado01",
+    "name": "Doyle Alexander",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "alexado01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.184,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.65,
+      "whip": 1.278,
+      "so": 82,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 237,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 3.11,
+      "bb9": 3.11
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.65,
+      "whip": 1.278,
+      "so": 82,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 237,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 3.11,
+      "bb9": 3.11
+    },
+    "scoringStats": {
+      "whip": 1.278,
+      "fip": null,
+      "inningsPitched": 237,
+      "strikeoutRate": 3.11,
+      "walkRate": 3.11,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 34,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 111.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-1970s-lindbpa01",
+    "playerId": "lindbpa01",
+    "playerSlug": "lindbpa01",
+    "name": "Paul Lindblad",
+    "franchiseId": "tex",
+    "teamAbbreviation": "WSA",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSA",
+    "decade": "1970s",
+    "featuredSeason": 1971,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS2"
+      ],
+      "sourcePlayerId": "lindbpa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.687,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.58,
+      "whip": 1.04,
+      "so": 50,
+      "wins": 6,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 83.7,
+      "games": 43,
+      "starts": 0,
+      "reliefAppearances": 43,
+      "k9": 5.38,
+      "bb9": 3.12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.58,
+      "whip": 1.04,
+      "so": 50,
+      "wins": 6,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 83.7,
+      "games": 43,
+      "starts": 0,
+      "reliefAppearances": 43,
+      "k9": 5.38,
+      "bb9": 3.12
+    },
+    "scoringStats": {
+      "whip": 1.04,
+      "fip": null,
+      "inningsPitched": 83.7,
+      "strikeoutRate": 5.38,
+      "walkRate": 3.12,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 43,
+      "reliefAppearances": 43,
+      "eraAdjustedPitching": 134.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-1970s-brilene01",
+    "playerId": "brilene01",
+    "playerSlug": "brilene01",
+    "name": "Nelson Briles",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "1970s",
+    "featuredSeason": 1976,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "brilene01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.519,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.26,
+      "whip": 1.29,
+      "so": 98,
+      "wins": 11,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 210,
+      "games": 32,
+      "starts": 31,
+      "reliefAppearances": 1,
+      "k9": 4.2,
+      "bb9": 2.01
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.26,
+      "whip": 1.29,
+      "so": 98,
+      "wins": 11,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 210,
+      "games": 32,
+      "starts": 31,
+      "reliefAppearances": 1,
+      "k9": 4.2,
+      "bb9": 2.01
+    },
+    "scoringStats": {
+      "whip": 1.29,
+      "fip": null,
+      "inningsPitched": 210,
+      "strikeoutRate": 4.2,
+      "walkRate": 2.01,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 32,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 108
     },
     "pitchingScoringStats": null
   },

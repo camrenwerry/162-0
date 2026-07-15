@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 export const POSITION_ORDER = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH', 'SP', 'RP']
-const FIELD_POSITIONS = new Set(['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF'])
+const HITTER_POSITIONS = new Set(['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH'])
 const ROUND = (value, places = 3) => Number.isFinite(value) ? Number(value.toFixed(places)) : null
 const NUMBER = (value) => value === '' || value === undefined ? 0 : Number(value)
 const decadeFor = (year) => `${Math.floor(year / 10) * 10}s`
@@ -107,7 +107,7 @@ function aggregateFielding(rows, teamByYear) {
   for (const row of rows) {
     const year = NUMBER(row.yearID)
     const team = teamByYear.get(keyForTeamYear(year, row.teamID))
-    if (!team || !FIELD_POSITIONS.has(row.POS)) continue
+    if (!team || !HITTER_POSITIONS.has(row.POS)) continue
     const key = keyForSeason(row.playerID, team.franchise.franchiseId, year)
     const positions = groups.get(key) ?? new Map()
     positions.set(row.POS, (positions.get(row.POS) ?? 0) + NUMBER(row.G))
@@ -116,8 +116,8 @@ function aggregateFielding(rows, teamByYear) {
   return groups
 }
 
-function aggregateAppearances(rows, teamByYear) {
-  const fields = { C: 'G_c', '1B': 'G_1b', '2B': 'G_2b', '3B': 'G_3b', SS: 'G_ss', LF: 'G_lf', CF: 'G_cf', RF: 'G_rf' }
+export function aggregateAppearances(rows, teamByYear) {
+  const fields = { C: 'G_c', '1B': 'G_1b', '2B': 'G_2b', '3B': 'G_3b', SS: 'G_ss', LF: 'G_lf', CF: 'G_cf', RF: 'G_rf', DH: 'G_dh' }
   const groups = new Map()
   for (const row of rows) {
     const year = NUMBER(row.yearID)
@@ -238,12 +238,14 @@ function overridePositions(base, override) {
     .filter((position) => POSITION_ORDER.includes(position)).sort((a, b) => POSITION_ORDER.indexOf(a) - POSITION_ORDER.indexOf(b))
 }
 
-function buildCandidate({ player, franchise, year, batting, pitching, positions, context, config, overrides }) {
+export function buildCandidate({ player, franchise, year, batting, pitching, positions, context, config, overrides }) {
   const hitter = batting ? hitterStats(batting, contextFor(batting, context)) : null
   const pitcher = pitching ? pitcherStats(pitching, contextFor(pitching, context)) : null
   const qualifiesHitter = hitter && hitter.plateAppearances >= config.eligibility.minimumHitterPlateAppearances
   const qualifiesPitcher = pitcher && pitcher.inningsPitched >= config.eligibility.minimumPitcherInnings
-  const fieldPositions = [...(positions ?? new Map())].filter(([, games]) => games >= config.eligibility.minimumFieldingGames).map(([position]) => position)
+  const fieldPositions = [...(positions ?? new Map())]
+    .filter(([position, games]) => games >= config.eligibility.minimumFieldingGames && (position !== 'DH' || qualifiesHitter))
+    .map(([position]) => position)
   const pitcherPositions = []
   if (qualifiesPitcher && pitcher.starts >= config.eligibility.minimumStarts) pitcherPositions.push('SP')
   if (qualifiesPitcher && pitcher.reliefAppearances >= config.eligibility.minimumReliefAppearances) pitcherPositions.push('RP')
@@ -251,7 +253,7 @@ function buildCandidate({ player, franchise, year, batting, pitching, positions,
   let eligiblePositions = [...sourceEligiblePositions]
   const cardId = `${franchise.franchiseId}-${decadeFor(year)}-${player.playerID}`
   eligiblePositions = overridePositions(eligiblePositions, overrides.positions?.[cardId])
-  const isHitter = Boolean(qualifiesHitter && eligiblePositions.some((position) => FIELD_POSITIONS.has(position)))
+  const isHitter = Boolean(qualifiesHitter && eligiblePositions.some((position) => HITTER_POSITIONS.has(position)))
   const isPitcher = Boolean(qualifiesPitcher && eligiblePositions.some((position) => position === 'SP' || position === 'RP'))
   if (!isHitter && !isPitcher) return null
   const primaryPitchingRole = pitcherPositions.includes('SP') && pitcherPositions.includes('RP')
@@ -375,13 +377,29 @@ function coverageFor(cards) {
   return Object.fromEntries(Object.keys({ C: 0, '1B': 0, '2B': 0, '3B': 0, SS: 0, LF: 0, CF: 0, RF: 0, SP: 0, RP: 0 }).map((position) => [position, cards.filter(({ eligiblePositions }) => eligiblePositions.includes(position)).length]))
 }
 
-function curatePool(cards, config) {
+export function curatePool(cards, config) {
   const selected = new Map()
   for (const [position, target] of Object.entries(config.coverage)) {
     cards.filter(({ eligiblePositions }) => eligiblePositions.includes(position)).sort((a, b) => b.selectionScore - a.selectionScore || compareText(a.name, b.name)).slice(0, target).forEach((card) => selected.set(card.id, card))
   }
   const ranked = [...cards].sort((a, b) => b.selectionScore - a.selectionScore || compareText(a.name, b.name))
-  for (const card of ranked) if (selected.size < config.pool.targetCards) selected.set(card.id, card)
+  const legacyCoreTarget = Math.min(
+    Object.values(config.coverage).reduce((total, target) => total + target, 0),
+    config.pool.targetCards,
+  )
+  for (const card of ranked) if (selected.size < legacyCoreTarget) selected.set(card.id, card)
+  const configuredQualityFloor = config.pool.minimumExpansionScore ?? Number.NEGATIVE_INFINITY
+  const qualityFloor = selected.size
+    ? Math.max(configuredQualityFloor, Math.min(...[...selected.values()].map(({ selectionScore }) => selectionScore)))
+    : configuredQualityFloor
+  for (const card of ranked) {
+    if (selected.size >= config.pool.targetCards || card.selectionScore < qualityFloor) break
+    selected.set(card.id, card)
+  }
+  for (const card of ranked) {
+    if (selected.size >= config.pool.maximumCards || canCompleteRoster([...selected.values()]) || card.selectionScore < qualityFloor) break
+    selected.set(card.id, card)
+  }
   const result = [...selected.values()].sort((a, b) => b.selectionScore - a.selectionScore || compareText(a.name, b.name)).slice(0, config.pool.maximumCards)
   return result
 }

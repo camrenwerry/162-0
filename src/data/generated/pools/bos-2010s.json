@@ -609,7 +609,8 @@
     "featuredSeason": 2018,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -930,6 +931,343 @@
       "games": 63,
       "reliefAppearances": 63,
       "eraAdjustedPitching": 138.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2010s-atchisc01",
+    "playerId": "atchisc01",
+    "playerSlug": "atchisc01",
+    "name": "Scott Atchison",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "atchisc01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 61.106,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.58,
+      "whip": 0.994,
+      "so": 36,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 51.3,
+      "games": 42,
+      "starts": 0,
+      "reliefAppearances": 42,
+      "k9": 6.31,
+      "bb9": 1.58
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.58,
+      "whip": 0.994,
+      "so": 36,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 51.3,
+      "games": 42,
+      "starts": 0,
+      "reliefAppearances": 42,
+      "k9": 6.31,
+      "bb9": 1.58
+    },
+    "scoringStats": {
+      "whip": 0.994,
+      "fip": null,
+      "inningsPitched": 51.3,
+      "strikeoutRate": 6.31,
+      "walkRate": 1.58,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 42,
+      "reliefAppearances": 42,
+      "eraAdjustedPitching": 258.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2010s-millean01",
+    "playerId": "millean01",
+    "playerSlug": "millean01",
+    "name": "Andrew Miller",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "millean01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 60.311,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 0.898,
+      "so": 69,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 42.3,
+      "games": 50,
+      "starts": 0,
+      "reliefAppearances": 50,
+      "k9": 14.67,
+      "bb9": 2.76
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 0.898,
+      "so": 69,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 42.3,
+      "games": 50,
+      "starts": 0,
+      "reliefAppearances": 50,
+      "k9": 14.67,
+      "bb9": 2.76
+    },
+    "scoringStats": {
+      "whip": 0.898,
+      "fip": null,
+      "inningsPitched": 42.3,
+      "strikeoutRate": 14.67,
+      "walkRate": 2.76,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 50,
+      "reliefAppearances": 50,
+      "eraAdjustedPitching": 163.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2010s-ortizda01",
+    "playerId": "ortizda01",
+    "playerSlug": "ortizda01",
+    "name": "David Ortiz",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "ortizda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.179,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.021,
+      "hr": 38,
+      "avg": 0.315,
+      "obp": 0.401,
+      "slg": 0.62,
+      "rbi": 127,
+      "sb": 2,
+      "games": 151,
+      "plateAppearances": 626
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.021,
+      "hr": 38,
+      "avg": 0.315,
+      "obp": 0.401,
+      "slg": 0.62,
+      "rbi": 127,
+      "sb": 2,
+      "games": 151,
+      "plateAppearances": 626
+    },
+    "scoringStats": {
+      "obp": 0.401,
+      "slg": 0.62,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 151,
+      "plateAppearances": 626,
+      "eraAdjustedOffense": 137.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-2010s-breslcr01",
+    "playerId": "breslcr01",
+    "playerSlug": "breslcr01",
+    "name": "Craig Breslow",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "breslcr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 59.112,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.81,
+      "whip": 1.123,
+      "so": 33,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 59.7,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 4.98,
+      "bb9": 2.72
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.81,
+      "whip": 1.123,
+      "so": 33,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 59.7,
+      "games": 61,
+      "starts": 0,
+      "reliefAppearances": 61,
+      "k9": 4.98,
+      "bb9": 2.72
+    },
+    "scoringStats": {
+      "whip": 1.123,
+      "fip": null,
+      "inningsPitched": 59.7,
+      "strikeoutRate": 4.98,
+      "walkRate": 2.72,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 61,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 220.3
     },
     "pitchingScoringStats": null
   },

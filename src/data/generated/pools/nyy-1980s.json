@@ -184,7 +184,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -760,7 +761,8 @@
     "featuredSeason": 1980,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1601,7 +1603,8 @@
     "featuredSeason": 1988,
     "eligiblePositions": [
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1747,6 +1750,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-1980s-phelpke01",
+    "playerId": "phelpke01",
+    "playerSlug": "phelpke01",
+    "name": "Ken Phelps",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "phelpke01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.589,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.89,
+      "hr": 10,
+      "avg": 0.224,
+      "obp": 0.339,
+      "slg": 0.551,
+      "rbi": 22,
+      "sb": 0,
+      "games": 45,
+      "plateAppearances": 127
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.89,
+      "hr": 10,
+      "avg": 0.224,
+      "obp": 0.339,
+      "slg": 0.551,
+      "rbi": 22,
+      "sb": 0,
+      "games": 45,
+      "plateAppearances": 127
+    },
+    "scoringStats": {
+      "obp": 0.339,
+      "slg": 0.551,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 45,
+      "plateAppearances": 127,
+      "eraAdjustedOffense": 124.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-1980s-smallro02",
     "playerId": "smallro02",
     "playerSlug": "smallro02",
@@ -1828,6 +1910,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-1980s-rasmude01",
+    "playerId": "rasmude01",
+    "playerSlug": "rasmude01",
+    "name": "Dennis Rasmussen",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "rasmude01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.271,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.88,
+      "whip": 1.158,
+      "so": 131,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 202,
+      "games": 31,
+      "starts": 31,
+      "reliefAppearances": 0,
+      "k9": 5.84,
+      "bb9": 3.3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.88,
+      "whip": 1.158,
+      "so": 131,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 202,
+      "games": 31,
+      "starts": 31,
+      "reliefAppearances": 0,
+      "k9": 5.84,
+      "bb9": 3.3
+    },
+    "scoringStats": {
+      "whip": 1.158,
+      "fip": null,
+      "inningsPitched": 202,
+      "strikeoutRate": 5.84,
+      "walkRate": 3.3,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 31,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 107.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-1980s-mumphje01",
     "playerId": "mumphje01",
     "playerSlug": "mumphje01",
@@ -1903,6 +2071,85 @@
       "games": 123,
       "plateAppearances": 533,
       "eraAdjustedOffense": 111.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1980s-baylodo01",
+    "playerId": "baylodo01",
+    "playerSlug": "baylodo01",
+    "name": "Don Baylor",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "baylodo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.069,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.856,
+      "hr": 21,
+      "avg": 0.303,
+      "obp": 0.361,
+      "slg": 0.494,
+      "rbi": 85,
+      "sb": 17,
+      "games": 144,
+      "plateAppearances": 597
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.856,
+      "hr": 21,
+      "avg": 0.303,
+      "obp": 0.361,
+      "slg": 0.494,
+      "rbi": 85,
+      "sb": 17,
+      "games": 144,
+      "plateAppearances": 597
+    },
+    "scoringStats": {
+      "obp": 0.361,
+      "slg": 0.494,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 144,
+      "plateAppearances": 597,
+      "eraAdjustedOffense": 117.5
     },
     "pitchingScoringStats": null
   },
@@ -2061,6 +2308,92 @@
       "games": 137,
       "plateAppearances": 496,
       "eraAdjustedOffense": 110.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1980s-shirlbo01",
+    "playerId": "shirlbo01",
+    "playerSlug": "shirlbo01",
+    "name": "Bob Shirley",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "shirlbo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.408,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.183,
+      "so": 55,
+      "wins": 5,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 109,
+      "games": 48,
+      "starts": 8,
+      "reliefAppearances": 40,
+      "k9": 4.54,
+      "bb9": 2.15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.183,
+      "so": 55,
+      "wins": 5,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 109,
+      "games": 48,
+      "starts": 8,
+      "reliefAppearances": 40,
+      "k9": 4.54,
+      "bb9": 2.15
+    },
+    "scoringStats": {
+      "whip": 1.183,
+      "fip": null,
+      "inningsPitched": 109,
+      "strikeoutRate": 4.54,
+      "walkRate": 2.15,
+      "starts": 8,
+      "gamesStarted": 8,
+      "games": 48,
+      "reliefAppearances": 40,
+      "eraAdjustedPitching": 156.9
     },
     "pitchingScoringStats": null
   },

@@ -686,7 +686,8 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1176,6 +1177,264 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "atl-2020s-jimenjo02",
+    "playerId": "jimenjo02",
+    "playerSlug": "jimenjo02",
+    "name": "Joe Jimenez",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "jimenjo02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 56.685,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.62,
+      "whip": 0.99,
+      "so": 82,
+      "wins": 1,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 68.7,
+      "games": 69,
+      "starts": 0,
+      "reliefAppearances": 69,
+      "k9": 10.75,
+      "bb9": 3.01
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.62,
+      "whip": 0.99,
+      "so": 82,
+      "wins": 1,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 68.7,
+      "games": 69,
+      "starts": 0,
+      "reliefAppearances": 69,
+      "k9": 10.75,
+      "bb9": 3.01
+    },
+    "scoringStats": {
+      "whip": 0.99,
+      "fip": null,
+      "inningsPitched": 68.7,
+      "strikeoutRate": 10.75,
+      "walkRate": 3.01,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 69,
+      "reliefAppearances": 69,
+      "eraAdjustedPitching": 157.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-2020s-smithwi04",
+    "playerId": "smithwi04",
+    "playerSlug": "smithwi04",
+    "name": "Will Smith",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "smithwi04"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 55.189,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.44,
+      "whip": 1.132,
+      "so": 87,
+      "wins": 3,
+      "saves": 37,
+      "sv": 37,
+      "inningsPitched": 68,
+      "games": 71,
+      "starts": 0,
+      "reliefAppearances": 71,
+      "k9": 11.51,
+      "bb9": 3.71
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.44,
+      "whip": 1.132,
+      "so": 87,
+      "wins": 3,
+      "saves": 37,
+      "sv": 37,
+      "inningsPitched": 68,
+      "games": 71,
+      "starts": 0,
+      "reliefAppearances": 71,
+      "k9": 11.51,
+      "bb9": 3.71
+    },
+    "scoringStats": {
+      "whip": 1.132,
+      "fip": null,
+      "inningsPitched": 68,
+      "strikeoutRate": 11.51,
+      "walkRate": 3.71,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 71,
+      "reliefAppearances": 71,
+      "eraAdjustedPitching": 121.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-2020s-mchugco01",
+    "playerId": "mchugco01",
+    "playerSlug": "mchugco01",
+    "name": "Collin McHugh",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "mchugco01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.973,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.6,
+      "whip": 0.938,
+      "so": 75,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 69.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 9.74,
+      "bb9": 1.82
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.6,
+      "whip": 0.938,
+      "so": 75,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 69.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 9.74,
+      "bb9": 1.82
+    },
+    "scoringStats": {
+      "whip": 0.938,
+      "fip": null,
+      "inningsPitched": 69.3,
+      "strikeoutRate": 9.74,
+      "walkRate": 1.82,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 58,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 155.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "atl-2020s-mortoch02",
     "playerId": "mortoch02",
     "playerSlug": "mortoch02",
@@ -1421,6 +1680,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "atl-2020s-matzety01",
+    "playerId": "matzety01",
+    "playerSlug": "matzety01",
+    "name": "Tyler Matzek",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "matzety01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.762,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.57,
+      "whip": 1.222,
+      "so": 77,
+      "wins": 0,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 63,
+      "games": 69,
+      "starts": 0,
+      "reliefAppearances": 69,
+      "k9": 11,
+      "bb9": 5.29
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.57,
+      "whip": 1.222,
+      "so": 77,
+      "wins": 0,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 63,
+      "games": 69,
+      "starts": 0,
+      "reliefAppearances": 69,
+      "k9": 11,
+      "bb9": 5.29
+    },
+    "scoringStats": {
+      "whip": 1.222,
+      "fip": null,
+      "inningsPitched": 63,
+      "strikeoutRate": 11,
+      "walkRate": 5.29,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 69,
+      "reliefAppearances": 69,
+      "eraAdjustedPitching": 163.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "atl-2020s-albieoz01",
     "playerId": "albieoz01",
     "playerSlug": "albieoz01",
@@ -1512,7 +1857,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

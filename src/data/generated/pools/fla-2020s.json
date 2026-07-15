@@ -1462,7 +1462,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1525,6 +1526,92 @@
       "games": 137,
       "plateAppearances": 580,
       "eraAdjustedOffense": 115.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "fla-2020s-okertst01",
+    "playerId": "okertst01",
+    "playerSlug": "okertst01",
+    "name": "Steven Okert",
+    "franchiseId": "fla",
+    "teamAbbreviation": "MIA",
+    "teamDisplayName": "Miami Marlins",
+    "historicalTeamName": "Miami Marlins",
+    "team": "MIA",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIA"
+      ],
+      "sourcePlayerId": "okertst01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.901,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.75,
+      "whip": 1.028,
+      "so": 40,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 36,
+      "games": 34,
+      "starts": 0,
+      "reliefAppearances": 34,
+      "k9": 10,
+      "bb9": 3.75
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.75,
+      "whip": 1.028,
+      "so": 40,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 36,
+      "games": 34,
+      "starts": 0,
+      "reliefAppearances": 34,
+      "k9": 10,
+      "bb9": 3.75
+    },
+    "scoringStats": {
+      "whip": 1.028,
+      "fip": null,
+      "inningsPitched": 36,
+      "strikeoutRate": 10,
+      "walkRate": 3.75,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 34,
+      "reliefAppearances": 34,
+      "eraAdjustedPitching": 152.6
     },
     "pitchingScoringStats": null
   },
@@ -1763,6 +1850,264 @@
       "games": 64,
       "plateAppearances": 275,
       "eraAdjustedOffense": 118
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "fla-2020s-phillty01",
+    "playerId": "phillty01",
+    "playerSlug": "phillty01",
+    "name": "Tyler Phillips",
+    "franchiseId": "fla",
+    "teamAbbreviation": "MIA",
+    "teamDisplayName": "Miami Marlins",
+    "historicalTeamName": "Miami Marlins",
+    "team": "MIA",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIA"
+      ],
+      "sourcePlayerId": "phillty01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.435,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.78,
+      "whip": 1.146,
+      "so": 52,
+      "wins": 2,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 77.7,
+      "games": 54,
+      "starts": 1,
+      "reliefAppearances": 53,
+      "k9": 6.03,
+      "bb9": 2.78
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.78,
+      "whip": 1.146,
+      "so": 52,
+      "wins": 2,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 77.7,
+      "games": 54,
+      "starts": 1,
+      "reliefAppearances": 53,
+      "k9": 6.03,
+      "bb9": 2.78
+    },
+    "scoringStats": {
+      "whip": 1.146,
+      "fip": null,
+      "inningsPitched": 77.7,
+      "strikeoutRate": 6.03,
+      "walkRate": 2.78,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 54,
+      "reliefAppearances": 53,
+      "eraAdjustedPitching": 151.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "fla-2020s-fauchca01",
+    "playerId": "fauchca01",
+    "playerSlug": "fauchca01",
+    "name": "Calvin Faucher",
+    "franchiseId": "fla",
+    "teamAbbreviation": "MIA",
+    "teamDisplayName": "Miami Marlins",
+    "historicalTeamName": "Miami Marlins",
+    "team": "MIA",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIA"
+      ],
+      "sourcePlayerId": "fauchca01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.206,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.28,
+      "whip": 1.276,
+      "so": 59,
+      "wins": 4,
+      "saves": 15,
+      "sv": 15,
+      "inningsPitched": 60.3,
+      "games": 65,
+      "starts": 0,
+      "reliefAppearances": 65,
+      "k9": 8.8,
+      "bb9": 3.58
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.28,
+      "whip": 1.276,
+      "so": 59,
+      "wins": 4,
+      "saves": 15,
+      "sv": 15,
+      "inningsPitched": 60.3,
+      "games": 65,
+      "starts": 0,
+      "reliefAppearances": 65,
+      "k9": 8.8,
+      "bb9": 3.58
+    },
+    "scoringStats": {
+      "whip": 1.276,
+      "fip": null,
+      "inningsPitched": 60.3,
+      "strikeoutRate": 8.8,
+      "walkRate": 3.58,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 65,
+      "reliefAppearances": 65,
+      "eraAdjustedPitching": 128.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "fla-2020s-cabreed02",
+    "playerId": "cabreed02",
+    "playerSlug": "cabreed02",
+    "name": "Edward Cabrera",
+    "franchiseId": "fla",
+    "teamAbbreviation": "MIA",
+    "teamDisplayName": "Miami Marlins",
+    "historicalTeamName": "Miami Marlins",
+    "team": "MIA",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "MIA"
+      ],
+      "sourcePlayerId": "cabreed02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.773,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.53,
+      "whip": 1.228,
+      "so": 150,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 137.7,
+      "games": 26,
+      "starts": 26,
+      "reliefAppearances": 0,
+      "k9": 9.81,
+      "bb9": 3.14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.53,
+      "whip": 1.228,
+      "so": 150,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 137.7,
+      "games": 26,
+      "starts": 26,
+      "reliefAppearances": 0,
+      "k9": 9.81,
+      "bb9": 3.14
+    },
+    "scoringStats": {
+      "whip": 1.228,
+      "fip": null,
+      "inningsPitched": 137.7,
+      "strikeoutRate": 9.81,
+      "walkRate": 3.14,
+      "starts": 26,
+      "gamesStarted": 26,
+      "games": 26,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 119.6
     },
     "pitchingScoringStats": null
   },
@@ -2018,7 +2363,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2336,7 +2682,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2497,7 +2844,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2577,7 +2925,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

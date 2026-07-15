@@ -944,7 +944,8 @@
     "decade": "2000s",
     "featuredSeason": 2009,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1007,6 +1008,171 @@
       "games": 151,
       "plateAppearances": 654,
       "eraAdjustedOffense": 122.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-2000s-ruizra01",
+    "playerId": "ruizra01",
+    "playerSlug": "ruizra01",
+    "name": "Randy Ruiz",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TOR"
+      ],
+      "sourcePlayerId": "ruizra01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.126,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.019,
+      "hr": 10,
+      "avg": 0.313,
+      "obp": 0.385,
+      "slg": 0.635,
+      "rbi": 17,
+      "sb": 1,
+      "games": 33,
+      "plateAppearances": 130
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.019,
+      "hr": 10,
+      "avg": 0.313,
+      "obp": 0.385,
+      "slg": 0.635,
+      "rbi": 17,
+      "sb": 1,
+      "games": 33,
+      "plateAppearances": 130
+    },
+    "scoringStats": {
+      "obp": 0.385,
+      "slg": 0.635,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 33,
+      "plateAppearances": 130,
+      "eraAdjustedOffense": 133.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-2000s-leagubr01",
+    "playerId": "leagubr01",
+    "playerSlug": "leagubr01",
+    "name": "Brandon League",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TOR"
+      ],
+      "sourcePlayerId": "leagubr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.801,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.53,
+      "whip": 1.008,
+      "so": 29,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 42.7,
+      "games": 33,
+      "starts": 0,
+      "reliefAppearances": 33,
+      "k9": 6.12,
+      "bb9": 1.9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.53,
+      "whip": 1.008,
+      "so": 29,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 42.7,
+      "games": 33,
+      "starts": 0,
+      "reliefAppearances": 33,
+      "k9": 6.12,
+      "bb9": 1.9
+    },
+    "scoringStats": {
+      "whip": 1.008,
+      "fip": null,
+      "inningsPitched": 42.7,
+      "strikeoutRate": 6.12,
+      "walkRate": 1.9,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 33,
+      "reliefAppearances": 33,
+      "eraAdjustedPitching": 180
     },
     "pitchingScoringStats": null
   },
@@ -1087,6 +1253,92 @@
       "games": 146,
       "plateAppearances": 627,
       "eraAdjustedOffense": 112.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-2000s-quantpa01",
+    "playerId": "quantpa01",
+    "playerSlug": "quantpa01",
+    "name": "Paul Quantrill",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TOR"
+      ],
+      "sourcePlayerId": "quantpa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.905,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.04,
+      "whip": 1.181,
+      "so": 58,
+      "wins": 11,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 83,
+      "games": 80,
+      "starts": 0,
+      "reliefAppearances": 80,
+      "k9": 6.29,
+      "bb9": 1.3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.04,
+      "whip": 1.181,
+      "so": 58,
+      "wins": 11,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 83,
+      "games": 80,
+      "starts": 0,
+      "reliefAppearances": 80,
+      "k9": 6.29,
+      "bb9": 1.3
+    },
+    "scoringStats": {
+      "whip": 1.181,
+      "fip": null,
+      "inningsPitched": 83,
+      "strikeoutRate": 6.29,
+      "walkRate": 1.3,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 80,
+      "reliefAppearances": 80,
+      "eraAdjustedPitching": 147.3
     },
     "pitchingScoringStats": null
   },
@@ -1429,7 +1681,8 @@
     "decade": "2000s",
     "featuredSeason": 2003,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2004,7 +2257,8 @@
     "featuredSeason": 2004,
     "eligiblePositions": [
       "2B",
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2067,6 +2321,92 @@
       "games": 72,
       "plateAppearances": 276,
       "eraAdjustedOffense": 117.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-2000s-lopezaq01",
+    "playerId": "lopezaq01",
+    "playerSlug": "lopezaq01",
+    "name": "Aquilino Lopez",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TOR"
+      ],
+      "sourcePlayerId": "lopezaq01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.456,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.42,
+      "whip": 1.249,
+      "so": 64,
+      "wins": 1,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 73.7,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 7.82,
+      "bb9": 4.15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.42,
+      "whip": 1.249,
+      "so": 64,
+      "wins": 1,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 73.7,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 7.82,
+      "bb9": 4.15
+    },
+    "scoringStats": {
+      "whip": 1.249,
+      "fip": null,
+      "inningsPitched": 73.7,
+      "strikeoutRate": 7.82,
+      "walkRate": 4.15,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 132.3
     },
     "pitchingScoringStats": null
   },
@@ -2243,7 +2583,8 @@
     "decade": "2000s",
     "featuredSeason": 2006,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2322,7 +2663,8 @@
     "decade": "2000s",
     "featuredSeason": 2006,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

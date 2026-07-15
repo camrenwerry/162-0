@@ -416,6 +416,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-1990s-martied01",
+    "playerId": "martied01",
+    "playerSlug": "martied01",
+    "name": "Edgar Martinez",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "martied01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 62.664,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.107,
+      "hr": 29,
+      "avg": 0.356,
+      "obp": 0.479,
+      "slg": 0.628,
+      "rbi": 113,
+      "sb": 4,
+      "games": 145,
+      "plateAppearances": 639
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 1.107,
+      "hr": 29,
+      "avg": 0.356,
+      "obp": 0.479,
+      "slg": 0.628,
+      "rbi": 113,
+      "sb": 4,
+      "games": 145,
+      "plateAppearances": 639
+    },
+    "scoringStats": {
+      "obp": 0.479,
+      "slg": 0.628,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 145,
+      "plateAppearances": 639,
+      "eraAdjustedOffense": 143.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-1990s-swiftbi02",
     "playerId": "swiftbi02",
     "playerSlug": "swiftbi02",
@@ -588,85 +667,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "sea-1990s-martied01",
-    "playerId": "martied01",
-    "playerSlug": "martied01",
-    "name": "Edgar Martinez",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "historicalTeamName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1990s",
-    "featuredSeason": 1992,
-    "eligiblePositions": [
-      "3B"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "martied01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 56.225,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.948,
-      "hr": 18,
-      "avg": 0.343,
-      "obp": 0.404,
-      "slg": 0.544,
-      "rbi": 73,
-      "sb": 14,
-      "games": 135,
-      "plateAppearances": 592
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.948,
-      "hr": 18,
-      "avg": 0.343,
-      "obp": 0.404,
-      "slg": 0.544,
-      "rbi": 73,
-      "sb": 14,
-      "games": 135,
-      "plateAppearances": 592
-    },
-    "scoringStats": {
-      "obp": 0.404,
-      "slg": 0.544,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 135,
-      "plateAppearances": 592,
-      "eraAdjustedOffense": 132.9
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "sea-1990s-ayalabo01",
     "playerId": "ayalabo01",
     "playerSlug": "ayalabo01",
@@ -749,6 +749,92 @@
       "games": 46,
       "reliefAppearances": 46,
       "eraAdjustedPitching": 167.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1990s-timlimi01",
+    "playerId": "timlimi01",
+    "playerSlug": "timlimi01",
+    "name": "Mike Timlin",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "timlimi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.287,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.185,
+      "so": 60,
+      "wins": 3,
+      "saves": 19,
+      "sv": 19,
+      "inningsPitched": 79.3,
+      "games": 70,
+      "starts": 0,
+      "reliefAppearances": 70,
+      "k9": 6.81,
+      "bb9": 1.82
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.95,
+      "whip": 1.185,
+      "so": 60,
+      "wins": 3,
+      "saves": 19,
+      "sv": 19,
+      "inningsPitched": 79.3,
+      "games": 70,
+      "starts": 0,
+      "reliefAppearances": 70,
+      "k9": 6.81,
+      "bb9": 1.82
+    },
+    "scoringStats": {
+      "whip": 1.185,
+      "fip": null,
+      "inningsPitched": 79.3,
+      "strikeoutRate": 6.81,
+      "walkRate": 1.82,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 70,
+      "reliefAppearances": 70,
+      "eraAdjustedPitching": 157.6
     },
     "pitchingScoringStats": null
   },
@@ -1248,6 +1334,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-1990s-jacksmi02",
+    "playerId": "jacksmi02",
+    "playerSlug": "jacksmi02",
+    "name": "Michael Jackson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "jacksmi02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.455,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.63,
+      "whip": 1.181,
+      "so": 70,
+      "wins": 1,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 72,
+      "games": 73,
+      "starts": 0,
+      "reliefAppearances": 73,
+      "k9": 8.75,
+      "bb9": 3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.63,
+      "whip": 1.181,
+      "so": 70,
+      "wins": 1,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 72,
+      "games": 73,
+      "starts": 0,
+      "reliefAppearances": 73,
+      "k9": 8.75,
+      "bb9": 3
+    },
+    "scoringStats": {
+      "whip": 1.181,
+      "fip": null,
+      "inningsPitched": 72,
+      "strikeoutRate": 8.75,
+      "walkRate": 3,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 73,
+      "reliefAppearances": 73,
+      "eraAdjustedPitching": 137.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1990s-rislebi01",
+    "playerId": "rislebi01",
+    "playerSlug": "rislebi01",
+    "name": "Bill Risley",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "rislebi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.022,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.44,
+      "whip": 0.955,
+      "so": 61,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 52.3,
+      "games": 37,
+      "starts": 0,
+      "reliefAppearances": 37,
+      "k9": 10.49,
+      "bb9": 3.27
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.44,
+      "whip": 0.955,
+      "so": 61,
+      "wins": 9,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 52.3,
+      "games": 37,
+      "starts": 0,
+      "reliefAppearances": 37,
+      "k9": 10.49,
+      "bb9": 3.27
+    },
+    "scoringStats": {
+      "whip": 0.955,
+      "fip": null,
+      "inningsPitched": 52.3,
+      "strikeoutRate": 10.49,
+      "walkRate": 3.27,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 37,
+      "reliefAppearances": 37,
+      "eraAdjustedPitching": 139.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-1990s-flemida01",
     "playerId": "flemida01",
     "playerSlug": "flemida01",
@@ -1346,7 +1604,8 @@
     "decade": "1990s",
     "featuredSeason": 1994,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1969,6 +2228,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-1990s-davisru01",
+    "playerId": "davisru01",
+    "playerSlug": "davisru01",
+    "name": "Russ Davis",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "davisru01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.015,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.805,
+      "hr": 20,
+      "avg": 0.271,
+      "obp": 0.317,
+      "slg": 0.488,
+      "rbi": 63,
+      "sb": 6,
+      "games": 119,
+      "plateAppearances": 454
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.805,
+      "hr": 20,
+      "avg": 0.271,
+      "obp": 0.317,
+      "slg": 0.488,
+      "rbi": 63,
+      "sb": 6,
+      "games": 119,
+      "plateAppearances": 454
+    },
+    "scoringStats": {
+      "obp": 0.317,
+      "slg": 0.488,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 119,
+      "plateAppearances": 454,
+      "eraAdjustedOffense": 104.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-1990s-corajo01",
     "playerId": "corajo01",
     "playerSlug": "corajo01",
@@ -2380,7 +2718,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

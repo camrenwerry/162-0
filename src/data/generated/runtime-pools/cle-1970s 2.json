@@ -520,7 +520,8 @@
     "featuredSeason": 1975,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1021,7 +1022,8 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1168,7 +1170,8 @@
     "decade": "1970s",
     "featuredSeason": 1974,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1200,6 +1203,102 @@
       "games": 135,
       "plateAppearances": 509,
       "eraAdjustedOffense": 119.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1970s-johnscl01",
+    "playerId": "johnscl01",
+    "playerSlug": "johnscl01",
+    "name": "Cliff Johnson",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.881,
+      "hr": 18,
+      "avg": 0.271,
+      "obp": 0.343,
+      "slg": 0.537,
+      "rbi": 61,
+      "sb": 2,
+      "games": 72,
+      "plateAppearances": 274
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.343,
+      "slg": 0.537,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 72,
+      "plateAppearances": 274,
+      "eraAdjustedOffense": 118.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1970s-robinfr02",
+    "playerId": "robinfr02",
+    "playerSlug": "robinfr02",
+    "name": "Frank Robinson",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1970s",
+    "featuredSeason": 1975,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.894,
+      "hr": 9,
+      "avg": 0.237,
+      "obp": 0.385,
+      "slg": 0.508,
+      "rbi": 24,
+      "sb": 0,
+      "games": 49,
+      "plateAppearances": 149
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.385,
+      "slg": 0.508,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 49,
+      "plateAppearances": 149,
+      "eraAdjustedOffense": 126.4
     },
     "pitchingScoringStats": null
   },
@@ -1256,6 +1355,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-1970s-waitsri01",
+    "playerId": "waitsri01",
+    "playerSlug": "waitsri01",
+    "name": "Rick Waits",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1970s",
+    "featuredSeason": 1978,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.2,
+      "whip": 1.268,
+      "so": 97,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 230.3,
+      "games": 34,
+      "starts": 33,
+      "reliefAppearances": 1,
+      "k9": 3.79,
+      "bb9": 3.36
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.268,
+      "fip": null,
+      "inningsPitched": 230.3,
+      "strikeoutRate": 3.79,
+      "walkRate": 3.36,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 34,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 117.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1970s-bibbyji01",
+    "playerId": "bibbyji01",
+    "playerSlug": "bibbyji01",
+    "name": "Jim Bibby",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.57,
+      "whip": 1.306,
+      "so": 141,
+      "wins": 12,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 206.7,
+      "games": 37,
+      "starts": 30,
+      "reliefAppearances": 7,
+      "k9": 6.14,
+      "bb9": 3.18
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.306,
+      "fip": null,
+      "inningsPitched": 206.7,
+      "strikeoutRate": 6.14,
+      "walkRate": 3.18,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 37,
+      "reliefAppearances": 7,
+      "eraAdjustedPitching": 113.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-1970s-alexaga01",
     "playerId": "alexaga01",
     "playerSlug": "alexaga01",
@@ -1268,7 +1471,8 @@
     "decade": "1970s",
     "featuredSeason": 1978,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

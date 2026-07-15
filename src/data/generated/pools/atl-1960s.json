@@ -1918,6 +1918,338 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "atl-1960s-thomafr03",
+    "playerId": "thomafr03",
+    "playerSlug": "thomafr03",
+    "name": "Frank Thomas",
+    "franchiseId": "atl",
+    "teamAbbreviation": "MLN",
+    "teamDisplayName": "Milwaukee Braves",
+    "historicalTeamName": "Milwaukee Braves",
+    "team": "MLN",
+    "decade": "1960s",
+    "featuredSeason": 1961,
+    "eligiblePositions": [
+      "1B",
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML1"
+      ],
+      "sourcePlayerId": "thomafr03"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.083,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.841,
+      "hr": 25,
+      "avg": 0.284,
+      "obp": 0.335,
+      "slg": 0.506,
+      "rbi": 67,
+      "sb": 2,
+      "games": 124,
+      "plateAppearances": 464
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.841,
+      "hr": 25,
+      "avg": 0.284,
+      "obp": 0.335,
+      "slg": 0.506,
+      "rbi": 67,
+      "sb": 2,
+      "games": 124,
+      "plateAppearances": 464
+    },
+    "scoringStats": {
+      "obp": 0.335,
+      "slg": 0.506,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 124,
+      "plateAppearances": 464,
+      "eraAdjustedOffense": 115.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1960s-upshace01",
+    "playerId": "upshace01",
+    "playerSlug": "upshace01",
+    "name": "Cecil Upshaw",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1960s",
+    "featuredSeason": 1969,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "upshace01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.901,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.91,
+      "whip": 1.244,
+      "so": 57,
+      "wins": 6,
+      "saves": 27,
+      "sv": 27,
+      "inningsPitched": 105.3,
+      "games": 62,
+      "starts": 0,
+      "reliefAppearances": 62,
+      "k9": 4.87,
+      "bb9": 2.48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.91,
+      "whip": 1.244,
+      "so": 57,
+      "wins": 6,
+      "saves": 27,
+      "sv": 27,
+      "inningsPitched": 105.3,
+      "games": 62,
+      "starts": 0,
+      "reliefAppearances": 62,
+      "k9": 4.87,
+      "bb9": 2.48
+    },
+    "scoringStats": {
+      "whip": 1.244,
+      "fip": null,
+      "inningsPitched": 105.3,
+      "strikeoutRate": 4.87,
+      "walkRate": 2.48,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 62,
+      "reliefAppearances": 62,
+      "eraAdjustedPitching": 123.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1960s-gonzato01",
+    "playerId": "gonzato01",
+    "playerSlug": "gonzato01",
+    "name": "Tony Gonzalez",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1960s",
+    "featuredSeason": 1969,
+    "eligiblePositions": [
+      "LF",
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "gonzato01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.827,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.801,
+      "hr": 10,
+      "avg": 0.294,
+      "obp": 0.354,
+      "slg": 0.447,
+      "rbi": 50,
+      "sb": 3,
+      "games": 89,
+      "plateAppearances": 357
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.801,
+      "hr": 10,
+      "avg": 0.294,
+      "obp": 0.354,
+      "slg": 0.447,
+      "rbi": 50,
+      "sb": 3,
+      "games": 89,
+      "plateAppearances": 357
+    },
+    "scoringStats": {
+      "obp": 0.354,
+      "slg": 0.447,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 89,
+      "plateAppearances": 357,
+      "eraAdjustedOffense": 116.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1960s-pappami01",
+    "playerId": "pappami01",
+    "playerSlug": "pappami01",
+    "name": "Milt Pappas",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1960s",
+    "featuredSeason": 1968,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "pappami01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.403,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.37,
+      "whip": 1.096,
+      "so": 75,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 121.3,
+      "games": 22,
+      "starts": 19,
+      "reliefAppearances": 3,
+      "k9": 5.56,
+      "bb9": 1.63
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.37,
+      "whip": 1.096,
+      "so": 75,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 121.3,
+      "games": 22,
+      "starts": 19,
+      "reliefAppearances": 3,
+      "k9": 5.56,
+      "bb9": 1.63
+    },
+    "scoringStats": {
+      "whip": 1.096,
+      "fip": null,
+      "inningsPitched": 121.3,
+      "strikeoutRate": 5.56,
+      "walkRate": 1.63,
+      "starts": 19,
+      "gamesStarted": 19,
+      "games": 22,
+      "reliefAppearances": 3,
+      "eraAdjustedPitching": 125.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "atl-1960s-crandde01",
     "playerId": "crandde01",
     "playerSlug": "crandde01",

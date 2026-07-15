@@ -725,6 +725,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-2010s-handbr01",
+    "playerId": "handbr01",
+    "playerSlug": "handbr01",
+    "name": "Brad Hand",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.3,
+      "whip": 1.238,
+      "so": 84,
+      "wins": 6,
+      "saves": 34,
+      "sv": 34,
+      "inningsPitched": 57.3,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 13.19,
+      "bb9": 2.83
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.238,
+      "fip": null,
+      "inningsPitched": 57.3,
+      "strikeoutRate": 13.19,
+      "walkRate": 2.83,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 60,
+      "reliefAppearances": 60,
+      "eraAdjustedPitching": 139.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-2010s-civalaa01",
     "playerId": "civalaa01",
     "playerSlug": "civalaa01",
@@ -773,6 +825,58 @@
       "games": 10,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 196.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-2010s-carraca01",
+    "playerId": "carraca01",
+    "playerSlug": "carraca01",
+    "name": "Carlos Carrasco",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.29,
+      "whip": 1.095,
+      "so": 226,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 200,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 10.17,
+      "bb9": 2.07
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.095,
+      "fip": null,
+      "inningsPitched": 200,
+      "strikeoutRate": 10.17,
+      "walkRate": 2.07,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 132.9
     },
     "pitchingScoringStats": null
   },
@@ -826,6 +930,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-2010s-clippty01",
+    "playerId": "clippty01",
+    "playerSlug": "clippty01",
+    "name": "Tyler Clippard",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.9,
+      "whip": 0.855,
+      "so": 64,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 62,
+      "games": 53,
+      "starts": 3,
+      "reliefAppearances": 50,
+      "k9": 9.29,
+      "bb9": 2.18
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 0.855,
+      "fip": null,
+      "inningsPitched": 62,
+      "strikeoutRate": 9.29,
+      "walkRate": 2.18,
+      "starts": 3,
+      "gamesStarted": 3,
+      "games": 53,
+      "reliefAppearances": 50,
+      "eraAdjustedPitching": 158.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-2010s-lindofr01",
     "playerId": "lindofr01",
     "playerSlug": "lindofr01",
@@ -870,6 +1026,58 @@
       "games": 158,
       "plateAppearances": 745,
       "eraAdjustedOffense": 118.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-2010s-wittgni01",
+    "playerId": "wittgni01",
+    "playerSlug": "wittgni01",
+    "name": "Nick Wittgren",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.81,
+      "whip": 1.075,
+      "so": 60,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 57.7,
+      "games": 55,
+      "starts": 0,
+      "reliefAppearances": 55,
+      "k9": 9.36,
+      "bb9": 2.34
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.075,
+      "fip": null,
+      "inningsPitched": 57.7,
+      "strikeoutRate": 9.36,
+      "walkRate": 2.34,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 55,
+      "reliefAppearances": 55,
+      "eraAdjustedPitching": 163.9
     },
     "pitchingScoringStats": null
   },
@@ -935,7 +1143,8 @@
     "featuredSeason": 2013,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -983,7 +1192,8 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1031,7 +1241,8 @@
     "decade": "2010s",
     "featuredSeason": 2017,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1321,7 +1532,8 @@
     "decade": "2010s",
     "featuredSeason": 2016,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -1993,6 +1993,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sfg-1980s-butlebr01",
+    "playerId": "butlebr01",
+    "playerSlug": "butlebr01",
+    "name": "Brett Butler",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "butlebr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.95,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.791,
+      "hr": 6,
+      "avg": 0.287,
+      "obp": 0.393,
+      "slg": 0.398,
+      "rbi": 43,
+      "sb": 43,
+      "games": 157,
+      "plateAppearances": 679
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.791,
+      "hr": 6,
+      "avg": 0.287,
+      "obp": 0.393,
+      "slg": 0.398,
+      "rbi": 43,
+      "sb": 43,
+      "games": 157,
+      "plateAppearances": 679
+    },
+    "scoringStats": {
+      "obp": 0.393,
+      "slg": 0.398,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 157,
+      "plateAppearances": 679,
+      "eraAdjustedOffense": 117.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sfg-1980s-aldremi01",
     "playerId": "aldremi01",
     "playerSlug": "aldremi01",
@@ -2071,6 +2150,257 @@
       "games": 126,
       "plateAppearances": 406,
       "eraAdjustedOffense": 117.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1980s-davisma01",
+    "playerId": "davisma01",
+    "playerSlug": "davisma01",
+    "name": "Mark Davis",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "davisma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.666,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.99,
+      "whip": 1.15,
+      "so": 90,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 84.3,
+      "games": 67,
+      "starts": 2,
+      "reliefAppearances": 65,
+      "k9": 9.6,
+      "bb9": 3.63
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.99,
+      "whip": 1.15,
+      "so": 90,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 84.3,
+      "games": 67,
+      "starts": 2,
+      "reliefAppearances": 65,
+      "k9": 9.6,
+      "bb9": 3.63
+    },
+    "scoringStats": {
+      "whip": 1.15,
+      "fip": null,
+      "inningsPitched": 84.3,
+      "strikeoutRate": 9.6,
+      "walkRate": 3.63,
+      "starts": 2,
+      "gamesStarted": 2,
+      "games": 67,
+      "reliefAppearances": 65,
+      "eraAdjustedPitching": 124.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1980s-smithre06",
+    "playerId": "smithre06",
+    "playerSlug": "smithre06",
+    "name": "Reggie Smith",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "B",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "smithre06"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.062,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.834,
+      "hr": 18,
+      "avg": 0.284,
+      "obp": 0.364,
+      "slg": 0.47,
+      "rbi": 56,
+      "sb": 7,
+      "games": 106,
+      "plateAppearances": 398
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.834,
+      "hr": 18,
+      "avg": 0.284,
+      "obp": 0.364,
+      "slg": 0.47,
+      "rbi": 56,
+      "sb": 7,
+      "games": 106,
+      "plateAppearances": 398
+    },
+    "scoringStats": {
+      "obp": 0.364,
+      "slg": 0.47,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 106,
+      "plateAppearances": 398,
+      "eraAdjustedOffense": 120.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1980s-laskebi01",
+    "playerId": "laskebi01",
+    "playerSlug": "laskebi01",
+    "name": "Bill Laskey",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "laskebi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.439,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.14,
+      "whip": 1.21,
+      "so": 88,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 189.3,
+      "games": 32,
+      "starts": 31,
+      "reliefAppearances": 1,
+      "k9": 4.18,
+      "bb9": 2.04
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.14,
+      "whip": 1.21,
+      "so": 88,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 189.3,
+      "games": 32,
+      "starts": 31,
+      "reliefAppearances": 1,
+      "k9": 4.18,
+      "bb9": 2.04
+    },
+    "scoringStats": {
+      "whip": 1.21,
+      "fip": null,
+      "inningsPitched": 189.3,
+      "strikeoutRate": 4.18,
+      "walkRate": 2.04,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 32,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 114.8
     },
     "pitchingScoringStats": null
   },

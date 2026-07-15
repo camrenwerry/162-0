@@ -268,7 +268,8 @@
     "decade": "1990s",
     "featuredSeason": 1994,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -317,7 +318,8 @@
     "featuredSeason": 1990,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -469,7 +471,8 @@
     "decade": "1990s",
     "featuredSeason": 1990,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -565,7 +568,8 @@
     "decade": "1990s",
     "featuredSeason": 1998,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -906,6 +910,55 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "kcr-1990s-sweenmi01",
+    "playerId": "sweenmi01",
+    "playerSlug": "sweenmi01",
+    "name": "Mike Sweeney",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.907,
+      "hr": 22,
+      "avg": 0.322,
+      "obp": 0.387,
+      "slg": 0.52,
+      "rbi": 102,
+      "sb": 6,
+      "games": 150,
+      "plateAppearances": 643
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.387,
+      "slg": 0.52,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 150,
+      "plateAppearances": 643,
+      "eraAdjustedOffense": 115.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "kcr-1990s-bellja01",
     "playerId": "bellja01",
     "playerSlug": "bellja01",
@@ -954,6 +1007,54 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "kcr-1990s-davisch01",
+    "playerId": "davisch01",
+    "playerSlug": "davisch01",
+    "name": "Chili Davis",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "B",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.896,
+      "hr": 30,
+      "avg": 0.279,
+      "obp": 0.386,
+      "slg": 0.509,
+      "rbi": 90,
+      "sb": 6,
+      "games": 140,
+      "plateAppearances": 567
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.386,
+      "slg": 0.509,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 140,
+      "plateAppearances": 567,
+      "eraAdjustedOffense": 116.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "kcr-1990s-offerjo01",
     "playerId": "offerjo01",
     "playerSlug": "offerjo01",
@@ -998,6 +1099,58 @@
       "games": 158,
       "plateAppearances": 709,
       "eraAdjustedOffense": 109.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-1990s-gubicma01",
+    "playerId": "gubicma01",
+    "playerSlug": "gubicma01",
+    "name": "Mark Gubicza",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.75,
+      "whip": 1.331,
+      "so": 81,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 213.3,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 3.42,
+      "bb9": 2.62
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.331,
+      "fip": null,
+      "inningsPitched": 213.3,
+      "strikeoutRate": 3.42,
+      "walkRate": 2.62,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 33,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 125.5
     },
     "pitchingScoringStats": null
   },
@@ -1146,6 +1299,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "kcr-1990s-haneych01",
+    "playerId": "haneych01",
+    "playerSlug": "haneych01",
+    "name": "Chris Haney",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.7,
+      "whip": 1.395,
+      "so": 115,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 228,
+      "games": 35,
+      "starts": 35,
+      "reliefAppearances": 0,
+      "k9": 4.54,
+      "bb9": 2.01
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.395,
+      "fip": null,
+      "inningsPitched": 228,
+      "strikeoutRate": 4.54,
+      "walkRate": 2.01,
+      "starts": 35,
+      "gamesStarted": 35,
+      "games": 35,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 106.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "kcr-1990s-josefe01",
     "playerId": "josefe01",
     "playerSlug": "josefe01",
@@ -1207,7 +1412,8 @@
     "featuredSeason": 1995,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

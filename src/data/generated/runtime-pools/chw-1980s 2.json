@@ -316,7 +316,8 @@
     "decade": "1980s",
     "featuredSeason": 1989,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -516,7 +517,8 @@
     "decade": "1980s",
     "featuredSeason": 1986,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -612,7 +614,8 @@
     "decade": "1980s",
     "featuredSeason": 1984,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -906,6 +909,158 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-1980s-jonesba01",
+    "playerId": "jonesba01",
+    "playerSlug": "jonesba01",
+    "name": "Barry Jones",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.37,
+      "whip": 0.989,
+      "so": 17,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 30.3,
+      "games": 22,
+      "starts": 0,
+      "reliefAppearances": 22,
+      "k9": 5.04,
+      "bb9": 2.37
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 0.989,
+      "fip": null,
+      "inningsPitched": 30.3,
+      "strikeoutRate": 5.04,
+      "walkRate": 2.37,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 22,
+      "reliefAppearances": 22,
+      "eraAdjustedPitching": 163.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1980s-luzingr01",
+    "playerId": "luzingr01",
+    "playerSlug": "luzingr01",
+    "name": "Greg Luzinski",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.854,
+      "hr": 32,
+      "avg": 0.255,
+      "obp": 0.352,
+      "slg": 0.502,
+      "rbi": 95,
+      "sb": 2,
+      "games": 144,
+      "plateAppearances": 593
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.352,
+      "slg": 0.502,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 144,
+      "plateAppearances": 593,
+      "eraAdjustedOffense": 117.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1980s-mckeojo01",
+    "playerId": "mckeojo01",
+    "playerSlug": "mckeojo01",
+    "name": "Joel McKeon",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.45,
+      "whip": 1.061,
+      "so": 18,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 33,
+      "games": 30,
+      "starts": 0,
+      "reliefAppearances": 30,
+      "k9": 4.91,
+      "bb9": 4.64
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.061,
+      "fip": null,
+      "inningsPitched": 33,
+      "strikeoutRate": 4.91,
+      "walkRate": 4.64,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 30,
+      "reliefAppearances": 30,
+      "eraAdjustedPitching": 170.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-1980s-kempst01",
     "playerId": "kempst01",
     "playerSlug": "kempst01",
@@ -950,6 +1105,58 @@
       "games": 160,
       "plateAppearances": 679,
       "eraAdjustedOffense": 110.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-1980s-reussje01",
+    "playerId": "reussje01",
+    "playerSlug": "reussje01",
+    "name": "Jerry Reuss",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.44,
+      "whip": 1.235,
+      "so": 73,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 183,
+      "games": 32,
+      "starts": 29,
+      "reliefAppearances": 3,
+      "k9": 3.59,
+      "bb9": 2.11
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.235,
+      "fip": null,
+      "inningsPitched": 183,
+      "strikeoutRate": 3.59,
+      "walkRate": 2.11,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 32,
+      "reliefAppearances": 3,
+      "eraAdjustedPitching": 115.2
     },
     "pitchingScoringStats": null
   },

@@ -2035,6 +2035,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chc-1920s-kaufmto01",
+    "playerId": "kaufmto01",
+    "playerSlug": "kaufmto01",
+    "name": "Tony Kaufmann",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1920s",
+    "featuredSeason": 1923,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "kaufmto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.632,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 1.338,
+      "so": 72,
+      "wins": 14,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 206.3,
+      "games": 33,
+      "starts": 24,
+      "reliefAppearances": 9,
+      "k9": 3.14,
+      "bb9": 2.92
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 1.338,
+      "so": 72,
+      "wins": 14,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 206.3,
+      "games": 33,
+      "starts": 24,
+      "reliefAppearances": 9,
+      "k9": 3.14,
+      "bb9": 2.92
+    },
+    "scoringStats": {
+      "whip": 1.338,
+      "fip": null,
+      "inningsPitched": 206.3,
+      "strikeoutRate": 3.14,
+      "walkRate": 2.92,
+      "starts": 24,
+      "gamesStarted": 24,
+      "games": 33,
+      "reliefAppearances": 9,
+      "eraAdjustedPitching": 128.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1920s-carlsha01",
+    "playerId": "carlsha01",
+    "playerSlug": "carlsha01",
+    "name": "Hal Carlson",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1920s",
+    "featuredSeason": 1927,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "carlsha01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.145,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.17,
+      "whip": 1.237,
+      "so": 27,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 184.3,
+      "games": 27,
+      "starts": 22,
+      "reliefAppearances": 5,
+      "k9": 1.32,
+      "bb9": 1.32
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.17,
+      "whip": 1.237,
+      "so": 27,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 184.3,
+      "games": 27,
+      "starts": 22,
+      "reliefAppearances": 5,
+      "k9": 1.32,
+      "bb9": 1.32
+    },
+    "scoringStats": {
+      "whip": 1.237,
+      "fip": null,
+      "inningsPitched": 184.3,
+      "strikeoutRate": 1.32,
+      "walkRate": 1.32,
+      "starts": 22,
+      "gamesStarted": 22,
+      "games": 27,
+      "reliefAppearances": 5,
+      "eraAdjustedPitching": 123.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chc-1920s-freigho01",
     "playerId": "freigho01",
     "playerSlug": "freigho01",
@@ -2190,6 +2362,166 @@
       "games": 135,
       "plateAppearances": 592,
       "eraAdjustedOffense": 115.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1920s-sullijo04",
+    "playerId": "sullijo04",
+    "playerSlug": "sullijo04",
+    "name": "John Sullivan",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1920s",
+    "featuredSeason": 1921,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "sullijo04"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.762,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.852,
+      "hr": 4,
+      "avg": 0.329,
+      "obp": 0.381,
+      "slg": 0.471,
+      "rbi": 41,
+      "sb": 3,
+      "games": 76,
+      "plateAppearances": 269
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.852,
+      "hr": 4,
+      "avg": 0.329,
+      "obp": 0.381,
+      "slg": 0.471,
+      "rbi": 41,
+      "sb": 3,
+      "games": 76,
+      "plateAppearances": 269
+    },
+    "scoringStats": {
+      "obp": 0.381,
+      "slg": 0.471,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 76,
+      "plateAppearances": 269,
+      "eraAdjustedOffense": 116.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1920s-heathcl01",
+    "playerId": "heathcl01",
+    "playerSlug": "heathcl01",
+    "name": "Cliff Heathcote",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1920s",
+    "featuredSeason": 1926,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "heathcl01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.734,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.764,
+      "hr": 10,
+      "avg": 0.276,
+      "obp": 0.353,
+      "slg": 0.412,
+      "rbi": 53,
+      "sb": 18,
+      "games": 139,
+      "plateAppearances": 589
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.764,
+      "hr": 10,
+      "avg": 0.276,
+      "obp": 0.353,
+      "slg": 0.412,
+      "rbi": 53,
+      "sb": 18,
+      "games": 139,
+      "plateAppearances": 589
+    },
+    "scoringStats": {
+      "obp": 0.353,
+      "slg": 0.412,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 139,
+      "plateAppearances": 589,
+      "eraAdjustedOffense": 106.1
     },
     "pitchingScoringStats": null
   },

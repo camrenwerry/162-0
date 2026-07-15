@@ -2046,6 +2046,164 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-1950s-robined01",
+    "playerId": "robined01",
+    "playerSlug": "robined01",
+    "name": "Eddie Robinson",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1950s",
+    "featuredSeason": 1955,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "robined01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.691,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.849,
+      "hr": 16,
+      "avg": 0.208,
+      "obp": 0.358,
+      "slg": 0.491,
+      "rbi": 42,
+      "sb": 0,
+      "games": 88,
+      "plateAppearances": 215
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.849,
+      "hr": 16,
+      "avg": 0.208,
+      "obp": 0.358,
+      "slg": 0.491,
+      "rbi": 42,
+      "sb": 0,
+      "games": 88,
+      "plateAppearances": 215
+    },
+    "scoringStats": {
+      "obp": 0.358,
+      "slg": 0.491,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 88,
+      "plateAppearances": 215,
+      "eraAdjustedOffense": 118.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1950s-henrito01",
+    "playerId": "henrito01",
+    "playerSlug": "henrito01",
+    "name": "Tommy Henrich",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1950s",
+    "featuredSeason": 1950,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "henrito01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.042,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.918,
+      "hr": 6,
+      "avg": 0.272,
+      "obp": 0.382,
+      "slg": 0.536,
+      "rbi": 34,
+      "sb": 0,
+      "games": 73,
+      "plateAppearances": 178
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.918,
+      "hr": 6,
+      "avg": 0.272,
+      "obp": 0.382,
+      "slg": 0.536,
+      "rbi": 34,
+      "sb": 0,
+      "games": 73,
+      "plateAppearances": 178
+    },
+    "scoringStats": {
+      "obp": 0.382,
+      "slg": 0.536,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 73,
+      "plateAppearances": 178,
+      "eraAdjustedOffense": 121.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-1950s-sainjo01",
     "playerId": "sainjo01",
     "playerSlug": "sainjo01",
@@ -2215,6 +2373,171 @@
       "games": 23,
       "reliefAppearances": 23,
       "eraAdjustedPitching": 168.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1950s-konstji01",
+    "playerId": "konstji01",
+    "playerSlug": "konstji01",
+    "name": "Jim Konstanty",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1950s",
+    "featuredSeason": 1955,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "konstji01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.539,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.32,
+      "whip": 1.249,
+      "so": 19,
+      "wins": 7,
+      "saves": 11,
+      "sv": 11,
+      "inningsPitched": 73.7,
+      "games": 45,
+      "starts": 0,
+      "reliefAppearances": 45,
+      "k9": 2.32,
+      "bb9": 2.93
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.32,
+      "whip": 1.249,
+      "so": 19,
+      "wins": 7,
+      "saves": 11,
+      "sv": 11,
+      "inningsPitched": 73.7,
+      "games": 45,
+      "starts": 0,
+      "reliefAppearances": 45,
+      "k9": 2.32,
+      "bb9": 2.93
+    },
+    "scoringStats": {
+      "whip": 1.249,
+      "fip": null,
+      "inningsPitched": 73.7,
+      "strikeoutRate": 2.32,
+      "walkRate": 2.93,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 45,
+      "reliefAppearances": 45,
+      "eraAdjustedPitching": 170.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1950s-bollwdo01",
+    "playerId": "bollwdo01",
+    "playerSlug": "bollwdo01",
+    "name": "Don Bollweg",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1950s",
+    "featuredSeason": 1953,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "bollwdo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.902,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.887,
+      "hr": 6,
+      "avg": 0.297,
+      "obp": 0.384,
+      "slg": 0.503,
+      "rbi": 24,
+      "sb": 1,
+      "games": 70,
+      "plateAppearances": 178
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.887,
+      "hr": 6,
+      "avg": 0.297,
+      "obp": 0.384,
+      "slg": 0.503,
+      "rbi": 24,
+      "sb": 1,
+      "games": 70,
+      "plateAppearances": 178
+    },
+    "scoringStats": {
+      "obp": 0.384,
+      "slg": 0.503,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 70,
+      "plateAppearances": 178,
+      "eraAdjustedOffense": 123.9
     },
     "pitchingScoringStats": null
   },

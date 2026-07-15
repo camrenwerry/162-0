@@ -114,7 +114,8 @@
     "featuredSeason": 1977,
     "eligiblePositions": [
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -294,6 +295,54 @@
       "games": 137,
       "plateAppearances": 541,
       "eraAdjustedOffense": 112.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-1970s-cartyri01",
+    "playerId": "cartyri01",
+    "playerSlug": "cartyri01",
+    "name": "Rico Carty",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "1970s",
+    "featuredSeason": 1978,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.821,
+      "hr": 20,
+      "avg": 0.284,
+      "obp": 0.34,
+      "slg": 0.481,
+      "rbi": 68,
+      "sb": 1,
+      "games": 104,
+      "plateAppearances": 430
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.34,
+      "slg": 0.481,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 104,
+      "plateAppearances": 430,
+      "eraAdjustedOffense": 115.5
     },
     "pitchingScoringStats": null
   },
@@ -616,7 +665,8 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1014,7 +1064,8 @@
     "featuredSeason": 1977,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1194,6 +1245,54 @@
       "games": 50,
       "reliefAppearances": 50,
       "eraAdjustedPitching": 95.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-1970s-solaito01",
+    "playerId": "solaito01",
+    "playerSlug": "solaito01",
+    "name": "Tony Solaita",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.785,
+      "hr": 2,
+      "avg": 0.265,
+      "obp": 0.364,
+      "slg": 0.422,
+      "rbi": 13,
+      "sb": 0,
+      "games": 36,
+      "plateAppearances": 121
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.364,
+      "slg": 0.422,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 36,
+      "plateAppearances": 121,
+      "eraAdjustedOffense": 105.7
     },
     "pitchingScoringStats": null
   },
@@ -1547,6 +1646,107 @@
       "games": 89,
       "plateAppearances": 236,
       "eraAdjustedOffense": 82.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-1970s-johnsje01",
+    "playerId": "johnsje01",
+    "playerSlug": "johnsje01",
+    "name": "Jerry Johnson",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.6,
+      "whip": 1.686,
+      "so": 54,
+      "wins": 2,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 86,
+      "games": 43,
+      "starts": 0,
+      "reliefAppearances": 43,
+      "k9": 5.65,
+      "bb9": 5.65
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.686,
+      "fip": null,
+      "inningsPitched": 86,
+      "strikeoutRate": 5.65,
+      "walkRate": 5.65,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 43,
+      "reliefAppearances": 43,
+      "eraAdjustedPitching": 88.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-1970s-scottjo01",
+    "playerId": "scottjo01",
+    "playerSlug": "scottjo01",
+    "name": "John Scott",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "LF",
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.57,
+      "hr": 2,
+      "avg": 0.24,
+      "obp": 0.266,
+      "slg": 0.305,
+      "rbi": 15,
+      "sb": 10,
+      "games": 79,
+      "plateAppearances": 247
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.266,
+      "slg": 0.305,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 79,
+      "plateAppearances": 247,
+      "eraAdjustedOffense": 77.6
     },
     "pitchingScoringStats": null
   },

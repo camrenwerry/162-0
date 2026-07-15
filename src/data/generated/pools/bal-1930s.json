@@ -2258,6 +2258,251 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bal-1930s-graydo02",
+    "playerId": "graydo02",
+    "playerSlug": "graysa01",
+    "name": "Sam Gray",
+    "franchiseId": "bal",
+    "teamAbbreviation": "SLB",
+    "teamDisplayName": "St. Louis Browns",
+    "historicalTeamName": "St. Louis Browns",
+    "team": "SLB",
+    "decade": "1930s",
+    "featuredSeason": 1931,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLA"
+      ],
+      "sourcePlayerId": "graydo02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.274,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 5.09,
+      "whip": 1.461,
+      "so": 88,
+      "wins": 11,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 258,
+      "games": 43,
+      "starts": 37,
+      "reliefAppearances": 6,
+      "k9": 3.07,
+      "bb9": 1.88
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 5.09,
+      "whip": 1.461,
+      "so": 88,
+      "wins": 11,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 258,
+      "games": 43,
+      "starts": 37,
+      "reliefAppearances": 6,
+      "k9": 3.07,
+      "bb9": 1.88
+    },
+    "scoringStats": {
+      "whip": 1.461,
+      "fip": null,
+      "inningsPitched": 258,
+      "strikeoutRate": 3.07,
+      "walkRate": 1.88,
+      "starts": 37,
+      "gamesStarted": 37,
+      "games": 43,
+      "reliefAppearances": 6,
+      "eraAdjustedPitching": 86
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1930s-peppera01",
+    "playerId": "peppera01",
+    "playerSlug": "peppera01",
+    "name": "Ray Pepper",
+    "franchiseId": "bal",
+    "teamAbbreviation": "SLB",
+    "teamDisplayName": "St. Louis Browns",
+    "historicalTeamName": "St. Louis Browns",
+    "team": "SLB",
+    "decade": "1930s",
+    "featuredSeason": 1934,
+    "eligiblePositions": [
+      "LF",
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLA"
+      ],
+      "sourcePlayerId": "peppera01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.248,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.732,
+      "hr": 7,
+      "avg": 0.298,
+      "obp": 0.333,
+      "slg": 0.399,
+      "rbi": 101,
+      "sb": 1,
+      "games": 148,
+      "plateAppearances": 598
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.732,
+      "hr": 7,
+      "avg": 0.298,
+      "obp": 0.333,
+      "slg": 0.399,
+      "rbi": 101,
+      "sb": 1,
+      "games": 148,
+      "plateAppearances": 598
+    },
+    "scoringStats": {
+      "obp": 0.333,
+      "slg": 0.399,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 148,
+      "plateAppearances": 598,
+      "eraAdjustedOffense": 97.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1930s-mazzeme01",
+    "playerId": "mazzeme01",
+    "playerSlug": "mazzeme01",
+    "name": "Mel Mazzera",
+    "franchiseId": "bal",
+    "teamAbbreviation": "SLB",
+    "teamDisplayName": "St. Louis Browns",
+    "historicalTeamName": "St. Louis Browns",
+    "team": "SLB",
+    "decade": "1930s",
+    "featuredSeason": 1939,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLA"
+      ],
+      "sourcePlayerId": "mazzeme01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.463,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.827,
+      "hr": 3,
+      "avg": 0.3,
+      "obp": 0.364,
+      "slg": 0.464,
+      "rbi": 22,
+      "sb": 0,
+      "games": 33,
+      "plateAppearances": 123
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.827,
+      "hr": 3,
+      "avg": 0.3,
+      "obp": 0.364,
+      "slg": 0.464,
+      "rbi": 22,
+      "sb": 0,
+      "games": 33,
+      "plateAppearances": 123
+    },
+    "scoringStats": {
+      "obp": 0.364,
+      "slg": 0.464,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 33,
+      "plateAppearances": 123,
+      "eraAdjustedOffense": 109.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bal-1930s-coffmdi01",
     "playerId": "coffmdi01",
     "playerSlug": "coffmdi01",
@@ -2341,6 +2586,87 @@
       "games": 32,
       "reliefAppearances": 15,
       "eraAdjustedPitching": 112.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1930s-gracejo01",
+    "playerId": "gracejo01",
+    "playerSlug": "gracejo01",
+    "name": "Joe Grace",
+    "franchiseId": "bal",
+    "teamAbbreviation": "SLB",
+    "teamDisplayName": "St. Louis Browns",
+    "historicalTeamName": "St. Louis Browns",
+    "team": "SLB",
+    "decade": "1930s",
+    "featuredSeason": 1939,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLA"
+      ],
+      "sourcePlayerId": "gracejo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 34.107,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.783,
+      "hr": 3,
+      "avg": 0.304,
+      "obp": 0.363,
+      "slg": 0.42,
+      "rbi": 22,
+      "sb": 3,
+      "games": 74,
+      "plateAppearances": 229
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.783,
+      "hr": 3,
+      "avg": 0.304,
+      "obp": 0.363,
+      "slg": 0.42,
+      "rbi": 22,
+      "sb": 3,
+      "games": 74,
+      "plateAppearances": 229
+    },
+    "scoringStats": {
+      "obp": 0.363,
+      "slg": 0.42,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 74,
+      "plateAppearances": 229,
+      "eraAdjustedOffense": 103.4
     },
     "pitchingScoringStats": null
   },

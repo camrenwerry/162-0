@@ -765,7 +765,8 @@
     "decade": "2000s",
     "featuredSeason": 2008,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1009,7 +1010,8 @@
     "decade": "2000s",
     "featuredSeason": 2002,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1175,7 +1177,8 @@
     "featuredSeason": 2008,
     "eligiblePositions": [
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1238,6 +1241,92 @@
       "games": 156,
       "plateAppearances": 704,
       "eraAdjustedOffense": 119.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2000s-benoijo01",
+    "playerId": "benoijo01",
+    "playerSlug": "benoijo01",
+    "name": "Joaquin Benoit",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2000s",
+    "featuredSeason": 2007,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "benoijo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.117,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.85,
+      "whip": 1.171,
+      "so": 87,
+      "wins": 7,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 82,
+      "games": 70,
+      "starts": 0,
+      "reliefAppearances": 70,
+      "k9": 9.55,
+      "bb9": 3.07
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.85,
+      "whip": 1.171,
+      "so": 87,
+      "wins": 7,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 82,
+      "games": 70,
+      "starts": 0,
+      "reliefAppearances": 70,
+      "k9": 9.55,
+      "bb9": 3.07
+    },
+    "scoringStats": {
+      "whip": 1.171,
+      "fip": null,
+      "inningsPitched": 82,
+      "strikeoutRate": 9.55,
+      "walkRate": 3.07,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 70,
+      "reliefAppearances": 70,
+      "eraAdjustedPitching": 157.8
     },
     "pitchingScoringStats": null
   },
@@ -1317,6 +1406,92 @@
       "games": 159,
       "plateAppearances": 732,
       "eraAdjustedOffense": 119.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2000s-wilsocj01",
+    "playerId": "wilsocj01",
+    "playerSlug": "wilsocj01",
+    "name": "C. J. Wilson",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "wilsocj01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.923,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.81,
+      "whip": 1.33,
+      "so": 84,
+      "wins": 5,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 73.7,
+      "games": 74,
+      "starts": 0,
+      "reliefAppearances": 74,
+      "k9": 10.26,
+      "bb9": 3.91
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.81,
+      "whip": 1.33,
+      "so": 84,
+      "wins": 5,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 73.7,
+      "games": 74,
+      "starts": 0,
+      "reliefAppearances": 74,
+      "k9": 10.26,
+      "bb9": 3.91
+    },
+    "scoringStats": {
+      "whip": 1.33,
+      "fip": null,
+      "inningsPitched": 73.7,
+      "strikeoutRate": 10.26,
+      "walkRate": 3.91,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 74,
+      "reliefAppearances": 74,
+      "eraAdjustedPitching": 158.4
     },
     "pitchingScoringStats": null
   },
@@ -1477,6 +1652,172 @@
       "games": 74,
       "plateAppearances": 313,
       "eraAdjustedOffense": 118.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2000s-francfr01",
+    "playerId": "francfr01",
+    "playerSlug": "francfr01",
+    "name": "Frank Francisco",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2000s",
+    "featuredSeason": 2008,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "francfr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.174,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.13,
+      "whip": 1.153,
+      "so": 83,
+      "wins": 3,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 63.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 11.79,
+      "bb9": 3.69
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.13,
+      "whip": 1.153,
+      "so": 83,
+      "wins": 3,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 63.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 11.79,
+      "bb9": 3.69
+    },
+    "scoringStats": {
+      "whip": 1.153,
+      "fip": null,
+      "inningsPitched": 63.3,
+      "strikeoutRate": 11.79,
+      "walkRate": 3.69,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 58,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 139
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tex-2000s-gonzaju03",
+    "playerId": "gonzaju03",
+    "playerSlug": "gonzaju03",
+    "name": "Juan Gonzalez",
+    "franchiseId": "tex",
+    "teamAbbreviation": "TEX",
+    "teamDisplayName": "Texas Rangers",
+    "historicalTeamName": "Texas Rangers",
+    "team": "TEX",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "eligiblePositions": [
+      "RF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TEX"
+      ],
+      "sourcePlayerId": "gonzaju03"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.151,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.901,
+      "hr": 24,
+      "avg": 0.294,
+      "obp": 0.329,
+      "slg": 0.572,
+      "rbi": 70,
+      "sb": 1,
+      "games": 82,
+      "plateAppearances": 346
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.901,
+      "hr": 24,
+      "avg": 0.294,
+      "obp": 0.329,
+      "slg": 0.572,
+      "rbi": 70,
+      "sb": 1,
+      "games": 82,
+      "plateAppearances": 346
+    },
+    "scoringStats": {
+      "obp": 0.329,
+      "slg": 0.572,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 82,
+      "plateAppearances": 346,
+      "eraAdjustedOffense": 118.4
     },
     "pitchingScoringStats": null
   },
@@ -1972,7 +2313,8 @@
     "decade": "2000s",
     "featuredSeason": 2005,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

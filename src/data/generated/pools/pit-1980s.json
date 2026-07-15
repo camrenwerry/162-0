@@ -1493,6 +1493,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "pit-1980s-walkbo01",
+    "playerId": "walkbo01",
+    "playerSlug": "walkbo01",
+    "name": "Bob Walk",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "walkbo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.996,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.166,
+      "so": 81,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 212.7,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 3.43,
+      "bb9": 2.75
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.166,
+      "so": 81,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 212.7,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 3.43,
+      "bb9": 2.75
+    },
+    "scoringStats": {
+      "whip": 1.166,
+      "fip": null,
+      "inningsPitched": 212.7,
+      "strikeoutRate": 3.43,
+      "walkRate": 2.75,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 127.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "pit-1980s-morriji01",
     "playerId": "morriji01",
     "playerSlug": "morriji01",
@@ -1568,6 +1654,92 @@
       "games": 154,
       "plateAppearances": 593,
       "eraAdjustedOffense": 116.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1980s-guantce01",
+    "playerId": "guantce01",
+    "playerSlug": "guantce01",
+    "name": "Cecilio Guante",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "guantce01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.424,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 1.138,
+      "so": 92,
+      "wins": 4,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 109,
+      "games": 63,
+      "starts": 0,
+      "reliefAppearances": 63,
+      "k9": 7.6,
+      "bb9": 3.3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.72,
+      "whip": 1.138,
+      "so": 92,
+      "wins": 4,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 109,
+      "games": 63,
+      "starts": 0,
+      "reliefAppearances": 63,
+      "k9": 7.6,
+      "bb9": 3.3
+    },
+    "scoringStats": {
+      "whip": 1.138,
+      "fip": null,
+      "inningsPitched": 109,
+      "strikeoutRate": 7.6,
+      "walkRate": 3.3,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 63,
+      "reliefAppearances": 63,
+      "eraAdjustedPitching": 131.8
     },
     "pitchingScoringStats": null
   },
@@ -1648,6 +1820,178 @@
       "games": 98,
       "plateAppearances": 324,
       "eraAdjustedOffense": 123.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1980s-bibbyji01",
+    "playerId": "bibbyji01",
+    "playerSlug": "bibbyji01",
+    "name": "Jim Bibby",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "bibbyji01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.065,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.32,
+      "whip": 1.25,
+      "so": 144,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 238.3,
+      "games": 35,
+      "starts": 34,
+      "reliefAppearances": 1,
+      "k9": 5.44,
+      "bb9": 3.32
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.32,
+      "whip": 1.25,
+      "so": 144,
+      "wins": 19,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 238.3,
+      "games": 35,
+      "starts": 34,
+      "reliefAppearances": 1,
+      "k9": 5.44,
+      "bb9": 3.32
+    },
+    "scoringStats": {
+      "whip": 1.25,
+      "fip": null,
+      "inningsPitched": 238.3,
+      "strikeoutRate": 5.44,
+      "walkRate": 3.32,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 35,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 108.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1980s-tudorjo01",
+    "playerId": "tudorjo01",
+    "playerSlug": "tudorjo01",
+    "name": "John Tudor",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "tudorjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.98,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.208,
+      "so": 117,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 212,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 4.97,
+      "bb9": 2.38
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.208,
+      "so": 117,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 212,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 4.97,
+      "bb9": 2.38
+    },
+    "scoringStats": {
+      "whip": 1.208,
+      "fip": null,
+      "inningsPitched": 212,
+      "strikeoutRate": 4.97,
+      "walkRate": 2.38,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 109.8
     },
     "pitchingScoringStats": null
   },

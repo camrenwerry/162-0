@@ -2069,6 +2069,257 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-1960s-patteda02",
+    "playerId": "patteda02",
+    "playerSlug": "patteda02",
+    "name": "Daryl Patterson",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1960s",
+    "featuredSeason": 1968,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "patteda02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.325,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.12,
+      "whip": 1.176,
+      "so": 49,
+      "wins": 2,
+      "saves": 7,
+      "sv": 7,
+      "inningsPitched": 68,
+      "games": 38,
+      "starts": 1,
+      "reliefAppearances": 37,
+      "k9": 6.49,
+      "bb9": 3.57
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.12,
+      "whip": 1.176,
+      "so": 49,
+      "wins": 2,
+      "saves": 7,
+      "sv": 7,
+      "inningsPitched": 68,
+      "games": 38,
+      "starts": 1,
+      "reliefAppearances": 37,
+      "k9": 6.49,
+      "bb9": 3.57
+    },
+    "scoringStats": {
+      "whip": 1.176,
+      "fip": null,
+      "inningsPitched": 68,
+      "strikeoutRate": 6.49,
+      "walkRate": 3.57,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 38,
+      "reliefAppearances": 37,
+      "eraAdjustedPitching": 140.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1960s-wertzvi01",
+    "playerId": "wertzvi01",
+    "playerSlug": "wertzvi01",
+    "name": "Vic Wertz",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1960s",
+    "featuredSeason": 1962,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "wertzvi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.489,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.843,
+      "hr": 5,
+      "avg": 0.324,
+      "obp": 0.357,
+      "slg": 0.486,
+      "rbi": 18,
+      "sb": 0,
+      "games": 74,
+      "plateAppearances": 112
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.843,
+      "hr": 5,
+      "avg": 0.324,
+      "obp": 0.357,
+      "slg": 0.486,
+      "rbi": 18,
+      "sb": 0,
+      "games": 74,
+      "plateAppearances": 112
+    },
+    "scoringStats": {
+      "obp": 0.357,
+      "slg": 0.486,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 74,
+      "plateAppearances": 112,
+      "eraAdjustedOffense": 117.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1960s-sisleda01",
+    "playerId": "sisleda01",
+    "playerSlug": "sisleda01",
+    "name": "Dave Sisler",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1960s",
+    "featuredSeason": 1960,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "sisleda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.402,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.262,
+      "so": 47,
+      "wins": 7,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 80,
+      "games": 41,
+      "starts": 0,
+      "reliefAppearances": 41,
+      "k9": 5.29,
+      "bb9": 5.06
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.262,
+      "so": 47,
+      "wins": 7,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 80,
+      "games": 41,
+      "starts": 0,
+      "reliefAppearances": 41,
+      "k9": 5.29,
+      "bb9": 5.06
+    },
+    "scoringStats": {
+      "whip": 1.262,
+      "fip": null,
+      "inningsPitched": 80,
+      "strikeoutRate": 5.29,
+      "walkRate": 5.06,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 41,
+      "reliefAppearances": 41,
+      "eraAdjustedPitching": 156.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-1960s-matheed01",
     "playerId": "matheed01",
     "playerSlug": "matheed01",
@@ -2145,6 +2396,92 @@
       "games": 36,
       "plateAppearances": 128,
       "eraAdjustedOffense": 116.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1960s-sparmjo01",
+    "playerId": "sparmjo01",
+    "playerSlug": "sparmjo01",
+    "name": "Joe Sparma",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1960s",
+    "featuredSeason": 1967,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "sparmjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.092,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.76,
+      "whip": 1.245,
+      "so": 153,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 217.7,
+      "games": 37,
+      "starts": 37,
+      "reliefAppearances": 0,
+      "k9": 6.33,
+      "bb9": 3.51
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.76,
+      "whip": 1.245,
+      "so": 153,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 217.7,
+      "games": 37,
+      "starts": 37,
+      "reliefAppearances": 0,
+      "k9": 6.33,
+      "bb9": 3.51
+    },
+    "scoringStats": {
+      "whip": 1.245,
+      "fip": null,
+      "inningsPitched": 217.7,
+      "strikeoutRate": 6.33,
+      "walkRate": 3.51,
+      "starts": 37,
+      "gamesStarted": 37,
+      "games": 37,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 85.9
     },
     "pitchingScoringStats": null
   },

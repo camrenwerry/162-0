@@ -317,7 +317,8 @@
     "decade": "1990s",
     "featuredSeason": 1996,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -725,7 +726,8 @@
     "decade": "1990s",
     "featuredSeason": 1996,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -917,6 +919,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-1990s-reardje01",
+    "playerId": "reardje01",
+    "playerSlug": "reardje01",
+    "name": "Jeff Reardon",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.03,
+      "whip": 1.18,
+      "so": 44,
+      "wins": 1,
+      "saves": 40,
+      "sv": 40,
+      "inningsPitched": 59.3,
+      "games": 57,
+      "starts": 0,
+      "reliefAppearances": 57,
+      "k9": 6.67,
+      "bb9": 2.43
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.18,
+      "fip": null,
+      "inningsPitched": 59.3,
+      "strikeoutRate": 6.67,
+      "walkRate": 2.43,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 57,
+      "reliefAppearances": 57,
+      "eraAdjustedPitching": 135
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-1990s-jeffere01",
     "playerId": "jeffere01",
     "playerSlug": "jeffere01",
@@ -930,7 +984,8 @@
     "featuredSeason": 1996,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -966,6 +1021,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-1990s-corsiji01",
+    "playerId": "corsiji01",
+    "playerSlug": "corsiji01",
+    "name": "Jim Corsi",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.59,
+      "whip": 1.227,
+      "so": 49,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 66,
+      "games": 59,
+      "starts": 0,
+      "reliefAppearances": 59,
+      "k9": 6.68,
+      "bb9": 3.14
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.227,
+      "fip": null,
+      "inningsPitched": 66,
+      "strikeoutRate": 6.68,
+      "walkRate": 3.14,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 59,
+      "reliefAppearances": 59,
+      "eraAdjustedPitching": 179.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-1990s-stanlmi02",
     "playerId": "stanlmi02",
     "playerSlug": "stanlmi02",
@@ -979,7 +1086,8 @@
     "featuredSeason": 1997,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1011,6 +1119,58 @@
       "games": 97,
       "plateAppearances": 312,
       "eraAdjustedOffense": 118.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1990s-belinst01",
+    "playerId": "belinst01",
+    "playerSlug": "belinst01",
+    "name": "Stan Belinda",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 1.134,
+      "so": 57,
+      "wins": 8,
+      "saves": 10,
+      "sv": 10,
+      "inningsPitched": 69.7,
+      "games": 63,
+      "starts": 0,
+      "reliefAppearances": 63,
+      "k9": 7.36,
+      "bb9": 3.62
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.134,
+      "fip": null,
+      "inningsPitched": 69.7,
+      "strikeoutRate": 7.36,
+      "walkRate": 3.62,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 63,
+      "reliefAppearances": 63,
+      "eraAdjustedPitching": 152
     },
     "pitchingScoringStats": null
   },
@@ -1111,6 +1271,55 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-1990s-daubabr01",
+    "playerId": "daubabr01",
+    "playerSlug": "daubabr01",
+    "name": "Brian Daubach",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.921,
+      "hr": 21,
+      "avg": 0.294,
+      "obp": 0.36,
+      "slg": 0.562,
+      "rbi": 73,
+      "sb": 0,
+      "games": 110,
+      "plateAppearances": 420
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.36,
+      "slg": 0.562,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 110,
+      "plateAppearances": 420,
+      "eraAdjustedOffense": 117.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-1990s-buforda01",
     "playerId": "buforda01",
     "playerSlug": "buforda01",
@@ -1123,7 +1332,8 @@
     "decade": "1990s",
     "featuredSeason": 1998,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1267,7 +1477,8 @@
     "decade": "1990s",
     "featuredSeason": 1999,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1316,7 +1527,8 @@
     "featuredSeason": 1992,
     "eligiblePositions": [
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1511,7 +1723,8 @@
     "featuredSeason": 1997,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

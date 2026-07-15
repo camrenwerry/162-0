@@ -2116,6 +2116,166 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "pit-1950s-clemero01",
+    "playerId": "clemero01",
+    "playerSlug": "clemero01",
+    "name": "Roberto Clemente",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1950s",
+    "featuredSeason": 1956,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "clemero01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.575,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.761,
+      "hr": 7,
+      "avg": 0.311,
+      "obp": 0.33,
+      "slg": 0.431,
+      "rbi": 60,
+      "sb": 6,
+      "games": 147,
+      "plateAppearances": 572
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.761,
+      "hr": 7,
+      "avg": 0.311,
+      "obp": 0.33,
+      "slg": 0.431,
+      "rbi": 60,
+      "sb": 6,
+      "games": 147,
+      "plateAppearances": 572
+    },
+    "scoringStats": {
+      "obp": 0.33,
+      "slg": 0.431,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 147,
+      "plateAppearances": 572,
+      "eraAdjustedOffense": 105.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1950s-nelsoro01",
+    "playerId": "nelsoro01",
+    "playerSlug": "nelsoro01",
+    "name": "Rocky Nelson",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1950s",
+    "featuredSeason": 1959,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "nelsoro01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.367,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.836,
+      "hr": 6,
+      "avg": 0.291,
+      "obp": 0.379,
+      "slg": 0.457,
+      "rbi": 32,
+      "sb": 0,
+      "games": 98,
+      "plateAppearances": 204
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.836,
+      "hr": 6,
+      "avg": 0.291,
+      "obp": 0.379,
+      "slg": 0.457,
+      "rbi": 32,
+      "sb": 0,
+      "games": 98,
+      "plateAppearances": 204
+    },
+    "scoringStats": {
+      "obp": 0.379,
+      "slg": 0.457,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 98,
+      "plateAppearances": 204,
+      "eraAdjustedOffense": 115.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "pit-1950s-mazerbi01",
     "playerId": "mazerbi01",
     "playerSlug": "mazerbi01",
@@ -2191,6 +2351,85 @@
       "games": 152,
       "plateAppearances": 607,
       "eraAdjustedOffense": 102.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1950s-abramca01",
+    "playerId": "abramca01",
+    "playerSlug": "abramca01",
+    "name": "Cal Abrams",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1950s",
+    "featuredSeason": 1953,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "abramca01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.113,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.803,
+      "hr": 15,
+      "avg": 0.286,
+      "obp": 0.368,
+      "slg": 0.435,
+      "rbi": 43,
+      "sb": 4,
+      "games": 119,
+      "plateAppearances": 512
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.803,
+      "hr": 15,
+      "avg": 0.286,
+      "obp": 0.368,
+      "slg": 0.435,
+      "rbi": 43,
+      "sb": 4,
+      "games": 119,
+      "plateAppearances": 512
+    },
+    "scoringStats": {
+      "obp": 0.368,
+      "slg": 0.435,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 119,
+      "plateAppearances": 512,
+      "eraAdjustedOffense": 108
     },
     "pitchingScoringStats": null
   },
@@ -2271,6 +2510,92 @@
       "games": 79,
       "plateAppearances": 344,
       "eraAdjustedOffense": 104.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1950s-chambcl01",
+    "playerId": "chambcl01",
+    "playerSlug": "chambcl01",
+    "name": "Cliff Chambers",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1950s",
+    "featuredSeason": 1950,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "chambcl01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.55,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.3,
+      "whip": 1.42,
+      "so": 93,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 249.3,
+      "games": 37,
+      "starts": 33,
+      "reliefAppearances": 4,
+      "k9": 3.36,
+      "bb9": 3.32
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.3,
+      "whip": 1.42,
+      "so": 93,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 249.3,
+      "games": 37,
+      "starts": 33,
+      "reliefAppearances": 4,
+      "k9": 3.36,
+      "bb9": 3.32
+    },
+    "scoringStats": {
+      "whip": 1.42,
+      "fip": null,
+      "inningsPitched": 249.3,
+      "strikeoutRate": 3.36,
+      "walkRate": 3.32,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 37,
+      "reliefAppearances": 4,
+      "eraAdjustedPitching": 96.5
     },
     "pitchingScoringStats": null
   },

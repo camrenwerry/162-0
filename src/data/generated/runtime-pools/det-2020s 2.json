@@ -116,7 +116,8 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -369,7 +370,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -418,7 +420,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1082,7 +1085,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1231,7 +1235,8 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "C",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1280,7 +1285,8 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1312,6 +1318,55 @@
       "games": 156,
       "plateAppearances": 674,
       "eraAdjustedOffense": 103.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-2020s-grossro01",
+    "playerId": "grossro01",
+    "playerSlug": "grossro01",
+    "name": "Robbie Grossman",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "B",
+    "throws": "L",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.772,
+      "hr": 23,
+      "avg": 0.239,
+      "obp": 0.357,
+      "slg": 0.415,
+      "rbi": 67,
+      "sb": 20,
+      "games": 156,
+      "plateAppearances": 671
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.357,
+      "slg": 0.415,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 156,
+      "plateAppearances": 671,
+      "eraAdjustedOffense": 105.7
     },
     "pitchingScoringStats": null
   },
@@ -1365,6 +1420,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-2020s-hanifbr01",
+    "playerId": "hanifbr01",
+    "playerSlug": "hanifbr01",
+    "name": "Brenan Hanifee",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 1.317,
+      "so": 40,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 60,
+      "games": 54,
+      "starts": 0,
+      "reliefAppearances": 54,
+      "k9": 6,
+      "bb9": 2.1
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.317,
+      "fip": null,
+      "inningsPitched": 60,
+      "strikeoutRate": 6,
+      "walkRate": 2.1,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 54,
+      "reliefAppearances": 54,
+      "eraAdjustedPitching": 136.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-2020s-dingldi01",
     "playerId": "dingldi01",
     "playerSlug": "dingldi01",
@@ -1413,6 +1520,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-2020s-cisnejo01",
+    "playerId": "cisnejo01",
+    "playerSlug": "cisnejo01",
+    "name": "Jose Cisnero",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.65,
+      "whip": 1.33,
+      "so": 62,
+      "wins": 4,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 61.7,
+      "games": 67,
+      "starts": 0,
+      "reliefAppearances": 67,
+      "k9": 9.05,
+      "bb9": 4.52
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.33,
+      "fip": null,
+      "inningsPitched": 61.7,
+      "strikeoutRate": 9.05,
+      "walkRate": 4.52,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 67,
+      "reliefAppearances": 67,
+      "eraAdjustedPitching": 118.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-2020s-peralwi01",
+    "playerId": "peralwi01",
+    "playerSlug": "peralwi01",
+    "name": "Wily Peralta",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.07,
+      "whip": 1.335,
+      "so": 58,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 93.7,
+      "games": 19,
+      "starts": 18,
+      "reliefAppearances": 1,
+      "k9": 5.57,
+      "bb9": 3.65
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.335,
+      "fip": null,
+      "inningsPitched": 93.7,
+      "strikeoutRate": 5.57,
+      "walkRate": 3.65,
+      "starts": 18,
+      "gamesStarted": 18,
+      "games": 19,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 140.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-2020s-torregl01",
     "playerId": "torregl01",
     "playerSlug": "torregl01",
@@ -1425,7 +1636,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1526,7 +1738,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1574,7 +1787,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

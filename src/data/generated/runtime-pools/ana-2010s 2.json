@@ -64,7 +64,8 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -724,6 +725,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "ana-2010s-waldejo01",
+    "playerId": "waldejo01",
+    "playerSlug": "waldejo01",
+    "name": "Jordan Walden",
+    "franchiseId": "ana",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels of Anaheim",
+    "historicalTeamName": "Los Angeles Angels of Anaheim",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2011,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.98,
+      "whip": 1.243,
+      "so": 67,
+      "wins": 5,
+      "saves": 32,
+      "sv": 32,
+      "inningsPitched": 60.3,
+      "games": 62,
+      "starts": 0,
+      "reliefAppearances": 62,
+      "k9": 9.99,
+      "bb9": 3.88
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.243,
+      "fip": null,
+      "inningsPitched": 60.3,
+      "strikeoutRate": 9.99,
+      "walkRate": 3.88,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 62,
+      "reliefAppearances": 62,
+      "eraAdjustedPitching": 136.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ana-2010s-alvarjo02",
+    "playerId": "alvarjo02",
+    "playerSlug": "alvarjo02",
+    "name": "Jose Alvarez",
+    "franchiseId": "ana",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels of Anaheim",
+    "historicalTeamName": "Los Angeles Angels of Anaheim",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.159,
+      "so": 59,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 63,
+      "games": 76,
+      "starts": 0,
+      "reliefAppearances": 76,
+      "k9": 8.43,
+      "bb9": 3.14
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.159,
+      "fip": null,
+      "inningsPitched": 63,
+      "strikeoutRate": 8.43,
+      "walkRate": 3.14,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 76,
+      "reliefAppearances": 76,
+      "eraAdjustedPitching": 157.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "ana-2010s-santaer01",
     "playerId": "santaer01",
     "playerSlug": "santaer01",
@@ -772,6 +877,133 @@
       "games": 33,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 120.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "ana-2010s-ohtansh01",
+    "playerId": "ohtansh01",
+    "playerSlug": "ohtansh01",
+    "name": "Shohei Ohtani",
+    "franchiseId": "ana",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels of Anaheim",
+    "historicalTeamName": "Los Angeles Angels of Anaheim",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "eligiblePositions": [
+      "DH",
+      "SP"
+    ],
+    "isTwoWay": true,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "R",
+    "playerType": "twoWay",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.925,
+      "hr": 22,
+      "avg": 0.285,
+      "obp": 0.361,
+      "slg": 0.564,
+      "rbi": 61,
+      "sb": 10,
+      "games": 114,
+      "plateAppearances": 366
+    },
+    "pitchingVisibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.31,
+      "whip": 1.161,
+      "so": 63,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 51.7,
+      "games": 10,
+      "starts": 10,
+      "reliefAppearances": 0,
+      "k9": 10.97,
+      "bb9": 3.83
+    },
+    "scoringStats": {
+      "obp": 0.361,
+      "slg": 0.564,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 114,
+      "plateAppearances": 366,
+      "eraAdjustedOffense": 126.1
+    },
+    "pitchingScoringStats": {
+      "whip": 1.161,
+      "fip": null,
+      "inningsPitched": 51.7,
+      "strikeoutRate": 10.97,
+      "walkRate": 3.83,
+      "starts": 10,
+      "gamesStarted": 10,
+      "games": 10,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 128.9
+    }
+  },
+  {
+    "id": "ana-2010s-coleta01",
+    "playerId": "coleta01",
+    "playerSlug": "coleta01",
+    "name": "Taylor Cole",
+    "franchiseId": "ana",
+    "teamAbbreviation": "LAA",
+    "teamDisplayName": "Los Angeles Angels of Anaheim",
+    "historicalTeamName": "Los Angeles Angels of Anaheim",
+    "team": "LAA",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.75,
+      "whip": 0.889,
+      "so": 39,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 36,
+      "games": 18,
+      "starts": 2,
+      "reliefAppearances": 16,
+      "k9": 9.75,
+      "bb9": 3
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 0.889,
+      "fip": null,
+      "inningsPitched": 36,
+      "strikeoutRate": 9.75,
+      "walkRate": 3,
+      "starts": 2,
+      "gamesStarted": 2,
+      "games": 18,
+      "reliefAppearances": 16,
+      "eraAdjustedPitching": 155.1
     },
     "pitchingScoringStats": null
   },
@@ -840,7 +1072,8 @@
     "decade": "2010s",
     "featuredSeason": 2012,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -939,7 +1172,8 @@
     "eligiblePositions": [
       "1B",
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1184,7 +1418,8 @@
     "featuredSeason": 2010,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

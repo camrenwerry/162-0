@@ -437,7 +437,8 @@
     "decade": "1980s",
     "featuredSeason": 1989,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -500,6 +501,85 @@
       "games": 142,
       "plateAppearances": 611,
       "eraAdjustedOffense": 129.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1980s-phelpke01",
+    "playerId": "phelpke01",
+    "playerSlug": "phelpke01",
+    "name": "Ken Phelps",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "phelpke01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.344,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.982,
+      "hr": 14,
+      "avg": 0.284,
+      "obp": 0.434,
+      "slg": 0.547,
+      "rbi": 32,
+      "sb": 1,
+      "games": 72,
+      "plateAppearances": 244
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.982,
+      "hr": 14,
+      "avg": 0.284,
+      "obp": 0.434,
+      "slg": 0.547,
+      "rbi": 32,
+      "sb": 1,
+      "games": 72,
+      "plateAppearances": 244
+    },
+    "scoringStats": {
+      "obp": 0.434,
+      "slg": 0.547,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 72,
+      "plateAppearances": 244,
+      "eraAdjustedOffense": 137.3
     },
     "pitchingScoringStats": null
   },
@@ -667,85 +747,6 @@
       "games": 35,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 118.9
-    },
-    "pitchingScoringStats": null
-  },
-  {
-    "id": "sea-1980s-phelpke01",
-    "playerId": "phelpke01",
-    "playerSlug": "phelpke01",
-    "name": "Ken Phelps",
-    "franchiseId": "sea",
-    "teamAbbreviation": "SEA",
-    "teamDisplayName": "Seattle Mariners",
-    "historicalTeamName": "Seattle Mariners",
-    "team": "SEA",
-    "decade": "1980s",
-    "featuredSeason": 1986,
-    "eligiblePositions": [
-      "1B"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "L",
-    "throws": "L",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SEA"
-      ],
-      "sourcePlayerId": "phelpke01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 50.359,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.932,
-      "hr": 24,
-      "avg": 0.247,
-      "obp": 0.406,
-      "slg": 0.526,
-      "rbi": 64,
-      "sb": 2,
-      "games": 125,
-      "plateAppearances": 441
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.932,
-      "hr": 24,
-      "avg": 0.247,
-      "obp": 0.406,
-      "slg": 0.526,
-      "rbi": 64,
-      "sb": 2,
-      "games": 125,
-      "plateAppearances": 441
-    },
-    "scoringStats": {
-      "obp": 0.406,
-      "slg": 0.526,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 125,
-      "plateAppearances": 441,
-      "eraAdjustedOffense": 126.4
     },
     "pitchingScoringStats": null
   },
@@ -1757,6 +1758,167 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-1980s-hendeda01",
+    "playerId": "hendeda01",
+    "playerSlug": "hendeda01",
+    "name": "Dave Henderson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "eligiblePositions": [
+      "CF",
+      "RF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "hendeda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.273,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.831,
+      "hr": 14,
+      "avg": 0.276,
+      "obp": 0.35,
+      "slg": 0.481,
+      "rbi": 44,
+      "sb": 1,
+      "games": 103,
+      "plateAppearances": 378
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.831,
+      "hr": 14,
+      "avg": 0.276,
+      "obp": 0.35,
+      "slg": 0.481,
+      "rbi": 44,
+      "sb": 1,
+      "games": 103,
+      "plateAppearances": 378
+    },
+    "scoringStats": {
+      "obp": 0.35,
+      "slg": 0.481,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 103,
+      "plateAppearances": 378,
+      "eraAdjustedOffense": 112.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1980s-caldeiv01",
+    "playerId": "caldeiv01",
+    "playerSlug": "caldeiv01",
+    "name": "Ivan Calderon",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "caldeiv01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.994,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.863,
+      "hr": 8,
+      "avg": 0.286,
+      "obp": 0.349,
+      "slg": 0.514,
+      "rbi": 28,
+      "sb": 4,
+      "games": 67,
+      "plateAppearances": 233
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.863,
+      "hr": 8,
+      "avg": 0.286,
+      "obp": 0.349,
+      "slg": 0.514,
+      "rbi": 28,
+      "sb": 4,
+      "games": 67,
+      "plateAppearances": 233
+    },
+    "scoringStats": {
+      "obp": 0.349,
+      "slg": 0.514,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 67,
+      "plateAppearances": 233,
+      "eraAdjustedOffense": 117.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-1980s-bochtbr01",
     "playerId": "bochtbr01",
     "playerSlug": "bochtbr01",
@@ -1769,7 +1931,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1832,6 +1995,85 @@
       "games": 148,
       "plateAppearances": 603,
       "eraAdjustedOffense": 114.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1980s-cowenal01",
+    "playerId": "cowenal01",
+    "playerSlug": "cowenal01",
+    "name": "Al Cowens",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "cowenal01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.48,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.8,
+      "hr": 20,
+      "avg": 0.27,
+      "obp": 0.325,
+      "slg": 0.475,
+      "rbi": 78,
+      "sb": 11,
+      "games": 146,
+      "plateAppearances": 611
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.8,
+      "hr": 20,
+      "avg": 0.27,
+      "obp": 0.325,
+      "slg": 0.475,
+      "rbi": 78,
+      "sb": 11,
+      "games": 146,
+      "plateAppearances": 611
+    },
+    "scoringStats": {
+      "obp": 0.325,
+      "slg": 0.475,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 146,
+      "plateAppearances": 611,
+      "eraAdjustedOffense": 109.5
     },
     "pitchingScoringStats": null
   },
@@ -1996,6 +2238,86 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-1980s-balbost01",
+    "playerId": "balbost01",
+    "playerSlug": "balbost01",
+    "name": "Steve Balboni",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1980s",
+    "featuredSeason": 1988,
+    "eligiblePositions": [
+      "1B",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "balbost01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.247,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.778,
+      "hr": 21,
+      "avg": 0.251,
+      "obp": 0.298,
+      "slg": 0.48,
+      "rbi": 61,
+      "sb": 0,
+      "games": 97,
+      "plateAppearances": 376
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.778,
+      "hr": 21,
+      "avg": 0.251,
+      "obp": 0.298,
+      "slg": 0.48,
+      "rbi": 61,
+      "sb": 0,
+      "games": 97,
+      "plateAppearances": 376
+    },
+    "scoringStats": {
+      "obp": 0.298,
+      "slg": 0.48,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 97,
+      "plateAppearances": 376,
+      "eraAdjustedOffense": 108.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-1980s-reynoha01",
     "playerId": "reynoha01",
     "playerSlug": "reynoha01",
@@ -2087,7 +2409,8 @@
     "decade": "1980s",
     "featuredSeason": 1987,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

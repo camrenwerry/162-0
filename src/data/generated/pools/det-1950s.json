@@ -1726,6 +1726,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-1950s-mullipa01",
+    "playerId": "mullipa01",
+    "playerSlug": "mullipa01",
+    "name": "Pat Mullin",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1950s",
+    "featuredSeason": 1951,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "mullipa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.66,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.849,
+      "hr": 12,
+      "avg": 0.281,
+      "obp": 0.367,
+      "slg": 0.481,
+      "rbi": 51,
+      "sb": 2,
+      "games": 110,
+      "plateAppearances": 336
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.849,
+      "hr": 12,
+      "avg": 0.281,
+      "obp": 0.367,
+      "slg": 0.481,
+      "rbi": 51,
+      "sb": 2,
+      "games": 110,
+      "plateAppearances": 336
+    },
+    "scoringStats": {
+      "obp": 0.367,
+      "slg": 0.481,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 110,
+      "plateAppearances": 336,
+      "eraAdjustedOffense": 117.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-1950s-harriga01",
     "playerId": "harriga01",
     "playerSlug": "harriga01",
@@ -1880,6 +1959,246 @@
       "games": 115,
       "plateAppearances": 488,
       "eraAdjustedOffense": 115.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1950s-souchst01",
+    "playerId": "souchst01",
+    "playerSlug": "souchst01",
+    "name": "Bud Souchock",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1950s",
+    "featuredSeason": 1952,
+    "eligiblePositions": [
+      "3B",
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "souchst01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.717,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.791,
+      "hr": 13,
+      "avg": 0.249,
+      "obp": 0.304,
+      "slg": 0.487,
+      "rbi": 45,
+      "sb": 1,
+      "games": 92,
+      "plateAppearances": 286
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.791,
+      "hr": 13,
+      "avg": 0.249,
+      "obp": 0.304,
+      "slg": 0.487,
+      "rbi": 45,
+      "sb": 1,
+      "games": 92,
+      "plateAppearances": 286
+    },
+    "scoringStats": {
+      "obp": 0.304,
+      "slg": 0.487,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 92,
+      "plateAppearances": 286,
+      "eraAdjustedOffense": 114.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1950s-niemabo01",
+    "playerId": "niemabo01",
+    "playerSlug": "niemabo01",
+    "name": "Bob Nieman",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1950s",
+    "featuredSeason": 1953,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "niemabo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.307,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.807,
+      "hr": 15,
+      "avg": 0.281,
+      "obp": 0.354,
+      "slg": 0.453,
+      "rbi": 69,
+      "sb": 0,
+      "games": 142,
+      "plateAppearances": 568
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.807,
+      "hr": 15,
+      "avg": 0.281,
+      "obp": 0.354,
+      "slg": 0.453,
+      "rbi": 69,
+      "sb": 0,
+      "games": 142,
+      "plateAppearances": 568
+    },
+    "scoringStats": {
+      "obp": 0.354,
+      "slg": 0.453,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 142,
+      "plateAppearances": 568,
+      "eraAdjustedOffense": 112.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1950s-tuttlbi01",
+    "playerId": "tuttlbi01",
+    "playerSlug": "tuttlbi01",
+    "name": "Bill Tuttle",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1950s",
+    "featuredSeason": 1955,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "tuttlbi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.912,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.757,
+      "hr": 14,
+      "avg": 0.279,
+      "obp": 0.358,
+      "slg": 0.4,
+      "rbi": 78,
+      "sb": 6,
+      "games": 154,
+      "plateAppearances": 698
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.757,
+      "hr": 14,
+      "avg": 0.279,
+      "obp": 0.358,
+      "slg": 0.4,
+      "rbi": 78,
+      "sb": 6,
+      "games": 154,
+      "plateAppearances": 698
+    },
+    "scoringStats": {
+      "obp": 0.358,
+      "slg": 0.4,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 154,
+      "plateAppearances": 698,
+      "eraAdjustedOffense": 105.8
     },
     "pitchingScoringStats": null
   },

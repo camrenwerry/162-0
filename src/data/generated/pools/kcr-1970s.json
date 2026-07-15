@@ -184,7 +184,8 @@
     "decade": "1970s",
     "featuredSeason": 1975,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -508,7 +509,8 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1011,7 +1013,8 @@
     "decade": "1970s",
     "featuredSeason": 1976,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1434,7 +1437,8 @@
     "decade": "1970s",
     "featuredSeason": 1975,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1497,6 +1501,351 @@
       "games": 93,
       "plateAppearances": 275,
       "eraAdjustedOffense": 125
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-1970s-hedlumi01",
+    "playerId": "hedlumi01",
+    "playerSlug": "hedlumi01",
+    "name": "Mike Hedlund",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "1970s",
+    "featuredSeason": 1971,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "hedlumi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.589,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.167,
+      "so": 76,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 205.7,
+      "games": 32,
+      "starts": 30,
+      "reliefAppearances": 2,
+      "k9": 3.33,
+      "bb9": 3.15
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.167,
+      "so": 76,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 205.7,
+      "games": 32,
+      "starts": 30,
+      "reliefAppearances": 2,
+      "k9": 3.33,
+      "bb9": 3.15
+    },
+    "scoringStats": {
+      "whip": 1.167,
+      "fip": null,
+      "inningsPitched": 205.7,
+      "strikeoutRate": 3.33,
+      "walkRate": 3.15,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 32,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 127.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-1970s-pattima01",
+    "playerId": "pattima01",
+    "playerSlug": "pattima01",
+    "name": "Marty Pattin",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "1970s",
+    "featuredSeason": 1976,
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "pattima01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.987,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.49,
+      "whip": 1.078,
+      "so": 65,
+      "wins": 8,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 141,
+      "games": 44,
+      "starts": 15,
+      "reliefAppearances": 29,
+      "k9": 4.15,
+      "bb9": 2.43
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.49,
+      "whip": 1.078,
+      "so": 65,
+      "wins": 8,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 141,
+      "games": 44,
+      "starts": 15,
+      "reliefAppearances": 29,
+      "k9": 4.15,
+      "bb9": 2.43
+    },
+    "scoringStats": {
+      "whip": 1.078,
+      "fip": null,
+      "inningsPitched": 141,
+      "strikeoutRate": 4.15,
+      "walkRate": 2.43,
+      "starts": 15,
+      "gamesStarted": 15,
+      "games": 44,
+      "reliefAppearances": 29,
+      "eraAdjustedPitching": 141.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-1970s-hraboal01",
+    "playerId": "hraboal01",
+    "playerSlug": "hraboal01",
+    "name": "Al Hrabosky",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "1970s",
+    "featuredSeason": 1978,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "hraboal01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.972,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.88,
+      "whip": 1.16,
+      "so": 60,
+      "wins": 8,
+      "saves": 20,
+      "sv": 20,
+      "inningsPitched": 75,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 7.2,
+      "bb9": 4.2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.88,
+      "whip": 1.16,
+      "so": 60,
+      "wins": 8,
+      "saves": 20,
+      "sv": 20,
+      "inningsPitched": 75,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 7.2,
+      "bb9": 4.2
+    },
+    "scoringStats": {
+      "whip": 1.16,
+      "fip": null,
+      "inningsPitched": 75,
+      "strikeoutRate": 7.2,
+      "walkRate": 4.2,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 58,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 130.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-1970s-mingost01",
+    "playerId": "mingost01",
+    "playerSlug": "mingost01",
+    "name": "Steve Mingori",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "1970s",
+    "featuredSeason": 1976,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "mingost01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.944,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.32,
+      "whip": 1.148,
+      "so": 38,
+      "wins": 5,
+      "saves": 10,
+      "sv": 10,
+      "inningsPitched": 85.3,
+      "games": 55,
+      "starts": 0,
+      "reliefAppearances": 55,
+      "k9": 4.01,
+      "bb9": 2.64
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.32,
+      "whip": 1.148,
+      "so": 38,
+      "wins": 5,
+      "saves": 10,
+      "sv": 10,
+      "inningsPitched": 85.3,
+      "games": 55,
+      "starts": 0,
+      "reliefAppearances": 55,
+      "k9": 4.01,
+      "bb9": 2.64
+    },
+    "scoringStats": {
+      "whip": 1.148,
+      "fip": null,
+      "inningsPitched": 85.3,
+      "strikeoutRate": 4.01,
+      "walkRate": 2.64,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 55,
+      "reliefAppearances": 55,
+      "eraAdjustedPitching": 151.6
     },
     "pitchingScoringStats": null
   },
@@ -2387,7 +2736,8 @@
     "featuredSeason": 1973,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

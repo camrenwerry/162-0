@@ -858,7 +858,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1528,7 +1529,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1761,6 +1763,264 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "kcr-2020s-schrejo01",
+    "playerId": "schrejo01",
+    "playerSlug": "schrejo01",
+    "name": "John Schreiber",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "schrejo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.533,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.8,
+      "whip": 1.188,
+      "so": 62,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 64,
+      "games": 74,
+      "starts": 0,
+      "reliefAppearances": 74,
+      "k9": 8.72,
+      "bb9": 2.67
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.8,
+      "whip": 1.188,
+      "so": 62,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 64,
+      "games": 74,
+      "starts": 0,
+      "reliefAppearances": 74,
+      "k9": 8.72,
+      "bb9": 2.67
+    },
+    "scoringStats": {
+      "whip": 1.188,
+      "fip": null,
+      "inningsPitched": 64,
+      "strikeoutRate": 8.72,
+      "walkRate": 2.67,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 74,
+      "reliefAppearances": 74,
+      "eraAdjustedPitching": 107.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-2020s-brentja01",
+    "playerId": "brentja01",
+    "playerSlug": "brentja01",
+    "name": "Jake Brentz",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "brentja01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.209,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.66,
+      "whip": 1.281,
+      "so": 76,
+      "wins": 5,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 64,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 10.69,
+      "bb9": 5.2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.66,
+      "whip": 1.281,
+      "so": 76,
+      "wins": 5,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 64,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 10.69,
+      "bb9": 5.2
+    },
+    "scoringStats": {
+      "whip": 1.281,
+      "fip": null,
+      "inningsPitched": 64,
+      "strikeoutRate": 10.69,
+      "walkRate": 5.2,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 118.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-2020s-longsa01",
+    "playerId": "longsa01",
+    "playerSlug": "longsa01",
+    "name": "Sam Long",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "longsa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.93,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.16,
+      "whip": 1.195,
+      "so": 44,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 42.7,
+      "games": 43,
+      "starts": 0,
+      "reliefAppearances": 43,
+      "k9": 9.28,
+      "bb9": 3.59
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.16,
+      "whip": 1.195,
+      "so": 44,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 42.7,
+      "games": 43,
+      "starts": 0,
+      "reliefAppearances": 43,
+      "k9": 9.28,
+      "bb9": 3.59
+    },
+    "scoringStats": {
+      "whip": 1.195,
+      "fip": null,
+      "inningsPitched": 42.7,
+      "strikeoutRate": 9.28,
+      "walkRate": 3.59,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 43,
+      "reliefAppearances": 43,
+      "eraAdjustedPitching": 127
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "kcr-2020s-fermifr01",
     "playerId": "fermifr01",
     "playerSlug": "fermifr01",
@@ -1854,7 +2114,8 @@
     "eligiblePositions": [
       "C",
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1933,7 +2194,8 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1996,6 +2258,92 @@
       "games": 100,
       "plateAppearances": 356,
       "eraAdjustedOffense": 105.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-2020s-minormi01",
+    "playerId": "minormi01",
+    "playerSlug": "minormi01",
+    "name": "Mike Minor",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "minormi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.392,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 5.05,
+      "whip": 1.242,
+      "so": 149,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 158.7,
+      "games": 28,
+      "starts": 28,
+      "reliefAppearances": 0,
+      "k9": 8.45,
+      "bb9": 2.33
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 5.05,
+      "whip": 1.242,
+      "so": 149,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 158.7,
+      "games": 28,
+      "starts": 28,
+      "reliefAppearances": 0,
+      "k9": 8.45,
+      "bb9": 2.33
+    },
+    "scoringStats": {
+      "whip": 1.242,
+      "fip": null,
+      "inningsPitched": 158.7,
+      "strikeoutRate": 8.45,
+      "walkRate": 2.33,
+      "starts": 28,
+      "gamesStarted": 28,
+      "games": 28,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 85.6
     },
     "pitchingScoringStats": null
   },
@@ -2492,7 +2840,8 @@
     "eligiblePositions": [
       "1B",
       "3B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2571,7 +2920,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

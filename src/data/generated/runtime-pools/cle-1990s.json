@@ -300,6 +300,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-1990s-plunker01",
+    "playerId": "plunker01",
+    "playerSlug": "plunker01",
+    "name": "Eric Plunk",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.43,
+      "whip": 1.159,
+      "so": 85,
+      "wins": 3,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 77.7,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 9.85,
+      "bb9": 3.94
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.159,
+      "fip": null,
+      "inningsPitched": 77.7,
+      "strikeoutRate": 9.85,
+      "walkRate": 3.94,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 56,
+      "reliefAppearances": 56,
+      "eraAdjustedPitching": 205.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1990s-jonesdo01",
+    "playerId": "jonesdo01",
+    "playerSlug": "jonesdo01",
+    "name": "Doug Jones",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1990s",
+    "featuredSeason": 1990,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.043,
+      "so": 55,
+      "wins": 5,
+      "saves": 43,
+      "sv": 43,
+      "inningsPitched": 84.3,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 5.87,
+      "bb9": 2.35
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.043,
+      "fip": null,
+      "inningsPitched": 84.3,
+      "strikeoutRate": 5.87,
+      "walkRate": 2.35,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 66,
+      "reliefAppearances": 66,
+      "eraAdjustedPitching": 152.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-1990s-justida01",
     "playerId": "justida01",
     "playerSlug": "justida01",
@@ -312,7 +416,8 @@
     "decade": "1990s",
     "featuredSeason": 1997,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -444,6 +549,110 @@
       "games": 159,
       "plateAppearances": 694,
       "eraAdjustedOffense": 121.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1990s-tavarju01",
+    "playerId": "tavarju01",
+    "playerSlug": "tavarju01",
+    "name": "Julian Tavarez",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1990s",
+    "featuredSeason": 1995,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.44,
+      "whip": 1.141,
+      "so": 68,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 85,
+      "games": 57,
+      "starts": 0,
+      "reliefAppearances": 57,
+      "k9": 7.2,
+      "bb9": 2.22
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.141,
+      "fip": null,
+      "inningsPitched": 85,
+      "strikeoutRate": 7.2,
+      "walkRate": 2.22,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 57,
+      "reliefAppearances": 57,
+      "eraAdjustedPitching": 193.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-1990s-olinst01",
+    "playerId": "olinst01",
+    "playerSlug": "olinst01",
+    "name": "Steve Olin",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Indians",
+    "historicalTeamName": "Cleveland Indians",
+    "team": "CLE",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 1.211,
+      "so": 47,
+      "wins": 8,
+      "saves": 29,
+      "sv": 29,
+      "inningsPitched": 88.3,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 4.79,
+      "bb9": 2.75
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.211,
+      "fip": null,
+      "inningsPitched": 88.3,
+      "strikeoutRate": 4.79,
+      "walkRate": 2.75,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 168.1
     },
     "pitchingScoringStats": null
   },
@@ -612,7 +821,8 @@
     "decade": "1990s",
     "featuredSeason": 1996,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -956,7 +1166,8 @@
     "decade": "1990s",
     "featuredSeason": 1995,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1005,7 +1216,8 @@
     "featuredSeason": 1996,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1101,7 +1313,8 @@
     "decade": "1990s",
     "featuredSeason": 1995,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1198,7 +1411,8 @@
     "featuredSeason": 1990,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

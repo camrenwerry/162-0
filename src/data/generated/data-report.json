@@ -19,12 +19,12 @@
       "outfieldSplits": 45147
     },
     "franchises": 93,
-    "candidateSeasons": 62651,
-    "featuredCards": 28831,
+    "candidateSeasons": 63104,
+    "featuredCards": 29014,
     "attemptedPools": 334,
     "validPools": 261,
     "excludedPools": 73,
-    "cards": 8331,
+    "cards": 9335,
     "warnings": 496
   },
   "configuration": {
@@ -34,8 +34,9 @@
     },
     "pool": {
       "minimumCards": 24,
-      "targetCards": 32,
-      "maximumCards": 40
+      "targetCards": 36,
+      "maximumCards": 40,
+      "minimumExpansionScore": 0.3
     },
     "eligibility": {
       "minimumHitterPlateAppearances": 100,
@@ -1643,7 +1644,7 @@
     },
     {
       "id": "ana-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 109,
       "errors": [],
       "warnings": [],
@@ -1656,15 +1657,15 @@
         "LF": 4,
         "CF": 6,
         "RF": 4,
-        "SP": 8,
-        "RP": 7
+        "SP": 12,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "ana-1970s",
-      "cards": 32,
-      "candidateCards": 126,
+      "cards": 36,
+      "candidateCards": 128,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -1673,18 +1674,18 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 3,
+        "LF": 4,
         "CF": 3,
-        "RF": 4,
-        "SP": 8,
-        "RP": 4
+        "RF": 5,
+        "SP": 9,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "ana-1980s",
-      "cards": 32,
-      "candidateCards": 107,
+      "cards": 36,
+      "candidateCards": 108,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -1696,15 +1697,15 @@
         "LF": 5,
         "CF": 3,
         "RF": 5,
-        "SP": 5,
-        "RP": 7
+        "SP": 7,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "ana-1990s",
-      "cards": 32,
-      "candidateCards": 130,
+      "cards": 36,
+      "candidateCards": 134,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -1717,14 +1718,14 @@
         "CF": 4,
         "RF": 3,
         "SP": 5,
-        "RP": 6
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "ana-2000s",
-      "cards": 32,
-      "candidateCards": 95,
+      "cards": 36,
+      "candidateCards": 96,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -1736,14 +1737,14 @@
         "LF": 3,
         "CF": 4,
         "RF": 4,
-        "SP": 5,
-        "RP": 9
+        "SP": 8,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "ana-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 149,
       "errors": [],
       "warnings": [],
@@ -1756,15 +1757,15 @@
         "LF": 7,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 10
+        "SP": 6,
+        "RP": 13
       },
       "rosterCompletable": true
     },
     {
       "id": "ana-2020s",
-      "cards": 32,
-      "candidateCards": 91,
+      "cards": 36,
+      "candidateCards": 93,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -1776,8 +1777,8 @@
         "LF": 3,
         "CF": 4,
         "RF": 6,
-        "SP": 5,
-        "RP": 10
+        "SP": 7,
+        "RP": 12
       },
       "rosterCompletable": true
     },
@@ -1805,13 +1806,13 @@
     },
     {
       "id": "ari-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 135,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 6,
+        "1B": 7,
         "2B": 3,
         "3B": 4,
         "SS": 3,
@@ -1819,34 +1820,34 @@
         "CF": 3,
         "RF": 5,
         "SP": 5,
-        "RP": 6
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "ari-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 145,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
         "1B": 3,
-        "2B": 5,
+        "2B": 6,
         "3B": 3,
         "SS": 3,
         "LF": 3,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
+        "SP": 9,
         "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "ari-2020s",
-      "cards": 32,
-      "candidateCards": 81,
+      "cards": 36,
+      "candidateCards": 84,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -1855,17 +1856,17 @@
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
-        "CF": 3,
+        "LF": 6,
+        "CF": 4,
         "RF": 7,
         "SP": 5,
-        "RP": 10
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 97,
       "errors": [],
       "warnings": [],
@@ -1876,16 +1877,16 @@
         "3B": 4,
         "SS": 3,
         "LF": 4,
-        "CF": 4,
+        "CF": 5,
         "RF": 4,
-        "SP": 9,
-        "RP": 3
+        "SP": 12,
+        "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 84,
       "errors": [],
       "warnings": [],
@@ -1895,17 +1896,17 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 4,
         "RF": 4,
-        "SP": 14,
+        "SP": 17,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 106,
       "errors": [],
       "warnings": [],
@@ -1915,17 +1916,17 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 6,
-        "CF": 3,
+        "LF": 7,
+        "CF": 4,
         "RF": 3,
-        "SP": 10,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 75,
       "errors": [],
       "warnings": [],
@@ -1938,34 +1939,34 @@
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 9,
-        "RP": 3
-      },
-      "rosterCompletable": true
-    },
-    {
-      "id": "atl-1960s",
-      "cards": 32,
-      "candidateCards": 97,
-      "errors": [],
-      "warnings": [],
-      "coverage": {
-        "C": 3,
-        "1B": 4,
-        "2B": 5,
-        "3B": 3,
-        "SS": 3,
-        "LF": 6,
-        "CF": 6,
-        "RF": 3,
-        "SP": 10,
+        "SP": 11,
         "RP": 5
       },
       "rosterCompletable": true
     },
     {
+      "id": "atl-1960s",
+      "cards": 36,
+      "candidateCards": 97,
+      "errors": [],
+      "warnings": [],
+      "coverage": {
+        "C": 3,
+        "1B": 5,
+        "2B": 5,
+        "3B": 3,
+        "SS": 3,
+        "LF": 8,
+        "CF": 7,
+        "RF": 3,
+        "SP": 11,
+        "RP": 6
+      },
+      "rosterCompletable": true
+    },
+    {
       "id": "atl-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 113,
       "errors": [],
       "warnings": [],
@@ -1976,16 +1977,16 @@
         "3B": 4,
         "SS": 3,
         "LF": 6,
-        "CF": 3,
-        "RF": 5,
-        "SP": 6,
-        "RP": 3
+        "CF": 4,
+        "RF": 6,
+        "SP": 7,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 97,
       "errors": [],
       "warnings": [],
@@ -1995,17 +1996,17 @@
         "2B": 4,
         "3B": 4,
         "SS": 3,
-        "LF": 6,
+        "LF": 7,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 7
+        "SP": 6,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 97,
       "errors": [],
       "warnings": [],
@@ -2018,14 +2019,14 @@
         "LF": 4,
         "CF": 5,
         "RF": 3,
-        "SP": 5,
-        "RP": 6
+        "SP": 6,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 141,
       "errors": [],
       "warnings": [],
@@ -2038,14 +2039,14 @@
         "LF": 3,
         "CF": 3,
         "RF": 6,
-        "SP": 5,
-        "RP": 5
+        "SP": 7,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 149,
       "errors": [],
       "warnings": [],
@@ -2058,14 +2059,14 @@
         "LF": 6,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 9
+        "SP": 7,
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "atl-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 77,
       "errors": [],
       "warnings": [],
@@ -2079,13 +2080,13 @@
         "CF": 3,
         "RF": 5,
         "SP": 5,
-        "RP": 6
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 80,
       "errors": [],
       "warnings": [],
@@ -2098,14 +2099,14 @@
         "LF": 3,
         "CF": 6,
         "RF": 6,
-        "SP": 7,
+        "SP": 11,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 107,
       "errors": [],
       "warnings": [],
@@ -2115,17 +2116,17 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 7,
-        "CF": 7,
-        "RF": 6,
-        "SP": 7,
+        "LF": 10,
+        "CF": 9,
+        "RF": 7,
+        "SP": 8,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 97,
       "errors": [],
       "warnings": [],
@@ -2135,17 +2136,17 @@
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 7,
-        "CF": 5,
+        "LF": 8,
+        "CF": 7,
         "RF": 7,
-        "SP": 5,
+        "SP": 7,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 137,
       "errors": [],
       "warnings": [],
@@ -2155,17 +2156,17 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 5,
-        "CF": 4,
-        "RF": 7,
-        "SP": 10,
+        "LF": 6,
+        "CF": 5,
+        "RF": 8,
+        "SP": 13,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 82,
       "errors": [],
       "warnings": [
@@ -2180,15 +2181,15 @@
         "LF": 6,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
+        "SP": 10,
         "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-1970s",
-      "cards": 32,
-      "candidateCards": 77,
+      "cards": 36,
+      "candidateCards": 78,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2197,18 +2198,18 @@
         "2B": 5,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 3,
         "RF": 5,
-        "SP": 7,
-        "RP": 5
+        "SP": 9,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-1980s",
-      "cards": 32,
-      "candidateCards": 100,
+      "cards": 36,
+      "candidateCards": 102,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2217,18 +2218,18 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 3,
         "RF": 5,
-        "SP": 7,
-        "RP": 5
+        "SP": 9,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-1990s",
-      "cards": 32,
-      "candidateCards": 120,
+      "cards": 36,
+      "candidateCards": 122,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2241,19 +2242,19 @@
         "CF": 4,
         "RF": 6,
         "SP": 5,
-        "RP": 6
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-2000s",
-      "cards": 32,
-      "candidateCards": 134,
+      "cards": 36,
+      "candidateCards": 135,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 4,
-        "1B": 5,
+        "1B": 7,
         "2B": 3,
         "3B": 3,
         "SS": 3,
@@ -2261,14 +2262,14 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 8
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-2010s",
-      "cards": 32,
-      "candidateCards": 130,
+      "cards": 36,
+      "candidateCards": 135,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2281,14 +2282,14 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 7
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "bal-2020s",
-      "cards": 32,
-      "candidateCards": 87,
+      "cards": 36,
+      "candidateCards": 88,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2300,8 +2301,8 @@
         "LF": 4,
         "CF": 3,
         "RF": 6,
-        "SP": 6,
-        "RP": 10
+        "SP": 9,
+        "RP": 11
       },
       "rosterCompletable": true
     },
@@ -2583,7 +2584,7 @@
     },
     {
       "id": "bos-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 109,
       "errors": [],
       "warnings": [],
@@ -2594,48 +2595,48 @@
         "3B": 4,
         "SS": 3,
         "LF": 3,
-        "CF": 4,
-        "RF": 3,
-        "SP": 10,
+        "CF": 5,
+        "RF": 4,
+        "SP": 13,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "bos-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 101,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
         "1B": 4,
-        "2B": 4,
-        "3B": 4,
+        "2B": 5,
+        "3B": 5,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 6,
-        "RF": 7,
-        "SP": 8,
+        "RF": 8,
+        "SP": 10,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "bos-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 93,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
-        "1B": 4,
+        "C": 4,
+        "1B": 6,
         "2B": 3,
         "3B": 4,
         "SS": 5,
-        "LF": 3,
-        "CF": 4,
-        "RF": 5,
+        "LF": 4,
+        "CF": 5,
+        "RF": 7,
         "SP": 9,
         "RP": 3
       },
@@ -2663,28 +2664,28 @@
     },
     {
       "id": "bos-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 106,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 5,
+        "1B": 7,
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
-        "CF": 3,
+        "LF": 6,
+        "CF": 4,
         "RF": 3,
         "SP": 6,
-        "RP": 4
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "bos-1970s",
-      "cards": 32,
-      "candidateCards": 90,
+      "cards": 36,
+      "candidateCards": 92,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2693,18 +2694,18 @@
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 3,
-        "CF": 4,
+        "LF": 4,
+        "CF": 5,
         "RF": 5,
-        "SP": 7,
-        "RP": 4
+        "SP": 8,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "bos-1980s",
-      "cards": 32,
-      "candidateCards": 86,
+      "cards": 36,
+      "candidateCards": 88,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2716,20 +2717,20 @@
         "LF": 5,
         "CF": 5,
         "RF": 3,
-        "SP": 5,
-        "RP": 5
+        "SP": 6,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "bos-1990s",
-      "cards": 32,
-      "candidateCards": 122,
+      "cards": 36,
+      "candidateCards": 126,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 5,
+        "1B": 6,
         "2B": 3,
         "3B": 3,
         "SS": 3,
@@ -2737,14 +2738,14 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 8
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "bos-2000s",
-      "cards": 32,
-      "candidateCards": 123,
+      "cards": 36,
+      "candidateCards": 124,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2756,15 +2757,15 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 8
+        "SP": 6,
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "bos-2010s",
-      "cards": 32,
-      "candidateCards": 134,
+      "cards": 36,
+      "candidateCards": 135,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -2777,13 +2778,13 @@
         "CF": 5,
         "RF": 3,
         "SP": 5,
-        "RP": 7
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "bos-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 92,
       "errors": [],
       "warnings": [],
@@ -2795,9 +2796,9 @@
         "SS": 3,
         "LF": 4,
         "CF": 4,
-        "RF": 4,
-        "SP": 5,
-        "RP": 8
+        "RF": 5,
+        "SP": 7,
+        "RP": 9
       },
       "rosterCompletable": true
     },
@@ -2833,7 +2834,7 @@
     },
     {
       "id": "cag-1920s",
-      "cards": 32,
+      "cards": 33,
       "candidateCards": 46,
       "errors": [
         "Pool cannot complete the 14-slot roster"
@@ -2851,7 +2852,7 @@
         "LF": 3,
         "CF": 5,
         "RF": 3,
-        "SP": 14,
+        "SP": 15,
         "RP": 1
       },
       "rosterCompletable": false
@@ -3047,7 +3048,7 @@
     },
     {
       "id": "chc-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 89,
       "errors": [],
       "warnings": [],
@@ -3057,17 +3058,17 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 5,
-        "CF": 5,
-        "RF": 3,
-        "SP": 9,
+        "LF": 7,
+        "CF": 6,
+        "RF": 4,
+        "SP": 11,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 78,
       "errors": [],
       "warnings": [],
@@ -3077,37 +3078,37 @@
         "2B": 3,
         "3B": 3,
         "SS": 4,
-        "LF": 4,
+        "LF": 5,
         "CF": 4,
         "RF": 5,
-        "SP": 9,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 99,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 4,
+        "C": 5,
         "1B": 3,
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 6,
+        "LF": 8,
         "CF": 5,
         "RF": 4,
-        "SP": 11,
-        "RP": 3
+        "SP": 12,
+        "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 115,
       "errors": [],
       "warnings": [],
@@ -3117,39 +3118,39 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 3,
-        "RF": 5,
-        "SP": 6,
-        "RP": 4
+        "RF": 6,
+        "SP": 8,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 96,
       "errors": [],
       "warnings": [
         "3B: 2 choices; target is 3"
       ],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 3,
         "2B": 3,
         "3B": 2,
         "SS": 4,
-        "LF": 4,
-        "CF": 4,
+        "LF": 5,
+        "CF": 5,
         "RF": 4,
-        "SP": 9,
-        "RP": 5
+        "SP": 10,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 103,
       "errors": [],
       "warnings": [],
@@ -3160,36 +3161,36 @@
         "3B": 4,
         "SS": 3,
         "LF": 3,
-        "CF": 5,
+        "CF": 7,
         "RF": 4,
-        "SP": 7,
-        "RP": 3
+        "SP": 8,
+        "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 122,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 6,
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 6,
+        "LF": 8,
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 5
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 129,
       "errors": [],
       "warnings": [
@@ -3201,37 +3202,37 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 4,
         "RF": 3,
         "SP": 7,
-        "RP": 6
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 145,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
         "1B": 3,
-        "2B": 3,
+        "2B": 4,
         "3B": 3,
         "SS": 3,
         "LF": 3,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 10
+        "SP": 7,
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 139,
       "errors": [],
       "warnings": [],
@@ -3244,15 +3245,15 @@
         "LF": 6,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 11
+        "SP": 7,
+        "RP": 13
       },
       "rosterCompletable": true
     },
     {
       "id": "chc-2020s",
-      "cards": 32,
-      "candidateCards": 96,
+      "cards": 36,
+      "candidateCards": 97,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3264,8 +3265,8 @@
         "LF": 3,
         "CF": 4,
         "RF": 3,
-        "SP": 5,
-        "RP": 10
+        "SP": 7,
+        "RP": 12
       },
       "rosterCompletable": true
     },
@@ -3305,47 +3306,47 @@
     },
     {
       "id": "chw-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 74,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 3,
         "2B": 4,
         "3B": 3,
         "SS": 3,
         "LF": 4,
-        "CF": 5,
-        "RF": 5,
-        "SP": 11,
+        "CF": 7,
+        "RF": 6,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 94,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 3,
         "3B": 3,
         "SS": 3,
         "LF": 6,
-        "CF": 3,
-        "RF": 8,
-        "SP": 9,
+        "CF": 4,
+        "RF": 9,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 95,
       "errors": [],
       "warnings": [
@@ -3357,17 +3358,17 @@
         "2B": 3,
         "3B": 3,
         "SS": 2,
-        "LF": 6,
-        "CF": 3,
+        "LF": 8,
+        "CF": 4,
         "RF": 5,
-        "SP": 11,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 107,
       "errors": [],
       "warnings": [
@@ -3379,17 +3380,17 @@
         "2B": 2,
         "3B": 4,
         "SS": 3,
-        "LF": 3,
+        "LF": 5,
         "CF": 4,
-        "RF": 4,
-        "SP": 9,
-        "RP": 6
+        "RF": 5,
+        "SP": 10,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 100,
       "errors": [],
       "warnings": [],
@@ -3399,38 +3400,38 @@
         "2B": 4,
         "3B": 5,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 3,
         "RF": 4,
-        "SP": 6,
-        "RP": 6
+        "SP": 8,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-1970s",
-      "cards": 32,
-      "candidateCards": 120,
+      "cards": 36,
+      "candidateCards": 121,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 3,
         "2B": 4,
         "3B": 4,
         "SS": 3,
-        "LF": 3,
-        "CF": 3,
-        "RF": 3,
-        "SP": 7,
+        "LF": 5,
+        "CF": 4,
+        "RF": 5,
+        "SP": 8,
         "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-1980s",
-      "cards": 32,
-      "candidateCards": 115,
+      "cards": 36,
+      "candidateCards": 117,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3442,35 +3443,35 @@
         "LF": 6,
         "CF": 4,
         "RF": 3,
-        "SP": 6,
-        "RP": 5
+        "SP": 7,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-1990s",
-      "cards": 32,
-      "candidateCards": 113,
+      "cards": 36,
+      "candidateCards": 115,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 3,
         "3B": 3,
         "SS": 3,
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 10
+        "SP": 6,
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-2000s",
-      "cards": 32,
-      "candidateCards": 119,
+      "cards": 36,
+      "candidateCards": 121,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3482,15 +3483,15 @@
         "LF": 3,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
+        "SP": 8,
         "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-2010s",
-      "cards": 32,
-      "candidateCards": 135,
+      "cards": 36,
+      "candidateCards": 136,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3503,14 +3504,14 @@
         "CF": 4,
         "RF": 6,
         "SP": 5,
-        "RP": 6
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "chw-2020s",
-      "cards": 32,
-      "candidateCards": 101,
+      "cards": 36,
+      "candidateCards": 103,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3522,14 +3523,14 @@
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 8,
-        "RP": 6
+        "SP": 10,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 72,
       "errors": [],
       "warnings": [],
@@ -3540,36 +3541,36 @@
         "3B": 3,
         "SS": 3,
         "LF": 4,
-        "CF": 3,
+        "CF": 4,
         "RF": 3,
-        "SP": 11,
+        "SP": 14,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 107,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 6,
         "3B": 4,
         "SS": 3,
-        "LF": 3,
+        "LF": 5,
         "CF": 3,
-        "RF": 4,
-        "SP": 10,
-        "RP": 5
+        "RF": 6,
+        "SP": 11,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 98,
       "errors": [],
       "warnings": [],
@@ -3579,57 +3580,57 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 3,
         "RF": 5,
-        "SP": 9,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 92,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
-        "1B": 3,
+        "C": 4,
+        "1B": 4,
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 3,
-        "RF": 5,
-        "SP": 7,
-        "RP": 5
-      },
-      "rosterCompletable": true
-    },
-    {
-      "id": "cin-1960s",
-      "cards": 32,
-      "candidateCards": 94,
-      "errors": [],
-      "warnings": [],
-      "coverage": {
-        "C": 3,
-        "1B": 3,
-        "2B": 4,
-        "3B": 5,
-        "SS": 3,
-        "LF": 4,
-        "CF": 4,
         "RF": 6,
-        "SP": 6,
+        "SP": 8,
         "RP": 6
       },
       "rosterCompletable": true
     },
     {
+      "id": "cin-1960s",
+      "cards": 36,
+      "candidateCards": 94,
+      "errors": [],
+      "warnings": [],
+      "coverage": {
+        "C": 4,
+        "1B": 3,
+        "2B": 4,
+        "3B": 5,
+        "SS": 3,
+        "LF": 5,
+        "CF": 4,
+        "RF": 7,
+        "SP": 7,
+        "RP": 7
+      },
+      "rosterCompletable": true
+    },
+    {
       "id": "cin-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 80,
       "errors": [],
       "warnings": [],
@@ -3642,14 +3643,14 @@
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 6,
-        "RP": 7
+        "SP": 9,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 108,
       "errors": [],
       "warnings": [],
@@ -3662,14 +3663,14 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
-        "RP": 6
+        "SP": 7,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 130,
       "errors": [],
       "warnings": [],
@@ -3679,17 +3680,17 @@
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 7,
-        "CF": 4,
+        "LF": 8,
+        "CF": 5,
         "RF": 5,
         "SP": 5,
-        "RP": 7
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 144,
       "errors": [],
       "warnings": [],
@@ -3699,17 +3700,17 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 8,
+        "LF": 9,
         "CF": 5,
-        "RF": 7,
+        "RF": 8,
         "SP": 5,
-        "RP": 7
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 121,
       "errors": [],
       "warnings": [],
@@ -3723,14 +3724,14 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 7
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "cin-2020s",
-      "cards": 32,
-      "candidateCards": 93,
+      "cards": 36,
+      "candidateCards": 94,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3742,14 +3743,14 @@
         "LF": 6,
         "CF": 3,
         "RF": 4,
-        "SP": 8,
-        "RP": 8
+        "SP": 9,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 73,
       "errors": [],
       "warnings": [],
@@ -3761,35 +3762,35 @@
         "SS": 3,
         "LF": 3,
         "CF": 6,
-        "RF": 5,
-        "SP": 7,
+        "RF": 6,
+        "SP": 10,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 78,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
-        "2B": 3,
+        "1B": 4,
+        "2B": 4,
         "3B": 3,
-        "SS": 3,
-        "LF": 3,
+        "SS": 4,
+        "LF": 4,
         "CF": 3,
-        "RF": 6,
-        "SP": 8,
+        "RF": 7,
+        "SP": 10,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 90,
       "errors": [],
       "warnings": [],
@@ -3799,58 +3800,58 @@
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 3,
-        "CF": 3,
-        "RF": 6,
-        "SP": 8,
+        "LF": 4,
+        "CF": 4,
+        "RF": 7,
+        "SP": 11,
         "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 92,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 5,
+        "1B": 6,
         "2B": 3,
-        "3B": 5,
+        "3B": 6,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 4,
         "RF": 3,
         "SP": 8,
-        "RP": 4
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 106,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 6,
         "2B": 5,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
-        "CF": 3,
-        "RF": 6,
-        "SP": 10,
+        "LF": 6,
+        "CF": 4,
+        "RF": 8,
+        "SP": 11,
         "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-1970s",
-      "cards": 32,
-      "candidateCards": 127,
+      "cards": 36,
+      "candidateCards": 131,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3862,35 +3863,35 @@
         "LF": 10,
         "CF": 3,
         "RF": 6,
-        "SP": 7,
+        "SP": 9,
         "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-1980s",
-      "cards": 32,
-      "candidateCards": 116,
+      "cards": 36,
+      "candidateCards": 119,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 3,
-        "RF": 5,
+        "RF": 6,
         "SP": 7,
-        "RP": 6
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-1990s",
-      "cards": 32,
-      "candidateCards": 117,
+      "cards": 36,
+      "candidateCards": 118,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3903,13 +3904,13 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 3
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 136,
       "errors": [],
       "warnings": [],
@@ -3923,14 +3924,14 @@
         "CF": 3,
         "RF": 5,
         "SP": 5,
-        "RP": 6
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-2010s",
-      "cards": 32,
-      "candidateCards": 127,
+      "cards": 36,
+      "candidateCards": 130,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -3942,14 +3943,14 @@
         "LF": 3,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 9
+        "SP": 6,
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "cle-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 83,
       "errors": [],
       "warnings": [],
@@ -3962,8 +3963,8 @@
         "LF": 3,
         "CF": 4,
         "RF": 6,
-        "SP": 5,
-        "RP": 8
+        "SP": 6,
+        "RP": 11
       },
       "rosterCompletable": true
     },
@@ -4032,19 +4033,19 @@
     },
     {
       "id": "col-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 76,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
-        "2B": 4,
+        "1B": 5,
+        "2B": 6,
         "3B": 4,
-        "SS": 3,
-        "LF": 6,
-        "CF": 4,
-        "RF": 3,
+        "SS": 4,
+        "LF": 7,
+        "CF": 5,
+        "RF": 4,
         "SP": 5,
         "RP": 7
       },
@@ -4052,7 +4053,7 @@
     },
     {
       "id": "col-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 150,
       "errors": [],
       "warnings": [],
@@ -4062,17 +4063,17 @@
         "2B": 4,
         "3B": 6,
         "SS": 3,
-        "LF": 5,
-        "CF": 3,
-        "RF": 4,
+        "LF": 6,
+        "CF": 4,
+        "RF": 5,
         "SP": 5,
-        "RP": 6
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "col-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 131,
       "errors": [],
       "warnings": [],
@@ -4083,17 +4084,17 @@
         "3B": 4,
         "SS": 3,
         "LF": 4,
-        "CF": 5,
+        "CF": 6,
         "RF": 4,
         "SP": 5,
-        "RP": 8
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "col-2020s",
-      "cards": 32,
-      "candidateCards": 92,
+      "cards": 36,
+      "candidateCards": 93,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -4104,9 +4105,9 @@
         "SS": 4,
         "LF": 6,
         "CF": 4,
-        "RF": 5,
-        "SP": 5,
-        "RP": 8
+        "RF": 6,
+        "SP": 6,
+        "RP": 10
       },
       "rosterCompletable": true
     },
@@ -4333,7 +4334,7 @@
     },
     {
       "id": "det-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 76,
       "errors": [],
       "warnings": [],
@@ -4343,17 +4344,17 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 6,
+        "LF": 7,
         "CF": 6,
         "RF": 3,
-        "SP": 8,
+        "SP": 11,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "det-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 81,
       "errors": [],
       "warnings": [],
@@ -4363,17 +4364,17 @@
         "2B": 3,
         "3B": 4,
         "SS": 4,
-        "LF": 3,
+        "LF": 4,
         "CF": 6,
         "RF": 3,
-        "SP": 9,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "det-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 79,
       "errors": [],
       "warnings": [],
@@ -4385,15 +4386,15 @@
         "SS": 3,
         "LF": 3,
         "CF": 4,
-        "RF": 4,
-        "SP": 7,
+        "RF": 5,
+        "SP": 10,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "det-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 101,
       "errors": [],
       "warnings": [],
@@ -4401,11 +4402,11 @@
         "C": 3,
         "1B": 3,
         "2B": 3,
-        "3B": 4,
+        "3B": 5,
         "SS": 3,
-        "LF": 3,
-        "CF": 4,
-        "RF": 3,
+        "LF": 6,
+        "CF": 5,
+        "RF": 5,
         "SP": 9,
         "RP": 3
       },
@@ -4413,32 +4414,32 @@
     },
     {
       "id": "det-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 85,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 3,
         "3B": 5,
         "SS": 4,
         "LF": 5,
         "CF": 4,
         "RF": 5,
-        "SP": 8,
-        "RP": 5
+        "SP": 9,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "det-1970s",
-      "cards": 32,
-      "candidateCards": 106,
+      "cards": 36,
+      "candidateCards": 107,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 3,
         "2B": 3,
         "3B": 3,
@@ -4446,15 +4447,15 @@
         "LF": 7,
         "CF": 3,
         "RF": 5,
-        "SP": 6,
-        "RP": 4
+        "SP": 8,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "det-1980s",
-      "cards": 32,
-      "candidateCards": 98,
+      "cards": 36,
+      "candidateCards": 99,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -4463,57 +4464,57 @@
         "2B": 3,
         "3B": 6,
         "SS": 3,
-        "LF": 7,
-        "CF": 3,
-        "RF": 4,
-        "SP": 8,
-        "RP": 6
+        "LF": 8,
+        "CF": 5,
+        "RF": 5,
+        "SP": 9,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "det-1990s",
-      "cards": 32,
-      "candidateCards": 144,
+      "cards": 36,
+      "candidateCards": 150,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
         "1B": 3,
         "2B": 4,
-        "3B": 5,
+        "3B": 6,
         "SS": 3,
-        "LF": 3,
+        "LF": 6,
         "CF": 5,
-        "RF": 6,
+        "RF": 7,
         "SP": 5,
-        "RP": 6
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "det-2000s",
-      "cards": 32,
-      "candidateCards": 127,
+      "cards": 36,
+      "candidateCards": 130,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 3,
         "3B": 5,
         "SS": 4,
         "LF": 5,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
-        "RP": 9
+        "SP": 8,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "det-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 125,
       "errors": [],
       "warnings": [],
@@ -4526,14 +4527,14 @@
         "LF": 5,
         "CF": 3,
         "RF": 5,
-        "SP": 5,
-        "RP": 5
+        "SP": 6,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "det-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 84,
       "errors": [],
       "warnings": [],
@@ -4543,11 +4544,11 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 6,
+        "LF": 7,
         "CF": 4,
-        "RF": 4,
-        "SP": 6,
-        "RP": 9
+        "RF": 5,
+        "SP": 7,
+        "RP": 11
       },
       "rosterCompletable": true
     },
@@ -4675,7 +4676,7 @@
     },
     {
       "id": "fla-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 102,
       "errors": [],
       "warnings": [],
@@ -4685,17 +4686,17 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 3,
-        "RF": 3,
-        "SP": 5,
-        "RP": 8
+        "RF": 4,
+        "SP": 6,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "fla-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 126,
       "errors": [],
       "warnings": [],
@@ -4708,14 +4709,14 @@
         "LF": 3,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 7
+        "SP": 8,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "fla-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 146,
       "errors": [],
       "warnings": [],
@@ -4729,13 +4730,13 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 11
+        "RP": 15
       },
       "rosterCompletable": true
     },
     {
       "id": "fla-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 99,
       "errors": [],
       "warnings": [],
@@ -4748,8 +4749,8 @@
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 6,
-        "RP": 9
+        "SP": 7,
+        "RP": 12
       },
       "rosterCompletable": true
     },
@@ -4926,7 +4927,7 @@
     },
     {
       "id": "hou-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 102,
       "errors": [],
       "warnings": [],
@@ -4939,14 +4940,14 @@
         "LF": 5,
         "CF": 3,
         "RF": 4,
-        "SP": 10,
-        "RP": 4
+        "SP": 13,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "hou-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 90,
       "errors": [],
       "warnings": [],
@@ -4959,14 +4960,14 @@
         "LF": 3,
         "CF": 3,
         "RF": 7,
-        "SP": 8,
-        "RP": 4
+        "SP": 10,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "hou-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 76,
       "errors": [],
       "warnings": [
@@ -4981,14 +4982,14 @@
         "LF": 2,
         "CF": 5,
         "RF": 3,
-        "SP": 6,
-        "RP": 6
+        "SP": 8,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "hou-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 113,
       "errors": [],
       "warnings": [],
@@ -5001,14 +5002,14 @@
         "LF": 5,
         "CF": 4,
         "RF": 5,
-        "SP": 6,
-        "RP": 7
+        "SP": 8,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "hou-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 116,
       "errors": [],
       "warnings": [],
@@ -5019,16 +5020,16 @@
         "3B": 5,
         "SS": 3,
         "LF": 7,
-        "CF": 3,
-        "RF": 3,
+        "CF": 4,
+        "RF": 4,
         "SP": 5,
-        "RP": 7
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "hou-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 145,
       "errors": [],
       "warnings": [],
@@ -5041,14 +5042,14 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 7,
-        "RP": 12
+        "SP": 8,
+        "RP": 15
       },
       "rosterCompletable": true
     },
     {
       "id": "hou-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 71,
       "errors": [],
       "warnings": [],
@@ -5061,8 +5062,8 @@
         "LF": 4,
         "CF": 4,
         "RF": 3,
-        "SP": 5,
-        "RP": 8
+        "SP": 7,
+        "RP": 10
       },
       "rosterCompletable": true
     },
@@ -5270,8 +5271,8 @@
     },
     {
       "id": "kcr-1970s",
-      "cards": 32,
-      "candidateCards": 88,
+      "cards": 36,
+      "candidateCards": 91,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5283,15 +5284,15 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 7,
-        "RP": 5
+        "SP": 9,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "kcr-1980s",
-      "cards": 32,
-      "candidateCards": 92,
+      "cards": 36,
+      "candidateCards": 93,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5300,58 +5301,58 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 3,
-        "RF": 3,
+        "RF": 5,
         "SP": 7,
-        "RP": 6
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "kcr-1990s",
-      "cards": 32,
-      "candidateCards": 128,
+      "cards": 36,
+      "candidateCards": 129,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 3,
         "3B": 6,
         "SS": 3,
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
+        "SP": 7,
         "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "kcr-2000s",
-      "cards": 32,
-      "candidateCards": 138,
+      "cards": 36,
+      "candidateCards": 139,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 4,
         "3B": 4,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 5,
-        "RF": 6,
-        "SP": 5,
-        "RP": 8
+        "RF": 7,
+        "SP": 6,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "kcr-2010s",
-      "cards": 32,
-      "candidateCards": 131,
+      "cards": 36,
+      "candidateCards": 132,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5364,13 +5365,13 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 8
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "kcr-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 86,
       "errors": [],
       "warnings": [],
@@ -5383,34 +5384,34 @@
         "LF": 3,
         "CF": 3,
         "RF": 7,
-        "SP": 7,
-        "RP": 7
+        "SP": 8,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 91,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 4,
         "3B": 3,
         "SS": 3,
         "LF": 4,
-        "CF": 3,
+        "CF": 4,
         "RF": 5,
-        "SP": 12,
+        "SP": 14,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 106,
       "errors": [],
       "warnings": [],
@@ -5420,17 +5421,17 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 6,
-        "RF": 5,
-        "SP": 9,
+        "RF": 8,
+        "SP": 10,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 97,
       "errors": [],
       "warnings": [],
@@ -5438,19 +5439,19 @@
         "C": 4,
         "1B": 3,
         "2B": 3,
-        "3B": 3,
+        "3B": 4,
         "SS": 3,
         "LF": 5,
         "CF": 4,
         "RF": 3,
-        "SP": 10,
+        "SP": 13,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 73,
       "errors": [],
       "warnings": [],
@@ -5458,24 +5459,24 @@
         "C": 3,
         "1B": 3,
         "2B": 4,
-        "3B": 3,
+        "3B": 4,
         "SS": 3,
         "LF": 7,
-        "CF": 3,
+        "CF": 4,
         "RF": 4,
         "SP": 9,
-        "RP": 5
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 85,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 3,
         "2B": 4,
         "3B": 5,
@@ -5484,13 +5485,13 @@
         "CF": 5,
         "RF": 5,
         "SP": 7,
-        "RP": 6
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 79,
       "errors": [],
       "warnings": [],
@@ -5502,15 +5503,15 @@
         "SS": 3,
         "LF": 5,
         "CF": 3,
-        "RF": 5,
-        "SP": 9,
-        "RP": 5
+        "RF": 6,
+        "SP": 10,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 86,
       "errors": [],
       "warnings": [],
@@ -5523,14 +5524,14 @@
         "LF": 4,
         "CF": 4,
         "RF": 4,
-        "SP": 6,
-        "RP": 5
+        "SP": 9,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 110,
       "errors": [],
       "warnings": [],
@@ -5543,14 +5544,14 @@
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 4
+        "SP": 7,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 133,
       "errors": [],
       "warnings": [],
@@ -5563,14 +5564,14 @@
         "LF": 3,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 10
+        "SP": 8,
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 135,
       "errors": [],
       "warnings": [],
@@ -5583,15 +5584,15 @@
         "LF": 3,
         "CF": 5,
         "RF": 4,
-        "SP": 6,
-        "RP": 11
+        "SP": 9,
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "lad-2020s",
-      "cards": 32,
-      "candidateCards": 78,
+      "cards": 36,
+      "candidateCards": 79,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5603,8 +5604,8 @@
         "LF": 5,
         "CF": 5,
         "RF": 4,
-        "SP": 7,
-        "RP": 9
+        "SP": 9,
+        "RP": 10
       },
       "rosterCompletable": true
     },
@@ -5733,8 +5734,8 @@
     },
     {
       "id": "mil-1970s",
-      "cards": 32,
-      "candidateCards": 117,
+      "cards": 36,
+      "candidateCards": 119,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5743,17 +5744,17 @@
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 6,
+        "LF": 7,
         "CF": 5,
         "RF": 3,
-        "SP": 9,
-        "RP": 4
+        "SP": 11,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "mil-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 98,
       "errors": [],
       "warnings": [],
@@ -5766,15 +5767,15 @@
         "LF": 3,
         "CF": 3,
         "RF": 4,
-        "SP": 6,
-        "RP": 8
+        "SP": 9,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "mil-1990s",
-      "cards": 32,
-      "candidateCards": 127,
+      "cards": 36,
+      "candidateCards": 128,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5786,14 +5787,14 @@
         "LF": 5,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 8
+        "SP": 6,
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "mil-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 146,
       "errors": [],
       "warnings": [],
@@ -5807,13 +5808,13 @@
         "CF": 4,
         "RF": 3,
         "SP": 5,
-        "RP": 6
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "mil-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 138,
       "errors": [],
       "warnings": [],
@@ -5827,14 +5828,14 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 7
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "mil-2020s",
-      "cards": 32,
-      "candidateCards": 87,
+      "cards": 36,
+      "candidateCards": 88,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5847,13 +5848,13 @@
         "CF": 3,
         "RF": 5,
         "SP": 5,
-        "RP": 9
+        "RP": 13
       },
       "rosterCompletable": true
     },
     {
       "id": "min-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 77,
       "errors": [],
       "warnings": [],
@@ -5863,17 +5864,17 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 4,
-        "CF": 4,
-        "RF": 3,
-        "SP": 10,
+        "LF": 6,
+        "CF": 6,
+        "RF": 4,
+        "SP": 11,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "min-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 82,
       "errors": [],
       "warnings": [],
@@ -5884,16 +5885,16 @@
         "3B": 3,
         "SS": 4,
         "LF": 5,
-        "CF": 5,
-        "RF": 3,
-        "SP": 9,
+        "CF": 6,
+        "RF": 4,
+        "SP": 11,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "min-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 96,
       "errors": [],
       "warnings": [],
@@ -5901,10 +5902,10 @@
         "C": 3,
         "1B": 5,
         "2B": 3,
-        "3B": 4,
+        "3B": 6,
         "SS": 3,
-        "LF": 6,
-        "CF": 3,
+        "LF": 8,
+        "CF": 4,
         "RF": 7,
         "SP": 12,
         "RP": 3
@@ -5913,27 +5914,27 @@
     },
     {
       "id": "min-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 107,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 5,
         "2B": 3,
         "3B": 3,
         "SS": 3,
         "LF": 3,
         "CF": 4,
-        "RF": 5,
-        "SP": 8,
+        "RF": 6,
+        "SP": 10,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "min-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 88,
       "errors": [],
       "warnings": [],
@@ -5943,18 +5944,18 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 4,
-        "CF": 3,
+        "LF": 5,
+        "CF": 5,
         "RF": 3,
         "SP": 11,
-        "RP": 4
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "min-1970s",
-      "cards": 32,
-      "candidateCards": 93,
+      "cards": 36,
+      "candidateCards": 95,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5963,18 +5964,18 @@
         "2B": 3,
         "3B": 4,
         "SS": 4,
-        "LF": 4,
-        "CF": 3,
+        "LF": 6,
+        "CF": 5,
         "RF": 4,
-        "SP": 8,
-        "RP": 5
+        "SP": 9,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "min-1980s",
-      "cards": 32,
-      "candidateCards": 101,
+      "cards": 36,
+      "candidateCards": 105,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -5983,18 +5984,18 @@
         "2B": 3,
         "3B": 3,
         "SS": 4,
-        "LF": 4,
+        "LF": 5,
         "CF": 4,
-        "RF": 4,
-        "SP": 9,
-        "RP": 4
+        "RF": 5,
+        "SP": 10,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "min-1990s",
-      "cards": 32,
-      "candidateCards": 111,
+      "cards": 36,
+      "candidateCards": 112,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6003,18 +6004,18 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
-        "CF": 5,
-        "RF": 4,
+        "LF": 6,
+        "CF": 6,
+        "RF": 5,
         "SP": 6,
-        "RP": 7
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "min-2000s",
-      "cards": 32,
-      "candidateCards": 104,
+      "cards": 36,
+      "candidateCards": 106,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6026,15 +6027,15 @@
         "LF": 4,
         "CF": 4,
         "RF": 5,
-        "SP": 5,
-        "RP": 11
+        "SP": 8,
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "min-2010s",
-      "cards": 32,
-      "candidateCards": 140,
+      "cards": 36,
+      "candidateCards": 142,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6046,15 +6047,15 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
-        "RP": 11
+        "SP": 7,
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "min-2020s",
-      "cards": 32,
-      "candidateCards": 84,
+      "cards": 36,
+      "candidateCards": 85,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6066,8 +6067,8 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 8
+        "SP": 6,
+        "RP": 10
       },
       "rosterCompletable": true
     },
@@ -6456,67 +6457,67 @@
     },
     {
       "id": "nym-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 119,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 5,
+        "1B": 6,
         "2B": 4,
-        "3B": 5,
+        "3B": 6,
         "SS": 3,
-        "LF": 5,
-        "CF": 4,
-        "RF": 5,
-        "SP": 10,
-        "RP": 4
+        "LF": 6,
+        "CF": 6,
+        "RF": 7,
+        "SP": 11,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "nym-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 101,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 5,
+        "1B": 7,
         "2B": 5,
         "3B": 4,
         "SS": 3,
         "LF": 4,
         "CF": 3,
-        "RF": 3,
-        "SP": 10,
-        "RP": 4
+        "RF": 4,
+        "SP": 11,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "nym-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 94,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 5,
+        "LF": 6,
         "CF": 4,
         "RF": 5,
-        "SP": 6,
-        "RP": 7
+        "SP": 8,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "nym-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 137,
       "errors": [],
       "warnings": [],
@@ -6529,14 +6530,14 @@
         "LF": 3,
         "CF": 3,
         "RF": 3,
-        "SP": 7,
-        "RP": 5
+        "SP": 8,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "nym-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 152,
       "errors": [],
       "warnings": [],
@@ -6549,14 +6550,14 @@
         "LF": 6,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 8
+        "SP": 7,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "nym-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 148,
       "errors": [],
       "warnings": [],
@@ -6569,15 +6570,15 @@
         "LF": 5,
         "CF": 3,
         "RF": 4,
-        "SP": 6,
-        "RP": 8
+        "SP": 8,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "nym-2020s",
-      "cards": 32,
-      "candidateCards": 80,
+      "cards": 36,
+      "candidateCards": 82,
       "errors": [],
       "warnings": [
         "1B: 2 choices; target is 3"
@@ -6591,36 +6592,36 @@
         "LF": 5,
         "CF": 3,
         "RF": 4,
-        "SP": 6,
-        "RP": 8
+        "SP": 9,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 71,
       "errors": [],
       "warnings": [
         "1B: 2 choices; target is 3"
       ],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 2,
-        "2B": 3,
+        "2B": 4,
         "3B": 3,
         "SS": 3,
         "LF": 3,
-        "CF": 6,
+        "CF": 7,
         "RF": 4,
-        "SP": 11,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 66,
       "errors": [],
       "warnings": [
@@ -6635,14 +6636,14 @@
         "LF": 7,
         "CF": 4,
         "RF": 7,
-        "SP": 9,
+        "SP": 13,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-1940s",
-      "cards": 32,
+      "cards": 35,
       "candidateCards": 83,
       "errors": [],
       "warnings": [],
@@ -6652,17 +6653,17 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 4,
-        "CF": 3,
-        "RF": 4,
-        "SP": 12,
-        "RP": 3
+        "LF": 5,
+        "CF": 4,
+        "RF": 5,
+        "SP": 13,
+        "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 71,
       "errors": [],
       "warnings": [
@@ -6670,7 +6671,7 @@
       ],
       "coverage": {
         "C": 2,
-        "1B": 3,
+        "1B": 6,
         "2B": 3,
         "3B": 4,
         "SS": 3,
@@ -6678,13 +6679,13 @@
         "CF": 7,
         "RF": 4,
         "SP": 9,
-        "RP": 3
+        "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 82,
       "errors": [],
       "warnings": [],
@@ -6697,15 +6698,15 @@
         "LF": 3,
         "CF": 6,
         "RF": 4,
-        "SP": 8,
-        "RP": 4
+        "SP": 10,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-1970s",
-      "cards": 32,
-      "candidateCards": 93,
+      "cards": 36,
+      "candidateCards": 96,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6717,15 +6718,15 @@
         "LF": 3,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
+        "SP": 10,
         "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-1980s",
-      "cards": 32,
-      "candidateCards": 120,
+      "cards": 36,
+      "candidateCards": 123,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6737,15 +6738,15 @@
         "LF": 3,
         "CF": 4,
         "RF": 5,
-        "SP": 5,
-        "RP": 8
+        "SP": 6,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-1990s",
-      "cards": 32,
-      "candidateCards": 107,
+      "cards": 36,
+      "candidateCards": 109,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6757,15 +6758,15 @@
         "LF": 5,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 8
+        "SP": 7,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-2000s",
-      "cards": 32,
-      "candidateCards": 119,
+      "cards": 36,
+      "candidateCards": 120,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6777,15 +6778,15 @@
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 6
+        "SP": 6,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-2010s",
-      "cards": 32,
-      "candidateCards": 126,
+      "cards": 36,
+      "candidateCards": 129,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6798,14 +6799,14 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 8
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "nyy-2020s",
-      "cards": 32,
-      "candidateCards": 79,
+      "cards": 36,
+      "candidateCards": 80,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6818,13 +6819,13 @@
         "CF": 5,
         "RF": 4,
         "SP": 5,
-        "RP": 8
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 68,
       "errors": [],
       "warnings": [],
@@ -6835,36 +6836,36 @@
         "3B": 3,
         "SS": 4,
         "LF": 4,
-        "CF": 5,
-        "RF": 3,
-        "SP": 12,
+        "CF": 6,
+        "RF": 5,
+        "SP": 13,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 87,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
         "1B": 4,
-        "2B": 3,
-        "3B": 5,
+        "2B": 4,
+        "3B": 6,
         "SS": 3,
         "LF": 3,
-        "CF": 6,
+        "CF": 7,
         "RF": 5,
-        "SP": 8,
+        "SP": 10,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 97,
       "errors": [],
       "warnings": [],
@@ -6877,14 +6878,14 @@
         "LF": 4,
         "CF": 4,
         "RF": 4,
-        "SP": 9,
+        "SP": 13,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 119,
       "errors": [],
       "warnings": [],
@@ -6894,17 +6895,17 @@
         "2B": 4,
         "3B": 6,
         "SS": 3,
-        "LF": 5,
-        "CF": 5,
-        "RF": 7,
-        "SP": 6,
+        "LF": 6,
+        "CF": 6,
+        "RF": 9,
+        "SP": 8,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 119,
       "errors": [],
       "warnings": [],
@@ -6914,18 +6915,18 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 3,
-        "CF": 3,
+        "LF": 4,
+        "CF": 4,
         "RF": 3,
-        "SP": 9,
-        "RP": 4
+        "SP": 10,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-1970s",
-      "cards": 32,
-      "candidateCards": 111,
+      "cards": 36,
+      "candidateCards": 115,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6938,14 +6939,14 @@
         "CF": 3,
         "RF": 3,
         "SP": 6,
-        "RP": 6
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-1980s",
-      "cards": 32,
-      "candidateCards": 107,
+      "cards": 36,
+      "candidateCards": 111,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6955,17 +6956,17 @@
         "3B": 6,
         "SS": 3,
         "LF": 4,
-        "CF": 3,
+        "CF": 4,
         "RF": 6,
-        "SP": 6,
+        "SP": 9,
         "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-1990s",
-      "cards": 32,
-      "candidateCards": 132,
+      "cards": 36,
+      "candidateCards": 133,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6976,16 +6977,16 @@
         "SS": 3,
         "LF": 3,
         "CF": 3,
-        "RF": 6,
-        "SP": 6,
-        "RP": 6
+        "RF": 7,
+        "SP": 7,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-2000s",
-      "cards": 32,
-      "candidateCards": 132,
+      "cards": 36,
+      "candidateCards": 135,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -6998,14 +6999,14 @@
         "CF": 3,
         "RF": 5,
         "SP": 5,
-        "RP": 8
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-2010s",
-      "cards": 32,
-      "candidateCards": 154,
+      "cards": 36,
+      "candidateCards": 156,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -7017,15 +7018,15 @@
         "LF": 5,
         "CF": 3,
         "RF": 5,
-        "SP": 5,
-        "RP": 10
+        "SP": 7,
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "oak-2020s",
-      "cards": 32,
-      "candidateCards": 108,
+      "cards": 36,
+      "candidateCards": 109,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -7034,11 +7035,11 @@
         "2B": 3,
         "3B": 3,
         "SS": 4,
-        "LF": 4,
-        "CF": 3,
+        "LF": 5,
+        "CF": 4,
         "RF": 3,
         "SP": 5,
-        "RP": 7
+        "RP": 10
       },
       "rosterCompletable": true
     },
@@ -7103,19 +7104,19 @@
     },
     {
       "id": "phi-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 100,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 4,
-        "1B": 4,
-        "2B": 4,
+        "1B": 5,
+        "2B": 5,
         "3B": 3,
         "SS": 4,
-        "LF": 8,
-        "CF": 6,
-        "RF": 7,
+        "LF": 9,
+        "CF": 7,
+        "RF": 8,
         "SP": 7,
         "RP": 3
       },
@@ -7123,19 +7124,19 @@
     },
     {
       "id": "phi-1930s",
-      "cards": 32,
+      "cards": 35,
       "candidateCards": 103,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 6,
+        "1B": 7,
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 8,
-        "CF": 8,
-        "RF": 6,
+        "LF": 9,
+        "CF": 10,
+        "RF": 8,
         "SP": 6,
         "RP": 3
       },
@@ -7143,7 +7144,7 @@
     },
     {
       "id": "phi-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 129,
       "errors": [],
       "warnings": [],
@@ -7153,17 +7154,17 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
-        "CF": 6,
+        "LF": 6,
+        "CF": 7,
         "RF": 4,
-        "SP": 11,
+        "SP": 13,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "phi-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 85,
       "errors": [],
       "warnings": [
@@ -7171,21 +7172,21 @@
       ],
       "coverage": {
         "C": 4,
-        "1B": 3,
+        "1B": 4,
         "2B": 5,
         "3B": 3,
         "SS": 3,
         "LF": 4,
         "CF": 2,
         "RF": 4,
-        "SP": 8,
-        "RP": 3
+        "SP": 10,
+        "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "phi-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 99,
       "errors": [],
       "warnings": [],
@@ -7195,37 +7196,37 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 7,
+        "LF": 8,
         "CF": 7,
         "RF": 3,
-        "SP": 7,
+        "SP": 10,
         "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "phi-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 86,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 6,
         "2B": 4,
-        "3B": 5,
+        "3B": 6,
         "SS": 3,
         "LF": 5,
         "CF": 5,
         "RF": 5,
         "SP": 5,
-        "RP": 7
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "phi-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 113,
       "errors": [],
       "warnings": [],
@@ -7235,17 +7236,17 @@
         "2B": 4,
         "3B": 4,
         "SS": 3,
-        "LF": 4,
+        "LF": 6,
         "CF": 3,
-        "RF": 6,
+        "RF": 8,
         "SP": 5,
-        "RP": 8
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "phi-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 134,
       "errors": [],
       "warnings": [],
@@ -7258,14 +7259,14 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 8
+        "SP": 6,
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "phi-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 121,
       "errors": [],
       "warnings": [],
@@ -7279,13 +7280,13 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 6
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "phi-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 139,
       "errors": [],
       "warnings": [],
@@ -7298,15 +7299,15 @@
         "LF": 4,
         "CF": 4,
         "RF": 4,
-        "SP": 5,
-        "RP": 11
+        "SP": 6,
+        "RP": 14
       },
       "rosterCompletable": true
     },
     {
       "id": "phi-2020s",
-      "cards": 32,
-      "candidateCards": 73,
+      "cards": 36,
+      "candidateCards": 75,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -7316,36 +7317,36 @@
         "3B": 3,
         "SS": 3,
         "LF": 4,
-        "CF": 3,
+        "CF": 4,
         "RF": 3,
         "SP": 5,
-        "RP": 10
+        "RP": 13
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 75,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 4,
         "3B": 3,
         "SS": 4,
         "LF": 3,
         "CF": 4,
-        "RF": 6,
-        "SP": 9,
+        "RF": 7,
+        "SP": 11,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 70,
       "errors": [],
       "warnings": [
@@ -7358,16 +7359,16 @@
         "3B": 3,
         "SS": 3,
         "LF": 4,
-        "CF": 4,
+        "CF": 5,
         "RF": 3,
-        "SP": 11,
+        "SP": 14,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 98,
       "errors": [],
       "warnings": [],
@@ -7377,57 +7378,57 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 3,
-        "CF": 4,
-        "RF": 4,
-        "SP": 8,
+        "LF": 5,
+        "CF": 5,
+        "RF": 6,
+        "SP": 10,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 114,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 4,
-        "1B": 4,
+        "1B": 5,
         "2B": 3,
         "3B": 7,
         "SS": 3,
-        "LF": 4,
-        "CF": 3,
-        "RF": 4,
-        "SP": 6,
+        "LF": 5,
+        "CF": 4,
+        "RF": 6,
+        "SP": 7,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 80,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 3,
         "3B": 3,
         "SS": 4,
         "LF": 6,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
-        "RP": 6
+        "SP": 8,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 76,
       "errors": [],
       "warnings": [],
@@ -7440,14 +7441,14 @@
         "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 9,
-        "RP": 4
+        "SP": 11,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 93,
       "errors": [],
       "warnings": [],
@@ -7460,14 +7461,14 @@
         "LF": 5,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
-        "RP": 4
+        "SP": 9,
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 128,
       "errors": [],
       "warnings": [],
@@ -7477,17 +7478,17 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 3,
+        "LF": 4,
         "CF": 4,
-        "RF": 4,
-        "SP": 8,
-        "RP": 6
+        "RF": 5,
+        "SP": 10,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 142,
       "errors": [],
       "warnings": [],
@@ -7500,35 +7501,35 @@
         "LF": 5,
         "CF": 3,
         "RF": 7,
-        "SP": 5,
-        "RP": 8
+        "SP": 6,
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 133,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 5,
         "3B": 3,
         "SS": 3,
         "LF": 3,
         "CF": 3,
-        "RF": 3,
-        "SP": 5,
-        "RP": 13
+        "RF": 5,
+        "SP": 6,
+        "RP": 14
       },
       "rosterCompletable": true
     },
     {
       "id": "pit-2020s",
-      "cards": 32,
-      "candidateCards": 101,
+      "cards": 36,
+      "candidateCards": 103,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -7540,8 +7541,8 @@
         "LF": 3,
         "CF": 4,
         "RF": 3,
-        "SP": 5,
-        "RP": 13
+        "SP": 7,
+        "RP": 15
       },
       "rosterCompletable": true
     },
@@ -7620,7 +7621,7 @@
     },
     {
       "id": "sdp-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 118,
       "errors": [],
       "warnings": [],
@@ -7630,17 +7631,17 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 3,
+        "LF": 4,
         "CF": 6,
         "RF": 3,
-        "SP": 7,
-        "RP": 4
+        "SP": 8,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "sdp-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 104,
       "errors": [],
       "warnings": [],
@@ -7650,37 +7651,37 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 3,
         "RF": 6,
-        "SP": 7,
-        "RP": 6
+        "SP": 8,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "sdp-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 136,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 6,
+        "1B": 7,
         "2B": 3,
         "3B": 5,
         "SS": 3,
         "LF": 6,
         "CF": 3,
         "RF": 3,
-        "SP": 7,
-        "RP": 6
+        "SP": 9,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "sdp-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 171,
       "errors": [],
       "warnings": [],
@@ -7694,13 +7695,13 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 7
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "sdp-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 161,
       "errors": [],
       "warnings": [],
@@ -7714,14 +7715,14 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 8
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "sdp-2020s",
-      "cards": 32,
-      "candidateCards": 85,
+      "cards": 36,
+      "candidateCards": 86,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -7733,15 +7734,15 @@
         "LF": 5,
         "CF": 3,
         "RF": 3,
-        "SP": 6,
-        "RP": 7
+        "SP": 9,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "sea-1970s",
       "cards": 32,
-      "candidateCards": 47,
+      "candidateCards": 48,
       "errors": [],
       "warnings": [
         "CF: 2 choices; target is 3"
@@ -7756,14 +7757,14 @@
         "CF": 2,
         "RF": 5,
         "SP": 9,
-        "RP": 6
+        "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "sea-1980s",
-      "cards": 32,
-      "candidateCards": 128,
+      "cards": 36,
+      "candidateCards": 131,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -7772,9 +7773,9 @@
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 6,
-        "CF": 4,
-        "RF": 6,
+        "LF": 7,
+        "CF": 5,
+        "RF": 9,
         "SP": 6,
         "RP": 7
       },
@@ -7782,7 +7783,7 @@
     },
     {
       "id": "sea-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 123,
       "errors": [],
       "warnings": [],
@@ -7796,14 +7797,14 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 5
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "sea-2000s",
-      "cards": 32,
-      "candidateCards": 117,
+      "cards": 36,
+      "candidateCards": 123,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -7816,14 +7817,14 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 7
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "sea-2010s",
-      "cards": 32,
-      "candidateCards": 162,
+      "cards": 36,
+      "candidateCards": 167,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -7836,13 +7837,13 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 9
+        "RP": 13
       },
       "rosterCompletable": true
     },
     {
       "id": "sea-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 86,
       "errors": [],
       "warnings": [
@@ -7857,21 +7858,21 @@
         "LF": 3,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 10
+        "SP": 6,
+        "RP": 13
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 84,
       "errors": [],
       "warnings": [
         "1B: 2 choices; target is 3"
       ],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 2,
         "2B": 3,
         "3B": 3,
@@ -7879,41 +7880,41 @@
         "LF": 3,
         "CF": 4,
         "RF": 3,
-        "SP": 9,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 75,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 3,
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 4,
-        "CF": 7,
+        "LF": 5,
+        "CF": 8,
         "RF": 4,
-        "SP": 7,
-        "RP": 3
+        "SP": 8,
+        "RP": 4
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-1940s",
-      "cards": 32,
+      "cards": 34,
       "candidateCards": 99,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 4,
+        "C": 5,
         "1B": 4,
-        "2B": 3,
+        "2B": 4,
         "3B": 3,
         "SS": 3,
         "LF": 3,
@@ -7926,27 +7927,27 @@
     },
     {
       "id": "sfg-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 77,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 5,
         "3B": 3,
         "SS": 3,
         "LF": 9,
         "CF": 3,
-        "RF": 4,
-        "SP": 9,
+        "RF": 5,
+        "SP": 11,
         "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 71,
       "errors": [],
       "warnings": [],
@@ -7956,17 +7957,17 @@
         "2B": 3,
         "3B": 5,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 3,
-        "RF": 5,
+        "RF": 7,
         "SP": 9,
-        "RP": 5
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 97,
       "errors": [],
       "warnings": [],
@@ -7976,37 +7977,37 @@
         "2B": 5,
         "3B": 4,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 4,
-        "RF": 4,
-        "SP": 7,
-        "RP": 5
+        "RF": 5,
+        "SP": 8,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 114,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 4,
         "3B": 5,
         "SS": 3,
         "LF": 3,
-        "CF": 4,
+        "CF": 5,
         "RF": 4,
-        "SP": 6,
-        "RP": 8
+        "SP": 7,
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 131,
       "errors": [],
       "warnings": [],
@@ -8018,15 +8019,15 @@
         "SS": 3,
         "LF": 4,
         "CF": 3,
-        "RF": 6,
+        "RF": 7,
         "SP": 5,
-        "RP": 6
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 133,
       "errors": [],
       "warnings": [],
@@ -8039,14 +8040,14 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 10
+        "SP": 7,
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 125,
       "errors": [],
       "warnings": [],
@@ -8059,15 +8060,15 @@
         "LF": 4,
         "CF": 3,
         "RF": 5,
-        "SP": 5,
-        "RP": 11
+        "SP": 6,
+        "RP": 14
       },
       "rosterCompletable": true
     },
     {
       "id": "sfg-2020s",
-      "cards": 32,
-      "candidateCards": 83,
+      "cards": 36,
+      "candidateCards": 84,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8076,11 +8077,11 @@
         "2B": 3,
         "3B": 3,
         "SS": 4,
-        "LF": 7,
+        "LF": 6,
         "CF": 3,
-        "RF": 4,
-        "SP": 5,
-        "RP": 8
+        "RF": 3,
+        "SP": 6,
+        "RP": 11
       },
       "rosterCompletable": true
     },
@@ -8120,7 +8121,7 @@
     },
     {
       "id": "sls-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 50,
       "errors": [],
       "warnings": [
@@ -8128,15 +8129,15 @@
         "RP: 2 choices; target is 3"
       ],
       "coverage": {
-        "C": 6,
+        "C": 7,
         "1B": 3,
-        "2B": 4,
+        "2B": 5,
         "3B": 3,
         "SS": 3,
         "LF": 7,
         "CF": 2,
-        "RF": 3,
-        "SP": 7,
+        "RF": 4,
+        "SP": 8,
         "RP": 2
       },
       "rosterCompletable": true
@@ -8243,27 +8244,27 @@
     },
     {
       "id": "stl-1920s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 73,
       "errors": [],
       "warnings": [],
       "coverage": {
-        "C": 3,
+        "C": 4,
         "1B": 3,
         "2B": 3,
         "3B": 3,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 4,
-        "RF": 5,
-        "SP": 7,
+        "RF": 6,
+        "SP": 9,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-1930s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 80,
       "errors": [],
       "warnings": [],
@@ -8276,14 +8277,14 @@
         "LF": 5,
         "CF": 3,
         "RF": 4,
-        "SP": 10,
-        "RP": 3
+        "SP": 14,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-1940s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 80,
       "errors": [],
       "warnings": [],
@@ -8293,37 +8294,37 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 4,
+        "LF": 5,
         "CF": 6,
         "RF": 5,
-        "SP": 12,
-        "RP": 4
+        "SP": 15,
+        "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-1950s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 111,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 3,
         "3B": 3,
         "SS": 4,
-        "LF": 5,
-        "CF": 3,
-        "RF": 6,
-        "SP": 11,
+        "LF": 7,
+        "CF": 5,
+        "RF": 7,
+        "SP": 12,
         "RP": 3
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 91,
       "errors": [],
       "warnings": [],
@@ -8336,14 +8337,14 @@
         "LF": 5,
         "CF": 3,
         "RF": 6,
-        "SP": 7,
-        "RP": 6
+        "SP": 10,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 104,
       "errors": [],
       "warnings": [],
@@ -8356,14 +8357,14 @@
         "LF": 3,
         "CF": 4,
         "RF": 5,
-        "SP": 9,
-        "RP": 5
+        "SP": 10,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 99,
       "errors": [],
       "warnings": [],
@@ -8376,14 +8377,14 @@
         "LF": 3,
         "CF": 6,
         "RF": 4,
-        "SP": 5,
-        "RP": 6
+        "SP": 7,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 132,
       "errors": [],
       "warnings": [],
@@ -8397,13 +8398,13 @@
         "CF": 4,
         "RF": 4,
         "SP": 5,
-        "RP": 5
+        "RP": 9
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 127,
       "errors": [],
       "warnings": [],
@@ -8417,13 +8418,13 @@
         "CF": 4,
         "RF": 4,
         "SP": 5,
-        "RP": 8
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 111,
       "errors": [],
       "warnings": [],
@@ -8436,14 +8437,14 @@
         "LF": 5,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 12
+        "SP": 8,
+        "RP": 13
       },
       "rosterCompletable": true
     },
     {
       "id": "stl-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 76,
       "errors": [],
       "warnings": [],
@@ -8456,15 +8457,15 @@
         "LF": 4,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 10
+        "SP": 6,
+        "RP": 13
       },
       "rosterCompletable": true
     },
     {
       "id": "tbd-1990s",
       "cards": 32,
-      "candidateCards": 38,
+      "candidateCards": 39,
       "errors": [],
       "warnings": [
         "C: 2 choices; target is 3"
@@ -8478,35 +8479,35 @@
         "LF": 5,
         "CF": 4,
         "RF": 5,
-        "SP": 8,
+        "SP": 7,
         "RP": 7
       },
       "rosterCompletable": true
     },
     {
       "id": "tbd-2000s",
-      "cards": 32,
-      "candidateCards": 143,
+      "cards": 36,
+      "candidateCards": 148,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 4,
         "3B": 3,
-        "SS": 3,
+        "SS": 4,
         "LF": 3,
         "CF": 3,
-        "RF": 3,
+        "RF": 4,
         "SP": 5,
-        "RP": 9
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "tbd-2010s",
-      "cards": 32,
-      "candidateCards": 157,
+      "cards": 36,
+      "candidateCards": 160,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8519,14 +8520,14 @@
         "CF": 3,
         "RF": 4,
         "SP": 5,
-        "RP": 11
+        "RP": 15
       },
       "rosterCompletable": true
     },
     {
       "id": "tbd-2020s",
-      "cards": 32,
-      "candidateCards": 88,
+      "cards": 36,
+      "candidateCards": 89,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8539,13 +8540,13 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 13
+        "RP": 17
       },
       "rosterCompletable": true
     },
     {
       "id": "tex-1960s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 108,
       "errors": [],
       "warnings": [],
@@ -8555,38 +8556,38 @@
         "2B": 5,
         "3B": 3,
         "SS": 3,
-        "LF": 5,
+        "LF": 7,
         "CF": 4,
-        "RF": 6,
-        "SP": 9,
+        "RF": 9,
+        "SP": 10,
         "RP": 5
       },
       "rosterCompletable": true
     },
     {
       "id": "tex-1970s",
-      "cards": 32,
-      "candidateCards": 134,
+      "cards": 36,
+      "candidateCards": 135,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 3,
         "3B": 4,
         "SS": 3,
         "LF": 6,
         "CF": 3,
         "RF": 6,
-        "SP": 8,
-        "RP": 7
+        "SP": 10,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "tex-1980s",
-      "cards": 32,
-      "candidateCards": 116,
+      "cards": 36,
+      "candidateCards": 118,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8598,35 +8599,35 @@
         "LF": 3,
         "CF": 4,
         "RF": 4,
-        "SP": 5,
+        "SP": 9,
         "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "tex-1990s",
-      "cards": 32,
-      "candidateCards": 126,
+      "cards": 36,
+      "candidateCards": 128,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 4,
         "3B": 3,
         "SS": 3,
         "LF": 3,
         "CF": 3,
-        "RF": 5,
+        "RF": 6,
         "SP": 6,
-        "RP": 6
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "tex-2000s",
-      "cards": 32,
-      "candidateCards": 152,
+      "cards": 36,
+      "candidateCards": 154,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8637,16 +8638,16 @@
         "SS": 3,
         "LF": 3,
         "CF": 3,
-        "RF": 5,
+        "RF": 6,
         "SP": 5,
-        "RP": 8
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "tex-2010s",
-      "cards": 32,
-      "candidateCards": 131,
+      "cards": 36,
+      "candidateCards": 133,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8659,14 +8660,14 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 12
+        "RP": 16
       },
       "rosterCompletable": true
     },
     {
       "id": "tex-2020s",
-      "cards": 32,
-      "candidateCards": 93,
+      "cards": 36,
+      "candidateCards": 94,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8678,15 +8679,15 @@
         "LF": 3,
         "CF": 3,
         "RF": 3,
-        "SP": 5,
-        "RP": 9
+        "SP": 6,
+        "RP": 12
       },
       "rosterCompletable": true
     },
     {
       "id": "tor-1970s",
       "cards": 32,
-      "candidateCards": 45,
+      "candidateCards": 48,
       "errors": [],
       "warnings": [
         "3B: 2 choices; target is 3"
@@ -8697,18 +8698,18 @@
         "2B": 3,
         "3B": 2,
         "SS": 3,
-        "LF": 6,
+        "LF": 5,
         "CF": 3,
-        "RF": 6,
-        "SP": 8,
+        "RF": 5,
+        "SP": 7,
         "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "tor-1980s",
-      "cards": 32,
-      "candidateCards": 78,
+      "cards": 36,
+      "candidateCards": 85,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8717,38 +8718,38 @@
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 3,
+        "LF": 4,
         "CF": 3,
         "RF": 3,
         "SP": 6,
-        "RP": 7
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "tor-1990s",
-      "cards": 32,
-      "candidateCards": 112,
+      "cards": 36,
+      "candidateCards": 115,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 3,
+        "1B": 4,
         "2B": 4,
         "3B": 4,
         "SS": 3,
         "LF": 4,
         "CF": 3,
         "RF": 5,
-        "SP": 5,
-        "RP": 5
+        "SP": 6,
+        "RP": 8
       },
       "rosterCompletable": true
     },
     {
       "id": "tor-2000s",
-      "cards": 32,
-      "candidateCards": 130,
+      "cards": 36,
+      "candidateCards": 133,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -8761,13 +8762,13 @@
         "CF": 4,
         "RF": 3,
         "SP": 5,
-        "RP": 8
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "tor-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 151,
       "errors": [],
       "warnings": [],
@@ -8781,13 +8782,13 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 7
+        "RP": 11
       },
       "rosterCompletable": true
     },
     {
       "id": "tor-2020s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 74,
       "errors": [],
       "warnings": [],
@@ -8800,8 +8801,8 @@
         "LF": 3,
         "CF": 3,
         "RF": 4,
-        "SP": 5,
-        "RP": 7
+        "SP": 7,
+        "RP": 9
       },
       "rosterCompletable": true
     },
@@ -8932,27 +8933,27 @@
     },
     {
       "id": "wsn-1970s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 107,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
+        "1B": 5,
         "2B": 4,
         "3B": 3,
         "SS": 3,
-        "LF": 3,
+        "LF": 4,
         "CF": 3,
         "RF": 4,
-        "SP": 8,
-        "RP": 5
+        "SP": 9,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "wsn-1980s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 92,
       "errors": [],
       "warnings": [],
@@ -8965,14 +8966,14 @@
         "LF": 3,
         "CF": 3,
         "RF": 5,
-        "SP": 9,
-        "RP": 5
+        "SP": 13,
+        "RP": 6
       },
       "rosterCompletable": true
     },
     {
       "id": "wsn-1990s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 127,
       "errors": [],
       "warnings": [],
@@ -8985,14 +8986,14 @@
         "LF": 5,
         "CF": 3,
         "RF": 4,
-        "SP": 7,
-        "RP": 7
+        "SP": 8,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "wsn-2000s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 157,
       "errors": [],
       "warnings": [],
@@ -9002,38 +9003,38 @@
         "2B": 3,
         "3B": 4,
         "SS": 3,
-        "LF": 4,
+        "LF": 6,
         "CF": 3,
-        "RF": 6,
-        "SP": 5,
-        "RP": 9
+        "RF": 8,
+        "SP": 6,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "wsn-2010s",
-      "cards": 32,
+      "cards": 36,
       "candidateCards": 125,
       "errors": [],
       "warnings": [],
       "coverage": {
         "C": 3,
-        "1B": 4,
-        "2B": 5,
+        "1B": 5,
+        "2B": 6,
         "3B": 3,
         "SS": 3,
         "LF": 4,
         "CF": 4,
         "RF": 3,
-        "SP": 6,
-        "RP": 9
+        "SP": 7,
+        "RP": 10
       },
       "rosterCompletable": true
     },
     {
       "id": "wsn-2020s",
-      "cards": 32,
-      "candidateCards": 98,
+      "cards": 36,
+      "candidateCards": 100,
       "errors": [],
       "warnings": [],
       "coverage": {
@@ -9046,7 +9047,7 @@
         "CF": 3,
         "RF": 3,
         "SP": 5,
-        "RP": 6
+        "RP": 10
       },
       "rosterCompletable": true
     }
@@ -9415,7 +9416,7 @@
     },
     {
       "id": "cag-1920s",
-      "cards": 32,
+      "cards": 33,
       "candidateCards": 46,
       "errors": [
         "Pool cannot complete the 14-slot roster"
@@ -9433,7 +9434,7 @@
         "LF": 3,
         "CF": 5,
         "RF": 3,
-        "SP": 14,
+        "SP": 15,
         "RP": 1
       },
       "rosterCompletable": false

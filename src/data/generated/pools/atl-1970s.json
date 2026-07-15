@@ -2123,6 +2123,172 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "atl-1970s-reedro01",
+    "playerId": "reedro01",
+    "playerSlug": "reedro01",
+    "name": "Ron Reed",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1970s",
+    "featuredSeason": 1974,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "reedro01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.327,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.39,
+      "whip": 1.14,
+      "so": 78,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 186,
+      "games": 28,
+      "starts": 28,
+      "reliefAppearances": 0,
+      "k9": 3.77,
+      "bb9": 1.98
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.39,
+      "whip": 1.14,
+      "so": 78,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 186,
+      "games": 28,
+      "starts": 28,
+      "reliefAppearances": 0,
+      "k9": 3.77,
+      "bb9": 1.98
+    },
+    "scoringStats": {
+      "whip": 1.14,
+      "fip": null,
+      "inningsPitched": 186,
+      "strikeoutRate": 3.77,
+      "walkRate": 1.98,
+      "starts": 28,
+      "gamesStarted": 28,
+      "games": 28,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 106.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1970s-hendeke01",
+    "playerId": "hendeke01",
+    "playerSlug": "hendeke01",
+    "name": "Ken Henderson",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1970s",
+    "featuredSeason": 1976,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "B",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "hendeke01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.55,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.747,
+      "hr": 13,
+      "avg": 0.262,
+      "obp": 0.352,
+      "slg": 0.395,
+      "rbi": 61,
+      "sb": 5,
+      "games": 133,
+      "plateAppearances": 505
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.747,
+      "hr": 13,
+      "avg": 0.262,
+      "obp": 0.352,
+      "slg": 0.395,
+      "rbi": 61,
+      "sb": 5,
+      "games": 133,
+      "plateAppearances": 505
+    },
+    "scoringStats": {
+      "obp": 0.352,
+      "slg": 0.395,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 133,
+      "plateAppearances": 505,
+      "eraAdjustedOffense": 109.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "atl-1970s-campbda02",
     "playerId": "campbda02",
     "playerSlug": "campbda02",
@@ -2205,6 +2371,178 @@
       "games": 65,
       "reliefAppearances": 65,
       "eraAdjustedPitching": 128.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1970s-leonma01",
+    "playerId": "leonma01",
+    "playerSlug": "leonma01",
+    "name": "Max Leon",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1970s",
+    "featuredSeason": 1974,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "leonma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.327,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.093,
+      "so": 38,
+      "wins": 4,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 75,
+      "games": 34,
+      "starts": 2,
+      "reliefAppearances": 32,
+      "k9": 4.56,
+      "bb9": 1.68
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.64,
+      "whip": 1.093,
+      "so": 38,
+      "wins": 4,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 75,
+      "games": 34,
+      "starts": 2,
+      "reliefAppearances": 32,
+      "k9": 4.56,
+      "bb9": 1.68
+    },
+    "scoringStats": {
+      "whip": 1.093,
+      "fip": null,
+      "inningsPitched": 75,
+      "strikeoutRate": 4.56,
+      "walkRate": 1.68,
+      "starts": 2,
+      "gamesStarted": 2,
+      "games": 34,
+      "reliefAppearances": 32,
+      "eraAdjustedPitching": 137
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "atl-1970s-wilheho01",
+    "playerId": "wilheho01",
+    "playerSlug": "wilheho01",
+    "name": "Hoyt Wilhelm",
+    "franchiseId": "atl",
+    "teamAbbreviation": "ATL",
+    "teamDisplayName": "Atlanta Braves",
+    "historicalTeamName": "Atlanta Braves",
+    "team": "ATL",
+    "decade": "1970s",
+    "featuredSeason": 1970,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ATL"
+      ],
+      "sourcePlayerId": "wilheho01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.64,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 1.379,
+      "so": 67,
+      "wins": 6,
+      "saves": 13,
+      "sv": 13,
+      "inningsPitched": 78.3,
+      "games": 50,
+      "starts": 0,
+      "reliefAppearances": 50,
+      "k9": 7.7,
+      "bb9": 4.48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 1.379,
+      "so": 67,
+      "wins": 6,
+      "saves": 13,
+      "sv": 13,
+      "inningsPitched": 78.3,
+      "games": 50,
+      "starts": 0,
+      "reliefAppearances": 50,
+      "k9": 7.7,
+      "bb9": 4.48
+    },
+    "scoringStats": {
+      "whip": 1.379,
+      "fip": null,
+      "inningsPitched": 78.3,
+      "strikeoutRate": 7.7,
+      "walkRate": 4.48,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 50,
+      "reliefAppearances": 50,
+      "eraAdjustedPitching": 130.4
     },
     "pitchingScoringStats": null
   },

@@ -1819,6 +1819,171 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "phi-1940s-triplco01",
+    "playerId": "triplco01",
+    "playerSlug": "triplco01",
+    "name": "Coaker Triplett",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Blue Jays",
+    "historicalTeamName": "Philadelphia Blue Jays",
+    "team": "PHI",
+    "decade": "1940s",
+    "featuredSeason": 1943,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "triplco01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.315,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.78,
+      "hr": 14,
+      "avg": 0.272,
+      "obp": 0.325,
+      "slg": 0.456,
+      "rbi": 52,
+      "sb": 2,
+      "games": 105,
+      "plateAppearances": 389
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.78,
+      "hr": 14,
+      "avg": 0.272,
+      "obp": 0.325,
+      "slg": 0.456,
+      "rbi": 52,
+      "sb": 2,
+      "games": 105,
+      "plateAppearances": 389
+    },
+    "scoringStats": {
+      "obp": 0.325,
+      "slg": 0.456,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 105,
+      "plateAppearances": 389,
+      "eraAdjustedOffense": 116.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-1940s-roberro01",
+    "playerId": "roberro01",
+    "playerSlug": "roberro01",
+    "name": "Robin Roberts",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1940s",
+    "featuredSeason": 1949,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "B",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "roberro01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.21,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.69,
+      "whip": 1.341,
+      "so": 95,
+      "wins": 15,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 226.7,
+      "games": 43,
+      "starts": 31,
+      "reliefAppearances": 12,
+      "k9": 3.77,
+      "bb9": 2.98
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.69,
+      "whip": 1.341,
+      "so": 95,
+      "wins": 15,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 226.7,
+      "games": 43,
+      "starts": 31,
+      "reliefAppearances": 12,
+      "k9": 3.77,
+      "bb9": 2.98
+    },
+    "scoringStats": {
+      "whip": 1.341,
+      "fip": null,
+      "inningsPitched": 226.7,
+      "strikeoutRate": 3.77,
+      "walkRate": 2.98,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 43,
+      "reliefAppearances": 12,
+      "eraAdjustedPitching": 109.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "phi-1940s-wasdeji01",
     "playerId": "wasdeji01",
     "playerSlug": "wasdeji01",
@@ -1901,6 +2066,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "phi-1940s-wyrosjo01",
+    "playerId": "wyrosjo01",
+    "playerSlug": "wyrosjo01",
+    "name": "Johnny Wyrostek",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1940s",
+    "featuredSeason": 1946,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "wyrosjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.747,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.749,
+      "hr": 6,
+      "avg": 0.281,
+      "obp": 0.366,
+      "slg": 0.383,
+      "rbi": 45,
+      "sb": 7,
+      "games": 145,
+      "plateAppearances": 628
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.749,
+      "hr": 6,
+      "avg": 0.281,
+      "obp": 0.366,
+      "slg": 0.383,
+      "rbi": 45,
+      "sb": 7,
+      "games": 145,
+      "plateAppearances": 628
+    },
+    "scoringStats": {
+      "obp": 0.366,
+      "slg": 0.383,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 145,
+      "plateAppearances": 628,
+      "eraAdjustedOffense": 109.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "phi-1940s-joneswi01",
     "playerId": "joneswi01",
     "playerSlug": "joneswi01",
@@ -1976,6 +2220,92 @@
       "games": 149,
       "plateAppearances": 604,
       "eraAdjustedOffense": 103.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-1940s-schanch01",
+    "playerId": "schanch01",
+    "playerSlug": "schanch01",
+    "name": "Charley Schanz",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Blue Jays",
+    "historicalTeamName": "Philadelphia Blue Jays",
+    "team": "PHI",
+    "decade": "1940s",
+    "featuredSeason": 1944,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "schanch01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.099,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.32,
+      "whip": 1.384,
+      "so": 84,
+      "wins": 13,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 241.3,
+      "games": 40,
+      "starts": 30,
+      "reliefAppearances": 10,
+      "k9": 3.13,
+      "bb9": 3.84
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.32,
+      "whip": 1.384,
+      "so": 84,
+      "wins": 13,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 241.3,
+      "games": 40,
+      "starts": 30,
+      "reliefAppearances": 10,
+      "k9": 3.13,
+      "bb9": 3.84
+    },
+    "scoringStats": {
+      "whip": 1.384,
+      "fip": null,
+      "inningsPitched": 241.3,
+      "strikeoutRate": 3.13,
+      "walkRate": 3.84,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 40,
+      "reliefAppearances": 10,
+      "eraAdjustedPitching": 108.8
     },
     "pitchingScoringStats": null
   },

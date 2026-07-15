@@ -1612,6 +1612,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chc-2010s-kintzbr01",
+    "playerId": "kintzbr01",
+    "playerSlug": "kintzbr01",
+    "name": "Brandon Kintzler",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "kintzbr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.313,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 1.018,
+      "so": 48,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 57,
+      "games": 62,
+      "starts": 0,
+      "reliefAppearances": 62,
+      "k9": 7.58,
+      "bb9": 2.05
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.68,
+      "whip": 1.018,
+      "so": 48,
+      "wins": 3,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 57,
+      "games": 62,
+      "starts": 0,
+      "reliefAppearances": 62,
+      "k9": 7.58,
+      "bb9": 2.05
+    },
+    "scoringStats": {
+      "whip": 1.018,
+      "fip": null,
+      "inningsPitched": 57,
+      "strikeoutRate": 7.58,
+      "walkRate": 2.05,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 62,
+      "reliefAppearances": 62,
+      "eraAdjustedPitching": 163.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chc-2010s-hamelco01",
     "playerId": "hamelco01",
     "playerSlug": "hamelco01",
@@ -1694,6 +1780,92 @@
       "games": 12,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 170.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-2010s-lackejo01",
+    "playerId": "lackejo01",
+    "playerSlug": "lackejo01",
+    "name": "John Lackey",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "2010s",
+    "featuredSeason": 2016,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "lackejo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.531,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.057,
+      "so": 180,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 188.3,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 8.6,
+      "bb9": 2.53
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.057,
+      "so": 180,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 188.3,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 8.6,
+      "bb9": 2.53
+    },
+    "scoringStats": {
+      "whip": 1.057,
+      "fip": null,
+      "inningsPitched": 188.3,
+      "strikeoutRate": 8.6,
+      "walkRate": 2.53,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 29,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 124.4
     },
     "pitchingScoringStats": null
   },
@@ -1931,6 +2103,178 @@
       "games": 149,
       "plateAppearances": 626,
       "eraAdjustedOffense": 122.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-2010s-duensbr01",
+    "playerId": "duensbr01",
+    "playerSlug": "duensbr01",
+    "name": "Brian Duensing",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "duensbr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.386,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.219,
+      "so": 61,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 62.3,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 8.81,
+      "bb9": 2.6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.219,
+      "so": 61,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 62.3,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 8.81,
+      "bb9": 2.6
+    },
+    "scoringStats": {
+      "whip": 1.219,
+      "fip": null,
+      "inningsPitched": 62.3,
+      "strikeoutRate": 8.81,
+      "walkRate": 2.6,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 68,
+      "reliefAppearances": 68,
+      "eraAdjustedPitching": 158
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-2010s-darviyu01",
+    "playerId": "darviyu01",
+    "playerSlug": "darviyu01",
+    "name": "Yu Darvish",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "2010s",
+    "featuredSeason": 2019,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "darviyu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.048,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.98,
+      "whip": 1.097,
+      "so": 229,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 178.7,
+      "games": 31,
+      "starts": 31,
+      "reliefAppearances": 0,
+      "k9": 11.54,
+      "bb9": 2.82
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.98,
+      "whip": 1.097,
+      "so": 229,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 178.7,
+      "games": 31,
+      "starts": 31,
+      "reliefAppearances": 0,
+      "k9": 11.54,
+      "bb9": 2.82
+    },
+    "scoringStats": {
+      "whip": 1.097,
+      "fip": null,
+      "inningsPitched": 178.7,
+      "strikeoutRate": 11.54,
+      "walkRate": 2.82,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 31,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 110.2
     },
     "pitchingScoringStats": null
   },

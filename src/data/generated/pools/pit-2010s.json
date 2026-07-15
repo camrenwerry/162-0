@@ -2269,6 +2269,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "pit-2010s-burneaj01",
+    "playerId": "burneaj01",
+    "playerSlug": "burnea.01",
+    "name": "A. J. Burnett",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "burneaj01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.071,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.3,
+      "whip": 1.215,
+      "so": 209,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 191,
+      "games": 30,
+      "starts": 30,
+      "reliefAppearances": 0,
+      "k9": 9.85,
+      "bb9": 3.16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.3,
+      "whip": 1.215,
+      "so": 209,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 191,
+      "games": 30,
+      "starts": 30,
+      "reliefAppearances": 0,
+      "k9": 9.85,
+      "bb9": 3.16
+    },
+    "scoringStats": {
+      "whip": 1.215,
+      "fip": null,
+      "inningsPitched": 191,
+      "strikeoutRate": 9.85,
+      "walkRate": 3.16,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 30,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 113.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "pit-2010s-walkene01",
     "playerId": "walkene01",
     "playerSlug": "walkene01",
@@ -2344,6 +2430,251 @@
       "games": 137,
       "plateAppearances": 571,
       "eraAdjustedOffense": 116.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-2010s-polangr01",
+    "playerId": "polangr01",
+    "playerSlug": "polangr01",
+    "name": "Gregory Polanco",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "2010s",
+    "featuredSeason": 2018,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "polangr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.839,
+      "hr": 23,
+      "avg": 0.254,
+      "obp": 0.34,
+      "slg": 0.499,
+      "rbi": 81,
+      "sb": 12,
+      "games": 130,
+      "plateAppearances": 532
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.839,
+      "hr": 23,
+      "avg": 0.254,
+      "obp": 0.34,
+      "slg": 0.499,
+      "rbi": 81,
+      "sb": 12,
+      "games": 130,
+      "plateAppearances": 532
+    },
+    "scoringStats": {
+      "obp": 0.34,
+      "slg": 0.499,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 130,
+      "plateAppearances": 532,
+      "eraAdjustedOffense": 116.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-2010s-jonesga02",
+    "playerId": "jonesga02",
+    "playerSlug": "jonesga02",
+    "name": "Garrett Jones",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "eligiblePositions": [
+      "1B",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "jonesga02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.955,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.832,
+      "hr": 27,
+      "avg": 0.274,
+      "obp": 0.317,
+      "slg": 0.516,
+      "rbi": 86,
+      "sb": 2,
+      "games": 145,
+      "plateAppearances": 515
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.832,
+      "hr": 27,
+      "avg": 0.274,
+      "obp": 0.317,
+      "slg": 0.516,
+      "rbi": 86,
+      "sb": 2,
+      "games": 145,
+      "plateAppearances": 515
+    },
+    "scoringStats": {
+      "obp": 0.317,
+      "slg": 0.516,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 145,
+      "plateAppearances": 515,
+      "eraAdjustedOffense": 115.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-2010s-bastaan01",
+    "playerId": "bastaan01",
+    "playerSlug": "bastaan01",
+    "name": "Antonio Bastardo",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "2010s",
+    "featuredSeason": 2015,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "bastaan01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.691,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.98,
+      "whip": 1.134,
+      "so": 64,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 57.3,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 10.05,
+      "bb9": 4.08
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.98,
+      "whip": 1.134,
+      "so": 64,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 57.3,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 10.05,
+      "bb9": 4.08
+    },
+    "scoringStats": {
+      "whip": 1.134,
+      "fip": null,
+      "inningsPitched": 57.3,
+      "strikeoutRate": 10.05,
+      "walkRate": 4.08,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 66,
+      "reliefAppearances": 66,
+      "eraAdjustedPitching": 130.9
     },
     "pitchingScoringStats": null
   },

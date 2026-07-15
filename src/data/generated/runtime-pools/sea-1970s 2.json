@@ -112,7 +112,8 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -389,6 +390,54 @@
       "baserunningValue": null,
       "games": 124,
       "plateAppearances": 423,
+      "eraAdjustedOffense": 105.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1970s-hortowi01",
+    "playerId": "hortowi01",
+    "playerSlug": "hortowi01",
+    "name": "Willie Horton",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.784,
+      "hr": 29,
+      "avg": 0.279,
+      "obp": 0.326,
+      "slg": 0.458,
+      "rbi": 106,
+      "sb": 1,
+      "games": 162,
+      "plateAppearances": 696
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.326,
+      "slg": 0.458,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 162,
+      "plateAppearances": 696,
       "eraAdjustedOffense": 105.5
     },
     "pitchingScoringStats": null
@@ -708,7 +757,8 @@
     "decade": "1970s",
     "featuredSeason": 1978,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1312,7 +1362,8 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1496,6 +1547,159 @@
       "games": 40,
       "reliefAppearances": 33,
       "eraAdjustedPitching": 71.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1970s-simpsjo01",
+    "playerId": "simpsjo01",
+    "playerSlug": "simpsjo01",
+    "name": "Joe Simpson",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.659,
+      "hr": 2,
+      "avg": 0.283,
+      "obp": 0.312,
+      "slg": 0.347,
+      "rbi": 27,
+      "sb": 6,
+      "games": 120,
+      "plateAppearances": 284
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.312,
+      "slg": 0.347,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 120,
+      "plateAppearances": 284,
+      "eraAdjustedOffense": 88.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1970s-poledi01",
+    "playerId": "poledi01",
+    "playerSlug": "poledi01",
+    "name": "Dick Pole",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1970s",
+    "featuredSeason": 1977,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 5.15,
+      "whip": 1.504,
+      "so": 51,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 122.3,
+      "games": 25,
+      "starts": 24,
+      "reliefAppearances": 1,
+      "k9": 3.75,
+      "bb9": 4.19
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.504,
+      "fip": null,
+      "inningsPitched": 122.3,
+      "strikeoutRate": 3.75,
+      "walkRate": 4.19,
+      "starts": 24,
+      "gamesStarted": 24,
+      "games": 25,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 78.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-1970s-dressro01",
+    "playerId": "dressro01",
+    "playerSlug": "dressro01",
+    "name": "Rob Dressler",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.93,
+      "whip": 1.5,
+      "so": 36,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 104,
+      "games": 21,
+      "starts": 11,
+      "reliefAppearances": 10,
+      "k9": 3.12,
+      "bb9": 1.9
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.5,
+      "fip": null,
+      "inningsPitched": 104,
+      "strikeoutRate": 3.12,
+      "walkRate": 1.9,
+      "starts": 11,
+      "gamesStarted": 11,
+      "games": 21,
+      "reliefAppearances": 10,
+      "eraAdjustedPitching": 85.5
     },
     "pitchingScoringStats": null
   },

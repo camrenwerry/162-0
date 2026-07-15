@@ -1756,6 +1756,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sfg-1960s-gibbojo01",
+    "playerId": "gibbojo01",
+    "playerSlug": "gibbojo01",
+    "name": "Joe Gibbon",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1960s",
+    "featuredSeason": 1968,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "gibbojo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.077,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.57,
+      "whip": 1.3,
+      "so": 22,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 40,
+      "games": 29,
+      "starts": 0,
+      "reliefAppearances": 29,
+      "k9": 4.95,
+      "bb9": 4.28
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.57,
+      "whip": 1.3,
+      "so": 22,
+      "wins": 1,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 40,
+      "games": 29,
+      "starts": 0,
+      "reliefAppearances": 29,
+      "k9": 4.95,
+      "bb9": 4.28
+    },
+    "scoringStats": {
+      "whip": 1.3,
+      "fip": null,
+      "inningsPitched": 40,
+      "strikeoutRate": 4.95,
+      "walkRate": 4.28,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 29,
+      "reliefAppearances": 29,
+      "eraAdjustedPitching": 189.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sfg-1960s-davenji01",
     "playerId": "davenji01",
     "playerSlug": "davenji01",
@@ -2074,6 +2160,171 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sfg-1960s-kirklwi01",
+    "playerId": "kirklwi01",
+    "playerSlug": "kirklwi01",
+    "name": "Willie Kirkland",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1960s",
+    "featuredSeason": 1960,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "kirklwi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.899,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.769,
+      "hr": 21,
+      "avg": 0.252,
+      "obp": 0.315,
+      "slg": 0.454,
+      "rbi": 65,
+      "sb": 12,
+      "games": 146,
+      "plateAppearances": 567
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.769,
+      "hr": 21,
+      "avg": 0.252,
+      "obp": 0.315,
+      "slg": 0.454,
+      "rbi": 65,
+      "sb": 12,
+      "games": 146,
+      "plateAppearances": 567
+    },
+    "scoringStats": {
+      "obp": 0.315,
+      "slg": 0.454,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 146,
+      "plateAppearances": 567,
+      "eraAdjustedOffense": 108.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1960s-murakma01",
+    "playerId": "murakma01",
+    "playerSlug": "murakma01",
+    "name": "Masanori Murakami",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1960s",
+    "featuredSeason": 1965,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "murakma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.432,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.75,
+      "whip": 1.063,
+      "so": 85,
+      "wins": 4,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 74.3,
+      "games": 45,
+      "starts": 1,
+      "reliefAppearances": 44,
+      "k9": 10.29,
+      "bb9": 2.66
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.75,
+      "whip": 1.063,
+      "so": 85,
+      "wins": 4,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 74.3,
+      "games": 45,
+      "starts": 1,
+      "reliefAppearances": 44,
+      "k9": 10.29,
+      "bb9": 2.66
+    },
+    "scoringStats": {
+      "whip": 1.063,
+      "fip": null,
+      "inningsPitched": 74.3,
+      "strikeoutRate": 10.29,
+      "walkRate": 2.66,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 45,
+      "reliefAppearances": 44,
+      "eraAdjustedPitching": 94.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sfg-1960s-brownol02",
     "playerId": "brownol02",
     "playerSlug": "brownol02",
@@ -2150,6 +2401,86 @@
       "games": 120,
       "plateAppearances": 446,
       "eraAdjustedOffense": 105.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-1960s-alouma01",
+    "playerId": "alouma01",
+    "playerSlug": "alouma01",
+    "name": "Matty Alou",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "1960s",
+    "featuredSeason": 1961,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "alouma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.628,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.811,
+      "hr": 6,
+      "avg": 0.31,
+      "obp": 0.356,
+      "slg": 0.455,
+      "rbi": 24,
+      "sb": 3,
+      "games": 81,
+      "plateAppearances": 217
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.811,
+      "hr": 6,
+      "avg": 0.31,
+      "obp": 0.356,
+      "slg": 0.455,
+      "rbi": 24,
+      "sb": 3,
+      "games": 81,
+      "plateAppearances": 217
+    },
+    "scoringStats": {
+      "obp": 0.356,
+      "slg": 0.455,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 81,
+      "plateAppearances": 217,
+      "eraAdjustedOffense": 111
     },
     "pitchingScoringStats": null
   },

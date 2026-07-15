@@ -1482,6 +1482,258 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bos-1920s-russeja01",
+    "playerId": "russeja01",
+    "playerSlug": "russeja01",
+    "name": "Jack Russell",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1920s",
+    "featuredSeason": 1929,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "russeja01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.295,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.92,
+      "whip": 1.333,
+      "so": 37,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 227.3,
+      "games": 35,
+      "starts": 32,
+      "reliefAppearances": 3,
+      "k9": 1.46,
+      "bb9": 1.58
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.92,
+      "whip": 1.333,
+      "so": 37,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 227.3,
+      "games": 35,
+      "starts": 32,
+      "reliefAppearances": 3,
+      "k9": 1.46,
+      "bb9": 1.58
+    },
+    "scoringStats": {
+      "whip": 1.333,
+      "fip": null,
+      "inningsPitched": 227.3,
+      "strikeoutRate": 1.46,
+      "walkRate": 1.58,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 35,
+      "reliefAppearances": 3,
+      "eraAdjustedPitching": 108.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1920s-jacobba01",
+    "playerId": "jacobba01",
+    "playerSlug": "jacobba01",
+    "name": "Baby Doll Jacobson",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1920s",
+    "featuredSeason": 1926,
+    "eligiblePositions": [
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "jacobba01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.863,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.791,
+      "hr": 6,
+      "avg": 0.305,
+      "obp": 0.344,
+      "slg": 0.447,
+      "rbi": 69,
+      "sb": 4,
+      "games": 98,
+      "plateAppearances": 438
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.791,
+      "hr": 6,
+      "avg": 0.305,
+      "obp": 0.344,
+      "slg": 0.447,
+      "rbi": 69,
+      "sb": 4,
+      "games": 98,
+      "plateAppearances": 438
+    },
+    "scoringStats": {
+      "obp": 0.344,
+      "slg": 0.447,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 98,
+      "plateAppearances": 438,
+      "eraAdjustedOffense": 107.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1920s-gastomi01",
+    "playerId": "gastomi01",
+    "playerSlug": "gastomi01",
+    "name": "Milt Gaston",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1920s",
+    "featuredSeason": 1929,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "gastomi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.546,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.73,
+      "whip": 1.42,
+      "so": 83,
+      "wins": 12,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 243.7,
+      "games": 39,
+      "starts": 29,
+      "reliefAppearances": 10,
+      "k9": 3.07,
+      "bb9": 2.99
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.73,
+      "whip": 1.42,
+      "so": 83,
+      "wins": 12,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 243.7,
+      "games": 39,
+      "starts": 29,
+      "reliefAppearances": 10,
+      "k9": 3.07,
+      "bb9": 2.99
+    },
+    "scoringStats": {
+      "whip": 1.42,
+      "fip": null,
+      "inningsPitched": 243.7,
+      "strikeoutRate": 3.07,
+      "walkRate": 2.99,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 39,
+      "reliefAppearances": 10,
+      "eraAdjustedPitching": 113.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bos-1920s-rigneto01",
     "playerId": "rigneto01",
     "playerSlug": "rigneto01",
@@ -1557,6 +1809,92 @@
       "games": 148,
       "plateAppearances": 659,
       "eraAdjustedOffense": 104.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bos-1920s-macfada01",
+    "playerId": "macfada01",
+    "playerSlug": "macfada01",
+    "name": "Danny MacFayden",
+    "franchiseId": "bos",
+    "teamAbbreviation": "BOS",
+    "teamDisplayName": "Boston Red Sox",
+    "historicalTeamName": "Boston Red Sox",
+    "team": "BOS",
+    "decade": "1920s",
+    "featuredSeason": 1929,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BOS"
+      ],
+      "sourcePlayerId": "macfada01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.06,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.62,
+      "whip": 1.385,
+      "so": 61,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 221,
+      "games": 32,
+      "starts": 26,
+      "reliefAppearances": 6,
+      "k9": 2.48,
+      "bb9": 3.3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.62,
+      "whip": 1.385,
+      "so": 61,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 221,
+      "games": 32,
+      "starts": 26,
+      "reliefAppearances": 6,
+      "k9": 2.48,
+      "bb9": 3.3
+    },
+    "scoringStats": {
+      "whip": 1.385,
+      "fip": null,
+      "inningsPitched": 221,
+      "strikeoutRate": 2.48,
+      "walkRate": 3.3,
+      "starts": 26,
+      "gamesStarted": 26,
+      "games": 32,
+      "reliefAppearances": 6,
+      "eraAdjustedPitching": 117
     },
     "pitchingScoringStats": null
   },

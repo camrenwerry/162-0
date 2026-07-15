@@ -614,7 +614,8 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -951,7 +952,8 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1104,6 +1106,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "kcr-2010s-alexasc01",
+    "playerId": "alexasc01",
+    "playerSlug": "alexasc02",
+    "name": "Scott Alexander",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2010s",
+    "featuredSeason": 2017,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "alexasc01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.524,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.304,
+      "so": 59,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 69,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 7.7,
+      "bb9": 3.65
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.48,
+      "whip": 1.304,
+      "so": 59,
+      "wins": 5,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 69,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 7.7,
+      "bb9": 3.65
+    },
+    "scoringStats": {
+      "whip": 1.304,
+      "fip": null,
+      "inningsPitched": 69,
+      "strikeoutRate": 7.7,
+      "walkRate": 3.65,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 58,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 176.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "kcr-2010s-butlebi03",
     "playerId": "butlebi03",
     "playerSlug": "butlebi03",
@@ -1116,7 +1204,8 @@
     "decade": "2010s",
     "featuredSeason": 2012,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1262,6 +1351,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "kcr-2010s-broxtjo01",
+    "playerId": "broxtjo01",
+    "playerSlug": "broxtjo01",
+    "name": "Jonathan Broxton",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "broxtjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.935,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.27,
+      "whip": 1.402,
+      "so": 25,
+      "wins": 1,
+      "saves": 23,
+      "sv": 23,
+      "inningsPitched": 35.7,
+      "games": 35,
+      "starts": 0,
+      "reliefAppearances": 35,
+      "k9": 6.31,
+      "bb9": 3.53
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.27,
+      "whip": 1.402,
+      "so": 25,
+      "wins": 1,
+      "saves": 23,
+      "sv": 23,
+      "inningsPitched": 35.7,
+      "games": 35,
+      "starts": 0,
+      "reliefAppearances": 35,
+      "k9": 6.31,
+      "bb9": 3.53
+    },
+    "scoringStats": {
+      "whip": 1.402,
+      "fip": null,
+      "inningsPitched": 35.7,
+      "strikeoutRate": 6.31,
+      "walkRate": 3.53,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 35,
+      "reliefAppearances": 35,
+      "eraAdjustedPitching": 179.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "kcr-2010s-cainlo01",
     "playerId": "cainlo01",
     "playerSlug": "cainlo01",
@@ -1341,6 +1516,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "kcr-2010s-farnsky01",
+    "playerId": "farnsky01",
+    "playerSlug": "farnsky01",
+    "name": "Kyle Farnsworth",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "farnsky01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.469,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.42,
+      "whip": 1.164,
+      "so": 36,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 44.7,
+      "games": 37,
+      "starts": 0,
+      "reliefAppearances": 37,
+      "k9": 7.25,
+      "bb9": 2.42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.42,
+      "whip": 1.164,
+      "so": 36,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 44.7,
+      "games": 37,
+      "starts": 0,
+      "reliefAppearances": 37,
+      "k9": 7.25,
+      "bb9": 2.42
+    },
+    "scoringStats": {
+      "whip": 1.164,
+      "fip": null,
+      "inningsPitched": 44.7,
+      "strikeoutRate": 7.25,
+      "walkRate": 2.42,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 37,
+      "reliefAppearances": 37,
+      "eraAdjustedPitching": 171.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "kcr-2010s-doziehu01",
     "playerId": "doziehu01",
     "playerSlug": "doziehu01",
@@ -1354,7 +1615,8 @@
     "featuredSeason": 2019,
     "eligiblePositions": [
       "3B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1433,7 +1695,8 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1591,7 +1854,8 @@
     "decade": "2010s",
     "featuredSeason": 2017,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1654,6 +1918,92 @@
       "games": 148,
       "plateAppearances": 598,
       "eraAdjustedOffense": 111
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "kcr-2010s-mijarjo01",
+    "playerId": "mijarjo01",
+    "playerSlug": "mijarjo01",
+    "name": "Jose Mijares",
+    "franchiseId": "kcr",
+    "teamAbbreviation": "KCR",
+    "teamDisplayName": "Kansas City Royals",
+    "historicalTeamName": "Kansas City Royals",
+    "team": "KCR",
+    "decade": "2010s",
+    "featuredSeason": 2012,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "KCA"
+      ],
+      "sourcePlayerId": "mijarjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.391,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.267,
+      "so": 37,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 38.7,
+      "games": 51,
+      "starts": 0,
+      "reliefAppearances": 51,
+      "k9": 8.61,
+      "bb9": 3.03
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.267,
+      "so": 37,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 38.7,
+      "games": 51,
+      "starts": 0,
+      "reliefAppearances": 51,
+      "k9": 8.61,
+      "bb9": 3.03
+    },
+    "scoringStats": {
+      "whip": 1.267,
+      "fip": null,
+      "inningsPitched": 38.7,
+      "strikeoutRate": 8.61,
+      "walkRate": 3.03,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 51,
+      "reliefAppearances": 51,
+      "eraAdjustedPitching": 159.3
     },
     "pitchingScoringStats": null
   },
@@ -1831,7 +2181,8 @@
     "featuredSeason": 2018,
     "eligiblePositions": [
       "2B",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1996,7 +2347,8 @@
     "decade": "2010s",
     "featuredSeason": 2017,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

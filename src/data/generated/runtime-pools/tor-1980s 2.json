@@ -669,7 +669,8 @@
     "decade": "1980s",
     "featuredSeason": 1987,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -800,6 +801,54 @@
       "games": 129,
       "plateAppearances": 427,
       "eraAdjustedOffense": 115.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-1980s-johnscl01",
+    "playerId": "johnscl01",
+    "playerSlug": "johnscl01",
+    "name": "Cliff Johnson",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.897,
+      "hr": 16,
+      "avg": 0.304,
+      "obp": 0.39,
+      "slg": 0.507,
+      "rbi": 61,
+      "sb": 0,
+      "games": 127,
+      "plateAppearances": 415
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.39,
+      "slg": 0.507,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 127,
+      "plateAppearances": 415,
+      "eraAdjustedOffense": 123.9
     },
     "pitchingScoringStats": null
   },
@@ -1220,7 +1269,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1354,6 +1404,54 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tor-1980s-velezot01",
+    "playerId": "velezot01",
+    "playerSlug": "velezot01",
+    "name": "Otto Velez",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "eligiblePositions": [
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.852,
+      "hr": 20,
+      "avg": 0.269,
+      "obp": 0.365,
+      "slg": 0.487,
+      "rbi": 62,
+      "sb": 0,
+      "games": 104,
+      "plateAppearances": 417
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.365,
+      "slg": 0.487,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 104,
+      "plateAppearances": 417,
+      "eraAdjustedOffense": 116.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tor-1980s-martibu01",
     "playerId": "martibu01",
     "playerSlug": "martibu01",
@@ -1398,6 +1496,106 @@
       "games": 88,
       "plateAppearances": 253,
       "eraAdjustedOffense": 108.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-1980s-collida02",
+    "playerId": "collida02",
+    "playerSlug": "collida02",
+    "name": "Dave Collins",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "B",
+    "throws": "L",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.811,
+      "hr": 2,
+      "avg": 0.308,
+      "obp": 0.366,
+      "slg": 0.444,
+      "rbi": 44,
+      "sb": 60,
+      "games": 128,
+      "plateAppearances": 492
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.366,
+      "slg": 0.444,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 128,
+      "plateAppearances": 492,
+      "eraAdjustedOffense": 112
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-1980s-lampde01",
+    "playerId": "lampde01",
+    "playerSlug": "lampde01",
+    "name": "Dennis Lamp",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "1980s",
+    "featuredSeason": 1985,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.32,
+      "whip": 1.164,
+      "so": 68,
+      "wins": 11,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 105.7,
+      "games": 53,
+      "starts": 1,
+      "reliefAppearances": 52,
+      "k9": 5.79,
+      "bb9": 2.3
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.164,
+      "fip": null,
+      "inningsPitched": 105.7,
+      "strikeoutRate": 5.79,
+      "walkRate": 2.3,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 53,
+      "reliefAppearances": 52,
+      "eraAdjustedPitching": 124.8
     },
     "pitchingScoringStats": null
   },

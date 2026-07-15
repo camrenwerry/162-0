@@ -1038,7 +1038,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1435,6 +1436,264 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sdp-2020s-ceasedy01",
+    "playerId": "ceasedy01",
+    "playerSlug": "ceasedy01",
+    "name": "Dylan Cease",
+    "franchiseId": "sdp",
+    "teamAbbreviation": "SDP",
+    "teamDisplayName": "San Diego Padres",
+    "historicalTeamName": "San Diego Padres",
+    "team": "SDP",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SDN"
+      ],
+      "sourcePlayerId": "ceasedy01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.593,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.47,
+      "whip": 1.067,
+      "so": 224,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 189.3,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 10.65,
+      "bb9": 3.09
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.47,
+      "whip": 1.067,
+      "so": 224,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 189.3,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 10.65,
+      "bb9": 3.09
+    },
+    "scoringStats": {
+      "whip": 1.067,
+      "fip": null,
+      "inningsPitched": 189.3,
+      "strikeoutRate": 10.65,
+      "walkRate": 3.09,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 33,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 119.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sdp-2020s-davieza01",
+    "playerId": "davieza01",
+    "playerSlug": "davieza02",
+    "name": "Zach Davies",
+    "franchiseId": "sdp",
+    "teamAbbreviation": "SDP",
+    "teamDisplayName": "San Diego Padres",
+    "historicalTeamName": "San Diego Padres",
+    "team": "SDP",
+    "decade": "2020s",
+    "featuredSeason": 2020,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SDN"
+      ],
+      "sourcePlayerId": "davieza01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.402,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.73,
+      "whip": 1.067,
+      "so": 63,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 69.3,
+      "games": 12,
+      "starts": 12,
+      "reliefAppearances": 0,
+      "k9": 8.18,
+      "bb9": 2.47
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.73,
+      "whip": 1.067,
+      "so": 63,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 69.3,
+      "games": 12,
+      "starts": 12,
+      "reliefAppearances": 0,
+      "k9": 8.18,
+      "bb9": 2.47
+    },
+    "scoringStats": {
+      "whip": 1.067,
+      "fip": null,
+      "inningsPitched": 69.3,
+      "strikeoutRate": 8.18,
+      "walkRate": 2.47,
+      "starts": 12,
+      "gamesStarted": 12,
+      "games": 12,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 163.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sdp-2020s-stammcr01",
+    "playerId": "stammcr01",
+    "playerSlug": "stammcr01",
+    "name": "Craig Stammen",
+    "franchiseId": "sdp",
+    "teamAbbreviation": "SDP",
+    "teamDisplayName": "San Diego Padres",
+    "historicalTeamName": "San Diego Padres",
+    "team": "SDP",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SDN"
+      ],
+      "sourcePlayerId": "stammcr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.617,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.06,
+      "whip": 1.042,
+      "so": 83,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 88.3,
+      "games": 67,
+      "starts": 4,
+      "reliefAppearances": 63,
+      "k9": 8.46,
+      "bb9": 1.32
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.06,
+      "whip": 1.042,
+      "so": 83,
+      "wins": 6,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 88.3,
+      "games": 67,
+      "starts": 4,
+      "reliefAppearances": 63,
+      "k9": 8.46,
+      "bb9": 1.32
+    },
+    "scoringStats": {
+      "whip": 1.042,
+      "fip": null,
+      "inningsPitched": 88.3,
+      "strikeoutRate": 8.46,
+      "walkRate": 1.32,
+      "starts": 4,
+      "gamesStarted": 4,
+      "games": 67,
+      "reliefAppearances": 63,
+      "eraAdjustedPitching": 137.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sdp-2020s-merrija01",
     "playerId": "merrija01",
     "playerSlug": "merrija01",
@@ -1510,6 +1769,92 @@
       "games": 156,
       "plateAppearances": 593,
       "eraAdjustedOffense": 114.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sdp-2020s-wachami01",
+    "playerId": "wachami01",
+    "playerSlug": "wachami01",
+    "name": "Michael Wacha",
+    "franchiseId": "sdp",
+    "teamAbbreviation": "SDP",
+    "teamDisplayName": "San Diego Padres",
+    "historicalTeamName": "San Diego Padres",
+    "team": "SDP",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SDN"
+      ],
+      "sourcePlayerId": "wachami01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.037,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.22,
+      "whip": 1.161,
+      "so": 124,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 134.3,
+      "games": 24,
+      "starts": 24,
+      "reliefAppearances": 0,
+      "k9": 8.31,
+      "bb9": 2.88
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.22,
+      "whip": 1.161,
+      "so": 124,
+      "wins": 14,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 134.3,
+      "games": 24,
+      "starts": 24,
+      "reliefAppearances": 0,
+      "k9": 8.31,
+      "bb9": 2.88
+    },
+    "scoringStats": {
+      "whip": 1.161,
+      "fip": null,
+      "inningsPitched": 134.3,
+      "strikeoutRate": 8.31,
+      "walkRate": 2.88,
+      "starts": 24,
+      "gamesStarted": 24,
+      "games": 24,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 136.1
     },
     "pitchingScoringStats": null
   },
@@ -2322,7 +2667,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2402,7 +2748,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2482,7 +2829,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2562,7 +2910,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -1902,6 +1902,172 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "phi-1980s-reedro01",
+    "playerId": "reedro01",
+    "playerSlug": "reedro01",
+    "name": "Ron Reed",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "reedro01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 45.017,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.66,
+      "whip": 1.112,
+      "so": 57,
+      "wins": 5,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 98,
+      "games": 57,
+      "starts": 2,
+      "reliefAppearances": 55,
+      "k9": 5.23,
+      "bb9": 2.2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.66,
+      "whip": 1.112,
+      "so": 57,
+      "wins": 5,
+      "saves": 14,
+      "sv": 14,
+      "inningsPitched": 98,
+      "games": 57,
+      "starts": 2,
+      "reliefAppearances": 55,
+      "k9": 5.23,
+      "bb9": 2.2
+    },
+    "scoringStats": {
+      "whip": 1.112,
+      "fip": null,
+      "inningsPitched": 98,
+      "strikeoutRate": 5.23,
+      "walkRate": 2.2,
+      "starts": 2,
+      "gamesStarted": 2,
+      "games": 57,
+      "reliefAppearances": 55,
+      "eraAdjustedPitching": 135.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-1980s-krukjo01",
+    "playerId": "krukjo01",
+    "playerSlug": "krukjo01",
+    "name": "John Kruk",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "krukjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.895,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.859,
+      "hr": 5,
+      "avg": 0.331,
+      "obp": 0.386,
+      "slg": 0.473,
+      "rbi": 38,
+      "sb": 3,
+      "games": 81,
+      "plateAppearances": 312
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.859,
+      "hr": 5,
+      "avg": 0.331,
+      "obp": 0.386,
+      "slg": 0.473,
+      "rbi": 38,
+      "sb": 3,
+      "games": 81,
+      "plateAppearances": 312
+    },
+    "scoringStats": {
+      "obp": 0.386,
+      "slg": 0.473,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 81,
+      "plateAppearances": 312,
+      "eraAdjustedOffense": 126.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "phi-1980s-chrisla01",
     "playerId": "chrisla01",
     "playerSlug": "chrisla01",
@@ -2064,6 +2230,85 @@
       "games": 72,
       "plateAppearances": 223,
       "eraAdjustedOffense": 123.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-1980s-davisdi02",
+    "playerId": "davisdi02",
+    "playerSlug": "davisdi02",
+    "name": "Dick Davis",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1981,
+    "eligiblePositions": [
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "davisdi02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.147,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.866,
+      "hr": 2,
+      "avg": 0.333,
+      "obp": 0.387,
+      "slg": 0.479,
+      "rbi": 19,
+      "sb": 1,
+      "games": 45,
+      "plateAppearances": 106
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.866,
+      "hr": 2,
+      "avg": 0.333,
+      "obp": 0.387,
+      "slg": 0.479,
+      "rbi": 19,
+      "sb": 1,
+      "games": 45,
+      "plateAppearances": 106
+    },
+    "scoringStats": {
+      "obp": 0.387,
+      "slg": 0.479,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 45,
+      "plateAppearances": 106,
+      "eraAdjustedOffense": 126.7
     },
     "pitchingScoringStats": null
   },
@@ -2388,6 +2633,85 @@
       "games": 86,
       "plateAppearances": 211,
       "eraAdjustedOffense": 117.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-1980s-stoneje01",
+    "playerId": "stoneje01",
+    "playerSlug": "stoneje01",
+    "name": "Jeff Stone",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "stoneje01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.607,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.859,
+      "hr": 1,
+      "avg": 0.362,
+      "obp": 0.394,
+      "slg": 0.465,
+      "rbi": 15,
+      "sb": 27,
+      "games": 51,
+      "plateAppearances": 199
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.859,
+      "hr": 1,
+      "avg": 0.362,
+      "obp": 0.394,
+      "slg": 0.465,
+      "rbi": 15,
+      "sb": 27,
+      "games": 51,
+      "plateAppearances": 199
+    },
+    "scoringStats": {
+      "obp": 0.394,
+      "slg": 0.465,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 51,
+      "plateAppearances": 199,
+      "eraAdjustedOffense": 124.8
     },
     "pitchingScoringStats": null
   },

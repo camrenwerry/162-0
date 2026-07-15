@@ -6,7 +6,7 @@
     "verifiedAt": "2026-07-14"
   },
   "years": { "minimum": 1920, "maximum": 2029 },
-  "pool": { "minimumCards": 24, "targetCards": 32, "maximumCards": 40 },
+  "pool": { "minimumCards": 24, "targetCards": 36, "maximumCards": 40, "minimumExpansionScore": 0.3 },
   "eligibility": {
     "minimumHitterPlateAppearances": 100,
     "minimumPitcherInnings": 30,

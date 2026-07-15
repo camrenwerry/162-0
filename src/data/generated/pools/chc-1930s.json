@@ -1720,6 +1720,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chc-1930s-bryancl01",
+    "playerId": "bryancl01",
+    "playerSlug": "bryancl01",
+    "name": "Clay Bryant",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1930s",
+    "featuredSeason": 1938,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "bryancl01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.601,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 1.332,
+      "so": 135,
+      "wins": 19,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 270.3,
+      "games": 44,
+      "starts": 30,
+      "reliefAppearances": 14,
+      "k9": 4.49,
+      "bb9": 4.16
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 1.332,
+      "so": 135,
+      "wins": 19,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 270.3,
+      "games": 44,
+      "starts": 30,
+      "reliefAppearances": 14,
+      "k9": 4.49,
+      "bb9": 4.16
+    },
+    "scoringStats": {
+      "whip": 1.332,
+      "fip": null,
+      "inningsPitched": 270.3,
+      "strikeoutRate": 4.49,
+      "walkRate": 4.16,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 44,
+      "reliefAppearances": 14,
+      "eraAdjustedPitching": 122.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chc-1930s-odeake01",
     "playerId": "odeake01",
     "playerSlug": "o'deake01",
@@ -1795,6 +1881,92 @@
       "games": 80,
       "plateAppearances": 230,
       "eraAdjustedOffense": 117.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1930s-smithbo02",
+    "playerId": "smithbo02",
+    "playerSlug": "smithbo02",
+    "name": "Bob Smith",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1930s",
+    "featuredSeason": 1931,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "smithbo02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.79,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.22,
+      "whip": 1.252,
+      "so": 63,
+      "wins": 15,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 240.3,
+      "games": 36,
+      "starts": 29,
+      "reliefAppearances": 7,
+      "k9": 2.36,
+      "bb9": 2.32
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.22,
+      "whip": 1.252,
+      "so": 63,
+      "wins": 15,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 240.3,
+      "games": 36,
+      "starts": 29,
+      "reliefAppearances": 7,
+      "k9": 2.36,
+      "bb9": 2.32
+    },
+    "scoringStats": {
+      "whip": 1.252,
+      "fip": null,
+      "inningsPitched": 240.3,
+      "strikeoutRate": 2.36,
+      "walkRate": 2.32,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 36,
+      "reliefAppearances": 7,
+      "eraAdjustedPitching": 120
     },
     "pitchingScoringStats": null
   },
@@ -1875,6 +2047,92 @@
       "games": 119,
       "plateAppearances": 475,
       "eraAdjustedOffense": 112.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1930s-daviscu01",
+    "playerId": "daviscu01",
+    "playerSlug": "daviscu01",
+    "name": "Curt Davis",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1930s",
+    "featuredSeason": 1936,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "daviscu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.453,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 1.157,
+      "so": 52,
+      "wins": 11,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 153,
+      "games": 24,
+      "starts": 20,
+      "reliefAppearances": 4,
+      "k9": 3.06,
+      "bb9": 1.82
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 1.157,
+      "so": 52,
+      "wins": 11,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 153,
+      "games": 24,
+      "starts": 20,
+      "reliefAppearances": 4,
+      "k9": 3.06,
+      "bb9": 1.82
+    },
+    "scoringStats": {
+      "whip": 1.157,
+      "fip": null,
+      "inningsPitched": 153,
+      "strikeoutRate": 3.06,
+      "walkRate": 1.82,
+      "starts": 20,
+      "gamesStarted": 20,
+      "games": 24,
+      "reliefAppearances": 4,
+      "eraAdjustedPitching": 133.9
     },
     "pitchingScoringStats": null
   },
@@ -2033,6 +2291,85 @@
       "games": 54,
       "plateAppearances": 143,
       "eraAdjustedOffense": 115.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1930s-stephri01",
+    "playerId": "stephri01",
+    "playerSlug": "stephri01",
+    "name": "Riggs Stephenson",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1930s",
+    "featuredSeason": 1933,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "stephri01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.734,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.834,
+      "hr": 4,
+      "avg": 0.329,
+      "obp": 0.397,
+      "slg": 0.436,
+      "rbi": 51,
+      "sb": 5,
+      "games": 97,
+      "plateAppearances": 388
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.834,
+      "hr": 4,
+      "avg": 0.329,
+      "obp": 0.397,
+      "slg": 0.436,
+      "rbi": 51,
+      "sb": 5,
+      "games": 97,
+      "plateAppearances": 388
+    },
+    "scoringStats": {
+      "obp": 0.397,
+      "slg": 0.436,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 97,
+      "plateAppearances": 388,
+      "eraAdjustedOffense": 123.3
     },
     "pitchingScoringStats": null
   },

@@ -1926,6 +1926,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chc-2000s-vanpoto01",
+    "playerId": "vanpoto01",
+    "playerSlug": "vanpoto01",
+    "name": "Todd Van Poppel",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "vanpoto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.789,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.52,
+      "whip": 1.347,
+      "so": 90,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 75,
+      "games": 59,
+      "starts": 0,
+      "reliefAppearances": 59,
+      "k9": 10.8,
+      "bb9": 4.56
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.52,
+      "whip": 1.347,
+      "so": 90,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 75,
+      "games": 59,
+      "starts": 0,
+      "reliefAppearances": 59,
+      "k9": 10.8,
+      "bb9": 4.56
+    },
+    "scoringStats": {
+      "whip": 1.347,
+      "fip": null,
+      "inningsPitched": 75,
+      "strikeoutRate": 10.8,
+      "walkRate": 4.56,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 59,
+      "reliefAppearances": 59,
+      "eraAdjustedPitching": 172.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-2000s-liebejo01",
+    "playerId": "liebejo01",
+    "playerSlug": "liebejo01",
+    "name": "Jon Lieber",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "2000s",
+    "featuredSeason": 2001,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "liebejo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.392,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.8,
+      "whip": 1.149,
+      "so": 148,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 232.3,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 5.73,
+      "bb9": 1.59
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.8,
+      "whip": 1.149,
+      "so": 148,
+      "wins": 20,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 232.3,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 5.73,
+      "bb9": 1.59
+    },
+    "scoringStats": {
+      "whip": 1.149,
+      "fip": null,
+      "inningsPitched": 232.3,
+      "strikeoutRate": 5.73,
+      "walkRate": 1.59,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 34,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 114.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chc-2000s-mcgrifr01",
     "playerId": "mcgrifr01",
     "playerSlug": "mcgrifr01",
@@ -2241,6 +2413,171 @@
       "games": 149,
       "plateAppearances": 593,
       "eraAdjustedOffense": 115.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-2000s-theriry01",
+    "playerId": "theriry01",
+    "playerSlug": "theriry01",
+    "name": "Ryan Theriot",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "eligiblePositions": [
+      "2B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "theriry01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.656,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.934,
+      "hr": 3,
+      "avg": 0.328,
+      "obp": 0.412,
+      "slg": 0.522,
+      "rbi": 16,
+      "sb": 13,
+      "games": 53,
+      "plateAppearances": 159
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.934,
+      "hr": 3,
+      "avg": 0.328,
+      "obp": 0.412,
+      "slg": 0.522,
+      "rbi": 16,
+      "sb": 13,
+      "games": 53,
+      "plateAppearances": 159
+    },
+    "scoringStats": {
+      "obp": 0.412,
+      "slg": 0.522,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 53,
+      "plateAppearances": 159,
+      "eraAdjustedOffense": 122.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-2000s-clemema01",
+    "playerId": "clemema01",
+    "playerSlug": "clemema01",
+    "name": "Matt Clement",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "clemema01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.529,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.6,
+      "whip": 1.205,
+      "so": 215,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 205,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 9.44,
+      "bb9": 3.73
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.6,
+      "whip": 1.205,
+      "so": 215,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 205,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 9.44,
+      "bb9": 3.73
+    },
+    "scoringStats": {
+      "whip": 1.205,
+      "fip": null,
+      "inningsPitched": 205,
+      "strikeoutRate": 9.44,
+      "walkRate": 3.73,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 114
     },
     "pitchingScoringStats": null
   },

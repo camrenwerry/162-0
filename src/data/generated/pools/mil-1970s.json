@@ -264,7 +264,8 @@
     "featuredSeason": 1978,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1013,7 +1014,8 @@
     "decade": "1970s",
     "featuredSeason": 1975,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1253,7 +1255,8 @@
     "featuredSeason": 1979,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1332,7 +1335,8 @@
     "decade": "1970s",
     "featuredSeason": 1973,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1411,7 +1415,8 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1909,7 +1914,8 @@
     "decade": "1970s",
     "featuredSeason": 1978,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2392,6 +2398,258 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "mil-1970s-bellje01",
+    "playerId": "bellje01",
+    "playerSlug": "bellje01",
+    "name": "Jerry Bell",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1970s",
+    "featuredSeason": 1972,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "B",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "bellje01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.176,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.66,
+      "whip": 1.175,
+      "so": 20,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 70.7,
+      "games": 25,
+      "starts": 3,
+      "reliefAppearances": 22,
+      "k9": 2.55,
+      "bb9": 4.2
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.66,
+      "whip": 1.175,
+      "so": 20,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 70.7,
+      "games": 25,
+      "starts": 3,
+      "reliefAppearances": 22,
+      "k9": 2.55,
+      "bb9": 4.2
+    },
+    "scoringStats": {
+      "whip": 1.175,
+      "fip": null,
+      "inningsPitched": 70.7,
+      "strikeoutRate": 2.55,
+      "walkRate": 4.2,
+      "starts": 3,
+      "gamesStarted": 3,
+      "games": 25,
+      "reliefAppearances": 22,
+      "eraAdjustedPitching": 184.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-1970s-thomada01",
+    "playerId": "thomada01",
+    "playerSlug": "thomada01",
+    "name": "Dan Thomas",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1970s",
+    "featuredSeason": 1976,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "thomada01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.156,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.829,
+      "hr": 4,
+      "avg": 0.276,
+      "obp": 0.372,
+      "slg": 0.457,
+      "rbi": 15,
+      "sb": 1,
+      "games": 32,
+      "plateAppearances": 121
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.829,
+      "hr": 4,
+      "avg": 0.276,
+      "obp": 0.372,
+      "slg": 0.457,
+      "rbi": 15,
+      "sb": 1,
+      "games": 32,
+      "plateAppearances": 121
+    },
+    "scoringStats": {
+      "obp": 0.372,
+      "slg": 0.457,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 32,
+      "plateAppearances": 121,
+      "eraAdjustedOffense": 121.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-1970s-krausle02",
+    "playerId": "krausle02",
+    "playerSlug": "krausle02",
+    "name": "Lew Krausse",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1970s",
+    "featuredSeason": 1971,
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "krausle02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.68,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.94,
+      "whip": 1.253,
+      "so": 92,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 180.3,
+      "games": 43,
+      "starts": 22,
+      "reliefAppearances": 21,
+      "k9": 4.59,
+      "bb9": 3.09
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.94,
+      "whip": 1.253,
+      "so": 92,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 180.3,
+      "games": 43,
+      "starts": 22,
+      "reliefAppearances": 21,
+      "k9": 4.59,
+      "bb9": 3.09
+    },
+    "scoringStats": {
+      "whip": 1.253,
+      "fip": null,
+      "inningsPitched": 180.3,
+      "strikeoutRate": 4.59,
+      "walkRate": 3.09,
+      "starts": 22,
+      "gamesStarted": 22,
+      "games": 43,
+      "reliefAppearances": 21,
+      "eraAdjustedPitching": 117.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "mil-1970s-rodriel01",
     "playerId": "rodriel01",
     "playerSlug": "rodriel01",
@@ -2467,6 +2725,92 @@
       "games": 116,
       "plateAppearances": 422,
       "eraAdjustedOffense": 113.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "mil-1970s-lockwsk01",
+    "playerId": "lockwsk01",
+    "playerSlug": "lockwsk01",
+    "name": "Skip Lockwood",
+    "franchiseId": "mil",
+    "teamAbbreviation": "MIL",
+    "teamDisplayName": "Milwaukee Brewers",
+    "historicalTeamName": "Milwaukee Brewers",
+    "team": "MIL",
+    "decade": "1970s",
+    "featuredSeason": 1971,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "ML4"
+      ],
+      "sourcePlayerId": "lockwsk01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.008,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.33,
+      "whip": 1.356,
+      "so": 115,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 208,
+      "games": 33,
+      "starts": 32,
+      "reliefAppearances": 1,
+      "k9": 4.98,
+      "bb9": 3.94
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.33,
+      "whip": 1.356,
+      "so": 115,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 208,
+      "games": 33,
+      "starts": 32,
+      "reliefAppearances": 1,
+      "k9": 4.98,
+      "bb9": 3.94
+    },
+    "scoringStats": {
+      "whip": 1.356,
+      "fip": null,
+      "inningsPitched": 208,
+      "strikeoutRate": 4.98,
+      "walkRate": 3.94,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 33,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 103.9
     },
     "pitchingScoringStats": null
   },

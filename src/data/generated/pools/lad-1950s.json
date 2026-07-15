@@ -2066,6 +2066,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "lad-1950s-roebued01",
+    "playerId": "roebued01",
+    "playerSlug": "roebued01",
+    "name": "Ed Roebuck",
+    "franchiseId": "lad",
+    "teamAbbreviation": "BRO",
+    "teamDisplayName": "Brooklyn Dodgers",
+    "historicalTeamName": "Brooklyn Dodgers",
+    "team": "BRO",
+    "decade": "1950s",
+    "featuredSeason": 1957,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BRO"
+      ],
+      "sourcePlayerId": "roebued01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.055,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.204,
+      "so": 73,
+      "wins": 8,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 96.3,
+      "games": 44,
+      "starts": 1,
+      "reliefAppearances": 43,
+      "k9": 6.82,
+      "bb9": 4.3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.204,
+      "so": 73,
+      "wins": 8,
+      "saves": 8,
+      "sv": 8,
+      "inningsPitched": 96.3,
+      "games": 44,
+      "starts": 1,
+      "reliefAppearances": 43,
+      "k9": 6.82,
+      "bb9": 4.3
+    },
+    "scoringStats": {
+      "whip": 1.204,
+      "fip": null,
+      "inningsPitched": 96.3,
+      "strikeoutRate": 6.82,
+      "walkRate": 4.3,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 44,
+      "reliefAppearances": 43,
+      "eraAdjustedPitching": 143.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "lad-1950s-hugheji02",
+    "playerId": "hugheji02",
+    "playerSlug": "hugheji02",
+    "name": "Jim Hughes",
+    "franchiseId": "lad",
+    "teamAbbreviation": "BRO",
+    "teamDisplayName": "Brooklyn Dodgers",
+    "historicalTeamName": "Brooklyn Dodgers",
+    "team": "BRO",
+    "decade": "1950s",
+    "featuredSeason": 1954,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BRO"
+      ],
+      "sourcePlayerId": "hugheji02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.873,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.22,
+      "whip": 1.385,
+      "so": 58,
+      "wins": 8,
+      "saves": 24,
+      "sv": 24,
+      "inningsPitched": 86.7,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 6.02,
+      "bb9": 4.57
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.22,
+      "whip": 1.385,
+      "so": 58,
+      "wins": 8,
+      "saves": 24,
+      "sv": 24,
+      "inningsPitched": 86.7,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 6.02,
+      "bb9": 4.57
+    },
+    "scoringStats": {
+      "whip": 1.385,
+      "fip": null,
+      "inningsPitched": 86.7,
+      "strikeoutRate": 6.02,
+      "walkRate": 4.57,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 60,
+      "reliefAppearances": 60,
+      "eraAdjustedPitching": 126.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "lad-1950s-morgabo01",
     "playerId": "morgabo01",
     "playerSlug": "morgabo01",
@@ -2225,6 +2397,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "lad-1950s-graydi01",
+    "playerId": "graydi01",
+    "playerSlug": "graydi01",
+    "name": "Dick Gray",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "historicalTeamName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1950s",
+    "featuredSeason": 1958,
+    "eligiblePositions": [
+      "3B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "graydi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.189,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.799,
+      "hr": 9,
+      "avg": 0.249,
+      "obp": 0.327,
+      "slg": 0.472,
+      "rbi": 30,
+      "sb": 1,
+      "games": 58,
+      "plateAppearances": 221
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.799,
+      "hr": 9,
+      "avg": 0.249,
+      "obp": 0.327,
+      "slg": 0.472,
+      "rbi": 30,
+      "sb": 1,
+      "games": 58,
+      "plateAppearances": 221
+    },
+    "scoringStats": {
+      "obp": 0.327,
+      "slg": 0.472,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 58,
+      "plateAppearances": 221,
+      "eraAdjustedOffense": 109.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "lad-1950s-cimolgi01",
     "playerId": "cimolgi01",
     "playerSlug": "cimolgi01",
@@ -2302,6 +2553,85 @@
       "games": 142,
       "plateAppearances": 590,
       "eraAdjustedOffense": 104.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "lad-1950s-demetdo01",
+    "playerId": "demetdo01",
+    "playerSlug": "demetdo01",
+    "name": "Don Demeter",
+    "franchiseId": "lad",
+    "teamAbbreviation": "LAD",
+    "teamDisplayName": "Los Angeles Dodgers",
+    "historicalTeamName": "Los Angeles Dodgers",
+    "team": "LAD",
+    "decade": "1950s",
+    "featuredSeason": 1959,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "LAN"
+      ],
+      "sourcePlayerId": "demetdo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.156,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.731,
+      "hr": 18,
+      "avg": 0.256,
+      "obp": 0.294,
+      "slg": 0.437,
+      "rbi": 70,
+      "sb": 5,
+      "games": 139,
+      "plateAppearances": 401
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.731,
+      "hr": 18,
+      "avg": 0.256,
+      "obp": 0.294,
+      "slg": 0.437,
+      "rbi": 70,
+      "sb": 5,
+      "games": 139,
+      "plateAppearances": 401
+    },
+    "scoringStats": {
+      "obp": 0.294,
+      "slg": 0.437,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 139,
+      "plateAppearances": 401,
+      "eraAdjustedOffense": 101
     },
     "pitchingScoringStats": null
   },

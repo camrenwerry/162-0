@@ -442,7 +442,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1448,6 +1449,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sea-2020s-brashma01",
+    "playerId": "brashma01",
+    "playerSlug": "brashma01",
+    "name": "Matt Brash",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "brashma01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.574,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 1.246,
+      "so": 58,
+      "wins": 1,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 47.3,
+      "games": 53,
+      "starts": 0,
+      "reliefAppearances": 53,
+      "k9": 11.03,
+      "bb9": 3.42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.47,
+      "whip": 1.246,
+      "so": 58,
+      "wins": 1,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 47.3,
+      "games": 53,
+      "starts": 0,
+      "reliefAppearances": 53,
+      "k9": 11.03,
+      "bb9": 3.42
+    },
+    "scoringStats": {
+      "whip": 1.246,
+      "fip": null,
+      "inningsPitched": 47.3,
+      "strikeoutRate": 11.03,
+      "walkRate": 3.42,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 53,
+      "reliefAppearances": 53,
+      "eraAdjustedPitching": 165.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-2020s-murfepe01",
+    "playerId": "murfepe01",
+    "playerSlug": "murfepe01",
+    "name": "Penn Murfee",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "murfepe01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.664,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.99,
+      "whip": 0.952,
+      "so": 76,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 69.3,
+      "games": 64,
+      "starts": 1,
+      "reliefAppearances": 63,
+      "k9": 9.87,
+      "bb9": 2.34
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.99,
+      "whip": 0.952,
+      "so": 76,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 69.3,
+      "games": 64,
+      "starts": 1,
+      "reliefAppearances": 63,
+      "k9": 9.87,
+      "bb9": 2.34
+    },
+    "scoringStats": {
+      "whip": 0.952,
+      "fip": null,
+      "inningsPitched": 69.3,
+      "strikeoutRate": 9.87,
+      "walkRate": 2.34,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 64,
+      "reliefAppearances": 63,
+      "eraAdjustedPitching": 129.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sea-2020s-nolaau01",
     "playerId": "nolaau01",
     "playerSlug": "nolaau01",
@@ -1523,6 +1696,92 @@
       "games": 29,
       "plateAppearances": 110,
       "eraAdjustedOffense": 123.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-2020s-gonzama02",
+    "playerId": "gonzama02",
+    "playerSlug": "gonzama02",
+    "name": "Marco Gonzales",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2020s",
+    "featuredSeason": 2020,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "gonzama02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.968,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 0.947,
+      "so": 64,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 69.7,
+      "games": 11,
+      "starts": 11,
+      "reliefAppearances": 0,
+      "k9": 8.27,
+      "bb9": 0.9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.1,
+      "whip": 0.947,
+      "so": 64,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 69.7,
+      "games": 11,
+      "starts": 11,
+      "reliefAppearances": 0,
+      "k9": 8.27,
+      "bb9": 0.9
+    },
+    "scoringStats": {
+      "whip": 0.947,
+      "fip": null,
+      "inningsPitched": 69.7,
+      "strikeoutRate": 8.27,
+      "walkRate": 0.9,
+      "starts": 11,
+      "gamesStarted": 11,
+      "games": 11,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 142.7
     },
     "pitchingScoringStats": null
   },
@@ -1620,7 +1879,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1762,6 +2022,92 @@
       "games": 47,
       "plateAppearances": 158,
       "eraAdjustedOffense": 119.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sea-2020s-chargjt01",
+    "playerId": "chargjt01",
+    "playerSlug": "chargjt01",
+    "name": "J. T. Chargois",
+    "franchiseId": "sea",
+    "teamAbbreviation": "SEA",
+    "teamDisplayName": "Seattle Mariners",
+    "historicalTeamName": "Seattle Mariners",
+    "team": "SEA",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "B",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SEA"
+      ],
+      "sourcePlayerId": "chargjt01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.558,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 0.967,
+      "so": 29,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30,
+      "games": 31,
+      "starts": 0,
+      "reliefAppearances": 31,
+      "k9": 8.7,
+      "bb9": 1.8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 0.967,
+      "so": 29,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30,
+      "games": 31,
+      "starts": 0,
+      "reliefAppearances": 31,
+      "k9": 8.7,
+      "bb9": 1.8
+    },
+    "scoringStats": {
+      "whip": 0.967,
+      "fip": null,
+      "inningsPitched": 30,
+      "strikeoutRate": 8.7,
+      "walkRate": 1.8,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 31,
+      "reliefAppearances": 31,
+      "eraAdjustedPitching": 144
     },
     "pitchingScoringStats": null
   },
@@ -1938,7 +2284,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2017,7 +2364,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2097,7 +2445,8 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2415,7 +2764,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

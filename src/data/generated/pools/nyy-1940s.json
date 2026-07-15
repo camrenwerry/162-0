@@ -2394,6 +2394,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-1940s-holcoke01",
+    "playerId": "holcoke01",
+    "playerSlug": "holcoke01",
+    "name": "Ken Holcombe",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1940s",
+    "featuredSeason": 1945,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "holcoke01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.728,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.79,
+      "whip": 1.265,
+      "so": 20,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55.3,
+      "games": 23,
+      "starts": 2,
+      "reliefAppearances": 21,
+      "k9": 3.25,
+      "bb9": 4.39
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.79,
+      "whip": 1.265,
+      "so": 20,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55.3,
+      "games": 23,
+      "starts": 2,
+      "reliefAppearances": 21,
+      "k9": 3.25,
+      "bb9": 4.39
+    },
+    "scoringStats": {
+      "whip": 1.265,
+      "fip": null,
+      "inningsPitched": 55.3,
+      "strikeoutRate": 3.25,
+      "walkRate": 4.39,
+      "starts": 2,
+      "gamesStarted": 2,
+      "games": 23,
+      "reliefAppearances": 21,
+      "eraAdjustedPitching": 187.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-1940s-derryru01",
     "playerId": "derryru01",
     "playerSlug": "derryru01",
@@ -2471,6 +2557,173 @@
       "games": 78,
       "plateAppearances": 286,
       "eraAdjustedOffense": 109.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1940s-sheasp01",
+    "playerId": "sheasp01",
+    "playerSlug": "sheasp01",
+    "name": "Spec Shea",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1940s",
+    "featuredSeason": 1947,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "sheasp01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.529,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.07,
+      "whip": 1.209,
+      "so": 89,
+      "wins": 14,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 178.7,
+      "games": 27,
+      "starts": 23,
+      "reliefAppearances": 4,
+      "k9": 4.48,
+      "bb9": 4.48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.07,
+      "whip": 1.209,
+      "so": 89,
+      "wins": 14,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 178.7,
+      "games": 27,
+      "starts": 23,
+      "reliefAppearances": 4,
+      "k9": 4.48,
+      "bb9": 4.48
+    },
+    "scoringStats": {
+      "whip": 1.209,
+      "fip": null,
+      "inningsPitched": 178.7,
+      "strikeoutRate": 4.48,
+      "walkRate": 4.48,
+      "starts": 23,
+      "gamesStarted": 23,
+      "games": 27,
+      "reliefAppearances": 4,
+      "eraAdjustedPitching": 120.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1940s-bauerha01",
+    "playerId": "bauerha01",
+    "playerSlug": "bauerha01",
+    "name": "Hank Bauer",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1940s",
+    "featuredSeason": 1949,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYA"
+      ],
+      "sourcePlayerId": "bauerha01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.291,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.786,
+      "hr": 10,
+      "avg": 0.272,
+      "obp": 0.354,
+      "slg": 0.432,
+      "rbi": 45,
+      "sb": 2,
+      "games": 103,
+      "plateAppearances": 344
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.786,
+      "hr": 10,
+      "avg": 0.272,
+      "obp": 0.354,
+      "slg": 0.432,
+      "rbi": 45,
+      "sb": 2,
+      "games": 103,
+      "plateAppearances": 344
+    },
+    "scoringStats": {
+      "obp": 0.354,
+      "slg": 0.432,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 103,
+      "plateAppearances": 344,
+      "eraAdjustedOffense": 107.7
     },
     "pitchingScoringStats": null
   },

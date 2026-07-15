@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict'
 import { DraftEngine } from '../src/game/DraftEngine'
-import { partitionPlayersByAvailability } from '../src/game/Eligibility'
+import { getAvailablePositions, partitionPlayersByAvailability, resolveAssignmentSlot } from '../src/game/Eligibility'
 import { getCompactPlayerStats } from '../src/game/PlayerStats'
 import { Randomizer } from '../src/game/Randomizer'
 import { DiamondDraftScoring } from '../src/game/ScoringEngine'
+import { calculateHitterValue, calculateStartingPitcherValue } from '../src/game/scoring'
 import { TeamPool } from '../src/game/TeamPool'
 import { getSimulationDuration, getSimulationPhase, getSimulationReveal, SIMULATION_PHASES } from '../src/components/results/simulationSequence'
 import { ROSTER_SLOTS, type Position } from '../src/types/draft'
@@ -20,6 +21,39 @@ assert(fixtureCombination)
 const fixtureHitter = pool.getPlayers(fixtureCombination).find(({ playerType }) => playerType === 'hitter')
 const fixturePitcher = pool.getPlayers(fixtureCombination).find(({ playerType }) => playerType === 'pitcher')
 assert(fixtureHitter?.playerType === 'hitter' && fixturePitcher?.playerType === 'pitcher')
+
+const angels2010s = pool.getCombinations().find(({ id }) => id === 'ana-2010s')
+assert(angels2010s)
+const twoWayOhtani = pool.getPlayers(angels2010s).find(({ playerId }) => playerId === 'ohtansh01')
+assert(twoWayOhtani?.playerType === 'twoWay')
+assert.deepEqual([...getAvailablePositions(twoWayOhtani, {})].sort(), ['DH', 'SP'])
+assert.equal(resolveAssignmentSlot(twoWayOhtani, 'DH', {}), 'DH')
+assert.equal(resolveAssignmentSlot(twoWayOhtani, 'SP', {}), 'SP1')
+assert.deepEqual(getAvailablePositions(twoWayOhtani, { DH: fixtureHitter }), ['SP'])
+assert.deepEqual(getAvailablePositions(twoWayOhtani, { SP1: fixturePitcher, SP2: fixturePitcher, SP3: fixturePitcher }), ['DH'])
+assert.deepEqual(getAvailablePositions(twoWayOhtani, { DH: fixtureHitter, SP1: fixturePitcher, SP2: fixturePitcher, SP3: fixturePitcher }), [])
+assert.equal(pool.getStatView('DH', 'name'), 'hitter')
+assert.equal(pool.getStatView('SP', 'name'), 'pitcher')
+assert(pool.query({ combination: angels2010s, excludedIds: new Set(), filter: 'DH', sort: 'name', search: 'Ohtani' }).some(({ id }) => id === twoWayOhtani.id))
+assert(pool.query({ combination: angels2010s, excludedIds: new Set(), filter: 'SP', sort: 'name', search: 'Ohtani' }).some(({ id }) => id === twoWayOhtani.id))
+assert.equal(getCompactPlayerStats(twoWayOhtani, 'hitter')[0]?.label, 'OPS')
+assert.equal(getCompactPlayerStats(twoWayOhtani, 'pitcher')[0]?.label, 'ERA')
+const ohtaniAtDh = calculateHitterValue(twoWayOhtani, 'DH', 'DH')
+const ohtaniAtSp = calculateStartingPitcherValue(twoWayOhtani, 'SP1')
+assert.equal(ohtaniAtDh.role, 'hitter')
+assert.equal(ohtaniAtDh.facets.defense, 0)
+assert(ohtaniAtDh.components.some(({ metric, rawValue }) => metric === 'OPS' && rawValue === twoWayOhtani.visibleStats.ops))
+assert.equal(ohtaniAtSp.role, 'SP')
+assert(ohtaniAtSp.components.some(({ metric, rawValue }) => metric === 'ERA' && rawValue === twoWayOhtani.pitchingVisibleStats.era))
+
+const dodgers2020s = pool.getCombinations().find(({ id }) => id === 'lad-2020s')
+assert(dodgers2020s)
+const dhOnlyOhtani = pool.getPlayers(dodgers2020s).find(({ playerId }) => playerId === 'ohtansh01')
+assert(dhOnlyOhtani?.playerType === 'hitter')
+assert.deepEqual(dhOnlyOhtani.eligiblePositions, ['DH'])
+assert.deepEqual(getAvailablePositions(dhOnlyOhtani, {}), ['DH'])
+assert.deepEqual(getAvailablePositions(dhOnlyOhtani, { DH: fixtureHitter }), [])
+
 assert.deepEqual(getCompactPlayerStats(fixtureHitter, 'hitter').map(({ label }) => label), ['OPS', 'AVG', 'OBP', 'SLG'])
 const partialHitterStats = { ...fixtureHitter.visibleStats, ops: null, hr: 8, avg: .317, obp: null, slg: null, rbi: null, sb: null }
 const bobPartial = { ...fixtureHitter, id: 'partial-bob', visibleStats: partialHitterStats, stats: partialHitterStats }

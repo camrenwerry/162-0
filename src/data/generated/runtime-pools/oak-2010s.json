@@ -569,6 +569,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "oak-2010s-gregelu01",
+    "playerId": "gregelu01",
+    "playerSlug": "gregelu01",
+    "name": "Luke Gregerson",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.12,
+      "whip": 1.009,
+      "so": 59,
+      "wins": 5,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 72.3,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 7.34,
+      "bb9": 1.87
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.009,
+      "fip": null,
+      "inningsPitched": 72.3,
+      "strikeoutRate": 7.34,
+      "walkRate": 1.87,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 180.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "oak-2010s-hillri01",
     "playerId": "hillri01",
     "playerSlug": "hillri01",
@@ -721,6 +773,58 @@
       "games": 16,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 175.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-2010s-oteroda01",
+    "playerId": "oteroda01",
+    "playerSlug": "oteroda01",
+    "name": "Dan Otero",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2013,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.38,
+      "whip": 1.231,
+      "so": 27,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 39,
+      "games": 33,
+      "starts": 0,
+      "reliefAppearances": 33,
+      "k9": 6.23,
+      "bb9": 1.38
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.231,
+      "fip": null,
+      "inningsPitched": 39,
+      "strikeoutRate": 6.23,
+      "walkRate": 1.38,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 33,
+      "reliefAppearances": 33,
+      "eraAdjustedPitching": 288
     },
     "pitchingScoringStats": null
   },
@@ -939,7 +1043,8 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -990,7 +1095,8 @@
       "1B",
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1022,6 +1128,58 @@
       "games": 126,
       "plateAppearances": 497,
       "eraAdjustedOffense": 119.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-2010s-cahiltr01",
+    "playerId": "cahiltr01",
+    "playerSlug": "cahiltr01",
+    "name": "Trevor Cahill",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2010,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.97,
+      "whip": 1.108,
+      "so": 118,
+      "wins": 18,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 196.7,
+      "games": 30,
+      "starts": 30,
+      "reliefAppearances": 0,
+      "k9": 5.4,
+      "bb9": 2.88
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.108,
+      "fip": null,
+      "inningsPitched": 196.7,
+      "strikeoutRate": 5.4,
+      "walkRate": 2.88,
+      "starts": 30,
+      "gamesStarted": 30,
+      "games": 30,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 139.1
     },
     "pitchingScoringStats": null
   },
@@ -1074,6 +1232,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "oak-2010s-lestejo01",
+    "playerId": "lestejo01",
+    "playerSlug": "lestejo01",
+    "name": "Jon Lester",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2010s",
+    "featuredSeason": 2014,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.35,
+      "whip": 1.07,
+      "so": 71,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 76.7,
+      "games": 11,
+      "starts": 11,
+      "reliefAppearances": 0,
+      "k9": 8.33,
+      "bb9": 1.88
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.07,
+      "fip": null,
+      "inningsPitched": 76.7,
+      "strikeoutRate": 8.33,
+      "walkRate": 1.88,
+      "starts": 11,
+      "gamesStarted": 11,
+      "games": 11,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 162.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "oak-2010s-cespeyo01",
     "playerId": "cespeyo01",
     "playerSlug": "cespeyo01",
@@ -1087,7 +1297,8 @@
     "featuredSeason": 2012,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1378,7 +1589,8 @@
     "decade": "2010s",
     "featuredSeason": 2014,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1426,7 +1638,8 @@
     "decade": "2010s",
     "featuredSeason": 2014,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

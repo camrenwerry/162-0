@@ -2222,6 +2222,251 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chc-1940s-noviklo01",
+    "playerId": "noviklo01",
+    "playerSlug": "noviklo01",
+    "name": "Lou Novikoff",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1940s",
+    "featuredSeason": 1942,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "noviklo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.167,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.753,
+      "hr": 7,
+      "avg": 0.3,
+      "obp": 0.337,
+      "slg": 0.416,
+      "rbi": 64,
+      "sb": 3,
+      "games": 128,
+      "plateAppearances": 514
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.753,
+      "hr": 7,
+      "avg": 0.3,
+      "obp": 0.337,
+      "slg": 0.416,
+      "rbi": 64,
+      "sb": 3,
+      "games": 128,
+      "plateAppearances": 514
+    },
+    "scoringStats": {
+      "obp": 0.337,
+      "slg": 0.416,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 128,
+      "plateAppearances": 514,
+      "eraAdjustedOffense": 114.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1940s-hanyzed01",
+    "playerId": "hanyzed01",
+    "playerSlug": "hanyzed01",
+    "name": "Ed Hanyzewski",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1940s",
+    "featuredSeason": 1943,
+    "eligiblePositions": [
+      "SP",
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "hanyzed01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.128,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.269,
+      "so": 55,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 130,
+      "games": 33,
+      "starts": 16,
+      "reliefAppearances": 17,
+      "k9": 3.81,
+      "bb9": 3.12
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.269,
+      "so": 55,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 130,
+      "games": 33,
+      "starts": 16,
+      "reliefAppearances": 17,
+      "k9": 3.81,
+      "bb9": 3.12
+    },
+    "scoringStats": {
+      "whip": 1.269,
+      "fip": null,
+      "inningsPitched": 130,
+      "strikeoutRate": 3.81,
+      "walkRate": 3.12,
+      "starts": 16,
+      "gamesStarted": 16,
+      "games": 33,
+      "reliefAppearances": 17,
+      "eraAdjustedPitching": 132
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1940s-gillepa01",
+    "playerId": "gillepa01",
+    "playerSlug": "gillepa01",
+    "name": "Paul Gillespie",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1940s",
+    "featuredSeason": 1945,
+    "eligiblePositions": [
+      "C"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "gillepa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.606,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.746,
+      "hr": 3,
+      "avg": 0.288,
+      "obp": 0.366,
+      "slg": 0.38,
+      "rbi": 25,
+      "sb": 2,
+      "games": 75,
+      "plateAppearances": 183
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.746,
+      "hr": 3,
+      "avg": 0.288,
+      "obp": 0.366,
+      "slg": 0.38,
+      "rbi": 25,
+      "sb": 2,
+      "games": 75,
+      "plateAppearances": 183
+    },
+    "scoringStats": {
+      "obp": 0.366,
+      "slg": 0.38,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 75,
+      "plateAppearances": 183,
+      "eraAdjustedOffense": 107.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chc-1940s-hermabi01",
     "playerId": "hermabi01",
     "playerSlug": "hermabi01",
@@ -2297,6 +2542,85 @@
       "games": 135,
       "plateAppearances": 616,
       "eraAdjustedOffense": 103.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chc-1940s-aberscl01",
+    "playerId": "aberscl01",
+    "playerSlug": "aberscl01",
+    "name": "Cliff Aberson",
+    "franchiseId": "chc",
+    "teamAbbreviation": "CHC",
+    "teamDisplayName": "Chicago Cubs",
+    "historicalTeamName": "Chicago Cubs",
+    "team": "CHC",
+    "decade": "1940s",
+    "featuredSeason": 1947,
+    "eligiblePositions": [
+      "LF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CHN"
+      ],
+      "sourcePlayerId": "aberscl01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 35.852,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.819,
+      "hr": 4,
+      "avg": 0.279,
+      "obp": 0.369,
+      "slg": 0.45,
+      "rbi": 20,
+      "sb": 0,
+      "games": 47,
+      "plateAppearances": 160
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.819,
+      "hr": 4,
+      "avg": 0.279,
+      "obp": 0.369,
+      "slg": 0.45,
+      "rbi": 20,
+      "sb": 0,
+      "games": 47,
+      "plateAppearances": 160
+    },
+    "scoringStats": {
+      "obp": 0.369,
+      "slg": 0.45,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 47,
+      "plateAppearances": 160,
+      "eraAdjustedOffense": 112.8
     },
     "pitchingScoringStats": null
   },

@@ -66,6 +66,7 @@ Report only. The audit compares the chosen season with every eligible same-franc
 | Nelson Briles | St. Louis Cardinals | 1960s | 1967 | 1968 | Shorter featured season (155.3 workload) narrowly outranks fuller 1968 season (243.7) | no |
 | Lou Brock | St. Louis Cardinals | 1960s | 1964 | 1967 | Shorter featured season (464 workload) narrowly outranks fuller 1967 season (724) | no |
 | Dick Brown | Cleveland Indians | 1950s | 1957 | 1958 | Shorter featured season (121 workload) narrowly outranks fuller 1958 season (193) | no |
+| Ollie Brown | Milwaukee Brewers | 1970s | 1972 | 1973 | Shorter featured season (200 workload) narrowly outranks fuller 1973 season (333) | no |
 | Keon Broxton | Milwaukee Brewers | 2010s | 2016 | 2017 | Shorter featured season (244 workload) narrowly outranks fuller 2017 season (463) | no |
 | Jay Bruce | Cincinnati Reds | 2010s | 2016 | 2013 | Shorter featured season (402 workload) narrowly outranks fuller 2013 season (696) | no |
 | Steve Brye | Minnesota Twins | 1970s | 1973 | 1974 | Shorter featured season (318 workload) narrowly outranks fuller 1974 season (521) | no |
@@ -95,6 +96,7 @@ Report only. The audit compares the chosen season with every eligible same-franc
 | Endy Chavez | Montreal Expos | 2000s | 2002 | 2004 | Shorter featured season (138 workload) narrowly outranks fuller 2004 season (547) | no |
 | Bruce Chen | Kansas City Royals | 2010s | 2013 | 2012 | Shorter featured season (121 workload) narrowly outranks fuller 2012 season (191.7) | no |
 | Harry Chiti | Kansas City Athletics | 1950s | 1959 | 1958 | Shorter featured season (180 workload) narrowly outranks fuller 1958 season (327) | no |
+| Ji-Man Choi | Tampa Bay Rays | 2010s | 2018 | 2019 | Shorter featured season (189 workload) narrowly outranks fuller 2019 season (487) | no |
 | Shin-Soo Choo | Cleveland Indians | 2000s | 2008 | 2009 | Shorter featured season (370 workload) narrowly outranks fuller 2009 season (685) | no |
 | Bubba Church | Philadelphia Phillies | 1950s | 1950 | 1951 | Shorter featured season (142 workload) narrowly outranks fuller 1951 season (247) | no |
 | Ryan Church | Washington Nationals | 2000s | 2006 | 2007 | Shorter featured season (230 workload) narrowly outranks fuller 2007 season (530) | no |
@@ -118,6 +120,7 @@ Report only. The audit compares the chosen season with every eligible same-franc
 | Bruce Cunningham | Boston Braves | 1930s | 1932 | 1931 | Shorter featured season (47 workload) narrowly outranks fuller 1931 season (136.7) | no |
 | Guy Curtright | Chicago White Sox | 1940s | 1945 | 1943 | Shorter featured season (367 workload) narrowly outranks fuller 1943 season (572) | no |
 | Danny Darwin | Texas Rangers | 1980s | 1980 | 1984 | Shorter featured season (109.7 workload) narrowly outranks fuller 1984 season (223.7) | no |
+| Glenn Davis | Baltimore Orioles | 1990s | 1991 | 1992 | Shorter featured season (199 workload) narrowly outranks fuller 1992 season (442) | no |
 | Andre Dawson | Montreal Expos | 1980s | 1981 | 1983 | Shorter featured season (441 workload) narrowly outranks fuller 1983 season (698) | no |
 | Bryan De La Cruz | Miami Marlins | 2020s | 2021 | 2023 | Shorter featured season (219 workload) narrowly outranks fuller 2023 season (625) | no |
 | Ike Delock | Boston Red Sox | 1960s | 1962 | 1961 | Shorter featured season (86.3 workload) narrowly outranks fuller 1961 season (156) | no |
@@ -220,7 +223,6 @@ Report only. The audit compares the chosen season with every eligible same-franc
 | Myril Hoag | New York Yankees | 1930s | 1936 | 1937 | Shorter featured season (169 workload) narrowly outranks fuller 1937 season (404) | no |
 | Grant Holmes | Atlanta Braves | 2020s | 2024 | 2025 | Shorter featured season (68.3 workload) narrowly outranks fuller 2025 season (115) | no |
 | Joe Hoover | Detroit Tigers | 1940s | 1945 | 1943 | Shorter featured season (250 workload) narrowly outranks fuller 1943 season (640) | no |
-| Willie Horton | Detroit Tigers | 1970s | 1974 | 1971 | Shorter featured season (263 workload) narrowly outranks fuller 1971 season (498) | no |
 | David Howard | Kansas City Royals | 1990s | 1995 | 1996 | Shorter featured season (287 workload) narrowly outranks fuller 1996 season (485) | no |
 | Thomas Howard | Cincinnati Reds | 1990s | 1993 | 1996 | Shorter featured season (154 workload) narrowly outranks fuller 1996 season (386) | no |
 | Tim Hulett | Baltimore Orioles | 1990s | 1992 | 1993 | Shorter featured season (153 workload) narrowly outranks fuller 1993 season (289) | no |
@@ -393,6 +395,7 @@ Report only. The audit compares the chosen season with every eligible same-franc
 | Geno Petralli | Texas Rangers | 1990s | 1991 | 1990 | Shorter featured season (228 workload) narrowly outranks fuller 1990 season (382) | no |
 | Ben Petrick | Colorado Rockies | 2000s | 2000 | 2001 | Shorter featured season (173 workload) narrowly outranks fuller 2001 season (282) | no |
 | Andy Pettitte | New York Yankees | 2010s | 2012 | 2013 | Shorter featured season (75.3 workload) narrowly outranks fuller 2013 season (185.3) | no |
+| Ken Phelps | Seattle Mariners | 1980s | 1988 | 1986 | Shorter featured season (244 workload) narrowly outranks fuller 1986 season (441) | no |
 | Tony Phillips | Oakland Athletics | 1980s | 1985 | 1986 | Shorter featured season (178 workload) narrowly outranks fuller 1986 season (532) | no |
 | Billy Pierce | San Francisco Giants | 1960s | 1964 | 1962 | Shorter featured season (49 workload) narrowly outranks fuller 1962 season (162.3) | no |
 | Juan Pierre | Los Angeles Dodgers | 2000s | 2009 | 2007 | Shorter featured season (425 workload) narrowly outranks fuller 2007 season (729) | no |
@@ -448,6 +451,7 @@ Report only. The audit compares the chosen season with every eligible same-franc
 | Jeff Russell | Cincinnati Reds | 1980s | 1983 | 1984 | Shorter featured season (68.3 workload) narrowly outranks fuller 1984 season (181.7) | no |
 | Connie Ryan | Boston Braves | 1940s | 1944 | 1947 | Shorter featured season (381 workload) narrowly outranks fuller 1947 season (627) | no |
 | Jeff Samardzija | Chicago Cubs | 2010s | 2014 | 2013 | Shorter featured season (108 workload) narrowly outranks fuller 2013 season (213.7) | no |
+| Juan Samuel | Toronto Blue Jays | 1990s | 1997 | 1996 | Shorter featured season (108 workload) narrowly outranks fuller 1996 season (207) | no |
 | Jesus Sanchez | Miami Marlins | 2020s | 2021 | 2024 | Shorter featured season (251 workload) narrowly outranks fuller 2024 season (537) | no |
 | Carlos Santana | Cleveland Indians | 2020s | 2020 | 2025 | Shorter featured season (255 workload) narrowly outranks fuller 2025 season (455) | no |
 | Michael Saunders | Seattle Mariners | 2010s | 2014 | 2012 | Shorter featured season (263 workload) narrowly outranks fuller 2012 season (553) | no |
@@ -476,6 +480,7 @@ Report only. The audit compares the chosen season with every eligible same-franc
 | Alfredo Simon | Baltimore Orioles | 2010s | 2010 | 2011 | Shorter featured season (49.3 workload) narrowly outranks fuller 2011 season (115.7) | no |
 | Alfredo Simon | Cincinnati Reds | 2010s | 2013 | 2014 | Shorter featured season (87.7 workload) narrowly outranks fuller 2014 season (196.3) | no |
 | Bill Skowron | New York Yankees | 1950s | 1954 | 1956 | Shorter featured season (237 workload) narrowly outranks fuller 1956 season (523) | no |
+| Austin Slater | San Francisco Giants | 2020s | 2020 | 2022 | Shorter featured season (104 workload) narrowly outranks fuller 2022 season (325) | no |
 | Don Slaught | Kansas City Royals | 1980s | 1982 | 1984 | Shorter featured season (126 workload) narrowly outranks fuller 1984 season (446) | no |
 | Roy Smalley | Minnesota Twins | 1980s | 1981 | 1980 | Shorter featured season (200 workload) narrowly outranks fuller 1980 season (564) | no |
 | Caleb Smith | Arizona Diamondbacks | 2020s | 2022 | 2021 | Shorter featured season (70 workload) narrowly outranks fuller 2021 season (113.7) | no |
@@ -526,6 +531,7 @@ Report only. The audit compares the chosen season with every eligible same-franc
 | Jason Varitek | Boston Red Sox | 2010s | 2010 | 2011 | Shorter featured season (123 workload) narrowly outranks fuller 2011 season (250) | no |
 | Esmerling Vasquez | Arizona Diamondbacks | 2010s | 2011 | 2010 | Shorter featured season (30.3 workload) narrowly outranks fuller 2010 season (53.7) | no |
 | Ron Villone | New York Yankees | 2000s | 2007 | 2006 | Shorter featured season (42.3 workload) narrowly outranks fuller 2006 season (80.3) | no |
+| Joe Vitiello | Kansas City Royals | 1990s | 1995 | 1996 | Shorter featured season (142 workload) narrowly outranks fuller 1996 season (301) | no |
 | Arodys Vizcaino | Atlanta Braves | 2010s | 2015 | 2017 | Shorter featured season (33.7 workload) narrowly outranks fuller 2017 season (57.3) | no |
 | Dave Von Ohlen | St. Louis Cardinals | 1980s | 1984 | 1983 | Shorter featured season (34.7 workload) narrowly outranks fuller 1983 season (68.3) | no |
 | Larry Walker | St. Louis Cardinals | 2000s | 2004 | 2005 | Shorter featured season (178 workload) narrowly outranks fuller 2005 season (367) | no |

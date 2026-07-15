@@ -98,7 +98,8 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -672,7 +673,8 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1578,7 +1580,8 @@
     "decade": "1970s",
     "featuredSeason": 1976,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1739,7 +1742,8 @@
     "featuredSeason": 1979,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1971,6 +1975,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-1970s-parrila02",
+    "playerId": "parrila02",
+    "playerSlug": "parrila02",
+    "name": "Lance Parrish",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "C"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "parrila02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.706,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.8,
+      "hr": 19,
+      "avg": 0.276,
+      "obp": 0.343,
+      "slg": 0.456,
+      "rbi": 65,
+      "sb": 6,
+      "games": 143,
+      "plateAppearances": 548
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.8,
+      "hr": 19,
+      "avg": 0.276,
+      "obp": 0.343,
+      "slg": 0.456,
+      "rbi": 65,
+      "sb": 6,
+      "games": 143,
+      "plateAppearances": 548
+    },
+    "scoringStats": {
+      "obp": 0.343,
+      "slg": 0.456,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 143,
+      "plateAppearances": 548,
+      "eraAdjustedOffense": 107.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-1970s-brownik01",
     "playerId": "brownik01",
     "playerSlug": "brownik01",
@@ -2125,6 +2208,264 @@
       "games": 106,
       "plateAppearances": 395,
       "eraAdjustedOffense": 113.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1970s-scherfr01",
+    "playerId": "scherfr01",
+    "playerSlug": "scherfr01",
+    "name": "Fred Scherman",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1970s",
+    "featuredSeason": 1971,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "scherfr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 41.004,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.239,
+      "so": 46,
+      "wins": 11,
+      "saves": 20,
+      "sv": 20,
+      "inningsPitched": 113,
+      "games": 69,
+      "starts": 1,
+      "reliefAppearances": 68,
+      "k9": 3.66,
+      "bb9": 3.9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.71,
+      "whip": 1.239,
+      "so": 46,
+      "wins": 11,
+      "saves": 20,
+      "sv": 20,
+      "inningsPitched": 113,
+      "games": 69,
+      "starts": 1,
+      "reliefAppearances": 68,
+      "k9": 3.66,
+      "bb9": 3.9
+    },
+    "scoringStats": {
+      "whip": 1.239,
+      "fip": null,
+      "inningsPitched": 113,
+      "strikeoutRate": 3.66,
+      "walkRate": 3.9,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 69,
+      "reliefAppearances": 68,
+      "eraAdjustedPitching": 127.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1970s-timmeto01",
+    "playerId": "timmeto01",
+    "playerSlug": "timmeto01",
+    "name": "Tom Timmermann",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1970s",
+    "featuredSeason": 1972,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "timmeto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.445,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.89,
+      "whip": 1.082,
+      "so": 88,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 149.7,
+      "games": 34,
+      "starts": 25,
+      "reliefAppearances": 9,
+      "k9": 5.29,
+      "bb9": 2.47
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.89,
+      "whip": 1.082,
+      "so": 88,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 149.7,
+      "games": 34,
+      "starts": 25,
+      "reliefAppearances": 9,
+      "k9": 5.29,
+      "bb9": 2.47
+    },
+    "scoringStats": {
+      "whip": 1.082,
+      "fip": null,
+      "inningsPitched": 149.7,
+      "strikeoutRate": 5.29,
+      "walkRate": 2.47,
+      "starts": 25,
+      "gamesStarted": 25,
+      "games": 34,
+      "reliefAppearances": 9,
+      "eraAdjustedPitching": 106
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1970s-youngki01",
+    "playerId": "youngki01",
+    "playerSlug": "youngki01",
+    "name": "Kip Young",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1970s",
+    "featuredSeason": 1978,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "DET"
+      ],
+      "sourcePlayerId": "youngki01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.224,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.81,
+      "whip": 1.174,
+      "so": 49,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 105.7,
+      "games": 14,
+      "starts": 13,
+      "reliefAppearances": 1,
+      "k9": 4.17,
+      "bb9": 2.56
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.81,
+      "whip": 1.174,
+      "so": 49,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 105.7,
+      "games": 14,
+      "starts": 13,
+      "reliefAppearances": 1,
+      "k9": 4.17,
+      "bb9": 2.56
+    },
+    "scoringStats": {
+      "whip": 1.174,
+      "fip": null,
+      "inningsPitched": 105.7,
+      "strikeoutRate": 4.17,
+      "walkRate": 2.56,
+      "starts": 13,
+      "gamesStarted": 13,
+      "games": 14,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 133.9
     },
     "pitchingScoringStats": null
   },

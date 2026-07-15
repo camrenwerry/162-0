@@ -1270,6 +1270,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sfg-2020s-rogerta01",
+    "playerId": "rogerta01",
+    "playerSlug": "rogerta01",
+    "name": "Taylor Rogers",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "rogerta01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.252,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.4,
+      "whip": 1.25,
+      "so": 64,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 60,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 9.6,
+      "bb9": 3.3
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.4,
+      "whip": 1.25,
+      "so": 64,
+      "wins": 1,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 60,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 9.6,
+      "bb9": 3.3
+    },
+    "scoringStats": {
+      "whip": 1.25,
+      "fip": null,
+      "inningsPitched": 60,
+      "strikeoutRate": 9.6,
+      "walkRate": 3.3,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 64,
+      "reliefAppearances": 64,
+      "eraAdjustedPitching": 172.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sfg-2020s-poseybu01",
     "playerId": "poseybu01",
     "playerSlug": "poseybu01",
@@ -1448,7 +1534,8 @@
     "featuredSeason": 2022,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1674,6 +1761,264 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "sfg-2020s-litteza01",
+    "playerId": "litteza01",
+    "playerSlug": "litteza01",
+    "name": "Zack Littell",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "litteza01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.481,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.92,
+      "whip": 1.135,
+      "so": 63,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 61.7,
+      "games": 63,
+      "starts": 2,
+      "reliefAppearances": 61,
+      "k9": 9.19,
+      "bb9": 3.5
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.92,
+      "whip": 1.135,
+      "so": 63,
+      "wins": 4,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 61.7,
+      "games": 63,
+      "starts": 2,
+      "reliefAppearances": 61,
+      "k9": 9.19,
+      "bb9": 3.5
+    },
+    "scoringStats": {
+      "whip": 1.135,
+      "fip": null,
+      "inningsPitched": 61.7,
+      "strikeoutRate": 9.19,
+      "walkRate": 3.5,
+      "starts": 2,
+      "gamesStarted": 2,
+      "games": 63,
+      "reliefAppearances": 61,
+      "eraAdjustedPitching": 143.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-2020s-milleer01",
+    "playerId": "milleer01",
+    "playerSlug": "milleer01",
+    "name": "Erik Miller",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "milleer01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.297,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.5,
+      "whip": 1.467,
+      "so": 22,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30,
+      "games": 36,
+      "starts": 0,
+      "reliefAppearances": 36,
+      "k9": 6.6,
+      "bb9": 6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.5,
+      "whip": 1.467,
+      "so": 22,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30,
+      "games": 36,
+      "starts": 0,
+      "reliefAppearances": 36,
+      "k9": 6.6,
+      "bb9": 6
+    },
+    "scoringStats": {
+      "whip": 1.467,
+      "fip": null,
+      "inningsPitched": 30,
+      "strikeoutRate": 6.6,
+      "walkRate": 6,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 36,
+      "reliefAppearances": 36,
+      "eraAdjustedPitching": 281.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-2020s-rayro02",
+    "playerId": "rayro02",
+    "playerSlug": "rayro02",
+    "name": "Robbie Ray",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "rayro02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 46.611,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.65,
+      "whip": 1.212,
+      "so": 186,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 182.3,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 9.18,
+      "bb9": 3.6
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.65,
+      "whip": 1.212,
+      "so": 186,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 182.3,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 9.18,
+      "bb9": 3.6
+    },
+    "scoringStats": {
+      "whip": 1.212,
+      "fip": null,
+      "inningsPitched": 182.3,
+      "strikeoutRate": 9.18,
+      "walkRate": 3.6,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 115.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "sfg-2020s-florewi01",
     "playerId": "florewi01",
     "playerSlug": "florewi01",
@@ -1687,7 +2032,8 @@
     "featuredSeason": 2023,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2005,7 +2351,8 @@
     "featuredSeason": 2022,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2233,87 +2580,6 @@
     "pitchingScoringStats": null
   },
   {
-    "id": "sfg-2020s-slateau01",
-    "playerId": "slateau01",
-    "playerSlug": "slateau01",
-    "name": "Austin Slater",
-    "franchiseId": "sfg",
-    "teamAbbreviation": "SFG",
-    "teamDisplayName": "San Francisco Giants",
-    "historicalTeamName": "San Francisco Giants",
-    "team": "SFG",
-    "decade": "2020s",
-    "featuredSeason": 2022,
-    "eligiblePositions": [
-      "LF",
-      "CF",
-      "RF"
-    ],
-    "isTwoWay": false,
-    "pitchingRole": null,
-    "bats": "R",
-    "throws": "R",
-    "sourceMetadata": {
-      "verified": true,
-      "sourceLabel": "SABR Lahman Baseball Database 2025",
-      "sourceUrl": "https://sabr.org/lahman-database/",
-      "advancedStatsSourceUrls": [],
-      "verifiedAt": "2026-07-14",
-      "lahmanTeamIds": [
-        "SFN"
-      ],
-      "sourcePlayerId": "slateau01"
-    },
-    "sourceNotes": "",
-    "notes": null,
-    "manualPositionOverride": false,
-    "selectionMetadata": {
-      "score": 38.781,
-      "formulaVersion": "lahman-1.0"
-    },
-    "playerType": "hitter",
-    "type": "hitter",
-    "visibleStats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.774,
-      "hr": 7,
-      "avg": 0.264,
-      "obp": 0.366,
-      "slg": 0.408,
-      "rbi": 34,
-      "sb": 12,
-      "games": 125,
-      "plateAppearances": 325
-    },
-    "pitchingVisibleStats": null,
-    "stats": {
-      "war": null,
-      "opsPlus": null,
-      "ops": 0.774,
-      "hr": 7,
-      "avg": 0.264,
-      "obp": 0.366,
-      "slg": 0.408,
-      "rbi": 34,
-      "sb": 12,
-      "games": 125,
-      "plateAppearances": 325
-    },
-    "scoringStats": {
-      "obp": 0.366,
-      "slg": 0.408,
-      "wrcPlus": null,
-      "offensiveValue": null,
-      "defensiveValue": null,
-      "baserunningValue": null,
-      "games": 125,
-      "plateAppearances": 325,
-      "eraAdjustedOffense": 108.8
-    },
-    "pitchingScoringStats": null
-  },
-  {
     "id": "sfg-2020s-solando01",
     "playerId": "solando01",
     "playerSlug": "solando01",
@@ -2469,6 +2735,85 @@
       "games": 40,
       "plateAppearances": 113,
       "eraAdjustedOffense": 105.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "sfg-2020s-duggast01",
+    "playerId": "duggast01",
+    "playerSlug": "duggast01",
+    "name": "Steven Duggar",
+    "franchiseId": "sfg",
+    "teamAbbreviation": "SFG",
+    "teamDisplayName": "San Francisco Giants",
+    "historicalTeamName": "San Francisco Giants",
+    "team": "SFG",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SFN"
+      ],
+      "sourcePlayerId": "duggast01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 37.345,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.767,
+      "hr": 8,
+      "avg": 0.257,
+      "obp": 0.33,
+      "slg": 0.437,
+      "rbi": 35,
+      "sb": 7,
+      "games": 107,
+      "plateAppearances": 297
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.767,
+      "hr": 8,
+      "avg": 0.257,
+      "obp": 0.33,
+      "slg": 0.437,
+      "rbi": 35,
+      "sb": 7,
+      "games": 107,
+      "plateAppearances": 297
+    },
+    "scoringStats": {
+      "obp": 0.33,
+      "slg": 0.437,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 107,
+      "plateAppearances": 297,
+      "eraAdjustedOffense": 105.7
     },
     "pitchingScoringStats": null
   },

@@ -2289,6 +2289,86 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "min-1920s-westsa01",
+    "playerId": "westsa01",
+    "playerSlug": "westsa01",
+    "name": "Sam West",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1920s",
+    "featuredSeason": 1928,
+    "eligiblePositions": [
+      "LF",
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "westsa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.716,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.78,
+      "hr": 3,
+      "avg": 0.302,
+      "obp": 0.338,
+      "slg": 0.442,
+      "rbi": 40,
+      "sb": 5,
+      "games": 125,
+      "plateAppearances": 405
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.78,
+      "hr": 3,
+      "avg": 0.302,
+      "obp": 0.338,
+      "slg": 0.442,
+      "rbi": 40,
+      "sb": 5,
+      "games": 125,
+      "plateAppearances": 405
+    },
+    "scoringStats": {
+      "obp": 0.338,
+      "slg": 0.442,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 125,
+      "plateAppearances": 405,
+      "eraAdjustedOffense": 105.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "min-1920s-reevebo01",
     "playerId": "reevebo01",
     "playerSlug": "reevebo01",
@@ -2365,6 +2445,251 @@
       "games": 102,
       "plateAppearances": 392,
       "eraAdjustedOffense": 104.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1920s-ericker01",
+    "playerId": "ericker01",
+    "playerSlug": "ericker01",
+    "name": "Eric Erickson",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1920s",
+    "featuredSeason": 1921,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "ericker01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.567,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.62,
+      "whip": 1.374,
+      "so": 71,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 179,
+      "games": 32,
+      "starts": 22,
+      "reliefAppearances": 10,
+      "k9": 3.57,
+      "bb9": 3.27
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.62,
+      "whip": 1.374,
+      "so": 71,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 179,
+      "games": 32,
+      "starts": 22,
+      "reliefAppearances": 10,
+      "k9": 3.57,
+      "bb9": 3.27
+    },
+    "scoringStats": {
+      "whip": 1.374,
+      "fip": null,
+      "inningsPitched": 179,
+      "strikeoutRate": 3.57,
+      "walkRate": 3.27,
+      "starts": 22,
+      "gamesStarted": 22,
+      "games": 32,
+      "reliefAppearances": 10,
+      "eraAdjustedPitching": 118.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1920s-millebi02",
+    "playerId": "millebi02",
+    "playerSlug": "millebi02",
+    "name": "Bing Miller",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1920s",
+    "featuredSeason": 1921,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "millebi02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.493,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.791,
+      "hr": 9,
+      "avg": 0.288,
+      "obp": 0.334,
+      "slg": 0.457,
+      "rbi": 73,
+      "sb": 3,
+      "games": 114,
+      "plateAppearances": 466
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.791,
+      "hr": 9,
+      "avg": 0.288,
+      "obp": 0.334,
+      "slg": 0.457,
+      "rbi": 73,
+      "sb": 3,
+      "games": 114,
+      "plateAppearances": 466
+    },
+    "scoringStats": {
+      "obp": 0.334,
+      "slg": 0.457,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 114,
+      "plateAppearances": 466,
+      "eraAdjustedOffense": 104
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "min-1920s-leibone01",
+    "playerId": "leibone01",
+    "playerSlug": "leibone01",
+    "name": "Nemo Leibold",
+    "franchiseId": "min",
+    "teamAbbreviation": "WSH",
+    "teamDisplayName": "Washington Senators",
+    "historicalTeamName": "Washington Senators",
+    "team": "WSH",
+    "decade": "1920s",
+    "featuredSeason": 1923,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "WS1"
+      ],
+      "sourcePlayerId": "leibone01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 36.193,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.789,
+      "hr": 1,
+      "avg": 0.305,
+      "obp": 0.408,
+      "slg": 0.381,
+      "rbi": 22,
+      "sb": 7,
+      "games": 95,
+      "plateAppearances": 379
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.789,
+      "hr": 1,
+      "avg": 0.305,
+      "obp": 0.408,
+      "slg": 0.381,
+      "rbi": 22,
+      "sb": 7,
+      "games": 95,
+      "plateAppearances": 379
+    },
+    "scoringStats": {
+      "obp": 0.408,
+      "slg": 0.381,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 95,
+      "plateAppearances": 379,
+      "eraAdjustedOffense": 107.5
     },
     "pitchingScoringStats": null
   },

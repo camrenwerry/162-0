@@ -270,7 +270,8 @@
     "decade": "2000s",
     "featuredSeason": 2001,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1111,6 +1112,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "oak-2000s-kochbi01",
+    "playerId": "kochbi01",
+    "playerSlug": "kochbi01",
+    "name": "Billy Koch",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "kochbi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 55.847,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.27,
+      "so": 93,
+      "wins": 11,
+      "saves": 44,
+      "sv": 44,
+      "inningsPitched": 93.7,
+      "games": 84,
+      "starts": 0,
+      "reliefAppearances": 84,
+      "k9": 8.94,
+      "bb9": 4.42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.27,
+      "so": 93,
+      "wins": 11,
+      "saves": 44,
+      "sv": 44,
+      "inningsPitched": 93.7,
+      "games": 84,
+      "starts": 0,
+      "reliefAppearances": 84,
+      "k9": 8.94,
+      "bb9": 4.42
+    },
+    "scoringStats": {
+      "whip": 1.27,
+      "fip": null,
+      "inningsPitched": 93.7,
+      "strikeoutRate": 8.94,
+      "walkRate": 4.42,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 84,
+      "reliefAppearances": 84,
+      "eraAdjustedPitching": 136.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-2000s-breslcr01",
+    "playerId": "breslcr01",
+    "playerSlug": "breslcr01",
+    "name": "Craig Breslow",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "breslcr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.2,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.6,
+      "whip": 0.994,
+      "so": 44,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55.3,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 7.16,
+      "bb9": 2.93
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.6,
+      "whip": 0.994,
+      "so": 44,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55.3,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 7.16,
+      "bb9": 2.93
+    },
+    "scoringStats": {
+      "whip": 0.994,
+      "fip": null,
+      "inningsPitched": 55.3,
+      "strikeoutRate": 7.16,
+      "walkRate": 2.93,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 60,
+      "reliefAppearances": 60,
+      "eraAdjustedPitching": 171.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "oak-2000s-muldema01",
     "playerId": "muldema01",
     "playerSlug": "muldema01",
@@ -1193,6 +1366,92 @@
       "games": 34,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 129.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-2000s-tamje01",
+    "playerId": "tamje01",
+    "playerSlug": "tamje01",
+    "name": "Jeff Tam",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "tamje01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.518,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.63,
+      "whip": 1.272,
+      "so": 46,
+      "wins": 3,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 85.7,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 4.83,
+      "bb9": 2.42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.63,
+      "whip": 1.272,
+      "so": 46,
+      "wins": 3,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 85.7,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 4.83,
+      "bb9": 2.42
+    },
+    "scoringStats": {
+      "whip": 1.272,
+      "fip": null,
+      "inningsPitched": 85.7,
+      "strikeoutRate": 4.83,
+      "walkRate": 2.42,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 187
     },
     "pitchingScoringStats": null
   },
@@ -1368,7 +1627,8 @@
     "featuredSeason": 2007,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1431,6 +1691,92 @@
       "games": 124,
       "plateAppearances": 507,
       "eraAdjustedOffense": 119.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-2000s-kennejo04",
+    "playerId": "kennejo04",
+    "playerSlug": "kennejo04",
+    "name": "Joe Kennedy",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "OAK"
+      ],
+      "sourcePlayerId": "kennejo04"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.527,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.31,
+      "whip": 1.343,
+      "so": 29,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 35,
+      "games": 39,
+      "starts": 0,
+      "reliefAppearances": 39,
+      "k9": 7.46,
+      "bb9": 3.34
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.31,
+      "whip": 1.343,
+      "so": 29,
+      "wins": 4,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 35,
+      "games": 39,
+      "starts": 0,
+      "reliefAppearances": 39,
+      "k9": 7.46,
+      "bb9": 3.34
+    },
+    "scoringStats": {
+      "whip": 1.343,
+      "fip": null,
+      "inningsPitched": 35,
+      "strikeoutRate": 7.46,
+      "walkRate": 3.34,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 39,
+      "reliefAppearances": 39,
+      "eraAdjustedPitching": 196.9
     },
     "pitchingScoringStats": null
   },
@@ -1687,7 +2033,8 @@
     "featuredSeason": 2000,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1926,7 +2273,8 @@
     "decade": "2000s",
     "featuredSeason": 2000,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2085,7 +2433,8 @@
     "featuredSeason": 2000,
     "eligiblePositions": [
       "3B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2243,7 +2592,8 @@
     "decade": "2000s",
     "featuredSeason": 2009,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2322,7 +2672,8 @@
     "decade": "2000s",
     "featuredSeason": 2002,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

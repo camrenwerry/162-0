@@ -1822,6 +1822,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bal-1950s-loesbi01",
+    "playerId": "loesbi01",
+    "playerSlug": "loesbi01",
+    "name": "Billy Loes",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1950s",
+    "featuredSeason": 1957,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "loesbi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.447,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.24,
+      "whip": 1.152,
+      "so": 86,
+      "wins": 12,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 155.3,
+      "games": 31,
+      "starts": 18,
+      "reliefAppearances": 13,
+      "k9": 4.98,
+      "bb9": 2.14
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.24,
+      "whip": 1.152,
+      "so": 86,
+      "wins": 12,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 155.3,
+      "games": 31,
+      "starts": 18,
+      "reliefAppearances": 13,
+      "k9": 4.98,
+      "bb9": 2.14
+    },
+    "scoringStats": {
+      "whip": 1.152,
+      "fip": null,
+      "inningsPitched": 155.3,
+      "strikeoutRate": 4.98,
+      "walkRate": 2.14,
+      "starts": 18,
+      "gamesStarted": 18,
+      "games": 31,
+      "reliefAppearances": 13,
+      "eraAdjustedPitching": 116.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1950s-colemjo04",
+    "playerId": "colemjo04",
+    "playerSlug": "colemjo04",
+    "name": "Joe Coleman",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1950s",
+    "featuredSeason": 1954,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "colemjo04"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 40.011,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.5,
+      "whip": 1.265,
+      "so": 103,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 221.3,
+      "games": 33,
+      "starts": 32,
+      "reliefAppearances": 1,
+      "k9": 4.19,
+      "bb9": 3.9
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.5,
+      "whip": 1.265,
+      "so": 103,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 221.3,
+      "games": 33,
+      "starts": 32,
+      "reliefAppearances": 1,
+      "k9": 4.19,
+      "bb9": 3.9
+    },
+    "scoringStats": {
+      "whip": 1.265,
+      "fip": null,
+      "inningsPitched": 221.3,
+      "strikeoutRate": 4.19,
+      "walkRate": 3.9,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 33,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 106.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bal-1950s-battsma01",
     "playerId": "battsma01",
     "playerSlug": "battsma01",
@@ -1983,6 +2155,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "bal-1950s-pilledu01",
+    "playerId": "pilledu01",
+    "playerSlug": "pilledu01",
+    "name": "Duane Pillette",
+    "franchiseId": "bal",
+    "teamAbbreviation": "BAL",
+    "teamDisplayName": "Baltimore Orioles",
+    "historicalTeamName": "Baltimore Orioles",
+    "team": "BAL",
+    "decade": "1950s",
+    "featuredSeason": 1954,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "BAL"
+      ],
+      "sourcePlayerId": "pilledu01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.203,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.12,
+      "whip": 1.257,
+      "so": 66,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 179,
+      "games": 25,
+      "starts": 25,
+      "reliefAppearances": 0,
+      "k9": 3.32,
+      "bb9": 3.37
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.12,
+      "whip": 1.257,
+      "so": 66,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 179,
+      "games": 25,
+      "starts": 25,
+      "reliefAppearances": 0,
+      "k9": 3.32,
+      "bb9": 3.37
+    },
+    "scoringStats": {
+      "whip": 1.257,
+      "fip": null,
+      "inningsPitched": 179,
+      "strikeoutRate": 3.32,
+      "walkRate": 3.37,
+      "starts": 25,
+      "gamesStarted": 25,
+      "games": 25,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 119.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "bal-1950s-pilaral01",
     "playerId": "pilaral01",
     "playerSlug": "pilaral01",
@@ -2059,6 +2317,87 @@
       "games": 142,
       "plateAppearances": 482,
       "eraAdjustedOffense": 107.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "bal-1950s-mapescl01",
+    "playerId": "mapescl01",
+    "playerSlug": "mapescl01",
+    "name": "Cliff Mapes",
+    "franchiseId": "bal",
+    "teamAbbreviation": "SLB",
+    "teamDisplayName": "St. Louis Browns",
+    "historicalTeamName": "St. Louis Browns",
+    "team": "SLB",
+    "decade": "1950s",
+    "featuredSeason": 1951,
+    "eligiblePositions": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "SLA"
+      ],
+      "sourcePlayerId": "mapescl01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.996,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.792,
+      "hr": 7,
+      "avg": 0.274,
+      "obp": 0.36,
+      "slg": 0.433,
+      "rbi": 30,
+      "sb": 0,
+      "games": 56,
+      "plateAppearances": 229
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.792,
+      "hr": 7,
+      "avg": 0.274,
+      "obp": 0.36,
+      "slg": 0.433,
+      "rbi": 30,
+      "sb": 0,
+      "games": 56,
+      "plateAppearances": 229
+    },
+    "scoringStats": {
+      "obp": 0.36,
+      "slg": 0.433,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 56,
+      "plateAppearances": 229,
+      "eraAdjustedOffense": 110.1
     },
     "pitchingScoringStats": null
   },

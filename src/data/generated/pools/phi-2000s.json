@@ -1077,6 +1077,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "phi-2000s-eyresc01",
+    "playerId": "eyresc01",
+    "playerSlug": "eyresc01",
+    "name": "Scott Eyre",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "2000s",
+    "featuredSeason": 2009,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "eyresc01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 53.007,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.5,
+      "whip": 1.267,
+      "so": 22,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30,
+      "games": 42,
+      "starts": 0,
+      "reliefAppearances": 42,
+      "k9": 6.6,
+      "bb9": 4.8
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.5,
+      "whip": 1.267,
+      "so": 22,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 30,
+      "games": 42,
+      "starts": 0,
+      "reliefAppearances": 42,
+      "k9": 6.6,
+      "bb9": 4.8
+    },
+    "scoringStats": {
+      "whip": 1.267,
+      "fip": null,
+      "inningsPitched": 30,
+      "strikeoutRate": 6.6,
+      "walkRate": 4.8,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 42,
+      "reliefAppearances": 42,
+      "eraAdjustedPitching": 279.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "phi-2000s-rolliji01",
     "playerId": "rolliji01",
     "playerSlug": "rolliji01",
@@ -1152,6 +1238,92 @@
       "games": 162,
       "plateAppearances": 778,
       "eraAdjustedOffense": 115.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-2000s-madsory01",
+    "playerId": "madsory01",
+    "playerSlug": "madsory01",
+    "name": "Ryan Madson",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "2000s",
+    "featuredSeason": 2004,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "madsory01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.491,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 1.13,
+      "so": 55,
+      "wins": 9,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 77,
+      "games": 52,
+      "starts": 1,
+      "reliefAppearances": 51,
+      "k9": 6.43,
+      "bb9": 2.22
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.34,
+      "whip": 1.13,
+      "so": 55,
+      "wins": 9,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 77,
+      "games": 52,
+      "starts": 1,
+      "reliefAppearances": 51,
+      "k9": 6.43,
+      "bb9": 2.22
+    },
+    "scoringStats": {
+      "whip": 1.13,
+      "fip": null,
+      "inningsPitched": 77,
+      "strikeoutRate": 6.43,
+      "walkRate": 2.22,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 52,
+      "reliefAppearances": 51,
+      "eraAdjustedPitching": 184.1
     },
     "pitchingScoringStats": null
   },
@@ -1232,6 +1404,92 @@
       "games": 82,
       "plateAppearances": 210,
       "eraAdjustedOffense": 131.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-2000s-gordoto01",
+    "playerId": "gordoto01",
+    "playerSlug": "gordoto01",
+    "name": "Tom Gordon",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "2000s",
+    "featuredSeason": 2006,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "gordoto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.074,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 1.264,
+      "so": 68,
+      "wins": 3,
+      "saves": 34,
+      "sv": 34,
+      "inningsPitched": 59.3,
+      "games": 59,
+      "starts": 0,
+      "reliefAppearances": 59,
+      "k9": 10.31,
+      "bb9": 3.34
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.34,
+      "whip": 1.264,
+      "so": 68,
+      "wins": 3,
+      "saves": 34,
+      "sv": 34,
+      "inningsPitched": 59.3,
+      "games": 59,
+      "starts": 0,
+      "reliefAppearances": 59,
+      "k9": 10.31,
+      "bb9": 3.34
+    },
+    "scoringStats": {
+      "whip": 1.264,
+      "fip": null,
+      "inningsPitched": 59.3,
+      "strikeoutRate": 10.31,
+      "walkRate": 3.34,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 59,
+      "reliefAppearances": 59,
+      "eraAdjustedPitching": 134.4
     },
     "pitchingScoringStats": null
   },
@@ -1555,6 +1813,92 @@
       "games": 134,
       "plateAppearances": 565,
       "eraAdjustedOffense": 121.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "phi-2000s-plesada01",
+    "playerId": "plesada01",
+    "playerSlug": "plesada01",
+    "name": "Dan Plesac",
+    "franchiseId": "phi",
+    "teamAbbreviation": "PHI",
+    "teamDisplayName": "Philadelphia Phillies",
+    "historicalTeamName": "Philadelphia Phillies",
+    "team": "PHI",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PHI"
+      ],
+      "sourcePlayerId": "plesada01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.56,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.7,
+      "whip": 1.2,
+      "so": 37,
+      "wins": 2,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 33.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 9.99,
+      "bb9": 2.97
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.7,
+      "whip": 1.2,
+      "so": 37,
+      "wins": 2,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 33.3,
+      "games": 58,
+      "starts": 0,
+      "reliefAppearances": 58,
+      "k9": 9.99,
+      "bb9": 2.97
+    },
+    "scoringStats": {
+      "whip": 1.2,
+      "fip": null,
+      "inningsPitched": 33.3,
+      "strikeoutRate": 9.99,
+      "walkRate": 2.97,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 58,
+      "reliefAppearances": 58,
+      "eraAdjustedPitching": 158.5
     },
     "pitchingScoringStats": null
   },

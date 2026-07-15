@@ -1580,6 +1580,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cin-1980s-scherbi01",
+    "playerId": "scherbi01",
+    "playerSlug": "scherbi01",
+    "name": "Bill Scherrer",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "1980s",
+    "featuredSeason": 1983,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "scherbi01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.863,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.152,
+      "so": 57,
+      "wins": 2,
+      "saves": 10,
+      "sv": 10,
+      "inningsPitched": 92,
+      "games": 73,
+      "starts": 0,
+      "reliefAppearances": 73,
+      "k9": 5.58,
+      "bb9": 3.23
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.152,
+      "so": 57,
+      "wins": 2,
+      "saves": 10,
+      "sv": 10,
+      "inningsPitched": 92,
+      "games": 73,
+      "starts": 0,
+      "reliefAppearances": 73,
+      "k9": 5.58,
+      "bb9": 3.23
+    },
+    "scoringStats": {
+      "whip": 1.152,
+      "fip": null,
+      "inningsPitched": 92,
+      "strikeoutRate": 5.58,
+      "walkRate": 3.23,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 73,
+      "reliefAppearances": 73,
+      "eraAdjustedPitching": 132.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cin-1980s-bellbu01",
     "playerId": "bellbu01",
     "playerSlug": "bellbu01",
@@ -1655,6 +1741,92 @@
       "games": 155,
       "plateAppearances": 655,
       "eraAdjustedOffense": 115.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-1980s-hayesbe01",
+    "playerId": "hayesbe01",
+    "playerSlug": "hayesbe01",
+    "name": "Ben Hayes",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "1980s",
+    "featuredSeason": 1982,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "hayesbe01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.387,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.97,
+      "whip": 1.292,
+      "so": 38,
+      "wins": 2,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 45.7,
+      "games": 26,
+      "starts": 0,
+      "reliefAppearances": 26,
+      "k9": 7.49,
+      "bb9": 4.34
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 1.97,
+      "whip": 1.292,
+      "so": 38,
+      "wins": 2,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 45.7,
+      "games": 26,
+      "starts": 0,
+      "reliefAppearances": 26,
+      "k9": 7.49,
+      "bb9": 4.34
+    },
+    "scoringStats": {
+      "whip": 1.292,
+      "fip": null,
+      "inningsPitched": 45.7,
+      "strikeoutRate": 7.49,
+      "walkRate": 4.34,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 26,
+      "reliefAppearances": 26,
+      "eraAdjustedPitching": 182.7
     },
     "pitchingScoringStats": null
   },
@@ -1740,6 +1912,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cin-1980s-pastofr01",
+    "playerId": "pastofr01",
+    "playerSlug": "pastofr01",
+    "name": "Frank Pastore",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "1980s",
+    "featuredSeason": 1980,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "pastofr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.031,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.099,
+      "so": 110,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 184.7,
+      "games": 27,
+      "starts": 27,
+      "reliefAppearances": 0,
+      "k9": 5.36,
+      "bb9": 2.05
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.27,
+      "whip": 1.099,
+      "so": 110,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 184.7,
+      "games": 27,
+      "starts": 27,
+      "reliefAppearances": 0,
+      "k9": 5.36,
+      "bb9": 2.05
+    },
+    "scoringStats": {
+      "whip": 1.099,
+      "fip": null,
+      "inningsPitched": 184.7,
+      "strikeoutRate": 5.36,
+      "walkRate": 2.05,
+      "starts": 27,
+      "gamesStarted": 27,
+      "games": 27,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 110.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cin-1980s-oneilpa01",
     "playerId": "oneilpa01",
     "playerSlug": "o'neipa01",
@@ -1815,6 +2073,92 @@
       "games": 117,
       "plateAppearances": 480,
       "eraAdjustedOffense": 116.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cin-1980s-powerte01",
+    "playerId": "powerte01",
+    "playerSlug": "powerte01",
+    "name": "Ted Power",
+    "franchiseId": "cin",
+    "teamAbbreviation": "CIN",
+    "teamDisplayName": "Cincinnati Reds",
+    "historicalTeamName": "Cincinnati Reds",
+    "team": "CIN",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CIN"
+      ],
+      "sourcePlayerId": "powerte01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.364,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.82,
+      "whip": 1.279,
+      "so": 81,
+      "wins": 9,
+      "saves": 11,
+      "sv": 11,
+      "inningsPitched": 108.7,
+      "games": 78,
+      "starts": 0,
+      "reliefAppearances": 78,
+      "k9": 6.71,
+      "bb9": 3.81
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.82,
+      "whip": 1.279,
+      "so": 81,
+      "wins": 9,
+      "saves": 11,
+      "sv": 11,
+      "inningsPitched": 108.7,
+      "games": 78,
+      "starts": 0,
+      "reliefAppearances": 78,
+      "k9": 6.71,
+      "bb9": 3.81
+    },
+    "scoringStats": {
+      "whip": 1.279,
+      "fip": null,
+      "inningsPitched": 108.7,
+      "strikeoutRate": 6.71,
+      "walkRate": 3.81,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 78,
+      "reliefAppearances": 78,
+      "eraAdjustedPitching": 127.4
     },
     "pitchingScoringStats": null
   },

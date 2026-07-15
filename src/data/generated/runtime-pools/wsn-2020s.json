@@ -617,7 +617,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -753,6 +754,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "wsn-2020s-edwarca01",
+    "playerId": "edwarca01",
+    "playerSlug": "edwarca01",
+    "name": "Carl Edwards",
+    "franchiseId": "wsn",
+    "teamAbbreviation": "WSN",
+    "teamDisplayName": "Washington Nationals",
+    "historicalTeamName": "Washington Nationals",
+    "team": "WSN",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.76,
+      "whip": 1.226,
+      "so": 56,
+      "wins": 6,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 62,
+      "games": 57,
+      "starts": 0,
+      "reliefAppearances": 57,
+      "k9": 8.13,
+      "bb9": 3.63
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.226,
+      "fip": null,
+      "inningsPitched": 62,
+      "strikeoutRate": 8.13,
+      "walkRate": 3.63,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 57,
+      "reliefAppearances": 57,
+      "eraAdjustedPitching": 146.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "wsn-2020s-thomala02",
     "playerId": "thomala02",
     "playerSlug": "thomala02",
@@ -801,6 +854,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "wsn-2020s-handbr01",
+    "playerId": "handbr01",
+    "playerSlug": "handbr01",
+    "name": "Brad Hand",
+    "franchiseId": "wsn",
+    "teamAbbreviation": "WSN",
+    "teamDisplayName": "Washington Nationals",
+    "historicalTeamName": "Washington Nationals",
+    "team": "WSN",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.59,
+      "whip": 1.148,
+      "so": 42,
+      "wins": 5,
+      "saves": 21,
+      "sv": 21,
+      "inningsPitched": 42.7,
+      "games": 41,
+      "starts": 0,
+      "reliefAppearances": 41,
+      "k9": 8.86,
+      "bb9": 3.8
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.148,
+      "fip": null,
+      "inningsPitched": 42.7,
+      "strikeoutRate": 8.86,
+      "walkRate": 3.8,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 41,
+      "reliefAppearances": 41,
+      "eraAdjustedPitching": 117
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "wsn-2020s-garciro04",
+    "playerId": "garciro04",
+    "playerSlug": "garciro04",
+    "name": "Robert Garcia",
+    "franchiseId": "wsn",
+    "teamAbbreviation": "WSN",
+    "teamDisplayName": "Washington Nationals",
+    "historicalTeamName": "Washington Nationals",
+    "team": "WSN",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.22,
+      "whip": 1.19,
+      "so": 75,
+      "wins": 3,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 59.7,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 11.31,
+      "bb9": 2.41
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.19,
+      "fip": null,
+      "inningsPitched": 59.7,
+      "strikeoutRate": 11.31,
+      "walkRate": 2.41,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 98
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "wsn-2020s-lileda01",
     "playerId": "lileda01",
     "playerSlug": "lileda01",
@@ -814,7 +971,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1098,6 +1256,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "wsn-2020s-ferrejo01",
+    "playerId": "ferrejo01",
+    "playerSlug": "ferrejo01",
+    "name": "Jose Ferrer",
+    "franchiseId": "wsn",
+    "teamAbbreviation": "WSN",
+    "teamDisplayName": "Washington Nationals",
+    "historicalTeamName": "Washington Nationals",
+    "team": "WSN",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 4.48,
+      "whip": 1.271,
+      "so": 71,
+      "wins": 4,
+      "saves": 11,
+      "sv": 11,
+      "inningsPitched": 76.3,
+      "games": 72,
+      "starts": 0,
+      "reliefAppearances": 72,
+      "k9": 8.37,
+      "bb9": 1.89
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.271,
+      "fip": null,
+      "inningsPitched": 76.3,
+      "strikeoutRate": 8.37,
+      "walkRate": 1.89,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 72,
+      "reliefAppearances": 72,
+      "eraAdjustedPitching": 94.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "wsn-2020s-gomesya01",
     "playerId": "gomesya01",
     "playerSlug": "gomesya01",
@@ -1308,7 +1518,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1454,7 +1665,8 @@
     "featuredSeason": 2020,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -939,6 +939,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-2020s-enrigni01",
+    "playerId": "enrigni01",
+    "playerSlug": "enrigni01",
+    "name": "Nic Enright",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Guardians",
+    "historicalTeamName": "Cleveland Guardians",
+    "team": "CLE",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "enrigni01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 52.791,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.03,
+      "whip": 1.161,
+      "so": 30,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 31,
+      "games": 27,
+      "starts": 0,
+      "reliefAppearances": 27,
+      "k9": 8.71,
+      "bb9": 3.48
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.03,
+      "whip": 1.161,
+      "so": 30,
+      "wins": 2,
+      "saves": 1,
+      "sv": 1,
+      "inningsPitched": 31,
+      "games": 27,
+      "starts": 0,
+      "reliefAppearances": 27,
+      "k9": 8.71,
+      "bb9": 3.48
+    },
+    "scoringStats": {
+      "whip": 1.161,
+      "fip": null,
+      "inningsPitched": 31,
+      "strikeoutRate": 8.71,
+      "walkRate": 3.48,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 27,
+      "reliefAppearances": 27,
+      "eraAdjustedPitching": 201.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-2020s-stephtr01",
+    "playerId": "stephtr01",
+    "playerSlug": "stephtr01",
+    "name": "Trevor Stephan",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Guardians",
+    "historicalTeamName": "Cleveland Guardians",
+    "team": "CLE",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "stephtr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.859,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.69,
+      "whip": 1.178,
+      "so": 82,
+      "wins": 6,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 63.7,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 11.59,
+      "bb9": 2.54
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.69,
+      "whip": 1.178,
+      "so": 82,
+      "wins": 6,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 63.7,
+      "games": 66,
+      "starts": 0,
+      "reliefAppearances": 66,
+      "k9": 11.59,
+      "bb9": 2.54
+    },
+    "scoringStats": {
+      "whip": 1.178,
+      "fip": null,
+      "inningsPitched": 63.7,
+      "strikeoutRate": 11.59,
+      "walkRate": 2.54,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 66,
+      "reliefAppearances": 66,
+      "eraAdjustedPitching": 144.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-2020s-bibeeta01",
     "playerId": "bibeeta01",
     "playerSlug": "bibeeta01",
@@ -1192,6 +1364,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "cle-2020s-williga01",
+    "playerId": "williga01",
+    "playerSlug": "williga01",
+    "name": "Gavin Williams",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Guardians",
+    "historicalTeamName": "Cleveland Guardians",
+    "team": "CLE",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "williga01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.204,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.06,
+      "whip": 1.27,
+      "so": 173,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 167.7,
+      "games": 31,
+      "starts": 31,
+      "reliefAppearances": 0,
+      "k9": 9.29,
+      "bb9": 4.46
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.06,
+      "whip": 1.27,
+      "so": 173,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 167.7,
+      "games": 31,
+      "starts": 31,
+      "reliefAppearances": 0,
+      "k9": 9.29,
+      "bb9": 4.46
+    },
+    "scoringStats": {
+      "whip": 1.27,
+      "fip": null,
+      "inningsPitched": 167.7,
+      "strikeoutRate": 9.29,
+      "walkRate": 4.46,
+      "starts": 31,
+      "gamesStarted": 31,
+      "games": 31,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 133.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "cle-2020s-sandlni01",
+    "playerId": "sandlni01",
+    "playerSlug": "sandlni01",
+    "name": "Nick Sandlin",
+    "franchiseId": "cle",
+    "teamAbbreviation": "CLE",
+    "teamDisplayName": "Cleveland Guardians",
+    "historicalTeamName": "Cleveland Guardians",
+    "team": "CLE",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "CLE"
+      ],
+      "sourcePlayerId": "sandlni01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.477,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.25,
+      "whip": 1.159,
+      "so": 41,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 44,
+      "games": 46,
+      "starts": 0,
+      "reliefAppearances": 46,
+      "k9": 8.39,
+      "bb9": 4.91
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.25,
+      "whip": 1.159,
+      "so": 41,
+      "wins": 5,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 44,
+      "games": 46,
+      "starts": 0,
+      "reliefAppearances": 46,
+      "k9": 8.39,
+      "bb9": 4.91
+    },
+    "scoringStats": {
+      "whip": 1.159,
+      "fip": null,
+      "inningsPitched": 44,
+      "strikeoutRate": 8.39,
+      "walkRate": 4.91,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 46,
+      "reliefAppearances": 46,
+      "eraAdjustedPitching": 172.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "cle-2020s-reyesfr01",
     "playerId": "reyesfr01",
     "playerSlug": "reyesfr01",
@@ -1204,7 +1548,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1285,7 +1630,8 @@
     "eligiblePositions": [
       "C",
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1364,7 +1710,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1838,7 +2185,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

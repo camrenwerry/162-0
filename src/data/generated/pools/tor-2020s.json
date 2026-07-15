@@ -528,7 +528,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -609,7 +610,8 @@
     "eligiblePositions": [
       "LF",
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1258,6 +1260,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tor-2020s-fishebr02",
+    "playerId": "fishebr02",
+    "playerSlug": "fishebr02",
+    "name": "Braydon Fisher",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TOR"
+      ],
+      "sourcePlayerId": "fishebr02"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 51.277,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.7,
+      "whip": 1.02,
+      "so": 62,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 50,
+      "games": 52,
+      "starts": 1,
+      "reliefAppearances": 51,
+      "k9": 11.16,
+      "bb9": 3.42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.7,
+      "whip": 1.02,
+      "so": 62,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 50,
+      "games": 52,
+      "starts": 1,
+      "reliefAppearances": 51,
+      "k9": 11.16,
+      "bb9": 3.42
+    },
+    "scoringStats": {
+      "whip": 1.02,
+      "fip": null,
+      "inningsPitched": 50,
+      "strikeoutRate": 11.16,
+      "walkRate": 3.42,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 52,
+      "reliefAppearances": 51,
+      "eraAdjustedPitching": 151.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tor-2020s-ryuhy01",
     "playerId": "ryuhy01",
     "playerSlug": "ryuhy01",
@@ -1435,7 +1523,8 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
-      "SS"
+      "SS",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1588,6 +1677,178 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "tor-2020s-bassich01",
+    "playerId": "bassich01",
+    "playerSlug": "bassich01",
+    "name": "Chris Bassitt",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TOR"
+      ],
+      "sourcePlayerId": "bassich01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.481,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.6,
+      "whip": 1.175,
+      "so": 186,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 200,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 8.37,
+      "bb9": 2.65
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.6,
+      "whip": 1.175,
+      "so": 186,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 200,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 8.37,
+      "bb9": 2.65
+    },
+    "scoringStats": {
+      "whip": 1.175,
+      "fip": null,
+      "inningsPitched": 200,
+      "strikeoutRate": 8.37,
+      "walkRate": 2.65,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 33,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 118.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-2020s-berrijo01",
+    "playerId": "berrijo01",
+    "playerSlug": "berrijo01",
+    "name": "Jose Berrios",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TOR"
+      ],
+      "sourcePlayerId": "berrijo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 48.677,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.65,
+      "whip": 1.186,
+      "so": 184,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 189.7,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 8.73,
+      "bb9": 2.47
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.65,
+      "whip": 1.186,
+      "so": 184,
+      "wins": 11,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 189.7,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 8.73,
+      "bb9": 2.47
+    },
+    "scoringStats": {
+      "whip": 1.186,
+      "fip": null,
+      "inningsPitched": 189.7,
+      "strikeoutRate": 8.73,
+      "walkRate": 2.47,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 117
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "tor-2020s-varshda01",
     "playerId": "varshda01",
     "playerSlug": "varshda01",
@@ -1663,6 +1924,92 @@
       "games": 71,
       "plateAppearances": 271,
       "eraAdjustedOffense": 115.8
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "tor-2020s-greench03",
+    "playerId": "greench03",
+    "playerSlug": "greench03",
+    "name": "Chad Green",
+    "franchiseId": "tor",
+    "teamAbbreviation": "TOR",
+    "teamDisplayName": "Toronto Blue Jays",
+    "historicalTeamName": "Toronto Blue Jays",
+    "team": "TOR",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "TOR"
+      ],
+      "sourcePlayerId": "greench03"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 47.394,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.21,
+      "whip": 1.031,
+      "so": 46,
+      "wins": 4,
+      "saves": 17,
+      "sv": 17,
+      "inningsPitched": 53.3,
+      "games": 53,
+      "starts": 0,
+      "reliefAppearances": 53,
+      "k9": 7.76,
+      "bb9": 2.36
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.21,
+      "whip": 1.031,
+      "so": 46,
+      "wins": 4,
+      "saves": 17,
+      "sv": 17,
+      "inningsPitched": 53.3,
+      "games": 53,
+      "starts": 0,
+      "reliefAppearances": 53,
+      "k9": 7.76,
+      "bb9": 2.36
+    },
+    "scoringStats": {
+      "whip": 1.031,
+      "fip": null,
+      "inningsPitched": 53.3,
+      "strikeoutRate": 7.76,
+      "walkRate": 2.36,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 53,
+      "reliefAppearances": 53,
+      "eraAdjustedPitching": 125.4
     },
     "pitchingScoringStats": null
   },
@@ -1758,7 +2105,8 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1837,7 +2185,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1916,7 +2265,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2154,7 +2504,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

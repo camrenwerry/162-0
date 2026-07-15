@@ -2080,6 +2080,92 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "pit-1990s-ritchto01",
+    "playerId": "ritchto01",
+    "playerSlug": "ritchto01",
+    "name": "Todd Ritchie",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "ritchto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.288,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.49,
+      "whip": 1.292,
+      "so": 107,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 172.7,
+      "games": 28,
+      "starts": 26,
+      "reliefAppearances": 2,
+      "k9": 5.58,
+      "bb9": 2.81
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.49,
+      "whip": 1.292,
+      "so": 107,
+      "wins": 15,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 172.7,
+      "games": 28,
+      "starts": 26,
+      "reliefAppearances": 2,
+      "k9": 5.58,
+      "bb9": 2.81
+    },
+    "scoringStats": {
+      "whip": 1.292,
+      "fip": null,
+      "inningsPitched": 172.7,
+      "strikeoutRate": 5.58,
+      "walkRate": 2.81,
+      "starts": 26,
+      "gamesStarted": 26,
+      "games": 28,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 130.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "pit-1990s-merceor01",
     "playerId": "merceor01",
     "playerSlug": "merceor01",
@@ -2156,6 +2242,258 @@
       "games": 137,
       "plateAppearances": 527,
       "eraAdjustedOffense": 118
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1990s-smithma03",
+    "playerId": "smithma03",
+    "playerSlug": "smithma03",
+    "name": "Mark Smith",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "smithma03"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 43.589,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.876,
+      "hr": 9,
+      "avg": 0.285,
+      "obp": 0.374,
+      "slg": 0.503,
+      "rbi": 35,
+      "sb": 3,
+      "games": 71,
+      "plateAppearances": 222
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.876,
+      "hr": 9,
+      "avg": 0.285,
+      "obp": 0.374,
+      "slg": 0.503,
+      "rbi": 35,
+      "sb": 3,
+      "games": 71,
+      "plateAppearances": 222
+    },
+    "scoringStats": {
+      "obp": 0.374,
+      "slg": 0.503,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 71,
+      "plateAppearances": 222,
+      "eraAdjustedOffense": 117.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1990s-clontbr01",
+    "playerId": "clontbr01",
+    "playerSlug": "clontbr01",
+    "name": "Brad Clontz",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1990s",
+    "featuredSeason": 1999,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "clontbr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.52,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.48,
+      "so": 40,
+      "wins": 1,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 49.3,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 7.3,
+      "bb9": 4.38
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.48,
+      "so": 40,
+      "wins": 1,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 49.3,
+      "games": 56,
+      "starts": 0,
+      "reliefAppearances": 56,
+      "k9": 7.3,
+      "bb9": 4.38
+    },
+    "scoringStats": {
+      "whip": 1.48,
+      "fip": null,
+      "inningsPitched": 49.3,
+      "strikeoutRate": 7.3,
+      "walkRate": 4.38,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 56,
+      "reliefAppearances": 56,
+      "eraAdjustedPitching": 166.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "pit-1990s-cookest01",
+    "playerId": "cookest01",
+    "playerSlug": "cookest01",
+    "name": "Steve Cooke",
+    "franchiseId": "pit",
+    "teamAbbreviation": "PIT",
+    "teamDisplayName": "Pittsburgh Pirates",
+    "historicalTeamName": "Pittsburgh Pirates",
+    "team": "PIT",
+    "decade": "1990s",
+    "featuredSeason": 1993,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "PIT"
+      ],
+      "sourcePlayerId": "cookest01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 42.068,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.89,
+      "whip": 1.263,
+      "so": 132,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 210.7,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 5.64,
+      "bb9": 2.52
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.89,
+      "whip": 1.263,
+      "so": 132,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 210.7,
+      "games": 32,
+      "starts": 32,
+      "reliefAppearances": 0,
+      "k9": 5.64,
+      "bb9": 2.52
+    },
+    "scoringStats": {
+      "whip": 1.263,
+      "fip": null,
+      "inningsPitched": 210.7,
+      "strikeoutRate": 5.64,
+      "walkRate": 2.52,
+      "starts": 32,
+      "gamesStarted": 32,
+      "games": 32,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 103.9
     },
     "pitchingScoringStats": null
   },

@@ -2240,6 +2240,337 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nym-1970s-sandeke01",
+    "playerId": "sandeke01",
+    "playerSlug": "sandeke01",
+    "name": "Ken Sanders",
+    "franchiseId": "nym",
+    "teamAbbreviation": "NYM",
+    "teamDisplayName": "New York Mets",
+    "historicalTeamName": "New York Mets",
+    "team": "NYM",
+    "decade": "1970s",
+    "featuredSeason": 1975,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYN"
+      ],
+      "sourcePlayerId": "sandeke01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.953,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.3,
+      "whip": 1.047,
+      "so": 8,
+      "wins": 1,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 43,
+      "games": 30,
+      "starts": 0,
+      "reliefAppearances": 30,
+      "k9": 1.67,
+      "bb9": 2.93
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.3,
+      "whip": 1.047,
+      "so": 8,
+      "wins": 1,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 43,
+      "games": 30,
+      "starts": 0,
+      "reliefAppearances": 30,
+      "k9": 1.67,
+      "bb9": 2.93
+    },
+    "scoringStats": {
+      "whip": 1.047,
+      "fip": null,
+      "inningsPitched": 43,
+      "strikeoutRate": 1.67,
+      "walkRate": 2.93,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 30,
+      "reliefAppearances": 30,
+      "eraAdjustedPitching": 157.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nym-1970s-hausmto01",
+    "playerId": "hausmto01",
+    "playerSlug": "hausmto01",
+    "name": "Tom Hausman",
+    "franchiseId": "nym",
+    "teamAbbreviation": "NYM",
+    "teamDisplayName": "New York Mets",
+    "historicalTeamName": "New York Mets",
+    "team": "NYM",
+    "decade": "1970s",
+    "featuredSeason": 1979,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYN"
+      ],
+      "sourcePlayerId": "hausmto01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.436,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.75,
+      "whip": 1.068,
+      "so": 33,
+      "wins": 2,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 78.7,
+      "games": 19,
+      "starts": 10,
+      "reliefAppearances": 9,
+      "k9": 3.78,
+      "bb9": 2.17
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.75,
+      "whip": 1.068,
+      "so": 33,
+      "wins": 2,
+      "saves": 2,
+      "sv": 2,
+      "inningsPitched": 78.7,
+      "games": 19,
+      "starts": 10,
+      "reliefAppearances": 9,
+      "k9": 3.78,
+      "bb9": 2.17
+    },
+    "scoringStats": {
+      "whip": 1.068,
+      "fip": null,
+      "inningsPitched": 78.7,
+      "strikeoutRate": 3.78,
+      "walkRate": 2.17,
+      "starts": 10,
+      "gamesStarted": 10,
+      "games": 19,
+      "reliefAppearances": 9,
+      "eraAdjustedPitching": 135.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nym-1970s-kraneed01",
+    "playerId": "kraneed01",
+    "playerSlug": "kraneed01",
+    "name": "Ed Kranepool",
+    "franchiseId": "nym",
+    "teamAbbreviation": "NYM",
+    "teamDisplayName": "New York Mets",
+    "historicalTeamName": "New York Mets",
+    "team": "NYM",
+    "decade": "1970s",
+    "featuredSeason": 1971,
+    "eligiblePositions": [
+      "1B"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYN"
+      ],
+      "sourcePlayerId": "kraneed01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 39.223,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.786,
+      "hr": 14,
+      "avg": 0.28,
+      "obp": 0.34,
+      "slg": 0.447,
+      "rbi": 58,
+      "sb": 0,
+      "games": 122,
+      "plateAppearances": 467
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.786,
+      "hr": 14,
+      "avg": 0.28,
+      "obp": 0.34,
+      "slg": 0.447,
+      "rbi": 58,
+      "sb": 0,
+      "games": 122,
+      "plateAppearances": 467
+    },
+    "scoringStats": {
+      "obp": 0.34,
+      "slg": 0.447,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 122,
+      "plateAppearances": 467,
+      "eraAdjustedOffense": 115.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nym-1970s-shamsar01",
+    "playerId": "shamsar01",
+    "playerSlug": "shamsar01",
+    "name": "Art Shamsky",
+    "franchiseId": "nym",
+    "teamAbbreviation": "NYM",
+    "teamDisplayName": "New York Mets",
+    "historicalTeamName": "New York Mets",
+    "team": "NYM",
+    "decade": "1970s",
+    "featuredSeason": 1970,
+    "eligiblePositions": [
+      "1B",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYN"
+      ],
+      "sourcePlayerId": "shamsar01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 38.78,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.803,
+      "hr": 11,
+      "avg": 0.293,
+      "obp": 0.371,
+      "slg": 0.432,
+      "rbi": 49,
+      "sb": 1,
+      "games": 122,
+      "plateAppearances": 458
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.803,
+      "hr": 11,
+      "avg": 0.293,
+      "obp": 0.371,
+      "slg": 0.432,
+      "rbi": 49,
+      "sb": 1,
+      "games": 122,
+      "plateAppearances": 458
+    },
+    "scoringStats": {
+      "obp": 0.371,
+      "slg": 0.432,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 122,
+      "plateAppearances": 458,
+      "eraAdjustedOffense": 111.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nym-1970s-groteje01",
     "playerId": "groteje01",
     "playerSlug": "groteje01",

@@ -1024,7 +1024,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1527,7 +1528,8 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1995,6 +1997,350 @@
       "games": 30,
       "reliefAppearances": 23,
       "eraAdjustedPitching": 162
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nym-2020s-maytr01",
+    "playerId": "maytr01",
+    "playerSlug": "maytr01",
+    "name": "Trevor May",
+    "franchiseId": "nym",
+    "teamAbbreviation": "NYM",
+    "teamDisplayName": "New York Mets",
+    "historicalTeamName": "New York Mets",
+    "team": "NYM",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYN"
+      ],
+      "sourcePlayerId": "maytr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.655,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.59,
+      "whip": 1.261,
+      "so": 83,
+      "wins": 7,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 62.7,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 11.92,
+      "bb9": 3.45
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.59,
+      "whip": 1.261,
+      "so": 83,
+      "wins": 7,
+      "saves": 4,
+      "sv": 4,
+      "inningsPitched": 62.7,
+      "games": 68,
+      "starts": 0,
+      "reliefAppearances": 68,
+      "k9": 11.92,
+      "bb9": 3.45
+    },
+    "scoringStats": {
+      "whip": 1.261,
+      "fip": null,
+      "inningsPitched": 62.7,
+      "strikeoutRate": 11.92,
+      "walkRate": 3.45,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 68,
+      "reliefAppearances": 68,
+      "eraAdjustedPitching": 116.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nym-2020s-peterda01",
+    "playerId": "peterda01",
+    "playerSlug": "peterda01",
+    "name": "David Peterson",
+    "franchiseId": "nym",
+    "teamAbbreviation": "NYM",
+    "teamDisplayName": "New York Mets",
+    "historicalTeamName": "New York Mets",
+    "team": "NYM",
+    "decade": "2020s",
+    "featuredSeason": 2024,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "L",
+    "throws": "L",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYN"
+      ],
+      "sourcePlayerId": "peterda01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.653,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.9,
+      "whip": 1.289,
+      "so": 101,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 121,
+      "games": 21,
+      "starts": 21,
+      "reliefAppearances": 0,
+      "k9": 7.51,
+      "bb9": 3.42
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.9,
+      "whip": 1.289,
+      "so": 101,
+      "wins": 10,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 121,
+      "games": 21,
+      "starts": 21,
+      "reliefAppearances": 0,
+      "k9": 7.51,
+      "bb9": 3.42
+    },
+    "scoringStats": {
+      "whip": 1.289,
+      "fip": null,
+      "inningsPitched": 121,
+      "strikeoutRate": 7.51,
+      "walkRate": 3.42,
+      "starts": 21,
+      "gamesStarted": 21,
+      "games": 21,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 142.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nym-2020s-walketa01",
+    "playerId": "walketa01",
+    "playerSlug": "walketa01",
+    "name": "Taijuan Walker",
+    "franchiseId": "nym",
+    "teamAbbreviation": "NYM",
+    "teamDisplayName": "New York Mets",
+    "historicalTeamName": "New York Mets",
+    "team": "NYM",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "B",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYN"
+      ],
+      "sourcePlayerId": "walketa01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.618,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.49,
+      "whip": 1.195,
+      "so": 132,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 157.3,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 7.55,
+      "bb9": 2.57
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.49,
+      "whip": 1.195,
+      "so": 132,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 157.3,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 7.55,
+      "bb9": 2.57
+    },
+    "scoringStats": {
+      "whip": 1.195,
+      "fip": null,
+      "inningsPitched": 157.3,
+      "strikeoutRate": 7.55,
+      "walkRate": 2.57,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 29,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 116
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nym-2020s-verlaju01",
+    "playerId": "verlaju01",
+    "playerSlug": "verlaju01",
+    "name": "Justin Verlander",
+    "franchiseId": "nym",
+    "teamAbbreviation": "NYM",
+    "teamDisplayName": "New York Mets",
+    "historicalTeamName": "New York Mets",
+    "team": "NYM",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "NYN"
+      ],
+      "sourcePlayerId": "verlaju01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 44.267,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.15,
+      "whip": 1.145,
+      "so": 81,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 94.3,
+      "games": 16,
+      "starts": 16,
+      "reliefAppearances": 0,
+      "k9": 7.73,
+      "bb9": 2.96
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.15,
+      "whip": 1.145,
+      "so": 81,
+      "wins": 6,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 94.3,
+      "games": 16,
+      "starts": 16,
+      "reliefAppearances": 0,
+      "k9": 7.73,
+      "bb9": 2.96
+    },
+    "scoringStats": {
+      "whip": 1.145,
+      "fip": null,
+      "inningsPitched": 94.3,
+      "strikeoutRate": 7.73,
+      "walkRate": 2.96,
+      "starts": 16,
+      "gamesStarted": 16,
+      "games": 16,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 139
     },
     "pitchingScoringStats": null
   },

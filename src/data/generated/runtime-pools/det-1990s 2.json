@@ -12,7 +12,8 @@
     "decade": "1990s",
     "featuredSeason": 1990,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -214,7 +215,8 @@
     "decade": "1990s",
     "featuredSeason": 1991,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -411,7 +413,8 @@
     "featuredSeason": 1994,
     "eligiblePositions": [
       "CF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -758,7 +761,8 @@
     "decade": "1990s",
     "featuredSeason": 1994,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1257,7 +1261,8 @@
     "featuredSeason": 1999,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1441,6 +1446,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "det-1990s-kielyjo01",
+    "playerId": "kielyjo01",
+    "playerSlug": "kielyjo01",
+    "name": "John Kiely",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1990s",
+    "featuredSeason": 1992,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.13,
+      "whip": 1.309,
+      "so": 18,
+      "wins": 4,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 55,
+      "games": 39,
+      "starts": 0,
+      "reliefAppearances": 39,
+      "k9": 2.95,
+      "bb9": 4.58
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.309,
+      "fip": null,
+      "inningsPitched": 55,
+      "strikeoutRate": 2.95,
+      "walkRate": 4.58,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 39,
+      "reliefAppearances": 39,
+      "eraAdjustedPitching": 185.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "det-1990s-tananfr01",
     "playerId": "tananfr01",
     "playerSlug": "tananfr01",
@@ -1489,6 +1546,154 @@
       "games": 33,
       "reliefAppearances": 0,
       "eraAdjustedPitching": 108.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1990s-pridecu01",
+    "playerId": "pridecu01",
+    "playerSlug": "pridecu01",
+    "name": "Curtis Pride",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1990s",
+    "featuredSeason": 1996,
+    "eligiblePositions": [
+      "LF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.886,
+      "hr": 10,
+      "avg": 0.3,
+      "obp": 0.372,
+      "slg": 0.513,
+      "rbi": 31,
+      "sb": 11,
+      "games": 95,
+      "plateAppearances": 301
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.372,
+      "slg": 0.513,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 95,
+      "plateAppearances": 301,
+      "eraAdjustedOffense": 111.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1990s-gonzalu01",
+    "playerId": "gonzalu01",
+    "playerSlug": "gonzalu01",
+    "name": "Luis Gonzalez",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "eligiblePositions": [
+      "LF",
+      "DH"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.816,
+      "hr": 23,
+      "avg": 0.267,
+      "obp": 0.34,
+      "slg": 0.475,
+      "rbi": 71,
+      "sb": 12,
+      "games": 154,
+      "plateAppearances": 620
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.34,
+      "slg": 0.475,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 154,
+      "plateAppearances": 620,
+      "eraAdjustedOffense": 105.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "det-1990s-barnesk01",
+    "playerId": "barnesk01",
+    "playerSlug": "barnesk01",
+    "name": "Skeeter Barnes",
+    "franchiseId": "det",
+    "teamAbbreviation": "DET",
+    "teamDisplayName": "Detroit Tigers",
+    "historicalTeamName": "Detroit Tigers",
+    "team": "DET",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "eligiblePositions": [
+      "3B",
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.816,
+      "hr": 5,
+      "avg": 0.289,
+      "obp": 0.325,
+      "slg": 0.491,
+      "rbi": 17,
+      "sb": 10,
+      "games": 75,
+      "plateAppearances": 171
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.325,
+      "slg": 0.491,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 75,
+      "plateAppearances": 171,
+      "eraAdjustedOffense": 112.8
     },
     "pitchingScoringStats": null
   },

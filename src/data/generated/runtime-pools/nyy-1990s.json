@@ -879,7 +879,8 @@
     "eligiblePositions": [
       "C",
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -967,6 +968,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-1990s-stantmi02",
+    "playerId": "stantmi02",
+    "playerSlug": "stantmi02",
+    "name": "Mike Stanton",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1997,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "L",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.56,
+      "whip": 1.26,
+      "so": 70,
+      "wins": 6,
+      "saves": 3,
+      "sv": 3,
+      "inningsPitched": 66.7,
+      "games": 64,
+      "starts": 0,
+      "reliefAppearances": 64,
+      "k9": 9.45,
+      "bb9": 4.59
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.26,
+      "fip": null,
+      "inningsPitched": 66.7,
+      "strikeoutRate": 9.45,
+      "walkRate": 4.59,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 64,
+      "reliefAppearances": 64,
+      "eraAdjustedPitching": 177.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-1990s-tartada01",
     "playerId": "tartada01",
     "playerSlug": "tartada01",
@@ -979,7 +1032,8 @@
     "decade": "1990s",
     "featuredSeason": 1992,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1015,6 +1069,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-1990s-hernaor01",
+    "playerId": "hernaor01",
+    "playerSlug": "hernaor01",
+    "name": "Orlando Hernandez",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1998,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.13,
+      "whip": 1.17,
+      "so": 131,
+      "wins": 12,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 141,
+      "games": 21,
+      "starts": 21,
+      "reliefAppearances": 0,
+      "k9": 8.36,
+      "bb9": 3.32
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.17,
+      "fip": null,
+      "inningsPitched": 141,
+      "strikeoutRate": 8.36,
+      "walkRate": 3.32,
+      "starts": 21,
+      "gamesStarted": 21,
+      "games": 21,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 148.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-1990s-maaske01",
     "playerId": "maaske01",
     "playerSlug": "maaske01",
@@ -1027,7 +1133,8 @@
     "decade": "1990s",
     "featuredSeason": 1990,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1063,6 +1170,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "nyy-1990s-sandesc01",
+    "playerId": "sandesc01",
+    "playerSlug": "sandesc01",
+    "name": "Scott Sanderson",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1991,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.81,
+      "whip": 1.101,
+      "so": 130,
+      "wins": 16,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 208,
+      "games": 34,
+      "starts": 34,
+      "reliefAppearances": 0,
+      "k9": 5.63,
+      "bb9": 1.25
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.101,
+      "fip": null,
+      "inningsPitched": 208,
+      "strikeoutRate": 5.63,
+      "walkRate": 1.25,
+      "starts": 34,
+      "gamesStarted": 34,
+      "games": 34,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 107.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "nyy-1990s-wickmbo01",
+    "playerId": "wickmbo01",
+    "playerSlug": "wickmbo01",
+    "name": "Bob Wickman",
+    "franchiseId": "nyy",
+    "teamAbbreviation": "NYY",
+    "teamDisplayName": "New York Yankees",
+    "historicalTeamName": "New York Yankees",
+    "team": "NYY",
+    "decade": "1990s",
+    "featuredSeason": 1994,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.09,
+      "whip": 1.157,
+      "so": 56,
+      "wins": 5,
+      "saves": 6,
+      "sv": 6,
+      "inningsPitched": 70,
+      "games": 53,
+      "starts": 0,
+      "reliefAppearances": 53,
+      "k9": 7.2,
+      "bb9": 3.47
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.157,
+      "fip": null,
+      "inningsPitched": 70,
+      "strikeoutRate": 7.2,
+      "walkRate": 3.47,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 53,
+      "reliefAppearances": 53,
+      "eraAdjustedPitching": 155.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "nyy-1990s-strawda01",
     "playerId": "strawda01",
     "playerSlug": "strawda01",
@@ -1075,7 +1286,8 @@
     "decade": "1990s",
     "featuredSeason": 1998,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -1025,7 +1025,8 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1162,6 +1163,110 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-2020s-santogr01",
+    "playerId": "santogr01",
+    "playerSlug": "santogr01",
+    "name": "Gregory Santos",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "2020s",
+    "featuredSeason": 2023,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.39,
+      "whip": 1.296,
+      "so": 66,
+      "wins": 2,
+      "saves": 5,
+      "sv": 5,
+      "inningsPitched": 66.3,
+      "games": 60,
+      "starts": 0,
+      "reliefAppearances": 60,
+      "k9": 8.95,
+      "bb9": 2.31
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.296,
+      "fip": null,
+      "inningsPitched": 66.3,
+      "strikeoutRate": 8.95,
+      "walkRate": 2.31,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 60,
+      "reliefAppearances": 60,
+      "eraAdjustedPitching": 126.1
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "chw-2020s-burrry01",
+    "playerId": "burrry01",
+    "playerSlug": "burrry01",
+    "name": "Ryan Burr",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "2020s",
+    "featuredSeason": 2021,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.45,
+      "whip": 1.336,
+      "so": 33,
+      "wins": 2,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 36.7,
+      "games": 34,
+      "starts": 1,
+      "reliefAppearances": 33,
+      "k9": 8.1,
+      "bb9": 5.15
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.336,
+      "fip": null,
+      "inningsPitched": 36.7,
+      "strikeoutRate": 8.1,
+      "walkRate": 5.15,
+      "starts": 1,
+      "gamesStarted": 1,
+      "games": 34,
+      "reliefAppearances": 33,
+      "eraAdjustedPitching": 176
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-2020s-andruel01",
     "playerId": "andruel01",
     "playerSlug": "andruel01",
@@ -1210,6 +1315,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-2020s-smithsh02",
+    "playerId": "smithsh02",
+    "playerSlug": "smithsh02",
+    "name": "Shane Smith",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "2020s",
+    "featuredSeason": 2025,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.81,
+      "whip": 1.196,
+      "so": 145,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 146.3,
+      "games": 29,
+      "starts": 29,
+      "reliefAppearances": 0,
+      "k9": 8.92,
+      "bb9": 3.57
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.196,
+      "fip": null,
+      "inningsPitched": 146.3,
+      "strikeoutRate": 8.92,
+      "walkRate": 3.57,
+      "starts": 29,
+      "gamesStarted": 29,
+      "games": 29,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 107.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-2020s-sheetga01",
     "playerId": "sheetga01",
     "playerSlug": "sheetga01",
@@ -1223,7 +1380,8 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "1B",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1259,6 +1417,58 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "chw-2020s-cuetojo01",
+    "playerId": "cuetojo01",
+    "playerSlug": "cuetojo01",
+    "name": "Johnny Cueto",
+    "franchiseId": "chw",
+    "teamAbbreviation": "CHW",
+    "teamDisplayName": "Chicago White Sox",
+    "historicalTeamName": "Chicago White Sox",
+    "team": "CHW",
+    "decade": "2020s",
+    "featuredSeason": 2022,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.35,
+      "whip": 1.225,
+      "so": 102,
+      "wins": 8,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 158.3,
+      "games": 25,
+      "starts": 24,
+      "reliefAppearances": 1,
+      "k9": 5.8,
+      "bb9": 1.88
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.225,
+      "fip": null,
+      "inningsPitched": 158.3,
+      "strikeoutRate": 5.8,
+      "walkRate": 1.88,
+      "starts": 24,
+      "gamesStarted": 24,
+      "games": 25,
+      "reliefAppearances": 1,
+      "eraAdjustedPitching": 115.6
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "chw-2020s-teelky01",
     "playerId": "teelky01",
     "playerSlug": "teelky01",
@@ -1271,7 +1481,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "C"
+      "C",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1368,7 +1579,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1418,7 +1630,8 @@
     "eligiblePositions": [
       "1B",
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1466,7 +1679,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -116,7 +116,8 @@
     "decade": "1980s",
     "featuredSeason": 1988,
     "eligiblePositions": [
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -918,6 +919,106 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "oak-1980s-murphdw01",
+    "playerId": "murphdw01",
+    "playerSlug": "murphdw01",
+    "name": "Dwayne Murphy",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1984,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "L",
+    "throws": "R",
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.814,
+      "hr": 33,
+      "avg": 0.256,
+      "obp": 0.342,
+      "slg": 0.472,
+      "rbi": 88,
+      "sb": 4,
+      "games": 153,
+      "plateAppearances": 647
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "obp": 0.342,
+      "slg": 0.472,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 153,
+      "plateAppearances": 647,
+      "eraAdjustedOffense": 112.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1980s-welchbo01",
+    "playerId": "welchbo01",
+    "playerSlug": "welchbo01",
+    "name": "Bob Welch",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1989,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3,
+      "whip": 1.283,
+      "so": 137,
+      "wins": 17,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 209.7,
+      "games": 33,
+      "starts": 33,
+      "reliefAppearances": 0,
+      "k9": 5.88,
+      "bb9": 3.35
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.283,
+      "fip": null,
+      "inningsPitched": 209.7,
+      "strikeoutRate": 5.88,
+      "walkRate": 3.35,
+      "starts": 33,
+      "gamesStarted": 33,
+      "games": 33,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 129.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "oak-1980s-henderi01",
     "playerId": "henderi01",
     "playerSlug": "henderi01",
@@ -979,7 +1080,8 @@
     "featuredSeason": 1982,
     "eligiblePositions": [
       "LF",
-      "RF"
+      "RF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1011,6 +1113,110 @@
       "games": 113,
       "plateAppearances": 334,
       "eraAdjustedOffense": 120.2
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1980s-youngcu01",
+    "playerId": "youngcu01",
+    "playerSlug": "youngcu01",
+    "name": "Curt Young",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "L",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.45,
+      "whip": 1.177,
+      "so": 116,
+      "wins": 13,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 198,
+      "games": 29,
+      "starts": 27,
+      "reliefAppearances": 2,
+      "k9": 5.27,
+      "bb9": 2.59
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.177,
+      "fip": null,
+      "inningsPitched": 198,
+      "strikeoutRate": 5.27,
+      "walkRate": 2.59,
+      "starts": 27,
+      "gamesStarted": 27,
+      "games": 29,
+      "reliefAppearances": 2,
+      "eraAdjustedPitching": 120.9
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "oak-1980s-haasmo01",
+    "playerId": "haasmo01",
+    "playerSlug": "haasmo01",
+    "name": "Moose Haas",
+    "franchiseId": "oak",
+    "teamAbbreviation": "OAK",
+    "teamDisplayName": "Oakland Athletics",
+    "historicalTeamName": "Oakland Athletics",
+    "team": "OAK",
+    "decade": "1980s",
+    "featuredSeason": 1986,
+    "eligiblePositions": [
+      "SP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "SP",
+    "bats": "R",
+    "throws": "R",
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.74,
+      "whip": 1.065,
+      "so": 40,
+      "wins": 7,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 72.3,
+      "games": 12,
+      "starts": 12,
+      "reliefAppearances": 0,
+      "k9": 4.98,
+      "bb9": 2.36
+    },
+    "pitchingVisibleStats": null,
+    "scoringStats": {
+      "whip": 1.065,
+      "fip": null,
+      "inningsPitched": 72.3,
+      "strikeoutRate": 4.98,
+      "walkRate": 2.36,
+      "starts": 12,
+      "gamesStarted": 12,
+      "games": 12,
+      "reliefAppearances": 0,
+      "eraAdjustedPitching": 152.5
     },
     "pitchingScoringStats": null
   },
@@ -1174,7 +1380,8 @@
     "decade": "1980s",
     "featuredSeason": 1983,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1223,7 +1430,8 @@
     "featuredSeason": 1985,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "DH"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

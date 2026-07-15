@@ -1152,6 +1152,85 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "col-2000s-wilsopr01",
+    "playerId": "wilsopr01",
+    "playerSlug": "wilsopr01",
+    "name": "Preston Wilson",
+    "franchiseId": "col",
+    "teamAbbreviation": "COL",
+    "teamDisplayName": "Colorado Rockies",
+    "historicalTeamName": "Colorado Rockies",
+    "team": "COL",
+    "decade": "2000s",
+    "featuredSeason": 2003,
+    "eligiblePositions": [
+      "CF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "COL"
+      ],
+      "sourcePlayerId": "wilsopr01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 54.43,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.88,
+      "hr": 36,
+      "avg": 0.282,
+      "obp": 0.343,
+      "slg": 0.537,
+      "rbi": 141,
+      "sb": 14,
+      "games": 155,
+      "plateAppearances": 661
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.88,
+      "hr": 36,
+      "avg": 0.282,
+      "obp": 0.343,
+      "slg": 0.537,
+      "rbi": 141,
+      "sb": 14,
+      "games": 155,
+      "plateAppearances": 661
+    },
+    "scoringStats": {
+      "obp": 0.343,
+      "slg": 0.537,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 155,
+      "plateAppearances": 661,
+      "eraAdjustedOffense": 117.5
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "col-2000s-hawpebr01",
     "playerId": "hawpebr01",
     "playerSlug": "hawpebr01",
@@ -1310,6 +1389,172 @@
     "pitchingScoringStats": null
   },
   {
+    "id": "col-2000s-jimenjo01",
+    "playerId": "jimenjo01",
+    "playerSlug": "jimenjo01",
+    "name": "Jose Jimenez",
+    "franchiseId": "col",
+    "teamAbbreviation": "COL",
+    "teamDisplayName": "Colorado Rockies",
+    "historicalTeamName": "Colorado Rockies",
+    "team": "COL",
+    "decade": "2000s",
+    "featuredSeason": 2002,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "COL"
+      ],
+      "sourcePlayerId": "jimenjo01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.701,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.56,
+      "whip": 1.186,
+      "so": 47,
+      "wins": 2,
+      "saves": 41,
+      "sv": 41,
+      "inningsPitched": 73.3,
+      "games": 74,
+      "starts": 0,
+      "reliefAppearances": 74,
+      "k9": 5.77,
+      "bb9": 1.35
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 3.56,
+      "whip": 1.186,
+      "so": 47,
+      "wins": 2,
+      "saves": 41,
+      "sv": 41,
+      "inningsPitched": 73.3,
+      "games": 74,
+      "starts": 0,
+      "reliefAppearances": 74,
+      "k9": 5.77,
+      "bb9": 1.35
+    },
+    "scoringStats": {
+      "whip": 1.186,
+      "fip": null,
+      "inningsPitched": 73.3,
+      "strikeoutRate": 5.77,
+      "walkRate": 1.35,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 74,
+      "reliefAppearances": 74,
+      "eraAdjustedPitching": 115.3
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "col-2000s-hammoje01",
+    "playerId": "hammoje01",
+    "playerSlug": "hammoje01",
+    "name": "Jeffrey Hammonds",
+    "franchiseId": "col",
+    "teamAbbreviation": "COL",
+    "teamDisplayName": "Colorado Rockies",
+    "historicalTeamName": "Colorado Rockies",
+    "team": "COL",
+    "decade": "2000s",
+    "featuredSeason": 2000,
+    "eligiblePositions": [
+      "LF",
+      "RF"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": null,
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "COL"
+      ],
+      "sourcePlayerId": "hammoje01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 50.655,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "hitter",
+    "type": "hitter",
+    "visibleStats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.924,
+      "hr": 20,
+      "avg": 0.335,
+      "obp": 0.395,
+      "slg": 0.529,
+      "rbi": 106,
+      "sb": 14,
+      "games": 122,
+      "plateAppearances": 511
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "opsPlus": null,
+      "ops": 0.924,
+      "hr": 20,
+      "avg": 0.335,
+      "obp": 0.395,
+      "slg": 0.529,
+      "rbi": 106,
+      "sb": 14,
+      "games": 122,
+      "plateAppearances": 511
+    },
+    "scoringStats": {
+      "obp": 0.395,
+      "slg": 0.529,
+      "wrcPlus": null,
+      "offensiveValue": null,
+      "defensiveValue": null,
+      "baserunningValue": null,
+      "games": 122,
+      "plateAppearances": 511,
+      "eraAdjustedOffense": 119.4
+    },
+    "pitchingScoringStats": null
+  },
+  {
     "id": "col-2000s-castivi02",
     "playerId": "castivi02",
     "playerSlug": "castivi02",
@@ -1385,6 +1630,92 @@
       "games": 148,
       "plateAppearances": 648,
       "eraAdjustedOffense": 114.7
+    },
+    "pitchingScoringStats": null
+  },
+  {
+    "id": "col-2000s-witasja01",
+    "playerId": "witasja01",
+    "playerSlug": "witasja01",
+    "name": "Jay Witasick",
+    "franchiseId": "col",
+    "teamAbbreviation": "COL",
+    "teamDisplayName": "Colorado Rockies",
+    "historicalTeamName": "Colorado Rockies",
+    "team": "COL",
+    "decade": "2000s",
+    "featuredSeason": 2005,
+    "eligiblePositions": [
+      "RP"
+    ],
+    "isTwoWay": false,
+    "pitchingRole": "RP",
+    "bats": "R",
+    "throws": "R",
+    "sourceMetadata": {
+      "verified": true,
+      "sourceLabel": "SABR Lahman Baseball Database 2025",
+      "sourceUrl": "https://sabr.org/lahman-database/",
+      "advancedStatsSourceUrls": [],
+      "verifiedAt": "2026-07-14",
+      "lahmanTeamIds": [
+        "COL"
+      ],
+      "sourcePlayerId": "witasja01"
+    },
+    "sourceNotes": "",
+    "notes": null,
+    "manualPositionOverride": false,
+    "selectionMetadata": {
+      "score": 49.52,
+      "formulaVersion": "lahman-1.0"
+    },
+    "playerType": "pitcher",
+    "type": "pitcher",
+    "visibleStats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.52,
+      "whip": 1.093,
+      "so": 40,
+      "wins": 0,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 35.7,
+      "games": 32,
+      "starts": 0,
+      "reliefAppearances": 32,
+      "k9": 10.09,
+      "bb9": 3.03
+    },
+    "pitchingVisibleStats": null,
+    "stats": {
+      "war": null,
+      "eraPlus": null,
+      "era": 2.52,
+      "whip": 1.093,
+      "so": 40,
+      "wins": 0,
+      "saves": 0,
+      "sv": 0,
+      "inningsPitched": 35.7,
+      "games": 32,
+      "starts": 0,
+      "reliefAppearances": 32,
+      "k9": 10.09,
+      "bb9": 3.03
+    },
+    "scoringStats": {
+      "whip": 1.093,
+      "fip": null,
+      "inningsPitched": 35.7,
+      "strikeoutRate": 10.09,
+      "walkRate": 3.03,
+      "starts": 0,
+      "gamesStarted": 0,
+      "games": 32,
+      "reliefAppearances": 32,
+      "eraAdjustedPitching": 167.2
     },
     "pitchingScoringStats": null
   },
