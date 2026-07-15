@@ -162,7 +162,7 @@ export const WIN_CURVE = {
     { score: 98.5, wins: 159 }, { score: 99.5, wins: 161 }, { score: 100, wins: 162 },
   ],
   perfect: {
-    minimumCurveWins: 160,
+    minimumCurveWins: 152,
     overallMinimum: 95,
     offenseMinimum: 94.5,
     defenseMinimum: 85,

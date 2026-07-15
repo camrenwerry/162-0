@@ -22,9 +22,28 @@ assert.deepEqual(calculateDraftResult(fixtureRoster('strong', 'strong')).result,
 for (const result of [weak, average, strong, perfect]) assert.equal(result.wins + result.losses, 162)
 assert(weak.wins <= average.wins && average.wins <= strong.wins && strong.wins <= perfect.wins, 'clearly better rosters must not project fewer wins')
 assert(historicalPeakCalculation.diagnostics.perfectRequirementsMet, 'the generated historical peak roster must pass the category and player requirements')
-assert(historicalPeakCalculation.diagnostics.projectedWinsBeforePerfectCheck < 160, 'the generated historical peak roster must remain below the extraordinary curve threshold')
-assert.equal(attainableHistoricalPerfect.wins, historicalPeakCalculation.diagnostics.projectedWinsBeforePerfectCheck, 'a qualifying roster below 160 ordinary wins must retain its curve result')
-assert.notEqual(attainableHistoricalPerfect.wins, 162, 'category qualification alone must not force a perfect season')
+assert.equal(historicalPeakCalculation.diagnostics.projectedWinsBeforePerfectCheck, 152, 'the generated historical peak roster must reach the perfect gate through the ordinary curve')
+assert.equal(attainableHistoricalPerfect.wins, 162, 'the extraordinary generated historical peak roster must be able to reach 162 wins')
+
+const historicalScores = historicalPeakCalculation.diagnostics.categoryScores
+const historicalPlayers = historicalPeakCalculation.diagnostics.playerValues
+const singleCategoryFailures = [
+  { ...historicalScores, overall: 94.9 },
+  { ...historicalScores, offense: 94.4 },
+  { ...historicalScores, defense: 84.9 },
+  { ...historicalScores, startingPitching: 93.9 },
+  { ...historicalScores, reliefPitching: 94.9 },
+  { ...historicalScores, rosterBalance: 92.9 },
+]
+for (const scores of singleCategoryFailures) {
+  const projection = calculateProjectedRecord(scores, historicalPlayers)
+  assert.equal(projection.perfectRequirementsMet, false, 'failing any single perfect category threshold must prevent 162')
+  assert.equal(projection.wins, projection.winsBeforePerfectCheck, 'a failed perfect category must retain its ordinary projection')
+}
+const weakestPlayerFailure = historicalPlayers.map((player, index) => index === 0 ? { ...player, value: 87.9 } : player)
+const weakestPlayerProjection = calculateProjectedRecord(historicalScores, weakestPlayerFailure)
+assert.equal(weakestPlayerProjection.perfectRequirementsMet, false)
+assert.equal(weakestPlayerProjection.wins, weakestPlayerProjection.winsBeforePerfectCheck, 'failing the weakest-player threshold must retain the ordinary projection')
 assert(strong.wins - weak.wins >= 60, 'fixture records must use a meaningfully wide range')
 
 const eliteOffenseBadPitching = calculateDraftResult(fixtureRoster('perfect', 'weak')).result
@@ -131,19 +150,19 @@ const preservedLowerAnchors = [
 for (const [overall, expectedWins] of preservedLowerAnchors) assert.equal(projectScore(overall).wins, expectedWins, `overall ${overall} must preserve its v2.2 projection`)
 
 const upperAnchors = [
-  [84, 118], [88, 131], [92, 143], [95, 151], [97, 156],
+  [84, 118], [88, 131], [92, 143], [95, 151], [97, 156], [98.5, 159], [99.5, 161],
 ] as const
-for (const [overall, expectedWins] of upperAnchors) assert.equal(projectScore(overall).wins, expectedWins, `overall ${overall} must use the v2.3 upper curve`)
+for (const [overall, expectedWins] of upperAnchors) assert.equal(projectScore(overall).winsBeforePerfectCheck, expectedWins, `overall ${overall} must use the v2.3 upper curve`)
 
-const qualifyingBelowThreshold = projectScore(98.5)
-assert.equal(qualifyingBelowThreshold.winsBeforePerfectCheck, 159)
+const qualifyingBelowThreshold = projectScore(95)
+assert.equal(qualifyingBelowThreshold.winsBeforePerfectCheck, 151)
 assert.equal(qualifyingBelowThreshold.perfectRequirementsMet, true)
-assert.equal(qualifyingBelowThreshold.wins, 159, 'a qualifying roster below 160 curve wins must not be forced to 162')
+assert.equal(qualifyingBelowThreshold.wins, 151, 'a qualifying roster below 152 curve wins must not be forced to 162')
 
-const qualifyingExtraordinary = projectScore(99)
-assert.equal(qualifyingExtraordinary.winsBeforePerfectCheck, 160)
+const qualifyingExtraordinary = projectScore(95.4)
+assert.equal(qualifyingExtraordinary.winsBeforePerfectCheck, 152)
 assert.equal(qualifyingExtraordinary.perfectRequirementsMet, true)
-assert.equal(qualifyingExtraordinary.wins, 162, 'a qualifying roster at 160+ curve wins may reach 162')
+assert.equal(qualifyingExtraordinary.wins, 162, 'a qualifying roster at 152+ curve wins may reach 162')
 assert.equal(projectScore(100).wins, 162)
 
 const nearPerfectRecords = [projectScore(97, { defense: 84 }), projectScore(99, { defense: 84 }), projectScore(100, { defense: 84 })]

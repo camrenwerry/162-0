@@ -127,7 +127,8 @@ console.log('Five local draft records (5th/25th/50th/75th/95th player-value stra
 for (const [index, result] of localResults.entries()) console.log(`Draft ${index + 1}: ${result.wins}–${result.losses}, overall ${result.overallGrade} (${result.overallScore}), ${result.tierLabel}`)
 console.log(`Best eligible generated-card roster: ${allTimeResult.wins}–${allTimeResult.losses}, overall ${allTimeResult.overallGrade} (${allTimeResult.overallScore}), categories ${JSON.stringify(allTimeResult.categoryScores)}`)
 
-assert((wins.at(-1) ?? 0) >= 156, 'distribution must include a near-perfect roster')
-assert(allTimeResult.wins >= 145 && allTimeResult.wins <= 155, 'the best eligible generated-card roster must remain in the all-time-great band below the perfect gate')
+assert.equal(wins.at(-1), 162, 'distribution must include an attainable perfect roster')
+assert.equal(wins.filter((value) => value === 162).length, 1, 'perfect seasons must remain exceptionally rare')
+assert.equal(allTimeResult.wins, 162, 'the best eligible generated-card roster must be capable of perfection')
 assert(standardDeviation >= 15, 'projected records remain too tightly clustered')
 assert(Math.max(...localResults.map(({ wins: value }) => value)) - Math.min(...localResults.map(({ wins: value }) => value)) >= 15, 'five materially different local drafts should produce meaningfully different records')

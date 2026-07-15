@@ -29,7 +29,7 @@ const benchmarks = [
   ['Great roster', fixtureRoster('good', 'good'), [115, 129]],
   ['Elite roster', elite, [130, 144]],
   ['Historical superteam', historicalSuperteam, [145, 161]],
-  ['All-time generated-card roster', nearPerfect, [145, 155]],
+  ['All-time generated-card roster', nearPerfect, [162, 162]],
 ] as const
 
 const lines = [
@@ -52,8 +52,8 @@ for (const [name, roster, [minimum, maximum]] of benchmarks) {
 }
 
 const perfect = calculateDraftResult(fixtureRoster('perfect', 'perfect')).result
-if (perfect.wins < 156 || perfect.wins > 161) failures.push(`Perfect-category fixture projected ${perfect.wins} wins outside 156–161: ${JSON.stringify(perfect.categoryScores)}`)
-lines.push('', `Perfect-category fixture below the 160-win gate: **${perfect.wins}–${perfect.losses}**, overall **${perfect.overallGrade} (${perfect.overallScore})**.`, '')
+if (perfect.wins !== 162) failures.push(`Perfect-category fixture projected ${perfect.wins} wins instead of 162: ${JSON.stringify(perfect.categoryScores)}`)
+lines.push('', `Perfect-category fixture above the 152-win gate: **${perfect.wins}–${perfect.losses}**, overall **${perfect.overallGrade} (${perfect.overallScore})**.`, '')
 mkdirSync('docs/audits', { recursive: true })
 writeFileSync('docs/audits/SCORING_BENCHMARKS.md', lines.join('\n'))
 console.log(lines.join('\n'))

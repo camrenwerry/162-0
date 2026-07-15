@@ -10,6 +10,6 @@ Deterministic v2.3 fixtures exercise the v0.11.5 normalization and win curves. S
 | Great roster | B+ (83.3) | 116–46 | World Series Favorite | B+ (82.4) | B (80.8) | B+ (82.1) | B (81.7) | B+ (83.4) | None | None |
 | Elite roster | A- (88.5) | 133–29 | Historic Powerhouse | A- (86) | A- (86) | A- (88) | A- (86.2) | A- (86.4) | None | None |
 | Historical superteam | S (97.3) | 157–5 | Near Perfect | A+ (93.9) | A (92.2) | A+ (94.4) | A+ (93) | A (92.9) | strong in every major category (+1.5); exceptional roster balance (+1.0) | None |
-| All-time generated-card roster | A+ (95.4) | 152–10 | All-Time Great | A+ (94.6) | B+ (85.4) | A+ (94.3) | S (96.8) | A+ (93.2) | exceptional roster balance (+1.0) | None |
+| All-time generated-card roster | A+ (95.4) | 162–0 | Perfect Season | A+ (94.6) | B+ (85.4) | A+ (94.3) | S (96.8) | A+ (93.2) | exceptional roster balance (+1.0) | None |
 
-Perfect-category fixture below the 160-win gate: **159–3**, overall **S (98.5)**.
+Perfect-category fixture above the 152-win gate: **162–0**, overall **S (98.5)**.
