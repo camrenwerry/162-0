@@ -354,7 +354,8 @@
     "featuredSeason": 1940,
     "eligiblePositions": [
       "3B",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -550,7 +551,8 @@
     "decade": "1940s",
     "featuredSeason": 1944,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1245,6 +1247,7 @@
     "decade": "1940s",
     "featuredSeason": 1944,
     "eligiblePositions": [
+      "1B",
       "RF"
     ],
     "isTwoWay": false,
@@ -1343,6 +1346,7 @@
     "decade": "1940s",
     "featuredSeason": 1943,
     "eligiblePositions": [
+      "3B",
       "LF",
       "RF"
     ],

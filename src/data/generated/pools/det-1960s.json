@@ -2735,7 +2735,8 @@
     "decade": "1960s",
     "featuredSeason": 1969,
     "eligiblePositions": [
-      "SS"
+      "SS",
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

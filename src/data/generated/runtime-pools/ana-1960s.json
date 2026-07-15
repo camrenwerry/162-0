@@ -368,7 +368,8 @@
     "decade": "1960s",
     "featuredSeason": 1961,
     "eligiblePositions": [
-      "C"
+      "C",
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -974,6 +975,7 @@
     "decade": "1960s",
     "featuredSeason": 1961,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],
@@ -1779,6 +1781,7 @@
     "eligiblePositions": [
       "3B",
       "SS",
+      "LF",
       "CF"
     ],
     "isTwoWay": false,

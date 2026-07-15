@@ -735,7 +735,8 @@
     "decade": "1930s",
     "featuredSeason": 1939,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1864,7 +1865,8 @@
     "decade": "1930s",
     "featuredSeason": 1934,
     "eligiblePositions": [
-      "C"
+      "C",
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2436,7 +2438,8 @@
     "decade": "1930s",
     "featuredSeason": 1939,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2851,7 +2854,8 @@
     "eligiblePositions": [
       "2B",
       "3B",
-      "SS"
+      "SS",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

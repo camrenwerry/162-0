@@ -10,7 +10,9 @@
   "eligibility": {
     "minimumHitterPlateAppearances": 100,
     "minimumPitcherInnings": 30,
-    "minimumFieldingGames": 10,
+    "minimumFieldingGames": 5,
+    "minimumSelectionFieldingGames": 10,
+    "minimumDhGames": 10,
     "minimumStarts": 10,
     "minimumReliefAppearances": 15
   },

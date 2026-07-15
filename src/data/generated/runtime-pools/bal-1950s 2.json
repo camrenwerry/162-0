@@ -825,7 +825,8 @@
     "featuredSeason": 1952,
     "eligiblePositions": [
       "3B",
-      "LF"
+      "LF",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1273,6 +1274,7 @@
     "eligiblePositions": [
       "1B",
       "2B",
+      "LF",
       "CF",
       "RF"
     ],
@@ -1573,7 +1575,8 @@
     "decade": "1950s",
     "featuredSeason": 1957,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1621,6 +1624,7 @@
     "decade": "1950s",
     "featuredSeason": 1952,
     "eligiblePositions": [
+      "2B",
       "3B",
       "SS"
     ],

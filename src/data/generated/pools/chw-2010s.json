@@ -1933,6 +1933,8 @@
     "featuredSeason": 2011,
     "eligiblePositions": [
       "1B",
+      "2B",
+      "LF",
       "CF",
       "RF"
     ],
@@ -2260,6 +2262,7 @@
     "decade": "2010s",
     "featuredSeason": 2016,
     "eligiblePositions": [
+      "1B",
       "3B"
     ],
     "isTwoWay": false,
@@ -2498,6 +2501,7 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
+      "1B",
       "3B"
     ],
     "isTwoWay": false,
@@ -2656,6 +2660,7 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
+      "3B",
       "SS",
       "DH"
     ],

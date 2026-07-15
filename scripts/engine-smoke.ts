@@ -64,6 +64,10 @@ assert.deepEqual(getCompactPlayerStats(billPartial, 'pitcher').map(({ label, for
 
 const ssOnly = { ...fixtureHitter, id: 'ss-only', eligiblePositions: ['SS'] as Position[] }
 const ssAndThird = { ...fixtureHitter, id: 'ss-third', eligiblePositions: ['SS', '3B'] as Position[] }
+assert.equal(resolveAssignmentSlot(ssAndThird, 'SS', {}), 'SS')
+assert.equal(resolveAssignmentSlot(ssAndThird, '3B', {}), '3B')
+assert.equal(resolveAssignmentSlot(ssAndThird, '2B', {}), null)
+assert.deepEqual(getAvailablePositions(ssAndThird, { SS: fixtureHitter, DH: fixtureHitter }), ['3B'])
 const dhOpen = partitionPlayersByAvailability([ssOnly], { SS: fixtureHitter })
 assert.deepEqual(dhOpen.selectable.map(({ id }) => id), ['ss-only'], 'an otherwise blocked hitter remains available for open DH')
 const grouped = partitionPlayersByAvailability([ssOnly, ssAndThird], { SS: fixtureHitter, DH: fixtureHitter })
@@ -88,6 +92,15 @@ assert.equal(partitionPlayersByAvailability([starterOnly], fullPitchingRoster).s
 assert.equal(partitionPlayersByAvailability([starterOnly], { SP1: fixturePitcher, SP2: fixturePitcher }).selectable.length, 1)
 assert.equal(partitionPlayersByAvailability([relieverOnly], fullPitchingRoster).selectable.length, 0)
 assert.equal(partitionPlayersByAvailability([relieverOnly], { RP1: fixturePitcher }).selectable.length, 1)
+
+const padres2020s = pool.getCombinations().find(({ id }) => id === 'sdp-2020s')
+assert(padres2020s)
+const expandedTatis = pool.getPlayers(padres2020s).find(({ playerId }) => playerId === 'tatisfe02')
+assert(expandedTatis && expandedTatis.featuredSeason === 2021)
+assert.deepEqual(expandedTatis.eligiblePositions, ['SS', 'CF', 'RF'])
+assert.equal(resolveAssignmentSlot(expandedTatis, 'CF', {}), 'CF')
+assert.equal(resolveAssignmentSlot(expandedTatis, '3B', {}), null)
+assert.deepEqual(getAvailablePositions(expandedTatis, { SS: fixtureHitter, DH: fixtureHitter }), ['CF', 'RF'])
 
 const bobWithoutHrStats = { ...partialHitterStats, hr: null }
 const bobWithoutHr = { ...bobPartial, id: 'partial-bob-no-hr', name: 'Zed Null', visibleStats: bobWithoutHrStats, stats: bobWithoutHrStats }

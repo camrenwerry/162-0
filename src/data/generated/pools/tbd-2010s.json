@@ -2452,7 +2452,9 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
-      "2B"
+      "1B",
+      "2B",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

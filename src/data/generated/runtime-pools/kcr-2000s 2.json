@@ -876,6 +876,7 @@
     "featuredSeason": 2008,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,
@@ -1777,6 +1778,7 @@
     "eligiblePositions": [
       "2B",
       "SS",
+      "LF",
       "CF",
       "RF"
     ],

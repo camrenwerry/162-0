@@ -417,7 +417,8 @@
     "featuredSeason": 1983,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -566,6 +567,8 @@
     "decade": "1980s",
     "featuredSeason": 1981,
     "eligiblePositions": [
+      "1B",
+      "LF",
       "CF"
     ],
     "isTwoWay": false,
@@ -821,7 +824,8 @@
     "eligiblePositions": [
       "2B",
       "3B",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

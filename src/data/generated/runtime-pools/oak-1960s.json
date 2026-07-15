@@ -1014,6 +1014,7 @@
     "featuredSeason": 1964,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,
@@ -1667,7 +1668,8 @@
     "featuredSeason": 1965,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

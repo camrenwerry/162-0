@@ -792,6 +792,7 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1146,6 +1147,7 @@
       "2B",
       "3B",
       "SS",
+      "LF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1656,6 +1658,7 @@
     "featuredSeason": 2020,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,

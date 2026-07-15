@@ -1644,7 +1644,8 @@
     "decade": "1940s",
     "featuredSeason": 1940,
     "eligiblePositions": [
-      "C"
+      "C",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2622,7 +2623,8 @@
     "featuredSeason": 1949,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

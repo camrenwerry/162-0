@@ -1630,6 +1630,7 @@
       "3B",
       "SS",
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2201,6 +2202,7 @@
     "eligiblePositions": [
       "2B",
       "3B",
+      "SS",
       "LF",
       "RF"
     ],
@@ -2770,7 +2772,8 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
-      "C"
+      "C",
+      "1B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2850,6 +2853,7 @@
     "featuredSeason": 2019,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,

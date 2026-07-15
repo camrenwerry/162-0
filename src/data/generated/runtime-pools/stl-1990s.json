@@ -1125,7 +1125,8 @@
     "decade": "1990s",
     "featuredSeason": 1990,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

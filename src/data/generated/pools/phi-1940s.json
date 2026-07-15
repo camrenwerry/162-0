@@ -500,6 +500,7 @@
     "decade": "1940s",
     "featuredSeason": 1940,
     "eligiblePositions": [
+      "3B",
       "LF",
       "CF",
       "RF"
@@ -2078,6 +2079,7 @@
     "decade": "1940s",
     "featuredSeason": 1946,
     "eligiblePositions": [
+      "LF",
       "CF"
     ],
     "isTwoWay": false,
@@ -2649,6 +2651,7 @@
     "eligiblePositions": [
       "2B",
       "SS",
+      "LF",
       "RF"
     ],
     "isTwoWay": false,

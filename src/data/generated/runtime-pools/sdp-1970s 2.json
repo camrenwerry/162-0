@@ -468,7 +468,8 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1710,6 +1711,7 @@
     "eligiblePositions": [
       "2B",
       "3B",
+      "SS",
       "CF"
     ],
     "isTwoWay": false,

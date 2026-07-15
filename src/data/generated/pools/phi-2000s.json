@@ -1995,6 +1995,7 @@
     "featuredSeason": 2003,
     "eligiblePositions": [
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2160,6 +2161,7 @@
     "decade": "2000s",
     "featuredSeason": 2004,
     "eligiblePositions": [
+      "LF",
       "CF"
     ],
     "isTwoWay": false,
@@ -2886,9 +2888,11 @@
     "decade": "2000s",
     "featuredSeason": 2008,
     "eligiblePositions": [
+      "2B",
       "3B",
       "SS",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

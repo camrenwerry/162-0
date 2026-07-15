@@ -2890,7 +2890,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
-      "3B"
+      "3B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

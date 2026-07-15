@@ -171,6 +171,7 @@
     "decade": "1970s",
     "featuredSeason": 1970,
     "eligiblePositions": [
+      "1B",
       "3B"
     ],
     "isTwoWay": false,
@@ -251,6 +252,7 @@
     "featuredSeason": 1972,
     "eligiblePositions": [
       "C",
+      "1B",
       "RF"
     ],
     "isTwoWay": false,
@@ -1169,6 +1171,7 @@
     "decade": "1970s",
     "featuredSeason": 1973,
     "eligiblePositions": [
+      "CF",
       "RF"
     ],
     "isTwoWay": false,

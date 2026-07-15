@@ -879,6 +879,7 @@
     "eligiblePositions": [
       "C",
       "1B",
+      "LF",
       "RF",
       "DH"
     ],
@@ -1723,7 +1724,8 @@
     "decade": "1990s",
     "featuredSeason": 1991,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

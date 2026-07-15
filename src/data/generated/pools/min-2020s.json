@@ -2343,6 +2343,7 @@
     "eligiblePositions": [
       "1B",
       "2B",
+      "3B",
       "DH"
     ],
     "isTwoWay": false,
@@ -2423,7 +2424,8 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2582,6 +2584,7 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "1B",
+      "3B",
       "DH"
     ],
     "isTwoWay": false,

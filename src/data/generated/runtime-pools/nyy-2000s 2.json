@@ -1320,6 +1320,7 @@
     "featuredSeason": 2009,
     "eligiblePositions": [
       "1B",
+      "LF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1420,6 +1421,7 @@
     "decade": "2000s",
     "featuredSeason": 2002,
     "eligiblePositions": [
+      "1B",
       "3B"
     ],
     "isTwoWay": false,
@@ -1566,7 +1568,8 @@
     "decade": "2000s",
     "featuredSeason": 2004,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1712,6 +1715,7 @@
     "decade": "2000s",
     "featuredSeason": 2009,
     "eligiblePositions": [
+      "2B",
       "3B",
       "SS"
     ],

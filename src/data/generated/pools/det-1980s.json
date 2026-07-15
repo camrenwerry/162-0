@@ -928,6 +928,7 @@
     "featuredSeason": 1985,
     "eligiblePositions": [
       "1B",
+      "3B",
       "DH"
     ],
     "isTwoWay": false,
@@ -2503,7 +2504,8 @@
     "decade": "1980s",
     "featuredSeason": 1982,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2665,6 +2667,7 @@
     "featuredSeason": 1982,
     "eligiblePositions": [
       "3B",
+      "RF",
       "DH"
     ],
     "isTwoWay": false,
@@ -2744,9 +2747,12 @@
     "decade": "1980s",
     "featuredSeason": 1988,
     "eligiblePositions": [
+      "2B",
       "3B",
       "SS",
-      "LF"
+      "LF",
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2826,7 +2832,8 @@
     "featuredSeason": 1980,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

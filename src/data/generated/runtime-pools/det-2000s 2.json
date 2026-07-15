@@ -977,7 +977,9 @@
     "featuredSeason": 2009,
     "eligiblePositions": [
       "1B",
+      "3B",
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1027,6 +1029,7 @@
     "featuredSeason": 2006,
     "eligiblePositions": [
       "LF",
+      "RF",
       "DH"
     ],
     "isTwoWay": false,
@@ -1384,7 +1387,8 @@
     "featuredSeason": 2001,
     "eligiblePositions": [
       "C",
-      "1B"
+      "1B",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1535,6 +1539,7 @@
     "featuredSeason": 2008,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,
@@ -1632,6 +1637,7 @@
     "decade": "2000s",
     "featuredSeason": 2001,
     "eligiblePositions": [
+      "1B",
       "3B",
       "SS"
     ],
@@ -1733,6 +1739,7 @@
     "eligiblePositions": [
       "C",
       "3B",
+      "LF",
       "CF"
     ],
     "isTwoWay": false,
@@ -1783,7 +1790,8 @@
     "eligiblePositions": [
       "2B",
       "3B",
-      "SS"
+      "SS",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -1439,6 +1439,7 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RP"
     ],
@@ -1527,7 +1528,9 @@
     "featuredSeason": 2017,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2419,7 +2422,9 @@
     "decade": "2010s",
     "featuredSeason": 2016,
     "eligiblePositions": [
-      "LF"
+      "1B",
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2898,6 +2903,7 @@
     "eligiblePositions": [
       "1B",
       "2B",
+      "3B",
       "LF"
     ],
     "isTwoWay": false,

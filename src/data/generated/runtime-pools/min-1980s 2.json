@@ -1071,6 +1071,7 @@
     "decade": "1980s",
     "featuredSeason": 1988,
     "eligiblePositions": [
+      "1B",
       "RF",
       "DH"
     ],
@@ -1467,6 +1468,7 @@
     "decade": "1980s",
     "featuredSeason": 1983,
     "eligiblePositions": [
+      "1B",
       "LF",
       "RF",
       "DH"
@@ -1666,7 +1668,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

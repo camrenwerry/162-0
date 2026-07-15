@@ -1464,9 +1464,11 @@
     "decade": "2000s",
     "featuredSeason": 2001,
     "eligiblePositions": [
+      "2B",
       "3B",
       "SS",
-      "LF"
+      "LF",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

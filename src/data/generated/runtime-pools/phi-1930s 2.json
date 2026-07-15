@@ -748,8 +748,10 @@
     "featuredSeason": 1930,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS",
-      "LF"
+      "LF",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1291,6 +1293,7 @@
     "featuredSeason": 1939,
     "eligiblePositions": [
       "1B",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1493,6 +1496,8 @@
     "featuredSeason": 1937,
     "eligiblePositions": [
       "1B",
+      "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1543,6 +1548,7 @@
     "eligiblePositions": [
       "2B",
       "3B",
+      "LF",
       "CF"
     ],
     "isTwoWay": false,
@@ -1591,6 +1597,7 @@
     "decade": "1930s",
     "featuredSeason": 1939,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],

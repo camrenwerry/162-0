@@ -1144,6 +1144,7 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "2B",
+      "3B",
       "DH"
     ],
     "isTwoWay": false,
@@ -1490,6 +1491,7 @@
     "eligiblePositions": [
       "1B",
       "2B",
+      "3B",
       "DH"
     ],
     "isTwoWay": false,
@@ -1588,6 +1590,7 @@
     "eligiblePositions": [
       "1B",
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1782,6 +1785,7 @@
     "featuredSeason": 2023,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,

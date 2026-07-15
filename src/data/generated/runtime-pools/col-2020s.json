@@ -66,6 +66,7 @@
     "eligiblePositions": [
       "1B",
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,

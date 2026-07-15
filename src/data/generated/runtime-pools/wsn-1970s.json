@@ -719,6 +719,7 @@
     "decade": "1970s",
     "featuredSeason": 1973,
     "eligiblePositions": [
+      "1B",
       "LF"
     ],
     "isTwoWay": false,
@@ -1417,6 +1418,7 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],

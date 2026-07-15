@@ -2090,7 +2090,8 @@
     "featuredSeason": 1995,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2575,7 +2576,8 @@
     "decade": "1990s",
     "featuredSeason": 1995,
     "eligiblePositions": [
-      "C"
+      "C",
+      "1B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2654,7 +2656,9 @@
     "decade": "1990s",
     "featuredSeason": 1997,
     "eligiblePositions": [
+      "1B",
       "3B",
+      "LF",
       "RF"
     ],
     "isTwoWay": false,

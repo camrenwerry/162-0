@@ -64,6 +64,7 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
+      "1B",
       "LF",
       "RF"
     ],
@@ -114,6 +115,7 @@
     "featuredSeason": 1977,
     "eligiblePositions": [
       "1B",
+      "LF",
       "RF",
       "DH"
     ],
@@ -665,6 +667,7 @@
     "decade": "1970s",
     "featuredSeason": 1977,
     "eligiblePositions": [
+      "1B",
       "3B",
       "DH"
     ],
@@ -1261,6 +1264,7 @@
     "decade": "1970s",
     "featuredSeason": 1979,
     "eligiblePositions": [
+      "1B",
       "DH"
     ],
     "isTwoWay": false,

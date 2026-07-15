@@ -1228,7 +1228,8 @@
     "featuredSeason": 2009,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -2175,6 +2175,7 @@
     "decade": "1990s",
     "featuredSeason": 1997,
     "eligiblePositions": [
+      "1B",
       "2B",
       "3B"
     ],
@@ -2255,6 +2256,7 @@
     "decade": "1990s",
     "featuredSeason": 1993,
     "eligiblePositions": [
+      "1B",
       "LF",
       "RF"
     ],
@@ -2497,6 +2499,7 @@
     "featuredSeason": 1990,
     "eligiblePositions": [
       "C",
+      "1B",
       "DH"
     ],
     "isTwoWay": false,

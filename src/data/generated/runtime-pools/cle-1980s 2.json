@@ -220,6 +220,7 @@
     "decade": "1980s",
     "featuredSeason": 1987,
     "eligiblePositions": [
+      "1B",
       "3B"
     ],
     "isTwoWay": false,
@@ -518,6 +519,7 @@
     "eligiblePositions": [
       "1B",
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -970,6 +972,7 @@
     "eligiblePositions": [
       "3B",
       "SS",
+      "LF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1167,6 +1170,7 @@
     "decade": "1980s",
     "featuredSeason": 1987,
     "eligiblePositions": [
+      "2B",
       "SS"
     ],
     "isTwoWay": false,
@@ -1467,6 +1471,8 @@
     "featuredSeason": 1980,
     "eligiblePositions": [
       "2B",
+      "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1761,6 +1767,8 @@
     "decade": "1980s",
     "featuredSeason": 1982,
     "eligiblePositions": [
+      "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,

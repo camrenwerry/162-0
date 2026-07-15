@@ -92,7 +92,8 @@
     "decade": "1920s",
     "featuredSeason": 1929,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2478,6 +2479,7 @@
     "decade": "1920s",
     "featuredSeason": 1923,
     "eligiblePositions": [
+      "LF",
       "RF"
     ],
     "isTwoWay": false,

@@ -1102,6 +1102,7 @@
     "featuredSeason": 2003,
     "eligiblePositions": [
       "1B",
+      "LF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2671,6 +2672,7 @@
     "featuredSeason": 2000,
     "eligiblePositions": [
       "C",
+      "1B",
       "3B"
     ],
     "isTwoWay": false,

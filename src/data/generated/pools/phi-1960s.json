@@ -2498,7 +2498,8 @@
       "2B",
       "SS",
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

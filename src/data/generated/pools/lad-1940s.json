@@ -1812,7 +1812,8 @@
     "featuredSeason": 1945,
     "eligiblePositions": [
       "3B",
-      "LF"
+      "LF",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

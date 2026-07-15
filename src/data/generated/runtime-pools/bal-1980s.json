@@ -1016,6 +1016,7 @@
     "decade": "1980s",
     "featuredSeason": 1983,
     "eligiblePositions": [
+      "LF",
       "RF",
       "DH"
     ],
@@ -1065,7 +1066,8 @@
     "decade": "1980s",
     "featuredSeason": 1980,
     "eligiblePositions": [
-      "C"
+      "C",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

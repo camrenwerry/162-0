@@ -1722,7 +1722,9 @@
     "featuredSeason": 2006,
     "eligiblePositions": [
       "1B",
-      "2B"
+      "2B",
+      "3B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1771,7 +1773,8 @@
     "featuredSeason": 2007,
     "eligiblePositions": [
       "SS",
-      "LF"
+      "LF",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

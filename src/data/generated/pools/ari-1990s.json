@@ -1649,6 +1649,7 @@
       "2B",
       "3B",
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1816,6 +1817,7 @@
     "eligiblePositions": [
       "2B",
       "SS",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2411,6 +2413,7 @@
     "decade": "1990s",
     "featuredSeason": 1999,
     "eligiblePositions": [
+      "2B",
       "SS"
     ],
     "isTwoWay": false,

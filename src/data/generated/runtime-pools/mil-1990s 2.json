@@ -927,7 +927,8 @@
     "eligiblePositions": [
       "C",
       "1B",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1481,6 +1482,7 @@
     "featuredSeason": 1999,
     "eligiblePositions": [
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1675,6 +1677,7 @@
     "decade": "1990s",
     "featuredSeason": 1996,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],

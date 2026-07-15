@@ -82,13 +82,13 @@ Hitter cards support AVG, OBP, SLG, OPS, HR, RBI, SB, games, and plate appearanc
 
 Eligibility is derived from the featured season only:
 
-- Fielding position: at least 10 appearances
+- C/1B/2B/3B/SS/LF/CF/RF: at least 5 appearances
 - DH: at least 10 appearances recorded in Lahman `G_dh`
 - SP: at least 10 starts
 - RP: at least 15 derived relief appearances
 - Source-qualified DH is retained in `eligiblePositions`; other hitters may still use the DH slot under the game rule
 
-`FieldingOFsplit.csv` is preferred for LF/CF/RF. Generic OF records never grant all three outfield positions. Normal pitchers cannot fill DH; verified two-way seasons can expose both batting and pitching views.
+`FieldingOFsplit.csv` is preferred for LF/CF/RF. Generic OF records never grant all three outfield positions. Normal pitchers cannot fill DH; verified two-way seasons can expose both batting and pitching views. The prior 10-game fielding baseline remains internal to featured-season scoring and pool coverage selection, so expanding card eligibility does not rerank or replace cards.
 
 ## Pipeline architecture
 

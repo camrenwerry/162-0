@@ -680,6 +680,7 @@
     "featuredSeason": 1997,
     "eligiblePositions": [
       "LF",
+      "RF",
       "DH"
     ],
     "isTwoWay": false,
@@ -1348,6 +1349,7 @@
     "featuredSeason": 1996,
     "eligiblePositions": [
       "LF",
+      "RF",
       "DH"
     ],
     "isTwoWay": false,
@@ -1996,6 +1998,7 @@
     "featuredSeason": 1996,
     "eligiblePositions": [
       "LF",
+      "CF",
       "RF",
       "DH"
     ],

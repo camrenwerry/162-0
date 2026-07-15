@@ -1472,7 +1472,9 @@
     "featuredSeason": 1936,
     "eligiblePositions": [
       "1B",
-      "CF"
+      "LF",
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

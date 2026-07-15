@@ -926,7 +926,8 @@
     "decade": "1960s",
     "featuredSeason": 1963,
     "eligiblePositions": [
-      "C"
+      "C",
+      "1B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1435,6 +1436,8 @@
     "decade": "1960s",
     "featuredSeason": 1969,
     "eligiblePositions": [
+      "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2738,7 +2741,9 @@
     "decade": "1960s",
     "featuredSeason": 1969,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "3B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2899,7 +2904,8 @@
     "eligiblePositions": [
       "1B",
       "3B",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

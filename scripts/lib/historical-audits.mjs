@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { buildLahmanData, parseCsv } from './lahman-pipeline.mjs'
+import { buildLahmanData, FIELD_POSITIONS, parseCsv } from './lahman-pipeline.mjs'
 
 const AWARDS = new Map([
   ['Most Valuable Player', 'MVP winner'],
@@ -123,16 +123,15 @@ export function runHistoricalAudits(root = process.cwd()) {
   const positionFindings = []
   for (const card of cards) {
     const candidate = featuredById.get(card.id)
-    if (!candidate || card.playerType === 'pitcher') continue
-    const seasons = candidatesByCard.get(cardKey(candidate)) ?? []
+    if (!candidate) continue
     const possible = new Set(candidate.sourceEligiblePositions.filter((position) => !['SP', 'RP'].includes(position)))
     let reason = ''
     if (card.manualPositionOverride) reason = 'Manual position override retained for review'
     else if (card.eligiblePositions.join(',') !== candidate.sourceEligiblePositions.join(',')) reason = 'Generated card differs from featured-season source eligibility'
-    const fullerAlternates = seasons.filter((season) => season.featuredSeason !== candidate.featuredSeason && workload(candidate) < workload(season) * .65 && season.selectionScore >= candidate.selectionScore * .88)
-    for (const season of fullerAlternates) for (const position of season.sourceEligiblePositions) possible.add(position)
-    for (const [position, games] of Object.entries(candidate.positionAppearances)) if (games >= 5) possible.add(position)
-    if (!reason && [...possible].some((position) => !card.eligiblePositions.includes(position))) reason = 'Featured-season threshold or short-season selection may suppress a legitimate secondary position'
+    for (const [position, games] of Object.entries(candidate.positionAppearances)) {
+      if (FIELD_POSITIONS.includes(position) && games >= built.config.eligibility.minimumFieldingGames) possible.add(position)
+    }
+    if (!reason && [...possible].some((position) => !card.eligiblePositions.includes(position))) reason = 'Featured-season position eligibility is incomplete'
     if (reason) positionFindings.push({
       player: card.name, franchise: card.teamDisplayName, decade: card.decade, featuredSeason: card.featuredSeason,
       eligiblePositions: card.eligiblePositions.join(', '), reason, possibleExpectedPositions: [...possible].sort(compare).join(', '),

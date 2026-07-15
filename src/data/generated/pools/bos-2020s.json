@@ -1359,6 +1359,7 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "LF",
+      "RF",
       "DH"
     ],
     "isTwoWay": false,
@@ -1438,6 +1439,7 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],
@@ -1518,6 +1520,7 @@
     "decade": "2020s",
     "featuredSeason": 2023,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],
@@ -1679,6 +1682,7 @@
     "eligiblePositions": [
       "1B",
       "2B",
+      "3B",
       "DH"
     ],
     "isTwoWay": false,
@@ -1758,6 +1762,7 @@
     "decade": "2020s",
     "featuredSeason": 2021,
     "eligiblePositions": [
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2665,6 +2670,7 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "2B",
+      "SS",
       "CF"
     ],
     "isTwoWay": false,
@@ -2746,6 +2752,7 @@
     "eligiblePositions": [
       "C",
       "1B",
+      "2B",
       "DH"
     ],
     "isTwoWay": false,
@@ -2904,6 +2911,7 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
+      "1B",
       "2B",
       "3B",
       "SS",

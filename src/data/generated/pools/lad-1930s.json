@@ -493,6 +493,7 @@
     "decade": "1930s",
     "featuredSeason": 1932,
     "eligiblePositions": [
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2548,6 +2549,7 @@
     "featuredSeason": 1936,
     "eligiblePositions": [
       "2B",
+      "3B",
       "LF",
       "CF",
       "RF"

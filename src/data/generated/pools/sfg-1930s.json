@@ -760,7 +760,8 @@
     "decade": "1930s",
     "featuredSeason": 1937,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2295,6 +2296,7 @@
     "decade": "1930s",
     "featuredSeason": 1931,
     "eligiblePositions": [
+      "2B",
       "CF"
     ],
     "isTwoWay": false,

@@ -350,6 +350,7 @@
     "decade": "1990s",
     "featuredSeason": 1999,
     "eligiblePositions": [
+      "LF",
       "DH"
     ],
     "isTwoWay": false,
@@ -1259,7 +1260,9 @@
     "decade": "1990s",
     "featuredSeason": 1998,
     "eligiblePositions": [
-      "3B"
+      "2B",
+      "3B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1670,6 +1673,7 @@
     "featuredSeason": 1998,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,
@@ -2242,7 +2246,8 @@
     "featuredSeason": 1999,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "3B",
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

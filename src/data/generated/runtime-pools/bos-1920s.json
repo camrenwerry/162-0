@@ -116,6 +116,7 @@
     "decade": "1920s",
     "featuredSeason": 1923,
     "eligiblePositions": [
+      "1B",
       "LF"
     ],
     "isTwoWay": false,
@@ -362,6 +363,7 @@
     "decade": "1920s",
     "featuredSeason": 1920,
     "eligiblePositions": [
+      "LF",
       "RF"
     ],
     "isTwoWay": false,
@@ -964,6 +966,7 @@
     "decade": "1920s",
     "featuredSeason": 1926,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],

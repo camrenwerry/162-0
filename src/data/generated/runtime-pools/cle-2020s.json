@@ -1187,7 +1187,8 @@
     "decade": "2020s",
     "featuredSeason": 2022,
     "eligiblePositions": [
-      "SS"
+      "SS",
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1283,6 +1284,7 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
+      "1B",
       "RF"
     ],
     "isTwoWay": false,
@@ -1624,7 +1626,9 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "1B",
-      "3B"
+      "2B",
+      "3B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1672,8 +1676,10 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
+      "2B",
       "3B",
       "SS",
+      "LF",
       "CF",
       "RF"
     ],
@@ -1724,6 +1730,7 @@
     "featuredSeason": 2025,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,

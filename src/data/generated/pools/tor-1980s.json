@@ -2481,6 +2481,7 @@
     "decade": "1980s",
     "featuredSeason": 1984,
     "eligiblePositions": [
+      "1B",
       "LF"
     ],
     "isTwoWay": false,
@@ -2884,6 +2885,7 @@
     "featuredSeason": 1988,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,

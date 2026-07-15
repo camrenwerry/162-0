@@ -1193,6 +1193,7 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2345,7 +2346,8 @@
     "decade": "2020s",
     "featuredSeason": 2025,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

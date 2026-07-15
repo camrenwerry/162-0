@@ -1269,6 +1269,7 @@
     "decade": "1980s",
     "featuredSeason": 1989,
     "eligiblePositions": [
+      "2B",
       "3B",
       "SS",
       "LF",
@@ -1673,7 +1674,8 @@
     "featuredSeason": 1985,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

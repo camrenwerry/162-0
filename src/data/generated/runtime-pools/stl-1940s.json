@@ -466,6 +466,7 @@
     "decade": "1940s",
     "featuredSeason": 1944,
     "eligiblePositions": [
+      "1B",
       "CF"
     ],
     "isTwoWay": false,
@@ -1529,7 +1530,8 @@
     "decade": "1940s",
     "featuredSeason": 1945,
     "eligiblePositions": [
-      "3B"
+      "3B",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

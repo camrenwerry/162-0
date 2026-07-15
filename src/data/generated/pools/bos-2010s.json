@@ -2095,6 +2095,7 @@
     "decade": "2010s",
     "featuredSeason": 2010,
     "eligiblePositions": [
+      "1B",
       "2B",
       "SS"
     ],
@@ -2334,7 +2335,8 @@
     "decade": "2010s",
     "featuredSeason": 2017,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "SS"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

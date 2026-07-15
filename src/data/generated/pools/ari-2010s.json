@@ -1679,7 +1679,8 @@
     "decade": "2010s",
     "featuredSeason": 2015,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

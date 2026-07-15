@@ -220,6 +220,7 @@
     "decade": "2010s",
     "featuredSeason": 2019,
     "eligiblePositions": [
+      "LF",
       "RF"
     ],
     "isTwoWay": false,
@@ -972,7 +973,8 @@
     "decade": "2010s",
     "featuredSeason": 2018,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

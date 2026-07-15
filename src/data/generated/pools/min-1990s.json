@@ -1518,7 +1518,8 @@
     "eligiblePositions": [
       "1B",
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1677,6 +1678,7 @@
     "featuredSeason": 1991,
     "eligiblePositions": [
       "1B",
+      "LF",
       "RF",
       "DH"
     ],

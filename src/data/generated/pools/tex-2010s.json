@@ -2215,6 +2215,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
+      "3B",
+      "SS",
       "LF",
       "CF",
       "RF"
@@ -2947,6 +2949,7 @@
     "featuredSeason": 2019,
     "eligiblePositions": [
       "1B",
+      "2B",
       "3B",
       "SS"
     ],

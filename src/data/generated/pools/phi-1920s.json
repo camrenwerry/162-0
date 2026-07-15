@@ -251,6 +251,7 @@
     "decade": "1920s",
     "featuredSeason": 1925,
     "eligiblePositions": [
+      "1B",
       "2B",
       "3B",
       "SS",
@@ -654,7 +655,8 @@
     "featuredSeason": 1922,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -979,7 +981,8 @@
     "featuredSeason": 1926,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1374,6 +1377,7 @@
     "decade": "1920s",
     "featuredSeason": 1920,
     "eligiblePositions": [
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2034,6 +2038,7 @@
     "decade": "1920s",
     "featuredSeason": 1929,
     "eligiblePositions": [
+      "2B",
       "SS",
       "LF",
       "CF"
@@ -2679,7 +2684,8 @@
     "decade": "1920s",
     "featuredSeason": 1929,
     "eligiblePositions": [
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

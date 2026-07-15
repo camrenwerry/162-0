@@ -1633,6 +1633,7 @@
     "decade": "2010s",
     "featuredSeason": 2011,
     "eligiblePositions": [
+      "2B",
       "3B",
       "SS",
       "LF",
@@ -1735,7 +1736,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
-      "3B"
+      "3B",
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

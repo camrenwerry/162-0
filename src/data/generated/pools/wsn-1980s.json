@@ -2434,6 +2434,7 @@
     "featuredSeason": 1988,
     "eligiblePositions": [
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -2833,6 +2834,7 @@
     "featuredSeason": 1987,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,

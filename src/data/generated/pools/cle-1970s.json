@@ -1260,6 +1260,7 @@
     "decade": "1970s",
     "featuredSeason": 1970,
     "eligiblePositions": [
+      "1B",
       "LF",
       "CF",
       "RF"
@@ -2729,6 +2730,7 @@
     "featuredSeason": 1973,
     "eligiblePositions": [
       "2B",
+      "3B",
       "LF",
       "RF"
     ],

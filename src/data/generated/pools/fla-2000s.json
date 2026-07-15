@@ -184,6 +184,7 @@
     "decade": "2000s",
     "featuredSeason": 2007,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],
@@ -2897,7 +2898,9 @@
     "eligiblePositions": [
       "1B",
       "2B",
-      "SS"
+      "3B",
+      "SS",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

@@ -1922,7 +1922,8 @@
     "featuredSeason": 1991,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2718,6 +2719,8 @@
     "eligiblePositions": [
       "1B",
       "2B",
+      "3B",
+      "SS",
       "LF",
       "DH"
     ],
@@ -2878,7 +2881,8 @@
     "featuredSeason": 1995,
     "eligiblePositions": [
       "2B",
-      "SS"
+      "SS",
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

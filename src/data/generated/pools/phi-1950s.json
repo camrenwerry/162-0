@@ -1163,6 +1163,7 @@
     "decade": "1950s",
     "featuredSeason": 1959,
     "eligiblePositions": [
+      "2B",
       "3B"
     ],
     "isTwoWay": false,
@@ -2563,6 +2564,8 @@
     "decade": "1950s",
     "featuredSeason": 1954,
     "eligiblePositions": [
+      "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,
@@ -2881,6 +2884,7 @@
     "decade": "1950s",
     "featuredSeason": 1950,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],

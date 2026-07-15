@@ -662,6 +662,7 @@
     "decade": "1970s",
     "featuredSeason": 1971,
     "eligiblePositions": [
+      "1B",
       "RF"
     ],
     "isTwoWay": false,
@@ -1013,6 +1014,7 @@
     "decade": "1970s",
     "featuredSeason": 1976,
     "eligiblePositions": [
+      "1B",
       "LF",
       "CF",
       "RF"
@@ -1065,6 +1067,7 @@
     "eligiblePositions": [
       "C",
       "1B",
+      "LF",
       "DH"
     ],
     "isTwoWay": false,
@@ -1659,7 +1662,8 @@
     "eligiblePositions": [
       "3B",
       "SS",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1708,7 +1712,8 @@
     "featuredSeason": 1971,
     "eligiblePositions": [
       "3B",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

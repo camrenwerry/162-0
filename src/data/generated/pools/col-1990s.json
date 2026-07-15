@@ -575,7 +575,9 @@
     "featuredSeason": 1999,
     "eligiblePositions": [
       "2B",
-      "3B"
+      "3B",
+      "LF",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -654,7 +656,8 @@
     "decade": "1990s",
     "featuredSeason": 1995,
     "eligiblePositions": [
-      "1B"
+      "1B",
+      "LF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1814,7 +1817,8 @@
     "featuredSeason": 1993,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2300,6 +2304,7 @@
     "decade": "1990s",
     "featuredSeason": 1996,
     "eligiblePositions": [
+      "LF",
       "CF"
     ],
     "isTwoWay": false,

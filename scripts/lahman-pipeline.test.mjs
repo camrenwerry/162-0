@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
-import { aggregateAppearances, aggregateRows, buildCandidate, buildLahmanData, canCompleteRoster, curatePool, hitterStats, parseCsv, selectFeatured, validateGeneratedData } from './lib/lahman-pipeline.mjs'
+import { aggregateAppearances, aggregateRows, buildCandidate, buildLahmanData, canCompleteRoster, curatePool, FIELD_POSITIONS, hitterStats, parseCsv, POSITION_ORDER, selectFeatured, validateGeneratedData, validatePool } from './lib/lahman-pipeline.mjs'
 
 assert.deepEqual(parseCsv('id,name\n1,"Last, First"\n'), [{ id: '1', name: 'Last, First' }])
 
@@ -26,7 +26,8 @@ assert.equal(visible.hr, 8)
 const testPlayer = { playerID: 'player01', bbrefID: 'player01', nameFirst: 'Test', nameLast: 'Hitter', bats: 'R', throws: 'R' }
 const testConfig = {
   eligibility: {
-    minimumHitterPlateAppearances: 100, minimumPitcherInnings: 30, minimumFieldingGames: 10,
+    minimumHitterPlateAppearances: 100, minimumPitcherInnings: 30, minimumFieldingGames: 5,
+    minimumSelectionFieldingGames: 10, minimumDhGames: 10,
     minimumStarts: 10, minimumReliefAppearances: 15,
   },
   selection: {
@@ -58,6 +59,24 @@ assert.equal(candidateFrom(belowDhThreshold), null, 'fewer than ten DH games mus
 const nonDhBoundary = candidateFrom(new Map([['RF', 10], ['DH', 9]]))
 assert(nonDhBoundary)
 assert.deepEqual(nonDhBoundary.eligiblePositions, ['RF'], 'DH support must not change non-DH position thresholds')
+assert.deepEqual(nonDhBoundary.selectionEligiblePositions, ['RF'])
+
+for (const position of FIELD_POSITIONS) {
+  const primary = position === '1B' ? '3B' : '1B'
+  const atFive = candidateFrom(new Map([[primary, 10], [position, 5]]))
+  const atFour = candidateFrom(new Map([[primary, 10], [position, 4]]))
+  assert(atFive && atFour)
+  assert(atFive.eligiblePositions.includes(position), `${position}: five featured-season games must grant card eligibility`)
+  assert(!atFour.eligiblePositions.includes(position), `${position}: four featured-season games must not grant card eligibility`)
+  assert(!atFive.selectionEligiblePositions.includes(position), `${position}: expanded eligibility must not alter the legacy selection position list`)
+  assert.equal(atFive.selectionScore, atFour.selectionScore, `${position}: expanded eligibility must not alter player scoring`)
+}
+
+const earlierSeason = { ...candidateFrom(new Map([['1B', 10], ['3B', 5]])), featuredSeason: 2001, selectionScore: .7 }
+const featuredSeason = { ...candidateFrom(new Map([['1B', 10], ['SS', 5]])), featuredSeason: 2002, selectionScore: .8 }
+const featuredOnly = selectFeatured([earlierSeason, featuredSeason], { featuredSeasons: {} })[0]
+assert.deepEqual(featuredOnly.eligiblePositions, ['1B', 'SS'], 'featured-season selection must not union positions from another season')
+assert(!featuredOnly.eligiblePositions.includes('3B'), 'whole-career positions must not leak into the featured season')
 
 const pitchingRows = [{
   playerID: 'player01', yearID: '2001', teamID: 'B', lgID: 'AL', W: '5', L: '2', G: '10', GS: '10', CG: '', SHO: '', SV: '0',
@@ -65,12 +84,17 @@ const pitchingRows = [{
 }]
 const aggregatedPitching = aggregateRows(pitchingRows, teamByYear, 'pitching').get('player01:test:2001')
 assert(aggregatedPitching)
+const pitchingBoundaryCandidate = (games, starts) => candidateFrom(new Map([['RF', 10]]), { ...aggregatedPitching, G: games, GS: starts })
+assert.deepEqual(pitchingBoundaryCandidate(24, 9)?.eligiblePositions, ['RF', 'RP'], 'nine starts must not grant SP while fifteen relief appearances still grant RP')
+assert.deepEqual(pitchingBoundaryCandidate(24, 10)?.eligiblePositions, ['RF', 'SP'], 'ten starts must grant SP while fourteen relief appearances do not grant RP')
+assert.deepEqual(pitchingBoundaryCandidate(25, 10)?.eligiblePositions, ['RF', 'SP', 'RP'], 'SP/RP thresholds must remain ten starts and fifteen relief appearances')
 const syntheticTwoWay = candidateFrom(new Map([['DH', 10]]), aggregatedPitching)
 assert(syntheticTwoWay)
 assert.equal(syntheticTwoWay.playerType, 'twoWay')
 assert.equal(syntheticTwoWay.type, 'hitter')
 assert.equal(syntheticTwoWay.isTwoWay, true)
 assert.deepEqual(syntheticTwoWay.eligiblePositions, ['DH', 'SP'])
+assert.deepEqual(syntheticTwoWay.selectionEligiblePositions, ['DH', 'SP'])
 assert(syntheticTwoWay.hitter && syntheticTwoWay.pitcher, 'two-way candidates must preserve both stat records')
 
 const candidate = (year, score) => ({ franchiseId: 'test', decade: '2000s', playerId: 'player01', featuredSeason: year, selectionScore: score })
@@ -93,6 +117,13 @@ assert(legacyCuration.every(({ id }) => expandedCuration.some((card) => card.id 
 assert.deepEqual(expandedCuration.map(({ id }) => id).sort(), ['coverage-c', 'coverage-sp', 'score-fill-1', 'score-fill-2'])
 assert(!expandedCuration.some(({ id }) => id === 'below-expansion-floor'), 'score fill must stop below the configured expansion-quality floor')
 
+const selectionTrackCuration = curatePool([
+  { ...poolCandidate('public-only-c', .99, ['C', '1B']), selectionEligiblePositions: ['1B'] },
+  { ...poolCandidate('legacy-c', .8, ['C']), selectionEligiblePositions: ['C'] },
+  poolCandidate('legacy-sp', .7, ['SP'], 'pitcher'),
+], { coverage: { C: 1, SP: 1 }, pool: { minimumCards: 2, targetCards: 2, maximumCards: 2 } })
+assert.deepEqual(selectionTrackCuration.map(({ id }) => id).sort(), ['legacy-c', 'legacy-sp'], 'new public positions must not alter position-coverage selection')
+
 const incompleteRosterPositions = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'C', 'C', 'SP', 'SP', 'SP', 'RP', 'RP']
 const rosterCompletionCandidates = [
   ...incompleteRosterPositions.map((position, index) => poolCandidate(`roster-core-${index}`, .9 - index * .01, [position], ['SP', 'RP'].includes(position) ? 'pitcher' : 'hitter')),
@@ -107,6 +138,10 @@ assert(!completionCuration.some(({ id }) => id === 'unused-after-completion'), '
 const built = buildLahmanData(process.cwd())
 const allCards = Object.values(built.pools).flat()
 assert.deepEqual(built.config.pool, { minimumCards: 24, targetCards: 36, maximumCards: 40, minimumExpansionScore: .3 })
+assert.deepEqual(built.config.eligibility, {
+  minimumHitterPlateAppearances: 100, minimumPitcherInnings: 30, minimumFieldingGames: 5,
+  minimumSelectionFieldingGames: 10, minimumDhGames: 10, minimumStarts: 10, minimumReliefAppearances: 15,
+})
 assert(built.combinations.length >= 150, 'complete Lahman generation should produce broad historical coverage')
 assert(built.combinations.some(({ decade }) => decade === '1920s') && built.combinations.some(({ decade }) => decade === '2020s'))
 for (const table of ['people', 'teams', 'teamFranchises', 'batting', 'pitching', 'fielding', 'appearances', 'legacyOutfield', 'outfieldSplits']) assert(built.report.summary.sourceRows[table] > 0, `${table} must be imported and reported`)
@@ -120,6 +155,21 @@ const sourceCandidate = (playerId, franchiseId, decade, year) => built.auditCont
 ))
 const featuredCandidate = (playerId, poolId) => built.auditContext.selected.find((value) => value.playerId === playerId && `${value.franchiseId}-${value.decade}` === poolId)
 const playableCard = (playerId, poolId) => built.pools[poolId]?.find((value) => value.playerId === playerId)
+
+const namedPositionCases = [
+  ['machama01', 'bal-2010s', 2018, ['SS'], 'Manny Machado — Baltimore 2010s'],
+  ['cabremi01', 'fla-2000s', 2006, ['3B'], 'Miguel Cabrera — Florida 2000s'],
+  ['winfida01', 'sdp-1970s', 1979, ['RF'], 'Dave Winfield — San Diego 1970s'],
+  ['thomeji01', 'cle-1990s', 1996, ['3B'], 'Jim Thome — Cleveland 1990s'],
+  ['tatisfe02', 'sdp-2010s', 2019, ['SS'], 'Fernando Tatis Jr. — San Diego 2010s'],
+  ['tatisfe02', 'sdp-2020s', 2021, ['SS', 'CF', 'RF'], 'Fernando Tatis Jr. — San Diego 2020s'],
+]
+for (const [playerId, poolId, year, positions, label] of namedPositionCases) {
+  const card = playableCard(playerId, poolId)
+  assert(card, `${label} must remain playable`)
+  assert.equal(card.featuredSeason, year, `${label} must retain its featured season`)
+  assert.deepEqual(card.eligiblePositions, positions, `${label} must use only its featured-season positions`)
+}
 
 const ohtani2018 = sourceCandidate('ohtansh01', 'ana', '2010s', 2018)
 assert(ohtani2018)
@@ -171,6 +221,7 @@ for (const [playerId, franchiseId, decade, year, name] of dhHeavySeasons) {
 }
 
 assert.equal(new Set(allCards.map(({ id }) => id)).size, allCards.length, 'canonical card IDs must be globally unique')
+const selectedById = new Map(built.auditContext.selected.map((value) => [value.id, value]))
 for (const card of allCards.filter(({ eligiblePositions }) => eligiblePositions.includes('DH'))) {
   assert.notEqual(card.playerType, 'pitcher')
   assert(Number.isFinite(card.visibleStats.ops), `${card.id} must serialize DH offense`)
@@ -189,11 +240,34 @@ for (const [id, cards] of Object.entries(built.pools)) {
   assert.equal(new Set(cards.map(({ id: cardId }) => cardId)).size, cards.length, `${id} must not contain duplicate cards`)
   assert(cards.every(({ eligiblePositions }) => !eligiblePositions.includes('OF')), `${id} must use split outfield positions only`)
   for (const card of cards) {
+    const source = selectedById.get(card.id)
+    assert(source, `${card.id} must map to one featured-season candidate`)
+    assert.equal(new Set(card.eligiblePositions).size, card.eligiblePositions.length, `${card.id} must not contain duplicate positions`)
+    assert(card.eligiblePositions.every((position) => POSITION_ORDER.includes(position)), `${card.id} must not contain invalid positions`)
+    assert.deepEqual(card.eligiblePositions, [...card.eligiblePositions].sort((left, right) => POSITION_ORDER.indexOf(left) - POSITION_ORDER.indexOf(right)), `${card.id} positions must use canonical order`)
+    if (!card.manualPositionOverride) {
+      assert.deepEqual(card.eligiblePositions, source.sourceEligiblePositions, `${card.id} must serialize only featured-season source eligibility`)
+      for (const position of FIELD_POSITIONS) {
+        const games = source.positionAppearances[position] ?? 0
+        assert.equal(card.eligiblePositions.includes(position), games >= 5, `${card.id} ${position} must follow the five-game boundary`)
+        assert.equal(source.selectionEligiblePositions.includes(position), games >= 10, `${card.id} ${position} must retain the selection-only ten-game boundary`)
+      }
+      const dhGames = source.positionAppearances.DH ?? 0
+      assert.equal(card.eligiblePositions.includes('DH'), card.playerType !== 'pitcher' && dhGames >= 10, `${card.id} DH must retain its ten-game boundary`)
+    }
     assert.equal(card.decade, `${Math.floor(card.featuredSeason / 10) * 10}s`)
     if (card.eligiblePositions.includes('SP')) assert(card.pitchingScoringStats?.starts >= 10 || card.scoringStats.starts >= 10)
     if (card.eligiblePositions.includes('RP')) assert(card.pitchingScoringStats?.reliefAppearances >= 15 || card.scoringStats.reliefAppearances >= 15)
   }
 }
+
+const validationCombination = built.combinations[0]
+const duplicatePositionCards = structuredClone(built.pools[validationCombination.id])
+duplicatePositionCards[0].eligiblePositions.push(duplicatePositionCards[0].eligiblePositions[0])
+assert(validatePool(duplicatePositionCards, validationCombination, built.config).errors.some((message) => message.includes('duplicate eligible positions')))
+const invalidPositionCards = structuredClone(built.pools[validationCombination.id])
+invalidPositionCards[0].eligiblePositions.push('OF')
+assert(validatePool(invalidPositionCards, validationCombination, built.config).errors.some((message) => message.includes('invalid eligible positions')))
 
 const legacyTargetCards = Object.values(built.config.coverage).reduce((total, target) => total + target, 0)
 const candidatesByPool = new Map()

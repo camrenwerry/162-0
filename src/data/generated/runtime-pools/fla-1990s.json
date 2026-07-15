@@ -1426,6 +1426,7 @@
     "featuredSeason": 1999,
     "eligiblePositions": [
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,
@@ -1718,7 +1719,8 @@
     "eligiblePositions": [
       "2B",
       "3B",
-      "LF"
+      "LF",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,

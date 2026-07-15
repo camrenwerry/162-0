@@ -1597,7 +1597,8 @@
       "1B",
       "2B",
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -2318,6 +2319,7 @@
     "featuredSeason": 1969,
     "eligiblePositions": [
       "1B",
+      "LF",
       "RF"
     ],
     "isTwoWay": false,

@@ -576,6 +576,7 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
+      "LF",
       "CF",
       "RF"
     ],
@@ -983,7 +984,8 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1032,7 +1034,8 @@
     "featuredSeason": 2021,
     "eligiblePositions": [
       "1B",
-      "LF"
+      "LF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1237,6 +1240,7 @@
     "featuredSeason": 2023,
     "eligiblePositions": [
       "1B",
+      "2B",
       "3B",
       "DH"
     ],
@@ -1286,7 +1290,9 @@
     "decade": "2020s",
     "featuredSeason": 2024,
     "eligiblePositions": [
-      "SS"
+      "2B",
+      "SS",
+      "CF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1335,7 +1341,8 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "LF",
-      "CF"
+      "CF",
+      "RF"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1580,7 +1587,8 @@
     "decade": "2020s",
     "featuredSeason": 2020,
     "eligiblePositions": [
-      "2B"
+      "2B",
+      "3B"
     ],
     "isTwoWay": false,
     "pitchingRole": null,
@@ -1629,6 +1637,7 @@
     "featuredSeason": 2024,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,

@@ -2297,7 +2297,9 @@
     "decade": "2010s",
     "featuredSeason": 2011,
     "eligiblePositions": [
+      "2B",
       "LF",
+      "CF",
       "RF"
     ],
     "isTwoWay": false,

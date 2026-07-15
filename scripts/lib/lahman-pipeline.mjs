@@ -1,8 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-export const POSITION_ORDER = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH', 'SP', 'RP']
-const HITTER_POSITIONS = new Set(['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH'])
+export const FIELD_POSITIONS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF']
+export const POSITION_ORDER = [...FIELD_POSITIONS, 'DH', 'SP', 'RP']
+const FIELD_POSITION_SET = new Set(FIELD_POSITIONS)
+const HITTER_POSITIONS = new Set([...FIELD_POSITIONS, 'DH'])
 const ROUND = (value, places = 3) => Number.isFinite(value) ? Number(value.toFixed(places)) : null
 const NUMBER = (value) => value === '' || value === undefined ? 0 : Number(value)
 const decadeFor = (year) => `${Math.floor(year / 10) * 10}s`
@@ -243,24 +245,32 @@ export function buildCandidate({ player, franchise, year, batting, pitching, pos
   const pitcher = pitching ? pitcherStats(pitching, contextFor(pitching, context)) : null
   const qualifiesHitter = hitter && hitter.plateAppearances >= config.eligibility.minimumHitterPlateAppearances
   const qualifiesPitcher = pitcher && pitcher.inningsPitched >= config.eligibility.minimumPitcherInnings
-  const fieldPositions = [...(positions ?? new Map())]
-    .filter(([position, games]) => games >= config.eligibility.minimumFieldingGames && (position !== 'DH' || qualifiesHitter))
+  const positionEntries = [...(positions ?? new Map())]
+  const selectionFieldingMinimum = config.eligibility.minimumSelectionFieldingGames ?? config.eligibility.minimumFieldingGames
+  const dhMinimum = config.eligibility.minimumDhGames ?? selectionFieldingMinimum
+  const fieldPositionsAt = (minimum) => positionEntries
+    .filter(([position, games]) => FIELD_POSITION_SET.has(position) && games >= minimum)
     .map(([position]) => position)
+  const dhPositions = qualifiesHitter && positionEntries.some(([position, games]) => position === 'DH' && games >= dhMinimum) ? ['DH'] : []
+  const selectionFieldPositions = [...fieldPositionsAt(selectionFieldingMinimum), ...dhPositions]
   const pitcherPositions = []
   if (qualifiesPitcher && pitcher.starts >= config.eligibility.minimumStarts) pitcherPositions.push('SP')
   if (qualifiesPitcher && pitcher.reliefAppearances >= config.eligibility.minimumReliefAppearances) pitcherPositions.push('RP')
-  const sourceEligiblePositions = [...fieldPositions, ...pitcherPositions].sort((a, b) => POSITION_ORDER.indexOf(a) - POSITION_ORDER.indexOf(b))
-  let eligiblePositions = [...sourceEligiblePositions]
+  const selectionSourceEligiblePositions = [...selectionFieldPositions, ...pitcherPositions].sort((a, b) => POSITION_ORDER.indexOf(a) - POSITION_ORDER.indexOf(b))
   const cardId = `${franchise.franchiseId}-${decadeFor(year)}-${player.playerID}`
-  eligiblePositions = overridePositions(eligiblePositions, overrides.positions?.[cardId])
-  const isHitter = Boolean(qualifiesHitter && eligiblePositions.some((position) => HITTER_POSITIONS.has(position)))
-  const isPitcher = Boolean(qualifiesPitcher && eligiblePositions.some((position) => position === 'SP' || position === 'RP'))
+  const positionOverride = overrides.positions?.[cardId]
+  const selectionEligiblePositions = overridePositions(selectionSourceEligiblePositions, positionOverride)
+  const isHitter = Boolean(qualifiesHitter && selectionEligiblePositions.some((position) => HITTER_POSITIONS.has(position)))
+  const isPitcher = Boolean(qualifiesPitcher && selectionEligiblePositions.some((position) => position === 'SP' || position === 'RP'))
   if (!isHitter && !isPitcher) return null
+  const sourceEligiblePositions = [...fieldPositionsAt(config.eligibility.minimumFieldingGames), ...dhPositions, ...pitcherPositions]
+    .sort((a, b) => POSITION_ORDER.indexOf(a) - POSITION_ORDER.indexOf(b))
+  const eligiblePositions = overridePositions(sourceEligiblePositions, positionOverride)
   const primaryPitchingRole = pitcherPositions.includes('SP') && pitcherPositions.includes('RP')
     ? (pitcher.starts >= pitcher.reliefAppearances ? 'SP' : 'RP') : pitcherPositions[0] ?? null
   const playerType = isHitter && isPitcher ? 'twoWay' : isHitter ? 'hitter' : 'pitcher'
   const team = primaryTeam(batting ?? pitching)
-  const hitterSelection = isHitter ? hitterScore(hitter, eligiblePositions, config.selection.hitter) : 0
+  const hitterSelection = isHitter ? hitterScore(hitter, selectionEligiblePositions, config.selection.hitter) : 0
   const pitcherSelection = isPitcher ? Math.max(...pitcherPositions.map((role) => pitcherScore(pitcher, role, config.selection[role === 'SP' ? 'starter' : 'reliever']))) : 0
   return {
     id: cardId, playerId: player.playerID, playerSlug: player.bbrefID || player.playerID,
@@ -273,7 +283,7 @@ export function buildCandidate({ player, franchise, year, batting, pitching, pos
     hitter, pitcher, selectionScore: Math.max(hitterSelection, pitcherSelection),
     sourceTeamIds: [...(batting ?? pitching).teamRows.keys()].sort(compareText),
     sourceNote: overrides.notes?.[cardId] ?? '', manualPositionOverride: Boolean(overrides.positions?.[cardId]),
-    sourceEligiblePositions,
+    sourceEligiblePositions, selectionEligiblePositions, selectionSourceEligiblePositions,
     positionAppearances: Object.fromEntries([...(positions ?? new Map())].sort(([left], [right]) => POSITION_ORDER.indexOf(left) - POSITION_ORDER.indexOf(right))),
   }
 }
@@ -359,7 +369,8 @@ export function canCompleteRoster(cards) {
     const position = slots[slotIndex]
     for (let cardIndex = 0; cardIndex < cards.length; cardIndex += 1) {
       const card = cards[cardIndex]
-      const eligible = position === 'DH' ? card.playerType !== 'pitcher' : card.eligiblePositions.includes(position)
+      const positions = card.selectionEligiblePositions ?? card.eligiblePositions
+      const eligible = position === 'DH' ? card.playerType !== 'pitcher' : positions.includes(position)
       if (!eligible || visitedCards.has(cardIndex)) continue
       visitedCards.add(cardIndex)
       const priorSlot = assignedSlotByCard.get(cardIndex)
@@ -380,7 +391,7 @@ function coverageFor(cards) {
 export function curatePool(cards, config) {
   const selected = new Map()
   for (const [position, target] of Object.entries(config.coverage)) {
-    cards.filter(({ eligiblePositions }) => eligiblePositions.includes(position)).sort((a, b) => b.selectionScore - a.selectionScore || compareText(a.name, b.name)).slice(0, target).forEach((card) => selected.set(card.id, card))
+    cards.filter((card) => (card.selectionEligiblePositions ?? card.eligiblePositions).includes(position)).sort((a, b) => b.selectionScore - a.selectionScore || compareText(a.name, b.name)).slice(0, target).forEach((card) => selected.set(card.id, card))
   }
   const ranked = [...cards].sort((a, b) => b.selectionScore - a.selectionScore || compareText(a.name, b.name))
   const legacyCoreTarget = Math.min(
@@ -414,6 +425,10 @@ export function validatePool(cards, combination, config) {
     if (card.franchiseId !== combination.franchiseId || card.decade !== combination.decade) errors.push(`${card.id}: franchise/decade mismatch`)
     if (decadeFor(card.featuredSeason) !== combination.decade) errors.push(`${card.id}: featured season outside decade`)
     if (!card.name || !card.eligiblePositions.length) errors.push(`${card.id}: missing identity or eligibility`)
+    const duplicatePositions = card.eligiblePositions.filter((position, index) => card.eligiblePositions.indexOf(position) !== index)
+    if (duplicatePositions.length) errors.push(`${card.id}: duplicate eligible positions ${[...new Set(duplicatePositions)].join(', ')}`)
+    const invalidPositions = card.eligiblePositions.filter((position) => !POSITION_ORDER.includes(position))
+    if (invalidPositions.length) errors.push(`${card.id}: invalid eligible positions ${[...new Set(invalidPositions)].join(', ')}`)
     if (card.playerType !== 'pitcher') {
       for (const field of ['ops', 'hr', 'avg', 'obp', 'slg', 'games', 'plateAppearances']) if (!Number.isFinite(card.visibleStats[field])) errors.push(`${card.id}: missing hitter ${field}`)
       for (const field of ['rbi', 'sb']) if (!Number.isFinite(card.visibleStats[field])) warnings.push(`${card.id}: unavailable hitter ${field}`)

@@ -1358,6 +1358,7 @@
     "decade": "1930s",
     "featuredSeason": 1938,
     "eligiblePositions": [
+      "3B",
       "SS"
     ],
     "isTwoWay": false,
@@ -1503,6 +1504,7 @@
     "featuredSeason": 1937,
     "eligiblePositions": [
       "1B",
+      "LF",
       "CF"
     ],
     "isTwoWay": false,
@@ -1600,6 +1602,7 @@
     "featuredSeason": 1937,
     "eligiblePositions": [
       "2B",
+      "3B",
       "SS"
     ],
     "isTwoWay": false,
