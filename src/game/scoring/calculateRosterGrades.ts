@@ -53,7 +53,11 @@ export function calculateRosterGrades(roster: Roster): RosterGradeCalculation {
   const lineupDepth = Math.min(...HITTER_SLOT_IDS.map((slotId) => hitterValues.find((value) => value.slotId === slotId)?.value ?? 0))
   const rotationDepth = Math.min(...STARTER_SLOT_IDS.map((slotId) => starterValues.find((value) => value.slotId === slotId)?.value ?? 0))
   const bullpenDepth = Math.min(...RELIEVER_SLOT_IDS.map((slotId) => relieverValues.find((value) => value.slotId === slotId)?.value ?? 0))
-  const productionMix = clamp(100 - Math.abs(power - contact) * CATEGORY_COMPONENT_WEIGHTS.powerContactDifferenceRate)
+  const productionMix = clamp(
+    100
+    - Math.abs(power - contact) * CATEGORY_COMPONENT_WEIGHTS.powerContactDifferenceRate
+    + (speed - 50) * CATEGORY_COMPONENT_WEIGHTS.speedBalanceRate,
+  )
   const rosterBalance = (
     majorFloor * BALANCE_WEIGHTS.majorCategoryFloor
     + lineupDepth * BALANCE_WEIGHTS.lineupDepth

@@ -41,7 +41,7 @@ const PITCHER_FIXTURES = {
   perfect: { war: 12, eraPlus: 260, era: 1.1, whip: .65, soRate: 17, wins: 28, saves: 60, innings: 280, starts: 37, relief: 92, fip: 1.1, walkRate: 1 },
 } as const
 
-function fixturePlayer(player: Player, level: FixtureLevel, defenseOverride?: number): Player {
+export function fixturePlayer(player: Player, level: FixtureLevel, defenseOverride?: number): Player {
   if (player.playerType === 'hitter') {
     const fixture = HITTER_FIXTURES[level]
     return {
@@ -80,7 +80,7 @@ function fixturePlayer(player: Player, level: FixtureLevel, defenseOverride?: nu
   }
 }
 
-function fixtureRoster(hitterLevel: FixtureLevel, pitcherLevel: FixtureLevel, defenseOverride?: number): Roster {
+export function fixtureRoster(hitterLevel: FixtureLevel, pitcherLevel: FixtureLevel, defenseOverride?: number): Roster {
   return Object.fromEntries(Object.entries(baseRoster).map(([slotId, player]) => [
     slotId,
     fixturePlayer(player, player.playerType === 'hitter' ? hitterLevel : pitcherLevel, defenseOverride),
@@ -108,6 +108,20 @@ assert.notEqual(elitePitchingBadOffense.wins, 162)
 const weakDefense = calculateDraftResult(fixtureRoster('perfect', 'perfect', -30)).result
 assert.notEqual(weakDefense.wins, 162, 'weak defense must prevent perfection')
 assert(weakDefense.categoryScores.defense < perfect.categoryScores.defense)
+
+const slowRoster = fixtureRoster('strong', 'strong')
+const fastCenterFielder = slowRoster.CF
+assert(fastCenterFielder?.playerType === 'hitter')
+slowRoster.CF = {
+  ...fastCenterFielder,
+  visibleStats: { ...fastCenterFielder.visibleStats, sb: 0 },
+  stats: { ...fastCenterFielder.stats, sb: 0 },
+  scoringStats: { ...fastCenterFielder.scoringStats, baserunningValue: -6 },
+}
+const slowResult = calculateDraftResult(slowRoster).result
+assert(slowResult.categoryScores.offense < strong.categoryScores.offense, 'hidden speed must influence offense')
+assert(slowResult.categoryScores.rosterBalance < strong.categoryScores.rosterBalance, 'hidden speed must influence roster balance')
+assert(slowResult.overallScore < strong.overallScore, 'hidden speed must influence overall score')
 
 const dhPlayer = fixtureRoster('strong', 'strong').DH
 assert(dhPlayer?.playerType === 'hitter')
@@ -149,11 +163,11 @@ assert.equal(gradeForScore(80), 'B')
 assert.equal(gradeForScore(69), 'C+')
 assert.equal(gradeForScore(20), 'F')
 
-assert.equal(strong.scoringVersion, '2.0')
+assert.equal(strong.scoringVersion, '2.1')
 assert.equal(Object.keys(strong.roster).length, ROSTER_SLOTS.length)
 assert(strong.bestPlayerValue)
 assert(strong.strongestCategory && strong.weakestCategory)
 assert.equal(Object.keys(strong.categoryScores).length, 9)
 assert.deepEqual(Object.keys(strong.categoryScores), Object.keys(strong.categoryGrades))
 
-console.log(`Scoring v2.0 tests passed: weak ${weak.wins}–${weak.losses}, average ${average.wins}–${average.losses}, strong ${strong.wins}–${strong.losses}, perfect fixture ${perfect.wins}–${perfect.losses}.`)
+console.log(`Scoring v2.1 tests passed: weak ${weak.wins}–${weak.losses}, average ${average.wins}–${average.losses}, strong ${strong.wins}–${strong.losses}, perfect fixture ${perfect.wins}–${perfect.losses}.`)

@@ -5,7 +5,7 @@ import { SCORING_VERSION } from './scoringConfig'
 import type { ScoringCalculation, ScoringDiagnostics } from './types'
 
 const SUMMARY_CATEGORIES: Array<Exclude<ScoringCategoryKey, 'overall'>> = [
-  'offense', 'power', 'contact', 'speed', 'defense', 'startingPitching', 'reliefPitching', 'rosterBalance',
+  'offense', 'defense', 'startingPitching', 'reliefPitching', 'rosterBalance',
 ]
 
 export function calculateDraftResult(roster: Roster): ScoringCalculation {
@@ -52,4 +52,3 @@ export { calculateProjectedRecord, tierForWins } from './calculateProjectedRecor
 export { calculateRosterGrades, gradeForScore } from './calculateRosterGrades'
 export { normalizeMetric, weightedScore } from './normalization'
 export * from './types'
-

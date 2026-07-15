@@ -282,7 +282,7 @@
   .results-roster__list { grid-template-columns: repeat(3, 1fr); }
   .results-roster__list > div:nth-child(even) { border-right: 1px solid #24313e; }
   .results-roster__list > div:nth-child(3n) { border-right: 0; }
-  .results-grades { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .results-grades { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 
 @media (prefers-reduced-motion: reduce) {

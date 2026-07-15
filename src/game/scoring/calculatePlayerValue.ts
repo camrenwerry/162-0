@@ -34,9 +34,15 @@ export function calculateHitterValue(
     ? contribution('baserunning', scoring.baserunningValue, weights.speed, ranges.baserunning)
     : contribution('stolenBaseRate', sbRate, weights.speed, ranges.sbRate)
   const positionAdjustment = POSITIONAL_ADJUSTMENTS[position]
+  // Lahman does not provide a cross-era defensive value. When enrichment is
+  // unavailable, featured-season workload plus positional difficulty is the
+  // deterministic, source-supported proxy. Average seasons remain neutral,
+  // while elite full seasons can still produce elite defensive roster grades.
   const defenseScore = position === 'DH'
     ? 0
-    : clamp((scoring.defensiveValue === null ? 50 : normalizeMetric(scoring.defensiveValue, ranges.defense)) + positionAdjustment)
+    : scoring.defensiveValue === null
+      ? clamp(durabilityScore + positionAdjustment * .5)
+      : clamp(normalizeMetric(scoring.defensiveValue, ranges.defense) + positionAdjustment)
 
   const components = compact([
     contribution('era-adjusted offense', scoring.eraAdjustedOffense, weights.context, ranges.eraAdjustedOffense),
@@ -51,7 +57,7 @@ export function calculateHitterValue(
   ])
   const weighted = weightedScore(components)
 
-  const offenseComponents = components.filter(({ metric }) => ['era-adjusted offense', 'OPS', 'OBP', 'SLG', 'HR/650 PA', 'RBI/650 PA'].includes(metric))
+  const offenseComponents = components.filter(({ metric }) => ['era-adjusted offense', 'OPS', 'OBP', 'SLG', 'HR/650 PA', 'RBI/650 PA', 'baserunning', 'stolenBaseRate'].includes(metric))
   const powerComponents = components.filter(({ metric }) => ['SLG', 'HR/650 PA'].includes(metric))
   const contactComponents = compact([
     contribution('AVG', stats.avg, CATEGORY_COMPONENT_WEIGHTS.contact.avg, ranges.avg),

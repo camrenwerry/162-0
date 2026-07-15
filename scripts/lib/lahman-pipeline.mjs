@@ -247,7 +247,8 @@ function buildCandidate({ player, franchise, year, batting, pitching, positions,
   const pitcherPositions = []
   if (qualifiesPitcher && pitcher.starts >= config.eligibility.minimumStarts) pitcherPositions.push('SP')
   if (qualifiesPitcher && pitcher.reliefAppearances >= config.eligibility.minimumReliefAppearances) pitcherPositions.push('RP')
-  let eligiblePositions = [...fieldPositions, ...pitcherPositions].sort((a, b) => POSITION_ORDER.indexOf(a) - POSITION_ORDER.indexOf(b))
+  const sourceEligiblePositions = [...fieldPositions, ...pitcherPositions].sort((a, b) => POSITION_ORDER.indexOf(a) - POSITION_ORDER.indexOf(b))
+  let eligiblePositions = [...sourceEligiblePositions]
   const cardId = `${franchise.franchiseId}-${decadeFor(year)}-${player.playerID}`
   eligiblePositions = overridePositions(eligiblePositions, overrides.positions?.[cardId])
   const isHitter = Boolean(qualifiesHitter && eligiblePositions.some((position) => FIELD_POSITIONS.has(position)))
@@ -270,6 +271,8 @@ function buildCandidate({ player, franchise, year, batting, pitching, positions,
     hitter, pitcher, selectionScore: Math.max(hitterSelection, pitcherSelection),
     sourceTeamIds: [...(batting ?? pitching).teamRows.keys()].sort(compareText),
     sourceNote: overrides.notes?.[cardId] ?? '', manualPositionOverride: Boolean(overrides.positions?.[cardId]),
+    sourceEligiblePositions,
+    positionAppearances: Object.fromEntries([...(positions ?? new Map())].sort(([left], [right]) => POSITION_ORDER.indexOf(left) - POSITION_ORDER.indexOf(right))),
   }
 }
 
@@ -500,7 +503,7 @@ export function buildLahmanData(root = process.cwd()) {
       fieldCorrections: overrides.fieldCorrections?.length ?? 0,
     },
   }
-  return { config, combinations, pools, report }
+  return { config, combinations, pools, report, auditContext: { candidates, selected, overrides } }
 }
 
 export function validateGeneratedData(root = process.cwd()) {

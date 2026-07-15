@@ -32,17 +32,16 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
       setIsSharing(false)
     }
   }
-  const categoryLabel: Record<ScoringCategoryKey, string> = {
-    offense: 'Offense', power: 'Power', contact: 'Contact & OBP', speed: 'Speed', defense: 'Defense',
+  const categoryLabel: Partial<Record<ScoringCategoryKey, string>> = {
+    offense: 'Offense', defense: 'Defense',
     startingPitching: 'Starting Pitching', reliefPitching: 'Relief Pitching', rosterBalance: 'Roster Balance', overall: 'Overall',
   }
   const grades = [
     ['Offense', 'offense'],
     ['Defense', 'defense'],
-    ['Speed', 'speed'],
-    ['Starting', 'startingPitching'],
-    ['Relief', 'reliefPitching'],
-    ['Balance', 'rosterBalance'],
+    ['Starting Pitching', 'startingPitching'],
+    ['Relief Pitching', 'reliefPitching'],
+    ['Roster Balance', 'rosterBalance'],
   ] as const
 
   return (
@@ -74,8 +73,8 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome }: R
           ))}
         </section>
         <section className="results-highlights" aria-label="Team scoring highlights">
-          <p><span>Strongest category</span><strong>{categoryLabel[result.strongestCategory]}</strong></p>
-          <p><span>Weakest category</span><strong>{categoryLabel[result.weakestCategory]}</strong></p>
+          <p><span>Strongest category</span><strong>{categoryLabel[result.strongestCategory] ?? 'Overall'}</strong></p>
+          <p><span>Weakest category</span><strong>{categoryLabel[result.weakestCategory] ?? 'Overall'}</strong></p>
         </section>
         <section className="results-roster">
           <div className="results-roster__heading"><h1>Completed roster</h1><span>14 / 14</span></div>

@@ -1,9 +1,9 @@
 import type { LetterGrade, Position } from '../../types/draft'
 import type { MetricRange } from './types'
 
-// All v2.0 tuning values live here. Ranges map poor/average/excellent/elite
+// All v2.1 tuning values live here. Ranges map poor/average/excellent/elite
 // featured-season performances onto the common 0–100 scoring scale.
-export const SCORING_VERSION = '2.0' as const
+export const SCORING_VERSION = '2.1' as const
 
 export const NORMALIZATION_SCORE_ANCHORS = {
   poor: 15,
@@ -103,6 +103,7 @@ export const BALANCE_WEIGHTS = {
 export const CATEGORY_COMPONENT_WEIGHTS = {
   contact: { avg: 1, obp: 1.4, ops: .6 },
   powerContactDifferenceRate: 1.5,
+  speedBalanceRate: .1,
 } as const
 
 // Modest caps ensure quality remains more important than bonuses or penalties.
@@ -139,21 +140,24 @@ export const GRADE_THRESHOLDS: ReadonlyArray<{ minimum: number; grade: LetterGra
   { minimum: 0, grade: 'F' },
 ]
 
-// Piecewise points keep the record deterministic and make the upper tail steep.
+// Piecewise interpolation keeps average teams grounded while expanding the
+// upper tail. A flat bonus would erase meaningful differences between great,
+// historic, and nearly perfect rosters.
 export const WIN_CURVE = {
   seasonGames: 162,
-  minimumWins: 55,
+  minimumWins: 70,
   maximumNonPerfectWins: 161,
   points: [
-    { score: 0, wins: 55 }, { score: 40, wins: 68 }, { score: 50, wins: 76 },
-    { score: 60, wins: 85 }, { score: 70, wins: 96 }, { score: 80, wins: 108 },
-    { score: 88, wins: 120 }, { score: 94, wins: 134 }, { score: 97, wins: 146 },
-    { score: 99, wins: 156 }, { score: 100, wins: 161 },
+    { score: 0, wins: 70 }, { score: 30, wins: 78 }, { score: 40, wins: 84 },
+    { score: 50, wins: 89 }, { score: 60, wins: 95 }, { score: 70, wins: 103 },
+    { score: 78, wins: 112 }, { score: 84, wins: 121 }, { score: 89, wins: 132 },
+    { score: 93, wins: 143 }, { score: 96, wins: 153 }, { score: 98, wins: 159 },
+    { score: 100, wins: 161 },
   ],
   perfect: {
-    overallMinimum: 99.5,
-    majorCategoryMinimum: 98,
-    balanceMinimum: 98,
+    overallMinimum: 99,
+    majorCategoryMinimum: 97.05,
+    balanceMinimum: 90,
     weakestPlayerMinimum: 90,
   },
 } as const

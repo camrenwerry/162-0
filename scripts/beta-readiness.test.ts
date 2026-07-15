@@ -59,5 +59,6 @@ assert.match(recovery, /Restart Game/)
 assert.match(resultsScreen, /AbortError/)
 assert.match(resultsScreen, /ShareFallbackDialog/)
 assert.match(resultsScreen, /disabled=\{isSharing\}/)
+assert.doesNotMatch(resultsScreen, /['"]Speed['"]/, 'Speed must remain hidden on the Results screen')
 
 console.log('Beta readiness tests passed.')
