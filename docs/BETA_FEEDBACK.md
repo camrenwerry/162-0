@@ -19,7 +19,7 @@ Running checklist for v0.11.5 and later beta work. Historical audits are report-
 
 ## Scoring tuning notes
 
-- Scoring payload version: `2.2`.
+- Scoring payload version: `2.3`.
 - The win conversion is deterministic piecewise interpolation. It starts at a 55-win floor, maps conceptual league-average strength near 81 wins, and expands sharply through great, historic, all-time, and near-perfect scores.
 - Category weights are Offense 34%, Defense 18%, Starting Pitching 25%, Relief Pitching 13%, hidden Speed 2%, and Roster Balance 8%.
 - Speed now contributes to the Offense facet and modifies the existing power/contact production-mix input to Roster Balance. It continues its direct Overall contribution.

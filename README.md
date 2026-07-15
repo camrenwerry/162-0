@@ -146,9 +146,9 @@ Pools with blocking identity, season, stat, duplicate, size, pitching-depth, or 
 
 Field corrections fail the build if provenance fields are missing or the target path is invalid. Overrides must document source-backed exceptions and cannot bypass franchise/decade validation.
 
-## Scoring engine v2.2
+## Scoring engine v2.3
 
-The v2.2 projection uses the generated featured-season statistics plus the pipeline’s league/year context metrics. Hitter scoring uses era-relative offense, OPS, OBP, SLG, rate production, hidden speed, workload, and modest positional/defensive context. Pitcher scoring uses role-specific era-relative run prevention, ERA, WHIP, K/9, BB/9, workload, starts or relief appearances, and modest save value. Broader metric anchors and a continuous piecewise win curve separate weak, average, elite, and historic rosters without a flat win bonus.
+The v2.3 projection uses the generated featured-season statistics plus the pipeline’s league/year context metrics. Hitter scoring uses era-relative offense, OPS, OBP, SLG, rate production, hidden speed, workload, and modest positional/defensive context. Pitcher scoring uses role-specific era-relative run prevention, ERA, WHIP, K/9, BB/9, workload, starts or relief appearances, and modest save value. Broader metric anchors and a continuous piecewise win curve separate weak, average, elite, and historic rosters without a flat win bonus; perfect seasons also require at least 160 wins from that curve before qualification.
 
 The engine does not require WAR, OPS+, ERA+, wRC+, or FIP. Missing optional inputs are omitted, available weights are redistributed, and low-coverage calculations blend toward the league-average anchor. When cross-era defensive enrichment is unavailable, a neutral-confidence fallback combines featured-season workload and positional difficulty. The same roster always returns the same result. Speed remains a small internal input to offense, overall strength, and roster balance, but is not displayed as a Results category.
 

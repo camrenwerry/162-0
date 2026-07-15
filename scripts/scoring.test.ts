@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { calculateHitterValue, calculateReliefPitcherValue, calculateStartingPitcherValue } from '../src/game/scoring/calculatePlayerValue'
-import { calculateProjectedRecord } from '../src/game/scoring/calculateProjectedRecord'
+import { calculateProjectedRecord, tierForWins } from '../src/game/scoring/calculateProjectedRecord'
 import { calculateRosterGrades, gradeForScore } from '../src/game/scoring/calculateRosterGrades'
 import { calculateDraftResult } from '../src/game/scoring/index'
 import { normalizeMetric, weightedScore } from '../src/game/scoring/normalization'
@@ -15,12 +15,16 @@ const strongCalculation = calculateDraftResult(fixtureRoster('strong', 'strong')
 const strong = strongCalculation.result
 const perfectCalculation = calculateDraftResult(fixtureRoster('perfect', 'perfect'))
 const perfect = perfectCalculation.result
-const attainableHistoricalPerfect = calculateDraftResult(historicalPeakRoster()).result
+const historicalPeakCalculation = calculateDraftResult(historicalPeakRoster())
+const attainableHistoricalPerfect = historicalPeakCalculation.result
 
 assert.deepEqual(calculateDraftResult(fixtureRoster('strong', 'strong')).result, strong, 'the same roster must always return the same payload')
 for (const result of [weak, average, strong, perfect]) assert.equal(result.wins + result.losses, 162)
 assert(weak.wins <= average.wins && average.wins <= strong.wins && strong.wins <= perfect.wins, 'clearly better rosters must not project fewer wins')
-assert.equal(attainableHistoricalPerfect.wins, 162, 'an attainable roster made entirely from generated historical cards must be able to reach 162 wins')
+assert(historicalPeakCalculation.diagnostics.perfectRequirementsMet, 'the generated historical peak roster must pass the category and player requirements')
+assert(historicalPeakCalculation.diagnostics.projectedWinsBeforePerfectCheck < 160, 'the generated historical peak roster must remain below the extraordinary curve threshold')
+assert.equal(attainableHistoricalPerfect.wins, historicalPeakCalculation.diagnostics.projectedWinsBeforePerfectCheck, 'a qualifying roster below 160 ordinary wins must retain its curve result')
+assert.notEqual(attainableHistoricalPerfect.wins, 162, 'category qualification alone must not force a perfect season')
 assert(strong.wins - weak.wins >= 60, 'fixture records must use a meaningfully wide range')
 
 const eliteOffenseBadPitching = calculateDraftResult(fixtureRoster('perfect', 'weak')).result
@@ -116,8 +120,53 @@ assert(normalizeMetric(1.05, NORMALIZATION_RANGES.hitter.ops) > normalizeMetric(
 assert(normalizeMetric(2, NORMALIZATION_RANGES.starter.era) > normalizeMetric(5, NORMALIZATION_RANGES.starter.era), 'lower-is-better normalization must be supported')
 
 const exceptionalScores = { ...perfect.categoryScores, overall: 100, offense: 100, defense: 100, startingPitching: 100, reliefPitching: 100, rosterBalance: 100 }
-assert.equal(calculateProjectedRecord(exceptionalScores, perfectCalculation.diagnostics.playerValues).wins, 162)
-assert.notEqual(calculateProjectedRecord({ ...exceptionalScores, defense: 84 }, perfectCalculation.diagnostics.playerValues).wins, 162)
+const projectScore = (overall: number, overrides: Partial<typeof exceptionalScores> = {}) => calculateProjectedRecord(
+  { ...exceptionalScores, overall, ...overrides },
+  perfectCalculation.diagnostics.playerValues,
+)
+
+const preservedLowerAnchors = [
+  [0, 55], [35, 58], [45, 65], [55, 74], [60, 78], [65, 81], [68, 87], [72, 93], [76, 99], [80, 105],
+] as const
+for (const [overall, expectedWins] of preservedLowerAnchors) assert.equal(projectScore(overall).wins, expectedWins, `overall ${overall} must preserve its v2.2 projection`)
+
+const upperAnchors = [
+  [84, 118], [88, 131], [92, 143], [95, 151], [97, 156],
+] as const
+for (const [overall, expectedWins] of upperAnchors) assert.equal(projectScore(overall).wins, expectedWins, `overall ${overall} must use the v2.3 upper curve`)
+
+const qualifyingBelowThreshold = projectScore(98.5)
+assert.equal(qualifyingBelowThreshold.winsBeforePerfectCheck, 159)
+assert.equal(qualifyingBelowThreshold.perfectRequirementsMet, true)
+assert.equal(qualifyingBelowThreshold.wins, 159, 'a qualifying roster below 160 curve wins must not be forced to 162')
+
+const qualifyingExtraordinary = projectScore(99)
+assert.equal(qualifyingExtraordinary.winsBeforePerfectCheck, 160)
+assert.equal(qualifyingExtraordinary.perfectRequirementsMet, true)
+assert.equal(qualifyingExtraordinary.wins, 162, 'a qualifying roster at 160+ curve wins may reach 162')
+assert.equal(projectScore(100).wins, 162)
+
+const nearPerfectRecords = [projectScore(97, { defense: 84 }), projectScore(99, { defense: 84 }), projectScore(100, { defense: 84 })]
+assert.deepEqual(nearPerfectRecords.map(({ wins }) => wins), [156, 160, 161], 'non-qualifying near-perfect teams must be able to finish from 156 through 161')
+for (const record of nearPerfectRecords) assert.equal(record.wins + record.losses, 162)
+
+assert.equal(tierForWins(55), 'Rebuild')
+assert.equal(tierForWins(75), 'Developing Club')
+assert.equal(tierForWins(85), 'Competitive')
+assert.equal(tierForWins(95), 'Playoff Contender')
+assert.equal(tierForWins(105), 'Championship Contender')
+assert.equal(tierForWins(115), 'World Series Favorite')
+assert.equal(tierForWins(130), 'Historic Powerhouse')
+assert.equal(tierForWins(145), 'All-Time Great')
+assert.equal(tierForWins(156), 'Near Perfect')
+assert.equal(tierForWins(162), 'Perfect Season')
+
+for (const invalidOverall of [Number.NaN, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY]) {
+  const record = projectScore(invalidOverall)
+  assert(Number.isInteger(record.wins) && Number.isInteger(record.losses), 'non-finite scores must still produce integer records')
+  assert.equal(record.wins + record.losses, 162)
+  assert(record.wins >= 55 && record.wins <= 162)
+}
 
 assert.equal(gradeForScore(100), 'S')
 assert.equal(gradeForScore(94), 'A+')
@@ -125,7 +174,7 @@ assert.equal(gradeForScore(80), 'B')
 assert.equal(gradeForScore(69), 'C')
 assert.equal(gradeForScore(20), 'F')
 
-assert.equal(strong.scoringVersion, '2.2')
+assert.equal(strong.scoringVersion, '2.3')
 assert.equal(Object.keys(strong.roster).length, ROSTER_SLOTS.length)
 assert(strong.bestPlayerValue)
 assert(strong.strongestCategory && strong.weakestCategory)
@@ -139,4 +188,7 @@ for (const result of [weak, average, strong, perfect, missingDefenseResult, slow
 }
 assert.equal(calculateProjectedRecord({ ...average.categoryScores, overall: 65 }, averageCalculation.diagnostics.playerValues).wins, 81)
 
-console.log(`Scoring v2.2 tests passed: weak ${weak.wins}–${weak.losses}, average ${average.wins}–${average.losses}, strong ${strong.wins}–${strong.losses}, perfect fixture ${perfect.wins}–${perfect.losses}.`)
+assert.equal(weak.wins, 61, 'weak benchmark projection must remain unchanged')
+assert.equal(average.wins, 88, 'average benchmark projection must remain unchanged')
+
+console.log(`Scoring v2.3 tests passed: weak ${weak.wins}–${weak.losses}, average ${average.wins}–${average.losses}, strong ${strong.wins}–${strong.losses}, perfect fixture ${perfect.wins}–${perfect.losses}.`)

@@ -13,7 +13,7 @@ export interface ProjectedRecord {
 
 function winsFromCurve(score: number) {
   const points = WIN_CURVE.points
-  const boundedScore = clamp(score)
+  const boundedScore = Number.isFinite(score) ? clamp(score) : 0
   for (let index = 1; index < points.length; index += 1) {
     if (boundedScore > points[index].score) continue
     const left = points[index - 1]
@@ -43,6 +43,8 @@ export function calculateProjectedRecord(
     && categoryScores.rosterBalance >= WIN_CURVE.perfect.balanceMinimum
     && weakestPlayer >= WIN_CURVE.perfect.weakestPlayerMinimum
   )
-  const wins = perfectRequirementsMet ? 162 : Math.min(161, winsBeforePerfectCheck)
+  const wins = perfectRequirementsMet && winsBeforePerfectCheck >= WIN_CURVE.perfect.minimumCurveWins
+    ? 162
+    : Math.min(161, winsBeforePerfectCheck)
   return { wins, losses: WIN_CURVE.seasonGames - wins, tierLabel: tierForWins(wins), winsBeforePerfectCheck, perfectRequirementsMet }
 }

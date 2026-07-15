@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { calculateDraftResult } from '../src/game/scoring'
 import { calculateHitterValue, calculateReliefPitcherValue, calculateStartingPitcherValue } from '../src/game/scoring/calculatePlayerValue'
+import { SCORING_VERSION } from '../src/game/scoring/scoringConfig'
 import { Randomizer } from '../src/game/Randomizer'
 import { TeamPool } from '../src/game/TeamPool'
 import { ROSTER_SLOTS, type Player, type Roster, type RosterSlotId } from '../src/types/draft'
@@ -107,7 +108,7 @@ const visibleCategories = ['offense', 'defense', 'startingPitching', 'reliefPitc
 const gradeCounts = new Map<string, number>()
 for (const result of results) for (const category of visibleCategories) gradeCounts.set(result.categoryGrades[category], (gradeCounts.get(result.categoryGrades[category]) ?? 0) + 1)
 
-console.log(`Scoring v2.2 distribution (${results.length.toLocaleString()} completed rosters)`)
+console.log(`Scoring v${SCORING_VERSION} distribution (${results.length.toLocaleString()} completed rosters)`)
 console.log(`Minimum wins: ${wins[0]}`)
 console.log(`Maximum wins: ${wins.at(-1)}`)
 console.log(`Mean wins: ${mean.toFixed(2)}`)
@@ -117,14 +118,16 @@ console.log('Win bands:')
 for (const [label, minimum, maximum] of bands) console.log(`${label}: ${wins.filter((value) => value >= minimum && value <= maximum).length}`)
 console.log('Visible-category grades:')
 for (const grade of ['F', 'D', 'C', 'C+', 'B-', 'B', 'B+', 'A-', 'A', 'A+', 'S']) console.log(`${grade}: ${gradeCounts.get(grade) ?? 0}`)
+console.log(`115+ wins: ${wins.filter((value) => value >= 115).length}`)
 console.log(`130+ wins: ${wins.filter((value) => value >= 130).length}`)
-console.log(`150+ wins: ${wins.filter((value) => value >= 150).length}`)
+console.log(`145+ wins: ${wins.filter((value) => value >= 145).length}`)
+console.log(`156+ wins: ${wins.filter((value) => value >= 156).length}`)
 console.log(`162 wins: ${wins.filter((value) => value === 162).length}`)
 console.log('Five local draft records (5th/25th/50th/75th/95th player-value strategies):')
 for (const [index, result] of localResults.entries()) console.log(`Draft ${index + 1}: ${result.wins}–${result.losses}, overall ${result.overallGrade} (${result.overallScore}), ${result.tierLabel}`)
 console.log(`Best eligible generated-card roster: ${allTimeResult.wins}–${allTimeResult.losses}, overall ${allTimeResult.overallGrade} (${allTimeResult.overallScore}), categories ${JSON.stringify(allTimeResult.categoryScores)}`)
 
-assert(wins.at(-1) === 162, 'distribution must include an attainable perfect roster')
-assert.equal(allTimeResult.wins, 162, 'the best eligible generated-card roster must be capable of perfection')
+assert((wins.at(-1) ?? 0) >= 156, 'distribution must include a near-perfect roster')
+assert(allTimeResult.wins >= 145 && allTimeResult.wins <= 155, 'the best eligible generated-card roster must remain in the all-time-great band below the perfect gate')
 assert(standardDeviation >= 15, 'projected records remain too tightly clustered')
 assert(Math.max(...localResults.map(({ wins: value }) => value)) - Math.min(...localResults.map(({ wins: value }) => value)) >= 15, 'five materially different local drafts should produce meaningfully different records')

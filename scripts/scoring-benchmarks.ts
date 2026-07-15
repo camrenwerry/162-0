@@ -1,5 +1,6 @@
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { calculateDraftResult } from '../src/game/scoring'
+import { SCORING_VERSION } from '../src/game/scoring/scoringConfig'
 import { type Roster, type RosterSlotId } from '../src/types/draft'
 import { fixturePlayer, fixtureRoster, historicalPeakRoster } from './lib/scoring-fixtures'
 
@@ -25,16 +26,16 @@ const benchmarks = [
   ['Weak roster', fixtureRoster('weak', 'weak'), [55, 74]],
   ['Average roster', fixtureRoster('average', 'average'), [85, 94]],
   ['Good roster', good, [95, 104]],
-  ['Great roster', fixtureRoster('good', 'good'), [105, 114]],
-  ['Elite roster', elite, [115, 129]],
-  ['Historical superteam', historicalSuperteam, [130, 155]],
-  ['Near-perfect roster', nearPerfect, [162, 162]],
+  ['Great roster', fixtureRoster('good', 'good'), [115, 129]],
+  ['Elite roster', elite, [130, 144]],
+  ['Historical superteam', historicalSuperteam, [145, 161]],
+  ['All-time generated-card roster', nearPerfect, [145, 155]],
 ] as const
 
 const lines = [
   '# Scoring Benchmark Report',
   '',
-  'Deterministic v2.2 fixtures exercise the v0.11.5 normalization and win curves. Speed remains hidden and contributes only a small internal benefit.',
+  `Deterministic v${SCORING_VERSION} fixtures exercise the v0.11.5 normalization and win curves. Speed remains hidden and contributes only a small internal benefit.`,
   '',
   '| Benchmark | Overall | Projected record | Tier | Offense | Defense | Starting Pitching | Relief Pitching | Roster Balance | Bonuses | Penalties |',
   '| --- | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |',
@@ -51,8 +52,8 @@ for (const [name, roster, [minimum, maximum]] of benchmarks) {
 }
 
 const perfect = calculateDraftResult(fixtureRoster('perfect', 'perfect')).result
-if (perfect.wins !== 162) failures.push(`Perfect roster projected ${perfect.wins} wins instead of 162: ${JSON.stringify(perfect.categoryScores)}`)
-lines.push('', `Perfect qualification fixture: **${perfect.wins}–${perfect.losses}**, overall **${perfect.overallGrade} (${perfect.overallScore})**.`, '')
+if (perfect.wins < 156 || perfect.wins > 161) failures.push(`Perfect-category fixture projected ${perfect.wins} wins outside 156–161: ${JSON.stringify(perfect.categoryScores)}`)
+lines.push('', `Perfect-category fixture below the 160-win gate: **${perfect.wins}–${perfect.losses}**, overall **${perfect.overallGrade} (${perfect.overallScore})**.`, '')
 mkdirSync('docs/audits', { recursive: true })
 writeFileSync('docs/audits/SCORING_BENCHMARKS.md', lines.join('\n'))
 console.log(lines.join('\n'))

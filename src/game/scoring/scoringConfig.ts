@@ -1,9 +1,9 @@
 import type { LetterGrade, Position } from '../../types/draft'
 import type { MetricRange } from './types'
 
-// All v2.2 tuning values live here. Ranges map poor/average/excellent/elite
+// All v2.3 tuning values live here. Ranges map poor/average/excellent/elite
 // featured-season performances onto the common 0–100 scoring scale.
-export const SCORING_VERSION = '2.2' as const
+export const SCORING_VERSION = '2.3' as const
 
 export const NORMALIZATION_SCORE_ANCHORS = {
   poor: 35,
@@ -157,11 +157,12 @@ export const WIN_CURVE = {
     { score: 0, wins: 55 }, { score: 35, wins: 58 }, { score: 45, wins: 65 },
     { score: 55, wins: 74 }, { score: 60, wins: 78 }, { score: 65, wins: 81 },
     { score: 68, wins: 87 }, { score: 72, wins: 93 }, { score: 76, wins: 99 },
-    { score: 80, wins: 105 }, { score: 84, wins: 112 }, { score: 88, wins: 121 },
-    { score: 92, wins: 133 }, { score: 95, wins: 144 }, { score: 97, wins: 153 },
-    { score: 98.5, wins: 158 }, { score: 99.5, wins: 161 }, { score: 100, wins: 162 },
+    { score: 80, wins: 105 }, { score: 84, wins: 118 }, { score: 88, wins: 131 },
+    { score: 92, wins: 143 }, { score: 95, wins: 151 }, { score: 97, wins: 156 },
+    { score: 98.5, wins: 159 }, { score: 99.5, wins: 161 }, { score: 100, wins: 162 },
   ],
   perfect: {
+    minimumCurveWins: 160,
     overallMinimum: 95,
     offenseMinimum: 94.5,
     defenseMinimum: 85,

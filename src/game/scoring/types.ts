@@ -47,7 +47,7 @@ export interface OverallAdjustment {
 }
 
 export interface ScoringDiagnostics {
-  scoringVersion: '2.2'
+  scoringVersion: '2.3'
   playerValues: readonly PlayerValueResult[]
   categoryScores: Record<ScoringCategoryKey, number>
   baseOverallScore: number
