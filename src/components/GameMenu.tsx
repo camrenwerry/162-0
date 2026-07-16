@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { useDialogFocusTrap } from './useDialogFocusTrap'
 import './GameMenu.css'
-import { BETA_LABEL } from '../config/beta'
-import { getFeedbackUrl, type FeedbackContext } from '../utils/betaActions'
+import { VERSION_LABEL } from '../config/app'
+import { getFeedbackUrl, type FeedbackContext } from '../utils/appActions'
 
 export interface GameMenuProps {
   onHome: () => void
@@ -74,7 +74,7 @@ export default function GameMenu({ onHome, onRestart, onGameUpdates, confirmHome
         <>
           <button className="game-menu__dismiss" type="button" aria-label="Close game menu" onClick={() => setIsOpen(false)} />
           <div className="game-menu__popover">
-            <span>Game menu <b>{BETA_LABEL}</b></span>
+            <span>Game menu <b>{VERSION_LABEL}</b></span>
             <button className="game-menu__home" type="button" onClick={chooseHome}>
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m3 9 7-6 7 6v8h-5v-5H8v5H3Z" /></svg>
               Home

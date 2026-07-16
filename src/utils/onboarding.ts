@@ -1,3 +1,4 @@
+// Retained through the 1.0 rebrand so existing players keep their tutorial preference.
 export const TUTORIAL_DISMISSED_KEY = 'diamond-draft:tutorial-dismissed:v1'
 
 export function isTutorialDismissed(storage: Pick<Storage, 'getItem'> = window.localStorage) {
@@ -11,4 +12,3 @@ export function dismissTutorial(storage: Pick<Storage, 'setItem'> = window.local
 export function resetTutorial(storage: Pick<Storage, 'removeItem'> = window.localStorage) {
   try { storage.removeItem(TUTORIAL_DISMISSED_KEY) } catch { /* Storage may be unavailable in privacy mode. */ }
 }
-

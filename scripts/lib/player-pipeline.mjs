@@ -499,7 +499,7 @@ export function formatReport(report) {
   }
   const missing = report.summary.missingStats ?? { war: 0, opsPlus: 0, eraPlus: 0 }
   const lines = [
-    `Diamond Draft data report: ${report.summary.pools} supported pools, ${report.summary.cards} cards`,
+    `Pennant Pursuit data report: ${report.summary.pools} supported pools, ${report.summary.cards} cards`,
     `Playable pools: ${report.summary.playablePools ?? report.summary.pools} · Verified cards: ${report.summary.verifiedCards ?? '—'} · Unverified cards: ${report.summary.unverifiedCards ?? '—'}`,
     `Blocking errors: ${report.errors.length} · Warnings: ${report.warnings.length}`,
     `Missing WAR: ${missing.war} cards · Missing OPS+: ${missing.opsPlus} cards · Missing ERA+: ${missing.eraPlus} cards`,

@@ -6,25 +6,27 @@
 .game-updates__header button:hover { border-color: #d0a63e; color: #fff; transform: translateY(-1px); }
 .game-updates__header button:active { transform: scale(0.97); }
 .game-updates__header button svg { width: 1rem; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
-.game-updates__header .diamond-draft-logo { justify-self: center; transform: scale(0.72); }
+.game-updates__header .pennant-pursuit-logo { width: 6.5rem; justify-self: center; }
 .game-updates__header > p { justify-self: end; color: #d7ae47; font-family: var(--font-display); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.12em; text-align: right; text-transform: uppercase; }
 .game-updates__releases { display: grid; margin-top: clamp(2.25rem, 8vh, 4.5rem); gap: 1rem; }
 .game-updates__release { padding: clamp(1.25rem, 5vw, 2rem); border: 1px solid #354251; border-radius: 1rem; background: linear-gradient(145deg, rgb(21 31 42 / 96%), rgb(7 13 20 / 98%)); box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 38%); }
 .game-updates__release h1 { color: #f5c542; font-family: var(--font-display); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
 .game-updates__release h2 { margin: 0.35rem 0 0; font-family: 'Bebas Neue', var(--font-display); font-size: clamp(2.1rem, 10vw, 3.5rem); letter-spacing: 0.035em; line-height: 1; text-transform: uppercase; }
+.game-updates__release > p { margin-top: 0.85rem; color: #d5dbe2; font-size: 0.8rem; line-height: 1.55; }
+.game-updates__release > ul + p { color: #d9bd67; }
 .game-updates__release ul { display: grid; margin: 1.45rem 0 0; padding: 0; gap: 0.8rem; list-style: none; }
 .game-updates__release li { position: relative; min-height: 1.35rem; padding-left: 1.35rem; color: #bbc4ce; font-size: 0.8rem; line-height: 1.55; }
 .game-updates__release li::before { position: absolute; top: 0.5rem; left: 0.05rem; width: 0.45rem; height: 0.45rem; border: 1px solid #f5c542; border-radius: 50%; background: rgb(245 197 66 / 16%); content: ''; box-shadow: 0 0 0.75rem rgb(245 197 66 / 18%); }
 
 @media (min-width: 720px) {
   .game-updates__shell { padding-block: calc(1.5rem + env(safe-area-inset-top)) calc(4rem + env(safe-area-inset-bottom)); }
-  .game-updates__header .diamond-draft-logo { transform: scale(0.82); }
+  .game-updates__header .pennant-pursuit-logo { width: 7.25rem; }
   .game-updates__release li { font-size: 0.9rem; }
 }
 
 @media (max-width: 390px) {
   .game-updates__header { grid-template-columns: 1fr auto; }
-  .game-updates__header .diamond-draft-logo { justify-self: end; }
+  .game-updates__header .pennant-pursuit-logo { justify-self: end; }
   .game-updates__header > p { grid-column: 1 / -1; justify-self: center; }
 }
 

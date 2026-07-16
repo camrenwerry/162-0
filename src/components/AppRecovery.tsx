@@ -1,6 +1,7 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react'
-import { BETA_LABEL } from '../config/beta'
-import './BetaRecovery.css'
+import { VERSION_LABEL } from '../config/app'
+import PennantPursuitLogo from './PennantPursuitLogo'
+import './AppRecovery.css'
 
 interface RecoveryProps {
   title?: string
@@ -11,7 +12,7 @@ interface RecoveryProps {
   homeLabel?: string
 }
 
-export function BetaRecovery({
+export function AppRecovery({
   title = 'Something went off the rails',
   message = 'Your game could not continue. Try again, or return home and start a fresh draft.',
   onHome = () => window.location.assign('/'),
@@ -20,9 +21,10 @@ export function BetaRecovery({
   homeLabel = 'Return Home',
 }: RecoveryProps) {
   return (
-    <main className="beta-recovery">
+    <main className="app-recovery">
       <section role="alert">
-        <span>{BETA_LABEL}</span>
+        <PennantPursuitLogo compact />
+        <span>{VERSION_LABEL}</span>
         <h1>{title}</h1>
         <p>{message}</p>
         <div><button type="button" onClick={onRetry}>{retryLabel}</button><button type="button" onClick={onHome}>{homeLabel}</button></div>
@@ -34,15 +36,15 @@ export function BetaRecovery({
 interface BoundaryProps { children: ReactNode; onHome?: () => void }
 interface BoundaryState { failed: boolean }
 
-export class BetaErrorBoundary extends Component<BoundaryProps, BoundaryState> {
+export class AppErrorBoundary extends Component<BoundaryProps, BoundaryState> {
   state: BoundaryState = { failed: false }
   static getDerivedStateFromError(): BoundaryState { return { failed: true } }
   componentDidCatch(error: Error, info: ErrorInfo) {
-    if (import.meta.env.DEV) console.error('Diamond Draft recovery boundary', error, info)
+    if (import.meta.env.DEV) console.error('Pennant Pursuit recovery boundary', error, info)
   }
   render() {
     return this.state.failed
-      ? <BetaRecovery title="Something went wrong" message="Your draft could not continue." retryLabel="Restart Game" homeLabel="Return Home" onRetry={() => window.location.assign('/draft')} onHome={this.props.onHome} />
+      ? <AppRecovery title="Something went wrong" message="Your draft could not continue." retryLabel="Restart Game" homeLabel="Return Home" onRetry={() => window.location.assign('/draft')} onHome={this.props.onHome} />
       : this.props.children
   }
 }

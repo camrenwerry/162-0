@@ -14,8 +14,8 @@
 .season-simulation__skip:hover:not(:disabled) { border-color: #d6ad45; color: #fff; transform: translateY(-1px); }
 .season-simulation__skip:active:not(:disabled) { transform: scale(0.95); }
 .season-simulation__skip:disabled { opacity: 0; pointer-events: none; }
-.season-simulation__shell { position: relative; z-index: 10; display: grid; width: min(100%, 38rem); min-height: min(34rem, calc(100dvh - 5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))); padding: clamp(1.25rem, 5vw, 2.5rem); grid-template-rows: 3.2rem minmax(19rem, 1fr) 3.8rem; place-items: center; border: 1px solid rgb(141 161 176 / 18%); border-radius: 1.25rem; background: linear-gradient(145deg, rgb(12 23 33 / 72%), rgb(4 9 14 / 60%)); box-shadow: 0 2rem 7rem rgb(0 0 0 / 45%), inset 0 1px rgb(255 255 255 / 4%); text-align: center; }
-.season-simulation__logo { align-self: start; width: clamp(7rem, 27vw, 9rem); opacity: 0.72; }
+.season-simulation__shell { position: relative; z-index: 10; display: grid; width: min(100%, 38rem); min-height: min(34rem, calc(100dvh - 5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))); padding: clamp(1.25rem, 5vw, 2.5rem); grid-template-rows: 4.8rem minmax(17.4rem, 1fr) 3.8rem; place-items: center; border: 1px solid rgb(141 161 176 / 18%); border-radius: 1.25rem; background: linear-gradient(145deg, rgb(12 23 33 / 72%), rgb(4 9 14 / 60%)); box-shadow: 0 2rem 7rem rgb(0 0 0 / 45%), inset 0 1px rgb(255 255 255 / 4%); text-align: center; }
+.season-simulation__logo { align-self: start; width: clamp(7rem, 27vw, 8rem); opacity: 0.72; }
 .season-simulation__moment { position: relative; display: grid; width: 100%; height: 19rem; place-items: center; }
 .season-simulation__phase-region, .season-simulation__reveal { position: absolute; display: grid; inset: 0; place-items: center; }
 .season-simulation__phase-region { transition: opacity 280ms ease, transform 280ms ease; }
@@ -52,7 +52,7 @@
 @keyframes simulation-particle { to { opacity: 0.25; transform: translateY(-0.65rem); } }
 
 @media (max-height: 700px) {
-  .season-simulation__shell { min-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom)); padding-block: 0.9rem; grid-template-rows: 2.5rem minmax(16rem, 1fr) 3.6rem; }
+  .season-simulation__shell { min-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom)); padding-block: 0.9rem; grid-template-rows: 3.6rem minmax(14.9rem, 1fr) 3.6rem; }
   .season-simulation__logo { width: 6.5rem; }
   .season-simulation__moment { height: 16rem; }
   .season-simulation__phase-region h1 { font-size: clamp(2.2rem, 10vw, 3.4rem); }

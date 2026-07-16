@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useState, type ReactNode } from 'react'
 import HomeScreen from './components/home/HomeScreen'
+import PennantPursuitLogo from './components/PennantPursuitLogo'
 
 const ClassicMode = lazy(() => import('./components/draft/ClassicMode'))
 const GameUpdatesScreen = lazy(() => import('./components/updates/GameUpdatesScreen'))
@@ -10,7 +11,7 @@ function RouteLoading({ label }: { label: string }) {
   return (
     <main className="route-loading" aria-label={label} aria-busy="true" aria-live="polite">
       <div>
-        <span aria-hidden="true" />
+        <PennantPursuitLogo className="route-loading__logo" compact priority />
         <p>{label}</p>
       </div>
     </main>

@@ -13,7 +13,8 @@
 .dd-home__field::after { right: 12%; }
 .dd-home__plate { position: absolute; bottom: 3.5%; left: 50%; width: 3.5rem; height: 3rem; background: rgb(238 235 220 / 18%); clip-path: polygon(12% 0, 88% 0, 100% 55%, 50% 100%, 0 55%); transform: translateX(-50%) perspective(8rem) rotateX(52deg); }
 .dd-home__content { position: relative; z-index: 2; display: flex; width: min(calc(100% - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right)), 28rem); min-height: 100svh; margin-inline: auto; padding-block: calc(max(4.5rem, 10vh) + env(safe-area-inset-top)) calc(max(4rem, 8vh) + env(safe-area-inset-bottom)); align-items: center; justify-content: center; flex-direction: column; text-align: center; }
-.dd-home__brand { position: relative; }
+.dd-home__brand { position: relative; display: grid; width: min(calc(100% + 1.5rem), 22.4rem); aspect-ratio: 704 / 560; place-items: center; }
+.dd-home__brand .pennant-pursuit-logo { width: 100%; }
 .dd-home__brand > span { position: absolute; right: .15rem; bottom: -.8rem; color: #d9af48; font-family: var(--font-display); font-size: .55rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .dd-home__content > p { margin-top: 1.9rem; color: #c1c7ce; font-family: 'Bebas Neue', var(--font-display); font-size: clamp(0.82rem, 3.5vw, 1rem); letter-spacing: 0.16em; line-height: 1.55; text-transform: uppercase; text-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 70%); }
 .dd-home__actions { width: 100%; margin-top: clamp(2.8rem, 7vh, 4rem); }
@@ -44,7 +45,7 @@
 @media (min-width: 720px) { .dd-home__content { padding-block: calc(5rem + env(safe-area-inset-top)) calc(5rem + env(safe-area-inset-bottom)); } }
 @media (max-height: 620px) {
   .dd-home__content { min-height: auto; padding-block: calc(2.25rem + env(safe-area-inset-top)) calc(2.25rem + env(safe-area-inset-bottom)); }
-  .dd-home .diamond-draft-logo { transform: scale(0.86); }
+  .dd-home__brand { width: min(calc(100% + 1.5rem), 19.25rem); }
   .dd-home__content > p { margin-top: 0.85rem; }
   .dd-home__actions { margin-top: 1.5rem; }
 }

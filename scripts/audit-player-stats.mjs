@@ -39,7 +39,7 @@ const report = {
 }
 
 writeFileSync(join(process.cwd(), 'data-import/stat-completeness-report.json'), `${JSON.stringify(report, null, 2)}\n`)
-console.log(`Diamond Draft visible-stat audit: ${report.summary.cards} cards`)
+console.log(`Pennant Pursuit visible-stat audit: ${report.summary.cards} cards`)
 console.log(`Verified: ${report.summary.verified} · Incomplete: ${report.summary.incomplete} · Incomplete verified: ${report.summary.incompleteVerified}`)
 for (const card of audit.filter(({ missingRequiredVisibleStats }) => missingRequiredVisibleStats.length)) {
   console.log(`${card.cardId} | ${card.playerName} | ${card.team} | ${card.decade} | ${card.featuredSeason} | ${card.missingRequiredVisibleStats.join(', ')} | verified=${card.verified}`)

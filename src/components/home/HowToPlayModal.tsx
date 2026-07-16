@@ -11,7 +11,7 @@ const STEPS = [
   ['Make a pick', 'Choose one player and assign them to a valid open position. Grey cards cannot fit your remaining roster.'],
   ['Build 14', 'Fill C, the infield, three outfield spots, DH, three SP slots, and two RP slots.'],
   ['Use rerolls wisely', 'You receive one Team reroll and one Era reroll for the entire game—not once per round.'],
-  ['Project the season', 'After pick 14, Diamond Draft grades your roster and projects a 162-game record.'],
+  ['Project the season', 'After pick 14, Pennant Pursuit grades your roster and projects a 162-game record.'],
 ]
 
 export default function HowToPlayModal({ onClose, onReplayTutorial }: HowToPlayModalProps) {

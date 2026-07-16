@@ -1,18 +1,18 @@
-# Diamond Draft
+# Pennant Pursuit
 
-Diamond Draft is a mobile-first historical baseball roster-building game. Classic Mode presents one franchise/decade pool in each of 14 rounds. A complete roster contains C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP, and two RP slots, followed by a deterministic 162-game projection.
+Pennant Pursuit is a mobile-first historical baseball roster-building game. Classic Mode presents one franchise/decade pool in each of 14 rounds. A complete roster contains C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP, and two RP slots, followed by a deterministic 162-game projection.
 
-Version 0.12.0 is a public beta of the static React + TypeScript + Vite application. It has no accounts, gameplay API, or database server. Local storage is used only to remember whether first-game tips were dismissed.
+Version 1.0.0 is the permanent Pennant Pursuit release of the static React + TypeScript + Vite application. It has no accounts, gameplay API, or database server. Local storage is used only to remember whether first-game tips were dismissed; the pre-1.0 storage key remains unchanged so existing preferences survive the rebrand.
 
-## Public beta configuration
+## Production configuration
 
-Copy `.env.example` to `.env.local` to configure optional beta feedback:
+Copy `.env.example` to `.env.local` to configure optional release feedback:
 
 ```bash
-VITE_FEEDBACK_URL=https://example.com/diamond-draft-feedback
+VITE_FEEDBACK_URL=https://example.com/pennant-pursuit-feedback
 ```
 
-When configured, feedback links appear in the gameplay menu and Results screen. Diamond Draft appends safe context parameters (`appVersion`, `currentScreen`, and, when available, `round`, `team`, `decade`, and `projectedRecord`). This works with a Google Form or any external form that accepts query parameters. When the variable is absent or invalid, the links are hidden.
+When configured, feedback links appear in the gameplay menu and Results screen. Pennant Pursuit appends safe context parameters (`appVersion`, `currentScreen`, and, when available, `round`, `team`, `decade`, and `projectedRecord`). This works with a Google Form or any external form that accepts query parameters. When the variable is absent or invalid, the links are hidden.
 
 First-game tips are dismissible and can be re-enabled from **How to Play** on the Home screen. Home, Restart, Play Again, and a new game from Home all construct a fresh draft engine, clearing the roster, used combinations, and reroll usage.
 
@@ -20,15 +20,15 @@ Results can be shared with the device’s native share sheet. The summary includ
 
 ## Installable PWA
 
-Diamond Draft is installable from supporting desktop and mobile browsers. It launches at the Home screen in portrait-oriented standalone mode and uses an auto-updating Workbox service worker. The lightweight Home application shell is available during a temporary network outage. The large historical draft-data chunk is intentionally excluded from precaching, and drafts and game history are not persisted offline.
+Pennant Pursuit is installable from supporting desktop and mobile browsers. It launches at the Home screen in portrait-oriented standalone mode and uses an auto-updating Workbox service worker. The lightweight Home application shell is available during a temporary network outage. The large historical draft-data chunk and non-runtime branding sources are intentionally excluded from precaching, and drafts and game history are not persisted offline.
 
 On iOS, open the deployed site in Safari and choose **Share → Add to Home Screen**. On supported Chromium browsers, use the browser’s install action. Safe-area metadata and the dark `#0D1117` theme are shared by the browser and standalone experience.
 
-The icon source is [`public/app-icon.svg`](public/app-icon.svg), a square recomposition of the existing Diamond Draft crest. Generated assets include 192×192 and 512×512 standard icons, a padded dark-background 512×512 maskable icon, a 180×180 Apple touch icon, and a browser favicon. To revise them:
+The approved 1024×1024 master is [`public/branding/pennant-pursuit-master.png`](public/branding/pennant-pursuit-master.png). Deterministic crops and composites create the transparent, dark, light, compact, square, social-preview, favicon, and high-resolution icon sources without redrawing or upscaling the logo. Generated platform assets include 64×64, 192×192, and 512×512 PWA icons, a padded 512×512 maskable icon, a 180×180 Apple touch icon, and a browser favicon. To rebuild them:
 
-1. Edit `public/app-icon.svg`, keeping the core mark in the central safe area.
-2. Adjust padding or background in `pwa-assets.config.ts` if necessary.
-3. Run `npm run pwa:icons`.
+1. Keep the approved master unchanged.
+2. Adjust only deterministic crops or backgrounds in `scripts/build-brand-assets.mjs` if a platform requirement changes.
+3. Run `npm run brand:assets`.
 4. Inspect the standard, maskable, and Apple outputs before committing them.
 
 ### Beta testing
@@ -171,7 +171,7 @@ npm run test:engine
 npm run test:scoring
 npm run test:responsive
 npm run test:presentation
-npm run test:beta
+npm run test:release
 npm run lint
 npm run build
 ```
@@ -181,7 +181,7 @@ Tests cover CSV parsing, same-franchise stint aggregation, featured-season selec
 ## Historical limitations
 
 - Some early franchise/decade combinations cannot support the game’s fixed modern roster, especially two RP slots or split LF/CF/RF. They remain documented in `data-report.json` and are not rolled.
-- Lahman does not provide WAR, OPS+, ERA+, wRC+, or detailed modern fielding value for all history. Diamond Draft uses source-supported stats and its own transparent context metrics instead of fabricating enrichment.
+- Lahman does not provide WAR, OPS+, ERA+, wRC+, or detailed modern fielding value for all history. Pennant Pursuit uses source-supported stats and its own transparent context metrics instead of fabricating enrichment.
 - Relief appearances are derived as `G - GS`; Lahman does not provide a separate relief-appearance column.
 - Exact source completeness varies by league and era. Unsupported optional RBI, SB, or SV values stay null and sort after real values.
 - The projection is a deterministic game model, not a plate-appearance simulator or a claim of real-world predictive accuracy.

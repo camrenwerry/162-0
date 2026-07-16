@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import DiamondDraftLogo from '../DiamondDraftLogo'
+import PennantPursuitLogo from '../PennantPursuitLogo'
 import GameMenu from '../GameMenu'
 import { ROSTER_SLOTS, type DraftResult, type Roster, type ScoringCategoryKey } from '../../types/draft'
-import { buildCompleteShareText, getFeedbackUrl, shareResult } from '../../utils/betaActions'
+import { buildCompleteShareText, getFeedbackUrl, shareResult } from '../../utils/appActions'
 import ShareFallbackDialog from './ShareFallbackDialog'
 
 interface ResultsScreenProps {
@@ -71,7 +71,7 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome, onG
             </div>
           </div>
         </section>
-        <DiamondDraftLogo className="results-logo" compact />
+        <PennantPursuitLogo className="results-logo" compact />
         <section className="results-grades" aria-label="Team category grades">
           {grades.map(([label, key]) => (
             <div key={label}>
@@ -87,7 +87,7 @@ export default function ResultsScreen({ roster, result, onPlayAgain, onHome, onG
         </section>
         <div className="results-actions">
           <button className="results-play-again" type="button" onClick={onPlayAgain}>Play Again</button>
-          <button type="button" aria-label="Share Diamond Draft result" aria-busy={isSharing} disabled={isSharing} onClick={handleShare}>
+          <button type="button" aria-label="Share Pennant Pursuit result" aria-busy={isSharing} disabled={isSharing} onClick={handleShare}>
             {isSharing ? 'Sharing…' : 'Share Result'}
           </button>
           <button type="button" onClick={onHome}>Home</button>

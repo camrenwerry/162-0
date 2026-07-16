@@ -185,7 +185,7 @@
 .results-shell { position: relative; width: min(calc(100% - 1.25rem - env(safe-area-inset-left) - env(safe-area-inset-right)), 42rem); margin-inline: auto; padding-block: calc(0.8rem + env(safe-area-inset-top)) calc(3rem + env(safe-area-inset-bottom)); text-align: center; animation: fade-in 300ms ease-out; }
 .game-menu.results-game-menu { position: absolute; top: calc(0.8rem + env(safe-area-inset-top)); right: 0; }
 .results-home { display: block; min-height: 2.75rem; padding: 0 0.9rem; border: 1px solid #3a4857; border-radius: 0.4rem; background: rgb(7 13 20 / 72%); color: #b6c0ca; cursor: pointer; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 0.07em; text-transform: uppercase; }
-.diamond-draft-logo.results-logo { width: 7.2rem; min-height: 3.65rem; margin: 0.65rem auto 0; opacity: 0.58; }
+.pennant-pursuit-logo.results-logo { width: 6.5rem; margin: 0.65rem auto 0; opacity: 0.58; }
 .projected-record { position: relative; isolation: isolate; margin-top: 4.15rem; padding: 1.35rem 1rem 1rem; overflow: hidden; border: 1px solid #9b762b; border-radius: 1rem; background: radial-gradient(circle at 50% -12%, rgb(255 222 124 / 20%), transparent 48%), linear-gradient(145deg, rgb(85 58 10 / 38%), rgb(7 13 20 / 96%) 64%); box-shadow: 0 1.4rem 3.4rem rgb(0 0 0 / 43%), 0 0 2.8rem rgb(245 197 66 / 8%), inset 0 1px rgb(255 237 173 / 14%); }
 .projected-record::after { position: absolute; z-index: 0; inset: 0.32rem; border: 1px solid rgb(255 221 126 / 12%); border-radius: 0.76rem; content: ''; pointer-events: none; }
 .results-kicker { position: relative; z-index: 1; display: block; color: #79dba5; font-family: var(--font-display); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }

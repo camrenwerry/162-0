@@ -1,4 +1,6 @@
-# Diamond Draft Beta Feedback
+# Pennant Pursuit Release Feedback
+
+This checklist began during the pre-1.0 Diamond Draft beta and is retained as historical engineering documentation.
 
 Running checklist for v0.11.5 and later beta work. Historical audits are report-only: they never add cards, replace featured seasons, or overwrite manual position overrides.
 

@@ -3,7 +3,7 @@ import { DraftEngine } from '../src/game/DraftEngine'
 import { getAvailablePositions, partitionPlayersByAvailability, resolveAssignmentSlot } from '../src/game/Eligibility'
 import { getCompactPlayerStats } from '../src/game/PlayerStats'
 import { Randomizer } from '../src/game/Randomizer'
-import { DiamondDraftScoring } from '../src/game/ScoringEngine'
+import { PennantPursuitScoring } from '../src/game/ScoringEngine'
 import { calculateHitterValue, calculateStartingPitcherValue } from '../src/game/scoring'
 import { TeamPool } from '../src/game/TeamPool'
 import { getSimulationDuration, getSimulationPhase, getSimulationReveal, SIMULATION_PHASES } from '../src/components/results/simulationSequence'
@@ -179,7 +179,7 @@ for (let index = 1; index < opsSorted.length; index += 1) assert((opsValue(opsSo
 let randomIndex = 0
 const randomizer = new Randomizer(pool, () => ((randomIndex++ * 17) % 97) / 97)
 let scoringCalls = 0
-const deterministicScoring = new DiamondDraftScoring()
+const deterministicScoring = new PennantPursuitScoring()
 const engine = new DraftEngine({
   pool,
   randomizer,

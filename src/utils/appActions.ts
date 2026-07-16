@@ -1,4 +1,4 @@
-import { APP_VERSION } from '../config/beta'
+import { APP_VERSION } from '../config/app'
 import type { DraftResult } from '../types/draft'
 
 export interface FeedbackContext {
@@ -31,7 +31,7 @@ export function buildShareText(result: DraftResult) {
   const strongestCategory = result.strongestCategory
     .replace(/([a-z])([A-Z])/g, '$1 $2')
     .replace(/^./, (letter) => letter.toUpperCase())
-  return `Diamond Draft\nProjected Record: ${result.wins}–${result.losses}\nOverall Grade: ${result.overallGrade}\nTier: ${result.tierLabel}\nStrongest Category: ${strongestCategory}\n\nCan you build a better team?`
+  return `Pennant Pursuit\nProjected Record: ${result.wins}–${result.losses}\nOverall Grade: ${result.overallGrade}\nTier: ${result.tierLabel}\nStrongest Category: ${strongestCategory}\n\nBuild the greatest roster in baseball history.`
 }
 
 export function buildCompleteShareText(result: DraftResult, publicUrl = window.location.origin) {
@@ -49,7 +49,7 @@ export async function shareResult(result: DraftResult, dependencies: ShareDepend
   const share = dependencies.share ?? navigator.share?.bind(navigator)
   const publicUrl = dependencies.publicUrl ?? window.location.origin
   if (share) {
-    await share({ title: 'Diamond Draft', text, url: publicUrl })
+    await share({ title: 'Pennant Pursuit', text, url: publicUrl })
     return 'shared'
   }
   const writeText = dependencies.writeText ?? navigator.clipboard?.writeText.bind(navigator.clipboard)

@@ -35,7 +35,7 @@ export default function ShareFallbackDialog({ text, onClose }: ShareFallbackDial
         <span>Share Result</span>
         <h2 id="share-fallback-title">Copy your result</h2>
         <p>Automatic clipboard access is unavailable. Copy the selectable summary below.</p>
-        <textarea ref={textRef} readOnly value={text} aria-label="Diamond Draft result summary" />
+        <textarea ref={textRef} readOnly value={text} aria-label="Pennant Pursuit result summary" />
         <div><button type="button" onClick={onClose}>Close</button><button type="button" onClick={copy}>Copy</button></div>
         <small role="status" aria-live="polite">{status}</small>
       </section>

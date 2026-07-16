@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react'
 import type { DraftResult } from '../../types/draft'
-import DiamondDraftLogo from '../DiamondDraftLogo'
+import PennantPursuitLogo from '../PennantPursuitLogo'
 import GameMenu from '../GameMenu'
 import { getSimulationDuration, getSimulationPhase, getSimulationReveal, SIMULATION_PHASES } from './simulationSequence'
 import './SeasonSimulation.css'
@@ -84,7 +84,7 @@ export default function SeasonSimulation({ result, onContinue, onRestart, onHome
       <GameMenu className="season-simulation__menu" onHome={onHome} onRestart={onRestart} onGameUpdates={onGameUpdates} />
       <button className="season-simulation__skip" type="button" disabled={isRevealed} onClick={skip}>Skip</button>
       <section className="season-simulation__shell" aria-live="polite">
-        <DiamondDraftLogo className="season-simulation__logo" compact />
+        <PennantPursuitLogo className="season-simulation__logo" compact />
         <div className="season-simulation__moment">
           <div className="season-simulation__phase-region" aria-hidden={isRevealed}>
             {SIMULATION_PHASES.map((phase, index) => (

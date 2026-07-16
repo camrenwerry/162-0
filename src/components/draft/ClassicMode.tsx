@@ -13,7 +13,7 @@ import TeamDecadeReveal from './TeamDecadeReveal'
 import SeasonSimulation from '../results/SeasonSimulation'
 import FirstGameHints from './FirstGameHints'
 import { checkProductionData } from '../../game/DataReadiness'
-import { BetaErrorBoundary, BetaRecovery } from '../BetaRecovery'
+import { AppErrorBoundary, AppRecovery } from '../AppRecovery'
 import './ClassicMode.css'
 
 const FILTERS: PositionFilter[] = ['ALL', 'C', '1B', '2B', '3B', 'SS', 'OF', 'DH', 'SP', 'RP']
@@ -26,10 +26,10 @@ interface ClassicModeProps {
 export default function ClassicMode({ onHome, onGameUpdates }: ClassicModeProps) {
   const [readiness] = useState(() => checkProductionData())
   if (!readiness.ready) {
-    if (import.meta.env.DEV) console.error('Diamond Draft data readiness failed:', readiness.issues)
-    return <BetaRecovery title="Player data unavailable" message="Diamond Draft could not verify its historical player pools. Reload the game, or return home and try again shortly." onHome={onHome} />
+    if (import.meta.env.DEV) console.error('Pennant Pursuit data readiness failed:', readiness.issues)
+    return <AppRecovery title="Player data unavailable" message="Pennant Pursuit could not verify its historical player pools. Reload the game, or return home and try again shortly." onHome={onHome} />
   }
-  return <BetaErrorBoundary onHome={onHome}><ClassicDraft onHome={onHome} onGameUpdates={onGameUpdates} /></BetaErrorBoundary>
+  return <AppErrorBoundary onHome={onHome}><ClassicDraft onHome={onHome} onGameUpdates={onGameUpdates} /></AppErrorBoundary>
 }
 
 function ClassicDraft({ onHome, onGameUpdates }: ClassicModeProps) {
@@ -54,7 +54,7 @@ function ClassicDraft({ onHome, onGameUpdates }: ClassicModeProps) {
   }
 
   if (draft.complete) {
-    return <BetaRecovery title="Result unavailable" message="Your roster was completed, but the projected result could not be created. Start a new draft or return home." onHome={onHome} onRetry={restartGame} />
+    return <AppRecovery title="Result unavailable" message="Your roster was completed, but the projected result could not be created. Start a new draft or return home." onHome={onHome} onRetry={restartGame} />
   }
 
   return (

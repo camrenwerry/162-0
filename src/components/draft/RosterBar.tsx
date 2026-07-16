@@ -39,7 +39,7 @@ export default function RosterBar({ roster, recentlyFilledPosition }: RosterBarP
           <li><i>1</i><span>Receive a random team and decade.</span></li>
           <li><i>2</i><span>Draft one eligible player.</span></li>
           <li><i>3</i><span>Fill every open roster position.</span></li>
-          <li><i>4</i><span>Complete your Diamond Draft.</span></li>
+          <li><i>4</i><span>Complete your Pennant Pursuit roster.</span></li>
         </ol>
       </div>
     </aside>

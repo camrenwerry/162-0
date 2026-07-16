@@ -7,13 +7,13 @@ export interface Scoring {
 
 const diagnosticsEnabled = import.meta.env.DEV && import.meta.env.VITE_SCORING_DIAGNOSTICS === 'true'
 
-export class DiamondDraftScoring implements Scoring {
+export class PennantPursuitScoring implements Scoring {
   private lastDiagnostics: ScoringDiagnostics | null = null
 
   calculate(roster: Roster) {
     const calculation = calculateDraftResult(roster)
     this.lastDiagnostics = calculation.diagnostics
-    if (diagnosticsEnabled) console.debug('[Diamond Draft scoring v2.3]', calculation.diagnostics)
+    if (diagnosticsEnabled) console.debug('[Pennant Pursuit scoring v2.3]', calculation.diagnostics)
     return calculation.result
   }
 

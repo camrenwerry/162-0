@@ -2,10 +2,10 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { checkProductionData } from '../src/game/DataReadiness'
 import { TeamPool } from '../src/game/TeamPool'
-import { buildFeedbackUrl, buildShareText, shareResult } from '../src/utils/betaActions'
-import { APP_VERSION } from '../src/config/beta'
+import { buildFeedbackUrl, buildShareText, shareResult } from '../src/utils/appActions'
+import { APP_VERSION } from '../src/config/app'
 import { GAME_UPDATES } from '../src/config/gameUpdates'
-import { dismissTutorial, isTutorialDismissed, resetTutorial } from '../src/utils/onboarding'
+import { dismissTutorial, isTutorialDismissed, resetTutorial, TUTORIAL_DISMISSED_KEY } from '../src/utils/onboarding'
 import type { DraftResult } from '../src/types/draft'
 
 const readiness = checkProductionData(new TeamPool())
@@ -23,11 +23,14 @@ assert.equal(buildFeedbackUrl('not a url', { screen: 'home' }), null)
 
 const result = { wins: 101, losses: 61, overallGrade: 'A', tierLabel: 'Contender', strongestCategory: 'startingPitching' } as DraftResult
 assert.match(buildShareText(result), /101–61/)
-assert.match(buildShareText(result), /Diamond Draft/)
+assert.match(buildShareText(result), /Pennant Pursuit/)
+assert.match(buildShareText(result), /Build the greatest roster in baseball history\./)
 assert.match(buildShareText(result), /Tier: Contender/)
 assert.match(buildShareText(result), /Strongest Category: Starting Pitching/)
 let sharedText = ''
-assert.equal(await shareResult(result, { share: async (data) => { sharedText = data.text ?? '' }, publicUrl: 'https://play.example' }), 'shared')
+let sharedTitle = ''
+assert.equal(await shareResult(result, { share: async (data) => { sharedTitle = data.title ?? ''; sharedText = data.text ?? '' }, publicUrl: 'https://play.example' }), 'shared')
+assert.equal(sharedTitle, 'Pennant Pursuit')
 assert.match(sharedText, /101–61/)
 let copiedText = ''
 assert.equal(await shareResult(result, { writeText: async (text) => { copiedText = text }, publicUrl: 'https://play.example' }), 'copied')
@@ -41,6 +44,7 @@ const storage = {
   removeItem: (key: string) => { memory.delete(key) },
 }
 assert.equal(isTutorialDismissed(storage), false)
+assert.equal(TUTORIAL_DISMISSED_KEY, 'diamond-draft:tutorial-dismissed:v1', 'the pre-1.0 tutorial preference key must remain compatible')
 dismissTutorial(storage)
 assert.equal(isTutorialDismissed(storage), true)
 resetTutorial(storage)
@@ -48,17 +52,19 @@ assert.equal(isTutorialDismissed(storage), false)
 
 const read = (path: string) => readFileSync(path, 'utf8')
 const expectedUpdateHighlights = [
-  'Expanded every historical player pool with more stars and depth.',
-  'Added proper DH and two-way player support including Shohei Ohtani.',
-  'Improved historical position eligibility using featured-season appearances.',
-  'Improved projected records for elite teams.',
-  '162–0 is now possible, but remains extremely rare.',
-  'Improved historical featured-season accuracy.',
+  'New permanent name and brand identity.',
+  'Completely rebuilt logos, icons, and visual branding.',
+  'Updated app icon, loading artwork, browser icon, and in-app logos.',
+  'The same historical drafting experience.',
+  'The same pursuit of building the greatest roster in baseball history.',
 ]
-assert.equal(APP_VERSION, '0.12.0')
+assert.equal(APP_VERSION, '1.0.0')
 assert.equal(GAME_UPDATES[0]?.version, APP_VERSION)
-assert.equal(GAME_UPDATES[0]?.heading, "What's New")
+assert.equal(GAME_UPDATES[0]?.label, 'Pennant Pursuit 1.0.0')
+assert.equal(GAME_UPDATES[0]?.heading, 'A New Era Begins')
+assert.equal(GAME_UPDATES[0]?.intro, 'Pennant Pursuit has officially arrived.')
 assert.deepEqual(GAME_UPDATES[0]?.highlights, expectedUpdateHighlights)
+assert.equal(GAME_UPDATES[0]?.note, 'Thank you for helping shape the future of Pennant Pursuit.')
 const numericVersions = GAME_UPDATES.map(({ version }) => version.split('.').reduce((total, part) => total * 1000 + Number(part), 0))
 assert.deepEqual(numericVersions, [...numericVersions].sort((left, right) => right - left), 'game updates must remain newest-first')
 
@@ -67,7 +73,7 @@ const header = read('src/components/draft/DraftHeader.tsx')
 const home = read('src/components/home/HomeScreen.tsx')
 const menu = read('src/components/GameMenu.tsx')
 const updatesScreen = read('src/components/updates/GameUpdatesScreen.tsx')
-const recovery = read('src/components/BetaRecovery.tsx')
+const recovery = read('src/components/AppRecovery.tsx')
 const resultsScreen = read('src/components/draft/ResultsScreen.tsx')
 assert.match(header, /1 per game/i)
 assert.match(header, /Changes only the franchise/)
@@ -76,13 +82,14 @@ assert.match(home, /resetTutorial/)
 assert.match(app, /['"]\/updates['"]/, 'Game Updates must have an in-app route')
 assert.match(home, />Game Updates</, 'Game Updates must be discoverable from Home')
 assert.match(menu, />\s*Game Updates\s*</, 'Game Updates must be discoverable from the game menu')
-assert.match(updatesScreen, /<h1>Version \{update\.version\}<\/h1>/)
+assert.match(updatesScreen, /update\.label \?\? `Version \$\{update\.version\}`/)
 assert.match(updatesScreen, /<h2>\{update\.heading\}<\/h2>/)
 assert.match(recovery, /componentDidCatch/)
+assert.match(recovery, /<PennantPursuitLogo compact \/>/)
 assert.match(recovery, /Restart Game/)
 assert.match(resultsScreen, /AbortError/)
 assert.match(resultsScreen, /ShareFallbackDialog/)
 assert.match(resultsScreen, /disabled=\{isSharing\}/)
 assert.doesNotMatch(resultsScreen, /['"]Speed['"]/, 'Speed must remain hidden on the Results screen')
 
-console.log('Beta readiness tests passed.')
+console.log('Pennant Pursuit 1.0.0 release readiness tests passed.')

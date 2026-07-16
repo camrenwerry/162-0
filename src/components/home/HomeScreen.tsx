@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react'
-import DiamondDraftLogo from '../DiamondDraftLogo'
+import PennantPursuitLogo from '../PennantPursuitLogo'
 import HowToPlayModal from './HowToPlayModal'
-import { BETA_LABEL } from '../../config/beta'
+import { VERSION_LABEL } from '../../config/app'
 import { resetTutorial } from '../../utils/onboarding'
 import './HomeScreen.css'
 
@@ -24,8 +24,8 @@ export default function HomeScreen({ onPlay, onGameUpdates }: HomeScreenProps) {
         <span className="dd-home__plate" />
       </div>
       <section className="dd-home__content">
-        <div className="dd-home__brand"><DiamondDraftLogo /><span>{BETA_LABEL}</span></div>
-        <p>Build the greatest team<br />in baseball history.</p>
+        <div className="dd-home__brand"><PennantPursuitLogo priority variant="home" /><span>{VERSION_LABEL}</span></div>
+        <p>Build the greatest roster in baseball history.</p>
         <div className="dd-home__actions">
           <button className="dd-home__play" type="button" onClick={onPlay}>Play Classic</button>
           <button className="dd-home__how" type="button" onClick={() => setShowHowToPlay(true)}>
