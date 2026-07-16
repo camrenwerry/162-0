@@ -1,9 +1,39 @@
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
-import { aggregateAppearances, aggregateRows, buildCandidate, buildLahmanData, canCompleteRoster, curatePool, FIELD_POSITIONS, hitterStats, parseCsv, POSITION_ORDER, selectFeatured, validateGeneratedData, validatePool } from './lib/lahman-pipeline.mjs'
+import os from 'node:os'
+import path from 'node:path'
+import { aggregateAppearances, aggregateRows, buildCandidate, buildLahmanData, canCompleteRoster, curatePool, FIELD_POSITIONS, findGeneratedConflictCopyFiles, hitterStats, isGeneratedConflictCopyFilename, parseCsv, POSITION_ORDER, selectFeatured, validateGeneratedData, validatePool } from './lib/lahman-pipeline.mjs'
 import { runHistoricalAudits } from './lib/historical-audits.mjs'
 
 assert.deepEqual(parseCsv('id,name\n1,"Last, First"\n'), [{ id: '1', name: 'Last, First' }])
+
+for (const filename of ['nyy-2020s 2.json', 'nyy-2020s 3.json', 'nyy-2020s 27.json', 'nyy-2020s (4).json']) {
+  assert.equal(isGeneratedConflictCopyFilename(filename), true, `${filename}: conflict-copy suffix must be rejected`)
+}
+for (const filename of ['nyy-2020s.json', 'ab2-1930s.json', 'team2-2000s.json', 'team-2.json', '2.json']) {
+  assert.equal(isGeneratedConflictCopyFilename(filename), false, `${filename}: ordinary numbers must remain valid`)
+}
+
+const conflictFixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'pennant-pursuit-conflict-copy-'))
+try {
+  const generated = path.join(conflictFixtureRoot, 'src/data/generated')
+  fs.mkdirSync(path.join(conflictFixtureRoot, 'data-import'), { recursive: true })
+  fs.mkdirSync(path.join(generated, 'pools'), { recursive: true })
+  fs.mkdirSync(path.join(generated, 'runtime-pools'), { recursive: true })
+  fs.writeFileSync(path.join(conflictFixtureRoot, 'data-import/lahman-build-config.json'), '{}\n')
+  fs.writeFileSync(path.join(generated, 'combinations.json'), '[]\n')
+  fs.writeFileSync(path.join(generated, 'readiness.json'), '{"blockingErrors":0,"combinations":0,"pools":0,"cards":0}\n')
+  fs.writeFileSync(path.join(generated, 'pools/nyy-2020s 2.json'), '[]\n')
+  fs.writeFileSync(path.join(generated, 'runtime-pools/ab2-1930s 19.json'), '[]\n')
+  const conflicts = [
+    'src/data/generated/pools/nyy-2020s 2.json',
+    'src/data/generated/runtime-pools/ab2-1930s 19.json',
+  ]
+  assert.deepEqual(findGeneratedConflictCopyFiles(conflictFixtureRoot), conflicts)
+  assert.deepEqual(validateGeneratedData(conflictFixtureRoot).errors, conflicts.map((file) => `generated data conflict-copy filename is not allowed: ${file}`))
+} finally {
+  fs.rmSync(conflictFixtureRoot, { recursive: true, force: true })
+}
 
 const franchise = { franchiseId: 'test', team: 'TST', teamName: 'Test Club' }
 const teamByYear = new Map([

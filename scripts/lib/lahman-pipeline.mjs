@@ -15,6 +15,21 @@ const keyForSeason = (playerId, franchiseId, year) => `${playerId}:${franchiseId
 const safeId = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 const compareText = (a, b) => a.localeCompare(b, 'en')
 const overrideValue = (entry, key = 'value') => entry && typeof entry === 'object' ? entry[key] ?? entry.value : entry
+const GENERATED_POOL_DIRECTORIES = ['pools', 'runtime-pools']
+const GENERATED_CONFLICT_COPY_PATTERN = /(?:\s+\d+|\s*\(\d+\))\.json$/u
+
+export const isGeneratedConflictCopyFilename = (filename) => GENERATED_CONFLICT_COPY_PATTERN.test(filename)
+
+export function findGeneratedConflictCopyFiles(root = process.cwd()) {
+  const generated = path.join(root, 'src/data/generated')
+  return GENERATED_POOL_DIRECTORIES.flatMap((directory) => {
+    const folder = path.join(generated, directory)
+    if (!fs.existsSync(folder)) return []
+    return fs.readdirSync(folder, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && isGeneratedConflictCopyFilename(entry.name))
+      .map((entry) => path.posix.join('src/data/generated', directory, entry.name))
+  }).sort(compareText)
+}
 
 export function parseCsv(text) {
   const rows = []
@@ -574,7 +589,9 @@ export function validateGeneratedData(root = process.cwd()) {
   const poolFiles = fs.readdirSync(path.join(generated, 'pools')).filter((name) => /^[a-z0-9-]+-\d{4}s\.json$/.test(name))
   const runtimeFiles = fs.readdirSync(path.join(generated, 'runtime-pools')).filter((name) => /^[a-z0-9-]+-\d{4}s\.json$/.test(name))
   const indexedIds = new Set(combinations.map(({ id }) => id))
-  const errors = []; const pools = []
+  const errors = findGeneratedConflictCopyFiles(root)
+    .map((file) => `generated data conflict-copy filename is not allowed: ${file}`)
+  const pools = []
   for (const file of poolFiles) {
     const id = file.slice(0, -5)
     const cards = readJson(path.join(generated, 'pools', file))
