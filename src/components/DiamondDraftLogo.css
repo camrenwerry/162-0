@@ -1,10 +1,7 @@
 .diamond-draft-logo { position: relative; display: grid; width: min(100%, 24rem); min-height: 12.5rem; place-items: center; isolation: isolate; }
 .diamond-draft-logo__crest { position: absolute; z-index: -1; width: 9.6rem; height: 9.6rem; border: 0.22rem solid #dcae43; background: linear-gradient(135deg, rgb(20 29 40 / 88%), rgb(4 9 15 / 94%)); box-shadow: 0 0 0 0.08rem #75551e, 0 0 2.4rem rgb(245 197 66 / 10%), inset 0 0 2rem rgb(4 8 13 / 70%); transform: rotate(45deg); }
 .diamond-draft-logo__crest::after { position: absolute; inset: 0.42rem; border: 1px solid rgb(255 223 141 / 32%); content: ''; }
-.diamond-draft-logo__baseball { position: absolute; top: -1.05rem; right: -1.05rem; width: 2.1rem; height: 2.1rem; border: 0.11rem solid #d7d3c9; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #d8d5ce 72%, #9b968d); box-shadow: 0 0.22rem 0.55rem rgb(0 0 0 / 48%); transform: rotate(-45deg); }
-.diamond-draft-logo__baseball::before, .diamond-draft-logo__baseball::after { position: absolute; top: 0.3rem; bottom: 0.3rem; width: 0.34rem; border-right: 1px dashed #b52b31; border-left: 1px dashed #b52b31; border-radius: 50%; content: ''; }
-.diamond-draft-logo__baseball::before { left: 0.33rem; }
-.diamond-draft-logo__baseball::after { right: 0.33rem; }
+.diamond-draft-logo__baseball { position: absolute; top: -1.05rem; right: -1.05rem; display: block; width: 2.1rem; height: 2.1rem; overflow: visible; filter: drop-shadow(0 0.22rem 0.28rem rgb(0 0 0 / 48%)); shape-rendering: geometricPrecision; transform: rotate(-45deg); }
 .diamond-draft-logo__star { position: absolute; bottom: -0.68rem; left: -0.68rem; display: grid; width: 1.35rem; height: 1.35rem; place-items: center; color: #f5c542; font-size: 1rem; font-style: normal; text-shadow: 0 0 0.65rem rgb(245 197 66 / 42%); transform: rotate(-45deg); }
 .diamond-draft-logo__words { display: flex; align-items: center; flex-direction: column; font-family: 'Bebas Neue', var(--font-display); line-height: 0.76; text-align: center; text-transform: uppercase; transform: translateY(0.2rem); }
 .diamond-draft-logo__words strong, .diamond-draft-logo__words b { position: relative; display: block; letter-spacing: 0.025em; -webkit-text-stroke: 1px rgb(255 255 255 / 22%); }
@@ -14,7 +11,6 @@
 .diamond-draft-logo--compact { width: 8.5rem; min-height: 4.3rem; }
 .diamond-draft-logo--compact .diamond-draft-logo__crest { width: 3.45rem; height: 3.45rem; border-width: 0.1rem; }
 .diamond-draft-logo--compact .diamond-draft-logo__baseball { top: -0.52rem; right: -0.52rem; width: 1rem; height: 1rem; }
-.diamond-draft-logo--compact .diamond-draft-logo__baseball::before, .diamond-draft-logo--compact .diamond-draft-logo__baseball::after { display: none; }
 .diamond-draft-logo--compact .diamond-draft-logo__star { bottom: -0.35rem; left: -0.35rem; width: 0.7rem; height: 0.7rem; font-size: 0.5rem; }
 .diamond-draft-logo--compact .diamond-draft-logo__words strong { font-size: 2rem; }
 .diamond-draft-logo--compact .diamond-draft-logo__words b { font-size: 2.15rem; }

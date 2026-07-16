@@ -13,7 +13,12 @@
   <rect width="64" height="64" rx="10" fill="#070c12"/>
   <path d="M32 4 60 32 32 60 4 32Z" fill="url(#bg)" stroke="#765017" stroke-width="6"/>
   <path d="M32 5 59 32 32 59 5 32Z" fill="none" stroke="url(#gold)" stroke-width="3"/>
-  <circle cx="32" cy="18" r="10" fill="#f3f1eb" stroke="#8f8a82" stroke-width="1.5"/>
-  <path d="M27 10c5 4 5 12 0 16m10-16c-5 4-5 12 0 16" fill="none" stroke="#c22f38" stroke-width="2"/>
+  <g transform="translate(21 7) scale(.34375)">
+    <circle cx="32" cy="32" r="29" fill="#fff" stroke="#b8b5ae" stroke-width="2.5"/>
+    <g fill="none" stroke="#b4232d" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 8C35 17 35 47 16 56M48 8C29 17 29 47 48 56" stroke-width="2.75"/>
+      <path d="m19 14 5-4m-.5 10 6-4m-3.5 9 7-1m-7 8h7m-8.5 7 6 4m-11 4 5.5 5M45 10l5 4m-15.5 2 6 4M31 24l7 1m-7 7h7m-4.5 11 6-4M39 52l5.5-5" stroke-width="2.1"/>
+    </g>
+  </g>
   <text x="32" y="48" fill="url(#gold)" stroke="#3f2a0a" stroke-width="1.5" paint-order="stroke fill" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-size="21" letter-spacing="1">DD</text>
 </svg>
