@@ -11,7 +11,7 @@ export const DATA_DIGEST_ALGORITHM = readiness.dataDigestAlgorithm
 export const DATA_DIGEST_SCHEMA = readiness.dataDigestSchema
 export const DATA_DIGEST = readiness.dataDigest
 export const SUBMISSION_SCHEMA_VERSION: null = metadata.submissionSchemaVersion
-export const RNG_VERSION: null = metadata.rngVersion
+export const RNG_VERSION = metadata.rngVersion as 'seeded-v1'
 export const LEADERBOARD_VERSION: null = metadata.leaderboardVersion
 
 export type ScoringVersion = typeof SCORING_VERSION

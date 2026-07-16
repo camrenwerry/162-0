@@ -77,9 +77,10 @@ export function validateSharedVersionMetadata(metadata) {
   if (typeof metadata.gameRulesVersion !== 'string' || !metadata.gameRulesVersion.trim()) errors.push('shared gameRulesVersion must be a non-empty string')
   if (typeof metadata.scoringVersion !== 'string' || !/^\d+\.\d+(?:\.\d+)?$/.test(metadata.scoringVersion)) errors.push('shared scoringVersion must be a numeric version string')
   if (typeof metadata.dataVersion !== 'string' || !metadata.dataVersion.trim()) errors.push('shared dataVersion must be a non-empty string')
-  for (const field of ['submissionSchemaVersion', 'rngVersion', 'leaderboardVersion']) {
+  for (const field of ['submissionSchemaVersion', 'leaderboardVersion']) {
     if (!Object.hasOwn(metadata, field) || metadata[field] !== null) errors.push(`shared ${field} must be explicitly null while inactive`)
   }
+  if (metadata.rngVersion !== 'seeded-v1') errors.push('shared rngVersion must be seeded-v1 while deterministic gameplay RNG is active')
   return errors
 }
 

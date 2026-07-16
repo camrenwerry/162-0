@@ -20,7 +20,7 @@ export class Randomizer {
   private readonly pool: RandomizerPoolSource
   private readonly random: RandomSource
 
-  constructor(pool: RandomizerPoolSource, random: RandomSource = Math.random) {
+  constructor(pool: RandomizerPoolSource, random: RandomSource) {
     this.pool = pool
     this.random = random
   }
@@ -62,6 +62,24 @@ export class Randomizer {
     }
     const franchiseId = this.pick([...candidatesByFranchise.keys()])
     return this.pick(candidatesByFranchise.get(franchiseId) ?? [])
+  }
+}
+
+/**
+ * Animation-only randomization. This source must never be shared with the
+ * gameplay Randomizer because frame count and reduced-motion preferences vary.
+ */
+export class CosmeticRandomizer {
+  private readonly pool: RandomizerPoolSource
+  private readonly random: RandomSource
+
+  constructor(pool: RandomizerPoolSource, random: RandomSource = Math.random) {
+    this.pool = pool
+    this.random = random
+  }
+
+  private pick<T>(items: readonly T[]) {
+    return items[Math.min(items.length - 1, Math.floor(this.random() * items.length))]
   }
 
   cycleTeam() { return this.pick(this.pool.getTeams()).team }

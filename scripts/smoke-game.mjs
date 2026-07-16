@@ -13,6 +13,11 @@ const positionOrder = new Map(['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'D
 const universalSorts = new Set(['name', 'position', 'featuredSeason'])
 const hitterSorts = new Set(['ops', 'hr', 'avg', 'obp', 'slg', 'rbi', 'sb'])
 const pitcherSorts = new Set(['era', 'whip', 'so', 'wins', 'sv'])
+let randomState = 0x1620113
+const random = () => {
+  randomState = (Math.imul(randomState, 1664525) + 1013904223) >>> 0
+  return randomState / 0x1_0000_0000
+}
 
 const firstOpenSlot = (position, roster) => slots.find(([id, label]) => label === position && !roster[id])?.[0] ?? null
 const availablePositions = (player, roster) => {
@@ -52,7 +57,7 @@ for (let game = 0; game < 200; game += 1) {
         && availablePositions(player, roster).includes(position))
     ))
     assert(options.length > 0, `Draft ${game + 1} dead-ended at ${slotId}`)
-    const combination = options[Math.floor(Math.random() * options.length)]
+    const combination = options[Math.floor(random() * options.length)]
     usedCombinations.add(combination.id)
     const player = players.find((card) => card.franchiseId === combination.franchiseId
       && card.decade === combination.decade
@@ -73,19 +78,19 @@ for (let game = 0; game < 100; game += 1) {
     combinations.some((option) => option.id !== candidate.id && option.decade === candidate.decade)
     && combinations.some((option) => option.id !== candidate.id && option.franchiseId === candidate.franchiseId)
   ))
-  let current = rerollable[Math.floor(Math.random() * rerollable.length)]
+  let current = rerollable[Math.floor(random() * rerollable.length)]
   used.add(current.id)
   const teamOptions = combinations.filter((candidate) => candidate.decade === current.decade
     && !used.has(candidate.id)
     && combinations.some((eraOption) => eraOption.franchiseId === candidate.franchiseId && eraOption.id !== candidate.id && !used.has(eraOption.id)))
   const heldDecade = current.decade
-  current = teamOptions[Math.floor(Math.random() * teamOptions.length)]
+  current = teamOptions[Math.floor(random() * teamOptions.length)]
   assert.equal(current.decade, heldDecade)
   assert(!used.has(current.id))
   used.add(current.id)
   const eraOptions = combinations.filter((candidate) => candidate.franchiseId === current.franchiseId && !used.has(candidate.id))
   const heldFranchise = current.franchiseId
-  current = eraOptions[Math.floor(Math.random() * eraOptions.length)]
+  current = eraOptions[Math.floor(random() * eraOptions.length)]
   assert.equal(current.franchiseId, heldFranchise)
   assert(!used.has(current.id))
 }

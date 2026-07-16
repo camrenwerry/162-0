@@ -177,13 +177,17 @@ const opsSorted = pool.query({ combination: yankees2000s, excludedIds: new Set()
 const opsValue = (player: (typeof opsSorted)[number]) => player.playerType === 'pitcher' ? null : player.visibleStats.ops
 assert(opsSorted.every((player) => player.playerType !== 'pitcher' && opsValue(player) !== null))
 for (let index = 1; index < opsSorted.length; index += 1) assert((opsValue(opsSorted[index - 1]) ?? -Infinity) >= (opsValue(opsSorted[index]) ?? -Infinity))
-let randomIndex = 0
-const randomizer = new Randomizer(pool, () => ((randomIndex++ * 17) % 97) / 97)
 let scoringCalls = 0
 const deterministicScoring = new PennantPursuitScoring()
+const engineSessions = [
+  { gameplaySeed: 'seeded-v1:16201130162011301620113016201130' as const, draftId: '11111111-1111-4111-8111-111111111111', createdAt: '2026-01-01T00:00:00.000Z' },
+  { gameplaySeed: 'seeded-v1:16201131162011311620113116201131' as const, draftId: '22222222-2222-4222-8222-222222222222', createdAt: '2026-01-02T00:00:00.000Z' },
+  { gameplaySeed: 'seeded-v1:16201132162011321620113216201132' as const, draftId: '33333333-3333-4333-8333-333333333333', createdAt: '2026-01-03T00:00:00.000Z' },
+]
+let engineSessionIndex = 0
 const engine = new DraftEngine({
   pool,
-  randomizer,
+  sessionFactory: () => engineSessions[engineSessionIndex++],
   scoring: { calculate: (roster) => { scoringCalls += 1; return deterministicScoring.calculate(roster) } },
   reducedMotion: () => true,
   timings: { reducedRoll: 0, reducedCommit: 0, rosterEffect: 0, resultsReveal: 0 },
@@ -198,6 +202,7 @@ let draft = engine.getSnapshot()
 assert.equal(draft.round, 1)
 assert.equal(draft.totalRounds, 14)
 assert.equal(draft.usedCombinationIds.length, 1)
+assert.deepEqual(engine.getTranscript().events.map(({ type }) => type), ['initial-roll'])
 
 engine.setSort('hr')
 draft = engine.getSnapshot()
@@ -252,6 +257,13 @@ assert.equal(draft.result.overallGrade, draft.result.categoryGrades.overall)
 assert.equal(draft.result.overallScore, draft.result.categoryScores.overall)
 assert(draft.result.strongestCategory && draft.result.weakestCategory && draft.result.bestPlayerValue)
 assert.equal(new Set(draft.usedCombinationIds).size, draft.usedCombinationIds.length)
+const finalizedTranscript = engine.getFinalizedTranscript()
+assert(finalizedTranscript)
+assert.equal(finalizedTranscript.events.filter(({ type }) => type === 'initial-roll').length, ROSTER_SLOTS.length)
+assert.equal(finalizedTranscript.events.filter(({ type }) => type === 'reroll').length, 2)
+assert.equal(finalizedTranscript.events.filter(({ type }) => type === 'pick').length, ROSTER_SLOTS.length)
+const completedDraftId = finalizedTranscript.header.draftId
+const completedSeed = finalizedTranscript.header.gameplaySeed
 
 engine.restart()
 await waitForTimers()
@@ -261,6 +273,9 @@ assert.equal(Object.keys(draft.roster).length, 0)
 assert.equal(draft.teamRerollAvailable, true)
 assert.equal(draft.eraRerollAvailable, true)
 assert.equal(scoringCalls, 1, 'restart must not recalculate the prior result')
+assert.notEqual(engine.getTranscript().header.draftId, completedDraftId)
+assert.notEqual(engine.getTranscript().header.gameplaySeed, completedSeed)
+assert.deepEqual(engine.getTranscript().events.map(({ type }) => type), ['initial-roll'])
 assert(notifications > 20)
 engine.abandon()
 draft = engine.getSnapshot()
@@ -278,11 +293,22 @@ for (let index = 1; index < phaseProgression.length; index += 1) assert(phasePro
 unsubscribe()
 engine.dispose()
 
-const strictEngine = new DraftEngine({ reducedMotion: () => true, timings: { reducedRoll: 0 } })
+const strictEngine = new DraftEngine({
+  reducedMotion: () => true,
+  timings: { reducedRoll: 0 },
+  sessionFactory: () => ({
+    gameplaySeed: 'seeded-v1:abcdef0123456789abcdef0123456789',
+    draftId: '44444444-4444-4444-8444-444444444444',
+    createdAt: '2026-01-04T00:00:00.000Z',
+  }),
+})
 strictEngine.start()
+const strictDraftId = strictEngine.getTranscript().header.draftId
 strictEngine.dispose()
 strictEngine.start()
 await waitForTimers()
 assert.equal(strictEngine.getSnapshot().usedCombinationIds.length, 1)
+assert.equal(strictEngine.getTranscript().header.draftId, strictDraftId)
+assert.deepEqual(strictEngine.getTranscript().events.map(({ type }) => type), ['initial-roll'])
 strictEngine.dispose()
 console.log('DraftEngine smoke passed: controls, rerolls, 14 assignments, results, restart, and subscriptions.')

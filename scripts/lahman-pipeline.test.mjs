@@ -70,16 +70,19 @@ const unsafeCombination = { ...digestCombinations[0], id: "tst-2000s';process.ex
 assert(validateCanonicalCombinations([unsafeCombination]).some((message) => message.includes('safe generated-data ID')))
 assert(validateCanonicalCombinations([unsafeCombination]).some((message) => message.includes('franchiseId-decade')))
 assert.throws(() => createGeneratedRegistry([unsafeCombination]), /Invalid canonical combinations/)
-assert.deepEqual(validateSharedVersionMetadata({
+const validVersionMetadata = {
   schemaVersion: 1,
   appVersion: '1.0.0',
   gameRulesVersion: 'classic-rules-v1',
   scoringVersion: '2.3',
   dataVersion: 'lahman-2025-v1',
   submissionSchemaVersion: null,
-  rngVersion: null,
+  rngVersion: 'seeded-v1',
   leaderboardVersion: null,
-}), [])
+}
+assert.deepEqual(validateSharedVersionMetadata(validVersionMetadata), [])
+assert(validateSharedVersionMetadata({ ...validVersionMetadata, rngVersion: null }).some((message) => message.includes('rngVersion must be seeded-v1')))
+assert(validateSharedVersionMetadata({ ...validVersionMetadata, rngVersion: 'seeded-v2' }).some((message) => message.includes('rngVersion must be seeded-v1')))
 assert(validateSharedVersionMetadata({ schemaVersion: 'one', appVersion: 100, gameRulesVersion: null, scoringVersion: 23, dataVersion: 42 }).length >= 8, 'invalid or active-looking version metadata must be rejected')
 const projectedRuntimePool = createRuntimePools({
   'tst-2000s': [{ ...digestPools['tst-2000s'][0], sourceMetadata: { verified: true }, stats: { auditOnly: true }, notes: 'audit only' }],
@@ -148,7 +151,7 @@ try {
     dataDigestSchema: CANONICAL_DATA_DIGEST_SCHEMA,
     dataDigest: emptyDigest,
     submissionSchemaVersion: null,
-    rngVersion: null,
+    rngVersion: sharedVersions.rngVersion,
     leaderboardVersion: null,
     blockingErrors: 0,
     combinations: 0,

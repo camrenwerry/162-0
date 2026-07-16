@@ -1,9 +1,12 @@
 import { getAvailablePositions, isPlayerSelectable, partitionPlayersByAvailability, resolveAssignmentSlot } from './Eligibility'
 import { createGameState, type GameState, type RollMode } from './GameState'
-import { Randomizer } from './Randomizer'
+import { CosmeticRandomizer, Randomizer, type RandomSource } from './Randomizer'
 import { PennantPursuitScoring, type Scoring } from './ScoringEngine'
 import { TeamPool, type SortOption, type TeamPoolSource } from './TeamPool'
 import { ROSTER_SLOTS, type DraftPlayerView, type DraftResult, type Player, type Position, type PositionFilter, type Roster, type RosterSlotId, type SortKey, type TeamDecade } from '../types/draft'
+import { APP_VERSION, DATA_DIGEST, DATA_VERSION, GAME_RULES_VERSION, RNG_VERSION, SCORING_VERSION } from '../config/versions'
+import { appendDraftTranscriptEvent, createDraftTranscript, type DraftTranscript } from './DraftTranscript'
+import { createLocalDraftId, createLocalGameplaySeed, createSeededRandom, type GameplaySeed } from './SeededRandom'
 
 export interface DraftSnapshot {
   roster: Roster
@@ -38,13 +41,22 @@ export interface DraftSnapshot {
 
 export interface DraftEngineOptions {
   pool?: TeamPoolSource
-  randomizer?: Randomizer
   scoring?: Scoring
   reducedMotion?: () => boolean
   timings?: Partial<DraftTimings>
+  cosmeticRandom?: RandomSource
+  sessionFactory?: DraftSessionFactory
 }
 
-interface DraftTimings {
+export interface DraftSessionIdentity {
+  readonly gameplaySeed: GameplaySeed
+  readonly draftId: string
+  readonly createdAt: string
+}
+
+export type DraftSessionFactory = () => DraftSessionIdentity
+
+export interface DraftTimings {
   reducedRoll: number
   reducedCommit: number
   rosterEffect: number
@@ -56,12 +68,29 @@ const REQUIRED_COMBINATION_CAPACITY = ROSTER_SLOTS.length + 2
 
 type Listener = () => void
 
+interface PendingRoll {
+  readonly mode: RollMode
+  readonly round: number
+  readonly discardedCombination: TeamDecade
+  readonly target: TeamDecade
+}
+
+function createLocalDraftSession(): DraftSessionIdentity {
+  return Object.freeze({
+    gameplaySeed: createLocalGameplaySeed(),
+    draftId: createLocalDraftId(),
+    createdAt: new Date().toISOString(),
+  })
+}
+
 export class DraftEngine {
   private readonly pool: TeamPoolSource
-  private readonly randomizer: Randomizer
+  private gameplayRandomizer!: Randomizer
+  private readonly cosmeticRandomizer: CosmeticRandomizer
   private readonly scoring: Scoring
   private readonly reducedMotion: () => boolean
   private readonly timings: DraftTimings
+  private readonly sessionFactory: DraftSessionFactory
   private state: GameState
   private snapshot: DraftSnapshot
   private listeners = new Set<Listener>()
@@ -71,10 +100,12 @@ export class DraftEngine {
   private resultsTimer: ReturnType<typeof setTimeout> | null = null
   private assignmentLocked = false
   private started = false
+  private pendingRoll: PendingRoll | null = null
 
   constructor(options: DraftEngineOptions = {}) {
     this.pool = options.pool ?? new TeamPool()
-    this.randomizer = options.randomizer ?? new Randomizer(this.pool)
+    this.sessionFactory = options.sessionFactory ?? createLocalDraftSession
+    this.cosmeticRandomizer = new CosmeticRandomizer(this.pool, options.cosmeticRandom)
     this.scoring = options.scoring ?? new PennantPursuitScoring()
     this.reducedMotion = options.reducedMotion ?? (() => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
     this.timings = { ...DEFAULT_TIMINGS, ...options.timings }
@@ -83,7 +114,7 @@ export class DraftEngine {
       throw new Error(`DraftEngine requires at least ${REQUIRED_COMBINATION_CAPACITY} validated team/decade combinations for ${ROSTER_SLOTS.length} rounds and both rerolls; received ${supportedCombinations.length}.`)
     }
     const initial = supportedCombinations[0]
-    this.state = createGameState(initial)
+    this.state = this.createFreshState(initial)
     this.snapshot = this.createSnapshot()
   }
 
@@ -93,6 +124,29 @@ export class DraftEngine {
   }
 
   getSnapshot = () => this.snapshot
+
+  /** Internal replay artifact; deliberately excluded from DraftSnapshot and UI. */
+  getTranscript = (): DraftTranscript => this.state.transcript
+
+  /** A transcript is final only after the existing result reveal completes. */
+  getFinalizedTranscript = (): DraftTranscript | null => this.state.complete ? this.state.transcript : null
+
+  private createFreshState(initial: TeamDecade) {
+    const session = this.sessionFactory()
+    this.gameplayRandomizer = new Randomizer(this.pool, createSeededRandom(session.gameplaySeed))
+    const transcript = createDraftTranscript({
+      appVersion: APP_VERSION,
+      gameRulesVersion: GAME_RULES_VERSION,
+      rngVersion: RNG_VERSION,
+      scoringVersion: SCORING_VERSION,
+      dataVersion: DATA_VERSION,
+      canonicalDataDigest: DATA_DIGEST,
+      draftId: session.draftId,
+      gameplaySeed: session.gameplaySeed,
+      createdAt: session.createdAt,
+    })
+    return createGameState(initial, session.gameplaySeed, transcript)
+  }
 
   private createSnapshot(): DraftSnapshot {
     const sortOptions = this.pool.getAvailableSortOptions(
@@ -173,6 +227,10 @@ export class DraftEngine {
   start() {
     if (this.started) return
     this.started = true
+    if (this.pendingRoll) {
+      this.beginPendingRoll(this.pendingRoll)
+      return
+    }
     if (!this.state.complete && this.state.usedCombinationIds.size === 0) this.roll('both')
   }
 
@@ -193,9 +251,59 @@ export class DraftEngine {
     ))
   }
 
+  private revealPendingRoll(pending: PendingRoll) {
+    if (this.pendingRoll !== pending) return
+    const { mode, target } = pending
+    this.state.displayTeam = target.team
+    this.state.displayDecade = target.decade
+    this.state.currentCombination = target
+    this.state.usedCombinationIds.add(target.id)
+    this.state.transcript = appendDraftTranscriptEvent(this.state.transcript, mode === 'both'
+      ? { type: 'initial-roll', round: pending.round, combinationId: target.id }
+      : {
+          type: 'reroll',
+          reroll: mode,
+          round: pending.round,
+          discardedCombinationId: pending.discardedCombination.id,
+          resultingCombinationId: target.id,
+        })
+    this.state.isRolling = false
+    this.state.rollingMode = null
+    this.assignmentLocked = false
+    this.pendingRoll = null
+    this.rollTimers = []
+    this.emit()
+  }
+
+  private beginPendingRoll(pending: PendingRoll) {
+    this.state.isRolling = true
+    this.state.rollingMode = pending.mode
+    this.state.selectedPlayerId = null
+    this.clearRollTimers()
+    this.emit()
+
+    const reveal = () => this.revealPendingRoll(pending)
+    if (this.reducedMotion()) {
+      this.rollTimers.push(setTimeout(reveal, this.timings.reducedRoll))
+      return
+    }
+
+    const delays = [55, 60, 65, 75, 90, 110, 135, 155, 180]
+    let elapsed = 0
+    delays.forEach((delay, index) => {
+      elapsed += delay
+      this.rollTimers.push(setTimeout(() => {
+        if (index === delays.length - 1) return reveal()
+        if (pending.mode !== 'era') this.state.displayTeam = this.cosmeticRandomizer.cycleTeam()
+        if (pending.mode !== 'team') this.state.displayDecade = this.cosmeticRandomizer.cycleDecade()
+        this.emit()
+      }, elapsed))
+    })
+  }
+
   private roll(mode: RollMode, roster = this.state.roster) {
-    if (this.state.isRolling) return false
-    const target = this.randomizer.select({
+    if (this.state.isRolling || this.pendingRoll) return false
+    const target = this.gameplayRandomizer.select({
       mode,
       current: this.state.currentCombination,
       usedCombinationIds: this.state.usedCombinationIds,
@@ -208,41 +316,13 @@ export class DraftEngine {
       this.assignmentLocked = false
       return false
     }
-
-    this.state.isRolling = true
-    this.state.rollingMode = mode
-    this.state.selectedPlayerId = null
-    this.clearRollTimers()
-    this.emit()
-
-    const reveal = () => {
-      this.state.displayTeam = target.team
-      this.state.displayDecade = target.decade
-      this.state.currentCombination = target
-      this.state.usedCombinationIds.add(target.id)
-      this.state.isRolling = false
-      this.state.rollingMode = null
-      this.assignmentLocked = false
-      this.rollTimers = []
-      this.emit()
+    this.pendingRoll = {
+      mode,
+      round: this.state.round,
+      discardedCombination: this.state.currentCombination,
+      target,
     }
-
-    if (this.reducedMotion()) {
-      this.rollTimers.push(setTimeout(reveal, this.timings.reducedRoll))
-      return true
-    }
-
-    const delays = [55, 60, 65, 75, 90, 110, 135, 155, 180]
-    let elapsed = 0
-    delays.forEach((delay, index) => {
-      elapsed += delay
-      this.rollTimers.push(setTimeout(() => {
-        if (index === delays.length - 1) return reveal()
-        if (mode !== 'era') this.state.displayTeam = this.randomizer.cycleTeam()
-        if (mode !== 'team') this.state.displayDecade = this.randomizer.cycleDecade()
-        this.emit()
-      }, elapsed))
-    })
+    this.beginPendingRoll(this.pendingRoll)
     return true
   }
 
@@ -285,6 +365,8 @@ export class DraftEngine {
     if (!player) return
     const slot = resolveAssignmentSlot(player, position, this.state.roster)
     if (!slot) return
+    const round = this.state.round
+    const combinationId = this.state.currentCombination.id
 
     this.assignmentLocked = true
     this.state.committingPlayerId = player.id
@@ -293,6 +375,16 @@ export class DraftEngine {
     this.commitTimer = setTimeout(() => {
       this.state.roster = { ...this.state.roster, [slot]: player }
       this.state.selectedPlayerIds.add(player.id)
+      this.state.transcript = appendDraftTranscriptEvent(this.state.transcript, {
+        type: 'pick',
+        round,
+        pickOrder: this.state.selectedPlayerIds.size,
+        combinationId,
+        canonicalCardId: player.id,
+        sourcePlayerId: player.playerId,
+        assignedPosition: position,
+        featuredSeason: player.featuredSeason,
+      })
       this.state.round = Math.min(this.state.selectedPlayerIds.size + 1, ROSTER_SLOTS.length)
       this.state.recentlyFilledSlot = slot
       this.state.search = ''
@@ -336,8 +428,9 @@ export class DraftEngine {
 
   restart() {
     this.clearTimers()
+    this.pendingRoll = null
     const initial = this.pool.getCombinations()[0]
-    this.state = createGameState(initial)
+    this.state = this.createFreshState(initial)
     this.assignmentLocked = false
     this.emit()
     this.roll('both')
@@ -345,8 +438,9 @@ export class DraftEngine {
 
   abandon() {
     this.clearTimers()
+    this.pendingRoll = null
     const initial = this.pool.getCombinations()[0]
-    this.state = createGameState(initial)
+    this.state = this.createFreshState(initial)
     this.assignmentLocked = false
     this.emit()
   }

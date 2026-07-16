@@ -5,6 +5,6 @@
   "scoringVersion": "2.3",
   "dataVersion": "lahman-2025-v1",
   "submissionSchemaVersion": null,
-  "rngVersion": null,
+  "rngVersion": "seeded-v1",
   "leaderboardVersion": null
 }

@@ -81,7 +81,7 @@ assert.equal(DATA_DIGEST_ALGORITHM, 'sha256')
 assert.equal(DATA_DIGEST_SCHEMA, 'pennant-pursuit-runtime-data-v1')
 assert.match(DATA_DIGEST, /^[a-f0-9]{64}$/)
 assert.equal(SUBMISSION_SCHEMA_VERSION, null, 'submission schema must remain inactive')
-assert.equal(RNG_VERSION, null, 'deterministic leaderboard RNG must remain inactive')
+assert.equal(RNG_VERSION, 'seeded-v1', 'deterministic gameplay RNG must use the active seeded-v1 contract')
 assert.equal(LEADERBOARD_VERSION, null, 'leaderboard protocol must remain inactive')
 assert.deepEqual(VERSION_METADATA, {
   schemaVersion: VERSION_METADATA_SCHEMA_VERSION,
@@ -93,7 +93,7 @@ assert.deepEqual(VERSION_METADATA, {
   dataDigestSchema: DATA_DIGEST_SCHEMA,
   dataDigest: DATA_DIGEST,
   submissionSchemaVersion: null,
-  rngVersion: null,
+  rngVersion: 'seeded-v1',
   leaderboardVersion: null,
 })
 assert.equal(GAME_UPDATES[0]?.version, APP_VERSION)

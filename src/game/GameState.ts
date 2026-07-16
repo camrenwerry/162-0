@@ -6,10 +6,14 @@ import type {
   SortKey,
   TeamDecade,
 } from '../types/draft'
+import type { DraftTranscript } from './DraftTranscript'
+import type { GameplaySeed } from './SeededRandom'
 
 export type RollMode = 'both' | 'team' | 'era'
 
 export interface GameState {
+  gameplaySeed: GameplaySeed
+  transcript: DraftTranscript
   roster: Roster
   round: number
   currentCombination: TeamDecade
@@ -32,8 +36,14 @@ export interface GameState {
   result: DraftResult | null
 }
 
-export function createGameState(initialCombination: TeamDecade): GameState {
+export function createGameState(
+  initialCombination: TeamDecade,
+  gameplaySeed: GameplaySeed,
+  transcript: DraftTranscript,
+): GameState {
   return {
+    gameplaySeed,
+    transcript,
     roster: {},
     round: 1,
     currentCombination: initialCombination,

@@ -1,5 +1,6 @@
 import combinationsJson from '../src/data/generated/combinations.json'
 import { Randomizer } from '../src/game/Randomizer'
+import { createSeededRandom } from '../src/game/SeededRandom'
 import type { TeamDecade } from '../src/types/draft'
 
 const combinations = combinationsJson as TeamDecade[]
@@ -9,12 +10,7 @@ const source = {
   getTeams: () => teams.map((item) => ({ franchiseId: item.franchiseId, team: item.team, teamName: item.teamName })),
   getDecades: () => [...new Set(combinations.map((item) => item.decade))],
 }
-let state = 0x1620113
-const random = () => {
-  state = (Math.imul(state, 1664525) + 1013904223) >>> 0
-  return state / 0x1_0000_0000
-}
-const randomizer = new Randomizer(source, random)
+const randomizer = new Randomizer(source, createSeededRandom('seeded-v1:01620113000000010000000200000003'))
 const rolls = 100_000
 const counts = new Map<string, number>()
 const initial = combinations[0]

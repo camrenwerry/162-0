@@ -28,6 +28,8 @@
     "test:game": "node scripts/smoke-game.mjs",
     "test:navigation": "node scripts/navigation-smoke.test.mjs",
     "test:scoring": "vite build --ssr scripts/scoring.test.ts --outDir /tmp/pennant-pursuit-scoring-tests --emptyOutDir && node /tmp/pennant-pursuit-scoring-tests/scoring.test.js",
+    "test:rng": "vite build --ssr scripts/seeded-random.test.ts --outDir /tmp/pennant-pursuit-seeded-rng-tests --emptyOutDir && node /tmp/pennant-pursuit-seeded-rng-tests/seeded-random.test.js",
+    "test:replay": "vite build --ssr scripts/transcript-replay.test.ts --outDir /tmp/pennant-pursuit-transcript-replay-tests --emptyOutDir && node /tmp/pennant-pursuit-transcript-replay-tests/transcript-replay.test.js",
     "test:randomizer": "vite build --ssr scripts/randomizer.test.ts --outDir /tmp/pennant-pursuit-randomizer-tests --emptyOutDir && node /tmp/pennant-pursuit-randomizer-tests/randomizer.test.js",
     "test:randomizer-distribution": "vite build --ssr scripts/randomizer-distribution.ts --outDir /tmp/pennant-pursuit-randomizer-distribution --emptyOutDir && node /tmp/pennant-pursuit-randomizer-distribution/randomizer-distribution.js",
     "scoring:benchmarks": "vite build --ssr scripts/scoring-benchmarks.ts --outDir /tmp/pennant-pursuit-scoring-benchmarks --emptyOutDir && node /tmp/pennant-pursuit-scoring-benchmarks/scoring-benchmarks.js",

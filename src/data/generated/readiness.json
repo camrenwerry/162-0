@@ -9,7 +9,7 @@
   "dataDigestSchema": "pennant-pursuit-runtime-data-v1",
   "dataDigest": "e033f463caf37aa38037ba58c8fafe3be8358c93afe17f13a49ef117b6d4ed05",
   "submissionSchemaVersion": null,
-  "rngVersion": null,
+  "rngVersion": "seeded-v1",
   "leaderboardVersion": null,
   "combinations": 261,
   "pools": 261,
