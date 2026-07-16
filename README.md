@@ -42,6 +42,12 @@ The most useful feedback covers incorrect players or featured seasons, incorrect
 - Environment variable: optional `VITE_FEEDBACK_URL`
 - SPA routing: `public/_redirects` sends direct `/draft` requests to `index.html`
 
+The Cloudflare Pages project is `diamond-draft`, with compatibility date `2026-07-14`. The checked-in `wrangler.toml` mirrors the audited dashboard configuration but changes no remote state by itself. It will become the Pages configuration source of truth only after a future deployment uses it.
+
+Use `npm run dev` for ordinary frontend work. Use `npm run dev:pages` to build and serve the complete static application and Pages Functions locally. The read-only `GET` and `HEAD /api/v1/health` endpoint reports public version compatibility and confirms that leaderboard, submissions, writes, and D1 remain disabled. Unknown `/api/*` paths return JSON `404` responses instead of the React SPA.
+
+There are currently no Pages bindings, databases, variables, secrets, or preview overrides. Do not deploy or add bindings without an explicit preview/production resource plan. Regenerate the committed Functions runtime types after any Wrangler configuration change with `npm run functions:types`, and verify them with `npm run functions:types:check`.
+
 Preview and test the exact production output locally:
 
 ```bash

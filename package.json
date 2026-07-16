@@ -19,7 +19,11 @@
     "brand:assets": "node scripts/build-brand-assets.mjs && pwa-assets-generator",
     "pwa:icons": "pwa-assets-generator",
     "dev": "vite",
+    "dev:pages": "npm run build && wrangler pages dev",
     "build": "npm run validate:data && tsc -b && vite build",
+    "functions:types": "wrangler types ./functions/types.d.ts",
+    "functions:types:check": "wrangler types ./functions/types.d.ts --check",
+    "functions:typecheck": "tsc --project functions/tsconfig.json --noEmit",
     "lint": "eslint .",
     "preview": "vite preview",
     "test:data": "node scripts/lahman-pipeline.test.mjs",
@@ -36,6 +40,7 @@
     "scoring:distribution": "vite build --ssr scripts/scoring-distribution.ts --outDir /tmp/pennant-pursuit-scoring-distribution --emptyOutDir && node /tmp/pennant-pursuit-scoring-distribution/scoring-distribution.js",
     "test:responsive": "node scripts/responsive-contract.test.mjs",
     "test:presentation": "node scripts/v010-presentation.test.mjs",
+    "test:backend": "npm run build && vite build --ssr scripts/backend-foundation.test.ts --outDir /tmp/pennant-pursuit-backend-tests --emptyOutDir && node /tmp/pennant-pursuit-backend-tests/backend-foundation.test.js",
     "test:release": "vite build --ssr scripts/release-readiness.test.ts --outDir /tmp/pennant-pursuit-release-tests --emptyOutDir && node /tmp/pennant-pursuit-release-tests/release-readiness.test.js",
     "test:pwa": "node scripts/pwa-deployment.test.mjs",
     "validate:data": "npm run data:lahman:validate"
@@ -58,6 +63,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.62.0",
     "vite": "^8.1.1",
-    "vite-plugin-pwa": "^1.3.0"
+    "vite-plugin-pwa": "^1.3.0",
+    "wrangler": "4.111.0"
   }
 }

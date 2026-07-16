@@ -1,0 +1,8 @@
+# Downloaded from the diamond-draft Pages project with Wrangler 4.111.0.
+# This file changes no remote state until a future deployment uses it; after
+# that deployment, it becomes the Pages configuration source of truth.
+name = "diamond-draft"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-07-14"
+
+[env.production]
