@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { SCORING_VERSION } from '../src/config/versions'
 import { DraftEngine } from '../src/game/DraftEngine'
 import { getAvailablePositions, partitionPlayersByAvailability, resolveAssignmentSlot } from '../src/game/Eligibility'
 import { getCompactPlayerStats } from '../src/game/PlayerStats'
@@ -241,7 +242,7 @@ draft = engine.getSnapshot()
 assert.equal(draft.complete, true)
 assert(draft.result)
 assert.equal(draft.result.wins + draft.result.losses, 162)
-assert.equal(draft.result.scoringVersion, '2.3')
+assert.equal(draft.result.scoringVersion, SCORING_VERSION)
 assert.equal(scoringCalls, 1, 'final scoring must execute exactly once')
 assert.deepEqual(getSimulationReveal(draft.result), getSimulationReveal(draft.result), 'simulation reveal must reuse the predetermined result')
 assert.equal(scoringCalls, 1, 'reading or skipping the presentation result must not rerun scoring')

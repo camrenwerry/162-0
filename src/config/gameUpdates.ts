@@ -1,3 +1,5 @@
+import { APP_VERSION } from './versions'
+
 export interface GameUpdate {
   version: string
   label?: string
@@ -10,8 +12,8 @@ export interface GameUpdate {
 // Keep releases newest-first so future updates can be added without changing the screen.
 export const GAME_UPDATES: readonly GameUpdate[] = [
   {
-    version: '1.0.0',
-    label: 'Pennant Pursuit 1.0.0',
+    version: APP_VERSION,
+    label: `Pennant Pursuit ${APP_VERSION}`,
     heading: 'A New Era Begins',
     intro: 'Pennant Pursuit has officially arrived.',
     highlights: [

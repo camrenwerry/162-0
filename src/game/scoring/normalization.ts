@@ -3,6 +3,21 @@ import type { MetricContribution, MetricRange, ScoringConfidence } from './types
 
 export const clamp = (value: number, minimum = 0, maximum = 100) => Math.min(maximum, Math.max(minimum, value))
 
+/** Six decimal places keep ranking keys stable while remaining well inside JavaScript's safe-integer range. */
+export const SCORE_FIXED_POINT_SCALE = 1_000_000
+
+export function toScoreFixedPoint(value: number) {
+  if (!Number.isFinite(value)) throw new TypeError('Score must be finite')
+  const fixedPoint = Math.round(value * SCORE_FIXED_POINT_SCALE)
+  if (!Number.isSafeInteger(fixedPoint)) throw new RangeError('Fixed-point score exceeds the safe-integer range')
+  return Object.is(fixedPoint, -0) ? 0 : fixedPoint
+}
+
+export function fromScoreFixedPoint(value: number) {
+  if (!Number.isSafeInteger(value)) throw new TypeError('Fixed-point score must be a safe integer')
+  return value / SCORE_FIXED_POINT_SCALE
+}
+
 const interpolate = (value: number, leftValue: number, rightValue: number, leftScore: number, rightScore: number) => {
   if (rightValue === leftValue) return rightScore
   return leftScore + ((value - leftValue) / (rightValue - leftValue)) * (rightScore - leftScore)

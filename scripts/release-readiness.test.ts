@@ -4,6 +4,19 @@ import { checkProductionData } from '../src/game/DataReadiness'
 import { TeamPool } from '../src/game/TeamPool'
 import { buildFeedbackUrl, buildShareText, shareResult } from '../src/utils/appActions'
 import { APP_VERSION } from '../src/config/app'
+import {
+  DATA_DIGEST,
+  DATA_DIGEST_ALGORITHM,
+  DATA_DIGEST_SCHEMA,
+  DATA_VERSION,
+  GAME_RULES_VERSION,
+  LEADERBOARD_VERSION,
+  RNG_VERSION,
+  SCORING_VERSION,
+  SUBMISSION_SCHEMA_VERSION,
+  VERSION_METADATA,
+  VERSION_METADATA_SCHEMA_VERSION,
+} from '../src/config/versions'
 import { GAME_UPDATES } from '../src/config/gameUpdates'
 import { dismissTutorial, isTutorialDismissed, resetTutorial, TUTORIAL_DISMISSED_KEY } from '../src/utils/onboarding'
 import type { DraftResult } from '../src/types/draft'
@@ -59,6 +72,30 @@ const expectedUpdateHighlights = [
   'The same pursuit of building the greatest roster in baseball history.',
 ]
 assert.equal(APP_VERSION, '1.0.0')
+assert.equal(JSON.parse(read('package.json')).version, APP_VERSION, 'package and shared app versions must match')
+assert.equal(VERSION_METADATA_SCHEMA_VERSION, 1)
+assert.equal(GAME_RULES_VERSION, 'classic-rules-v1')
+assert.equal(SCORING_VERSION, '2.3')
+assert.equal(DATA_VERSION, 'lahman-2025-v1')
+assert.equal(DATA_DIGEST_ALGORITHM, 'sha256')
+assert.equal(DATA_DIGEST_SCHEMA, 'pennant-pursuit-runtime-data-v1')
+assert.match(DATA_DIGEST, /^[a-f0-9]{64}$/)
+assert.equal(SUBMISSION_SCHEMA_VERSION, null, 'submission schema must remain inactive')
+assert.equal(RNG_VERSION, null, 'deterministic leaderboard RNG must remain inactive')
+assert.equal(LEADERBOARD_VERSION, null, 'leaderboard protocol must remain inactive')
+assert.deepEqual(VERSION_METADATA, {
+  schemaVersion: VERSION_METADATA_SCHEMA_VERSION,
+  appVersion: APP_VERSION,
+  gameRulesVersion: GAME_RULES_VERSION,
+  scoringVersion: SCORING_VERSION,
+  dataVersion: DATA_VERSION,
+  dataDigestAlgorithm: DATA_DIGEST_ALGORITHM,
+  dataDigestSchema: DATA_DIGEST_SCHEMA,
+  dataDigest: DATA_DIGEST,
+  submissionSchemaVersion: null,
+  rngVersion: null,
+  leaderboardVersion: null,
+})
 assert.equal(GAME_UPDATES[0]?.version, APP_VERSION)
 assert.equal(GAME_UPDATES[0]?.label, 'Pennant Pursuit 1.0.0')
 assert.equal(GAME_UPDATES[0]?.heading, 'A New Era Begins')

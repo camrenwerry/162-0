@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict'
 import { calculateHitterValue, calculateReliefPitcherValue, calculateStartingPitcherValue } from '../src/game/scoring/calculatePlayerValue'
 import { calculateProjectedRecord, tierForWins } from '../src/game/scoring/calculateProjectedRecord'
-import { calculateRosterGrades, gradeForScore } from '../src/game/scoring/calculateRosterGrades'
-import { calculateDraftResult } from '../src/game/scoring/index'
+import { calculateRosterGrades, combinedMajorCategoryScore, gradeForScore, RANKING_MAJOR_CATEGORY_KEYS } from '../src/game/scoring/calculateRosterGrades'
+import { calculateDraftResult, fromScoreFixedPoint, SCORE_FIXED_POINT_SCALE, toScoreFixedPoint } from '../src/game/scoring/index'
 import { normalizeMetric, weightedScore } from '../src/game/scoring/normalization'
-import { NORMALIZATION_RANGES } from '../src/game/scoring/scoringConfig'
+import { NORMALIZATION_RANGES, SCORING_VERSION } from '../src/game/scoring/scoringConfig'
 import { ROSTER_SLOTS, type Hitter, type Pitcher } from '../src/types/draft'
 import { fixturePlayer, fixtureRoster, historicalPeakRoster } from './lib/scoring-fixtures'
 
@@ -17,6 +17,90 @@ const perfectCalculation = calculateDraftResult(fixtureRoster('perfect', 'perfec
 const perfect = perfectCalculation.result
 const historicalPeakCalculation = calculateDraftResult(historicalPeakRoster())
 const attainableHistoricalPerfect = historicalPeakCalculation.result
+
+const averageRanking = averageCalculation.diagnostics
+assert(Object.values({
+  overall: averageRanking.rawOverallScore,
+  combinedMajor: averageRanking.rawCombinedMajorScore,
+  rosterBalance: averageRanking.rawRosterBalanceScore,
+}).every(Number.isFinite), 'raw ranking diagnostics must be finite')
+const majorCategoryProbe = {
+  offense: 1,
+  defense: 10,
+  startingPitching: 100,
+  reliefPitching: 1_000,
+  power: 10_000,
+  contact: 100_000,
+  speed: 1_000_000,
+  rosterBalance: 10_000_000,
+  overall: 100_000_000,
+}
+assert.deepEqual(RANKING_MAJOR_CATEGORY_KEYS, ['offense', 'defense', 'startingPitching', 'reliefPitching'])
+assert.equal(combinedMajorCategoryScore(majorCategoryProbe), 1_111, 'combined major score must exclude Power, Contact, Speed, Roster Balance, and Overall')
+const publicScoringSummary = (result: typeof average) => ({
+  wins: result.wins,
+  losses: result.losses,
+  overallScore: result.overallScore,
+  overallGrade: result.overallGrade,
+  tierLabel: result.tierLabel,
+  categoryScores: result.categoryScores,
+  categoryGrades: result.categoryGrades,
+})
+assert.deepEqual(
+  [weak, average, strong, perfect].map(publicScoringSummary),
+  [
+    { wins: 61, losses: 101, overallScore: 39.3, overallGrade: 'F', tierLabel: 'Rebuild', categoryScores: { offense: 44.1, power: 38.9, contact: 40.7, speed: 46, defense: 43.9, startingPitching: 44.2, reliefPitching: 42.1, rosterBalance: 48.8, overall: 39.3 }, categoryGrades: { offense: 'F', power: 'F', contact: 'F', speed: 'F', defense: 'F', startingPitching: 'F', reliefPitching: 'F', rosterBalance: 'F', overall: 'F' } },
+    { wins: 88, losses: 74, overallScore: 68.5, overallGrade: 'C', tierLabel: 'Competitive', categoryScores: { offense: 70, power: 70.3, contact: 68.7, speed: 68, defense: 70.3, startingPitching: 69.2, reliefPitching: 67.4, rosterBalance: 71.8, overall: 68.5 }, categoryGrades: { offense: 'C+', power: 'C+', contact: 'C', speed: 'C', defense: 'C+', startingPitching: 'C', reliefPitching: 'C', rosterBalance: 'C+', overall: 'C' } },
+    { wins: 152, losses: 10, overallScore: 95.2, overallGrade: 'A+', tierLabel: 'All-Time Great', categoryScores: { offense: 90.5, power: 90.2, contact: 90.6, speed: 89, defense: 91.3, startingPitching: 90.9, reliefPitching: 90.6, rosterBalance: 91.3, overall: 95.2 }, categoryGrades: { offense: 'A', power: 'A', contact: 'A', speed: 'A-', defense: 'A', startingPitching: 'A', reliefPitching: 'A', rosterBalance: 'A', overall: 'A+' } },
+    { wins: 162, losses: 0, overallScore: 98.5, overallGrade: 'S', tierLabel: 'Perfect Season', categoryScores: { offense: 95.6, power: 95.1, contact: 95, speed: 84.8, defense: 92.5, startingPitching: 96.2, reliefPitching: 95.4, rosterBalance: 95.2, overall: 98.5 }, categoryGrades: { offense: 'A+', power: 'A+', contact: 'A+', speed: 'B+', defense: 'A', startingPitching: 'S', reliefPitching: 'A+', rosterBalance: 'A+', overall: 'S' } },
+  ],
+  'ranking diagnostics must not change representative public scoring results',
+)
+assert.deepEqual(
+  [weak, average, strong, perfect].map((result) => ({
+    strongestCategory: result.strongestCategory,
+    weakestCategory: result.weakestCategory,
+    bestPlayerValue: result.bestPlayerValue,
+    scoringVersion: result.scoringVersion,
+  })),
+  [
+    { strongestCategory: 'rosterBalance', weakestCategory: 'reliefPitching', bestPlayerValue: { playerId: 'ana-1960s-averiea02', playerName: 'Earl Averill', slotId: 'C', position: 'C', value: 44.7 }, scoringVersion: '2.3' },
+    { strongestCategory: 'rosterBalance', weakestCategory: 'reliefPitching', bestPlayerValue: { playerId: 'ana-1960s-moranbi02', playerName: 'Billy Moran', slotId: '2B', position: '2B', value: 70.3 }, scoringVersion: '2.3' },
+    { strongestCategory: 'defense', weakestCategory: 'offense', bestPlayerValue: { playerId: 'ana-1960s-messean01', playerName: 'Andy Messersmith', slotId: 'SP2', position: 'SP', value: 90.9 }, scoringVersion: '2.3' },
+    { strongestCategory: 'startingPitching', weakestCategory: 'defense', bestPlayerValue: { playerId: 'ana-1960s-messean01', playerName: 'Andy Messersmith', slotId: 'SP2', position: 'SP', value: 96.2 }, scoringVersion: '2.3' },
+  ],
+  'ranking diagnostics must preserve public category rankings, best-player values, and scoring version',
+)
+assert.deepEqual(Object.keys(average), [
+  'wins', 'losses', 'overallScore', 'overallGrade', 'tierLabel', 'categoryScores', 'categoryGrades',
+  'roster', 'strongestCategory', 'weakestCategory', 'bestPlayerValue', 'scoringVersion',
+], 'hidden diagnostics must not alter the DraftResult payload shape')
+assert.deepEqual(
+  {
+    overall: toScoreFixedPoint(averageRanking.rawOverallScore),
+    combinedMajor: toScoreFixedPoint(averageRanking.rawCombinedMajorScore),
+    rosterBalance: toScoreFixedPoint(averageRanking.rawRosterBalanceScore),
+  },
+  { overall: 68_529_656, combinedMajor: 276_850_000, rosterBalance: 71_763_083 },
+  'the existing average fixture must retain stable fixed-point ranking diagnostics',
+)
+assert.notEqual(averageRanking.rawOverallScore, average.overallScore, 'raw overall must remain available before public rounding')
+assert.equal(Math.round(averageRanking.rawOverallScore * 10) / 10, average.overallScore)
+assert.equal(Math.round(averageRanking.rawRosterBalanceScore * 10) / 10, average.categoryScores.rosterBalance)
+const roundedMajorSum = average.categoryScores.offense
+  + average.categoryScores.defense
+  + average.categoryScores.startingPitching
+  + average.categoryScores.reliefPitching
+assert(Math.abs(averageRanking.rawCombinedMajorScore - roundedMajorSum) <= .2, 'combined major score must use the four unrounded major categories')
+assert(averageRanking.rawCombinedMajorScore < roundedMajorSum + average.categoryScores.rosterBalance - 1, 'combined major score must exclude Roster Balance')
+assert.equal(SCORE_FIXED_POINT_SCALE, 1_000_000)
+assert.equal(toScoreFixedPoint(95.1234564), 95_123_456)
+assert.equal(toScoreFixedPoint(95.1234566), 95_123_457)
+assert.equal(fromScoreFixedPoint(95_123_456), 95.123456)
+assert.equal(toScoreFixedPoint(averageRanking.rawOverallScore), toScoreFixedPoint(calculateDraftResult(fixtureRoster('average', 'average')).diagnostics.rawOverallScore))
+assert.equal(Object.is(toScoreFixedPoint(-0), -0), false)
+assert.throws(() => toScoreFixedPoint(Number.NaN), /finite/)
+assert.throws(() => fromScoreFixedPoint(1.5), /safe integer/)
 
 assert.deepEqual(calculateDraftResult(fixtureRoster('strong', 'strong')).result, strong, 'the same roster must always return the same payload')
 for (const result of [weak, average, strong, perfect]) assert.equal(result.wins + result.losses, 162)
@@ -193,7 +277,11 @@ assert.equal(gradeForScore(80), 'B')
 assert.equal(gradeForScore(69), 'C')
 assert.equal(gradeForScore(20), 'F')
 
-assert.equal(strong.scoringVersion, '2.3')
+assert.equal(SCORING_VERSION, '2.3')
+assert.equal(strong.scoringVersion, SCORING_VERSION)
+for (const diagnosticField of ['rawOverallScore', 'rawCombinedMajorScore', 'rawRosterBalanceScore']) {
+  assert.equal(diagnosticField in average, false, `${diagnosticField} must remain hidden outside DraftResult`)
+}
 assert.equal(Object.keys(strong.roster).length, ROSTER_SLOTS.length)
 assert(strong.bestPlayerValue)
 assert(strong.strongestCategory && strong.weakestCategory)
@@ -210,4 +298,4 @@ assert.equal(calculateProjectedRecord({ ...average.categoryScores, overall: 65 }
 assert.equal(weak.wins, 61, 'weak benchmark projection must remain unchanged')
 assert.equal(average.wins, 88, 'average benchmark projection must remain unchanged')
 
-console.log(`Scoring v2.3 tests passed: weak ${weak.wins}–${weak.losses}, average ${average.wins}–${average.losses}, strong ${strong.wins}–${strong.losses}, perfect fixture ${perfect.wins}–${perfect.losses}.`)
+console.log(`Scoring v${SCORING_VERSION} tests passed: weak ${weak.wins}–${weak.losses}, average ${average.wins}–${average.losses}, strong ${strong.wins}–${strong.losses}, perfect fixture ${perfect.wins}–${perfect.losses}.`)

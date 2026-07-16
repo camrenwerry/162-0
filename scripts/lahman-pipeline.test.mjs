@@ -2,7 +2,16 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
-import { aggregateAppearances, aggregateRows, buildCandidate, buildLahmanData, canCompleteRoster, curatePool, FIELD_POSITIONS, findGeneratedConflictCopyFiles, hitterStats, isGeneratedConflictCopyFilename, parseCsv, POSITION_ORDER, selectFeatured, validateGeneratedData, validatePool } from './lib/lahman-pipeline.mjs'
+import {
+  aggregateAppearances, aggregateRows, buildCandidate, buildLahmanData,
+  calculateCanonicalDataDigest, canonicalJson, CANONICAL_DATA_DIGEST_ALGORITHM,
+  CANONICAL_DATA_DIGEST_SCHEMA, canCompleteRoster, createGeneratedRegistry,
+  createRuntimePools, curatePool, FIELD_POSITIONS,
+  findGeneratedConflictCopyFiles, hitterStats, isGeneratedConflictCopyFilename,
+  parseCsv, POSITION_ORDER, READINESS_SCHEMA_VERSION, selectFeatured,
+  validateCanonicalCombinations, validateGeneratedData, validatePool,
+  validateSharedVersionMetadata, writeGeneratedData,
+} from './lib/lahman-pipeline.mjs'
 import { runHistoricalAudits } from './lib/historical-audits.mjs'
 
 assert.deepEqual(parseCsv('id,name\n1,"Last, First"\n'), [{ id: '1', name: 'Last, First' }])
@@ -14,15 +23,139 @@ for (const filename of ['nyy-2020s.json', 'ab2-1930s.json', 'team2-2000s.json', 
   assert.equal(isGeneratedConflictCopyFilename(filename), false, `${filename}: ordinary numbers must remain valid`)
 }
 
+const digestCombinations = [
+  { id: 'tst-2000s', franchiseId: 'tst', team: 'TST', teamName: 'Test Club', decade: '2000s' },
+  { id: 'tst-2010s', franchiseId: 'tst', team: 'TST', teamName: 'Test Club', decade: '2010s' },
+]
+const digestPools = {
+  'tst-2010s': [{ id: 'tst-2010s-player03', featuredSeason: 2017, eligiblePositions: ['SP'], scoringStats: { fip: 2.9, inningsPitched: 210 } }],
+  'tst-2000s': [
+    { id: 'tst-2000s-player01', featuredSeason: 2001, eligiblePositions: ['SS', '2B'], scoringStats: { obp: .4, slg: .55 } },
+    { id: 'tst-2000s-player02', featuredSeason: 2008, eligiblePositions: ['RP'], scoringStats: { fip: 2.5, inningsPitched: 75 } },
+  ],
+}
+const reverseObjectKeys = (value) => {
+  if (Array.isArray(value)) return value.map(reverseObjectKeys)
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).reverse().map(([key, nested]) => [key, reverseObjectKeys(nested)]))
+  }
+  return value
+}
+const canonicalDigest = calculateCanonicalDataDigest(digestCombinations, digestPools)
+assert.match(canonicalDigest, /^[a-f0-9]{64}$/)
+assert.equal(calculateCanonicalDataDigest(digestCombinations, digestPools), canonicalDigest, 'identical canonical data must always produce the same digest')
+assert.equal(
+  calculateCanonicalDataDigest(digestCombinations.map(reverseObjectKeys), reverseObjectKeys(digestPools)),
+  canonicalDigest,
+  'object-key and runtime-pool enumeration order must not affect the digest',
+)
+assert.equal(
+  calculateCanonicalDataDigest(digestCombinations, { ...digestPools, 'tst-2000s 2': [{ id: 'conflict-copy-only' }] }),
+  canonicalDigest,
+  'unindexed conflict-copy pools must not enter the canonical digest',
+)
+assert.equal(canonicalJson({ z: 1, nested: { b: 2, a: 1 } }), canonicalJson({ nested: { a: 1, b: 2 }, z: 1 }))
+assert.equal(canonicalJson({ 10: 'ten', 2: 'two' }), '{"10":"ten","2":"two"}', 'canonical serialization must retain lexical key order even for integer-like keys')
+const changedDigestPools = structuredClone(digestPools)
+changedDigestPools['tst-2000s'][0].featuredSeason = 2002
+assert.notEqual(calculateCanonicalDataDigest(digestCombinations, changedDigestPools), canonicalDigest, 'a canonical card change must alter the digest')
+const reorderedCards = structuredClone(digestPools)
+reorderedCards['tst-2000s'].reverse()
+assert.notEqual(calculateCanonicalDataDigest(digestCombinations, reorderedCards), canonicalDigest, 'runtime card order is gameplay data and must alter the digest')
+assert.notEqual(calculateCanonicalDataDigest([...digestCombinations].reverse(), digestPools), canonicalDigest, 'combination order is gameplay data and must alter the digest')
+assert.throws(() => calculateCanonicalDataDigest(digestCombinations, { 'tst-2000s': [] }), /runtime pool is missing/)
+assert.throws(() => calculateCanonicalDataDigest([digestCombinations[0], digestCombinations[0]], digestPools), /duplicate IDs/)
+assert.deepEqual(validateCanonicalCombinations(digestCombinations), [])
+const unsafeCombination = { ...digestCombinations[0], id: "tst-2000s';process.exit(1);//" }
+assert(validateCanonicalCombinations([unsafeCombination]).some((message) => message.includes('safe generated-data ID')))
+assert(validateCanonicalCombinations([unsafeCombination]).some((message) => message.includes('franchiseId-decade')))
+assert.throws(() => createGeneratedRegistry([unsafeCombination]), /Invalid canonical combinations/)
+assert.deepEqual(validateSharedVersionMetadata({
+  schemaVersion: 1,
+  appVersion: '1.0.0',
+  gameRulesVersion: 'classic-rules-v1',
+  scoringVersion: '2.3',
+  dataVersion: 'lahman-2025-v1',
+  submissionSchemaVersion: null,
+  rngVersion: null,
+  leaderboardVersion: null,
+}), [])
+assert(validateSharedVersionMetadata({ schemaVersion: 'one', appVersion: 100, gameRulesVersion: null, scoringVersion: 23, dataVersion: 42 }).length >= 8, 'invalid or active-looking version metadata must be rejected')
+const projectedRuntimePool = createRuntimePools({
+  'tst-2000s': [{ ...digestPools['tst-2000s'][0], sourceMetadata: { verified: true }, stats: { auditOnly: true }, notes: 'audit only' }],
+})['tst-2000s']
+assert.equal('sourceMetadata' in projectedRuntimePool[0], false)
+assert.equal('stats' in projectedRuntimePool[0], false)
+assert.equal('notes' in projectedRuntimePool[0], false)
+assert.notEqual(canonicalJson([{ ...projectedRuntimePool[0], featuredSeason: 2002 }]), canonicalJson(projectedRuntimePool), 'runtime payload comparison must detect canonical gameplay changes')
+
+const preflightFixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'pennant-pursuit-generation-preflight-'))
+try {
+  const poolDirectory = path.join(preflightFixtureRoot, 'src/data/generated/pools')
+  const runtimeDirectory = path.join(preflightFixtureRoot, 'src/data/generated/runtime-pools')
+  const metadataDirectory = path.join(preflightFixtureRoot, 'src/config')
+  fs.mkdirSync(poolDirectory, { recursive: true })
+  fs.mkdirSync(runtimeDirectory, { recursive: true })
+  fs.mkdirSync(metadataDirectory, { recursive: true })
+  fs.writeFileSync(path.join(poolDirectory, 'existing.json'), 'full sentinel\n')
+  fs.writeFileSync(path.join(runtimeDirectory, 'existing.json'), 'runtime sentinel\n')
+  const assertSentinelsRemain = () => {
+    assert.equal(fs.readFileSync(path.join(poolDirectory, 'existing.json'), 'utf8'), 'full sentinel\n')
+    assert.equal(fs.readFileSync(path.join(runtimeDirectory, 'existing.json'), 'utf8'), 'runtime sentinel\n')
+  }
+  const emptyBuild = { combinations: [], pools: {}, report: { franchises: [] } }
+  fs.writeFileSync(path.join(metadataDirectory, 'versionMetadata.json'), '{}\n')
+  assert.throws(() => writeGeneratedData(preflightFixtureRoot, emptyBuild), /Invalid shared version metadata/)
+  assertSentinelsRemain()
+  fs.copyFileSync('src/config/versionMetadata.json', path.join(metadataDirectory, 'versionMetadata.json'))
+  assert.throws(() => writeGeneratedData(preflightFixtureRoot, {
+    combinations: [digestCombinations[0], digestCombinations[0]],
+    pools: { 'tst-2000s': digestPools['tst-2000s'] },
+    report: { franchises: [] },
+  }), /duplicate IDs/)
+  assertSentinelsRemain()
+  assert.throws(() => writeGeneratedData(preflightFixtureRoot, {
+    combinations: [],
+    pools: { 'unindexed-2000s': [] },
+    report: { franchises: [] },
+  }), /canonical pool is not indexed/)
+  assertSentinelsRemain()
+} finally {
+  fs.rmSync(preflightFixtureRoot, { recursive: true, force: true })
+}
+
 const conflictFixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'pennant-pursuit-conflict-copy-'))
 try {
   const generated = path.join(conflictFixtureRoot, 'src/data/generated')
+  const sharedVersions = JSON.parse(fs.readFileSync('src/config/versionMetadata.json', 'utf8'))
+  const emptyDigest = calculateCanonicalDataDigest([], {})
   fs.mkdirSync(path.join(conflictFixtureRoot, 'data-import'), { recursive: true })
+  fs.mkdirSync(path.join(conflictFixtureRoot, 'src/config'), { recursive: true })
   fs.mkdirSync(path.join(generated, 'pools'), { recursive: true })
   fs.mkdirSync(path.join(generated, 'runtime-pools'), { recursive: true })
   fs.writeFileSync(path.join(conflictFixtureRoot, 'data-import/lahman-build-config.json'), '{}\n')
+  fs.writeFileSync(path.join(conflictFixtureRoot, 'src/config/versionMetadata.json'), `${JSON.stringify(sharedVersions, null, 2)}\n`)
   fs.writeFileSync(path.join(generated, 'combinations.json'), '[]\n')
-  fs.writeFileSync(path.join(generated, 'readiness.json'), '{"blockingErrors":0,"combinations":0,"pools":0,"cards":0}\n')
+  fs.writeFileSync(path.join(generated, 'index.ts'), createGeneratedRegistry([]))
+  const fixtureReadiness = {
+    schemaVersion: READINESS_SCHEMA_VERSION,
+    versionMetadataSchemaVersion: sharedVersions.schemaVersion,
+    appVersion: sharedVersions.appVersion,
+    gameRulesVersion: sharedVersions.gameRulesVersion,
+    scoringVersion: sharedVersions.scoringVersion,
+    dataVersion: sharedVersions.dataVersion,
+    dataDigestAlgorithm: CANONICAL_DATA_DIGEST_ALGORITHM,
+    dataDigestSchema: CANONICAL_DATA_DIGEST_SCHEMA,
+    dataDigest: emptyDigest,
+    submissionSchemaVersion: null,
+    rngVersion: null,
+    leaderboardVersion: null,
+    blockingErrors: 0,
+    combinations: 0,
+    pools: 0,
+    cards: 0,
+  }
+  fs.writeFileSync(path.join(generated, 'readiness.json'), `${JSON.stringify(fixtureReadiness, null, 2)}\n`)
   fs.writeFileSync(path.join(generated, 'pools/nyy-2020s 2.json'), '[]\n')
   fs.writeFileSync(path.join(generated, 'runtime-pools/ab2-1930s 19.json'), '[]\n')
   const conflicts = [
@@ -31,6 +164,16 @@ try {
   ]
   assert.deepEqual(findGeneratedConflictCopyFiles(conflictFixtureRoot), conflicts)
   assert.deepEqual(validateGeneratedData(conflictFixtureRoot).errors, conflicts.map((file) => `generated data conflict-copy filename is not allowed: ${file}`))
+  fs.rmSync(path.join(generated, 'pools/nyy-2020s 2.json'))
+  fs.rmSync(path.join(generated, 'runtime-pools/ab2-1930s 19.json'))
+  fs.writeFileSync(path.join(generated, 'readiness.json'), `${JSON.stringify({ ...fixtureReadiness, dataDigest: '0'.repeat(64) }, null, 2)}\n`)
+  assert(validateGeneratedData(conflictFixtureRoot).errors.some((message) => message.includes('dataDigest does not match')), 'validation must reject a stale stored digest')
+  fs.writeFileSync(path.join(generated, 'readiness.json'), `${JSON.stringify(fixtureReadiness, null, 2)}\n`)
+  fs.writeFileSync(path.join(generated, 'runtime-pools/backup-copy.json'), '[]\n')
+  assert(validateGeneratedData(conflictFixtureRoot).errors.some((message) => message.includes('unexpected generated JSON file')), 'validation must reject JSON outside the exact combination allowlist')
+  fs.rmSync(path.join(generated, 'runtime-pools/backup-copy.json'))
+  fs.writeFileSync(path.join(generated, 'index.ts'), '// stale generated index\n')
+  assert(validateGeneratedData(conflictFixtureRoot).errors.some((message) => message.includes('runtime index does not match')), 'validation must reject an index that diverges from canonical combinations')
 } finally {
   fs.rmSync(conflictFixtureRoot, { recursive: true, force: true })
 }
@@ -407,6 +550,7 @@ for (const finding of historicalAudit.featuredSeasons) {
 const checkedIn = validateGeneratedData(process.cwd())
 assert.deepEqual(checkedIn.errors, [])
 assert.equal(checkedIn.combinations, built.combinations.length)
+assert.equal(checkedIn.dataDigest, 'e033f463caf37aa38037ba58c8fafe3be8358c93afe17f13a49ef117b6d4ed05')
 for (const poolId of ['ana-2010s', 'ana-2020s', 'lad-2020s']) {
   const generated = JSON.parse(fs.readFileSync(`src/data/generated/pools/${poolId}.json`, 'utf8')).find(({ playerId }) => playerId === 'ohtansh01')
   assert.deepEqual(generated, playableCard('ohtansh01', poolId), `${poolId} Ohtani must be regenerated from the corrected pipeline`)

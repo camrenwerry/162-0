@@ -1,4 +1,5 @@
 import type { DraftResult, Roster } from '../types/draft'
+import { SCORING_VERSION } from '../config/versions'
 import { calculateDraftResult, type ScoringDiagnostics } from './scoring/index'
 
 export interface Scoring {
@@ -13,7 +14,7 @@ export class PennantPursuitScoring implements Scoring {
   calculate(roster: Roster) {
     const calculation = calculateDraftResult(roster)
     this.lastDiagnostics = calculation.diagnostics
-    if (diagnosticsEnabled) console.debug('[Pennant Pursuit scoring v2.3]', calculation.diagnostics)
+    if (diagnosticsEnabled) console.debug(`[Pennant Pursuit scoring v${SCORING_VERSION}]`, calculation.diagnostics)
     return calculation.result
   }
 

@@ -1,3 +1,4 @@
+import type { ScoringVersion } from '../../config/versions'
 import type { DraftResult, Position, RosterSlotId, ScoringCategoryKey } from '../../types/draft'
 
 export type ScoringConfidence = 'high' | 'medium' | 'low'
@@ -46,8 +47,17 @@ export interface OverallAdjustment {
   value: number
 }
 
-export interface ScoringDiagnostics {
-  scoringVersion: '2.3'
+export interface RankingScoreDiagnostics {
+  /** Post-adjustment, post-transform overall score before public one-decimal rounding. */
+  rawOverallScore: number
+  /** Unrounded sum of offense, defense, starting pitching, and relief pitching only. */
+  rawCombinedMajorScore: number
+  /** Roster Balance before public one-decimal rounding. */
+  rawRosterBalanceScore: number
+}
+
+export interface ScoringDiagnostics extends RankingScoreDiagnostics {
+  scoringVersion: ScoringVersion
   playerValues: readonly PlayerValueResult[]
   categoryScores: Record<ScoringCategoryKey, number>
   baseOverallScore: number

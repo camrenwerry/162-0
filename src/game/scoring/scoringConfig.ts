@@ -1,9 +1,10 @@
 import type { LetterGrade, Position } from '../../types/draft'
+import { SCORING_VERSION } from '../../config/versions'
 import type { MetricRange } from './types'
 
 // All v2.3 tuning values live here. Ranges map poor/average/excellent/elite
 // featured-season performances onto the common 0–100 scoring scale.
-export const SCORING_VERSION = '2.3' as const
+export { SCORING_VERSION }
 
 export const NORMALIZATION_SCORE_ANCHORS = {
   poor: 35,

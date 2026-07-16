@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -17,6 +18,14 @@ const compareText = (a, b) => a.localeCompare(b, 'en')
 const overrideValue = (entry, key = 'value') => entry && typeof entry === 'object' ? entry[key] ?? entry.value : entry
 const GENERATED_POOL_DIRECTORIES = ['pools', 'runtime-pools']
 const GENERATED_CONFLICT_COPY_PATTERN = /(?:\s+\d+|\s*\(\d+\))\.json$/u
+const GENERATED_COMBINATION_ID_PATTERN = /^[a-z0-9-]+-\d{4}s$/u
+const GENERATED_FRANCHISE_ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u
+const GENERATED_DECADE_PATTERN = /^\d{4}s$/u
+const RUNTIME_AUDIT_ONLY_FIELDS = new Set(['sourceMetadata', 'sourceNotes', 'notes', 'manualPositionOverride', 'selectionMetadata', 'stats'])
+
+export const CANONICAL_DATA_DIGEST_ALGORITHM = 'sha256'
+export const CANONICAL_DATA_DIGEST_SCHEMA = 'pennant-pursuit-runtime-data-v1'
+export const READINESS_SCHEMA_VERSION = 2
 
 export const isGeneratedConflictCopyFilename = (filename) => GENERATED_CONFLICT_COPY_PATTERN.test(filename)
 
@@ -55,6 +64,113 @@ export function parseCsv(text) {
 
 const readCsv = (root, name) => parseCsv(fs.readFileSync(path.join(root, 'data-import/lahman', `${name}.csv`), 'utf8'))
 const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8'))
+
+export function readSharedVersionMetadata(root = process.cwd()) {
+  return readJson(path.join(root, 'src/config/versionMetadata.json'))
+}
+
+export function validateSharedVersionMetadata(metadata) {
+  const errors = []
+  if (!metadata || typeof metadata !== 'object' || Array.isArray(metadata)) return ['shared version metadata must be an object']
+  if (metadata.schemaVersion !== 1) errors.push('shared version metadata schemaVersion must be 1')
+  if (typeof metadata.appVersion !== 'string' || !/^\d+\.\d+\.\d+$/.test(metadata.appVersion)) errors.push('shared appVersion must be a semantic version string')
+  if (typeof metadata.gameRulesVersion !== 'string' || !metadata.gameRulesVersion.trim()) errors.push('shared gameRulesVersion must be a non-empty string')
+  if (typeof metadata.scoringVersion !== 'string' || !/^\d+\.\d+(?:\.\d+)?$/.test(metadata.scoringVersion)) errors.push('shared scoringVersion must be a numeric version string')
+  if (typeof metadata.dataVersion !== 'string' || !metadata.dataVersion.trim()) errors.push('shared dataVersion must be a non-empty string')
+  for (const field of ['submissionSchemaVersion', 'rngVersion', 'leaderboardVersion']) {
+    if (!Object.hasOwn(metadata, field) || metadata[field] !== null) errors.push(`shared ${field} must be explicitly null while inactive`)
+  }
+  return errors
+}
+
+export function validateCanonicalCombinations(combinations) {
+  if (!Array.isArray(combinations)) return ['canonical combinations must be an array']
+  const errors = []
+  const ids = []
+  combinations.forEach((combination, index) => {
+    const label = `canonical combination at index ${index}`
+    if (!combination || typeof combination !== 'object' || Array.isArray(combination)) {
+      errors.push(`${label} must be an object`)
+      return
+    }
+    for (const field of ['id', 'franchiseId', 'team', 'teamName', 'decade']) {
+      if (typeof combination[field] !== 'string' || !combination[field].trim()) errors.push(`${label} ${field} must be a non-empty string`)
+    }
+    const { id, franchiseId, decade } = combination
+    if (typeof id === 'string') {
+      ids.push(id)
+      if (!GENERATED_COMBINATION_ID_PATTERN.test(id)) errors.push(`${label} id is not a safe generated-data ID: ${id}`)
+    }
+    if (typeof franchiseId === 'string' && !GENERATED_FRANCHISE_ID_PATTERN.test(franchiseId)) errors.push(`${label} franchiseId is invalid: ${franchiseId}`)
+    if (typeof decade === 'string' && !GENERATED_DECADE_PATTERN.test(decade)) errors.push(`${label} decade is invalid: ${decade}`)
+    if (typeof id === 'string' && typeof franchiseId === 'string' && typeof decade === 'string' && id !== `${franchiseId}-${decade}`) {
+      errors.push(`${label} id must equal franchiseId-decade`)
+    }
+  })
+  if (new Set(ids).size !== ids.length) errors.push('canonical combinations contain duplicate IDs')
+  return errors
+}
+
+function assertCanonicalCombinations(combinations) {
+  const errors = validateCanonicalCombinations(combinations)
+  if (errors.length) throw new Error(`Invalid canonical combinations:\n${errors.join('\n')}`)
+}
+
+function serializeCanonicalJson(value) {
+  if (Array.isArray(value)) return `[${value.map(serializeCanonicalJson).join(',')}]`
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${serializeCanonicalJson(value[key])}`).join(',')}}`
+  }
+  return JSON.stringify(value)
+}
+
+export function canonicalJson(value) {
+  const serialized = JSON.stringify(value)
+  if (serialized === undefined) throw new TypeError('Canonical data must be JSON-serializable')
+  return serializeCanonicalJson(JSON.parse(serialized))
+}
+
+export function calculateCanonicalDataDigest(combinations, runtimePools) {
+  assertCanonicalCombinations(combinations)
+  const combinationIds = combinations.map(({ id }) => id)
+  const pools = Object.fromEntries(combinations.map(({ id }) => {
+    const cards = runtimePools[id]
+    if (!Array.isArray(cards)) throw new Error(`Canonical runtime pool is missing: ${id}`)
+    return [id, cards]
+  }))
+  const payload = canonicalJson({ domain: CANONICAL_DATA_DIGEST_SCHEMA, combinations, pools })
+  return createHash(CANONICAL_DATA_DIGEST_ALGORITHM).update(payload, 'utf8').digest('hex')
+}
+
+export function createRuntimePools(pools) {
+  return Object.fromEntries(Object.entries(pools).map(([id, cards]) => [
+    id,
+    cards.map((card) => Object.fromEntries(Object.entries(card).filter(([field]) => !RUNTIME_AUDIT_ONLY_FIELDS.has(field)))),
+  ]))
+}
+
+export function createGeneratedRegistry(combinations) {
+  assertCanonicalCombinations(combinations)
+  const imports = combinations.map(({ id }, index) => `import pool${index} from './runtime-pools/${id}.json'`).join('\n')
+  const entries = combinations.map(({ id }, index) => `  '${id}': pool${index} as unknown as PlayerCard[],`).join('\n')
+  return `${imports}\nimport combinations from './combinations.json'\nimport readiness from './readiness.json'\nimport type { PlayerCard, TeamDecade } from '../../types/draft'\n\nexport const PLAYER_POOLS: Readonly<Record<string, readonly PlayerCard[]>> = {\n${entries}\n}\n\nexport const TEAM_DECADES = combinations as TeamDecade[]\nexport const PLAYER_CARDS = Object.values(PLAYER_POOLS).flat()\nexport const DATA_READINESS = readiness\n`
+}
+
+function generatedVersionFields(metadata, dataDigest) {
+  return {
+    versionMetadataSchemaVersion: metadata.schemaVersion,
+    appVersion: metadata.appVersion,
+    gameRulesVersion: metadata.gameRulesVersion,
+    scoringVersion: metadata.scoringVersion,
+    dataVersion: metadata.dataVersion,
+    dataDigestAlgorithm: CANONICAL_DATA_DIGEST_ALGORITHM,
+    dataDigestSchema: CANONICAL_DATA_DIGEST_SCHEMA,
+    dataDigest,
+    submissionSchemaVersion: metadata.submissionSchemaVersion,
+    rngVersion: metadata.rngVersion,
+    leaderboardVersion: metadata.leaderboardVersion,
+  }
+}
 
 function deriveFranchiseIdentity(franchiseId, franchiseRow, teamRows) {
   const latest = [...teamRows].sort((a, b) => NUMBER(b.yearID) - NUMBER(a.yearID))[0]
@@ -584,14 +700,37 @@ export function buildLahmanData(root = process.cwd()) {
 
 export function validateGeneratedData(root = process.cwd()) {
   const config = readJson(path.join(root, 'data-import/lahman-build-config.json'))
+  const sharedVersionMetadata = readSharedVersionMetadata(root)
+  const sharedVersionMetadataErrors = validateSharedVersionMetadata(sharedVersionMetadata)
   const generated = path.join(root, 'src/data/generated')
   const combinations = readJson(path.join(generated, 'combinations.json'))
-  const poolFiles = fs.readdirSync(path.join(generated, 'pools')).filter((name) => /^[a-z0-9-]+-\d{4}s\.json$/.test(name))
-  const runtimeFiles = fs.readdirSync(path.join(generated, 'runtime-pools')).filter((name) => /^[a-z0-9-]+-\d{4}s\.json$/.test(name))
-  const indexedIds = new Set(combinations.map(({ id }) => id))
+  const combinationErrors = validateCanonicalCombinations(combinations)
   const errors = findGeneratedConflictCopyFiles(root)
     .map((file) => `generated data conflict-copy filename is not allowed: ${file}`)
-  const pools = []
+  errors.push(...sharedVersionMetadataErrors, ...combinationErrors)
+  if (combinationErrors.length) {
+    return { errors, combinations: Array.isArray(combinations) ? combinations.length : 0, cards: 0, pools: [], dataDigest: null }
+  }
+  const combinationIds = combinations.map(({ id }) => id)
+  const expectedFiles = new Set(combinationIds.map((id) => `${id}.json`))
+  const allPoolFiles = fs.readdirSync(path.join(generated, 'pools')).filter((name) => name.endsWith('.json'))
+  const allRuntimeFiles = fs.readdirSync(path.join(generated, 'runtime-pools')).filter((name) => name.endsWith('.json'))
+  const poolFiles = allPoolFiles.filter((name) => expectedFiles.has(name))
+  const runtimeFiles = allRuntimeFiles.filter((name) => expectedFiles.has(name))
+  const indexedIds = new Set(combinationIds)
+  if (combinationIds.some((id, index) => index > 0 && compareText(combinationIds[index - 1], id) > 0)) errors.push('canonical combinations must remain sorted by ID')
+  for (const [directory, files] of [['pools', allPoolFiles], ['runtime-pools', allRuntimeFiles]]) {
+    for (const file of files) {
+      if (!expectedFiles.has(file) && !isGeneratedConflictCopyFilename(file)) errors.push(`unexpected generated JSON file: src/data/generated/${directory}/${file}`)
+    }
+  }
+  const runtimePools = Object.fromEntries(combinations.flatMap(({ id }) => {
+    const filename = `${id}.json`
+    return runtimeFiles.includes(filename)
+      ? [[id, readJson(path.join(generated, 'runtime-pools', filename))]]
+      : []
+  }))
+  const pools = []; const cardLocations = new Map()
   for (const file of poolFiles) {
     const id = file.slice(0, -5)
     const cards = readJson(path.join(generated, 'pools', file))
@@ -599,57 +738,102 @@ export function validateGeneratedData(root = process.cwd()) {
     if (!combination) { errors.push(`${id}: pool file is not indexed`); continue }
     const validation = validatePool(cards, combination, config)
     errors.push(...validation.errors.map((message) => `${id}: ${message}`))
+    for (const card of cards) {
+      const existingPool = cardLocations.get(card.id)
+      if (existingPool) errors.push(`${card.id}: canonical card ID is duplicated across ${existingPool} and ${id}`)
+      else cardLocations.set(card.id, id)
+    }
     const runtimeFile = `${id}.json`
-    if (!runtimeFiles.includes(runtimeFile)) errors.push(`${id}: runtime pool is missing`)
-    else {
-      const runtimeCards = readJson(path.join(generated, 'runtime-pools', runtimeFile))
+    if (runtimeFiles.includes(runtimeFile)) {
+      const runtimeCards = runtimePools[id]
       if (runtimeCards.length !== cards.length) errors.push(`${id}: runtime pool card count mismatch`)
       if (runtimeCards.some((card, index) => card.id !== cards[index]?.id)) errors.push(`${id}: runtime pool identity mismatch`)
+      const expectedRuntimeCards = createRuntimePools({ [id]: cards })[id]
+      if (canonicalJson(runtimeCards) !== canonicalJson(expectedRuntimeCards)) errors.push(`${id}: runtime pool payload does not match canonical generated data`)
     }
     pools.push({ id, cards: cards.length, ...validation })
   }
   for (const id of indexedIds) if (!poolFiles.includes(`${id}.json`)) errors.push(`${id}: indexed pool file is missing`)
-  for (const file of runtimeFiles) if (!indexedIds.has(file.slice(0, -5))) errors.push(`${file.slice(0, -5)}: runtime pool is not indexed`)
+  for (const id of indexedIds) if (!runtimeFiles.includes(`${id}.json`)) errors.push(`${id}: indexed runtime pool file is missing`)
+  const indexPath = path.join(generated, 'index.ts')
+  if (!fs.existsSync(indexPath)) errors.push('generated runtime index is missing')
+  else if (fs.readFileSync(indexPath, 'utf8') !== createGeneratedRegistry(combinations)) errors.push('generated runtime index does not match canonical combinations')
   const cards = pools.reduce((total, pool) => total + pool.cards, 0)
+  const runtimeDataComplete = combinations.every(({ id }) => Array.isArray(runtimePools[id]))
+  const dataDigest = runtimeDataComplete && indexedIds.size === combinationIds.length
+    ? calculateCanonicalDataDigest(combinations, runtimePools)
+    : null
   const readinessPath = path.join(generated, 'readiness.json')
   if (!fs.existsSync(readinessPath)) errors.push('runtime readiness manifest is missing')
   else {
     const readiness = readJson(readinessPath)
+    if (readiness.schemaVersion !== READINESS_SCHEMA_VERSION) errors.push(`runtime readiness schema must be ${READINESS_SCHEMA_VERSION}`)
     if (readiness.blockingErrors !== 0) errors.push('runtime readiness manifest contains blocking errors')
     if (readiness.combinations !== combinations.length || readiness.pools !== pools.length || readiness.cards !== cards) errors.push('runtime readiness manifest does not match generated data')
+    if (!sharedVersionMetadataErrors.length) {
+      const expectedVersionFields = generatedVersionFields(sharedVersionMetadata, dataDigest)
+      for (const [field, expected] of Object.entries(expectedVersionFields)) {
+        if (field === 'dataDigest' && dataDigest === null) continue
+        if (readiness[field] !== expected) errors.push(`runtime readiness ${field} does not match shared/generated version metadata`)
+      }
+    }
+    if (typeof readiness.dataDigest !== 'string' || !/^[a-f0-9]{64}$/.test(readiness.dataDigest)) errors.push('runtime readiness dataDigest must be a lowercase SHA-256 hex digest')
   }
-  return { errors, combinations: combinations.length, cards, pools }
+  return { errors, combinations: combinations.length, cards, pools, dataDigest }
 }
 
 export function writeGeneratedData(root, built) {
   const directory = path.join(root, 'src/data/generated')
   const poolsDirectory = path.join(directory, 'pools')
   const runtimePoolsDirectory = path.join(directory, 'runtime-pools')
+  const json = (value) => `${JSON.stringify(value, null, 2)}\n`
+  const combinationErrors = validateCanonicalCombinations(built.combinations)
+  const combinationIds = combinationErrors.length ? [] : built.combinations.map(({ id }) => id)
+  if (combinationIds.some((id, index) => index > 0 && compareText(combinationIds[index - 1], id) > 0)) {
+    combinationErrors.push('canonical combinations must remain sorted by ID')
+  }
+  const expectedPoolIds = new Set(combinationIds)
+  const poolIds = Object.keys(built.pools)
+  for (const id of combinationIds) if (!Object.hasOwn(built.pools, id)) combinationErrors.push(`canonical pool is missing: ${id}`)
+  for (const id of poolIds) if (!expectedPoolIds.has(id)) combinationErrors.push(`canonical pool is not indexed: ${id}`)
+  if (combinationErrors.length) throw new Error(`Invalid generated data allowlist:\n${combinationErrors.join('\n')}`)
+  const runtimePools = createRuntimePools(built.pools)
+  const sharedVersionMetadata = readSharedVersionMetadata(root)
+  const versionMetadataErrors = validateSharedVersionMetadata(sharedVersionMetadata)
+  if (versionMetadataErrors.length) throw new Error(`Invalid shared version metadata:\n${versionMetadataErrors.join('\n')}`)
+  const dataDigest = calculateCanonicalDataDigest(built.combinations, runtimePools)
+  const generatedRegistry = createGeneratedRegistry(built.combinations)
+  const expectedPoolFiles = new Set(poolIds.map((id) => `${id}.json`))
+  const generatedPoolFiles = Object.entries(built.pools).map(([id, cards]) => ({
+    filename: `${id}.json`,
+    full: json(cards),
+    runtime: json(runtimePools[id]),
+  }))
+  const topLevelFiles = {
+    'combinations.json': json(built.combinations),
+    'franchises.json': json(built.report.franchises),
+    'data-report.json': json(built.report),
+    'readiness.json': json({
+      schemaVersion: READINESS_SCHEMA_VERSION,
+      ...generatedVersionFields(sharedVersionMetadata, dataDigest),
+      combinations: built.combinations.length,
+      pools: Object.keys(built.pools).length,
+      cards: Object.values(built.pools).reduce((total, cards) => total + cards.length, 0),
+      blockingErrors: 0,
+    }),
+  }
+
+  // Finish every validation and serialization step before mutating generated data.
   fs.mkdirSync(poolsDirectory, { recursive: true })
   fs.mkdirSync(runtimePoolsDirectory, { recursive: true })
-  for (const name of fs.readdirSync(poolsDirectory)) if (name.endsWith('.json')) fs.unlinkSync(path.join(poolsDirectory, name))
-  for (const name of fs.readdirSync(runtimePoolsDirectory)) if (name.endsWith('.json')) fs.unlinkSync(path.join(runtimePoolsDirectory, name))
-  const json = (value) => `${JSON.stringify(value, null, 2)}\n`
-  fs.writeFileSync(path.join(directory, 'combinations.json'), json(built.combinations))
-  fs.writeFileSync(path.join(directory, 'franchises.json'), json(built.report.franchises))
-  fs.writeFileSync(path.join(directory, 'data-report.json'), json(built.report))
-  fs.writeFileSync(path.join(directory, 'readiness.json'), json({
-    schemaVersion: 1,
-    combinations: built.combinations.length,
-    pools: Object.keys(built.pools).length,
-    cards: Object.values(built.pools).reduce((total, cards) => total + cards.length, 0),
-    blockingErrors: 0,
-  }))
-  const auditOnlyFields = new Set(['sourceMetadata', 'sourceNotes', 'notes', 'manualPositionOverride', 'selectionMetadata', 'stats'])
-  for (const [id, cards] of Object.entries(built.pools)) {
-    fs.writeFileSync(path.join(poolsDirectory, `${id}.json`), json(cards))
-    const runtimeCards = cards.map((card) => Object.fromEntries(Object.entries(card).filter(([field]) => !auditOnlyFields.has(field))))
-    fs.writeFileSync(path.join(runtimePoolsDirectory, `${id}.json`), json(runtimeCards))
+  for (const [filename, contents] of Object.entries(topLevelFiles)) {
+    fs.writeFileSync(path.join(directory, filename), contents)
   }
-  const expectedPoolFiles = new Set(Object.keys(built.pools).map((id) => `${id}.json`))
+  for (const { filename, full, runtime } of generatedPoolFiles) {
+    fs.writeFileSync(path.join(poolsDirectory, filename), full)
+    fs.writeFileSync(path.join(runtimePoolsDirectory, filename), runtime)
+  }
   for (const name of fs.readdirSync(poolsDirectory)) if (name.endsWith('.json') && !expectedPoolFiles.has(name)) fs.unlinkSync(path.join(poolsDirectory, name))
-  const imports = built.combinations.map(({ id }, index) => `import pool${index} from './runtime-pools/${id}.json'`).join('\n')
-  const entries = built.combinations.map(({ id }, index) => `  '${id}': pool${index} as unknown as PlayerCard[],`).join('\n')
-  const registry = `${imports}\nimport combinations from './combinations.json'\nimport readiness from './readiness.json'\nimport type { PlayerCard, TeamDecade } from '../../types/draft'\n\nexport const PLAYER_POOLS: Readonly<Record<string, readonly PlayerCard[]>> = {\n${entries}\n}\n\nexport const TEAM_DECADES = combinations as TeamDecade[]\nexport const PLAYER_CARDS = Object.values(PLAYER_POOLS).flat()\nexport const DATA_READINESS = readiness\n`
-  fs.writeFileSync(path.join(directory, 'index.ts'), registry)
+  for (const name of fs.readdirSync(runtimePoolsDirectory)) if (name.endsWith('.json') && !expectedPoolFiles.has(name)) fs.unlinkSync(path.join(runtimePoolsDirectory, name))
+  fs.writeFileSync(path.join(directory, 'index.ts'), generatedRegistry)
 }

@@ -41,6 +41,9 @@ export function calculateDraftResult(roster: Roster): ScoringCalculation {
     categoryScores: grades.categoryScores,
     baseOverallScore: grades.baseOverallScore,
     adjustments: grades.adjustments,
+    rawOverallScore: grades.rawOverallScore,
+    rawCombinedMajorScore: grades.rawCombinedMajorScore,
+    rawRosterBalanceScore: grades.rawRosterBalanceScore,
     projectedWinsBeforePerfectCheck: projection.winsBeforePerfectCheck,
     perfectRequirementsMet: projection.perfectRequirementsMet,
   }
@@ -49,6 +52,6 @@ export function calculateDraftResult(roster: Roster): ScoringCalculation {
 
 export { calculateHitterValue, calculateReliefPitcherValue, calculateStartingPitcherValue } from './calculatePlayerValue'
 export { calculateProjectedRecord, tierForWins } from './calculateProjectedRecord'
-export { calculateRosterGrades, gradeForScore } from './calculateRosterGrades'
-export { normalizeMetric, weightedScore } from './normalization'
+export { calculateRosterGrades, combinedMajorCategoryScore, gradeForScore, RANKING_MAJOR_CATEGORY_KEYS } from './calculateRosterGrades'
+export { fromScoreFixedPoint, normalizeMetric, SCORE_FIXED_POINT_SCALE, toScoreFixedPoint, weightedScore } from './normalization'
 export * from './types'

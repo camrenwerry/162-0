@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "appVersion": "1.0.0",
+  "gameRulesVersion": "classic-rules-v1",
+  "scoringVersion": "2.3",
+  "dataVersion": "lahman-2025-v1",
+  "submissionSchemaVersion": null,
+  "rngVersion": null,
+  "leaderboardVersion": null
+}

@@ -1,3 +1,5 @@
+import type { ScoringVersion } from '../config/versions'
+
 export const POSITIONS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH', 'SP', 'RP'] as const
 
 export const ROSTER_SLOTS = [
@@ -203,5 +205,5 @@ export interface DraftResult {
   strongestCategory: Exclude<ScoringCategoryKey, 'overall'>
   weakestCategory: Exclude<ScoringCategoryKey, 'overall'>
   bestPlayerValue: BestPlayerValue | null
-  scoringVersion: '2.3'
+  scoringVersion: ScoringVersion
 }

@@ -2,7 +2,7 @@ import type { LetterGrade, Roster, ScoringCategoryKey } from '../../types/draft'
 import { calculateHitterValue, calculateReliefPitcherValue, calculateStartingPitcherValue } from './calculatePlayerValue'
 import { BALANCE_WEIGHTS, CATEGORY_COMPONENT_WEIGHTS, CATEGORY_WEIGHTS, GRADE_THRESHOLDS, OVERALL_ADJUSTMENTS, OVERALL_TRANSFORM } from './scoringConfig'
 import { average, clamp, roundScore, transformScore } from './normalization'
-import type { OverallAdjustment, PlayerValueResult } from './types'
+import type { OverallAdjustment, PlayerValueResult, RankingScoreDiagnostics } from './types'
 
 const HITTER_SLOT_IDS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH'] as const
 const FIELDING_SLOT_IDS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF'] as const
@@ -16,7 +16,14 @@ export function gradeForScore(score: number): LetterGrade {
   return GRADE_THRESHOLDS.find(({ minimum }) => score >= minimum)?.grade ?? 'F'
 }
 
-export interface RosterGradeCalculation {
+export const RANKING_MAJOR_CATEGORY_KEYS = ['offense', 'defense', 'startingPitching', 'reliefPitching'] as const
+type MajorCategoryScores = Pick<Record<ScoringCategoryKey, number>, (typeof RANKING_MAJOR_CATEGORY_KEYS)[number]>
+
+export function combinedMajorCategoryScore(scores: MajorCategoryScores) {
+  return RANKING_MAJOR_CATEGORY_KEYS.reduce((total, category) => total + scores[category], 0)
+}
+
+export interface RosterGradeCalculation extends RankingScoreDiagnostics {
   categoryScores: Record<ScoringCategoryKey, number>
   categoryGrades: Record<ScoringCategoryKey, LetterGrade>
   playerValues: readonly PlayerValueResult[]
@@ -51,6 +58,7 @@ export function calculateRosterGrades(roster: Roster): RosterGradeCalculation {
   const reliefPitching = averageWithExpectedCount(relieverValues.map(({ value }) => value), RELIEVER_SLOT_IDS.length)
 
   const majorScores = [offense, defense, startingPitching, reliefPitching]
+  const rawCombinedMajorScore = combinedMajorCategoryScore({ offense, defense, startingPitching, reliefPitching })
   const categoryConsistency = average(majorScores) - (Math.max(...majorScores) - Math.min(...majorScores)) * CATEGORY_COMPONENT_WEIGHTS.categorySpreadRate
   const lineupDepth = averageLowest(HITTER_SLOT_IDS.map((slotId) => hitterValues.find((value) => value.slotId === slotId)?.value ?? 0), 3)
   const rotationDepth = averageLowest(STARTER_SLOT_IDS.map((slotId) => starterValues.find((value) => value.slotId === slotId)?.value ?? 0), 2)
@@ -101,5 +109,14 @@ export function calculateRosterGrades(roster: Roster): RosterGradeCalculation {
     Object.entries(categoryScores).map(([key, score]) => [key, gradeForScore(score)]),
   ) as Record<ScoringCategoryKey, LetterGrade>
 
-  return { categoryScores, categoryGrades, playerValues, baseOverallScore: roundScore(baseOverallScore), adjustments }
+  return {
+    categoryScores,
+    categoryGrades,
+    playerValues,
+    baseOverallScore: roundScore(baseOverallScore),
+    adjustments,
+    rawOverallScore: overall,
+    rawCombinedMajorScore,
+    rawRosterBalanceScore: rosterBalance,
+  }
 }
