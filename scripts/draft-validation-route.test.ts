@@ -6,7 +6,7 @@ import twoRerollsData from './fixtures/transcripts/ordinary-two-rerolls.json'
 import allTime145Data from './fixtures/transcripts/all-time-145.json'
 import { handleApiNotFoundRequest } from '../functions/api/[[path]]'
 import { handleHealthRequest } from '../functions/api/v1/health'
-import { handleValidateDraftRequest } from '../functions/api/v1/validate-draft'
+import { handleAuthoritativeValidationRequest } from '../workers/draft-validation/src/authoritative-validation'
 import {
   DRAFT_VALIDATION_ERROR_DEFINITIONS,
   type DraftValidationErrorCode,
@@ -41,6 +41,7 @@ const disabledEnv = { DRAFT_VALIDATION_MODE: 'disabled' } as BackendEnv
 
 const expectedPublicErrors = {
   not_found: [404, 'API route not found'],
+  rate_limited: [429, 'Too Many Requests'],
   method_not_allowed: [405, 'Method Not Allowed'],
   origin_not_allowed: [403, 'Request origin is not allowed.'],
   unsupported_media_type: [415, 'Request must use application/json without content encoding.'],
@@ -152,7 +153,7 @@ for (const [index, fixture] of fixtures.entries()) {
     CURRENT_CANONICAL_DRAFT_DATA,
     CURRENT_REPLAY_VERSION_SUPPORT,
   )).result
-  const response = await handleValidateDraftRequest(jsonRequest({ transcript: fixture.transcript }), enabledEnv)
+  const response = await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixture.transcript }), enabledEnv)
   assert.equal(response.status, 200, fixture.label)
   assertJsonHeaders(response)
   const body = await responseBody(response)
@@ -261,7 +262,7 @@ const duplicatePerson = fixtures
   .map(({ transcript }) => duplicatePersonVariant(transcript))
   .find((candidate) => candidate !== null)
 assert(duplicatePerson, 'two canonical cards for one source person must remain legal')
-assert.equal((await handleValidateDraftRequest(jsonRequest({ transcript: duplicatePerson }), enabledEnv)).status, 200)
+assert.equal((await handleAuthoritativeValidationRequest(jsonRequest({ transcript: duplicatePerson }), enabledEnv)).status, 200)
 
 const base = () => mutableTranscript(fixed113Data.transcript)
 const pickIndices = fixed113Data.transcript.events.flatMap((event, index) => event.type === 'pick' ? [index] : [])
@@ -275,7 +276,7 @@ async function tamper(
 ) {
   const candidate = base()
   mutate(candidate)
-  await assertError(await handleValidateDraftRequest(jsonRequest({ transcript: candidate }), enabledEnv), code)
+  await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ transcript: candidate }), enabledEnv), code)
 }
 
 await tamper('invalid_roll_sequence', (candidate) => { candidate.header.gameplaySeed = noRerollsData.transcript.header.gameplaySeed })
@@ -337,36 +338,36 @@ await tamper('invalid_seed', (candidate) => { candidate.header.gameplaySeed = 's
 await tamper('canonical_data_mismatch', (candidate) => { candidate.header.canonicalDataDigest = DATA_DIGEST.toUpperCase() })
 await tamper('invalid_reroll', (candidate) => { candidate.events[rerollIndex].reroll = 'franchise' })
 
-await assertError(await handleValidateDraftRequest(rawRequest('{'), enabledEnv), 'malformed_json')
-await assertError(await handleValidateDraftRequest(rawRequest(''), enabledEnv), 'malformed_json')
-await assertError(await handleValidateDraftRequest(rawRequest('   '), enabledEnv), 'malformed_json')
-await assertError(await handleValidateDraftRequest(rawRequest(new Uint8Array([0xc3, 0x28])), enabledEnv), 'malformed_json')
-await assertError(await handleValidateDraftRequest(rawRequest('1e400'), enabledEnv), 'invalid_request_schema')
-await assertError(await handleValidateDraftRequest(jsonRequest([]), enabledEnv), 'invalid_request_schema')
-await assertError(await handleValidateDraftRequest(jsonRequest(null), enabledEnv), 'invalid_request_schema')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest('{'), enabledEnv), 'malformed_json')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest(''), enabledEnv), 'malformed_json')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest('   '), enabledEnv), 'malformed_json')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest(new Uint8Array([0xc3, 0x28])), enabledEnv), 'malformed_json')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest('1e400'), enabledEnv), 'invalid_request_schema')
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest([]), enabledEnv), 'invalid_request_schema')
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest(null), enabledEnv), 'invalid_request_schema')
 const nonFiniteEvent = JSON.stringify({ transcript: fixed113Data.transcript }).replace('"round":1', '"round":1e400')
-await assertError(await handleValidateDraftRequest(rawRequest(nonFiniteEvent), enabledEnv), 'invalid_request_schema')
-await assertError(await handleValidateDraftRequest(rawRequest(' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES)), enabledEnv), 'malformed_json')
-await assertError(await handleValidateDraftRequest(rawRequest(' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES + 1)), enabledEnv), 'payload_too_large')
-await assertError(await handleValidateDraftRequest(rawRequest('{}', { 'Content-Type': 'text/plain' }), enabledEnv), 'unsupported_media_type')
-await assertError(await handleValidateDraftRequest(rawRequest('{}', {
+await assertError(await handleAuthoritativeValidationRequest(rawRequest(nonFiniteEvent), enabledEnv), 'invalid_request_schema')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest(' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES)), enabledEnv), 'malformed_json')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest(' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES + 1)), enabledEnv), 'payload_too_large')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest('{}', { 'Content-Type': 'text/plain' }), enabledEnv), 'unsupported_media_type')
+await assertError(await handleAuthoritativeValidationRequest(rawRequest('{}', {
   'Content-Type': 'application/json; charset=utf-8',
 }), enabledEnv), 'unsupported_media_type')
-await assertError(await handleValidateDraftRequest(rawRequest('{}', {
+await assertError(await handleAuthoritativeValidationRequest(rawRequest('{}', {
   'Content-Type': 'application/json',
   'Content-Encoding': 'gzip',
 }), enabledEnv), 'unsupported_media_type')
-await assertError(await handleValidateDraftRequest(rawRequest('{}', {
+await assertError(await handleAuthoritativeValidationRequest(rawRequest('{}', {
   'Content-Type': 'application/json',
   'Content-Length': String(MAX_DRAFT_VALIDATION_BODY_BYTES + 1),
 }), enabledEnv), 'payload_too_large')
-await assertError(await handleValidateDraftRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
   origin: 'https://attacker.example',
 }), enabledEnv), 'origin_not_allowed')
-await assertError(await handleValidateDraftRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
   headers: { Host: 'attacker.example' },
 }), enabledEnv), 'origin_not_allowed')
-assert.equal((await handleValidateDraftRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
+assert.equal((await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
   origin: 'https://preview.example.test',
 }), enabledEnv)).status, 200)
 
@@ -381,7 +382,7 @@ const oversizedStream = new ReadableStream<Uint8Array>({
     streamCancelled = true
   },
 })
-await assertError(await handleValidateDraftRequest(new Request(ENDPOINT, {
+await assertError(await handleAuthoritativeValidationRequest(new Request(ENDPOINT, {
   method: 'POST',
   headers: JSON_HEADERS,
   body: oversizedStream,
@@ -391,13 +392,13 @@ assert.equal(streamedChunks, 2, 'bounded reader must stop immediately after cros
 assert.equal(streamCancelled, true)
 
 const unknownEnvelope = { transcript: fixed113Data.transcript, extra: true }
-await assertError(await handleValidateDraftRequest(jsonRequest(unknownEnvelope), enabledEnv), 'invalid_request_schema')
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest(unknownEnvelope), enabledEnv), 'invalid_request_schema')
 const unknownTranscript = structuredClone(fixed113Data.transcript) as Record<string, unknown>
 unknownTranscript.extra = true
-await assertError(await handleValidateDraftRequest(jsonRequest({ transcript: unknownTranscript }), enabledEnv), 'invalid_request_schema')
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ transcript: unknownTranscript }), enabledEnv), 'invalid_request_schema')
 
 for (const method of ['GET', 'HEAD', 'PUT']) {
-  const methodResponse = await handleValidateDraftRequest(new Request(ENDPOINT, { method }), enabledEnv)
+  const methodResponse = await handleAuthoritativeValidationRequest(new Request(ENDPOINT, { method }), enabledEnv)
   await assertError(methodResponse, 'method_not_allowed')
   assert.equal(methodResponse.headers.get('Allow'), 'POST')
 }
@@ -417,7 +418,7 @@ const unreadRequest = new Request(ENDPOINT, {
 } as RequestInit & { duplex: 'half' })
 await Promise.resolve()
 const pullsBeforeDisabledHandler = bodyPulls
-const disabledResponse = await handleValidateDraftRequest(unreadRequest, disabledEnv)
+const disabledResponse = await handleAuthoritativeValidationRequest(unreadRequest, disabledEnv)
 assert.equal(disabledResponse.status, 404)
 assertJsonHeaders(disabledResponse)
 const disabledPayload = await disabledResponse.text()
@@ -428,7 +429,7 @@ assert.deepEqual(JSON.parse(disabledPayload), {
 assert.equal(bodyPulls, pullsBeforeDisabledHandler)
 await unreadRequest.body?.cancel().catch(() => undefined)
 for (const env of [{}, { DRAFT_VALIDATION_MODE: 'ENABLED' }, { DRAFT_VALIDATION_MODE: true }]) {
-  const response = await handleValidateDraftRequest(jsonRequest({ transcript: fixed113Data.transcript }), env as BackendEnv)
+  const response = await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }), env as BackendEnv)
   assert.equal(response.status, 404, 'missing and malformed flags must fail closed')
 }
 
@@ -442,7 +443,7 @@ const throwingDatabaseEnv = new Proxy({ DRAFT_VALIDATION_MODE: 'enabled' }, {
     return Reflect.get(target, property, receiver)
   },
 }) as BackendEnv
-assert.equal((await handleValidateDraftRequest(jsonRequest({ transcript: fixed113Data.transcript }), throwingDatabaseEnv)).status, 200)
+assert.equal((await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }), throwingDatabaseEnv)).status, 200)
 assert.equal(databaseReads, 0)
 
 for (const [env, expected] of [[enabledEnv, 'enabled'], [disabledEnv, 'disabled'], [{}, 'disabled']] as const) {

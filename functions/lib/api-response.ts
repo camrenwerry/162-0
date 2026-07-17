@@ -14,6 +14,7 @@ export const NOT_FOUND_PAYLOAD = Object.freeze({
 
 export const DRAFT_VALIDATION_ERROR_DEFINITIONS = Object.freeze({
   not_found: Object.freeze({ status: 404, message: 'API route not found' }),
+  rate_limited: Object.freeze({ status: 429, message: 'Too Many Requests' }),
   method_not_allowed: Object.freeze({ status: 405, message: 'Method Not Allowed' }),
   origin_not_allowed: Object.freeze({ status: 403, message: 'Request origin is not allowed.' }),
   unsupported_media_type: Object.freeze({ status: 415, message: 'Request must use application/json without content encoding.' }),

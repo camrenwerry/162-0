@@ -4,7 +4,7 @@ import fixed113Data from './fixtures/transcripts/fixed-113.json'
 import noRerollsData from './fixtures/transcripts/ordinary-no-rerolls.json'
 import twoRerollsData from './fixtures/transcripts/ordinary-two-rerolls.json'
 import allTime145Data from './fixtures/transcripts/all-time-145.json'
-import { handleValidateDraftRequest } from '../functions/api/v1/validate-draft'
+import { handleAuthoritativeValidationRequest } from '../workers/draft-validation/src/authoritative-validation'
 import { MAX_DRAFT_VALIDATION_BODY_BYTES } from '../functions/lib/bounded-json'
 import type { BackendEnv } from '../functions/lib/env'
 
@@ -36,7 +36,7 @@ function request(body: string, options: { method?: string, headers?: Record<stri
 }
 
 async function invoke(workload: Workload) {
-  const response = await handleValidateDraftRequest(workload.request(), workload.env ?? enabledEnv)
+  const response = await handleAuthoritativeValidationRequest(workload.request(), workload.env ?? enabledEnv)
   if (response.status !== workload.expectedStatus) {
     throw new Error(`${workload.label}: expected ${workload.expectedStatus}, received ${response.status}.`)
   }

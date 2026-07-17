@@ -15,6 +15,21 @@ All Cloudflare Pages preview deployments share `pennant-pursuit-preview`; a bran
 
 In `wrangler.toml`, each `database_id` is a real remote D1 database UUID. The top-level value `preview_database_id = "DB"` is the local Pages preview identifier used by Wrangler, not the UUID or name of another remote database. Local development must use Wrangler's local persistence and must not add `remote = true` to either binding. This prevents ordinary local requests from reaching a remote database.
 
+## Phase C4.1 validation isolation
+
+The default/preview Pages configuration also names a private Service Binding,
+`VALIDATION_SERVICE`, for `pennant-pursuit-validation-preview`. The standalone
+Worker configuration lives in `workers/draft-validation/`; it has no public URL,
+route, custom domain, storage binding, D1 binding, or production environment.
+It applies 5/10-second and 20/60-second per-location Rate Limiting policies to
+a Pages-derived versioned IP hash before validation parsing. The production
+Pages environment has no such binding and keeps `DRAFT_VALIDATION_MODE` disabled.
+
+This checked-in configuration is not a deployment record. C4.1 created no
+remote Worker, Rate Limiting namespace, route, domain, or D1 change. Any future
+preview deployment needs separate authorization; production validation remains
+out of scope and disabled.
+
 ## Local migration workflow
 
 Local state is persisted beneath the ignored `.wrangler/` directory:
@@ -31,6 +46,9 @@ Regenerate and check the Worker environment types after any binding change:
 npm run functions:types
 npm run functions:types:check
 npm run functions:typecheck
+npm run validation-worker:types:check
+npm run validation-worker:typecheck
+npm run test:validation-worker
 ```
 
 ## Remote preview migration workflow

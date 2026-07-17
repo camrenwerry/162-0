@@ -39,6 +39,10 @@ const auditedWranglerPhaseB = [
   'preview_database_id = "DB"',
   'migrations_dir = "migrations"',
   '',
+  '[[services]]',
+  'binding = "VALIDATION_SERVICE"',
+  'service = "pennant-pursuit-validation-preview"',
+  '',
   '[env.production]',
   '',
   '[env.production.vars]',
@@ -55,7 +59,7 @@ const wranglerConfiguration = wrangler
   .filter((line) => !line.trimStart().startsWith('#'))
   .join('\n')
   .trim()
-assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings and the fail-closed Phase C2 validation mode')
+assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings, the preview-only validation service, and the fail-closed production mode')
 assert.equal((wrangler.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^binding = "DB"$/gm) ?? []).length, 2)
@@ -66,6 +70,8 @@ assert.equal((wrangler.match(new RegExp(`^database_id = "${PRODUCTION_DATABASE_I
 assert.match(wrangler, /^preview_database_id = "DB"$/m)
 assert.equal((wrangler.match(/^migrations_dir = "migrations"$/gm) ?? []).length, 2)
 assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "disabled"\n\n\[\[env\.production\.d1_databases\]\]$/m)
+assert.match(wrangler, /^\[\[services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-preview"$/m)
+assert.doesNotMatch(wrangler, /^\[\[env\.production\.services\]\]$/m)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 1)
 assert.doesNotMatch(wrangler, /^\[env\.preview\]$/m)
@@ -78,7 +84,7 @@ assert.deepEqual(
 assert.notEqual(PREVIEW_DATABASE_ID, PRODUCTION_DATABASE_ID)
 for (const forbidden of [
   'compatibility_flags', 'secrets', 'kv_namespaces', 'r2_buckets',
-  'durable_objects', 'services', 'queues', 'vectorize', 'hyperdrive',
+  'durable_objects', 'queues', 'vectorize', 'hyperdrive',
   'analytics_engine_datasets', 'ai',
 ]) {
   assert.doesNotMatch(
@@ -103,8 +109,10 @@ assert.equal((source('migrations/0001_backend_foundation.sql').match(/INSERT INT
 const generatedTypes = source('functions/types.d.ts')
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "disabled" \| "enabled";/)
+assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?VALIDATION_SERVICE\?: Fetcher/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "disabled";/)
+assert.doesNotMatch(source('functions/types.d.ts'), /interface ProductionEnv\s*\{[\s\S]*?VALIDATION_SERVICE/)
 const envSource = source('functions/lib/env.ts')
 const databaseSource = source('functions/lib/database.ts')
 assert.match(envSource, /export type BackendEnv = Partial<Env>/)
@@ -125,6 +133,8 @@ assert.equal(packageJson.scripts['db:migrations:apply:production'], 'node script
 assert.equal(packageJson.scripts['test:production-migration'], 'node scripts/production-migration-guard.test.mjs')
 assert.match(packageJson.scripts['test:backend'], /backend-foundation\.test\.ts/)
 assert.match(packageJson.scripts['test:draft-validation'], /draft-validation-route\.test\.ts/)
+assert.match(packageJson.scripts['test:draft-validation-traffic-control'], /draft-validation-traffic-control\.test\.ts/)
+assert.match(packageJson.scripts['validation-worker:typecheck'], /workers\/draft-validation\/tsconfig\.json/)
 assert.match(packageJson.scripts['benchmark:draft-validation'], /draft-validation-benchmark\.ts/)
 assert.equal(SUBMISSION_SCHEMA_VERSION, null)
 assert.equal(LEADERBOARD_VERSION, null)
@@ -174,7 +184,25 @@ assert.deepEqual(readdirSync('functions/api/v1').sort(), ['health.ts', 'validate
 assert.deepEqual(readdirSync('migrations').sort(), ['0001_backend_foundation.sql'])
 const validationRouteSource = source('functions/api/v1/validate-draft.ts')
 assert.doesNotMatch(validationRouteSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
-assert.doesNotMatch(validationRouteSource, /\b(?:fetch|caches\.open)\s*\(|\bSet-Cookie\b|\bAccess-Control-Allow-Origin\b/)
+assert.doesNotMatch(validationRouteSource, /\bcaches\.open\s*\(|\bSet-Cookie\b|\bAccess-Control-Allow-Origin\b/)
+assert.match(validationRouteSource, /VALIDATION_SERVICE/)
+assert.doesNotMatch(validationRouteSource, /createWorkerReplayCatalog|replayDraftWithCatalog|calculateDraftResult|readBoundedJson/)
+
+const privateValidationWorkerConfig = source('workers/draft-validation/wrangler.toml')
+assert.match(privateValidationWorkerConfig, /workers_dev = false/)
+assert.match(privateValidationWorkerConfig, /preview_urls = false/)
+assert.doesNotMatch(privateValidationWorkerConfig, /\broutes\b|custom_domain|d1_|kv_|r2_|durable_objects|queues|analytics|secrets/)
+const privateValidationWorkerSource = source('workers/draft-validation/src/index.ts')
+const authoritativeValidationSource = source('workers/draft-validation/src/authoritative-validation.ts')
+// A module Worker must expose a `fetch` handler; guard against external fetches
+// rather than the handler method itself.
+assert.doesNotMatch(privateValidationWorkerSource, /\benv\.DB\b/)
+assert.doesNotMatch(privateValidationWorkerSource, /\bwaitUntil\b/)
+assert.doesNotMatch(privateValidationWorkerSource, /\bconsole\.(?:log|warn|error)\b/)
+assert.doesNotMatch(privateValidationWorkerSource, /\bawait\s+fetch\s*\(/)
+assert.doesNotMatch(privateValidationWorkerSource, /\bglobalThis\.fetch\s*\(/)
+assert.doesNotMatch(authoritativeValidationSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
+assert.doesNotMatch(authoritativeValidationSource, /\.run\s*\(|\.batch\s*\(|\.exec\s*\(/)
 
 const expectedHeaders = (response: Response) => {
   assert.equal(response.headers.get('Content-Type'), 'application/json; charset=utf-8')

@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs'
 import { performance } from 'node:perf_hooks'
 import noRerollsData from './fixtures/transcripts/ordinary-no-rerolls.json'
 import twoRerollsData from './fixtures/transcripts/ordinary-two-rerolls.json'
-import { handleValidateDraftRequest } from '../functions/api/v1/validate-draft'
+import { handleAuthoritativeValidationRequest } from '../workers/draft-validation/src/authoritative-validation'
 import {
   DRAFT_VALIDATION_ERROR_DEFINITIONS,
   DraftValidationPublicError,
@@ -78,13 +78,13 @@ async function expectRequestFailure(
   input: Request,
   code?: DraftValidationErrorCode,
 ) {
-  const response = await handleValidateDraftRequest(input, enabledEnv)
+  const response = await handleAuthoritativeValidationRequest(input, enabledEnv)
   await assertFailure(response, code)
   sampleHeap()
 }
 
 async function expectSuccess(input: Request) {
-  const response = await handleValidateDraftRequest(input, enabledEnv)
+  const response = await handleAuthoritativeValidationRequest(input, enabledEnv)
   assert.equal(response.status, 200)
   assertSafeHeaders(response)
   const body = await response.text()
@@ -289,7 +289,7 @@ assert.equal(lazyFailure(), null)
 assert.equal(lazyFailure(), null)
 assert.equal(failedInitializationCalls, 1, 'failed initialization must be cached')
 
-const validationRouteSource = readFileSync('functions/api/v1/validate-draft.ts', 'utf8')
+const validationRouteSource = readFileSync('workers/draft-validation/src/authoritative-validation.ts', 'utf8')
 assert.doesNotMatch(validationRouteSource, /\benv\.DB\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
 assert.doesNotMatch(validationRouteSource, /\bfetch\s*\(|\bcaches\.open\s*\(|Set-Cookie|Access-Control-Allow-Origin/)
 await expectRequestFailure(request(validBody, { ...JSON_HEADERS, Host: 'attacker.example' }), 'origin_not_allowed')

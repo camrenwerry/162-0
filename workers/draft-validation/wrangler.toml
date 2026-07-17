@@ -1,0 +1,29 @@
+name = "pennant-pursuit-validation-preview"
+main = "src/index.ts"
+compatibility_date = "2026-07-14"
+
+# This Worker is callable only through the Pages Service Binding. It has no
+# route or custom domain, and Wrangler must never create public URLs for it.
+workers_dev = false
+preview_urls = false
+
+[vars]
+DRAFT_VALIDATION_MODE = "enabled"
+
+# Namespace IDs are intentionally distinct from every future production
+# namespace. Rate-limit state is managed by Cloudflare, not application storage.
+[[ratelimits]]
+name = "RATE_LIMIT_BURST"
+namespace_id = "16204011"
+
+  [ratelimits.simple]
+  limit = 5
+  period = 10
+
+[[ratelimits]]
+name = "RATE_LIMIT_SUSTAINED"
+namespace_id = "16204012"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60

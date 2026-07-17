@@ -3,9 +3,11 @@
 Backend Phase C1 provides a shared, Worker-compatible replay and scoring
 foundation. Backend Phase C2 adds a preview-only, read-only HTTP adapter around
 that foundation. Backend Phase C3 hardens its bounded parsing, HTTP boundary,
-and catalog execution path without changing game behavior. No phase adds a submission protocol, identity,
-leaderboard, database access, persistence, analytics, moderation, or runtime
-writes.
+and catalog execution path without changing game behavior. Phase C4.1 moves the
+authoritative path behind a private, preview-only Worker and adds coarse abuse
+mitigation without changing the browser endpoint or game behavior. No phase
+adds a submission protocol, identity, leaderboard, database access,
+persistence, analytics, moderation, or runtime writes.
 
 ## Module boundaries
 
@@ -186,7 +188,7 @@ still be tested in an actual isolated preview Worker because isolate startup,
 platform CPU accounting, request parsing, and response serialization are not
 represented here.
 
-## Phase C2/C3 route and environment boundary
+## Phase C2/C3/C4.1 route and environment boundary
 
 `POST /api/v1/validate-draft` accepts exactly `{ "transcript": { ... } }`. The
 server replays the transcript with the compact canonical catalog and shared RNG,
@@ -286,6 +288,7 @@ API response exactly.
 | 403 | `origin_not_allowed` |
 | 404 | `not_found` |
 | 405 | `method_not_allowed` |
+| 429 | `rate_limited` |
 | 413 | `payload_too_large` |
 | 415 | `unsupported_media_type` |
 | 422 | `unsupported_transcript_version`, `unsupported_app_version`, `unsupported_rng_version`, `unsupported_rules_version`, `unsupported_scoring_version`, `unsupported_data_version`, `canonical_data_mismatch`, `invalid_seed`, `invalid_roll_sequence`, `invalid_reroll`, `invalid_card`, `wrong_pool`, `invalid_position`, `duplicate_card`, `incomplete_roster`, `unexpected_event_order` |
@@ -373,28 +376,29 @@ than per-request memory limits.
 
 | Workload | Mean ms | Median | p90 | p95 | p99 | Max | req/s | Heap Δ KiB |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Disabled production request | 0.0115 | 0.0112 | 0.0122 | 0.0127 | 0.0195 | 0.1495 | 86,817.3 | -5,818.2 |
-| Unsupported method | 0.0072 | 0.0071 | 0.0073 | 0.0075 | 0.0115 | 0.0938 | 139,171.2 | -317.9 |
-| Wrong content type | 0.0102 | 0.0101 | 0.0106 | 0.0109 | 0.0157 | 0.1027 | 97,830.7 | 6,159.6 |
-| Oversized body | 0.0114 | 0.0112 | 0.0118 | 0.0126 | 0.0172 | 0.1578 | 87,388.0 | 10,668.0 |
-| Malformed JSON | 0.0119 | 0.0117 | 0.0122 | 0.0129 | 0.0179 | 0.1440 | 83,961.5 | -5,079.7 |
-| Invalid schema | 0.0121 | 0.0104 | 0.0109 | 0.0118 | 0.0306 | 11.2113 | 82,597.2 | -7,085.3 |
-| Invalid first event | 0.1018 | 0.1007 | 0.1049 | 0.1096 | 0.1458 | 0.2167 | 9,820.4 | 8,937.4 |
-| Invalid final event | 0.5492 | 0.5395 | 0.5583 | 0.6028 | 0.6553 | 11.5739 | 1,820.8 | -6,103.3 |
-| Ordinary valid | 0.5793 | 0.5734 | 0.5935 | 0.6392 | 0.6946 | 2.0113 | 1,726.1 | 18,034.8 |
-| Two-reroll valid | 0.6054 | 0.5998 | 0.6207 | 0.6583 | 0.7475 | 1.0438 | 1,651.7 | 36,827.0 |
-| 145–17 valid | 0.6402 | 0.6365 | 0.6547 | 0.6923 | 0.7812 | 1.0148 | 1,561.9 | -40,833.6 |
-| Fixed 113–49 | 0.5912 | 0.5864 | 0.6038 | 0.6397 | 0.7341 | 0.8905 | 1,691.4 | 29,527.7 |
-| Maximum-size valid | 0.5928 | 0.5889 | 0.6054 | 0.6318 | 0.7265 | 0.8652 | 1,686.8 | 17,869.5 |
-| Ordinary valid, concurrency 5 | 0.5819 | 0.5766 | 0.5992 | 0.6086 | 0.6280 | 3.3261 | 1,718.5 | 34,913.1 |
+| Disabled production request | 0.0117 | 0.0113 | 0.0121 | 0.0125 | 0.0188 | 0.1591 | 85,576.7 | -5,471.0 |
+| Unsupported method | 0.0073 | 0.0071 | 0.0074 | 0.0075 | 0.0093 | 0.1287 | 137,594.4 | 96.6 |
+| Wrong content type | 0.0105 | 0.0102 | 0.0106 | 0.0112 | 0.0157 | 0.1237 | 95,435.2 | 6,589.5 |
+| Oversized body | 0.0115 | 0.0112 | 0.0117 | 0.0123 | 0.0170 | 0.1370 | 86,872.7 | -5,124.5 |
+| Malformed JSON | 0.0121 | 0.0117 | 0.0122 | 0.0128 | 0.0178 | 0.2207 | 82,777.7 | -4,682.0 |
+| Invalid schema | 0.0107 | 0.0105 | 0.0110 | 0.0113 | 0.0150 | 0.1266 | 93,024.3 | 9,693.8 |
+| Invalid first event | 0.1038 | 0.0999 | 0.1049 | 0.1094 | 0.1517 | 8.2218 | 9,629.5 | -7,451.3 |
+| Invalid final event | 0.5321 | 0.5242 | 0.5410 | 0.5835 | 0.6306 | 11.4618 | 1,879.3 | -6,112.1 |
+| Ordinary valid | 0.5635 | 0.5584 | 0.5775 | 0.6200 | 0.6802 | 1.9305 | 1,774.7 | -14,719.8 |
+| Two-reroll valid | 0.5958 | 0.5885 | 0.6061 | 0.6409 | 0.7365 | 8.8077 | 1,678.5 | -29,034.5 |
+| 145–17 valid | 0.6323 | 0.6283 | 0.6462 | 0.6814 | 0.7783 | 1.1347 | 1,581.5 | 25,254.5 |
+| Fixed 113–49 | 0.6012 | 0.5973 | 0.6136 | 0.6414 | 0.7424 | 1.0337 | 1,663.2 | 30,535.6 |
+| Maximum-size valid | 0.5855 | 0.5717 | 0.5954 | 0.6413 | 0.7559 | 22.2358 | 1,707.8 | -47,629.3 |
+| Ordinary valid, concurrency 5 | 0.5627 | 0.5592 | 0.5818 | 0.5928 | 0.6124 | 0.9001 | 1,777.0 | -29,465.1 |
 
-`npm run benchmark:draft-validation:startup` measured a 61.983 ms local route
-module import, 0.532 ms local health import, and 3.159 ms catalog construction.
-The catalog construction is now delayed until a structurally valid enabled
-validation request needs it. Those timings are local Vite/Node observations,
+The pre-C4.1 baseline measured a 61.983 ms local authoritative-route module
+import, 0.532 ms local health import, and 3.159 ms catalog construction. C4.1
+supersedes that route measurement with separate private-Worker and Pages-proxy
+startup figures below. Catalog construction remains delayed until a structurally
+valid enabled validation request needs it. These are local Vite/Node observations,
 not Cloudflare isolate timing.
 
-The final minified Pages Functions Worker bundle is 7,977,561 raw bytes and
+Before C4.1, the final minified Pages Functions Worker bundle was 7,977,561 raw bytes and
 1,099,278 gzip bytes. Its largest input is the 1,210,665-byte Worker catalog;
 the next individual inputs are compact runtime pools (43,121 bytes or less).
 The bundle is below Cloudflare's current 64 MB raw and 3 MB Free gzip Worker
@@ -410,7 +414,117 @@ catalog-construction call on startup. No deployment was attempted.
 Cloudflare documents a one-second startup limit and notes that local startup
 profiles are diagnostic, not deployment-equivalent.
 
-## Preview probe and rate-limit posture
+## C4.1 private preview Worker, traffic control, and local operation
+
+The browser still calls the same same-origin endpoint. C4.1 changes only its
+internal execution path:
+
+```text
+browser POST /api/v1/validate-draft
+  -> Pages proxy: feature flag + method/origin check + trusted key derivation
+  -> VALIDATION_SERVICE Service Binding
+  -> pennant-pursuit-validation-preview: rate limit + bounded validation
+```
+
+`workers/draft-validation/` is the standalone Worker project. It has no route,
+custom domain, `workers.dev` URL, preview URL, D1, KV, R2, Durable Object,
+queue, secret, analytics binding, storage, external fetch, cookie handling, or
+runtime write. Its only entry point is its Service-Binding-compatible `fetch`
+handler. The original C1/C2/C3 authoritative parser, replay, canonical catalog,
+and scoring code now live behind that handler; the Pages route does not import
+the catalog, parse a transcript, replay, or score.
+
+The Pages boundary runs the existing feature, method, and same-origin checks
+before it reads or forwards a request. It accepts the client IP only from
+Cloudflare's `CF-Connecting-IP`, validates its IPv4/IPv6 form, computes
+`v1:` plus SHA-256 of a domain-separated value with Web Crypto, and passes the
+digest in `X-Pennant-Pursuit-Rate-Key`. It never persists, logs, returns, or
+accepts that value from the browser. The proxy strips every browser-supplied
+copy of that internal key, all raw IP/forwarding headers, cookies, credentials,
+and other request metadata. It forwards only content type/length/encoding plus
+the generated key. A missing trusted IP or unavailable Service Binding is the
+sanitized existing 503 response. The private Worker rejects a missing or
+malformed key before calling a limiter.
+
+Both private Worker bindings run before any body parsing or validation:
+
+| Binding | Policy | Key |
+| --- | --- | --- |
+| `RATE_LIMIT_BURST` | 5 requests / 10 seconds | trusted `v1:` hash |
+| `RATE_LIMIT_SUSTAINED` | 20 requests / 60 seconds | trusted `v1:` hash |
+
+Every enabled request, including malformed and oversized bodies, consumes quota;
+health stays in Pages and never reaches this Worker. A failed burst check skips
+the sustained check. Either rejection returns the fixed 429 `rate_limited`
+payload with `Retry-After: 60` and the same no-store, nosniff, no-referrer, and
+same-origin response headers as every validation result. Cloudflare Rate
+Limiting counters are per location and eventually consistent: this is coarse
+burst mitigation, not global accounting or fair-play replay protection.
+
+The default/preview Pages configuration has the `VALIDATION_SERVICE` binding;
+`[env.production]` has none and still sets `DRAFT_VALIDATION_MODE = "disabled"`.
+Production therefore returns the generic 404 before body handling or Service
+Binding invocation. C4.1 created no Worker, route, namespace, custom domain, or
+deployment remotely; no production Worker exists from this work.
+
+Local commands are deliberately separate from remote operations:
+
+```bash
+npm run validation-worker:types:check
+npm run validation-worker:typecheck
+npm run test:validation-worker
+npm run validation-worker:build       # local Wrangler --dry-run only
+npm run pages:functions:build
+npm run validation-bundles:check
+npm run dev:validation-worker
+npm run dev:pages-with-validation
+```
+
+Use the two development commands in separate terminals when exercising a local
+Service Binding. Unit/integration tests instead use deterministic rate-limit
+doubles; they do not rely on a remote counter. A future authorized C4.2 preview
+rollout should: verify account/configuration and a clean reviewed revision,
+deploy the private preview Worker, deploy the Pages preview binding, verify the
+same-origin route and health, then capture preview measurements. Production
+requires a separate authorization and remains disabled. Preview rollback is to
+disable the preview feature flag or revert the Pages preview deployment, then
+revert the private preview Worker if necessary; there is no D1 schema or data
+rollback. Phase D still requires independently reviewed server-issued,
+short-lived, single-use tickets and replay protection before any result may be
+leaderboard-eligible.
+
+### C4.1 local measurements
+
+Measured on 2026-07-17 with Node.js 24.18.0, macOS arm64, Apple M4. Each
+focused workload used 10,000 warmups and 10,000 measured requests; the private
+Worker and Pages proxy figures consume every response body.
+
+| Workload | Mean ms | p95 ms | p99 ms |
+| --- | ---: | ---: | ---: |
+| Pages health handler | 0.0052 | 0.0062 | 0.0094 |
+| Authoritative ordinary, no limiter | 0.5585 | 0.6176 | 0.6599 |
+| Private Worker ordinary | 0.5589 | 0.6197 | 0.6645 |
+| Pages proxy ordinary | 0.5874 | 0.6377 | 0.7513 |
+| Private Worker two-reroll | 0.5934 | 0.6370 | 0.7337 |
+| Private Worker legal 145–17 | 0.6335 | 0.6838 | 0.7765 |
+| Private Worker malformed JSON | 0.0128 | 0.0132 | 0.0181 |
+| Private Worker burst-limited | 0.0104 | 0.0108 | 0.0132 |
+
+The local proxy delta was 0.0285 ms. The two limiter calls measured within local
+noise against the no-limiter baseline (0.0004 ms); they are asynchronous
+platform bindings in production and must be measured again after an authorized
+preview deployment. `wrangler check startup` completed for the private Worker
+and Pages bundles (local profiles: 63.359 ms across nine samples and 28.992 ms
+across two samples, respectively). These are diagnostic local profiles, not
+Cloudflare isolate timing.
+
+The minified private Worker dry-run bundle is 7,969,459 raw bytes and 1,096,245
+gzip bytes; the minified Pages proxy bundle is 14,943 raw bytes and 5,551 gzip
+bytes. Both pass the checked conservative 64 MiB raw and 3 MiB gzip guards; the
+Pages bundle is materially smaller than the previous all-in-Pages validation
+bundle. No deployment was performed while measuring them.
+
+### Historical preview probe
 
 The opt-in preview probe is intentionally capped at 100 requests per workload
 and concurrency five. With its defaults it makes 63 requests:
@@ -428,39 +542,6 @@ with a 3,184-byte body (132.79 ms mean), and invalid validation was 20/20 HTTP
 422 with a 114-byte body (217.27 ms mean). All returned `Cache-Control:
 no-store`; Cloudflare did not return `Server-Timing` or `CF-Cache-Status`.
 These are network measurements of the old deployment, not C3 release results.
-
-No rate limiter is added in C3. Pages documents that it supports only a subset
-of bindings; Rate Limiting is not in its documented Pages binding list, while
-the Workers Rate Limiting API is documented for Workers. Moving only this API
-to a standalone Worker at C4 would make that binding available, but it remains
-per-location and eventually consistent, so it is burst mitigation rather than
-strict global accounting. It also requires a new binding/configuration and
-separate authorization. Cloudflare WAF rate rules are a zone feature; the
-current `pages.dev` hostname has no project-controlled zone. A future custom
-domain in a Cloudflare zone enables a route-specific WAF rule, subject to the
-account plan and still with per-location counters.
-
-Recommendations:
-
-1. C3 preview: retain the strict body/CPU bounds and the conservative probe;
-   do not add an unreliable in-memory or D1 counter.
-2. C4 production read-only: require an approved traffic-control design before
-   enabling the flag—either a standalone Worker Rate Limiting binding for
-   coarse abuse mitigation, or a custom-domain WAF rate rule, plus a deployed
-   C3-preview measurement and startup profile.
-3. Phase D submissions: add an independently reviewed server-issued,
-   short-lived, single-use draft ticket/replay-protection protocol. Turnstile
-   can be a later human-abuse signal only when its server-side Siteverify call,
-   secret, hostname binding, expiry, and single-use behavior are designed with
-   the submission protocol; it is out of scope for C3.
-
-For a future production rollout, log no request body, seed, transcript, card
-ID, player ID, IP, user-agent, or request identifier. If operations requires
-logs, emit only a constant outcome, fixed public reason code, coarse duration
-bucket, and app/scoring/data versions; do not persist analytics in this phase.
-Rollback remains an approved feature-flag disable or Pages deployment revert.
-There is no storage, submissions, identity, tickets, leaderboard, analytics,
-moderation, D1 access from validation, or runtime write to roll back.
 
 Relevant Cloudflare references: [Workers limits](https://developers.cloudflare.com/workers/platform/limits/),
 [startup profiling](https://developers.cloudflare.com/workers/wrangler/commands/workers/),
