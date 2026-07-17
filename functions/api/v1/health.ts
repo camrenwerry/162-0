@@ -7,6 +7,11 @@ import {
   SCORING_VERSION,
 } from '../../../src/config/versions'
 import { TRANSCRIPT_SCHEMA_VERSION } from '../../../src/game/DraftTranscript'
+import {
+  EXPECTED_SCHEMA_VERSION,
+  readDatabaseHealth,
+} from '../../lib/database'
+import type { BackendEnv } from '../../lib/env'
 
 const ALLOWED_METHODS = 'GET, HEAD'
 
@@ -14,7 +19,7 @@ const dataVersionLabel = DATA_VERSION
   .replace(/^lahman-/i, 'Lahman ')
   .replace(/-v(\d+)$/i, ' (v$1)')
 
-const healthPayload = Object.freeze({
+const healthMetadata = Object.freeze({
   ok: true,
   service: 'pennant-pursuit',
   runtime: 'cloudflare-pages-functions',
@@ -30,12 +35,6 @@ const healthPayload = Object.freeze({
     canonicalDataDigest: DATA_DIGEST,
     transcriptSchema: TRANSCRIPT_SCHEMA_VERSION,
   }),
-  features: Object.freeze({
-    leaderboard: 'disabled',
-    submissions: 'disabled',
-    writes: 'disabled',
-    d1: 'not-configured',
-  }),
 })
 
 function responseHeaders() {
@@ -50,8 +49,23 @@ function jsonResponse(payload: unknown, status: number) {
   return new Response(JSON.stringify(payload), { status, headers: responseHeaders() })
 }
 
-export function handleHealthRequest(request: Request) {
-  if (request.method === 'GET') return jsonResponse(healthPayload, 200)
+export async function handleHealthRequest(request: Request, env: BackendEnv = {}) {
+  if (request.method === 'GET') {
+    const d1 = await readDatabaseHealth(env)
+    const healthy = !d1.configured
+      || (d1.reachable && d1.schemaVersion === EXPECTED_SCHEMA_VERSION)
+    return jsonResponse({
+      ...healthMetadata,
+      status: healthy ? 'healthy' : 'degraded',
+      backend: Object.freeze({ d1: Object.freeze(d1) }),
+      features: Object.freeze({
+        leaderboard: 'disabled',
+        submissions: 'disabled',
+        writes: 'disabled',
+        d1: d1.configured ? 'read-only' : 'not-configured',
+      }),
+    }, 200)
+  }
   if (request.method === 'HEAD') return new Response(null, { status: 200, headers: responseHeaders() })
   return jsonResponse({
     ok: false,
@@ -59,4 +73,4 @@ export function handleHealthRequest(request: Request) {
   }, 405)
 }
 
-export const onRequest: PagesFunction<Env> = ({ request }) => handleHealthRequest(request)
+export const onRequest: PagesFunction<BackendEnv> = ({ request, env }) => handleHealthRequest(request, env)

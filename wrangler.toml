@@ -5,4 +5,12 @@ name = "diamond-draft"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-07-14"
 
+[[d1_databases]]
+binding = "DB"
+database_name = "pennant-pursuit-preview"
+database_id = "ba6255b4-9425-4863-b10f-79149180f75a"
+preview_database_id = "DB"
+migrations_dir = "migrations"
+
 [env.production]
+d1_databases = []
