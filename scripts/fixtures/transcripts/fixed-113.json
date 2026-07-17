@@ -1,0 +1,342 @@
+{
+  "fixtureVersion": 1,
+  "fixtureKind": "transcript",
+  "label": "Existing fixed 113–49 transcript",
+  "expected": {
+    "wins": 113,
+    "losses": 49,
+    "overallScore": 82.4,
+    "overallGrade": "B+",
+    "tierLabel": "Championship Contender",
+    "categoryScores": {
+      "offense": 82.3,
+      "power": 82.8,
+      "contact": 82.3,
+      "speed": 59.9,
+      "defense": 80.9,
+      "startingPitching": 79.4,
+      "reliefPitching": 84.7,
+      "rosterBalance": 82.1,
+      "overall": 82.4
+    },
+    "categoryGrades": {
+      "offense": "B+",
+      "power": "B+",
+      "contact": "B+",
+      "speed": "D",
+      "defense": "B",
+      "startingPitching": "B",
+      "reliefPitching": "B+",
+      "rosterBalance": "B+",
+      "overall": "B+"
+    },
+    "strongestCategory": "reliefPitching",
+    "weakestCategory": "startingPitching",
+    "bestPlayerValue": {
+      "playerId": "oak-2010s-bailean01",
+      "playerName": "Andrew Bailey",
+      "slotId": "RP1",
+      "position": "RP",
+      "value": 87.8
+    },
+    "scoringVersion": "2.3",
+    "roster": {
+      "C": {
+        "canonicalCardId": "sfg-2010s-poseybu01",
+        "assignedPosition": "C"
+      },
+      "1B": {
+        "canonicalCardId": "mil-1970s-oglivbe01",
+        "assignedPosition": "1B"
+      },
+      "2B": {
+        "canonicalCardId": "chc-2000s-bellhma01",
+        "assignedPosition": "2B"
+      },
+      "3B": {
+        "canonicalCardId": "chw-1970s-meltobi01",
+        "assignedPosition": "3B"
+      },
+      "SS": {
+        "canonicalCardId": "ana-1960s-fregoji01",
+        "assignedPosition": "SS"
+      },
+      "LF": {
+        "canonicalCardId": "stl-2020s-burleal01",
+        "assignedPosition": "LF"
+      },
+      "CF": {
+        "canonicalCardId": "ari-2020s-carroco02",
+        "assignedPosition": "CF"
+      },
+      "RF": {
+        "canonicalCardId": "tor-1990s-winfida01",
+        "assignedPosition": "RF"
+      },
+      "DH": {
+        "canonicalCardId": "tbd-2000s-huffau01",
+        "assignedPosition": "DH"
+      },
+      "SP1": {
+        "canonicalCardId": "lad-1990s-bohanbr01",
+        "assignedPosition": "SP"
+      },
+      "SP2": {
+        "canonicalCardId": "det-1980s-petryda01",
+        "assignedPosition": "SP"
+      },
+      "SP3": {
+        "canonicalCardId": "cin-2000s-haranaa01",
+        "assignedPosition": "SP"
+      },
+      "RP1": {
+        "canonicalCardId": "oak-2010s-bailean01",
+        "assignedPosition": "RP"
+      },
+      "RP2": {
+        "canonicalCardId": "det-2000s-seaybo01",
+        "assignedPosition": "RP"
+      }
+    }
+  },
+  "transcript": {
+    "header": {
+      "transcriptSchemaVersion": "draft-transcript-v1",
+      "appVersion": "1.0.0",
+      "gameRulesVersion": "classic-rules-v1",
+      "rngVersion": "seeded-v1",
+      "scoringVersion": "2.3",
+      "dataVersion": "lahman-2025-v1",
+      "canonicalDataDigest": "e033f463caf37aa38037ba58c8fafe3be8358c93afe17f13a49ef117b6d4ed05",
+      "draftId": "c1000000-0000-4000-8000-000016201130",
+      "gameplaySeed": "seeded-v1:16201130162011301620113016201130",
+      "createdAt": "2026-07-17T00:00:00.000Z"
+    },
+    "events": [
+      {
+        "type": "initial-roll",
+        "round": 1,
+        "combinationId": "sfg-2010s"
+      },
+      {
+        "type": "pick",
+        "round": 1,
+        "pickOrder": 1,
+        "combinationId": "sfg-2010s",
+        "canonicalCardId": "sfg-2010s-poseybu01",
+        "sourcePlayerId": "poseybu01",
+        "assignedPosition": "C",
+        "featuredSeason": 2012
+      },
+      {
+        "type": "initial-roll",
+        "round": 2,
+        "combinationId": "ana-1970s"
+      },
+      {
+        "type": "reroll",
+        "reroll": "team",
+        "round": 2,
+        "discardedCombinationId": "ana-1970s",
+        "resultingCombinationId": "mil-1970s"
+      },
+      {
+        "type": "pick",
+        "round": 2,
+        "pickOrder": 2,
+        "combinationId": "mil-1970s",
+        "canonicalCardId": "mil-1970s-oglivbe01",
+        "sourcePlayerId": "oglivbe01",
+        "assignedPosition": "1B",
+        "featuredSeason": 1979
+      },
+      {
+        "type": "initial-roll",
+        "round": 3,
+        "combinationId": "chc-2000s"
+      },
+      {
+        "type": "pick",
+        "round": 3,
+        "pickOrder": 3,
+        "combinationId": "chc-2000s",
+        "canonicalCardId": "chc-2000s-bellhma01",
+        "sourcePlayerId": "bellhma01",
+        "assignedPosition": "2B",
+        "featuredSeason": 2002
+      },
+      {
+        "type": "initial-roll",
+        "round": 4,
+        "combinationId": "chw-1970s"
+      },
+      {
+        "type": "pick",
+        "round": 4,
+        "pickOrder": 4,
+        "combinationId": "chw-1970s",
+        "canonicalCardId": "chw-1970s-meltobi01",
+        "sourcePlayerId": "meltobi01",
+        "assignedPosition": "3B",
+        "featuredSeason": 1971
+      },
+      {
+        "type": "initial-roll",
+        "round": 5,
+        "combinationId": "ana-1960s"
+      },
+      {
+        "type": "pick",
+        "round": 5,
+        "pickOrder": 5,
+        "combinationId": "ana-1960s",
+        "canonicalCardId": "ana-1960s-fregoji01",
+        "sourcePlayerId": "fregoji01",
+        "assignedPosition": "SS",
+        "featuredSeason": 1964
+      },
+      {
+        "type": "initial-roll",
+        "round": 6,
+        "combinationId": "stl-2020s"
+      },
+      {
+        "type": "pick",
+        "round": 6,
+        "pickOrder": 6,
+        "combinationId": "stl-2020s",
+        "canonicalCardId": "stl-2020s-burleal01",
+        "sourcePlayerId": "burleal01",
+        "assignedPosition": "LF",
+        "featuredSeason": 2025
+      },
+      {
+        "type": "initial-roll",
+        "round": 7,
+        "combinationId": "ari-2020s"
+      },
+      {
+        "type": "pick",
+        "round": 7,
+        "pickOrder": 7,
+        "combinationId": "ari-2020s",
+        "canonicalCardId": "ari-2020s-carroco02",
+        "sourcePlayerId": "carroco02",
+        "assignedPosition": "CF",
+        "featuredSeason": 2023
+      },
+      {
+        "type": "initial-roll",
+        "round": 8,
+        "combinationId": "tor-1980s"
+      },
+      {
+        "type": "reroll",
+        "reroll": "era",
+        "round": 8,
+        "discardedCombinationId": "tor-1980s",
+        "resultingCombinationId": "tor-1990s"
+      },
+      {
+        "type": "pick",
+        "round": 8,
+        "pickOrder": 8,
+        "combinationId": "tor-1990s",
+        "canonicalCardId": "tor-1990s-winfida01",
+        "sourcePlayerId": "winfida01",
+        "assignedPosition": "RF",
+        "featuredSeason": 1992
+      },
+      {
+        "type": "initial-roll",
+        "round": 9,
+        "combinationId": "tbd-2000s"
+      },
+      {
+        "type": "pick",
+        "round": 9,
+        "pickOrder": 9,
+        "combinationId": "tbd-2000s",
+        "canonicalCardId": "tbd-2000s-huffau01",
+        "sourcePlayerId": "huffau01",
+        "assignedPosition": "DH",
+        "featuredSeason": 2003
+      },
+      {
+        "type": "initial-roll",
+        "round": 10,
+        "combinationId": "lad-1990s"
+      },
+      {
+        "type": "pick",
+        "round": 10,
+        "pickOrder": 10,
+        "combinationId": "lad-1990s",
+        "canonicalCardId": "lad-1990s-bohanbr01",
+        "sourcePlayerId": "bohanbr01",
+        "assignedPosition": "SP",
+        "featuredSeason": 1998
+      },
+      {
+        "type": "initial-roll",
+        "round": 11,
+        "combinationId": "det-1980s"
+      },
+      {
+        "type": "pick",
+        "round": 11,
+        "pickOrder": 11,
+        "combinationId": "det-1980s",
+        "canonicalCardId": "det-1980s-petryda01",
+        "sourcePlayerId": "petryda01",
+        "assignedPosition": "SP",
+        "featuredSeason": 1985
+      },
+      {
+        "type": "initial-roll",
+        "round": 12,
+        "combinationId": "cin-2000s"
+      },
+      {
+        "type": "pick",
+        "round": 12,
+        "pickOrder": 12,
+        "combinationId": "cin-2000s",
+        "canonicalCardId": "cin-2000s-haranaa01",
+        "sourcePlayerId": "haranaa01",
+        "assignedPosition": "SP",
+        "featuredSeason": 2007
+      },
+      {
+        "type": "initial-roll",
+        "round": 13,
+        "combinationId": "oak-2010s"
+      },
+      {
+        "type": "pick",
+        "round": 13,
+        "pickOrder": 13,
+        "combinationId": "oak-2010s",
+        "canonicalCardId": "oak-2010s-bailean01",
+        "sourcePlayerId": "bailean01",
+        "assignedPosition": "RP",
+        "featuredSeason": 2010
+      },
+      {
+        "type": "initial-roll",
+        "round": 14,
+        "combinationId": "det-2000s"
+      },
+      {
+        "type": "pick",
+        "round": 14,
+        "pickOrder": 14,
+        "combinationId": "det-2000s",
+        "canonicalCardId": "det-2000s-seaybo01",
+        "sourcePlayerId": "seaybo01",
+        "assignedPosition": "RP",
+        "featuredSeason": 2007
+      }
+    ]
+  }
+}

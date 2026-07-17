@@ -1,7 +1,14 @@
-import type { Hitter, Pitcher, Position, RosterSlotId, TwoWayPlayer } from '../../types/draft'
+import type { Position, RosterSlotId } from '../../types/draft'
 import { CATEGORY_COMPONENT_WEIGHTS, CONFIDENCE_CONFIG, DEFENSE_FALLBACK, NORMALIZATION_RANGES, PLAYER_WEIGHTS, POSITIONAL_ADJUSTMENTS, RATE_SCALES } from './scoringConfig'
 import { average, clamp, confidenceFor, normalizeMetric, roundScore, weightedFacetScore, weightedScore } from './normalization'
-import type { MetricContribution, MetricRange, PlayerValueResult } from './types'
+import type {
+  MetricContribution,
+  MetricRange,
+  PlayerValueResult,
+  ScoringHitter,
+  ScoringPitcher,
+  ScoringTwoWayPlayer,
+} from './types'
 
 type PendingContribution = Omit<MetricContribution, 'appliedWeight'>
 
@@ -15,7 +22,7 @@ const compact = (components: Array<PendingContribution | null>) => components.fi
 const pace = (value: number | null, opportunities: number, scale: number) => value === null || opportunities <= 0 ? null : value / opportunities * scale
 
 export function calculateHitterValue(
-  player: Hitter | TwoWayPlayer,
+  player: ScoringHitter | ScoringTwoWayPlayer,
   position: Exclude<Position, 'SP' | 'RP'>,
   slotId: RosterSlotId,
 ): PlayerValueResult {
@@ -90,12 +97,12 @@ export function calculateHitterValue(
   }
 }
 
-function pitcherData(player: Pitcher | TwoWayPlayer) {
+function pitcherData(player: ScoringPitcher | ScoringTwoWayPlayer) {
   if (player.playerType === 'pitcher') return { stats: player.visibleStats, scoring: player.scoringStats }
   return { stats: player.pitchingVisibleStats, scoring: player.pitchingScoringStats }
 }
 
-export function calculateStartingPitcherValue(player: Pitcher | TwoWayPlayer, slotId: RosterSlotId): PlayerValueResult {
+export function calculateStartingPitcherValue(player: ScoringPitcher | ScoringTwoWayPlayer, slotId: RosterSlotId): PlayerValueResult {
   const { stats, scoring } = pitcherData(player)
   const weights = PLAYER_WEIGHTS.starter
   const ranges = NORMALIZATION_RANGES.starter
@@ -131,7 +138,7 @@ export function calculateStartingPitcherValue(player: Pitcher | TwoWayPlayer, sl
   }
 }
 
-export function calculateReliefPitcherValue(player: Pitcher | TwoWayPlayer, slotId: RosterSlotId): PlayerValueResult {
+export function calculateReliefPitcherValue(player: ScoringPitcher | ScoringTwoWayPlayer, slotId: RosterSlotId): PlayerValueResult {
   const { stats, scoring } = pitcherData(player)
   const weights = PLAYER_WEIGHTS.reliever
   const ranges = NORMALIZATION_RANGES.reliever

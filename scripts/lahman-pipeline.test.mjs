@@ -6,11 +6,11 @@ import {
   aggregateAppearances, aggregateRows, buildCandidate, buildLahmanData,
   calculateCanonicalDataDigest, canonicalJson, CANONICAL_DATA_DIGEST_ALGORITHM,
   CANONICAL_DATA_DIGEST_SCHEMA, canCompleteRoster, createGeneratedRegistry,
-  createRuntimePools, curatePool, FIELD_POSITIONS,
+  createRuntimePools, createWorkerCatalog, curatePool, FIELD_POSITIONS,
   findGeneratedConflictCopyFiles, hitterStats, isGeneratedConflictCopyFilename,
   parseCsv, POSITION_ORDER, READINESS_SCHEMA_VERSION, selectFeatured,
   validateCanonicalCombinations, validateGeneratedData, validatePool,
-  validateSharedVersionMetadata, writeGeneratedData,
+  serializeWorkerCatalog, validateSharedVersionMetadata, writeGeneratedData,
 } from './lib/lahman-pipeline.mjs'
 import { runHistoricalAudits } from './lib/historical-audits.mjs'
 
@@ -159,6 +159,9 @@ try {
     cards: 0,
   }
   fs.writeFileSync(path.join(generated, 'readiness.json'), `${JSON.stringify(fixtureReadiness, null, 2)}\n`)
+  fs.writeFileSync(path.join(generated, 'worker-catalog.json'), serializeWorkerCatalog(createWorkerCatalog(
+    [], {}, sharedVersions, emptyDigest,
+  )))
   fs.writeFileSync(path.join(generated, 'pools/nyy-2020s 2.json'), '[]\n')
   fs.writeFileSync(path.join(generated, 'runtime-pools/ab2-1930s 19.json'), '[]\n')
   const conflicts = [
@@ -175,6 +178,14 @@ try {
   fs.writeFileSync(path.join(generated, 'runtime-pools/backup-copy.json'), '[]\n')
   assert(validateGeneratedData(conflictFixtureRoot).errors.some((message) => message.includes('unexpected generated JSON file')), 'validation must reject JSON outside the exact combination allowlist')
   fs.rmSync(path.join(generated, 'runtime-pools/backup-copy.json'))
+  fs.writeFileSync(path.join(generated, 'top-level-backup.json'), '{}\n')
+  assert(validateGeneratedData(conflictFixtureRoot).errors.some((message) => message.includes('unexpected generated JSON file')), 'validation must reject unexpected top-level generated JSON')
+  fs.rmSync(path.join(generated, 'top-level-backup.json'))
+  fs.writeFileSync(path.join(generated, 'worker-catalog.json'), '{}\n')
+  assert(validateGeneratedData(conflictFixtureRoot).errors.some((message) => message.includes('Worker catalog does not match')), 'validation must reject a stale Worker projection')
+  fs.writeFileSync(path.join(generated, 'worker-catalog.json'), serializeWorkerCatalog(createWorkerCatalog(
+    [], {}, sharedVersions, emptyDigest,
+  )))
   fs.writeFileSync(path.join(generated, 'index.ts'), '// stale generated index\n')
   assert(validateGeneratedData(conflictFixtureRoot).errors.some((message) => message.includes('runtime index does not match')), 'validation must reject an index that diverges from canonical combinations')
 } finally {

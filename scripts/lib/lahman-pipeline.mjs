@@ -26,6 +26,95 @@ const RUNTIME_AUDIT_ONLY_FIELDS = new Set(['sourceMetadata', 'sourceNotes', 'not
 export const CANONICAL_DATA_DIGEST_ALGORITHM = 'sha256'
 export const CANONICAL_DATA_DIGEST_SCHEMA = 'pennant-pursuit-runtime-data-v1'
 export const READINESS_SCHEMA_VERSION = 2
+export const WORKER_CATALOG_SCHEMA_VERSION = 1
+
+const WORKER_PLAYER_KINDS = Object.freeze({ hitter: 0, pitcher: 1, twoWay: 2 })
+
+const workerPositionMask = (positions) => positions.reduce((mask, position) => {
+  const index = POSITION_ORDER.indexOf(position)
+  if (index < 0) throw new Error(`Worker catalog cannot encode unknown position: ${position}`)
+  return mask | (1 << index)
+}, 0)
+
+const workerHitterVisibleStats = (card) => card.playerType === 'pitcher' ? null : [
+  card.visibleStats.ops,
+  card.visibleStats.obp,
+  card.visibleStats.slg,
+  card.visibleStats.hr,
+  card.visibleStats.rbi,
+  card.visibleStats.sb,
+  card.visibleStats.avg,
+]
+
+const workerPitcherVisibleStats = (card) => card.playerType === 'hitter' ? null : [
+  (card.playerType === 'pitcher' ? card.visibleStats : card.pitchingVisibleStats).era,
+  (card.playerType === 'pitcher' ? card.visibleStats : card.pitchingVisibleStats).whip,
+  (card.playerType === 'pitcher' ? card.visibleStats : card.pitchingVisibleStats).so,
+  (card.playerType === 'pitcher' ? card.visibleStats : card.pitchingVisibleStats).sv,
+]
+
+const workerHitterScoringStats = (card) => card.playerType === 'pitcher' ? null : [
+  card.scoringStats.plateAppearances,
+  card.scoringStats.games,
+  card.scoringStats.baserunningValue,
+  card.scoringStats.defensiveValue,
+  card.scoringStats.eraAdjustedOffense ?? null,
+]
+
+const workerPitcherScoringStats = (card) => card.playerType === 'hitter' ? null : [
+  (card.playerType === 'pitcher' ? card.scoringStats : card.pitchingScoringStats).fip,
+  (card.playerType === 'pitcher' ? card.scoringStats : card.pitchingScoringStats).inningsPitched,
+  (card.playerType === 'pitcher' ? card.scoringStats : card.pitchingScoringStats).strikeoutRate,
+  (card.playerType === 'pitcher' ? card.scoringStats : card.pitchingScoringStats).walkRate,
+  (card.playerType === 'pitcher' ? card.scoringStats : card.pitchingScoringStats).starts ?? null,
+  (card.playerType === 'pitcher' ? card.scoringStats : card.pitchingScoringStats).gamesStarted ?? null,
+  (card.playerType === 'pitcher' ? card.scoringStats : card.pitchingScoringStats).reliefAppearances,
+  (card.playerType === 'pitcher' ? card.scoringStats : card.pitchingScoringStats).eraAdjustedPitching ?? null,
+]
+
+export function projectWorkerCatalogCard(card) {
+  const kind = WORKER_PLAYER_KINDS[card.playerType]
+  if (kind === undefined) throw new Error(`Worker catalog cannot encode unknown player type for ${card.id}`)
+  return [
+    card.id,
+    card.playerId,
+    card.name,
+    card.featuredSeason,
+    workerPositionMask(card.eligiblePositions),
+    kind,
+    workerHitterVisibleStats(card),
+    workerPitcherVisibleStats(card),
+    workerHitterScoringStats(card),
+    workerPitcherScoringStats(card),
+  ]
+}
+
+export function createWorkerCatalog(combinations, runtimePools, metadata, dataDigest) {
+  assertCanonicalCombinations(combinations)
+  const versionErrors = validateSharedVersionMetadata(metadata)
+  if (versionErrors.length) throw new Error(`Invalid shared version metadata:\n${versionErrors.join('\n')}`)
+  if (typeof dataDigest !== 'string' || !/^[a-f0-9]{64}$/.test(dataDigest)) throw new Error('Worker catalog requires a canonical lowercase SHA-256 digest')
+  return {
+    schemaVersion: WORKER_CATALOG_SCHEMA_VERSION,
+    scoringVersion: metadata.scoringVersion,
+    dataVersion: metadata.dataVersion,
+    dataDigest,
+    combinations: combinations.map((combination) => {
+      const cards = runtimePools[combination.id]
+      if (!Array.isArray(cards)) throw new Error(`Canonical runtime pool is missing: ${combination.id}`)
+      return [
+        combination.id,
+        combination.franchiseId,
+        combination.team,
+        combination.teamName,
+        combination.decade,
+        cards.map(projectWorkerCatalogCard),
+      ]
+    }),
+  }
+}
+
+export const serializeWorkerCatalog = (catalog) => `${JSON.stringify(catalog)}\n`
 
 export const isGeneratedConflictCopyFilename = (filename) => GENERATED_CONFLICT_COPY_PATTERN.test(filename)
 
@@ -699,7 +788,7 @@ export function buildLahmanData(root = process.cwd()) {
   return { config, combinations, pools, report, auditContext: { candidates, selected, overrides } }
 }
 
-export function validateGeneratedData(root = process.cwd()) {
+export function validateGeneratedData(root = process.cwd(), options = {}) {
   const config = readJson(path.join(root, 'data-import/lahman-build-config.json'))
   const sharedVersionMetadata = readSharedVersionMetadata(root)
   const sharedVersionMetadataErrors = validateSharedVersionMetadata(sharedVersionMetadata)
@@ -714,6 +803,13 @@ export function validateGeneratedData(root = process.cwd()) {
   }
   const combinationIds = combinations.map(({ id }) => id)
   const expectedFiles = new Set(combinationIds.map((id) => `${id}.json`))
+  const validateWorkerCatalog = options.validateWorkerCatalog !== false
+  const expectedTopLevelJson = new Set(['combinations.json', 'data-report.json', 'franchises.json', 'readiness.json', 'worker-catalog.json'])
+  for (const entry of fs.readdirSync(generated, { withFileTypes: true })) {
+    if (entry.isFile() && entry.name.endsWith('.json') && !expectedTopLevelJson.has(entry.name)) {
+      errors.push(`unexpected generated JSON file: src/data/generated/${entry.name}`)
+    }
+  }
   const allPoolFiles = fs.readdirSync(path.join(generated, 'pools')).filter((name) => name.endsWith('.json'))
   const allRuntimeFiles = fs.readdirSync(path.join(generated, 'runtime-pools')).filter((name) => name.endsWith('.json'))
   const poolFiles = allPoolFiles.filter((name) => expectedFiles.has(name))
@@ -780,6 +876,21 @@ export function validateGeneratedData(root = process.cwd()) {
     }
     if (typeof readiness.dataDigest !== 'string' || !/^[a-f0-9]{64}$/.test(readiness.dataDigest)) errors.push('runtime readiness dataDigest must be a lowercase SHA-256 hex digest')
   }
+  if (validateWorkerCatalog && dataDigest !== null && !sharedVersionMetadataErrors.length) {
+    const workerCatalogPath = path.join(generated, 'worker-catalog.json')
+    if (!fs.existsSync(workerCatalogPath)) errors.push('generated Worker catalog is missing')
+    else {
+      const expectedWorkerCatalog = serializeWorkerCatalog(createWorkerCatalog(
+        combinations,
+        runtimePools,
+        sharedVersionMetadata,
+        dataDigest,
+      ))
+      if (fs.readFileSync(workerCatalogPath, 'utf8') !== expectedWorkerCatalog) {
+        errors.push('generated Worker catalog does not match canonical runtime data')
+      }
+    }
+  }
   return { errors, combinations: combinations.length, cards, pools, dataDigest }
 }
 
@@ -803,6 +914,7 @@ export function writeGeneratedData(root, built) {
   const versionMetadataErrors = validateSharedVersionMetadata(sharedVersionMetadata)
   if (versionMetadataErrors.length) throw new Error(`Invalid shared version metadata:\n${versionMetadataErrors.join('\n')}`)
   const dataDigest = calculateCanonicalDataDigest(built.combinations, runtimePools)
+  const workerCatalog = createWorkerCatalog(built.combinations, runtimePools, sharedVersionMetadata, dataDigest)
   const generatedRegistry = createGeneratedRegistry(built.combinations)
   const expectedPoolFiles = new Set(poolIds.map((id) => `${id}.json`))
   const generatedPoolFiles = Object.entries(built.pools).map(([id, cards]) => ({
@@ -822,6 +934,7 @@ export function writeGeneratedData(root, built) {
       cards: Object.values(built.pools).reduce((total, cards) => total + cards.length, 0),
       blockingErrors: 0,
     }),
+    'worker-catalog.json': serializeWorkerCatalog(workerCatalog),
   }
 
   // Finish every validation and serialization step before mutating generated data.

@@ -1,6 +1,74 @@
 import type { ScoringVersion } from '../../config/versions'
 import type { DraftResult, Position, RosterSlotId, ScoringCategoryKey } from '../../types/draft'
 
+export interface ScoringHitterVisibleStats {
+  readonly ops: number | null
+  readonly obp: number | null
+  readonly slg: number | null
+  readonly hr: number | null
+  readonly rbi: number | null
+  readonly sb: number | null
+  readonly avg: number | null
+}
+
+export interface ScoringPitcherVisibleStats {
+  readonly era: number | null
+  readonly whip: number | null
+  readonly so: number | null
+  readonly sv: number | null
+}
+
+export interface ScoringHitterStats {
+  readonly plateAppearances: number
+  readonly games: number
+  readonly baserunningValue: number | null
+  readonly defensiveValue: number | null
+  readonly eraAdjustedOffense?: number | null
+}
+
+export interface ScoringPitcherStats {
+  readonly fip: number | null
+  readonly inningsPitched: number
+  readonly strikeoutRate: number | null
+  readonly walkRate: number | null
+  readonly starts?: number
+  readonly gamesStarted?: number
+  readonly reliefAppearances: number
+  readonly eraAdjustedPitching?: number | null
+}
+
+interface ScoringPlayerBase {
+  readonly id: string
+  readonly name: string
+}
+
+export interface ScoringHitter extends ScoringPlayerBase {
+  readonly playerType: 'hitter'
+  readonly visibleStats: ScoringHitterVisibleStats
+  readonly pitchingVisibleStats: null
+  readonly scoringStats: ScoringHitterStats
+  readonly pitchingScoringStats: null
+}
+
+export interface ScoringPitcher extends ScoringPlayerBase {
+  readonly playerType: 'pitcher'
+  readonly visibleStats: ScoringPitcherVisibleStats
+  readonly pitchingVisibleStats: null
+  readonly scoringStats: ScoringPitcherStats
+  readonly pitchingScoringStats: null
+}
+
+export interface ScoringTwoWayPlayer extends ScoringPlayerBase {
+  readonly playerType: 'twoWay'
+  readonly visibleStats: ScoringHitterVisibleStats
+  readonly pitchingVisibleStats: ScoringPitcherVisibleStats
+  readonly scoringStats: ScoringHitterStats
+  readonly pitchingScoringStats: ScoringPitcherStats
+}
+
+export type ScoringPlayer = ScoringHitter | ScoringPitcher | ScoringTwoWayPlayer
+export type ScoringRoster<TPlayer extends ScoringPlayer = ScoringPlayer> = Partial<Record<RosterSlotId, TPlayer>>
+
 export type ScoringConfidence = 'high' | 'medium' | 'low'
 export type ScoringRole = 'hitter' | 'SP' | 'RP'
 
@@ -66,7 +134,7 @@ export interface ScoringDiagnostics extends RankingScoreDiagnostics {
   perfectRequirementsMet: boolean
 }
 
-export interface ScoringCalculation {
-  result: DraftResult
+export interface ScoringCalculation<TPlayer extends ScoringPlayer = ScoringPlayer> {
+  result: DraftResult<TPlayer>
   diagnostics: ScoringDiagnostics
 }

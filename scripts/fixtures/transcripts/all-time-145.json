@@ -1,0 +1,342 @@
+{
+  "fixtureVersion": 1,
+  "fixtureKind": "transcript",
+  "label": "Legal all-time 145–17 transcript",
+  "expected": {
+    "wins": 145,
+    "losses": 17,
+    "overallScore": 92.6,
+    "overallGrade": "A",
+    "tierLabel": "All-Time Great",
+    "categoryScores": {
+      "offense": 89,
+      "power": 88.6,
+      "contact": 89.5,
+      "speed": 71.4,
+      "defense": 86.5,
+      "startingPitching": 92.2,
+      "reliefPitching": 93.1,
+      "rosterBalance": 90.2,
+      "overall": 92.6
+    },
+    "categoryGrades": {
+      "offense": "A-",
+      "power": "A-",
+      "contact": "A-",
+      "speed": "C+",
+      "defense": "A-",
+      "startingPitching": "A",
+      "reliefPitching": "A+",
+      "rosterBalance": "A",
+      "overall": "A"
+    },
+    "strongestCategory": "reliefPitching",
+    "weakestCategory": "defense",
+    "bestPlayerValue": {
+      "playerId": "nyy-2000s-riverma01",
+      "playerName": "Mariano Rivera",
+      "slotId": "RP2",
+      "position": "RP",
+      "value": 94.5
+    },
+    "scoringVersion": "2.3",
+    "roster": {
+      "C": {
+        "canonicalCardId": "lad-1990s-piazzmi01",
+        "assignedPosition": "C"
+      },
+      "1B": {
+        "canonicalCardId": "tex-1970s-howarfr01",
+        "assignedPosition": "1B"
+      },
+      "2B": {
+        "canonicalCardId": "lad-1950s-robinja02",
+        "assignedPosition": "2B"
+      },
+      "3B": {
+        "canonicalCardId": "phi-1970s-schmimi01",
+        "assignedPosition": "3B"
+      },
+      "SS": {
+        "canonicalCardId": "kcr-2020s-wittbo02",
+        "assignedPosition": "SS"
+      },
+      "LF": {
+        "canonicalCardId": "sdp-2020s-sotoju01",
+        "assignedPosition": "LF"
+      },
+      "CF": {
+        "canonicalCardId": "sea-1980s-bradlph01",
+        "assignedPosition": "CF"
+      },
+      "RF": {
+        "canonicalCardId": "ana-1980s-jacksre01",
+        "assignedPosition": "RF"
+      },
+      "DH": {
+        "canonicalCardId": "sls-1920s-suttlmu99",
+        "assignedPosition": "DH"
+      },
+      "SP1": {
+        "canonicalCardId": "nym-1980s-goodedw01",
+        "assignedPosition": "SP"
+      },
+      "SP2": {
+        "canonicalCardId": "nym-2010s-degroja01",
+        "assignedPosition": "SP"
+      },
+      "SP3": {
+        "canonicalCardId": "bal-1970s-palmeji01",
+        "assignedPosition": "SP"
+      },
+      "RP1": {
+        "canonicalCardId": "tbd-2020s-adamja01",
+        "assignedPosition": "RP"
+      },
+      "RP2": {
+        "canonicalCardId": "nyy-2000s-riverma01",
+        "assignedPosition": "RP"
+      }
+    }
+  },
+  "transcript": {
+    "header": {
+      "transcriptSchemaVersion": "draft-transcript-v1",
+      "appVersion": "1.0.0",
+      "gameRulesVersion": "classic-rules-v1",
+      "rngVersion": "seeded-v1",
+      "scoringVersion": "2.3",
+      "dataVersion": "lahman-2025-v1",
+      "canonicalDataDigest": "e033f463caf37aa38037ba58c8fafe3be8358c93afe17f13a49ef117b6d4ed05",
+      "draftId": "c1000000-0000-4000-8000-00000000002e",
+      "gameplaySeed": "seeded-v1:0000002e9e3779e73c6ef3a0daa66d59",
+      "createdAt": "2026-07-17T00:00:00.000Z"
+    },
+    "events": [
+      {
+        "type": "initial-roll",
+        "round": 1,
+        "combinationId": "tbd-2020s"
+      },
+      {
+        "type": "pick",
+        "round": 1,
+        "pickOrder": 1,
+        "combinationId": "tbd-2020s",
+        "canonicalCardId": "tbd-2020s-adamja01",
+        "sourcePlayerId": "adamja01",
+        "assignedPosition": "RP",
+        "featuredSeason": 2022
+      },
+      {
+        "type": "initial-roll",
+        "round": 2,
+        "combinationId": "mil-1980s"
+      },
+      {
+        "type": "reroll",
+        "reroll": "team",
+        "round": 2,
+        "discardedCombinationId": "mil-1980s",
+        "resultingCombinationId": "nym-1980s"
+      },
+      {
+        "type": "pick",
+        "round": 2,
+        "pickOrder": 2,
+        "combinationId": "nym-1980s",
+        "canonicalCardId": "nym-1980s-goodedw01",
+        "sourcePlayerId": "goodedw01",
+        "assignedPosition": "SP",
+        "featuredSeason": 1985
+      },
+      {
+        "type": "initial-roll",
+        "round": 3,
+        "combinationId": "nyy-2000s"
+      },
+      {
+        "type": "pick",
+        "round": 3,
+        "pickOrder": 3,
+        "combinationId": "nyy-2000s",
+        "canonicalCardId": "nyy-2000s-riverma01",
+        "sourcePlayerId": "riverma01",
+        "assignedPosition": "RP",
+        "featuredSeason": 2008
+      },
+      {
+        "type": "initial-roll",
+        "round": 4,
+        "combinationId": "tex-1970s"
+      },
+      {
+        "type": "pick",
+        "round": 4,
+        "pickOrder": 4,
+        "combinationId": "tex-1970s",
+        "canonicalCardId": "tex-1970s-howarfr01",
+        "sourcePlayerId": "howarfr01",
+        "assignedPosition": "1B",
+        "featuredSeason": 1970
+      },
+      {
+        "type": "initial-roll",
+        "round": 5,
+        "combinationId": "nym-2010s"
+      },
+      {
+        "type": "pick",
+        "round": 5,
+        "pickOrder": 5,
+        "combinationId": "nym-2010s",
+        "canonicalCardId": "nym-2010s-degroja01",
+        "sourcePlayerId": "degroja01",
+        "assignedPosition": "SP",
+        "featuredSeason": 2018
+      },
+      {
+        "type": "initial-roll",
+        "round": 6,
+        "combinationId": "bal-1970s"
+      },
+      {
+        "type": "pick",
+        "round": 6,
+        "pickOrder": 6,
+        "combinationId": "bal-1970s",
+        "canonicalCardId": "bal-1970s-palmeji01",
+        "sourcePlayerId": "palmeji01",
+        "assignedPosition": "SP",
+        "featuredSeason": 1975
+      },
+      {
+        "type": "initial-roll",
+        "round": 7,
+        "combinationId": "kcr-2020s"
+      },
+      {
+        "type": "pick",
+        "round": 7,
+        "pickOrder": 7,
+        "combinationId": "kcr-2020s",
+        "canonicalCardId": "kcr-2020s-wittbo02",
+        "sourcePlayerId": "wittbo02",
+        "assignedPosition": "SS",
+        "featuredSeason": 2024
+      },
+      {
+        "type": "initial-roll",
+        "round": 8,
+        "combinationId": "ana-2010s"
+      },
+      {
+        "type": "reroll",
+        "reroll": "era",
+        "round": 8,
+        "discardedCombinationId": "ana-2010s",
+        "resultingCombinationId": "ana-1980s"
+      },
+      {
+        "type": "pick",
+        "round": 8,
+        "pickOrder": 8,
+        "combinationId": "ana-1980s",
+        "canonicalCardId": "ana-1980s-jacksre01",
+        "sourcePlayerId": "jacksre01",
+        "assignedPosition": "RF",
+        "featuredSeason": 1982
+      },
+      {
+        "type": "initial-roll",
+        "round": 9,
+        "combinationId": "lad-1990s"
+      },
+      {
+        "type": "pick",
+        "round": 9,
+        "pickOrder": 9,
+        "combinationId": "lad-1990s",
+        "canonicalCardId": "lad-1990s-piazzmi01",
+        "sourcePlayerId": "piazzmi01",
+        "assignedPosition": "C",
+        "featuredSeason": 1997
+      },
+      {
+        "type": "initial-roll",
+        "round": 10,
+        "combinationId": "sea-1980s"
+      },
+      {
+        "type": "pick",
+        "round": 10,
+        "pickOrder": 10,
+        "combinationId": "sea-1980s",
+        "canonicalCardId": "sea-1980s-bradlph01",
+        "sourcePlayerId": "bradlph01",
+        "assignedPosition": "CF",
+        "featuredSeason": 1985
+      },
+      {
+        "type": "initial-roll",
+        "round": 11,
+        "combinationId": "lad-1950s"
+      },
+      {
+        "type": "pick",
+        "round": 11,
+        "pickOrder": 11,
+        "combinationId": "lad-1950s",
+        "canonicalCardId": "lad-1950s-robinja02",
+        "sourcePlayerId": "robinja02",
+        "assignedPosition": "2B",
+        "featuredSeason": 1951
+      },
+      {
+        "type": "initial-roll",
+        "round": 12,
+        "combinationId": "sdp-2020s"
+      },
+      {
+        "type": "pick",
+        "round": 12,
+        "pickOrder": 12,
+        "combinationId": "sdp-2020s",
+        "canonicalCardId": "sdp-2020s-sotoju01",
+        "sourcePlayerId": "sotoju01",
+        "assignedPosition": "LF",
+        "featuredSeason": 2023
+      },
+      {
+        "type": "initial-roll",
+        "round": 13,
+        "combinationId": "phi-1970s"
+      },
+      {
+        "type": "pick",
+        "round": 13,
+        "pickOrder": 13,
+        "combinationId": "phi-1970s",
+        "canonicalCardId": "phi-1970s-schmimi01",
+        "sourcePlayerId": "schmimi01",
+        "assignedPosition": "3B",
+        "featuredSeason": 1974
+      },
+      {
+        "type": "initial-roll",
+        "round": 14,
+        "combinationId": "sls-1920s"
+      },
+      {
+        "type": "pick",
+        "round": 14,
+        "pickOrder": 14,
+        "combinationId": "sls-1920s",
+        "canonicalCardId": "sls-1920s-suttlmu99",
+        "sourcePlayerId": "suttlmu99",
+        "assignedPosition": "DH",
+        "featuredSeason": 1926
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+export { createWorkerReplayCatalog, WorkerCatalogError } from '../src/game/replay/WorkerCatalog'
+export { replayDraftWithCatalog } from '../src/game/replay/replayDraft'
+export { validateTranscriptShape } from '../src/game/replay/validateTranscript'
+export { calculateDraftResult } from '../src/game/scoring'
+export type { DraftTranscript } from '../src/game/DraftTranscript'
+export type { ReplayCatalog, ValidatedDraftRoster } from '../src/game/replay/types'
+export type { ScoringPlayer, ScoringRoster } from '../src/game/scoring/types'

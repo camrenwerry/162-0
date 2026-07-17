@@ -1,21 +1,21 @@
-import type { DraftResult, Roster, ScoringCategoryKey } from '../../types/draft'
+import type { DraftResult, ScoringCategoryKey } from '../../types/draft'
 import { calculateProjectedRecord } from './calculateProjectedRecord'
 import { calculateRosterGrades } from './calculateRosterGrades'
 import { SCORING_VERSION } from './scoringConfig'
-import type { ScoringCalculation, ScoringDiagnostics } from './types'
+import type { ScoringCalculation, ScoringDiagnostics, ScoringPlayer, ScoringRoster } from './types'
 
 const SUMMARY_CATEGORIES: Array<Exclude<ScoringCategoryKey, 'overall'>> = [
   'offense', 'defense', 'startingPitching', 'reliefPitching', 'rosterBalance',
 ]
 
-export function calculateDraftResult(roster: Roster): ScoringCalculation {
+export function calculateDraftResult<TPlayer extends ScoringPlayer>(roster: ScoringRoster<TPlayer>): ScoringCalculation<TPlayer> {
   const grades = calculateRosterGrades(roster)
   const projection = calculateProjectedRecord(grades.categoryScores, grades.playerValues)
   const rankedCategories = [...SUMMARY_CATEGORIES].sort((left, right) => (
     grades.categoryScores[right] - grades.categoryScores[left] || left.localeCompare(right)
   ))
   const bestPlayer = [...grades.playerValues].sort((left, right) => right.value - left.value || left.playerName.localeCompare(right.playerName))[0]
-  const result: DraftResult = {
+  const result: DraftResult<TPlayer> = {
     wins: projection.wins,
     losses: projection.losses,
     overallScore: grades.categoryScores.overall,

@@ -1,0 +1,122 @@
+{
+  "fixtureVersion": 1,
+  "fixtureKind": "roster-golden",
+  "label": "Constructive 162–0 roster golden (not a replay transcript)",
+  "roster": {
+    "C": "lad-1990s-piazzmi01",
+    "1B": "nyy-1920s-gehrilo01",
+    "2B": "stl-1920s-hornsro01",
+    "3B": "oak-1930s-foxxji01",
+    "SS": "tex-2000s-rodrial01",
+    "LF": "nyy-1920s-ruthba01",
+    "CF": "nyy-2020s-judgeaa01",
+    "RF": "col-1990s-walkela01",
+    "DH": "sfg-2000s-bondsba01",
+    "SP1": "bos-2000s-martipe02",
+    "SP2": "stl-1960s-gibsobo01",
+    "SP3": "nym-2010s-degroja01",
+    "RP1": "lad-2000s-gagneer01",
+    "RP2": "atl-2010s-kimbrcr01"
+  },
+  "expected": {
+    "wins": 162,
+    "losses": 0,
+    "overallScore": 95.4,
+    "overallGrade": "A+",
+    "tierLabel": "Perfect Season",
+    "categoryScores": {
+      "offense": 94.6,
+      "power": 96.1,
+      "contact": 96.1,
+      "speed": 67.3,
+      "defense": 85.4,
+      "startingPitching": 94.3,
+      "reliefPitching": 96.8,
+      "rosterBalance": 93.2,
+      "overall": 95.4
+    },
+    "categoryGrades": {
+      "offense": "A+",
+      "power": "S",
+      "contact": "S",
+      "speed": "C",
+      "defense": "B+",
+      "startingPitching": "A+",
+      "reliefPitching": "S",
+      "rosterBalance": "A+",
+      "overall": "A+"
+    },
+    "strongestCategory": "reliefPitching",
+    "weakestCategory": "defense",
+    "bestPlayerValue": {
+      "playerId": "lad-2000s-gagneer01",
+      "playerName": "Eric Gagne",
+      "slotId": "RP1",
+      "position": "RP",
+      "value": 97
+    },
+    "scoringVersion": "2.3",
+    "roster": {
+      "C": {
+        "canonicalCardId": "lad-1990s-piazzmi01",
+        "assignedPosition": "C"
+      },
+      "1B": {
+        "canonicalCardId": "nyy-1920s-gehrilo01",
+        "assignedPosition": "1B"
+      },
+      "2B": {
+        "canonicalCardId": "stl-1920s-hornsro01",
+        "assignedPosition": "2B"
+      },
+      "3B": {
+        "canonicalCardId": "oak-1930s-foxxji01",
+        "assignedPosition": "3B"
+      },
+      "SS": {
+        "canonicalCardId": "tex-2000s-rodrial01",
+        "assignedPosition": "SS"
+      },
+      "LF": {
+        "canonicalCardId": "nyy-1920s-ruthba01",
+        "assignedPosition": "LF"
+      },
+      "CF": {
+        "canonicalCardId": "nyy-2020s-judgeaa01",
+        "assignedPosition": "CF"
+      },
+      "RF": {
+        "canonicalCardId": "col-1990s-walkela01",
+        "assignedPosition": "RF"
+      },
+      "DH": {
+        "canonicalCardId": "sfg-2000s-bondsba01",
+        "assignedPosition": "DH"
+      },
+      "SP1": {
+        "canonicalCardId": "bos-2000s-martipe02",
+        "assignedPosition": "SP"
+      },
+      "SP2": {
+        "canonicalCardId": "stl-1960s-gibsobo01",
+        "assignedPosition": "SP"
+      },
+      "SP3": {
+        "canonicalCardId": "nym-2010s-degroja01",
+        "assignedPosition": "SP"
+      },
+      "RP1": {
+        "canonicalCardId": "lad-2000s-gagneer01",
+        "assignedPosition": "RP"
+      },
+      "RP2": {
+        "canonicalCardId": "atl-2010s-kimbrcr01",
+        "assignedPosition": "RP"
+      }
+    }
+  },
+  "expectedDiagnostics": {
+    "projectedWinsBeforePerfectCheck": 152,
+    "perfectRequirementsMet": true
+  }
+}

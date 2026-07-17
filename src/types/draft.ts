@@ -193,7 +193,7 @@ export interface BestPlayerValue {
   value: number
 }
 
-export interface DraftResult {
+export interface DraftResult<TPlayer = Player> {
   wins: number
   losses: number
   overallScore: number
@@ -201,7 +201,7 @@ export interface DraftResult {
   tierLabel: string
   categoryScores: Record<ScoringCategoryKey, number>
   categoryGrades: Record<ScoringCategoryKey, LetterGrade>
-  roster: Roster
+  roster: Partial<Record<RosterSlotId, TPlayer>>
   strongestCategory: Exclude<ScoringCategoryKey, 'overall'>
   weakestCategory: Exclude<ScoringCategoryKey, 'overall'>
   bestPlayerValue: BestPlayerValue | null

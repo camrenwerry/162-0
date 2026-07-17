@@ -1,8 +1,8 @@
-import type { LetterGrade, Roster, ScoringCategoryKey } from '../../types/draft'
+import type { LetterGrade, ScoringCategoryKey } from '../../types/draft'
 import { calculateHitterValue, calculateReliefPitcherValue, calculateStartingPitcherValue } from './calculatePlayerValue'
 import { BALANCE_WEIGHTS, CATEGORY_COMPONENT_WEIGHTS, CATEGORY_WEIGHTS, GRADE_THRESHOLDS, OVERALL_ADJUSTMENTS, OVERALL_TRANSFORM } from './scoringConfig'
 import { average, clamp, roundScore, transformScore } from './normalization'
-import type { OverallAdjustment, PlayerValueResult, RankingScoreDiagnostics } from './types'
+import type { OverallAdjustment, PlayerValueResult, RankingScoreDiagnostics, ScoringRoster } from './types'
 
 const HITTER_SLOT_IDS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'DH'] as const
 const FIELDING_SLOT_IDS = ['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF'] as const
@@ -31,7 +31,7 @@ export interface RosterGradeCalculation extends RankingScoreDiagnostics {
   adjustments: readonly OverallAdjustment[]
 }
 
-export function calculateRosterGrades(roster: Roster): RosterGradeCalculation {
+export function calculateRosterGrades(roster: ScoringRoster): RosterGradeCalculation {
   const hitterValues = HITTER_SLOT_IDS.flatMap((slotId) => {
     const player = roster[slotId]
     return player && player.playerType !== 'pitcher'
