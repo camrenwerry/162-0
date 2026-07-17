@@ -78,7 +78,7 @@ export function createSeededRandom(seed: string): SeededRandomSource {
 }
 
 function webCrypto() {
-  const source = globalThis.crypto
+  const source = crypto
   if (!source || typeof source.getRandomValues !== 'function') {
     throw new Error('Web Crypto getRandomValues is required to create local draft randomness.')
   }

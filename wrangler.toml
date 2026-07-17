@@ -5,6 +5,9 @@ name = "diamond-draft"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-07-14"
 
+[vars]
+DRAFT_VALIDATION_MODE = "enabled"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "pennant-pursuit-preview"
@@ -13,6 +16,9 @@ preview_database_id = "DB"
 migrations_dir = "migrations"
 
 [env.production]
+
+[env.production.vars]
+DRAFT_VALIDATION_MODE = "disabled"
 
 [[env.production.d1_databases]]
 binding = "DB"

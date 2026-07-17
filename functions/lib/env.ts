@@ -1,6 +1,4 @@
-export interface BackendEnv {
-  readonly DB?: D1Database
-}
+export type BackendEnv = Partial<Env>
 
 export function getOptionalDatabase(env: BackendEnv): D1Database | null {
   const database = env.DB

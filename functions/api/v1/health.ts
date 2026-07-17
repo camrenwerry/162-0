@@ -11,6 +11,7 @@ import {
   EXPECTED_SCHEMA_VERSION,
   readDatabaseHealth,
 } from '../../lib/database'
+import { draftValidationFeatureState } from '../../lib/draft-validation-mode'
 import type { BackendEnv } from '../../lib/env'
 
 const ALLOWED_METHODS = 'GET, HEAD'
@@ -59,6 +60,7 @@ export async function handleHealthRequest(request: Request, env: BackendEnv = {}
       status: healthy ? 'healthy' : 'degraded',
       backend: Object.freeze({ d1: Object.freeze(d1) }),
       features: Object.freeze({
+        draftValidation: draftValidationFeatureState(env),
         leaderboard: 'disabled',
         submissions: 'disabled',
         writes: 'disabled',

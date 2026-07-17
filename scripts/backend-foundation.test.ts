@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { handleApiNotFoundRequest } from '../functions/api/[[path]]'
 import { handleHealthRequest } from '../functions/api/v1/health'
 import type { BackendEnv } from '../functions/lib/env'
@@ -29,6 +29,9 @@ const auditedWranglerPhaseB = [
   'pages_build_output_dir = "dist"',
   'compatibility_date = "2026-07-14"',
   '',
+  '[vars]',
+  'DRAFT_VALIDATION_MODE = "enabled"',
+  '',
   '[[d1_databases]]',
   'binding = "DB"',
   'database_name = "pennant-pursuit-preview"',
@@ -37,6 +40,9 @@ const auditedWranglerPhaseB = [
   'migrations_dir = "migrations"',
   '',
   '[env.production]',
+  '',
+  '[env.production.vars]',
+  'DRAFT_VALIDATION_MODE = "disabled"',
   '',
   '[[env.production.d1_databases]]',
   'binding = "DB"',
@@ -49,7 +55,7 @@ const wranglerConfiguration = wrangler
   .filter((line) => !line.trimStart().startsWith('#'))
   .join('\n')
   .trim()
-assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must match the isolated preview/production Phase B configuration')
+assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings and the fail-closed Phase C2 validation mode')
 assert.equal((wrangler.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^binding = "DB"$/gm) ?? []).length, 2)
@@ -59,7 +65,9 @@ assert.equal((wrangler.match(new RegExp(`^database_id = "${PREVIEW_DATABASE_ID}"
 assert.equal((wrangler.match(new RegExp(`^database_id = "${PRODUCTION_DATABASE_ID}"$`, 'gm')) ?? []).length, 1)
 assert.match(wrangler, /^preview_database_id = "DB"$/m)
 assert.equal((wrangler.match(/^migrations_dir = "migrations"$/gm) ?? []).length, 2)
-assert.match(wrangler, /^\[env\.production\]\n\n\[\[env\.production\.d1_databases\]\]$/m)
+assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "disabled"\n\n\[\[env\.production\.d1_databases\]\]$/m)
+assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 1)
+assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 1)
 assert.doesNotMatch(wrangler, /^\[env\.preview\]$/m)
 assert.doesNotMatch(wrangler, /^remote\s*=/m)
 assert.deepEqual(
@@ -69,7 +77,7 @@ assert.deepEqual(
 )
 assert.notEqual(PREVIEW_DATABASE_ID, PRODUCTION_DATABASE_ID)
 for (const forbidden of [
-  'compatibility_flags', 'vars', 'secrets', 'kv_namespaces', 'r2_buckets',
+  'compatibility_flags', 'secrets', 'kv_namespaces', 'r2_buckets',
   'durable_objects', 'services', 'queues', 'vectorize', 'hyperdrive',
   'analytics_engine_datasets', 'ai',
 ]) {
@@ -94,10 +102,12 @@ assert.equal((source('migrations/0001_backend_foundation.sql').match(/INSERT INT
 
 const generatedTypes = source('functions/types.d.ts')
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB: D1Database;/)
+assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "disabled" \| "enabled";/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DB: D1Database;/)
+assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "disabled";/)
 const envSource = source('functions/lib/env.ts')
 const databaseSource = source('functions/lib/database.ts')
-assert.match(envSource, /readonly DB\?: D1Database/)
+assert.match(envSource, /export type BackendEnv = Partial<Env>/)
 assert.doesNotMatch(envSource + databaseSource, /from ['"]node:/)
 assert.doesNotMatch(databaseSource, /\.(?:run|batch|exec)\s*\(/)
 assert.equal((databaseSource.match(/\.first</g) ?? []).length, 2)
@@ -114,6 +124,8 @@ assert.equal(packageJson.scripts['db:migrations:list:production'], 'wrangler d1 
 assert.equal(packageJson.scripts['db:migrations:apply:production'], 'node scripts/apply-production-migrations.mjs')
 assert.equal(packageJson.scripts['test:production-migration'], 'node scripts/production-migration-guard.test.mjs')
 assert.match(packageJson.scripts['test:backend'], /backend-foundation\.test\.ts/)
+assert.match(packageJson.scripts['test:draft-validation'], /draft-validation-route\.test\.ts/)
+assert.match(packageJson.scripts['benchmark:draft-validation'], /draft-validation-benchmark\.ts/)
 assert.equal(SUBMISSION_SCHEMA_VERSION, null)
 assert.equal(LEADERBOARD_VERSION, null)
 
@@ -154,9 +166,15 @@ assert.match(
   /spawnSync\('wrangler', APPROVED_WRANGLER_COMMAND/,
 )
 
-const apiImplementations = ['functions/api/[[path]].ts', 'functions/api/v1/health.ts']
+const apiImplementations = ['functions/api/[[path]].ts', 'functions/api/v1/health.ts', 'functions/api/v1/validate-draft.ts']
 assert.deepEqual(apiImplementations.filter((path) => existsSync(path)), apiImplementations)
 assert.doesNotMatch(apiImplementations.map(source).join('\n'), /\.run\s*\(|\.batch\s*\(|\.exec\s*\(/)
+assert.deepEqual(readdirSync('functions/api').sort(), ['[[path]].ts', 'v1'])
+assert.deepEqual(readdirSync('functions/api/v1').sort(), ['health.ts', 'validate-draft.ts'])
+assert.deepEqual(readdirSync('migrations').sort(), ['0001_backend_foundation.sql'])
+const validationRouteSource = source('functions/api/v1/validate-draft.ts')
+assert.doesNotMatch(validationRouteSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
+assert.doesNotMatch(validationRouteSource, /\b(?:fetch|caches\.open)\s*\(|\bSet-Cookie\b|\bAccess-Control-Allow-Origin\b/)
 
 const expectedHeaders = (response: Response) => {
   assert.equal(response.headers.get('Content-Type'), 'application/json; charset=utf-8')
@@ -235,6 +253,7 @@ assert.deepEqual(await noDatabaseResponse.json(), {
   status: 'healthy',
   backend: { d1: { configured: false, reachable: false, schemaVersion: null } },
   features: {
+    draftValidation: 'disabled',
     leaderboard: 'disabled',
     submissions: 'disabled',
     writes: 'disabled',
@@ -250,6 +269,7 @@ assert.deepEqual(await healthyResponse.json(), {
   status: 'healthy',
   backend: { d1: { configured: true, reachable: true, schemaVersion: 1 } },
   features: {
+    draftValidation: 'disabled',
     leaderboard: 'disabled',
     submissions: 'disabled',
     writes: 'disabled',
@@ -266,6 +286,7 @@ assert.equal(unavailableResponse.status, 200)
 assert.deepEqual(JSON.parse(unavailableBody).backend.d1, { configured: true, reachable: false, schemaVersion: null })
 assert.equal(JSON.parse(unavailableBody).status, 'degraded')
 assert.deepEqual(JSON.parse(unavailableBody).features, {
+  draftValidation: 'disabled',
   leaderboard: 'disabled',
   submissions: 'disabled',
   writes: 'disabled',
@@ -329,4 +350,4 @@ assert.deepEqual(JSON.parse(source('dist/_routes.json')), expectedRoutes)
 assert.equal(source('public/_redirects').trim(), '/* /index.html 200')
 assert.equal(source('dist/_redirects').trim(), '/* /index.html 200')
 
-console.log('Backend Phase B passed: isolated preview/production D1 bindings, minimal schema, read-only health behavior, production guardrails, and API routing.')
+console.log('Backend Phase C2 passed: isolated D1 bindings, minimal schema, read-only health, preview-only validation, and exact API routing.')
