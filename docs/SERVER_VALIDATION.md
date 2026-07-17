@@ -414,7 +414,7 @@ catalog-construction call on startup. No deployment was attempted.
 Cloudflare documents a one-second startup limit and notes that local startup
 profiles are diagnostic, not deployment-equivalent.
 
-## C4.1 private preview Worker, traffic control, and local operation
+## C4.1/C4.3 private Workers, traffic control, and local operation
 
 The browser still calls the same same-origin endpoint. C4.1 changes only its
 internal execution path:
@@ -426,13 +426,15 @@ browser POST /api/v1/validate-draft
   -> pennant-pursuit-validation-preview: rate limit + bounded validation
 ```
 
-`workers/draft-validation/` is the standalone Worker project. It has no route,
-custom domain, `workers.dev` URL, preview URL, D1, KV, R2, Durable Object,
-queue, secret, analytics binding, storage, external fetch, cookie handling, or
-runtime write. Its only entry point is its Service-Binding-compatible `fetch`
-handler. The original C1/C2/C3 authoritative parser, replay, canonical catalog,
-and scoring code now live behind that handler; the Pages route does not import
-the catalog, parse a transcript, replay, or score.
+`workers/draft-validation/` is one shared Worker source with two explicit,
+private deployment targets: preview `pennant-pursuit-validation-preview` and
+production `pennant-pursuit-validation-production`. Both disable `workers.dev`
+and Worker preview URLs and have no route, custom domain, D1, KV, R2, Durable
+Object, queue, secret, analytics binding, storage, external fetch, cookie
+handling, or runtime write. Their only entry point is the Service-Binding-
+compatible `fetch` handler. The original C1/C2/C3 authoritative parser, replay,
+canonical catalog, and scoring code live behind that handler; the Pages route
+does not import the catalog, parse a transcript, replay, or score.
 
 The Pages boundary runs the existing feature, method, and same-origin checks
 before it reads or forwards a request. It accepts the client IP only from
@@ -461,11 +463,14 @@ same-origin response headers as every validation result. Cloudflare Rate
 Limiting counters are per location and eventually consistent: this is coarse
 burst mitigation, not global accounting or fair-play replay protection.
 
-The default/preview Pages configuration has the `VALIDATION_SERVICE` binding;
-`[env.production]` has none and still sets `DRAFT_VALIDATION_MODE = "disabled"`.
-Production therefore returns the generic 404 before body handling or Service
-Binding invocation. C4.1 created no Worker, route, namespace, custom domain, or
-deployment remotely; no production Worker exists from this work.
+The default/preview Pages configuration binds `VALIDATION_SERVICE` only to
+`pennant-pursuit-validation-preview`, with namespaces `16204011` and
+`16204012`. `[env.production]` binds that same name only to
+`pennant-pursuit-validation-production`, with namespaces `16204021` and
+`16204022`; the two counters are never shared. The Pages production feature
+flag still sets `DRAFT_VALIDATION_MODE = "disabled"`. Production therefore
+returns the generic 404 before body handling, limiter invocation, or Service
+Binding invocation, even after a future authorized private Worker deployment.
 
 Local commands are deliberately separate from remote operations:
 
@@ -474,6 +479,7 @@ npm run validation-worker:types:check
 npm run validation-worker:typecheck
 npm run test:validation-worker
 npm run validation-worker:build       # local Wrangler --dry-run only
+npx wrangler --cwd workers/draft-validation deploy --env production --dry-run --minify --outdir /tmp/pennant-pursuit-validation-production-worker-build
 npm run pages:functions:build
 npm run validation-bundles:check
 npm run dev:validation-worker
@@ -482,16 +488,35 @@ npm run dev:pages-with-validation
 
 Use the two development commands in separate terminals when exercising a local
 Service Binding. Unit/integration tests instead use deterministic rate-limit
-doubles; they do not rely on a remote counter. A future authorized C4.2 preview
-rollout should: verify account/configuration and a clean reviewed revision,
-deploy the private preview Worker, deploy the Pages preview binding, verify the
-same-origin route and health, then capture preview measurements. Production
-requires a separate authorization and remains disabled. Preview rollback is to
-disable the preview feature flag or revert the Pages preview deployment, then
-revert the private preview Worker if necessary; there is no D1 schema or data
-rollback. Phase D still requires independently reviewed server-issued,
-short-lived, single-use tickets and replay protection before any result may be
-leaderboard-eligible.
+doubles; they do not rely on a remote counter.
+
+### C4.3 production preparation, deployment order, and rollback
+
+This repository preparation does not deploy the production Worker or Pages
+configuration. A future authorized rollout must remain four separate steps:
+
+1. Deploy only the private production Worker with `npx wrangler --cwd
+   workers/draft-validation deploy --env production --minify`, then verify its
+   name, privacy flags, two production-only namespaces, and lack of routes. Do
+   not call it through a public URL.
+2. Deploy a reviewed `develop` Pages preview. Verify preview still binds only
+   the preview Worker and production remains unchanged.
+3. Merge the reviewed configuration to `main` and deploy Pages while production
+   validation remains disabled. Verify production health is disabled and the
+   validation route remains generic 404.
+4. Under a separate review, change only production Pages
+   `DRAFT_VALIDATION_MODE` from `disabled` to `enabled`, deploy `main`, and test
+   the read-only production path and rollback.
+
+Before production enablement, rollback is to revert the Pages configuration;
+the private production Worker may remain deployed but unreachable. After a
+future enablement, first return the Pages production flag to `disabled` and
+deploy or revert Pages until generic 404 returns, then consider Worker rollback
+only if separately needed. Do not delete Workers during an incident without
+separate authorization. No stored validation data or D1 schema change exists,
+so neither path needs data cleanup or D1 rollback. Phase D still requires
+independently reviewed server-issued, short-lived, single-use tickets and replay
+protection before any result may be leaderboard-eligible.
 
 ### C4.1 local measurements
 

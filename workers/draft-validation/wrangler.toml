@@ -27,3 +27,30 @@ namespace_id = "16204012"
   [ratelimits.simple]
   limit = 20
   period = 60
+
+# C4.3 uses the same authoritative Worker source with a distinct, private
+# production deployment target. Bindings are repeated because Wrangler does
+# not inherit binding arrays into named environments.
+[env.production]
+name = "pennant-pursuit-validation-production"
+workers_dev = false
+preview_urls = false
+
+[env.production.vars]
+DRAFT_VALIDATION_MODE = "enabled"
+
+[[env.production.ratelimits]]
+name = "RATE_LIMIT_BURST"
+namespace_id = "16204021"
+
+  [env.production.ratelimits.simple]
+  limit = 5
+  period = 10
+
+[[env.production.ratelimits]]
+name = "RATE_LIMIT_SUSTAINED"
+namespace_id = "16204022"
+
+  [env.production.ratelimits.simple]
+  limit = 20
+  period = 60

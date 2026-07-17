@@ -238,23 +238,33 @@ assert.equal((await handleValidateDraftRequest(publicRequest('', { method: 'GET'
 assert.equal(boundaryHarness.serviceCalls.value, 0)
 
 // Production-equivalent feature mode returns the generic 404 before body or
-// service handling. The production Wrangler environment has no service binding.
+// service handling, even though C4.3 prepares its distinct private binding.
 const productionHarness = createHarness({ mode: 'disabled' })
 assert.equal((await handleValidateDraftRequest(publicRequest(validBody), productionHarness.env)).status, 404)
 assert.equal(productionHarness.serviceCalls.value, 0)
 const pagesConfig = readFileSync('wrangler.toml', 'utf8')
+assert.match(pagesConfig, /\[\[services\]\][\s\S]*binding = "VALIDATION_SERVICE"[\s\S]*service = "pennant-pursuit-validation-preview"/)
 assert.match(pagesConfig, /\[env\.production\.vars\][\s\S]*DRAFT_VALIDATION_MODE = "disabled"/)
-assert.doesNotMatch(pagesConfig, /\[\[env\.production\.services\]\]/)
+assert.match(pagesConfig, /\[\[env\.production\.services\]\][\s\S]*binding = "VALIDATION_SERVICE"[\s\S]*service = "pennant-pursuit-validation-production"/)
 assert.doesNotMatch(pagesConfig, /\[\[env\.production\.ratelimits\]\]/)
 
-// The source and config guard the intended private, storage-free topology.
+// The shared source and its two explicit configurations guard the intended
+// private, storage-free topology and separate rate-limit state.
 const workerConfig = readFileSync('workers/draft-validation/wrangler.toml', 'utf8')
 assert.match(workerConfig, /workers_dev = false/)
 assert.match(workerConfig, /preview_urls = false/)
 assert.match(workerConfig, /RATE_LIMIT_BURST[\s\S]*limit = 5[\s\S]*period = 10/)
 assert.match(workerConfig, /RATE_LIMIT_SUSTAINED[\s\S]*limit = 20[\s\S]*period = 60/)
-assert.doesNotMatch(workerConfig, /\broutes\b|custom_domain|d1_|kv_|r2_|durable_objects|queues|analytics|secrets/)
-assert.doesNotMatch(workerConfig, /\[env\.production\]|\[\[env\.production\.ratelimits\]\]/)
+assert.match(workerConfig, /\[env\.production\][\s\S]*name = "pennant-pursuit-validation-production"[\s\S]*workers_dev = false[\s\S]*preview_urls = false/)
+assert.match(workerConfig, /\[env\.production\.vars\][\s\S]*DRAFT_VALIDATION_MODE = "enabled"/)
+assert.match(workerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*name = "RATE_LIMIT_BURST"[\s\S]*namespace_id = "16204021"[\s\S]*limit = 5[\s\S]*period = 10/)
+assert.match(workerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*name = "RATE_LIMIT_SUSTAINED"[\s\S]*namespace_id = "16204022"[\s\S]*limit = 20[\s\S]*period = 60/)
+const previewWorkerName = workerConfig.match(/^name = "([^"]+)"/m)?.[1]
+const productionWorkerName = workerConfig.match(/\[env\.production\][\s\S]*?^name = "([^"]+)"/m)?.[1]
+assert.equal(previewWorkerName, 'pennant-pursuit-validation-preview')
+assert.equal(productionWorkerName, 'pennant-pursuit-validation-production')
+assert.notEqual(previewWorkerName, productionWorkerName)
+assert.doesNotMatch(workerConfig, /^(?:routes|route|custom_domain|d1_databases|kv_namespaces|r2_buckets|durable_objects|queues|analytics_engine_datasets|secrets_store_secrets)\s*=/m)
 const proxySource = readFileSync('functions/api/v1/validate-draft.ts', 'utf8')
 assert.doesNotMatch(proxySource, /createWorkerReplayCatalog|replayDraftWithCatalog|calculateDraftResult|readBoundedJson|env\.DB|waitUntil|console\./)
 assert.match(proxySource, /service\.fetch/)

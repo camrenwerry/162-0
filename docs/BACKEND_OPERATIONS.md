@@ -15,20 +15,31 @@ All Cloudflare Pages preview deployments share `pennant-pursuit-preview`; a bran
 
 In `wrangler.toml`, each `database_id` is a real remote D1 database UUID. The top-level value `preview_database_id = "DB"` is the local Pages preview identifier used by Wrangler, not the UUID or name of another remote database. Local development must use Wrangler's local persistence and must not add `remote = true` to either binding. This prevents ordinary local requests from reaching a remote database.
 
-## Phase C4.1 validation isolation
+## Phase C4.3 private validation isolation
 
-The default/preview Pages configuration also names a private Service Binding,
-`VALIDATION_SERVICE`, for `pennant-pursuit-validation-preview`. The standalone
-Worker configuration lives in `workers/draft-validation/`; it has no public URL,
-route, custom domain, storage binding, D1 binding, or production environment.
-It applies 5/10-second and 20/60-second per-location Rate Limiting policies to
-a Pages-derived versioned IP hash before validation parsing. The production
-Pages environment has no such binding and keeps `DRAFT_VALIDATION_MODE` disabled.
+`VALIDATION_SERVICE` is explicit in both Pages environments and targets two
+different private Workers:
 
-This checked-in configuration is not a deployment record. C4.1 created no
-remote Worker, Rate Limiting namespace, route, domain, or D1 change. Any future
-preview deployment needs separate authorization; production validation remains
-out of scope and disabled.
+- Preview: `pennant-pursuit-validation-preview`, namespaces `16204011` and
+  `16204012`.
+- Production preparation: `pennant-pursuit-validation-production`, namespaces
+  `16204021` and `16204022`.
+
+Both targets share the source in `workers/draft-validation/`, but each has a
+separate Worker name and separate 5/10-second and 20/60-second Rate Limiting
+counter namespaces. Both disable `workers.dev` and Worker preview URLs and have
+no route, custom domain, D1, KV, R2, Durable Object, queue, analytics, secret,
+storage, external fetch, or runtime-write binding. The production Pages binding
+is prepared while `DRAFT_VALIDATION_MODE` remains exactly `disabled`, so the
+browser route returns generic 404 before its body is read or the private Service
+Binding is invoked.
+
+Rate Limiting is deliberately best-effort, per-location, and eventually
+consistent; it does not promise an exact sixth-request denial. No transcript,
+roster, player, key, request metadata, validation attempt, identity, ticket,
+submission, leaderboard, or analytics data is stored. Phase D still requires a
+separately reviewed ticket and replay-protection design before any result can be
+eligible for a leaderboard.
 
 ## Local migration workflow
 

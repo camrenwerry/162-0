@@ -48,6 +48,10 @@ const auditedWranglerPhaseB = [
   '[env.production.vars]',
   'DRAFT_VALIDATION_MODE = "disabled"',
   '',
+  '[[env.production.services]]',
+  'binding = "VALIDATION_SERVICE"',
+  'service = "pennant-pursuit-validation-production"',
+  '',
   '[[env.production.d1_databases]]',
   'binding = "DB"',
   'database_name = "pennant-pursuit-production"',
@@ -59,7 +63,7 @@ const wranglerConfiguration = wrangler
   .filter((line) => !line.trimStart().startsWith('#'))
   .join('\n')
   .trim()
-assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings, the preview-only validation service, and the fail-closed production mode')
+assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings, distinct private validation services, and the fail-closed production mode')
 assert.equal((wrangler.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^binding = "DB"$/gm) ?? []).length, 2)
@@ -69,9 +73,9 @@ assert.equal((wrangler.match(new RegExp(`^database_id = "${PREVIEW_DATABASE_ID}"
 assert.equal((wrangler.match(new RegExp(`^database_id = "${PRODUCTION_DATABASE_ID}"$`, 'gm')) ?? []).length, 1)
 assert.match(wrangler, /^preview_database_id = "DB"$/m)
 assert.equal((wrangler.match(/^migrations_dir = "migrations"$/gm) ?? []).length, 2)
-assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "disabled"\n\n\[\[env\.production\.d1_databases\]\]$/m)
+assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "disabled"\n\n\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"\n\n\[\[env\.production\.d1_databases\]\]$/m)
 assert.match(wrangler, /^\[\[services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-preview"$/m)
-assert.doesNotMatch(wrangler, /^\[\[env\.production\.services\]\]$/m)
+assert.match(wrangler, /^\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"$/m)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 1)
 assert.doesNotMatch(wrangler, /^\[env\.preview\]$/m)
@@ -109,10 +113,10 @@ assert.equal((source('migrations/0001_backend_foundation.sql').match(/INSERT INT
 const generatedTypes = source('functions/types.d.ts')
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "disabled" \| "enabled";/)
-assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?VALIDATION_SERVICE\?: Fetcher/)
+assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\/ \| Fetcher \/\* pennant-pursuit-validation-preview \*\//)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "disabled";/)
-assert.doesNotMatch(source('functions/types.d.ts'), /interface ProductionEnv\s*\{[\s\S]*?VALIDATION_SERVICE/)
+assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\//)
 const envSource = source('functions/lib/env.ts')
 const databaseSource = source('functions/lib/database.ts')
 assert.match(envSource, /export type BackendEnv = Partial<Env>/)
@@ -191,6 +195,10 @@ assert.doesNotMatch(validationRouteSource, /createWorkerReplayCatalog|replayDraf
 const privateValidationWorkerConfig = source('workers/draft-validation/wrangler.toml')
 assert.match(privateValidationWorkerConfig, /workers_dev = false/)
 assert.match(privateValidationWorkerConfig, /preview_urls = false/)
+assert.match(privateValidationWorkerConfig, /^name = "pennant-pursuit-validation-preview"$/m)
+assert.match(privateValidationWorkerConfig, /\[env\.production\][\s\S]*?^name = "pennant-pursuit-validation-production"$/m)
+assert.match(privateValidationWorkerConfig, /\[\[ratelimits\]\][\s\S]*?namespace_id = "16204011"[\s\S]*?\[\[ratelimits\]\][\s\S]*?namespace_id = "16204012"/)
+assert.match(privateValidationWorkerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*?namespace_id = "16204021"[\s\S]*?\[\[env\.production\.ratelimits\]\][\s\S]*?namespace_id = "16204022"/)
 assert.doesNotMatch(privateValidationWorkerConfig, /\broutes\b|custom_domain|d1_|kv_|r2_|durable_objects|queues|analytics|secrets/)
 const privateValidationWorkerSource = source('workers/draft-validation/src/index.ts')
 const authoritativeValidationSource = source('workers/draft-validation/src/authoritative-validation.ts')
@@ -378,4 +386,4 @@ assert.deepEqual(JSON.parse(source('dist/_routes.json')), expectedRoutes)
 assert.equal(source('public/_redirects').trim(), '/* /index.html 200')
 assert.equal(source('dist/_redirects').trim(), '/* /index.html 200')
 
-console.log('Backend Phase C2 passed: isolated D1 bindings, minimal schema, read-only health, preview-only validation, and exact API routing.')
+console.log('Backend Phase C4.3 passed: isolated D1 bindings, distinct private validation bindings, read-only health, fail-closed production validation, and exact API routing.')

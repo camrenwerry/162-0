@@ -15,8 +15,8 @@ database_id = "ba6255b4-9425-4863-b10f-79149180f75a"
 preview_database_id = "DB"
 migrations_dir = "migrations"
 
-# C4.1 preview-only private validation service. This binding is intentionally
-# absent from production, where validation remains disabled and fails closed.
+# C4.1/C4.3 private validation services. Preview and production bind to
+# different private Workers; the production Pages feature remains disabled.
 [[services]]
 binding = "VALIDATION_SERVICE"
 service = "pennant-pursuit-validation-preview"
@@ -25,6 +25,10 @@ service = "pennant-pursuit-validation-preview"
 
 [env.production.vars]
 DRAFT_VALIDATION_MODE = "disabled"
+
+[[env.production.services]]
+binding = "VALIDATION_SERVICE"
+service = "pennant-pursuit-validation-production"
 
 [[env.production.d1_databases]]
 binding = "DB"
