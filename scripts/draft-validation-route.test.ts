@@ -118,6 +118,9 @@ async function responseBody(response: Response) {
 function assertJsonHeaders(response: Response) {
   assert.equal(response.headers.get('Content-Type'), 'application/json; charset=utf-8')
   assert.equal(response.headers.get('Cache-Control'), 'no-store')
+  assert.equal(response.headers.get('X-Content-Type-Options'), 'nosniff')
+  assert.equal(response.headers.get('Referrer-Policy'), 'no-referrer')
+  assert.equal(response.headers.get('Cross-Origin-Resource-Policy'), 'same-origin')
   assert.equal(response.headers.get('Access-Control-Allow-Origin'), null)
   assert.equal(response.headers.get('Set-Cookie'), null)
 }
@@ -359,6 +362,9 @@ await assertError(await handleValidateDraftRequest(rawRequest('{}', {
 }), enabledEnv), 'payload_too_large')
 await assertError(await handleValidateDraftRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
   origin: 'https://attacker.example',
+}), enabledEnv), 'origin_not_allowed')
+await assertError(await handleValidateDraftRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
+  headers: { Host: 'attacker.example' },
 }), enabledEnv), 'origin_not_allowed')
 assert.equal((await handleValidateDraftRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
   origin: 'https://preview.example.test',

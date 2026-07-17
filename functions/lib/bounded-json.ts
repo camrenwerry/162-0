@@ -1,6 +1,7 @@
 import { DraftValidationPublicError, draftValidationError } from './api-response'
 
 export const MAX_DRAFT_VALIDATION_BODY_BYTES = 16_384
+export const MAX_DRAFT_VALIDATION_BODY_CHUNKS = 16_384
 
 function requireJsonHeaders(request: Request) {
   const contentType = request.headers.get('Content-Type')
@@ -28,19 +29,28 @@ async function readBoundedBody(request: Request) {
   if (!request.body) draftValidationError('malformed_json')
 
   const reader = request.body.getReader()
-  const chunks: Uint8Array[] = []
+  // A fixed, bounded allocation avoids retaining one object for every hostile
+  // stream chunk. The view returned below exposes only received bytes.
+  const body = new Uint8Array(MAX_DRAFT_VALIDATION_BODY_BYTES)
   let totalBytes = 0
+  let chunkCount = 0
   try {
     while (true) {
       const { done, value } = await reader.read()
       if (done) break
-      if (!value) continue
-      totalBytes += value.byteLength
-      if (totalBytes > MAX_DRAFT_VALIDATION_BODY_BYTES) {
+      chunkCount += 1
+      if (chunkCount > MAX_DRAFT_VALIDATION_BODY_CHUNKS) {
         await cancelReader(reader)
         draftValidationError('payload_too_large')
       }
-      chunks.push(value)
+      if (!value?.byteLength) continue
+      const nextTotalBytes = totalBytes + value.byteLength
+      if (nextTotalBytes > MAX_DRAFT_VALIDATION_BODY_BYTES) {
+        await cancelReader(reader)
+        draftValidationError('payload_too_large')
+      }
+      body.set(value, totalBytes)
+      totalBytes = nextTotalBytes
     }
   } catch (error) {
     if (error instanceof DraftValidationPublicError) throw error
@@ -50,13 +60,136 @@ async function readBoundedBody(request: Request) {
   }
   if (totalBytes === 0) draftValidationError('malformed_json')
 
-  const body = new Uint8Array(totalBytes)
-  let offset = 0
-  for (const chunk of chunks) {
-    body.set(chunk, offset)
-    offset += chunk.byteLength
+  return body.subarray(0, totalBytes)
+}
+
+type JsonObjectFrame = {
+  readonly kind: 'object'
+  keys: Set<string>
+  state: 'key-or-end' | 'colon' | 'value' | 'comma-or-end'
+}
+type JsonArrayFrame = {
+  readonly kind: 'array'
+  state: 'value-or-end' | 'comma-or-end'
+}
+type JsonFrame = JsonObjectFrame | JsonArrayFrame
+
+function skipJsonWhitespace(text: string, index: number) {
+  while (index < text.length && /[\t\n\r ]/.test(text[index])) index += 1
+  return index
+}
+
+function readJsonString(text: string, start: number) {
+  let index = start + 1
+  while (index < text.length) {
+    if (text[index] === '\\') {
+      index += 2
+      continue
+    }
+    if (text[index] === '"') {
+      const raw = text.slice(start, index + 1)
+      try {
+        return { next: index + 1, value: JSON.parse(raw) as string }
+      } catch {
+        return { next: index + 1, value: raw }
+      }
+    }
+    index += 1
   }
-  return body
+  return { next: index, value: text.slice(start) }
+}
+
+function consumeJsonValue(text: string, index: number, stack: JsonFrame[]) {
+  index = skipJsonWhitespace(text, index)
+  const token = text[index]
+  if (token === '{') {
+    stack.push({ kind: 'object', keys: new Set<string>(), state: 'key-or-end' })
+    return index + 1
+  }
+  if (token === '[') {
+    stack.push({ kind: 'array', state: 'value-or-end' })
+    return index + 1
+  }
+  if (token === '"') return readJsonString(text, index).next
+  while (index < text.length && !/[\t\n\r ,\]}]/.test(text[index])) index += 1
+  return index
+}
+
+/**
+ * JSON.parse accepts duplicate member names. This scanner only observes the
+ * already body-bounded input and uses an explicit stack, so duplicate rejection
+ * cannot add recursive parsing risk. JSON.parse remains the syntax authority.
+ */
+function hasDuplicateJsonObjectKeys(text: string) {
+  const stack: JsonFrame[] = []
+  let index = consumeJsonValue(text, 0, stack)
+  while (stack.length) {
+    const frame = stack.at(-1)
+    if (!frame) break
+    index = skipJsonWhitespace(text, index)
+
+    if (frame.kind === 'object') {
+      if (frame.state === 'key-or-end') {
+        if (text[index] === '}') {
+          stack.pop()
+          index += 1
+          continue
+        }
+        if (text[index] !== '"') return false
+        const key = readJsonString(text, index)
+        if (frame.keys.has(key.value)) return true
+        frame.keys.add(key.value)
+        frame.state = 'colon'
+        index = key.next
+        continue
+      }
+      if (frame.state === 'colon') {
+        if (text[index] !== ':') return false
+        frame.state = 'value'
+        index += 1
+        continue
+      }
+      if (frame.state === 'value') {
+        frame.state = 'comma-or-end'
+        index = consumeJsonValue(text, index, stack)
+        continue
+      }
+      if (text[index] === ',') {
+        frame.state = 'key-or-end'
+        index += 1
+        continue
+      }
+      if (text[index] === '}') {
+        stack.pop()
+        index += 1
+        continue
+      }
+      return false
+    }
+
+    if (frame.state === 'value-or-end') {
+      if (text[index] === ']') {
+        stack.pop()
+        index += 1
+        continue
+      }
+      frame.state = 'comma-or-end'
+      index = consumeJsonValue(text, index, stack)
+      continue
+    }
+    if (text[index] === ',') {
+      frame.state = 'value-or-end'
+      index += 1
+      continue
+    }
+    if (text[index] === ']') {
+      stack.pop()
+      index += 1
+      continue
+    }
+    return false
+  }
+  return false
 }
 
 export async function readBoundedJson(request: Request): Promise<unknown> {
@@ -69,9 +202,12 @@ export async function readBoundedJson(request: Request): Promise<unknown> {
     return draftValidationError('malformed_json')
   }
   if (!text.trim()) draftValidationError('malformed_json')
+  let parsed: unknown
   try {
-    return JSON.parse(text)
+    parsed = JSON.parse(text)
   } catch {
     return draftValidationError('malformed_json')
   }
+  if (hasDuplicateJsonObjectKeys(text)) return draftValidationError('invalid_request_schema')
+  return parsed
 }

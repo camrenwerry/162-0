@@ -23,27 +23,35 @@ import {
 import { readBoundedJson } from '../../lib/bounded-json'
 import { isDraftValidationEnabled } from '../../lib/draft-validation-mode'
 import { validateDraftRequestEnvelope } from '../../lib/draft-validation-schema'
+import { createLazyImmutable } from '../../lib/lazy-immutable'
 import type { BackendEnv } from '../../lib/env'
 
 const ALLOWED_METHODS = 'POST'
-const catalogInitialization: { readonly catalog: ReplayCatalog | null } = (() => {
-  try {
-    return Object.freeze({ catalog: createWorkerReplayCatalog() })
-  } catch {
-    return Object.freeze({ catalog: null })
-  }
-})()
+const getCatalog = createLazyImmutable<ReplayCatalog>(createWorkerReplayCatalog)
 
 function errorResponse(code: DraftValidationErrorCode, headers: Readonly<Record<string, string>> = {}) {
   return draftValidationErrorResponse(new DraftValidationPublicError(code), headers)
 }
 
 function requestOriginIsAllowed(request: Request) {
+  const requestUrl = new URL(request.url)
   const origin = request.headers.get('Origin')
-  return origin === null || origin === new URL(request.url).origin
+  const host = request.headers.get('Host')
+  return (origin === null || origin === requestUrl.origin)
+    && (host === null || host.toLowerCase() === requestUrl.host.toLowerCase())
 }
 
 function cardFailureCode(transcript: DraftTranscript, catalog: ReplayCatalog): 'invalid_card' | 'wrong_pool' {
+  if (catalog.findCombination && catalog.findCardCombination) {
+    for (const event of transcript.events) {
+      if (event.type !== 'pick') continue
+      const referencedCombination = catalog.findCombination(event.combinationId)
+      const canonicalCombination = catalog.findCardCombination(event.canonicalCardId)
+      if (referencedCombination && canonicalCombination?.id === referencedCombination.id) continue
+      return canonicalCombination ? 'wrong_pool' : 'invalid_card'
+    }
+    return 'invalid_card'
+  }
   const combinations = catalog.getCombinations()
   for (const event of transcript.events) {
     if (event.type !== 'pick') continue
@@ -173,7 +181,7 @@ export async function handleValidateDraftRequest(request: Request, env: BackendE
       : errorResponse('temporarily_unavailable')
   }
 
-  const catalog = catalogInitialization.catalog
+  const catalog = getCatalog()
   if (!catalog) return errorResponse('temporarily_unavailable')
   let roster: ValidatedDraftRoster
   try {

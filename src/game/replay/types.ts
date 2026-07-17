@@ -1,5 +1,5 @@
 import type { ScoringPlayer } from '../scoring/types'
-import type { EligibilityPlayer } from '../Eligibility'
+import type { EligibilityPlayer, EligibilityRoster } from '../Eligibility'
 import type { Decade, RosterSlotId, TeamDecade } from '../../types/draft'
 
 export interface ReplayCardIdentity extends EligibilityPlayer {
@@ -17,6 +17,14 @@ export interface ReplayCatalog<TCard extends HydratedReplayCard = HydratedReplay
   getCombinations(): readonly TeamDecade[]
   getCardViews(combination: TeamDecade): readonly ReplayCardIdentity[]
   hydrateCard(combination: TeamDecade, canonicalCardId: string): TCard | null
+  /** Optional Worker fast path that must preserve isPlayerSelectable semantics. */
+  getCombinationPlayability?(
+    selectedCardIds: ReadonlySet<string>,
+    roster: EligibilityRoster,
+  ): (combination: TeamDecade) => boolean
+  /** Optional immutable catalog indexes used only for sanitized error mapping. */
+  findCombination?(combinationId: string): TeamDecade | null
+  findCardCombination?(canonicalCardId: string): TeamDecade | null
 }
 
 export interface SupportedReplayVersionMetadata {

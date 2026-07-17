@@ -1,6 +1,7 @@
 import workerCatalogData from '../../data/generated/worker-catalog.json'
 import { DATA_DIGEST, DATA_VERSION, SCORING_VERSION } from '../../config/versions'
-import { POSITIONS, type Decade, type Position, type TeamDecade } from '../../types/draft'
+import { POSITIONS, ROSTER_SLOTS, type Decade, type Position, type TeamDecade } from '../../types/draft'
+import type { EligibilityRoster } from '../Eligibility'
 import type {
   ScoringHitter,
   ScoringHitterStats,
@@ -200,6 +201,15 @@ function hydrateCard(combination: WorkerCombinationTuple, card: WorkerCardTuple)
   return invalidCatalog(`Worker catalog card ${card[0]} has inconsistent scoring fields.`)
 }
 
+function selectablePositionMask(roster: EligibilityRoster) {
+  let mask = 0
+  for (const [position, bit] of POSITION_BITS) {
+    if (position === 'DH') continue
+    if (ROSTER_SLOTS.some((slot) => slot.position === position && !roster[slot.id])) mask |= bit
+  }
+  return mask
+}
+
 /**
  * Validate and adapt the compact artifact. Only combination descriptors are
  * materialized eagerly; scoring-rich players are hydrated by selected card ID.
@@ -220,6 +230,16 @@ export function createWorkerReplayCatalog(input: unknown = workerCatalogData): R
   })))
   const tuplesByCombinationId = new Map(catalog.combinations.map((combination) => [combination[0], combination]))
   if (tuplesByCombinationId.size !== catalog.combinations.length) invalidCatalog('Worker catalog contains duplicate combination IDs.')
+  const combinationsById = new Map(combinations.map((combination) => [combination.id, combination]))
+  const cardCombinationById = new Map<string, TeamDecade>()
+  for (const tuple of catalog.combinations) {
+    const combination = combinationsById.get(tuple[0])
+    if (!combination) invalidCatalog(`Worker catalog combination ${tuple[0]} is unavailable.`)
+    for (const card of tuple[5]) {
+      if (cardCombinationById.has(card[0])) invalidCatalog(`Worker catalog contains duplicate canonical card ID ${card[0]}.`)
+      cardCombinationById.set(card[0], combination)
+    }
+  }
   const cardViews = new Map<string, readonly ReplayCardIdentity[]>()
 
   return Object.freeze({
@@ -240,5 +260,19 @@ export function createWorkerReplayCatalog(input: unknown = workerCatalogData): R
       const card = tuple[5].find((candidate) => candidate[0] === canonicalCardId)
       return card ? hydrateCard(tuple, card) : null
     },
+    getCombinationPlayability: (selectedCardIds: ReadonlySet<string>, roster: EligibilityRoster) => {
+      const openPositionMask = selectablePositionMask(roster)
+      const dhOpen = !roster.DH
+      return (combination: TeamDecade) => {
+        const tuple = tuplesByCombinationId.get(combination.id)
+        if (!tuple) return false
+        return tuple[5].some((card) => (
+          !selectedCardIds.has(card[0])
+          && ((card[4] & openPositionMask) !== 0 || (dhOpen && card[5] !== 1))
+        ))
+      }
+    },
+    findCombination: (combinationId: string) => combinationsById.get(combinationId) ?? null,
+    findCardCombination: (canonicalCardId: string) => cardCombinationById.get(canonicalCardId) ?? null,
   })
 }

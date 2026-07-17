@@ -94,7 +94,7 @@ export function replayDraftWithCatalog<TCard extends HydratedReplayCard>(
     teamRerollAvailable,
     eraRerollAvailable,
     roundsRemaining: ROSTER_SLOTS.length - selectedCardIds.size,
-    isPlayable: combinationIsPlayable,
+    isPlayable: catalog.getCombinationPlayability?.(selectedCardIds, roster) ?? combinationIsPlayable,
   })
 
   for (let round = 1; round <= ROSTER_SLOTS.length; round += 1) {

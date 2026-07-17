@@ -11,6 +11,7 @@ import {
   EXPECTED_SCHEMA_VERSION,
   readDatabaseHealth,
 } from '../../lib/database'
+import { SAFE_JSON_RESPONSE_HEADERS } from '../../lib/api-response'
 import { draftValidationFeatureState } from '../../lib/draft-validation-mode'
 import type { BackendEnv } from '../../lib/env'
 
@@ -40,8 +41,7 @@ const healthMetadata = Object.freeze({
 
 function responseHeaders() {
   return {
-    'Content-Type': 'application/json; charset=utf-8',
-    'Cache-Control': 'no-store',
+    ...SAFE_JSON_RESPONSE_HEADERS,
     Allow: ALLOWED_METHODS,
   }
 }

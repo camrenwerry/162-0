@@ -1,4 +1,11 @@
 const JSON_CONTENT_TYPE = 'application/json; charset=utf-8'
+export const SAFE_JSON_RESPONSE_HEADERS = Object.freeze({
+  'Content-Type': JSON_CONTENT_TYPE,
+  'Cache-Control': 'no-store',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'no-referrer',
+  'Cross-Origin-Resource-Policy': 'same-origin',
+})
 
 export const NOT_FOUND_PAYLOAD = Object.freeze({
   ok: false,
@@ -57,8 +64,7 @@ export function jsonResponse(payload: unknown, status: number, headers: Readonly
     status,
     headers: {
       ...headers,
-      'Content-Type': JSON_CONTENT_TYPE,
-      'Cache-Control': 'no-store',
+      ...SAFE_JSON_RESPONSE_HEADERS,
     },
   })
 }
@@ -75,9 +81,6 @@ export function handleApiNotFoundRequest(request: Request) {
   const body = request.method === 'HEAD' ? null : JSON.stringify(NOT_FOUND_PAYLOAD)
   return new Response(body, {
     status: 404,
-    headers: {
-      'Content-Type': JSON_CONTENT_TYPE,
-      'Cache-Control': 'no-store',
-    },
+    headers: SAFE_JSON_RESPONSE_HEADERS,
   })
 }
