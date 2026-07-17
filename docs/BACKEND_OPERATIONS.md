@@ -28,8 +28,9 @@ different private Workers:
 Both targets share the source in `workers/draft-validation/`, but each has a
 separate Worker name and separate 5/10-second and 20/60-second Rate Limiting
 counter namespaces. Both disable `workers.dev` and Worker preview URLs and have
-no route, custom domain, D1, KV, R2, Durable Object, queue, analytics, secret,
-storage, external fetch, or runtime-write binding. The reviewed production Pages
+no route, custom domain, D1, KV, R2, Durable Object, queue, analytics, storage,
+external fetch, or runtime-write binding. No signing secret has been created or
+configured in this repository. The reviewed production Pages
 configuration sets `DRAFT_VALIDATION_MODE` to exactly `enabled`; a future Pages
 deployment is required before that checked-in setting becomes live. Once live,
 only a valid, same-origin `POST` with trusted Cloudflare connection metadata is
@@ -42,6 +43,44 @@ roster, player, key, request metadata, validation attempt, identity, ticket,
 submission, leaderboard, or analytics data is stored. Phase D still requires a
 separately reviewed ticket and replay-protection design before any result can be
 eligible for a leaderboard.
+
+## Preview-only draft tickets
+
+Phase D1A prepares a stateless, signed draft-ticket protocol. It remains
+preview-only: the default Pages and private Worker configurations set
+`DRAFT_TICKET_MODE = "enabled"`, while both production configurations set it to
+`"disabled"`. The production Pages route therefore returns the established
+generic 404 before reading a body or invoking its private Service Binding.
+Production draft validation remains independently enabled and read-only.
+
+Preview `POST /api/v1/draft-ticket` goes through the existing Pages trusted-IP
+and same-origin boundary and then the existing preview `VALIDATION_SERVICE`
+binding. The private Worker applies the existing two Rate Limiting bindings
+before parsing the small versioned request. It has no public route or URL, and
+the ticket path neither reads nor writes D1 or any other storage. It returns an
+opaque signed ticket with a server-generated ID and `seeded-v1` draft seed.
+
+The Worker expects a secret named `DRAFT_TICKET_SIGNING_KEY` only at an
+explicitly authorized preview deployment. It is not a Wrangler variable, is not
+present in checked-in configuration or generated types, and no preview or
+production secret is created by this change. A missing secret fails safely with
+the existing generic 503 response. A deterministic non-production key exists
+only in automated test code and is never part of a deployed bundle.
+
+Each ticket is HMAC-SHA-256 signed, expires 15 minutes after issuance, and
+allows at most 60 seconds of future clock skew during later server-side
+verification. Its signed ticket ID is the future submission idempotency key:
+the future submission table must enforce a unique ticket-ID constraint and atomically
+consume it. D1A deliberately does neither, so a valid ticket can still be
+replayed until that persistence layer is separately designed and authorized.
+
+To rotate the signing key in a future authorized deployment, first disable
+ticket issuance, wait at least the 15-minute ticket lifetime plus 60-second
+skew, rotate the Worker secret, and then re-enable issuance only after the
+private preview checks pass. This intentionally invalidates old tickets without
+needing multi-key acceptance. To roll back D1A, set the relevant preview
+`DRAFT_TICKET_MODE` to `"disabled"` and deploy that reviewed Pages/Worker
+configuration; no D1 cleanup, migration, or data recovery is required.
 
 ## Local migration workflow
 

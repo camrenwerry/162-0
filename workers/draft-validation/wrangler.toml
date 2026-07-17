@@ -9,6 +9,7 @@ preview_urls = false
 
 [vars]
 DRAFT_VALIDATION_MODE = "enabled"
+DRAFT_TICKET_MODE = "enabled"
 
 # Namespace IDs are intentionally distinct from every future production
 # namespace. Rate-limit state is managed by Cloudflare, not application storage.
@@ -38,6 +39,7 @@ preview_urls = false
 
 [env.production.vars]
 DRAFT_VALIDATION_MODE = "enabled"
+DRAFT_TICKET_MODE = "disabled"
 
 [[env.production.ratelimits]]
 name = "RATE_LIMIT_BURST"

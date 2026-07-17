@@ -74,6 +74,16 @@ type JsonArrayFrame = {
 }
 type JsonFrame = JsonObjectFrame | JsonArrayFrame
 
+export class StrictJsonParseError extends Error {
+  override readonly name = 'StrictJsonParseError'
+  readonly reason: 'malformed' | 'duplicate_key'
+
+  constructor(reason: 'malformed' | 'duplicate_key') {
+    super(reason)
+    this.reason = reason
+  }
+}
+
 function skipJsonWhitespace(text: string, index: number) {
   while (index < text.length && /[\t\n\r ]/.test(text[index])) index += 1
   return index
@@ -192,6 +202,23 @@ function hasDuplicateJsonObjectKeys(text: string) {
   return false
 }
 
+/**
+ * Parses already-size-bounded JSON while preserving duplicate-key rejection.
+ * Other server-only protocols, such as signed tickets, use this rather than
+ * JSON.parse directly so their verification input has the same strictness as
+ * HTTP request bodies.
+ */
+export function parseStrictJson(text: string): unknown {
+  let parsed: unknown
+  try {
+    parsed = JSON.parse(text)
+  } catch {
+    throw new StrictJsonParseError('malformed')
+  }
+  if (hasDuplicateJsonObjectKeys(text)) throw new StrictJsonParseError('duplicate_key')
+  return parsed
+}
+
 export async function readBoundedJson(request: Request): Promise<unknown> {
   requireJsonHeaders(request)
   const body = await readBoundedBody(request)
@@ -202,12 +229,12 @@ export async function readBoundedJson(request: Request): Promise<unknown> {
     return draftValidationError('malformed_json')
   }
   if (!text.trim()) draftValidationError('malformed_json')
-  let parsed: unknown
   try {
-    parsed = JSON.parse(text)
-  } catch {
+    return parseStrictJson(text)
+  } catch (error) {
+    if (error instanceof StrictJsonParseError && error.reason === 'duplicate_key') {
+      return draftValidationError('invalid_request_schema')
+    }
     return draftValidationError('malformed_json')
   }
-  if (hasDuplicateJsonObjectKeys(text)) return draftValidationError('invalid_request_schema')
-  return parsed
 }

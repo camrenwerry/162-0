@@ -7,6 +7,7 @@ compatibility_date = "2026-07-14"
 
 [vars]
 DRAFT_VALIDATION_MODE = "enabled"
+DRAFT_TICKET_MODE = "enabled"
 
 [[d1_databases]]
 binding = "DB"
@@ -26,6 +27,7 @@ service = "pennant-pursuit-validation-preview"
 
 [env.production.vars]
 DRAFT_VALIDATION_MODE = "enabled"
+DRAFT_TICKET_MODE = "disabled"
 
 [[env.production.services]]
 binding = "VALIDATION_SERVICE"

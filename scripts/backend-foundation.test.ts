@@ -31,6 +31,7 @@ const auditedWranglerPhaseB = [
   '',
   '[vars]',
   'DRAFT_VALIDATION_MODE = "enabled"',
+  'DRAFT_TICKET_MODE = "enabled"',
   '',
   '[[d1_databases]]',
   'binding = "DB"',
@@ -47,6 +48,7 @@ const auditedWranglerPhaseB = [
   '',
   '[env.production.vars]',
   'DRAFT_VALIDATION_MODE = "enabled"',
+  'DRAFT_TICKET_MODE = "disabled"',
   '',
   '[[env.production.services]]',
   'binding = "VALIDATION_SERVICE"',
@@ -63,7 +65,7 @@ const wranglerConfiguration = wrangler
   .filter((line) => !line.trimStart().startsWith('#'))
   .join('\n')
   .trim()
-assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings, distinct private validation services, and the enabled read-only production validation mode')
+assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings, distinct private validation services, enabled read-only production validation, and preview-only ticket issuance')
 assert.equal((wrangler.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^binding = "DB"$/gm) ?? []).length, 2)
@@ -73,11 +75,13 @@ assert.equal((wrangler.match(new RegExp(`^database_id = "${PREVIEW_DATABASE_ID}"
 assert.equal((wrangler.match(new RegExp(`^database_id = "${PRODUCTION_DATABASE_ID}"$`, 'gm')) ?? []).length, 1)
 assert.match(wrangler, /^preview_database_id = "DB"$/m)
 assert.equal((wrangler.match(/^migrations_dir = "migrations"$/gm) ?? []).length, 2)
-assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "enabled"\n\n\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"\n\n\[\[env\.production\.d1_databases\]\]$/m)
+assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "enabled"\nDRAFT_TICKET_MODE = "disabled"\n\n\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"\n\n\[\[env\.production\.d1_databases\]\]$/m)
 assert.match(wrangler, /^\[\[services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-preview"$/m)
 assert.match(wrangler, /^\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"$/m)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 2)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 0)
+assert.equal((wrangler.match(/^DRAFT_TICKET_MODE = "enabled"$/gm) ?? []).length, 1)
+assert.equal((wrangler.match(/^DRAFT_TICKET_MODE = "disabled"$/gm) ?? []).length, 1)
 assert.doesNotMatch(wrangler, /^\[env\.preview\]$/m)
 assert.doesNotMatch(wrangler, /^remote\s*=/m)
 assert.deepEqual(
@@ -113,9 +117,11 @@ assert.equal((source('migrations/0001_backend_foundation.sql').match(/INSERT INT
 const generatedTypes = source('functions/types.d.ts')
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "enabled";/)
+assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_TICKET_MODE: "disabled" \| "enabled";/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\/ \| Fetcher \/\* pennant-pursuit-validation-preview \*\//)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "enabled";/)
+assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_TICKET_MODE: "disabled";/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\//)
 const envSource = source('functions/lib/env.ts')
 const databaseSource = source('functions/lib/database.ts')
@@ -138,6 +144,7 @@ assert.equal(packageJson.scripts['test:production-migration'], 'node scripts/pro
 assert.match(packageJson.scripts['test:backend'], /backend-foundation\.test\.ts/)
 assert.match(packageJson.scripts['test:draft-validation'], /draft-validation-route\.test\.ts/)
 assert.match(packageJson.scripts['test:draft-validation-traffic-control'], /draft-validation-traffic-control\.test\.ts/)
+assert.match(packageJson.scripts['test:draft-ticket'], /draft-ticket\.test\.ts/)
 assert.match(packageJson.scripts['validation-worker:typecheck'], /workers\/draft-validation\/tsconfig\.json/)
 assert.match(packageJson.scripts['benchmark:draft-validation'], /draft-validation-benchmark\.ts/)
 assert.equal(SUBMISSION_SCHEMA_VERSION, null)
@@ -155,6 +162,7 @@ for (const requiredDocumentation of [
   'does not roll back D1 schema or data',
   'No user identity',
   'Leaderboard, submissions, and all runtime writes remain disabled',
+  'Preview-only draft tickets',
   'Phase C checklist',
 ]) assert.match(operationsDocumentation, new RegExp(requiredDocumentation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'))
 
@@ -180,28 +188,41 @@ assert.match(
   /spawnSync\('wrangler', APPROVED_WRANGLER_COMMAND/,
 )
 
-const apiImplementations = ['functions/api/[[path]].ts', 'functions/api/v1/health.ts', 'functions/api/v1/validate-draft.ts']
+const apiImplementations = ['functions/api/[[path]].ts', 'functions/api/v1/draft-ticket.ts', 'functions/api/v1/health.ts', 'functions/api/v1/validate-draft.ts']
 assert.deepEqual(apiImplementations.filter((path) => existsSync(path)), apiImplementations)
 assert.doesNotMatch(apiImplementations.map(source).join('\n'), /\.run\s*\(|\.batch\s*\(|\.exec\s*\(/)
 assert.deepEqual(readdirSync('functions/api').sort(), ['[[path]].ts', 'v1'])
-assert.deepEqual(readdirSync('functions/api/v1').sort(), ['health.ts', 'validate-draft.ts'])
+assert.deepEqual(readdirSync('functions/api/v1').sort(), ['draft-ticket.ts', 'health.ts', 'validate-draft.ts'])
 assert.deepEqual(readdirSync('migrations').sort(), ['0001_backend_foundation.sql'])
 const validationRouteSource = source('functions/api/v1/validate-draft.ts')
 assert.doesNotMatch(validationRouteSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
 assert.doesNotMatch(validationRouteSource, /\bcaches\.open\s*\(|\bSet-Cookie\b|\bAccess-Control-Allow-Origin\b/)
-assert.match(validationRouteSource, /VALIDATION_SERVICE/)
+assert.match(validationRouteSource, /proxyPrivateValidationRequest/)
 assert.doesNotMatch(validationRouteSource, /createWorkerReplayCatalog|replayDraftWithCatalog|calculateDraftResult|readBoundedJson/)
+const ticketRouteSource = source('functions/api/v1/draft-ticket.ts')
+const sharedProxySource = source('functions/lib/private-validation-proxy.ts')
+const ticketSource = source('functions/lib/draft-ticket.ts')
+assert.doesNotMatch(ticketRouteSource + sharedProxySource + ticketSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
+assert.doesNotMatch(ticketRouteSource + sharedProxySource, /\bcaches\.open\s*\(|\bSet-Cookie\b|\bAccess-Control-Allow-Origin\b/)
+assert.match(ticketRouteSource, /proxyPrivateValidationRequest/)
+assert.match(sharedProxySource, /service\.fetch/)
+assert.match(ticketSource, /DRAFT_TICKET_SCHEMA_VERSION/)
+assert.doesNotMatch(ticketSource, /\bMath\.random\s*\(|\bfetch\s*\(/)
 
 const privateValidationWorkerConfig = source('workers/draft-validation/wrangler.toml')
 assert.match(privateValidationWorkerConfig, /workers_dev = false/)
 assert.match(privateValidationWorkerConfig, /preview_urls = false/)
 assert.match(privateValidationWorkerConfig, /^name = "pennant-pursuit-validation-preview"$/m)
 assert.match(privateValidationWorkerConfig, /\[env\.production\][\s\S]*?^name = "pennant-pursuit-validation-production"$/m)
+assert.match(privateValidationWorkerConfig, /\[vars\][\s\S]*?DRAFT_TICKET_MODE = "enabled"/)
+assert.match(privateValidationWorkerConfig, /\[env\.production\.vars\][\s\S]*?DRAFT_TICKET_MODE = "disabled"/)
 assert.match(privateValidationWorkerConfig, /\[\[ratelimits\]\][\s\S]*?namespace_id = "16204011"[\s\S]*?\[\[ratelimits\]\][\s\S]*?namespace_id = "16204012"/)
 assert.match(privateValidationWorkerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*?namespace_id = "16204021"[\s\S]*?\[\[env\.production\.ratelimits\]\][\s\S]*?namespace_id = "16204022"/)
 assert.doesNotMatch(privateValidationWorkerConfig, /\broutes\b|custom_domain|d1_|kv_|r2_|durable_objects|queues|analytics|secrets/)
+assert.doesNotMatch(privateValidationWorkerConfig, /DRAFT_TICKET_SIGNING_KEY\s*=/)
 const privateValidationWorkerSource = source('workers/draft-validation/src/index.ts')
 const authoritativeValidationSource = source('workers/draft-validation/src/authoritative-validation.ts')
+const authoritativeTicketSource = source('workers/draft-validation/src/authoritative-ticket.ts')
 // A module Worker must expose a `fetch` handler; guard against external fetches
 // rather than the handler method itself.
 assert.doesNotMatch(privateValidationWorkerSource, /\benv\.DB\b/)
@@ -211,6 +232,9 @@ assert.doesNotMatch(privateValidationWorkerSource, /\bawait\s+fetch\s*\(/)
 assert.doesNotMatch(privateValidationWorkerSource, /\bglobalThis\.fetch\s*\(/)
 assert.doesNotMatch(authoritativeValidationSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
 assert.doesNotMatch(authoritativeValidationSource, /\.run\s*\(|\.batch\s*\(|\.exec\s*\(/)
+assert.doesNotMatch(authoritativeTicketSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
+assert.doesNotMatch(authoritativeTicketSource, /\.run\s*\(|\.batch\s*\(|\.exec\s*\(|\bfetch\s*\(/)
+assert.match(authoritativeTicketSource, /DRAFT_TICKET_SIGNING_KEY/)
 
 const expectedHeaders = (response: Response) => {
   assert.equal(response.headers.get('Content-Type'), 'application/json; charset=utf-8')

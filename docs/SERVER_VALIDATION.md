@@ -569,3 +569,98 @@ Relevant Cloudflare references: [Workers limits](https://developers.cloudflare.c
 [WAF rate limiting](https://developers.cloudflare.com/waf/rate-limiting-rules/),
 [Pages custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/),
 and [Turnstile server-side validation](https://developers.cloudflare.com/turnstile/get-started/server-side-validation/).
+
+## Phase D1A preview draft-ticket foundation
+
+Phase D1A adds a preparation-only, stateless server-issued ticket. It proves
+that the private Worker selected a seed and that the signed authorization data
+has not been modified; it does not prove who played a draft and it does not
+prevent a ticket from being used more than once. There is no submission route,
+leaderboard, identity, player name, analytics, D1 access, storage, runtime
+write, migration, or public Worker endpoint.
+
+Only preview enables `DRAFT_TICKET_MODE`. The Pages route is
+`POST /api/v1/draft-ticket`; it uses the same same-origin validation,
+trusted-`CF-Connecting-IP` derived rate key, Service Binding, response headers,
+5-per-10-second burst limit, and 20-per-60-second sustained limit as draft
+validation. The Pages proxy does not parse the body. The private preview Worker
+does bounded, duplicate-key-rejecting JSON parsing after both limits pass.
+Missing trusted metadata, a missing binding, or a missing signing key receives
+the existing fixed 503 response. `GET` is a fixed 405 with `Allow: POST`.
+
+The minimal request is exactly:
+
+```json
+{
+  "ticketRequestSchemaVersion": "pennant-draft-ticket-request-v1",
+  "gameMode": "classic"
+}
+```
+
+On success the response is HTTP 201 with the standard no-store and security
+headers:
+
+```json
+{
+  "ok": true,
+  "ticket": {
+    "value": "opaque-base64url-ticket",
+    "ticketId": "canonical-uuidv4",
+    "draftSeed": "seeded-v1:32-lowercase-hex",
+    "issuedAt": 1800000000000,
+    "expiresAt": 1800000900000,
+    "gameMode": "classic"
+  }
+}
+```
+
+`value` encodes a strict JSON envelope with the exact keys `schema`, `payload`,
+and `signature`. `schema` and `payload.ticketSchemaVersion` are both
+`pennant-draft-ticket-v1`. The payload has this fixed-field set and order:
+
+```text
+ticketSchemaVersion, ticketId, draftSeed, issuedAt, expiresAt,
+appVersion, gameRulesVersion, rngVersion, scoringVersion, dataVersion,
+canonicalDataDigest, transcriptSchemaVersion, gameMode
+```
+
+The signing input is unambiguously the domain prefix
+`pennant-pursuit:draft-ticket-signature:v1` followed by a newline and exact
+JSON serialization of `{"schema":<JSON string>,"payload":{<fixed payload
+field order>}}`. The Worker imports `DRAFT_TICKET_SIGNING_KEY` as a Web Crypto
+HMAC-SHA-256 key and signs that UTF-8 input. Verification uses the same
+canonicalizer and checks the signature before accepting any authoritative
+payload value. Cloudflare's `crypto.subtle.timingSafeEqual` is used where
+available; the local test fallback compares every available byte without an
+early mismatch exit.
+
+The server takes `ticketId` from `crypto.randomUUID()` and 16 seed bytes from
+`crypto.getRandomValues()`, rejecting the all-zero seed before formatting it as
+the engine-compatible `seeded-v1:` string. It never uses `Math.random`. The
+authoritative ticket lifetime is 900,000 ms (15 minutes), the maximum accepted
+future issue time is 60,000 ms, and encoded ticket input is limited to 4,096
+bytes. Strict parsing rejects malformed UTF-8/JSON, duplicate object keys,
+noncanonical base64url, unsupported envelope schema, invalid HMAC, invalid
+timestamps, expired tickets, unknown game modes, and any mismatch with the
+current app, rules, RNG, scoring, data, digest, or transcript versions.
+
+No real signing key, separate signature, signature input, full request body,
+rate key, or infrastructure details are logged or returned. The opaque ticket
+value is returned only to its caller and is never logged. `DRAFT_TICKET_SIGNING_KEY`
+is intentionally absent from Wrangler variables, generated types, fixtures,
+and checked-in configuration; an authorized future preview deployment must set
+that secret separately. Production Pages and the production private Worker
+both retain `DRAFT_TICKET_MODE = "disabled"`, so production `/api/v1/draft-ticket`
+returns the existing generic 404 and never invokes the production Worker.
+This does not affect production `POST /api/v1/validate-draft`, which remains
+enabled, private, and read-only.
+
+A future submission phase must add a narrowly reviewed persistent transaction
+that verifies the ticket, verifies the transcript uses all ticket-authorized
+versions and seed, and atomically inserts/consumes a unique `ticketId`. Until
+then, tickets are replayable and cannot make a result leaderboard-eligible.
+For a future signing-key rotation, disable preview issuance, wait at least the
+15-minute lifetime plus 60-second skew, rotate the Worker secret in an
+authorized deployment, then re-enable and verify preview issuance. Rollback is
+to return preview `DRAFT_TICKET_MODE` to `disabled` and deploy that reviewed
+configuration; no storage or D1 rollback is involved.
