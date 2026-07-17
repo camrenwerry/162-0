@@ -15,24 +15,26 @@ All Cloudflare Pages preview deployments share `pennant-pursuit-preview`; a bran
 
 In `wrangler.toml`, each `database_id` is a real remote D1 database UUID. The top-level value `preview_database_id = "DB"` is the local Pages preview identifier used by Wrangler, not the UUID or name of another remote database. Local development must use Wrangler's local persistence and must not add `remote = true` to either binding. This prevents ordinary local requests from reaching a remote database.
 
-## Phase C4.3 private validation isolation
+## Private validation isolation and production enablement
 
 `VALIDATION_SERVICE` is explicit in both Pages environments and targets two
 different private Workers:
 
 - Preview: `pennant-pursuit-validation-preview`, namespaces `16204011` and
   `16204012`.
-- Production preparation: `pennant-pursuit-validation-production`, namespaces
-  `16204021` and `16204022`.
+- Production: `pennant-pursuit-validation-production`, namespaces `16204021`
+  and `16204022`.
 
 Both targets share the source in `workers/draft-validation/`, but each has a
 separate Worker name and separate 5/10-second and 20/60-second Rate Limiting
 counter namespaces. Both disable `workers.dev` and Worker preview URLs and have
 no route, custom domain, D1, KV, R2, Durable Object, queue, analytics, secret,
-storage, external fetch, or runtime-write binding. The production Pages binding
-is prepared while `DRAFT_VALIDATION_MODE` remains exactly `disabled`, so the
-browser route returns generic 404 before its body is read or the private Service
-Binding is invoked.
+storage, external fetch, or runtime-write binding. The reviewed production Pages
+configuration sets `DRAFT_VALIDATION_MODE` to exactly `enabled`; a future Pages
+deployment is required before that checked-in setting becomes live. Once live,
+only a valid, same-origin `POST` with trusted Cloudflare connection metadata is
+privately proxied to the production Worker. The Pages proxy, Worker, and
+validation path remain read-only and do not access D1.
 
 Rate Limiting is deliberately best-effort, per-location, and eventually
 consistent; it does not promise an exact sixth-request denial. No transcript,

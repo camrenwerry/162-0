@@ -237,16 +237,30 @@ assert.equal((await handleValidateDraftRequest(publicRequest(validBody, { origin
 assert.equal((await handleValidateDraftRequest(publicRequest('', { method: 'GET' }), boundaryHarness.env)).status, 405)
 assert.equal(boundaryHarness.serviceCalls.value, 0)
 
-// Production-equivalent feature mode returns the generic 404 before body or
-// service handling, even though C4.3 prepares its distinct private binding.
-const productionHarness = createHarness({ mode: 'disabled' })
-assert.equal((await handleValidateDraftRequest(publicRequest(validBody), productionHarness.env)).status, 404)
-assert.equal(productionHarness.serviceCalls.value, 0)
+// The production-equivalent enabled mode invokes its private binding for a
+// valid POST, while rejected methods and malformed requests retain the public
+// safe behavior. The Page proxy and private Worker both remain D1-free.
+const productionHarness = createHarness()
+const productionEnv = Object.defineProperty({ ...productionHarness.env }, 'DB', {
+  get() { throw new Error('production validation must not access D1') },
+})
+assert.equal((await handleValidateDraftRequest(publicRequest(validBody), productionEnv)).status, 200)
+assert.equal(productionHarness.serviceCalls.value, 1)
+assert.equal((await handleValidateDraftRequest(publicRequest('', { method: 'GET' }), productionEnv)).status, 405)
+assert.equal(productionHarness.serviceCalls.value, 1)
+assert.equal((await handleValidateDraftRequest(publicRequest('{'), productionEnv)).status, 400)
+assert.equal(productionHarness.serviceCalls.value, 2)
 const pagesConfig = readFileSync('wrangler.toml', 'utf8')
 assert.match(pagesConfig, /\[\[services\]\][\s\S]*binding = "VALIDATION_SERVICE"[\s\S]*service = "pennant-pursuit-validation-preview"/)
-assert.match(pagesConfig, /\[env\.production\.vars\][\s\S]*DRAFT_VALIDATION_MODE = "disabled"/)
+assert.match(pagesConfig, /\[env\.production\.vars\][\s\S]*DRAFT_VALIDATION_MODE = "enabled"/)
 assert.match(pagesConfig, /\[\[env\.production\.services\]\][\s\S]*binding = "VALIDATION_SERVICE"[\s\S]*service = "pennant-pursuit-validation-production"/)
 assert.doesNotMatch(pagesConfig, /\[\[env\.production\.ratelimits\]\]/)
+assert.deepEqual(
+  [...pagesConfig.matchAll(/^service = "([^"]+)"$/gm)].map(([, service]) => service),
+  ['pennant-pursuit-validation-preview', 'pennant-pursuit-validation-production'],
+)
+assert.equal((pagesConfig.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 2)
+assert.equal((pagesConfig.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 0)
 
 // The shared source and its two explicit configurations guard the intended
 // private, storage-free topology and separate rate-limit state.
@@ -255,10 +269,16 @@ assert.match(workerConfig, /workers_dev = false/)
 assert.match(workerConfig, /preview_urls = false/)
 assert.match(workerConfig, /RATE_LIMIT_BURST[\s\S]*limit = 5[\s\S]*period = 10/)
 assert.match(workerConfig, /RATE_LIMIT_SUSTAINED[\s\S]*limit = 20[\s\S]*period = 60/)
+assert.match(workerConfig, /\[\[ratelimits\]\][\s\S]*name = "RATE_LIMIT_BURST"[\s\S]*namespace_id = "16204011"[\s\S]*limit = 5[\s\S]*period = 10/)
+assert.match(workerConfig, /\[\[ratelimits\]\][\s\S]*name = "RATE_LIMIT_SUSTAINED"[\s\S]*namespace_id = "16204012"[\s\S]*limit = 20[\s\S]*period = 60/)
 assert.match(workerConfig, /\[env\.production\][\s\S]*name = "pennant-pursuit-validation-production"[\s\S]*workers_dev = false[\s\S]*preview_urls = false/)
 assert.match(workerConfig, /\[env\.production\.vars\][\s\S]*DRAFT_VALIDATION_MODE = "enabled"/)
 assert.match(workerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*name = "RATE_LIMIT_BURST"[\s\S]*namespace_id = "16204021"[\s\S]*limit = 5[\s\S]*period = 10/)
 assert.match(workerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*name = "RATE_LIMIT_SUSTAINED"[\s\S]*namespace_id = "16204022"[\s\S]*limit = 20[\s\S]*period = 60/)
+assert.deepEqual(
+  [...workerConfig.matchAll(/^namespace_id = "(\d+)"$/gm)].map(([, namespace]) => namespace),
+  ['16204011', '16204012', '16204021', '16204022'],
+)
 const previewWorkerName = workerConfig.match(/^name = "([^"]+)"/m)?.[1]
 const productionWorkerName = workerConfig.match(/\[env\.production\][\s\S]*?^name = "([^"]+)"/m)?.[1]
 assert.equal(previewWorkerName, 'pennant-pursuit-validation-preview')
@@ -269,4 +289,4 @@ const proxySource = readFileSync('functions/api/v1/validate-draft.ts', 'utf8')
 assert.doesNotMatch(proxySource, /createWorkerReplayCatalog|replayDraftWithCatalog|calculateDraftResult|readBoundedJson|env\.DB|waitUntil|console\./)
 assert.match(proxySource, /service\.fetch/)
 
-console.log('Draft validation traffic control passed: private proxy, trusted key, rate limits, production isolation, and no storage.')
+console.log('Draft validation traffic control passed: isolated private proxies, trusted key, distinct rate limits, production read-only validation, and no storage.')

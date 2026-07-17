@@ -4,8 +4,8 @@ Backend Phase C1 provides a shared, Worker-compatible replay and scoring
 foundation. Backend Phase C2 adds a preview-only, read-only HTTP adapter around
 that foundation. Backend Phase C3 hardens its bounded parsing, HTTP boundary,
 and catalog execution path without changing game behavior. Phase C4.1 moves the
-authoritative path behind a private, preview-only Worker and adds coarse abuse
-mitigation without changing the browser endpoint or game behavior. No phase
+authoritative path behind private preview and production Workers and adds coarse
+abuse mitigation without changing the browser endpoint or game behavior. No phase
 adds a submission protocol, identity, leaderboard, database access,
 persistence, analytics, moderation, or runtime writes.
 
@@ -188,7 +188,7 @@ still be tested in an actual isolated preview Worker because isolate startup,
 platform CPU accounting, request parsing, and response serialization are not
 represented here.
 
-## Phase C2/C3/C4.1 route and environment boundary
+## Phase C2/C3/C4 route and environment boundary
 
 `POST /api/v1/validate-draft` accepts exactly `{ "transcript": { ... } }`. The
 server replays the transcript with the compact canonical catalog and shared RNG,
@@ -197,13 +197,13 @@ identity, display names, tickets, idempotency keys, leaderboard intent,
 analytics, and request metadata are not part of the request grammar.
 
 `DRAFT_VALIDATION_MODE` is a server-only Wrangler variable. Its top-level value
-is `enabled`, which covers local development and Pages preview deployments. All
-Pages previews that use the checked-in configuration may therefore expose this
-route. The production override is exactly `disabled`. Only the exact lowercase
-string `enabled` activates the route; a missing, malformed, or unexpected value
-fails closed. In production, the route is indistinguishable from any unknown
-API path: it returns the existing JSON 404 before inspecting the request body.
-This preview capability is not production-ready.
+is `enabled`, which covers local development and Pages preview deployments. The
+checked-in production override is also exactly `enabled`, but it takes effect
+only after a reviewed production Pages deployment. Each environment is bound to
+its own private Worker. Only the exact lowercase string `enabled` activates the
+route; a missing, malformed, or unexpected value fails closed with the existing
+generic JSON 404 before inspecting the request body. Enabled production
+validation remains read-only and is not a submission or leaderboard capability.
 
 When enabled, only `POST` is allowed and other methods return `Allow: POST`.
 Requests must use exactly the `application/json` media type, without parameters
@@ -279,8 +279,8 @@ catalog fields, the transcript, and the gameplay seed are omitted.
 
 Errors use fixed messages and the shape
 `{ "ok": false, "verified": false, "error": { "code": "...", "message": "..." } }`.
-The production-disabled generic 404 intentionally retains the existing unknown
-API response exactly.
+When the feature flag is disabled, the generic 404 intentionally retains the
+existing unknown API response exactly.
 
 | Status | Public codes |
 | ---: | --- |
@@ -362,8 +362,9 @@ Every C3 response has `Cache-Control: no-store`, `X-Content-Type-Options:
 nosniff`, `Referrer-Policy: no-referrer`, and
 `Cross-Origin-Resource-Policy: same-origin`. It intentionally emits no CORS or
 cookie headers. A CSP is not set because this is a JSON API response, not an
-HTML document. `HEAD` is rejected with the existing 405 when validation is
-enabled; production remains the unchanged generic 404 before body parsing.
+HTML document. `HEAD` is rejected with the existing 405 whenever validation is
+enabled, including production after the reviewed Pages deployment; a disabled
+or malformed feature flag retains the generic 404 before body parsing.
 
 ## C3 local measurements
 
@@ -376,7 +377,7 @@ than per-request memory limits.
 
 | Workload | Mean ms | Median | p90 | p95 | p99 | Max | req/s | Heap Δ KiB |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Disabled production request | 0.0117 | 0.0113 | 0.0121 | 0.0125 | 0.0188 | 0.1591 | 85,576.7 | -5,471.0 |
+| Disabled-mode control request (historical) | 0.0117 | 0.0113 | 0.0121 | 0.0125 | 0.0188 | 0.1591 | 85,576.7 | -5,471.0 |
 | Unsupported method | 0.0073 | 0.0071 | 0.0074 | 0.0075 | 0.0093 | 0.1287 | 137,594.4 | 96.6 |
 | Wrong content type | 0.0105 | 0.0102 | 0.0106 | 0.0112 | 0.0157 | 0.1237 | 95,435.2 | 6,589.5 |
 | Oversized body | 0.0115 | 0.0112 | 0.0117 | 0.0123 | 0.0170 | 0.1370 | 86,872.7 | -5,124.5 |
@@ -414,7 +415,7 @@ catalog-construction call on startup. No deployment was attempted.
 Cloudflare documents a one-second startup limit and notes that local startup
 profiles are diagnostic, not deployment-equivalent.
 
-## C4.1/C4.3 private Workers, traffic control, and local operation
+## C4 private Workers, traffic control, and local operation
 
 The browser still calls the same same-origin endpoint. C4.1 changes only its
 internal execution path:
@@ -423,7 +424,7 @@ internal execution path:
 browser POST /api/v1/validate-draft
   -> Pages proxy: feature flag + method/origin check + trusted key derivation
   -> VALIDATION_SERVICE Service Binding
-  -> pennant-pursuit-validation-preview: rate limit + bounded validation
+  -> environment-specific private validation Worker: rate limit + bounded validation
 ```
 
 `workers/draft-validation/` is one shared Worker source with two explicit,
@@ -467,10 +468,11 @@ The default/preview Pages configuration binds `VALIDATION_SERVICE` only to
 `pennant-pursuit-validation-preview`, with namespaces `16204011` and
 `16204012`. `[env.production]` binds that same name only to
 `pennant-pursuit-validation-production`, with namespaces `16204021` and
-`16204022`; the two counters are never shared. The Pages production feature
-flag still sets `DRAFT_VALIDATION_MODE = "disabled"`. Production therefore
-returns the generic 404 before body handling, limiter invocation, or Service
-Binding invocation, even after a future authorized private Worker deployment.
+`16204022`; the two counters are never shared. The reviewed Pages production
+feature flag sets `DRAFT_VALIDATION_MODE = "enabled"`. After a reviewed Pages
+deployment, valid production `POST`s pass the existing method, origin, host,
+and trusted-metadata checks before invoking only the production Service Binding.
+Invalid methods and malformed requests retain their existing safe responses.
 
 Local commands are deliberately separate from remote operations:
 
@@ -490,33 +492,25 @@ Use the two development commands in separate terminals when exercising a local
 Service Binding. Unit/integration tests instead use deterministic rate-limit
 doubles; they do not rely on a remote counter.
 
-### C4.3 production preparation, deployment order, and rollback
+### Production Pages activation and rollback
 
-This repository preparation does not deploy the production Worker or Pages
-configuration. A future authorized rollout must remain four separate steps:
+The private production Worker is already deployed. This reviewed repository
+change does not deploy Pages; a future authorized rollout must deploy the
+reviewed `main` Pages configuration and then verify that production health
+reports `draftValidation: "enabled"` while leaderboard, submissions, and writes
+remain disabled. A valid fixed transcript must verify as 113–49 through the
+private production Service Binding; invalid methods and malformed requests must
+retain their existing safe errors. Do not call the private Worker through a
+public URL.
 
-1. Deploy only the private production Worker with `npx wrangler --cwd
-   workers/draft-validation deploy --env production --minify`, then verify its
-   name, privacy flags, two production-only namespaces, and lack of routes. Do
-   not call it through a public URL.
-2. Deploy a reviewed `develop` Pages preview. Verify preview still binds only
-   the preview Worker and production remains unchanged.
-3. Merge the reviewed configuration to `main` and deploy Pages while production
-   validation remains disabled. Verify production health is disabled and the
-   validation route remains generic 404.
-4. Under a separate review, change only production Pages
-   `DRAFT_VALIDATION_MODE` from `disabled` to `enabled`, deploy `main`, and test
-   the read-only production path and rollback.
-
-Before production enablement, rollback is to revert the Pages configuration;
-the private production Worker may remain deployed but unreachable. After a
-future enablement, first return the Pages production flag to `disabled` and
-deploy or revert Pages until generic 404 returns, then consider Worker rollback
-only if separately needed. Do not delete Workers during an incident without
-separate authorization. No stored validation data or D1 schema change exists,
-so neither path needs data cleanup or D1 rollback. Phase D still requires
-independently reviewed server-issued, short-lived, single-use tickets and replay
-protection before any result may be leaderboard-eligible.
+Rollback is to change only the production Pages
+`DRAFT_VALIDATION_MODE` back to `disabled` and deploy or revert Pages until the
+generic 404 returns. The private production Worker may remain deployed but
+unreachable; do not delete it without separate authorization. No validation data
+is stored and no D1 schema or data changes occur, so rollback requires neither
+data cleanup nor D1 recovery. Phase D still requires independently reviewed
+server-issued, short-lived, single-use tickets and replay protection before any
+result may be leaderboard-eligible.
 
 ### C4.1 local measurements
 

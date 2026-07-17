@@ -46,7 +46,7 @@ const auditedWranglerPhaseB = [
   '[env.production]',
   '',
   '[env.production.vars]',
-  'DRAFT_VALIDATION_MODE = "disabled"',
+  'DRAFT_VALIDATION_MODE = "enabled"',
   '',
   '[[env.production.services]]',
   'binding = "VALIDATION_SERVICE"',
@@ -63,7 +63,7 @@ const wranglerConfiguration = wrangler
   .filter((line) => !line.trimStart().startsWith('#'))
   .join('\n')
   .trim()
-assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings, distinct private validation services, and the fail-closed production mode')
+assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings, distinct private validation services, and the enabled read-only production validation mode')
 assert.equal((wrangler.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^binding = "DB"$/gm) ?? []).length, 2)
@@ -73,11 +73,11 @@ assert.equal((wrangler.match(new RegExp(`^database_id = "${PREVIEW_DATABASE_ID}"
 assert.equal((wrangler.match(new RegExp(`^database_id = "${PRODUCTION_DATABASE_ID}"$`, 'gm')) ?? []).length, 1)
 assert.match(wrangler, /^preview_database_id = "DB"$/m)
 assert.equal((wrangler.match(/^migrations_dir = "migrations"$/gm) ?? []).length, 2)
-assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "disabled"\n\n\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"\n\n\[\[env\.production\.d1_databases\]\]$/m)
+assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "enabled"\n\n\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"\n\n\[\[env\.production\.d1_databases\]\]$/m)
 assert.match(wrangler, /^\[\[services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-preview"$/m)
 assert.match(wrangler, /^\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"$/m)
-assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 1)
-assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 1)
+assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 2)
+assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 0)
 assert.doesNotMatch(wrangler, /^\[env\.preview\]$/m)
 assert.doesNotMatch(wrangler, /^remote\s*=/m)
 assert.deepEqual(
@@ -112,10 +112,10 @@ assert.equal((source('migrations/0001_backend_foundation.sql').match(/INSERT INT
 
 const generatedTypes = source('functions/types.d.ts')
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB: D1Database;/)
-assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "disabled" \| "enabled";/)
+assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "enabled";/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\/ \| Fetcher \/\* pennant-pursuit-validation-preview \*\//)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DB: D1Database;/)
-assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "disabled";/)
+assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "enabled";/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\//)
 const envSource = source('functions/lib/env.ts')
 const databaseSource = source('functions/lib/database.ts')
@@ -315,6 +315,27 @@ assert.deepEqual(await healthyResponse.json(), {
 assert.deepEqual(healthyDatabase.queries, [CONNECTIVITY_SQL, SCHEMA_SQL])
 assert.equal(healthyDatabase.writeCalls(), 0)
 
+const productionHealthDatabase = createMockDatabase()
+const productionHealthResponse = await handleHealthRequest(
+  new Request('https://example.test/api/v1/health'),
+  { ...productionHealthDatabase.env, DRAFT_VALIDATION_MODE: 'enabled' },
+)
+assert.equal(productionHealthResponse.status, 200)
+assert.deepEqual(await productionHealthResponse.json(), {
+  ...expectedMetadata,
+  status: 'healthy',
+  backend: { d1: { configured: true, reachable: true, schemaVersion: 1 } },
+  features: {
+    draftValidation: 'enabled',
+    leaderboard: 'disabled',
+    submissions: 'disabled',
+    writes: 'disabled',
+    d1: 'read-only',
+  },
+})
+assert.deepEqual(productionHealthDatabase.queries, [CONNECTIVITY_SQL, SCHEMA_SQL])
+assert.equal(productionHealthDatabase.writeCalls(), 0)
+
 const unavailableDatabase = createMockDatabase({ connectivity: new Error(RAW_DATABASE_ERROR) })
 const unavailableResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), unavailableDatabase.env)
 const unavailableBody = await unavailableResponse.text()
@@ -386,4 +407,4 @@ assert.deepEqual(JSON.parse(source('dist/_routes.json')), expectedRoutes)
 assert.equal(source('public/_redirects').trim(), '/* /index.html 200')
 assert.equal(source('dist/_redirects').trim(), '/* /index.html 200')
 
-console.log('Backend Phase C4.3 passed: isolated D1 bindings, distinct private validation bindings, read-only health, fail-closed production validation, and exact API routing.')
+console.log('Backend production validation passed: isolated D1 bindings, distinct private validation bindings, read-only health, enabled production validation, and exact API routing.')
