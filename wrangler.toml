@@ -13,4 +13,9 @@ preview_database_id = "DB"
 migrations_dir = "migrations"
 
 [env.production]
-d1_databases = []
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "pennant-pursuit-production"
+database_id = "4b821c17-b88b-462d-a2ed-c6a2113cc362"
+migrations_dir = "migrations"

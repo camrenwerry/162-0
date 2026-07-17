@@ -16,6 +16,7 @@ import {
 import { TRANSCRIPT_SCHEMA_VERSION } from '../src/game/DraftTranscript'
 
 const PREVIEW_DATABASE_ID = 'ba6255b4-9425-4863-b10f-79149180f75a'
+const PRODUCTION_DATABASE_ID = '4b821c17-b88b-462d-a2ed-c6a2113cc362'
 const CONNECTIVITY_SQL = 'SELECT 1 AS value'
 const SCHEMA_SQL = 'SELECT version FROM backend_schema WHERE id = 1'
 const RAW_DATABASE_ERROR = 'internal D1 failure: database-id=secret host=private.example'
@@ -23,7 +24,7 @@ const RAW_DATABASE_ERROR = 'internal D1 failure: database-id=secret host=private
 const source = (path: string) => readFileSync(path, 'utf8')
 
 const wrangler = source('wrangler.toml')
-const auditedWranglerPhaseA = [
+const auditedWranglerPhaseB = [
   'name = "diamond-draft"',
   'pages_build_output_dir = "dist"',
   'compatibility_date = "2026-07-14"',
@@ -36,30 +37,37 @@ const auditedWranglerPhaseA = [
   'migrations_dir = "migrations"',
   '',
   '[env.production]',
-  'd1_databases = []',
+  '',
+  '[[env.production.d1_databases]]',
+  'binding = "DB"',
+  'database_name = "pennant-pursuit-production"',
+  `database_id = "${PRODUCTION_DATABASE_ID}"`,
+  'migrations_dir = "migrations"',
 ].join('\n')
 const wranglerConfiguration = wrangler
   .split('\n')
   .filter((line) => !line.trimStart().startsWith('#'))
   .join('\n')
   .trim()
-assert.equal(wranglerConfiguration, auditedWranglerPhaseA, 'Wrangler must match the preview-only Phase A configuration')
+assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must match the isolated preview/production Phase B configuration')
 assert.equal((wrangler.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
-assert.match(wrangler, /^binding = "DB"$/m)
-assert.match(wrangler, /^database_name = "pennant-pursuit-preview"$/m)
-assert.match(wrangler, new RegExp(`^database_id = "${PREVIEW_DATABASE_ID}"$`, 'm'))
+assert.equal((wrangler.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 1)
+assert.equal((wrangler.match(/^binding = "DB"$/gm) ?? []).length, 2)
+assert.equal((wrangler.match(/^database_name = "pennant-pursuit-preview"$/gm) ?? []).length, 1)
+assert.equal((wrangler.match(/^database_name = "pennant-pursuit-production"$/gm) ?? []).length, 1)
+assert.equal((wrangler.match(new RegExp(`^database_id = "${PREVIEW_DATABASE_ID}"$`, 'gm')) ?? []).length, 1)
+assert.equal((wrangler.match(new RegExp(`^database_id = "${PRODUCTION_DATABASE_ID}"$`, 'gm')) ?? []).length, 1)
 assert.match(wrangler, /^preview_database_id = "DB"$/m)
-assert.match(wrangler, /^migrations_dir = "migrations"$/m)
-assert.match(wrangler, /^\[env\.production\]\nd1_databases = \[\]$/m)
+assert.equal((wrangler.match(/^migrations_dir = "migrations"$/gm) ?? []).length, 2)
+assert.match(wrangler, /^\[env\.production\]\n\n\[\[env\.production\.d1_databases\]\]$/m)
 assert.doesNotMatch(wrangler, /^\[env\.preview\]$/m)
-assert.doesNotMatch(wrangler, /pennant-pursuit-production/i)
-assert.doesNotMatch(wrangler, /^\[\[env\.production\.d1_databases\]\]$/m)
 assert.doesNotMatch(wrangler, /^remote\s*=/m)
 assert.deepEqual(
   wrangler.match(/[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/gi),
-  [PREVIEW_DATABASE_ID],
-  'the preview UUID must be the only configured database UUID',
+  [PREVIEW_DATABASE_ID, PRODUCTION_DATABASE_ID],
+  'exactly the preview and production UUIDs must be configured',
 )
+assert.notEqual(PREVIEW_DATABASE_ID, PRODUCTION_DATABASE_ID)
 for (const forbidden of [
   'compatibility_flags', 'vars', 'secrets', 'kv_namespaces', 'r2_buckets',
   'durable_objects', 'services', 'queues', 'vectorize', 'hyperdrive',
@@ -85,8 +93,8 @@ assert.equal((source('migrations/0001_backend_foundation.sql').match(/CREATE TAB
 assert.equal((source('migrations/0001_backend_foundation.sql').match(/INSERT INTO/gi) ?? []).length, 1)
 
 const generatedTypes = source('functions/types.d.ts')
-assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB\?: D1Database;/)
-assert.match(generatedTypes, /interface ProductionEnv \{\}/)
+assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB: D1Database;/)
+assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DB: D1Database;/)
 const envSource = source('functions/lib/env.ts')
 const databaseSource = source('functions/lib/database.ts')
 assert.match(envSource, /readonly DB\?: D1Database/)
@@ -104,6 +112,7 @@ assert.equal(packageJson.scripts['db:migrations:list:preview'], 'wrangler d1 mig
 assert.equal(packageJson.scripts['db:migrations:apply:preview'], 'wrangler d1 migrations apply pennant-pursuit-preview --remote --env=""')
 assert.equal(packageJson.scripts['db:migrations:list:production'], 'wrangler d1 migrations list pennant-pursuit-production --remote --env production')
 assert.equal(packageJson.scripts['db:migrations:apply:production'], 'node scripts/apply-production-migrations.mjs')
+assert.equal(packageJson.scripts['test:production-migration'], 'node scripts/production-migration-guard.test.mjs')
 assert.match(packageJson.scripts['test:backend'], /backend-foundation\.test\.ts/)
 assert.equal(SUBMISSION_SCHEMA_VERSION, null)
 assert.equal(LEADERBOARD_VERSION, null)
@@ -111,14 +120,16 @@ assert.equal(LEADERBOARD_VERSION, null)
 const operationsDocumentation = source('docs/BACKEND_OPERATIONS.md')
 for (const requiredDocumentation of [
   'pennant-pursuit-preview',
-  'production has no D1 binding',
+  'pennant-pursuit-production',
+  PREVIEW_DATABASE_ID,
+  PRODUCTION_DATABASE_ID,
   'All Cloudflare Pages preview deployments share',
   'must not add `remote = true`',
   '`preview_database_id = "DB"`',
   'does not roll back D1 schema or data',
   'No user identity',
   'Leaderboard, submissions, and all runtime writes remain disabled',
-  'Phase B checklist',
+  'Phase C checklist',
 ]) assert.match(operationsDocumentation, new RegExp(requiredDocumentation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'))
 
 const productionGuard = source('scripts/apply-production-migrations.mjs')
@@ -128,19 +139,24 @@ for (const requiredGuard of [
   "git('status', '--porcelain')",
   'process.stdin.isTTY',
   'process.stdout.isTTY',
-  'process.env.CI',
+  'env.CI',
   "git('branch', '--show-current')",
   "git('rev-parse', 'HEAD')",
   "'--remote'",
   "'--env'",
   "'production'",
+  'preview and production database UUIDs must differ',
 ]) assert.match(productionGuard, new RegExp(requiredGuard.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))
 assert.equal((productionGuard.match(/spawnSync\('wrangler'/g) ?? []).length, 1)
 assert.doesNotMatch(productionGuard, /execFileSync\('wrangler'|--local/)
 assert.match(
   productionGuard,
-  /spawnSync\('wrangler', \[\s*'d1',\s*'migrations',\s*'apply',\s*PRODUCTION_DATABASE_NAME,\s*'--remote',\s*'--env',\s*'production',\s*\]/,
+  /spawnSync\('wrangler', APPROVED_WRANGLER_COMMAND/,
 )
+
+const apiImplementations = ['functions/api/[[path]].ts', 'functions/api/v1/health.ts']
+assert.deepEqual(apiImplementations.filter((path) => existsSync(path)), apiImplementations)
+assert.doesNotMatch(apiImplementations.map(source).join('\n'), /\.run\s*\(|\.batch\s*\(|\.exec\s*\(/)
 
 const expectedHeaders = (response: Response) => {
   assert.equal(response.headers.get('Content-Type'), 'application/json; charset=utf-8')
@@ -313,4 +329,4 @@ assert.deepEqual(JSON.parse(source('dist/_routes.json')), expectedRoutes)
 assert.equal(source('public/_redirects').trim(), '/* /index.html 200')
 assert.equal(source('dist/_redirects').trim(), '/* /index.html 200')
 
-console.log('Backend Phase A passed: preview-only D1 configuration, minimal schema, read-only health degradation, production guardrails, and API routing.')
+console.log('Backend Phase B passed: isolated preview/production D1 bindings, minimal schema, read-only health behavior, production guardrails, and API routing.')
