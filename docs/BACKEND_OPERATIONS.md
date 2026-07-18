@@ -110,6 +110,9 @@ configuration; no D1 cleanup, migration, or data recovery is required.
 
 ## D1C.1 disabled submission foundation
 
+D1C.1 is governed by the recovered
+[Corrected D1C.0 authoritative submission contract](D1C0_CORRECTED_SUBMISSION_DESIGN.md).
+
 D1C.1 adds migration `0002_draft_submissions.sql`, the preview-only private
 Worker D1 binding, and `DRAFT_SUBMISSION_MODE = "disabled"` in both Pages and
 private-Worker environments. Production's private Worker intentionally has no
