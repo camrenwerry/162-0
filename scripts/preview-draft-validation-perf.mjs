@@ -7,10 +7,30 @@ const origin = new URL(url).origin
 const concurrency = Math.min(Math.max(Number(process.env.PREVIEW_CONCURRENCY ?? 5), 1), 5)
 const perWorkload = Math.min(Math.max(Number(process.env.PREVIEW_REQUESTS_PER_WORKLOAD ?? 20), 1), 100)
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/transcripts/ordinary-no-rerolls.json', import.meta.url), 'utf8'))
-const validBody = JSON.stringify({ transcript: fixture.transcript })
-const invalidTranscript = structuredClone(fixture.transcript)
+const ticketResponse = await fetch(`${origin}/api/v1/draft-ticket`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ ticketRequestSchemaVersion: 'pennant-draft-ticket-request-v1', gameMode: 'classic' }),
+})
+if (ticketResponse.status !== 201) throw new Error(`Preview ticket issuance returned HTTP ${ticketResponse.status}.`)
+const ticketResult = await ticketResponse.json()
+if (
+  ticketResult?.ok !== true
+  || typeof ticketResult.ticket?.value !== 'string'
+  || typeof ticketResult.ticket.ticketId !== 'string'
+  || typeof ticketResult.ticket.draftSeed !== 'string'
+  || typeof ticketResult.ticket.issuedAt !== 'number'
+) throw new Error('Preview ticket issuance returned an invalid response.')
+const transcript = structuredClone(fixture.transcript)
+Object.assign(transcript.header, {
+  draftId: ticketResult.ticket.ticketId,
+  gameplaySeed: ticketResult.ticket.draftSeed,
+  createdAt: new Date(ticketResult.ticket.issuedAt).toISOString(),
+})
+const validBody = JSON.stringify({ ticket: ticketResult.ticket.value, transcript })
+const invalidTranscript = structuredClone(transcript)
 invalidTranscript.events[0].combinationId = 'ana-1960s'
-const invalidBody = JSON.stringify({ transcript: invalidTranscript })
+const invalidBody = JSON.stringify({ ticket: ticketResult.ticket.value, transcript: invalidTranscript })
 
 function percentile(samples, percent) {
   const sorted = [...samples].sort((left, right) => left - right)
@@ -68,6 +88,6 @@ console.log(JSON.stringify({
   origin,
   concurrency,
   requestsPerWorkload: perWorkload,
-  totalRequests: 3 + perWorkload * 3,
+  totalRequests: 4 + perWorkload * 3,
   results: [health, valid, invalid],
 }, null, 2))

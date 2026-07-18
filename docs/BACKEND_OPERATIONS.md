@@ -30,7 +30,8 @@ separate Worker name and separate 5/10-second and 20/60-second Rate Limiting
 counter namespaces. Both disable `workers.dev` and Worker preview URLs and have
 no route, custom domain, D1, KV, R2, Durable Object, queue, analytics, storage,
 external fetch, or runtime-write binding. No signing secret has been created or
-configured in this repository. The reviewed production Pages
+configured in this repository. The signing secret exists only on the preview
+Worker as an out-of-repository secret; the production Worker has none. The reviewed production Pages
 configuration sets `DRAFT_VALIDATION_MODE` to exactly `enabled`; a future Pages
 deployment is required before that checked-in setting becomes live. Once live,
 only a valid, same-origin `POST` with trusted Cloudflare connection metadata is
@@ -40,9 +41,9 @@ validation path remain read-only and do not access D1.
 Rate Limiting is deliberately best-effort, per-location, and eventually
 consistent; it does not promise an exact sixth-request denial. No transcript,
 roster, player, key, request metadata, validation attempt, identity, ticket,
-submission, leaderboard, or analytics data is stored. Phase D still requires a
-separately reviewed ticket and replay-protection design before any result can be
-eligible for a leaderboard.
+submission, leaderboard, or analytics data is stored. Persistent ticket
+consumption and replay protection still require separate review before any
+result can be eligible for a leaderboard.
 
 ## Preview-only draft tickets
 
@@ -62,17 +63,35 @@ opaque signed ticket with a server-generated ID and `seeded-v1` draft seed.
 
 The Worker expects a secret named `DRAFT_TICKET_SIGNING_KEY` only at an
 explicitly authorized preview deployment. It is not a Wrangler variable, is not
-present in checked-in configuration or generated types, and no preview or
-production secret is created by this change. A missing secret fails safely with
+present in checked-in configuration or generated types. The deployed preview
+Worker has this secret; production does not. A missing secret fails safely with
 the existing generic 503 response. A deterministic non-production key exists
 only in automated test code and is never part of a deployed bundle.
 
 Each ticket is HMAC-SHA-256 signed, expires 15 minutes after issuance, and
 allows at most 60 seconds of future clock skew during later server-side
-verification. Its signed ticket ID is the future submission idempotency key:
+verification. Phase D1B verifies these claims during preview validation and
+binds them to the transcript before replay. Its signed ticket ID is the future submission idempotency key:
 the future submission table must enforce a unique ticket-ID constraint and atomically
-consume it. D1A deliberately does neither, so a valid ticket can still be
+consume it. D1B deliberately does neither, so a valid ticket can still be
 replayed until that persistence layer is separately designed and authorized.
+
+Preview `POST /api/v1/validate-draft` now requires exactly an opaque `ticket`
+and a `transcript`. Ticket verification occurs only in the private Worker after
+both rate limits. The signed ID, seed, issuance time, app/rules/RNG/scoring/data
+versions, canonical digest, transcript schema, and classic game mode must match
+the transcript header and authoritative ruleset before the unchanged replay and
+scoring path begins. Failures use fixed sanitized responses. Validation remains
+read-only: it does not access D1, consume tickets, store replay state, or create
+a submission. One-time consumption and persistent replay protection remain
+deferred.
+
+D1B does not deploy production code, add a production signing secret, or enable
+production ticket issuance. Production retains `DRAFT_TICKET_MODE = "disabled"`.
+The shared D1B Worker source requires a signing secret for successful
+validation, so it must not be deployed to the secret-free production Worker
+without a separately reviewed production ticket strategy; it will otherwise
+fail closed with the generic 503.
 
 To rotate the signing key in a future authorized deployment, first disable
 ticket issuance, wait at least the 15-minute ticket lifetime plus 60-second

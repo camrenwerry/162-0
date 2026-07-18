@@ -21,6 +21,7 @@ import {
   type PrivateValidationWorkerEnv,
   type RateLimitBinding,
 } from '../workers/draft-validation/src/index'
+import { createBoundValidationFixture } from './lib/draft-ticket-fixtures'
 
 const ENDPOINT = 'https://preview.example.test/api/v1/draft-ticket'
 const CLIENT_IP = '198.51.100.42'
@@ -252,10 +253,11 @@ assert.equal((await handlePrivateDraftTicketRequest(new Request(ENDPOINT, {
 }), missingSecret.env)).status, 503)
 
 const validationEnvironment = privateEnvironment()
+const validationFixture = await createBoundValidationFixture(fixed113Data.transcript, { signingKey: TEST_SIGNING_KEY })
 const validationResponse = await handlePrivateValidationRequest(new Request('https://preview.example.test/api/v1/validate-draft', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json', [INTERNAL_RATE_KEY_HEADER]: await deriveTrustedRateKey(CLIENT_IP) },
-  body: JSON.stringify({ transcript: fixed113Data.transcript }),
+  body: JSON.stringify({ ticket: validationFixture.ticket, transcript: validationFixture.transcript }),
 }), validationEnvironment.env)
 assert.equal(validationResponse.status, 200)
 const validationBody = await validationResponse.json() as { result: { projectedWins: number, projectedLosses: number } }

@@ -7,12 +7,19 @@ import allTime145Data from './fixtures/transcripts/all-time-145.json'
 import { handleAuthoritativeValidationRequest } from '../workers/draft-validation/src/authoritative-validation'
 import { MAX_DRAFT_VALIDATION_BODY_BYTES } from '../functions/lib/bounded-json'
 import type { BackendEnv } from '../functions/lib/env'
+import {
+  createBoundValidationFixture,
+  TEST_DRAFT_TICKET_SIGNING_KEY,
+} from './lib/draft-ticket-fixtures'
 
 const ENDPOINT = 'https://preview.example.test/api/v1/validate-draft'
 const ITERATIONS = 10_000
 const WARMUPS = 10_000
 const CONCURRENCY = 5
-const enabledEnv = { DRAFT_VALIDATION_MODE: 'enabled' } as BackendEnv
+const enabledEnv = {
+  DRAFT_VALIDATION_MODE: 'enabled',
+  DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+} as BackendEnv
 const disabledEnv = { DRAFT_VALIDATION_MODE: 'disabled' } as BackendEnv
 
 interface Workload {
@@ -22,8 +29,8 @@ interface Workload {
   request(): Request
 }
 
-function serialize(transcript: unknown) {
-  return JSON.stringify({ transcript })
+function serialize(ticket: string, transcript: unknown) {
+  return JSON.stringify({ ticket, transcript })
 }
 
 function request(body: string, options: { method?: string, headers?: Record<string, string> } = {}) {
@@ -96,27 +103,32 @@ async function measureConcurrent(workload: Workload) {
   }
 }
 
-const invalidFirst = structuredClone(noRerollsData.transcript)
+const fixed113 = await createBoundValidationFixture(fixed113Data.transcript)
+const noRerolls = await createBoundValidationFixture(noRerollsData.transcript)
+const twoRerolls = await createBoundValidationFixture(twoRerollsData.transcript)
+const allTime145 = await createBoundValidationFixture(allTime145Data.transcript)
+const invalidFirst = structuredClone(noRerolls.transcript)
 invalidFirst.events[0].combinationId = 'ana-1960s'
-const invalidFinal = structuredClone(noRerollsData.transcript)
+const invalidFinal = structuredClone(noRerolls.transcript)
 const finalEvent = invalidFinal.events.at(-1)
 if (!finalEvent || finalEvent.type !== 'pick') throw new Error('Fixture final event must be a pick.')
 finalEvent.canonicalCardId = 'not-a-canonical-card'
-const maximumSizeValidBody = `${serialize(noRerollsData.transcript)}${' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES - serialize(noRerollsData.transcript).length)}`
+const ordinaryBody = serialize(noRerolls.ticket, noRerolls.transcript)
+const maximumSizeValidBody = `${ordinaryBody}${' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES - ordinaryBody.length)}`
 
 const workloads: readonly Workload[] = [
-  { label: 'disabled production request', expectedStatus: 404, env: disabledEnv, request: () => request(serialize(noRerollsData.transcript)) },
+  { label: 'disabled production request', expectedStatus: 404, env: disabledEnv, request: () => request(ordinaryBody) },
   { label: 'unsupported method', expectedStatus: 405, request: () => request('', { method: 'GET' }) },
   { label: 'wrong content type', expectedStatus: 415, request: () => request('{}', { headers: { 'Content-Type': 'text/plain' } }) },
   { label: 'oversized body', expectedStatus: 413, request: () => request('{}', { headers: { 'Content-Length': String(MAX_DRAFT_VALIDATION_BODY_BYTES + 1) } }) },
   { label: 'malformed JSON', expectedStatus: 400, request: () => request('{') },
   { label: 'invalid schema', expectedStatus: 400, request: () => request('{}') },
-  { label: 'invalid first event', expectedStatus: 422, request: () => request(serialize(invalidFirst)) },
-  { label: 'invalid final event', expectedStatus: 422, request: () => request(serialize(invalidFinal)) },
-  { label: 'ordinary valid transcript', expectedStatus: 200, request: () => request(serialize(noRerollsData.transcript)) },
-  { label: 'two-reroll valid transcript', expectedStatus: 200, request: () => request(serialize(twoRerollsData.transcript)) },
-  { label: '145-17 valid transcript', expectedStatus: 200, request: () => request(serialize(allTime145Data.transcript)) },
-  { label: 'fixed 113-49 transcript', expectedStatus: 200, request: () => request(serialize(fixed113Data.transcript)) },
+  { label: 'invalid first event', expectedStatus: 422, request: () => request(serialize(noRerolls.ticket, invalidFirst)) },
+  { label: 'invalid final event', expectedStatus: 422, request: () => request(serialize(noRerolls.ticket, invalidFinal)) },
+  { label: 'ordinary valid transcript', expectedStatus: 200, request: () => request(ordinaryBody) },
+  { label: 'two-reroll valid transcript', expectedStatus: 200, request: () => request(serialize(twoRerolls.ticket, twoRerolls.transcript)) },
+  { label: '145-17 valid transcript', expectedStatus: 200, request: () => request(serialize(allTime145.ticket, allTime145.transcript)) },
+  { label: 'fixed 113-49 transcript', expectedStatus: 200, request: () => request(serialize(fixed113.ticket, fixed113.transcript)) },
   { label: 'maximum-size valid request', expectedStatus: 200, request: () => request(maximumSizeValidBody) },
 ]
 

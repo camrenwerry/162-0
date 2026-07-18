@@ -21,6 +21,8 @@ export const DRAFT_VALIDATION_ERROR_DEFINITIONS = Object.freeze({
   payload_too_large: Object.freeze({ status: 413, message: 'Request body exceeds the allowed size.' }),
   malformed_json: Object.freeze({ status: 400, message: 'Request body must contain valid JSON.' }),
   invalid_request_schema: Object.freeze({ status: 400, message: 'Request does not match the required schema.' }),
+  invalid_draft_ticket: Object.freeze({ status: 422, message: 'Draft ticket is invalid or expired.' }),
+  draft_ticket_mismatch: Object.freeze({ status: 422, message: 'Draft ticket does not match the submitted draft.' }),
   unsupported_transcript_version: Object.freeze({ status: 422, message: 'Transcript schema version is not supported.' }),
   unsupported_app_version: Object.freeze({ status: 422, message: 'Application version is not supported.' }),
   unsupported_rng_version: Object.freeze({ status: 422, message: 'RNG version is not supported.' }),

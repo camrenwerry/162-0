@@ -14,6 +14,10 @@ import {
   type PrivateValidationWorkerEnv,
   type RateLimitBinding,
 } from '../workers/draft-validation/src/index'
+import {
+  createBoundValidationFixture,
+  TEST_DRAFT_TICKET_SIGNING_KEY,
+} from './lib/draft-ticket-fixtures'
 
 const ENDPOINT = 'https://preview.example.test/api/v1/validate-draft'
 const CLIENT_IP = '198.51.100.42'
@@ -38,8 +42,8 @@ class FixedRateLimit implements RateLimitBinding {
   }
 }
 
-function serialize(transcript: unknown) {
-  return JSON.stringify({ transcript })
+function serialize(ticket: string, transcript: unknown) {
+  return JSON.stringify({ ticket, transcript })
 }
 
 function privateRequest(body: string) {
@@ -69,6 +73,7 @@ function publicRequest(body: string) {
 function privateEnvironment(burst: RateLimitBinding, sustained: RateLimitBinding): PrivateValidationWorkerEnv {
   return {
     DRAFT_VALIDATION_MODE: 'enabled',
+    DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
     RATE_LIMIT_BURST: burst,
     RATE_LIMIT_SUSTAINED: sustained,
   }
@@ -107,13 +112,19 @@ async function measure(workload: Workload) {
   return { label: workload.label, ...summarize(samples) }
 }
 
-const ordinary = serialize(noRerollsData.transcript)
-const twoRerolls = serialize(twoRerollsData.transcript)
-const allTime145 = serialize(allTime145Data.transcript)
+const ordinaryFixture = await createBoundValidationFixture(noRerollsData.transcript)
+const twoRerollsFixture = await createBoundValidationFixture(twoRerollsData.transcript)
+const allTime145Fixture = await createBoundValidationFixture(allTime145Data.transcript)
+const ordinary = serialize(ordinaryFixture.ticket, ordinaryFixture.transcript)
+const twoRerolls = serialize(twoRerollsFixture.ticket, twoRerollsFixture.transcript)
+const allTime145 = serialize(allTime145Fixture.ticket, allTime145Fixture.transcript)
 const privateBurst = new FixedRateLimit(true)
 const privateSustained = new FixedRateLimit(true)
 const privateEnv = privateEnvironment(privateBurst, privateSustained)
-const authoritativeEnv = { DRAFT_VALIDATION_MODE: 'enabled' }
+const authoritativeEnv = {
+  DRAFT_VALIDATION_MODE: 'enabled',
+  DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+}
 const proxiedBurst = new FixedRateLimit(true)
 const proxiedSustained = new FixedRateLimit(true)
 const proxiedEnv = privateEnvironment(proxiedBurst, proxiedSustained)

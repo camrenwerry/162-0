@@ -20,10 +20,17 @@ import { CURRENT_REPLAY_VERSION_SUPPORT } from '../src/game/ReplayDraft'
 import { replayDraftWithCatalog } from '../src/game/replay/replayDraft'
 import { createWorkerReplayCatalog } from '../src/game/replay/WorkerCatalog'
 import type { ReplayCatalog } from '../src/game/replay/types'
+import {
+  createBoundValidationFixture,
+  TEST_DRAFT_TICKET_SIGNING_KEY,
+} from './lib/draft-ticket-fixtures'
 
 const ENDPOINT = 'https://preview.example.test/api/v1/validate-draft'
 const JSON_HEADERS = { 'Content-Type': 'application/json' }
-const enabledEnv = { DRAFT_VALIDATION_MODE: 'enabled' } as BackendEnv
+const enabledEnv = {
+  DRAFT_VALIDATION_MODE: 'enabled',
+  DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+} as BackendEnv
 let peakHeapBytes = process.memoryUsage().heapUsed
 
 function sampleHeap() {
@@ -60,7 +67,7 @@ function assertSafeHeaders(response: Response) {
 async function assertFailure(response: Response, code?: DraftValidationErrorCode) {
   assertSafeHeaders(response)
   const body = await response.text()
-  assert.doesNotMatch(body, /(?:stack|database|sql|seeded-v1:|canonicalCardId|sourcePlayerId)/i)
+  assert.doesNotMatch(body, /(?:stack|database|sql|seeded-v1:|canonicalCardId|sourcePlayerId|signature|ticketId|test-only-draft-ticket-signing-key)/i)
   const parsed: unknown = JSON.parse(body)
   assert.equal(typeof parsed, 'object')
   assert.notEqual(parsed, null)
@@ -94,7 +101,11 @@ async function expectSuccess(input: Request) {
 
 await expectRequestFailure(streamRequest((controller) => controller.close()), 'malformed_json')
 
-const validBody = JSON.stringify({ transcript: noRerollsData.transcript })
+const noRerollsFixture = await createBoundValidationFixture(noRerollsData.transcript)
+const twoRerollsFixture = await createBoundValidationFixture(twoRerollsData.transcript)
+const noRerollsTranscript = noRerollsFixture.transcript
+const twoRerollsTranscript = twoRerollsFixture.transcript
+const validBody = JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: noRerollsTranscript })
 let oneByteOffset = 0
 await expectSuccess(streamRequest((controller) => {
   if (oneByteOffset >= validBody.length) return controller.close()
@@ -139,61 +150,62 @@ await expectRequestFailure(streamRequest((controller) => {
 await expectRequestFailure(request(`${'['.repeat(7_000)}0${']'.repeat(7_000)}`))
 const wideObject = `{${Array.from({ length: 1_000 }, (_, index) => `"x${index}":0`).join(',')}}`
 await expectRequestFailure(request(wideObject), 'invalid_request_schema')
-await expectRequestFailure(request('{"transcript":{},"transcript":{}}'), 'invalid_request_schema')
-const duplicateValidEnvelope = `{"transcript":${JSON.stringify(noRerollsData.transcript)},"transcript":${JSON.stringify(noRerollsData.transcript)}}`
+await expectRequestFailure(request('{"ticket":"a","transcript":{},"transcript":{}}'), 'invalid_request_schema')
+const duplicateValidEnvelope = `{"ticket":${JSON.stringify(noRerollsFixture.ticket)},"transcript":${JSON.stringify(noRerollsTranscript)},"transcript":${JSON.stringify(noRerollsTranscript)}}`
 await expectRequestFailure(request(duplicateValidEnvelope), 'invalid_request_schema')
-const duplicateHeader = JSON.stringify(noRerollsData.transcript.header).replace(
+const duplicateHeader = JSON.stringify(noRerollsTranscript.header).replace(
   '"appVersion":"1.0.0"',
   '"appVersion":"not-supported","appVersion":"1.0.0"',
 )
-await expectRequestFailure(request(`{"transcript":{"header":${duplicateHeader},"events":${JSON.stringify(noRerollsData.transcript.events)}}}`), 'invalid_request_schema')
+await expectRequestFailure(request(`{"ticket":${JSON.stringify(noRerollsFixture.ticket)},"transcript":{"header":${duplicateHeader},"events":${JSON.stringify(noRerollsTranscript.events)}}}`), 'invalid_request_schema')
 await expectRequestFailure(request('1e400'), 'invalid_request_schema')
-await expectRequestFailure(request(JSON.stringify({ transcript: { header: {}, events: [{ type: 'initial-roll', round: Number.MAX_SAFE_INTEGER + 1 }] } })), 'invalid_request_schema')
+await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: { header: {}, events: [{ type: 'initial-roll', round: Number.MAX_SAFE_INTEGER + 1 }] } })), 'invalid_request_schema')
 
 const longHeaderFields = [
   'transcriptSchemaVersion', 'appVersion', 'gameRulesVersion', 'rngVersion', 'scoringVersion',
   'dataVersion', 'canonicalDataDigest', 'draftId', 'gameplaySeed', 'createdAt',
 ] as const
 for (const field of longHeaderFields) {
-  const candidate = structuredClone(noRerollsData.transcript)
+  const candidate = structuredClone(noRerollsTranscript)
   candidate.header[field] = 'a'.repeat(97) as never
-  await expectRequestFailure(request(JSON.stringify({ transcript: candidate })))
+  await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: candidate })))
 }
 
 const longEventFields: ReadonlyArray<readonly [number, string]> = [
   [0, 'combinationId'],
-  [twoRerollsData.transcript.events.findIndex((event) => event.type === 'reroll'), 'discardedCombinationId'],
-  [twoRerollsData.transcript.events.findIndex((event) => event.type === 'reroll'), 'resultingCombinationId'],
+  [twoRerollsTranscript.events.findIndex((event) => event.type === 'reroll'), 'discardedCombinationId'],
+  [twoRerollsTranscript.events.findIndex((event) => event.type === 'reroll'), 'resultingCombinationId'],
   [1, 'combinationId'], [1, 'canonicalCardId'], [1, 'sourcePlayerId'], [1, 'assignedPosition'],
 ]
 for (const [eventIndex, field] of longEventFields) {
   assert(eventIndex >= 0)
-  const candidate = structuredClone(twoRerollsData.transcript) as { events: Record<string, unknown>[] }
+  const candidate = structuredClone(twoRerollsTranscript) as { events: Record<string, unknown>[] }
   candidate.events[eventIndex][field] = 'a'.repeat(97)
-  await expectRequestFailure(request(JSON.stringify({ transcript: candidate })))
+  await expectRequestFailure(request(JSON.stringify({ ticket: twoRerollsFixture.ticket, transcript: candidate })))
 }
 
-assert.equal(twoRerollsData.transcript.events.length, 30)
-await expectSuccess(request(JSON.stringify({ transcript: twoRerollsData.transcript })))
-const thirtyOneEvents = structuredClone(twoRerollsData.transcript)
+assert.equal(twoRerollsTranscript.events.length, 30)
+await expectSuccess(request(JSON.stringify({ ticket: twoRerollsFixture.ticket, transcript: twoRerollsTranscript })))
+const thirtyOneEvents = structuredClone(twoRerollsTranscript)
 thirtyOneEvents.events.push(structuredClone(thirtyOneEvents.events[0]))
-await expectRequestFailure(request(JSON.stringify({ transcript: thirtyOneEvents })), 'unexpected_event_order')
+await expectRequestFailure(request(JSON.stringify({ ticket: twoRerollsFixture.ticket, transcript: thirtyOneEvents })), 'unexpected_event_order')
 
 const repeatedUnknownFields = JSON.stringify({
-  transcript: noRerollsData.transcript,
+  ticket: noRerollsFixture.ticket,
+  transcript: noRerollsTranscript,
   ...Object.fromEntries(Array.from({ length: 200 }, (_, index) => [`unknown${index}`, true])),
 })
 await expectRequestFailure(request(repeatedUnknownFields), 'invalid_request_schema')
 
-const malformedDiscriminator = structuredClone(noRerollsData.transcript)
+const malformedDiscriminator = structuredClone(noRerollsTranscript)
 malformedDiscriminator.events[0].type = 'not-an-event' as never
-await expectRequestFailure(request(JSON.stringify({ transcript: malformedDiscriminator })), 'invalid_request_schema')
+await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: malformedDiscriminator })), 'invalid_request_schema')
 
-const controlCharacter = structuredClone(noRerollsData.transcript)
+const controlCharacter = structuredClone(noRerollsTranscript)
 const firstPick = controlCharacter.events.find((event) => event.type === 'pick')
 assert(firstPick && firstPick.type === 'pick')
 firstPick.sourcePlayerId = '\u0000' as never
-await expectRequestFailure(request(JSON.stringify({ transcript: controlCharacter })), 'invalid_request_schema')
+await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: controlCharacter })), 'invalid_request_schema')
 
 const nullPrototypeEnvelope = Object.create(null) as { transcript: unknown }
 nullPrototypeEnvelope.transcript = Object.create(null)
@@ -201,28 +213,28 @@ assert.throws(() => validateDraftRequestEnvelope(nullPrototypeEnvelope), (error:
   error instanceof DraftValidationPublicError && error.code === 'invalid_request_schema'
 ))
 await expectRequestFailure(request('[]'), 'invalid_request_schema')
-await expectRequestFailure(request(JSON.stringify({ transcript: [] })), 'invalid_request_schema')
-await expectRequestFailure(request(JSON.stringify({ transcript: { header: [], events: {} } })), 'invalid_request_schema')
+await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: [] })), 'invalid_request_schema')
+await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: { header: [], events: {} } })), 'invalid_request_schema')
 
-const invalidFirst = structuredClone(noRerollsData.transcript)
+const invalidFirst = structuredClone(noRerollsTranscript)
 invalidFirst.events[0].combinationId = 'ana-1960s'
-await expectRequestFailure(request(JSON.stringify({ transcript: invalidFirst })), 'invalid_roll_sequence')
+await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: invalidFirst })), 'invalid_roll_sequence')
 
-const invalidFinal = structuredClone(noRerollsData.transcript)
+const invalidFinal = structuredClone(noRerollsTranscript)
 const finalPick = invalidFinal.events.at(-1)
 assert(finalPick && finalPick.type === 'pick')
 finalPick.canonicalCardId = 'not-a-canonical-card'
-await expectRequestFailure(request(JSON.stringify({ transcript: invalidFinal })), 'invalid_card')
+await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: invalidFinal })), 'invalid_card')
 
-const invalidLateReroll = structuredClone(twoRerollsData.transcript)
+const invalidLateReroll = structuredClone(twoRerollsTranscript)
 const lateReroll = [...invalidLateReroll.events].reverse().find((event) => event.type === 'reroll')
 assert(lateReroll && lateReroll.type === 'reroll')
 lateReroll.resultingCombinationId = 'ana-1960s'
-await expectRequestFailure(request(JSON.stringify({ transcript: invalidLateReroll })), 'invalid_reroll')
+await expectRequestFailure(request(JSON.stringify({ ticket: twoRerollsFixture.ticket, transcript: invalidLateReroll })), 'invalid_reroll')
 
-const alteredMetadata = structuredClone(noRerollsData.transcript)
+const alteredMetadata = structuredClone(noRerollsTranscript)
 alteredMetadata.header.canonicalDataDigest = '0'.repeat(64)
-await expectRequestFailure(request(JSON.stringify({ transcript: alteredMetadata })), 'canonical_data_mismatch')
+await expectRequestFailure(request(JSON.stringify({ ticket: noRerollsFixture.ticket, transcript: alteredMetadata })), 'canonical_data_mismatch')
 
 let oversizePulls = 0
 let oversizeCancelled = false
@@ -272,7 +284,7 @@ const indexedCatalog: ReplayCatalog = {
   findCombination: workerCatalog.findCombination,
   findCardCombination: workerCatalog.findCardCombination,
 }
-replayDraftWithCatalog(noRerollsData.transcript, indexedCatalog, CURRENT_REPLAY_VERSION_SUPPORT)
+replayDraftWithCatalog(noRerollsTranscript, indexedCatalog, CURRENT_REPLAY_VERSION_SUPPORT)
 assert.equal(fallbackCardViewCalls, 0, 'Worker replay must not materialize every catalog eligibility view')
 
 let initializationCalls = 0
@@ -294,7 +306,7 @@ assert.doesNotMatch(validationRouteSource, /\benv\.DB\b|\bwaitUntil\b|\bconsole\
 assert.doesNotMatch(validationRouteSource, /\bfetch\s*\(|\bcaches\.open\s*\(|Set-Cookie|Access-Control-Allow-Origin/)
 await expectRequestFailure(request(validBody, { ...JSON_HEADERS, Host: 'attacker.example' }), 'origin_not_allowed')
 
-const maximumValidBody = `${JSON.stringify({ transcript: noRerollsData.transcript })}${' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES - validBody.length)}`
+const maximumValidBody = `${validBody}${' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES - validBody.length)}`
 assert.equal(new TextEncoder().encode(maximumValidBody).byteLength, MAX_DRAFT_VALIDATION_BODY_BYTES)
 const maximumStarted = performance.now()
 await expectSuccess(request(maximumValidBody))

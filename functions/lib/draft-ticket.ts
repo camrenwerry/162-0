@@ -215,9 +215,8 @@ export function encodeDraftTicketEnvelope(envelope: DraftTicketEnvelope) {
 }
 
 /**
- * Shared server-only signer used by issuance and future server submission
- * workflows. Calling it requires the Worker secret; it is never exposed as a
- * public verification endpoint.
+ * Shared server-only signer used by ticket issuance. Calling it requires the
+ * Worker secret; it is never exposed as a public verification endpoint.
  */
 export async function encodeSignedDraftTicket(schema: string, payload: DraftTicketPayload, signingKey: unknown) {
   if (!validSigningKey(signingKey)) throw new Error('Missing draft-ticket signing key.')

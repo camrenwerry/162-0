@@ -16,7 +16,7 @@ const HEADER_FIELDS = [
   'dataVersion', 'canonicalDataDigest', 'draftId', 'gameplaySeed', 'createdAt',
 ] as const
 const TRANSCRIPT_FIELDS = ['header', 'events'] as const
-const ENVELOPE_FIELDS = ['transcript'] as const
+const ENVELOPE_FIELDS = ['ticket', 'transcript'] as const
 const INITIAL_ROLL_FIELDS = ['type', 'round', 'combinationId'] as const
 const REROLL_FIELDS = ['type', 'reroll', 'round', 'discardedCombinationId', 'resultingCombinationId'] as const
 const PICK_FIELDS = [
@@ -169,9 +169,15 @@ function validateEvents(events: unknown[]) {
   if (teamRerolls > 1 || eraRerolls > 1) draftValidationError('invalid_reroll')
 }
 
-export function validateDraftRequestEnvelope(value: unknown): DraftTranscript {
+export interface DraftValidationRequestEnvelope {
+  readonly ticket: string
+  readonly transcript: DraftTranscript
+}
+
+export function validateDraftRequestEnvelope(value: unknown): DraftValidationRequestEnvelope {
   if (!isRecord(value)) draftValidationError('invalid_request_schema')
   requireExactKeys(value, ENVELOPE_FIELDS)
+  const ticket = requireString(value.ticket, 4_096)
   const transcript = value.transcript
   if (!isRecord(transcript)) draftValidationError('invalid_request_schema')
   requireExactKeys(transcript, TRANSCRIPT_FIELDS)
@@ -179,5 +185,5 @@ export function validateDraftRequestEnvelope(value: unknown): DraftTranscript {
   validateHeader(transcript.header)
   validateEvents(transcript.events)
   validateTranscriptShape(transcript)
-  return transcript
+  return { ticket, transcript }
 }

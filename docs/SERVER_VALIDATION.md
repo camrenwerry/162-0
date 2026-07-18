@@ -5,9 +5,11 @@ foundation. Backend Phase C2 adds a preview-only, read-only HTTP adapter around
 that foundation. Backend Phase C3 hardens its bounded parsing, HTTP boundary,
 and catalog execution path without changing game behavior. Phase C4.1 moves the
 authoritative path behind private preview and production Workers and adds coarse
-abuse mitigation without changing the browser endpoint or game behavior. No phase
-adds a submission protocol, identity, leaderboard, database access,
-persistence, analytics, moderation, or runtime writes.
+abuse mitigation without changing the browser endpoint or game behavior. Phase
+D1A adds preview-only signed draft-ticket issuance, and Phase D1B requires and
+verifies that ticket in preview validation before replay. No phase adds a
+submission protocol, identity, leaderboard, database access, persistence,
+analytics, moderation, or runtime writes.
 
 ## Module boundaries
 
@@ -53,11 +55,12 @@ The header and event grammar remains the contract documented in
 it never accepts transcript-supplied statistics, category scores, or projected
 wins.
 
-This proves deterministic consistency, not fair-play provenance. The seed and
-transcript are still client-created, with no server-issued ticket, signature,
-identity, attestation, one-time challenge, or replay protection. An untrusted
-client can search seeds or construct a self-consistent transcript until a later
-authorized protocol establishes provenance.
+Deterministic replay alone proves consistency, not fair-play provenance. In the
+D1B preview-validation contract, the server-issued signed ticket now selects
+the seed and binds the draft identity, issue time, versions, canonical digest,
+transcript schema, and classic game mode to the transcript. The ticket is not
+persistently consumed, so D1B still provides no identity, attestation, or
+one-time replay protection and does not make a result leaderboard-eligible.
 
 Replay reconstructs every seeded roll and reroll in order. It rejects malformed
 objects, unsupported versions, the wrong digest, an invalid seed, altered event
@@ -188,13 +191,15 @@ still be tested in an actual isolated preview Worker because isolate startup,
 platform CPU accounting, request parsing, and response serialization are not
 represented here.
 
-## Phase C2/C3/C4 route and environment boundary
+## Phase C2/C3/C4 route and D1B environment boundary
 
-`POST /api/v1/validate-draft` accepts exactly `{ "transcript": { ... } }`. The
-server replays the transcript with the compact canonical catalog and shared RNG,
-then calls scoring 2.3. Client scores, statistics, grades, tiers, roster objects,
-identity, display names, tickets, idempotency keys, leaderboard intent,
-analytics, and request metadata are not part of the request grammar.
+`POST /api/v1/validate-draft` now accepts exactly
+`{ "ticket": "<opaque>", "transcript": { ... } }`. The browser supplies no
+separate ticket ID or seed, and the grammar still excludes client scores,
+statistics, grades, tiers, roster objects, identity, display names, idempotency
+keys, leaderboard intent, analytics, and request metadata. After the private
+Worker verifies and binds the ticket, it replays the transcript with the compact
+canonical catalog and shared RNG and then calls the unchanged scoring 2.3 path.
 
 `DRAFT_VALIDATION_MODE` is a server-only Wrangler variable. Its top-level value
 is `enabled`, which covers local development and Pages preview deployments. The
@@ -204,6 +209,11 @@ its own private Worker. Only the exact lowercase string `enabled` activates the
 route; a missing, malformed, or unexpected value fails closed with the existing
 generic JSON 404 before inspecting the request body. Enabled production
 validation remains read-only and is not a submission or leaderboard capability.
+The D1B source change is not deployed to production and no production signing
+secret is added. Because the shared D1B validation source fails closed without
+that secret, a future production Worker deployment requires a separate reviewed
+ticket-enablement decision; deploying this Worker source to production without
+one would make otherwise valid validation requests return the generic 503.
 
 When enabled, only `POST` is allowed and other methods return `Allow: POST`.
 Requests must use exactly the `application/json` media type, without parameters
@@ -291,7 +301,7 @@ existing unknown API response exactly.
 | 429 | `rate_limited` |
 | 413 | `payload_too_large` |
 | 415 | `unsupported_media_type` |
-| 422 | `unsupported_transcript_version`, `unsupported_app_version`, `unsupported_rng_version`, `unsupported_rules_version`, `unsupported_scoring_version`, `unsupported_data_version`, `canonical_data_mismatch`, `invalid_seed`, `invalid_roll_sequence`, `invalid_reroll`, `invalid_card`, `wrong_pool`, `invalid_position`, `duplicate_card`, `incomplete_roster`, `unexpected_event_order` |
+| 422 | `invalid_draft_ticket`, `draft_ticket_mismatch`, `unsupported_transcript_version`, `unsupported_app_version`, `unsupported_rng_version`, `unsupported_rules_version`, `unsupported_scoring_version`, `unsupported_data_version`, `canonical_data_mismatch`, `invalid_seed`, `invalid_roll_sequence`, `invalid_reroll`, `invalid_card`, `wrong_pool`, `invalid_position`, `duplicate_card`, `incomplete_roster`, `unexpected_event_order` |
 | 500 | `scoring_failed` |
 | 503 | `temporarily_unavailable` |
 
@@ -307,11 +317,11 @@ Health continues to describe D1 as read-only and continues to report
 leaderboard, submissions, and writes as disabled; it adds only the effective
 `draftValidation` state without identifying the environment or database.
 
-Successful deterministic replay proves internal consistency, not fair-play
-provenance. A client can still search or synthesize a seed and matching
-transcript. Phase D must introduce separately reviewed server-issued tickets and
-replay protection before any result can become leaderboard-eligible. C2 itself
-does not make a draft eligible and has no submission path.
+Successful D1B validation proves both deterministic consistency and possession
+of an unmodified, unexpired preview ticket whose claims match the transcript.
+Because tickets are not consumed, a valid request can still be replayed until a
+separately reviewed persistent consumption protocol exists. D1B does not make a
+draft leaderboard-eligible and has no submission path.
 
 Preview rollback is to disable the server variable through the approved
 configuration workflow or revert the preview deployment. No D1 rollback is
@@ -431,8 +441,11 @@ browser POST /api/v1/validate-draft
 private deployment targets: preview `pennant-pursuit-validation-preview` and
 production `pennant-pursuit-validation-production`. Both disable `workers.dev`
 and Worker preview URLs and have no route, custom domain, D1, KV, R2, Durable
-Object, queue, secret, analytics binding, storage, external fetch, cookie
-handling, or runtime write. Their only entry point is the Service-Binding-
+Object, queue, analytics binding, storage, external fetch, cookie handling, or
+runtime write. No real signing secret is configured in checked-in source or
+Wrangler variables. The preview Worker has the externally configured
+`DRAFT_TICKET_SIGNING_KEY` secret; the production Worker has no signing secret,
+keeping the two targets isolated. Their only entry point is the Service-Binding-
 compatible `fetch` handler. The original C1/C2/C3 authoritative parser, replay,
 canonical catalog, and scoring code live behind that handler; the Pages route
 does not import the catalog, parse a transcript, replay, or score.
@@ -546,7 +559,9 @@ bundle. No deployment was performed while measuring them.
 ### Historical preview probe
 
 The opt-in preview probe is intentionally capped at 100 requests per workload
-and concurrency five. With its defaults it makes 63 requests:
+and concurrency five. It first obtains one preview ticket and binds the fixture
+header to the returned ID, seed, and issue time. With its defaults it makes 64
+requests:
 
 ```bash
 PREVIEW_URL=https://<authorized-preview>.pages.dev npm run benchmark:preview-draft-validation
@@ -652,15 +667,44 @@ and checked-in configuration; an authorized future preview deployment must set
 that secret separately. Production Pages and the production private Worker
 both retain `DRAFT_TICKET_MODE = "disabled"`, so production `/api/v1/draft-ticket`
 returns the existing generic 404 and never invokes the production Worker.
-This does not affect production `POST /api/v1/validate-draft`, which remains
-enabled, private, and read-only.
+No production Worker or Pages deployment is part of D1A or D1B. The currently
+deployed production `POST /api/v1/validate-draft` therefore remains unchanged,
+private, and read-only; the checked-in production Worker has no signing secret.
 
 A future submission phase must add a narrowly reviewed persistent transaction
-that verifies the ticket, verifies the transcript uses all ticket-authorized
-versions and seed, and atomically inserts/consumes a unique `ticketId`. Until
-then, tickets are replayable and cannot make a result leaderboard-eligible.
+that atomically inserts/consumes a unique `ticketId`. Until then, tickets are
+replayable and cannot make a result leaderboard-eligible.
 For a future signing-key rotation, disable preview issuance, wait at least the
 15-minute lifetime plus 60-second skew, rotate the Worker secret in an
 authorized deployment, then re-enable and verify preview issuance. Rollback is
 to return preview `DRAFT_TICKET_MODE` to `disabled` and deploy that reviewed
 configuration; no storage or D1 rollback is involved.
+
+## Phase D1B preview validation gate
+
+D1B changes only the existing read-only validation request. After the Pages
+same-origin/trusted-IP boundary and both private-Worker rate limits pass, the
+private Worker strictly parses the `{ ticket, transcript }` envelope and uses
+the shared `verifyDraftTicket` primitive. A missing Worker signing key returns
+the existing fixed 503. Malformed encoding, signature failure, expiration,
+future issue time outside the 60-second skew, ticket schema, authoritative
+version/digest, transcript-schema, or game-mode failure returns one fixed
+`invalid_draft_ticket` response without identifying the failed claim.
+
+Before catalog initialization or replay, all of these exact bindings must hold:
+
+- `ticketId` to `header.draftId`
+- `draftSeed` to `header.gameplaySeed`
+- `new Date(issuedAt).toISOString()` to `header.createdAt`
+- app, game-rules, RNG, scoring, and data versions to their header fields
+- canonical data digest to `header.canonicalDataDigest`
+- transcript schema version to `header.transcriptSchemaVersion`
+- ticket game mode to the authoritative `classic` ruleset
+
+A binding failure returns only `draft_ticket_mismatch`. Success continues into
+the existing deterministic replay and scoring implementations without changing
+their response. Validation does not read or write D1, store a ticket ID or
+transcript digest, mark a ticket consumed, or add idempotency. One-time ticket
+consumption and persistent replay protection remain deferred. Preview ticket
+issuance remains enabled; production issuance remains disabled, and D1B adds no
+production secret, production configuration enablement, or deployment.

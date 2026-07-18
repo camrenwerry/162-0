@@ -6,7 +6,10 @@ import twoRerollsData from './fixtures/transcripts/ordinary-two-rerolls.json'
 import allTime145Data from './fixtures/transcripts/all-time-145.json'
 import { handleApiNotFoundRequest } from '../functions/api/[[path]]'
 import { handleHealthRequest } from '../functions/api/v1/health'
-import { handleAuthoritativeValidationRequest } from '../workers/draft-validation/src/authoritative-validation'
+import {
+  draftTicketMatchesTranscript,
+  handleAuthoritativeValidationRequest,
+} from '../workers/draft-validation/src/authoritative-validation'
 import {
   DRAFT_VALIDATION_ERROR_DEFINITIONS,
   type DraftValidationErrorCode,
@@ -33,10 +36,23 @@ import { replayDraftWithCatalog } from '../src/game/replay/replayDraft'
 import { createWorkerReplayCatalog } from '../src/game/replay/WorkerCatalog'
 import { validateTranscriptShape } from '../src/game/replay/validateTranscript'
 import { ROSTER_SLOTS, type Player, type Position } from '../src/types/draft'
+import {
+  createBoundValidationFixture,
+  TEST_DRAFT_TICKET_SIGNING_KEY,
+} from './lib/draft-ticket-fixtures'
+import {
+  DRAFT_TICKET_GAME_MODE,
+  DRAFT_TICKET_MAX_CLOCK_SKEW_MS,
+  DRAFT_TICKET_TTL_MS,
+  type DraftTicketPayload,
+} from '../functions/lib/draft-ticket'
 
 const ENDPOINT = 'https://preview.example.test/api/v1/validate-draft'
 const JSON_HEADERS = { 'Content-Type': 'application/json' }
-const enabledEnv = { DRAFT_VALIDATION_MODE: 'enabled' } as BackendEnv
+const enabledEnv = {
+  DRAFT_VALIDATION_MODE: 'enabled',
+  DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+} as BackendEnv
 const disabledEnv = { DRAFT_VALIDATION_MODE: 'disabled' } as BackendEnv
 
 const expectedPublicErrors = {
@@ -48,6 +64,8 @@ const expectedPublicErrors = {
   payload_too_large: [413, 'Request body exceeds the allowed size.'],
   malformed_json: [400, 'Request body must contain valid JSON.'],
   invalid_request_schema: [400, 'Request does not match the required schema.'],
+  invalid_draft_ticket: [422, 'Draft ticket is invalid or expired.'],
+  draft_ticket_mismatch: [422, 'Draft ticket does not match the submitted draft.'],
   unsupported_transcript_version: [422, 'Transcript schema version is not supported.'],
   unsupported_app_version: [422, 'Application version is not supported.'],
   unsupported_rng_version: [422, 'RNG version is not supported.'],
@@ -129,7 +147,7 @@ function assertJsonHeaders(response: Response) {
 async function assertError(
   response: Response,
   code: DraftValidationErrorCode,
-  forbidden: RegExp = /\b(?:stack|database|sql|seeded-v1:)\b/i,
+  forbidden: RegExp = /(?:stack|database|sql|seeded-v1:|signature|ticketId|test-only-draft-ticket-signing-key)/i,
 ) {
   const [status, message] = expectedPublicErrors[code]
   assert.equal(response.status, status, code)
@@ -153,7 +171,8 @@ for (const [index, fixture] of fixtures.entries()) {
     CURRENT_CANONICAL_DRAFT_DATA,
     CURRENT_REPLAY_VERSION_SUPPORT,
   )).result
-  const response = await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixture.transcript }), enabledEnv)
+  const bound = await createBoundValidationFixture(fixture.transcript)
+  const response = await handleAuthoritativeValidationRequest(jsonRequest({ ticket: bound.ticket, transcript: bound.transcript }), enabledEnv)
   assert.equal(response.status, 200, fixture.label)
   assertJsonHeaders(response)
   const body = await responseBody(response)
@@ -216,6 +235,113 @@ for (const [index, fixture] of fixtures.entries()) {
   assert.doesNotMatch(serialized, /"(?:power|contact|speed|stats|diagnostics|transcript|gameplaySeed|seed)"/)
 }
 
+const ticketGateFixture = await createBoundValidationFixture(fixed113Data.transcript)
+const validTicketEnvelope = { ticket: ticketGateFixture.ticket, transcript: ticketGateFixture.transcript }
+await assertError(
+  await handleAuthoritativeValidationRequest(jsonRequest({ transcript: ticketGateFixture.transcript }), enabledEnv),
+  'invalid_request_schema',
+)
+await assertError(
+  await handleAuthoritativeValidationRequest(jsonRequest({ ticket: 'not-a-ticket', transcript: ticketGateFixture.transcript }), enabledEnv),
+  'invalid_draft_ticket',
+)
+const alteredTicket = `${ticketGateFixture.ticket.slice(0, -1)}${ticketGateFixture.ticket.endsWith('a') ? 'b' : 'a'}`
+await assertError(
+  await handleAuthoritativeValidationRequest(jsonRequest({ ticket: alteredTicket, transcript: ticketGateFixture.transcript }), enabledEnv),
+  'invalid_draft_ticket',
+)
+const wrongKeyFixture = await createBoundValidationFixture(fixed113Data.transcript, { signingKey: 'wrong-test-signing-key' })
+await assertError(
+  await handleAuthoritativeValidationRequest(jsonRequest({ ticket: wrongKeyFixture.ticket, transcript: wrongKeyFixture.transcript }), enabledEnv),
+  'invalid_draft_ticket',
+)
+await assertError(
+  await handleAuthoritativeValidationRequest(jsonRequest(validTicketEnvelope), { DRAFT_VALIDATION_MODE: 'enabled' }),
+  'temporarily_unavailable',
+)
+const expiredFixture = await createBoundValidationFixture(fixed113Data.transcript, {
+  issuedAt: Date.now() - DRAFT_TICKET_TTL_MS,
+})
+await assertError(
+  await handleAuthoritativeValidationRequest(jsonRequest({ ticket: expiredFixture.ticket, transcript: expiredFixture.transcript }), enabledEnv),
+  'invalid_draft_ticket',
+)
+const futureFixture = await createBoundValidationFixture(fixed113Data.transcript, {
+  issuedAt: Date.now() + DRAFT_TICKET_MAX_CLOCK_SKEW_MS + 1_000,
+})
+await assertError(
+  await handleAuthoritativeValidationRequest(jsonRequest({ ticket: futureFixture.ticket, transcript: futureFixture.transcript }), enabledEnv),
+  'invalid_draft_ticket',
+)
+
+const bindingMismatchCases: ReadonlyArray<readonly [string, Readonly<Record<string, unknown>>]> = [
+  ['ticket ID', { draftId: '22222222-2222-4222-8222-222222222222' }],
+  ['gameplay seed', { gameplaySeed: 'seeded-v1:11111111111111111111111111111111' }],
+  ['creation time', { createdAt: new Date(ticketGateFixture.payload.issuedAt + 1).toISOString() }],
+]
+for (const [, transcriptHeaderOverrides] of bindingMismatchCases) {
+  const mismatch = await createBoundValidationFixture(fixed113Data.transcript, { transcriptHeaderOverrides })
+  await assertError(
+    await handleAuthoritativeValidationRequest(jsonRequest({ ticket: mismatch.ticket, transcript: mismatch.transcript }), enabledEnv),
+    'draft_ticket_mismatch',
+  )
+}
+
+const invalidClaimCases: ReadonlyArray<readonly [keyof DraftTicketPayload, string]> = [
+  ['ticketSchemaVersion', 'unsupported-ticket'],
+  ['appVersion', 'unsupported-app'],
+  ['gameRulesVersion', 'unsupported-rules'],
+  ['rngVersion', 'unsupported-rng'],
+  ['scoringVersion', 'unsupported-scoring'],
+  ['dataVersion', 'unsupported-data'],
+  ['transcriptSchemaVersion', 'unsupported-transcript'],
+  ['canonicalDataDigest', '0'.repeat(64)],
+  ['gameMode', 'unsupported-mode'],
+]
+for (const [field, value] of invalidClaimCases) {
+  const invalidClaim = await createBoundValidationFixture(fixed113Data.transcript, {
+    bindTranscriptToTicket: false,
+    payloadOverrides: { [field]: value },
+  })
+  await assertError(
+    await handleAuthoritativeValidationRequest(jsonRequest({ ticket: invalidClaim.ticket, transcript: invalidClaim.transcript }), enabledEnv),
+    'invalid_draft_ticket',
+  )
+}
+
+const directBindingCases = [
+  ['ticketId', 'draftId'],
+  ['draftSeed', 'gameplaySeed'],
+  ['appVersion', 'appVersion'],
+  ['gameRulesVersion', 'gameRulesVersion'],
+  ['rngVersion', 'rngVersion'],
+  ['scoringVersion', 'scoringVersion'],
+  ['dataVersion', 'dataVersion'],
+  ['canonicalDataDigest', 'canonicalDataDigest'],
+  ['transcriptSchemaVersion', 'transcriptSchemaVersion'],
+] as const
+for (const [, headerField] of directBindingCases) {
+  const changed = structuredClone(ticketGateFixture.transcript)
+  changed.header[headerField] = `${changed.header[headerField]}-changed` as never
+  assert.equal(draftTicketMatchesTranscript(ticketGateFixture.payload, changed), false, `${headerField} must be bound`)
+}
+const changedTime = structuredClone(ticketGateFixture.transcript)
+changedTime.header.createdAt = new Date(ticketGateFixture.payload.issuedAt + 1).toISOString()
+assert.equal(draftTicketMatchesTranscript(ticketGateFixture.payload, changedTime), false, 'createdAt must be bound')
+assert.equal(draftTicketMatchesTranscript({ ...ticketGateFixture.payload, gameMode: 'other' }, ticketGateFixture.transcript), false, 'game mode must be authoritative')
+assert.equal(ticketGateFixture.payload.gameMode, DRAFT_TICKET_GAME_MODE)
+
+const invalidBeforeReplay = structuredClone(ticketGateFixture.transcript)
+invalidBeforeReplay.header.draftId = '22222222-2222-4222-8222-222222222222'
+invalidBeforeReplay.events[0].combinationId = 'ana-1960s'
+await assertError(
+  await handleAuthoritativeValidationRequest(jsonRequest({ ticket: ticketGateFixture.ticket, transcript: invalidBeforeReplay }), enabledEnv),
+  'draft_ticket_mismatch',
+)
+
+const duplicateTicketKey = `{"ticket":${JSON.stringify(ticketGateFixture.ticket)},"ticket":${JSON.stringify(ticketGateFixture.ticket)},"transcript":${JSON.stringify(ticketGateFixture.transcript)}}`
+await assertError(await handleAuthoritativeValidationRequest(rawRequest(duplicateTicketKey), enabledEnv), 'invalid_request_schema')
+
 const workerCatalog = createWorkerReplayCatalog()
 const canonicalById = new Map(PLAYER_CARDS.map((player) => [player.id, player]))
 function duplicatePersonVariant(source: DraftTranscript) {
@@ -262,9 +388,9 @@ const duplicatePerson = fixtures
   .map(({ transcript }) => duplicatePersonVariant(transcript))
   .find((candidate) => candidate !== null)
 assert(duplicatePerson, 'two canonical cards for one source person must remain legal')
-assert.equal((await handleAuthoritativeValidationRequest(jsonRequest({ transcript: duplicatePerson }), enabledEnv)).status, 200)
+const duplicatePersonBound = await createBoundValidationFixture(duplicatePerson)
+assert.equal((await handleAuthoritativeValidationRequest(jsonRequest({ ticket: duplicatePersonBound.ticket, transcript: duplicatePersonBound.transcript }), enabledEnv)).status, 200)
 
-const base = () => mutableTranscript(fixed113Data.transcript)
 const pickIndices = fixed113Data.transcript.events.flatMap((event, index) => event.type === 'pick' ? [index] : [])
 const initialIndices = fixed113Data.transcript.events.flatMap((event, index) => event.type === 'initial-roll' ? [index] : [])
 const rerollIndex = fixed113Data.transcript.events.findIndex((event) => event.type === 'reroll')
@@ -274,12 +400,13 @@ async function tamper(
   code: DraftValidationErrorCode,
   mutate: (candidate: MutableTranscript) => void,
 ) {
-  const candidate = base()
+  const bound = await createBoundValidationFixture(fixed113Data.transcript)
+  const candidate = mutableTranscript(bound.transcript)
   mutate(candidate)
-  await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ transcript: candidate }), enabledEnv), code)
+  await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ ticket: bound.ticket, transcript: candidate }), enabledEnv), code)
 }
 
-await tamper('invalid_roll_sequence', (candidate) => { candidate.header.gameplaySeed = noRerollsData.transcript.header.gameplaySeed })
+await tamper('draft_ticket_mismatch', (candidate) => { candidate.header.gameplaySeed = noRerollsData.transcript.header.gameplaySeed })
 await tamper('invalid_roll_sequence', (candidate) => { candidate.events[initialIndices[0]].combinationId = 'ana-1960s' })
 await tamper('invalid_reroll', (candidate) => { candidate.events[rerollIndex].resultingCombinationId = 'ana-1960s' })
 await tamper('invalid_card', (candidate) => { candidate.events[pickIndices[0]].canonicalCardId = 'not-a-canonical-card' })
@@ -345,7 +472,9 @@ await assertError(await handleAuthoritativeValidationRequest(rawRequest(new Uint
 await assertError(await handleAuthoritativeValidationRequest(rawRequest('1e400'), enabledEnv), 'invalid_request_schema')
 await assertError(await handleAuthoritativeValidationRequest(jsonRequest([]), enabledEnv), 'invalid_request_schema')
 await assertError(await handleAuthoritativeValidationRequest(jsonRequest(null), enabledEnv), 'invalid_request_schema')
-const nonFiniteEvent = JSON.stringify({ transcript: fixed113Data.transcript }).replace('"round":1', '"round":1e400')
+const parserFixture = await createBoundValidationFixture(fixed113Data.transcript)
+const parserEnvelope = { ticket: parserFixture.ticket, transcript: parserFixture.transcript }
+const nonFiniteEvent = JSON.stringify(parserEnvelope).replace('"round":1', '"round":1e400')
 await assertError(await handleAuthoritativeValidationRequest(rawRequest(nonFiniteEvent), enabledEnv), 'invalid_request_schema')
 await assertError(await handleAuthoritativeValidationRequest(rawRequest(' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES)), enabledEnv), 'malformed_json')
 await assertError(await handleAuthoritativeValidationRequest(rawRequest(' '.repeat(MAX_DRAFT_VALIDATION_BODY_BYTES + 1)), enabledEnv), 'payload_too_large')
@@ -361,13 +490,13 @@ await assertError(await handleAuthoritativeValidationRequest(rawRequest('{}', {
   'Content-Type': 'application/json',
   'Content-Length': String(MAX_DRAFT_VALIDATION_BODY_BYTES + 1),
 }), enabledEnv), 'payload_too_large')
-await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest(parserEnvelope, {
   origin: 'https://attacker.example',
 }), enabledEnv), 'origin_not_allowed')
-await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest(parserEnvelope, {
   headers: { Host: 'attacker.example' },
 }), enabledEnv), 'origin_not_allowed')
-assert.equal((await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }, {
+assert.equal((await handleAuthoritativeValidationRequest(jsonRequest(parserEnvelope, {
   origin: 'https://preview.example.test',
 }), enabledEnv)).status, 200)
 
@@ -391,11 +520,11 @@ await assertError(await handleAuthoritativeValidationRequest(new Request(ENDPOIN
 assert.equal(streamedChunks, 2, 'bounded reader must stop immediately after crossing 16,384 bytes')
 assert.equal(streamCancelled, true)
 
-const unknownEnvelope = { transcript: fixed113Data.transcript, extra: true }
+const unknownEnvelope = { ...parserEnvelope, extra: true }
 await assertError(await handleAuthoritativeValidationRequest(jsonRequest(unknownEnvelope), enabledEnv), 'invalid_request_schema')
 const unknownTranscript = structuredClone(fixed113Data.transcript) as Record<string, unknown>
 unknownTranscript.extra = true
-await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ transcript: unknownTranscript }), enabledEnv), 'invalid_request_schema')
+await assertError(await handleAuthoritativeValidationRequest(jsonRequest({ ticket: parserFixture.ticket, transcript: unknownTranscript }), enabledEnv), 'invalid_request_schema')
 
 for (const method of ['GET', 'HEAD', 'PUT']) {
   const methodResponse = await handleAuthoritativeValidationRequest(new Request(ENDPOINT, { method }), enabledEnv)
@@ -429,12 +558,15 @@ assert.deepEqual(JSON.parse(disabledPayload), {
 assert.equal(bodyPulls, pullsBeforeDisabledHandler)
 await unreadRequest.body?.cancel().catch(() => undefined)
 for (const env of [{}, { DRAFT_VALIDATION_MODE: 'ENABLED' }, { DRAFT_VALIDATION_MODE: true }]) {
-  const response = await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }), env as BackendEnv)
+  const response = await handleAuthoritativeValidationRequest(jsonRequest(parserEnvelope), env as BackendEnv)
   assert.equal(response.status, 404, 'missing and malformed flags must fail closed')
 }
 
 let databaseReads = 0
-const throwingDatabaseEnv = new Proxy({ DRAFT_VALIDATION_MODE: 'enabled' }, {
+const throwingDatabaseEnv = new Proxy({
+  DRAFT_VALIDATION_MODE: 'enabled',
+  DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+}, {
   get(target, property, receiver) {
     if (property === 'DB') {
       databaseReads += 1
@@ -443,7 +575,7 @@ const throwingDatabaseEnv = new Proxy({ DRAFT_VALIDATION_MODE: 'enabled' }, {
     return Reflect.get(target, property, receiver)
   },
 }) as BackendEnv
-assert.equal((await handleAuthoritativeValidationRequest(jsonRequest({ transcript: fixed113Data.transcript }), throwingDatabaseEnv)).status, 200)
+assert.equal((await handleAuthoritativeValidationRequest(jsonRequest(parserEnvelope), throwingDatabaseEnv)).status, 200)
 assert.equal(databaseReads, 0)
 
 for (const [env, expected] of [[enabledEnv, 'enabled'], [disabledEnv, 'disabled'], [{}, 'disabled']] as const) {

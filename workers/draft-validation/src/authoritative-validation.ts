@@ -22,10 +22,17 @@ import {
 } from '../../../functions/lib/api-response'
 import { readBoundedJson } from '../../../functions/lib/bounded-json'
 import { validateDraftRequestEnvelope } from '../../../functions/lib/draft-validation-schema'
+import {
+  DRAFT_TICKET_GAME_MODE,
+  verifyDraftTicket,
+  type DraftTicketPayload,
+} from '../../../functions/lib/draft-ticket'
 import { createLazyImmutable } from '../../../functions/lib/lazy-immutable'
 
 export interface ValidationModeEnv {
   readonly DRAFT_VALIDATION_MODE?: unknown
+  /** A Worker secret shared with preview ticket issuance only. */
+  readonly DRAFT_TICKET_SIGNING_KEY?: unknown
 }
 
 export const DRAFT_VALIDATION_ALLOWED_METHODS = 'POST'
@@ -37,6 +44,21 @@ export function isValidationEnabled(env: ValidationModeEnv) {
 
 function errorResponse(code: DraftValidationErrorCode, headers: Readonly<Record<string, string>> = {}) {
   return draftValidationErrorResponse(new DraftValidationPublicError(code), headers)
+}
+
+export function draftTicketMatchesTranscript(payload: DraftTicketPayload, transcript: DraftTranscript) {
+  const { header } = transcript
+  return payload.ticketId === header.draftId
+    && payload.draftSeed === header.gameplaySeed
+    && new Date(payload.issuedAt).toISOString() === header.createdAt
+    && payload.appVersion === header.appVersion
+    && payload.gameRulesVersion === header.gameRulesVersion
+    && payload.rngVersion === header.rngVersion
+    && payload.scoringVersion === header.scoringVersion
+    && payload.dataVersion === header.dataVersion
+    && payload.canonicalDataDigest === header.canonicalDataDigest
+    && payload.transcriptSchemaVersion === header.transcriptSchemaVersion
+    && payload.gameMode === DRAFT_TICKET_GAME_MODE
 }
 
 export function requestOriginIsAllowed(request: Request) {
@@ -173,22 +195,38 @@ function successResponse(roster: ValidatedDraftRoster, catalog: ReplayCatalog) {
 }
 
 /**
- * The immutable, authoritative C1/C2/C3 replay boundary. The private Worker
- * calls this only after its service-binding metadata and rate-limit checks.
+ * The immutable, authoritative replay boundary. The private Worker calls this
+ * only after its service-binding metadata and rate-limit checks; D1B ticket
+ * verification and binding complete before the replay catalog is accessed.
  */
 export async function handleAuthoritativeValidationRequest(request: Request, env: ValidationModeEnv = {}) {
   if (!isValidationEnabled(env)) return handleApiNotFoundRequest(request)
   if (request.method !== DRAFT_VALIDATION_ALLOWED_METHODS) return errorResponse('method_not_allowed', { Allow: DRAFT_VALIDATION_ALLOWED_METHODS })
   if (!requestOriginIsAllowed(request)) return errorResponse('origin_not_allowed')
 
+  let ticket: string
   let transcript: DraftTranscript
   try {
     const body = await readBoundedJson(request)
-    transcript = validateDraftRequestEnvelope(body)
+    const envelope = validateDraftRequestEnvelope(body)
+    ticket = envelope.ticket
+    transcript = envelope.transcript
   } catch (error) {
     return error instanceof DraftValidationPublicError
       ? draftValidationErrorResponse(error)
       : errorResponse('temporarily_unavailable')
+  }
+
+  if (typeof env.DRAFT_TICKET_SIGNING_KEY !== 'string' || env.DRAFT_TICKET_SIGNING_KEY.length === 0) {
+    return errorResponse('temporarily_unavailable')
+  }
+
+  try {
+    const verification = await verifyDraftTicket(ticket, env.DRAFT_TICKET_SIGNING_KEY)
+    if (!verification.ok) return errorResponse('invalid_draft_ticket')
+    if (!draftTicketMatchesTranscript(verification.payload, transcript)) return errorResponse('draft_ticket_mismatch')
+  } catch {
+    return errorResponse('temporarily_unavailable')
   }
 
   const catalog = getCatalog()

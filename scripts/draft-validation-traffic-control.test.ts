@@ -13,6 +13,10 @@ import {
   type PrivateValidationWorkerEnv,
   type RateLimitBinding,
 } from '../workers/draft-validation/src/index'
+import {
+  createBoundValidationFixture,
+  TEST_DRAFT_TICKET_SIGNING_KEY,
+} from './lib/draft-ticket-fixtures'
 
 const ENDPOINT = 'https://preview.example.test/api/v1/validate-draft'
 const CLIENT_IP = '198.51.100.42'
@@ -44,6 +48,7 @@ function createHarness(options: { burst?: number, sustained?: number, mode?: unk
   const serviceCalls = { value: 0 }
   const privateEnv = {
     DRAFT_VALIDATION_MODE: options.mode ?? 'enabled',
+    DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
     RATE_LIMIT_BURST: burst,
     RATE_LIMIT_SUSTAINED: sustained,
   } as PrivateValidationWorkerEnv
@@ -98,7 +103,8 @@ async function assertRateLimited(response: Response) {
   })
 }
 
-const validBody = JSON.stringify({ transcript: noRerollsData.transcript })
+const validFixture = await createBoundValidationFixture(noRerollsData.transcript)
+const validBody = JSON.stringify({ ticket: validFixture.ticket, transcript: validFixture.transcript })
 
 // The Pages boundary hashes only Cloudflare's connecting IP, replaces any
 // browser-provided internal header, and does not forward raw IP metadata.
@@ -136,7 +142,8 @@ const directContractResponse = await handlePrivateValidationRequest(new Request(
   },
   body: validBody,
 }), {
-  DRAFT_VALIDATION_MODE: 'enabled', RATE_LIMIT_BURST: contractRate, RATE_LIMIT_SUSTAINED: contractRate,
+  DRAFT_VALIDATION_MODE: 'enabled', DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+  RATE_LIMIT_BURST: contractRate, RATE_LIMIT_SUSTAINED: contractRate,
 })
 assert.equal(proxiedContractResponse.status, directContractResponse.status)
 assert.equal(await proxiedContractResponse.text(), await directContractResponse.text())
@@ -154,7 +161,8 @@ const directMalformedContract = await handlePrivateValidationRequest(new Request
   },
   body: '{',
 }), {
-  DRAFT_VALIDATION_MODE: 'enabled', RATE_LIMIT_BURST: malformedContractRate, RATE_LIMIT_SUSTAINED: malformedContractRate,
+  DRAFT_VALIDATION_MODE: 'enabled', DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+  RATE_LIMIT_BURST: malformedContractRate, RATE_LIMIT_SUSTAINED: malformedContractRate,
 })
 assert.equal(proxiedMalformedContract.status, directMalformedContract.status)
 assertSafeHeaders(proxiedMalformedContract)
@@ -162,7 +170,8 @@ assertSafeHeaders(directMalformedContract)
 assert.equal(await proxiedMalformedContract.text(), await directMalformedContract.text())
 const noD1Rate = new DeterministicRateLimit(Number.POSITIVE_INFINITY)
 const noD1Env = Object.defineProperty({
-  DRAFT_VALIDATION_MODE: 'enabled', RATE_LIMIT_BURST: noD1Rate, RATE_LIMIT_SUSTAINED: noD1Rate,
+  DRAFT_VALIDATION_MODE: 'enabled', DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+  RATE_LIMIT_BURST: noD1Rate, RATE_LIMIT_SUSTAINED: noD1Rate,
 }, 'DB', {
   get() { throw new Error('validation must not access D1') },
 }) as PrivateValidationWorkerEnv
@@ -237,9 +246,10 @@ assert.equal((await handleValidateDraftRequest(publicRequest(validBody, { origin
 assert.equal((await handleValidateDraftRequest(publicRequest('', { method: 'GET' }), boundaryHarness.env)).status, 405)
 assert.equal(boundaryHarness.serviceCalls.value, 0)
 
-// The production-equivalent enabled mode invokes its private binding for a
-// valid POST, while rejected methods and malformed requests retain the public
-// safe behavior. The Page proxy and private Worker both remain D1-free.
+// The shared enabled validation source invokes its private binding with a
+// test-only key, while rejected methods and malformed requests retain the
+// public safe behavior. Configuration assertions below separately prove that
+// production ticket issuance remains disabled and no key is checked in.
 const productionHarness = createHarness()
 const productionEnv = Object.defineProperty({ ...productionHarness.env }, 'DB', {
   get() { throw new Error('production validation must not access D1') },
@@ -297,4 +307,4 @@ const sharedProxySource = readFileSync('functions/lib/private-validation-proxy.t
 assert.doesNotMatch(sharedProxySource, /createWorkerReplayCatalog|replayDraftWithCatalog|calculateDraftResult|readBoundedJson|env\.DB|waitUntil|console\./)
 assert.match(sharedProxySource, /service\.fetch/)
 
-console.log('Draft validation traffic control passed: isolated private proxies, trusted key, distinct rate limits, production read-only validation, and no storage.')
+console.log('Draft validation traffic control passed: isolated private proxies, trusted key, distinct rate limits, production ticket isolation, and no storage.')
