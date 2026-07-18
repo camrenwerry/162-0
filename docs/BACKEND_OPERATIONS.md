@@ -8,11 +8,12 @@ Pennant Pursuit Backend Phase B uses two separate D1 databases:
 The top-level/default Wrangler environment binds only preview as `DB`. The explicit `[env.production]` override binds only production as `DB`. The names and UUIDs differ, and neither environment can inherit or select the other database under the checked-in configuration.
 
 Schema version 1 contains only `backend_schema`. The additive D1C.1 schema
-version 2 also defines an initially empty `draft_submissions` table for future
-ticket consumption, but D1C.1 adds no submission route or runtime write path.
-No user identity, display name, raw ticket, signature, draft, roster, gameplay,
-transcript, analytics, request, IP-address, user-agent, or location data is
-stored. Leaderboard, submissions, and all runtime writes remain disabled.
+version 2 also defines `draft_submissions` for retained submission receipts.
+D1C.2 implements the atomic submission path behind disabled flags, and D1C.3
+implements bounded retention cleanup in the preview private Worker. No user
+identity, display name, raw ticket, signature, draft, roster, gameplay,
+transcript, analytics, request, IP-address, user-agent, or location data has a
+storage column. Leaderboard and submission activation remain disabled.
 
 ## Environment boundaries
 
@@ -33,24 +34,25 @@ different private Workers:
 Both targets share the source in `workers/draft-validation/`, but each has a
 separate Worker name and separate 5/10-second and 20/60-second Rate Limiting
 counter namespaces. Both disable `workers.dev` and Worker preview URLs and have
-no route, custom domain, KV, R2, Durable Object, queue, analytics, external
-fetch, or runtime-write binding. D1C.1 gives only the preview Worker an unused
-binding to `pennant-pursuit-preview`; the production Worker has no D1 binding,
-and the validation and ticket handlers remain storage-free. No signing secret
-has been created or configured in this repository. The signing secret exists only on the preview
-Worker as an out-of-repository secret; the production Worker has none. The reviewed production Pages
-configuration sets `DRAFT_VALIDATION_MODE` to exactly `enabled`; a future Pages
-deployment is required before that checked-in setting becomes live. Once live,
-only a valid, same-origin `POST` with trusted Cloudflare connection metadata is
-privately proxied to the production Worker. The Pages proxy, Worker, and
-validation path remain read-only and do not access D1.
+no route, custom domain, KV, R2, Durable Object, queue, analytics, or external
+fetch binding. Only the preview Worker has the `pennant-pursuit-preview` D1
+binding; the production Worker has no D1 binding. Validation and ticket handlers
+remain storage-free. The disabled submission handler and scheduled cleanup are
+the only repository paths that can write the preview binding. No signing secret
+is stored in this repository or Wrangler variables. The signing secret exists
+only on the preview Worker as an out-of-repository secret; the production Worker
+has none. The reviewed production Pages configuration sets
+`DRAFT_VALIDATION_MODE` to exactly `enabled`; a future Pages deployment is
+required before that checked-in setting becomes live. Once live, only a valid,
+same-origin `POST` with trusted Cloudflare connection metadata is privately
+proxied to the production Worker. The Pages proxy and validation path remain
+read-only and do not access D1.
 
 Rate Limiting is deliberately best-effort, per-location, and eventually
 consistent; it does not promise an exact sixth-request denial. No transcript,
 roster, player, key, request metadata, validation attempt, identity, ticket,
-submission, leaderboard, or analytics data is stored. Persistent ticket
-consumption and replay protection still require separate review before any
-result can be eligible for a leaderboard.
+leaderboard, or analytics history is stored. D1C.2's disabled persistent ticket
+consumption is not activated and does not establish leaderboard eligibility.
 
 ## Preview-only draft tickets
 
@@ -78,10 +80,10 @@ only in automated test code and is never part of a deployed bundle.
 Each ticket is HMAC-SHA-256 signed, expires 15 minutes after issuance, and
 allows at most 60 seconds of future clock skew during later server-side
 verification. Phase D1B verifies these claims during preview validation and
-binds them to the transcript before replay. Its signed ticket ID is the future submission idempotency key:
-the future submission table must enforce a unique ticket-ID constraint and atomically
-consume it. D1B deliberately does neither, so a valid ticket can still be
-replayed until that persistence layer is separately designed and authorized.
+binds them to the transcript before replay. At the D1B stop point, its signed
+ticket ID was reserved as the future submission idempotency key, and D1B did
+not consume it. D1C.2 later implements that transaction behind the still-
+disabled submission gate.
 
 Preview `POST /api/v1/validate-draft` now requires exactly an opaque `ticket`
 and a `transcript`. Ticket verification occurs only in the private Worker after
@@ -90,8 +92,8 @@ versions, canonical digest, transcript schema, and classic game mode must match
 the transcript header and authoritative ruleset before the unchanged replay and
 scoring path begins. Failures use fixed sanitized responses. Validation remains
 read-only: it does not access D1, consume tickets, store replay state, or create
-a submission. One-time consumption and persistent replay protection remain
-deferred.
+a submission. One-time consumption belongs only to the separately disabled
+D1C.2 submission route; validation alone remains replayable.
 
 D1B does not deploy production code, add a production signing secret, or enable
 production ticket issuance. Production retains `DRAFT_TICKET_MODE = "disabled"`.
@@ -120,17 +122,63 @@ D1 binding. The migration advances `backend_schema` from 1 to 2 and adds only
 the minimal future-consumption columns, database-enforced ticket-ID primary key,
 and retention index approved in D1C.0.
 
-There is still no `/api/v1/submit-draft` route, scheduled cleanup handler,
-submission-path D1 read or write, ticket consumption, or persistent idempotency
-behavior. The existing ticket and validation paths do not access the new binding. While
-submission is disabled, health accepts schema 1 or 2 so code and migration can
-be rolled out independently; an unknown schema remains degraded. A prematurely
-enabled submission flag remains degraded while submission version metadata is
-`null` and does not advertise writes.
+At the D1C.1 stop point there was no `/api/v1/submit-draft` route, scheduled
+cleanup handler, submission-path D1 read or write, ticket consumption, or
+persistent idempotency behavior. Ticket and validation paths did not access the
+new binding. While submission is disabled, health accepts schema 1 or 2 so code
+and migration can be rolled out independently; an unknown schema remains
+degraded. A prematurely enabled submission flag remains degraded while
+submission version metadata is `null` and does not advertise writes.
 
 D1C.1 performs no remote preview migration, Worker deployment, Pages deployment,
 secret operation, production migration, or remote production configuration
 change. All migration verification is local until a later explicit authorization.
+
+## D1C.2 disabled atomic submission path
+
+D1C.2 adds the public Pages proxy and private authoritative
+`POST /api/v1/submit-draft` handler, but `DRAFT_SUBMISSION_MODE` remains exactly
+`disabled` in every Pages and Worker environment. The disabled gate returns the
+generic 404 before origin, IP, body, Service Binding, or D1 processing.
+
+If a future preview activation is separately authorized, the private Worker
+checks a retained row before current ticket verification. Exact retries return
+the immutable stored receipt; conflicting token or transcript digests fail with
+fixed responses. A new submission verifies the ticket, bindings, replay, and
+score before one D1 batch performs `INSERT ... ON CONFLICT DO NOTHING` followed
+by the authoritative row `SELECT`. D1 primary-key uniqueness resolves races.
+The row stores only the approved digests, server timestamps, fixed schema name,
+and bounded receipt. Production has no Worker D1 binding or signing secret.
+
+D1C.2 is repository-only. It does not apply migration 0002 remotely, deploy,
+enable submission, publish submission version metadata, or write remote data.
+
+## D1C.3 preview retention cleanup path
+
+D1C.3 adds an awaited scheduled handler to the same private Worker. Repository
+configuration schedules only the top-level preview environment at
+`17 * * * *` UTC and gives `[env.production.triggers]` an explicit empty Cron
+list. Both submission flags remain disabled, production remains D1-free, and no
+cleanup HTTP route exists.
+
+Each invocation samples current server time once and requires schema version 2.
+It executes at most ten sequential prepared DELETE statements. Each statement
+deletes at most 500 rows satisfying only `retain_until_ms <= cutoff_ms`, ordered
+by `retain_until_ms, ticket_id`, and every statement binds the same cutoff. A
+batch deleting fewer than 500 rows completes the run. Ten full batches stop at
+5,000 rows and conservatively emit `cleanup.backlog` without another query.
+
+Any missing binding, incompatible schema, query exception, or malformed D1
+result stops immediately, emits only bounded `cleanup.failed` observability,
+and rejects the scheduled event without calling `noRetry()`. Earlier DELETE
+statements remain committed and a later invocation can resume. Logs contain
+only the outcome plus bounded completed-batch and deleted-row counts; they never
+contain rows, identifiers, digests, SQL, exception details, secrets, bindings,
+or request data.
+
+D1C.3 changes repository code and configuration only. A remote preview
+migration, Worker deployment, and resulting Cron activation each require
+separate authorization. No production or Pages deployment is part of D1C.3.
 
 ## Local migration workflow
 
@@ -148,10 +196,17 @@ Regenerate and check the Worker environment types after any binding change:
 npm run functions:types
 npm run functions:types:check
 npm run functions:typecheck
+npm run validation-worker:types
 npm run validation-worker:types:check
 npm run validation-worker:typecheck
 npm run test:validation-worker
+npm run test:d1c3-retention-cleanup
 ```
+
+For an isolated local scheduled-handler check, apply migrations only to a
+temporary local Wrangler persistence directory, start the private Worker with
+scheduled-event testing enabled, and invoke the local scheduled test endpoint.
+Never add `--remote` to that workflow.
 
 ## Remote preview migration workflow
 

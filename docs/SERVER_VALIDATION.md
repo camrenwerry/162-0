@@ -7,9 +7,11 @@ and catalog execution path without changing game behavior. Phase C4.1 moves the
 authoritative path behind private preview and production Workers and adds coarse
 abuse mitigation without changing the browser endpoint or game behavior. Phase
 D1A adds preview-only signed draft-ticket issuance, and Phase D1B requires and
-verifies that ticket in preview validation before replay. No phase adds a
-submission protocol, identity, leaderboard, database access, persistence,
-analytics, moderation, or runtime writes.
+verifies that ticket in preview validation before replay. Phase D1C.1 adds the
+disabled persistence foundation, D1C.2 adds the disabled atomic submission
+path, and D1C.3 adds preview-only scheduled retention cleanup. Submission and
+leaderboard activation remain disabled, and no phase adds identity, analytics,
+or moderation.
 
 ## Module boundaries
 
@@ -58,9 +60,10 @@ wins.
 Deterministic replay alone proves consistency, not fair-play provenance. In the
 D1B preview-validation contract, the server-issued signed ticket now selects
 the seed and binds the draft identity, issue time, versions, canonical digest,
-transcript schema, and classic game mode to the transcript. The ticket is not
-persistently consumed, so D1B still provides no identity, attestation, or
-one-time replay protection and does not make a result leaderboard-eligible.
+transcript schema, and classic game mode to the transcript. Validation itself
+does not persistently consume the ticket. The separate D1C.2 submission path
+implements consumption but remains disabled, so validation provides no
+identity, attestation, or leaderboard eligibility.
 
 Replay reconstructs every seeded roll and reroll in order. It rejects malformed
 objects, unsupported versions, the wrong digest, an invalid seed, altered event
@@ -319,9 +322,10 @@ leaderboard, submissions, and writes as disabled; it adds only the effective
 
 Successful D1B validation proves both deterministic consistency and possession
 of an unmodified, unexpired preview ticket whose claims match the transcript.
-Because tickets are not consumed, a valid request can still be replayed until a
-separately reviewed persistent consumption protocol exists. D1B does not make a
-draft leaderboard-eligible and has no submission path.
+Because validation does not consume tickets, a valid validation request remains
+replayable. Consumption exists only in the separately disabled D1C.2 submission
+path. D1B alone does not make a draft leaderboard-eligible and had no submission
+path at its stop point.
 
 Preview rollback is to disable the server variable through the approved
 configuration workflow or revert the preview deployment. No D1 rollback is
@@ -441,17 +445,18 @@ browser POST /api/v1/validate-draft
 private deployment targets: preview `pennant-pursuit-validation-preview` and
 production `pennant-pursuit-validation-production`. Both disable `workers.dev`
 and Worker preview URLs and have no route, custom domain, KV, R2, Durable Object,
-queue, analytics binding, external fetch, or cookie handling. D1C.1 adds an
-unused D1 binding only to the preview Worker; the production Worker remains
-unbound from D1. Existing ticket issuance and validation handlers remain
-storage-free, no submission route or runtime write path exists, and submission
+queue, analytics binding, external fetch, or cookie handling. Only preview has
+a D1 binding; production remains unbound from D1. Ticket issuance and validation
+remain storage-free. D1C.2 adds a disabled private submission path, and D1C.3
+adds preview-only scheduled retention cleanup without an HTTP route. Submission
 flags remain disabled. No real signing secret is configured in checked-in source
 or Wrangler variables. The preview Worker has the externally configured
 `DRAFT_TICKET_SIGNING_KEY` secret; the production Worker has no signing secret,
-keeping the two targets isolated. Their only entry point is the Service-Binding-
-compatible `fetch` handler. The original C1/C2/C3 authoritative parser, replay,
-canonical catalog, and scoring code live behind that handler; the Pages route
-does not import the catalog, parse a transcript, replay, or score.
+keeping the two targets isolated. Its fetch entry point remains compatible with
+the Pages Service Binding, while the scheduled entry point is reachable only by
+the configured preview Cron. The original C1/C2/C3 authoritative parser, replay,
+canonical catalog, and scoring code live behind the fetch handler; the Pages
+route does not import the catalog, parse a transcript, replay, or score.
 
 The Pages boundary runs the existing feature, method, and same-origin checks
 before it reads or forwards a request. It accepts the client IP only from
@@ -524,9 +529,10 @@ Rollback is to change only the production Pages
 generic 404 returns. The private production Worker may remain deployed but
 unreachable; do not delete it without separate authorization. No validation data
 is stored and no D1 schema or data changes occur, so rollback requires neither
-data cleanup nor D1 recovery. Phase D still requires independently reviewed
-server-issued, short-lived, single-use tickets and replay protection before any
-result may be leaderboard-eligible.
+data cleanup nor D1 recovery. Any production submission still requires a
+separately reviewed production ticket, signing-secret, D1, activation, and
+leaderboard strategy; the repository's preview-only D1 phases authorize none of
+those production capabilities.
 
 ### C4.1 local measurements
 
@@ -674,9 +680,10 @@ No production Worker or Pages deployment is part of D1A or D1B. The currently
 deployed production `POST /api/v1/validate-draft` therefore remains unchanged,
 private, and read-only; the checked-in production Worker has no signing secret.
 
-A future submission phase must add a narrowly reviewed persistent transaction
-that atomically inserts/consumes a unique `ticketId`. Until then, tickets are
-replayable and cannot make a result leaderboard-eligible.
+At the D1A stop point, a future submission phase still needed a narrowly
+reviewed transaction that atomically inserted or consumed a unique `ticketId`.
+D1C.2 later implements that transaction behind a disabled flag; validation
+requests remain replayable and cannot make a result leaderboard-eligible.
 For a future signing-key rotation, disable preview issuance, wait at least the
 15-minute lifetime plus 60-second skew, rotate the Worker secret in an
 authorized deployment, then re-enable and verify preview issuance. Rollback is
@@ -707,10 +714,12 @@ Before catalog initialization or replay, all of these exact bindings must hold:
 A binding failure returns only `draft_ticket_mismatch`. Success continues into
 the existing deterministic replay and scoring implementations without changing
 their response. Validation does not read or write D1, store a ticket ID or
-transcript digest, mark a ticket consumed, or add idempotency. One-time ticket
-consumption and persistent replay protection remain deferred. Preview ticket
-issuance remains enabled; production issuance remains disabled, and D1B adds no
-production secret, production configuration enablement, or deployment.
+transcript digest, mark a ticket consumed, or add idempotency. At the D1B stop
+point, one-time ticket consumption and persistent replay protection remained
+deferred; D1C.2 later implements them only in the disabled submission path.
+Preview ticket issuance remains enabled; production issuance remains disabled,
+and D1B adds no production secret, production configuration enablement, or
+deployment.
 
 ## Phase D1C.1 disabled D1 foundation
 
@@ -726,9 +735,10 @@ Only the top-level preview private Worker receives the preview D1 binding. Its
 production environment does not declare D1. Both Pages and private-Worker
 configurations set `DRAFT_SUBMISSION_MODE` to exactly `disabled`; submission
 version metadata and leaderboard metadata remain `null`. There is no public or
-private submission route. Only the existing Pages health handler performs its
-read-only schema query; the ticket and validation handlers never access the new
-binding, and no current handler calls `run`, `batch`, or `exec`.
+private submission route at the D1C.1 stop point. Only the existing Pages health
+handler performed its read-only schema query; the ticket and validation handlers
+did not access the new binding, and no D1C.1 handler called `run`, `batch`, or
+`exec`.
 
 Disabled health treats database schema 1 and 2 as compatible so an additive
 migration and compatible code can be ordered safely. A missing/corrupt/future
@@ -738,3 +748,41 @@ the submission protocol is unpublished and reports writes as disabled.
 D1C.1 is local-only. It does not apply a remote preview or production migration,
 deploy a Worker or Pages revision, configure a secret, enable submission, or
 consume a ticket.
+
+## Phase D1C.2 disabled atomic submission path
+
+D1C.2 implements the Pages and private-Worker `POST /api/v1/submit-draft`
+routes while preserving `DRAFT_SUBMISSION_MODE = "disabled"` everywhere. The
+disabled gate is first and returns the generic 404 without reading the body,
+deriving a rate key, invoking the Service Binding, or accessing D1.
+
+The private implementation checks schema version 2 and retained state before
+current ticket verification. Exact token and transcript retries return the
+immutable stored receipt without replay or rescoring. New submissions perform
+ticket verification, transcript binding, deterministic replay, authoritative
+scoring, and one atomic D1 batch containing an insert-on-conflict and row select.
+The stored row contains only approved fixed digests, server timestamps, the
+submission schema identifier, and the bounded receipt. D1C.2 performs no remote
+migration, deployment, activation, production binding, or health publication.
+
+## Phase D1C.3 preview retention cleanup path
+
+D1C.3 adds a scheduled handler to the private Worker and the preview-only UTC
+Cron `17 * * * *`. The production environment explicitly declares an empty Cron
+list and still has no D1 binding. Worker public URLs remain disabled, fetch
+routing is unchanged, and there is no HTTP cleanup route.
+
+The handler samples current server time exactly once, requires schema version 2,
+and binds that cutoff to at most ten sequential DELETE statements. Each deletes
+at most 500 `draft_submissions` rows whose stored `retain_until_ms` is less than
+or equal to the cutoff, ordered by `retain_until_ms, ticket_id`. Fewer than 500
+deletions completes the run. Ten full batches stop at 5,000 deletions and emit
+the conservative bounded `cleanup.backlog` outcome without another query.
+
+Failure stops before any later batch, emits only `cleanup.failed` with bounded
+aggregate counts, and rejects the event so default Cloudflare retry behavior is
+preserved. Previously completed DELETE statements remain committed and cleanup
+is safe to resume. Completion, backlog, and failure logs never include raw
+exceptions, SQL, rows, receipts, identifiers, digests, secrets, bindings, or
+request data. D1C.3 remains repository-only: no migration, deployment, remote
+Cron activation, feature enablement, Pages change, or production change occurs.

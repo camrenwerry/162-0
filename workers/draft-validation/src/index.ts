@@ -22,8 +22,9 @@ import {
   isSubmissionEnabled,
   type SubmissionModeEnv,
 } from './authoritative-submission'
+import { cleanupRetainedDraftSubmissions } from './retention-cleanup'
 
-export const INTERNAL_RATE_KEY_HEADER = 'X-Pennant-Pursuit-Rate-Key'
+const INTERNAL_RATE_KEY_HEADER = 'X-Pennant-Pursuit-Rate-Key'
 const RATE_KEY_PATTERN = /^v1:[a-f0-9]{64}$/
 
 export interface RateLimitBinding {
@@ -33,6 +34,7 @@ export interface RateLimitBinding {
 export interface PrivateValidationWorkerEnv extends ValidationModeEnv, TicketModeEnv, SubmissionModeEnv {
   readonly RATE_LIMIT_BURST: RateLimitBinding
   readonly RATE_LIMIT_SUSTAINED: RateLimitBinding
+  readonly DB?: D1Database
 }
 
 function unavailableResponse(submission: boolean) {
@@ -102,4 +104,7 @@ export default {
     if (pathname === '/api/v1/submit-draft') return handlePrivateSubmissionRequest(request, env)
     return handleApiNotFoundRequest(request)
   },
-}
+  async scheduled(_controller: ScheduledController, env: PrivateValidationWorkerEnv) {
+    await cleanupRetainedDraftSubmissions(env)
+  },
+} satisfies ExportedHandler<PrivateValidationWorkerEnv>
