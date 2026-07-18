@@ -68,8 +68,9 @@
     "scoring:distribution": "vite build --ssr scripts/scoring-distribution.ts --outDir /tmp/pennant-pursuit-scoring-distribution --emptyOutDir && node /tmp/pennant-pursuit-scoring-distribution/scoring-distribution.js",
     "test:responsive": "node scripts/responsive-contract.test.mjs",
     "test:presentation": "node scripts/v010-presentation.test.mjs",
-    "test:backend": "npm run build && vite build --ssr scripts/backend-foundation.test.ts --outDir /tmp/pennant-pursuit-backend-tests --emptyOutDir && node /tmp/pennant-pursuit-backend-tests/backend-foundation.test.js",
+    "test:backend": "npm run build && vite build --ssr scripts/backend-foundation.test.ts --outDir /tmp/pennant-pursuit-backend-tests --emptyOutDir && node /tmp/pennant-pursuit-backend-tests/backend-foundation.test.js && npm run test:d1c1-foundation",
     "test:production-migration": "node scripts/production-migration-guard.test.mjs",
+    "test:d1c1-foundation": "node scripts/d1c1-foundation.test.mjs",
     "test:release": "vite build --ssr scripts/release-readiness.test.ts --outDir /tmp/pennant-pursuit-release-tests --emptyOutDir && node /tmp/pennant-pursuit-release-tests/release-readiness.test.js",
     "test:pwa": "node scripts/pwa-deployment.test.mjs",
     "validate:data": "npm run data:lahman:validate"

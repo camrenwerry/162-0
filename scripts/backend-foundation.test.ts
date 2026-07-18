@@ -32,6 +32,7 @@ const auditedWranglerPhaseB = [
   '[vars]',
   'DRAFT_VALIDATION_MODE = "enabled"',
   'DRAFT_TICKET_MODE = "enabled"',
+  'DRAFT_SUBMISSION_MODE = "disabled"',
   '',
   '[[d1_databases]]',
   'binding = "DB"',
@@ -49,6 +50,7 @@ const auditedWranglerPhaseB = [
   '[env.production.vars]',
   'DRAFT_VALIDATION_MODE = "enabled"',
   'DRAFT_TICKET_MODE = "disabled"',
+  'DRAFT_SUBMISSION_MODE = "disabled"',
   '',
   '[[env.production.services]]',
   'binding = "VALIDATION_SERVICE"',
@@ -75,13 +77,15 @@ assert.equal((wrangler.match(new RegExp(`^database_id = "${PREVIEW_DATABASE_ID}"
 assert.equal((wrangler.match(new RegExp(`^database_id = "${PRODUCTION_DATABASE_ID}"$`, 'gm')) ?? []).length, 1)
 assert.match(wrangler, /^preview_database_id = "DB"$/m)
 assert.equal((wrangler.match(/^migrations_dir = "migrations"$/gm) ?? []).length, 2)
-assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "enabled"\nDRAFT_TICKET_MODE = "disabled"\n\n\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"\n\n\[\[env\.production\.d1_databases\]\]$/m)
+assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "enabled"\nDRAFT_TICKET_MODE = "disabled"\nDRAFT_SUBMISSION_MODE = "disabled"\n\n\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"\n\n\[\[env\.production\.d1_databases\]\]$/m)
 assert.match(wrangler, /^\[\[services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-preview"$/m)
 assert.match(wrangler, /^\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"$/m)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 2)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 0)
 assert.equal((wrangler.match(/^DRAFT_TICKET_MODE = "enabled"$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^DRAFT_TICKET_MODE = "disabled"$/gm) ?? []).length, 1)
+assert.equal((wrangler.match(/^DRAFT_SUBMISSION_MODE = "disabled"$/gm) ?? []).length, 2)
+assert.equal((wrangler.match(/^DRAFT_SUBMISSION_MODE = "enabled"$/gm) ?? []).length, 0)
 assert.doesNotMatch(wrangler, /^\[env\.preview\]$/m)
 assert.doesNotMatch(wrangler, /^remote\s*=/m)
 assert.deepEqual(
@@ -114,14 +118,78 @@ assert.equal(source('migrations/0001_backend_foundation.sql').trim(), approvedMi
 assert.equal((source('migrations/0001_backend_foundation.sql').match(/CREATE TABLE/gi) ?? []).length, 1)
 assert.equal((source('migrations/0001_backend_foundation.sql').match(/INSERT INTO/gi) ?? []).length, 1)
 
+const approvedSubmissionMigration = [
+  '-- The invalid json() branch is an intentional SQL error that aborts before DDL.',
+  'SELECT CASE',
+  '  WHEN (SELECT COUNT(*) FROM backend_schema) = 1',
+  '    AND (SELECT COUNT(*) FROM backend_schema WHERE id = 1 AND version = 1) = 1',
+  '  THEN 1',
+  "  ELSE json('backend_schema predecessor must be exactly version 1')",
+  'END;',
+  '',
+  'CREATE TABLE draft_submissions (',
+  '  ticket_id TEXT PRIMARY KEY NOT NULL',
+  '    CHECK (length(ticket_id) = 36),',
+  '',
+  '  ticket_token_digest TEXT NOT NULL',
+  '    CHECK (',
+  '      length(ticket_token_digest) = 64',
+  "      AND ticket_token_digest NOT GLOB '*[^0-9a-f]*'",
+  '    ),',
+  '',
+  '  transcript_digest TEXT NOT NULL',
+  '    CHECK (',
+  '      length(transcript_digest) = 64',
+  "      AND transcript_digest NOT GLOB '*[^0-9a-f]*'",
+  '    ),',
+  '',
+  '  submitted_at_ms INTEGER NOT NULL',
+  '    CHECK (',
+  "      typeof(submitted_at_ms) = 'integer'",
+  '      AND submitted_at_ms >= 0',
+  '    ),',
+  '',
+  '  retain_until_ms INTEGER NOT NULL',
+  '    CHECK (',
+  "      typeof(retain_until_ms) = 'integer'",
+  '      AND retain_until_ms > submitted_at_ms',
+  '    ),',
+  '',
+  '  submission_schema_version TEXT NOT NULL',
+  "    CHECK (submission_schema_version = 'pennant-draft-submission-v1'),",
+  '',
+  '  success_response_json TEXT NOT NULL',
+  '    CHECK (',
+  '      length(success_response_json) >= 2',
+  '      AND length(success_response_json) <= 8192',
+  '    )',
+  ');',
+  '',
+  'CREATE INDEX idx_draft_submissions_retain_until',
+  'ON draft_submissions(retain_until_ms);',
+  '',
+  'UPDATE backend_schema',
+  'SET version = 2',
+  'WHERE id = 1 AND version = 1;',
+].join('\n')
+const submissionMigration = source('migrations/0002_draft_submissions.sql')
+assert.equal(submissionMigration.trim(), approvedSubmissionMigration)
+assert.equal((submissionMigration.match(/SELECT CASE/gi) ?? []).length, 1)
+assert.equal((submissionMigration.match(/CREATE TABLE/gi) ?? []).length, 1)
+assert.equal((submissionMigration.match(/CREATE INDEX/gi) ?? []).length, 1)
+assert.equal((submissionMigration.match(/UPDATE backend_schema/gi) ?? []).length, 1)
+assert.doesNotMatch(submissionMigration, /DROP\s|DELETE\s|INSERT\s|raw_ticket|signature|player|roster|identity|ip_address/i)
+
 const generatedTypes = source('functions/types.d.ts')
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "enabled";/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_TICKET_MODE: "disabled" \| "enabled";/)
+assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_SUBMISSION_MODE: "disabled";/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\/ \| Fetcher \/\* pennant-pursuit-validation-preview \*\//)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "enabled";/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_TICKET_MODE: "disabled";/)
+assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_SUBMISSION_MODE: "disabled";/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\//)
 const envSource = source('functions/lib/env.ts')
 const databaseSource = source('functions/lib/database.ts')
@@ -141,7 +209,9 @@ assert.equal(packageJson.scripts['db:migrations:apply:preview'], 'wrangler d1 mi
 assert.equal(packageJson.scripts['db:migrations:list:production'], 'wrangler d1 migrations list pennant-pursuit-production --remote --env production')
 assert.equal(packageJson.scripts['db:migrations:apply:production'], 'node scripts/apply-production-migrations.mjs')
 assert.equal(packageJson.scripts['test:production-migration'], 'node scripts/production-migration-guard.test.mjs')
+assert.equal(packageJson.scripts['test:d1c1-foundation'], 'node scripts/d1c1-foundation.test.mjs')
 assert.match(packageJson.scripts['test:backend'], /backend-foundation\.test\.ts/)
+assert.match(packageJson.scripts['test:backend'], /test:d1c1-foundation/)
 assert.match(packageJson.scripts['test:draft-validation'], /draft-validation-route\.test\.ts/)
 assert.match(packageJson.scripts['test:draft-validation-traffic-control'], /draft-validation-traffic-control\.test\.ts/)
 assert.match(packageJson.scripts['test:draft-ticket'], /draft-ticket\.test\.ts/)
@@ -193,7 +263,7 @@ assert.deepEqual(apiImplementations.filter((path) => existsSync(path)), apiImple
 assert.doesNotMatch(apiImplementations.map(source).join('\n'), /\.run\s*\(|\.batch\s*\(|\.exec\s*\(/)
 assert.deepEqual(readdirSync('functions/api').sort(), ['[[path]].ts', 'v1'])
 assert.deepEqual(readdirSync('functions/api/v1').sort(), ['draft-ticket.ts', 'health.ts', 'validate-draft.ts'])
-assert.deepEqual(readdirSync('migrations').sort(), ['0001_backend_foundation.sql'])
+assert.deepEqual(readdirSync('migrations').sort(), ['0001_backend_foundation.sql', '0002_draft_submissions.sql'])
 const validationRouteSource = source('functions/api/v1/validate-draft.ts')
 assert.doesNotMatch(validationRouteSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
 assert.doesNotMatch(validationRouteSource, /\bcaches\.open\s*\(|\bSet-Cookie\b|\bAccess-Control-Allow-Origin\b/)
@@ -215,11 +285,23 @@ assert.match(privateValidationWorkerConfig, /preview_urls = false/)
 assert.match(privateValidationWorkerConfig, /^name = "pennant-pursuit-validation-preview"$/m)
 assert.match(privateValidationWorkerConfig, /\[env\.production\][\s\S]*?^name = "pennant-pursuit-validation-production"$/m)
 assert.match(privateValidationWorkerConfig, /\[vars\][\s\S]*?DRAFT_TICKET_MODE = "enabled"/)
+assert.match(privateValidationWorkerConfig, /\[vars\][\s\S]*?DRAFT_SUBMISSION_MODE = "disabled"/)
 assert.match(privateValidationWorkerConfig, /\[env\.production\.vars\][\s\S]*?DRAFT_TICKET_MODE = "disabled"/)
+assert.match(privateValidationWorkerConfig, /\[env\.production\.vars\][\s\S]*?DRAFT_SUBMISSION_MODE = "disabled"/)
 assert.match(privateValidationWorkerConfig, /\[\[ratelimits\]\][\s\S]*?namespace_id = "16204011"[\s\S]*?\[\[ratelimits\]\][\s\S]*?namespace_id = "16204012"/)
 assert.match(privateValidationWorkerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*?namespace_id = "16204021"[\s\S]*?\[\[env\.production\.ratelimits\]\][\s\S]*?namespace_id = "16204022"/)
-assert.doesNotMatch(privateValidationWorkerConfig, /\broutes\b|custom_domain|d1_|kv_|r2_|durable_objects|queues|analytics|secrets/)
+assert.equal((privateValidationWorkerConfig.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
+assert.equal((privateValidationWorkerConfig.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 0)
+assert.match(privateValidationWorkerConfig, /^binding = "DB"\ndatabase_name = "pennant-pursuit-preview"\ndatabase_id = "ba6255b4-9425-4863-b10f-79149180f75a"\npreview_database_id = "DB"\nmigrations_dir = "\.\.\/\.\.\/migrations"$/m)
+assert.doesNotMatch(privateValidationWorkerConfig, /\broutes\b|custom_domain|kv_|r2_|durable_objects|queues|analytics|secrets/)
 assert.doesNotMatch(privateValidationWorkerConfig, /DRAFT_TICKET_SIGNING_KEY\s*=/)
+const privateValidationWorkerTypes = source('workers/draft-validation/worker-configuration.d.ts')
+assert.match(privateValidationWorkerTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB\?: D1Database;/)
+assert.match(privateValidationWorkerTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_SUBMISSION_MODE: "disabled";/)
+const productionWorkerEnv = privateValidationWorkerTypes.match(/interface ProductionEnv\s*\{([\s\S]*?)\n\t\}/)?.[1]
+assert.ok(productionWorkerEnv)
+assert.doesNotMatch(productionWorkerEnv, /\bDB:/)
+assert.match(productionWorkerEnv, /DRAFT_SUBMISSION_MODE: "disabled";/)
 const privateValidationWorkerSource = source('workers/draft-validation/src/index.ts')
 const authoritativeValidationSource = source('workers/draft-validation/src/authoritative-validation.ts')
 const authoritativeTicketSource = source('workers/draft-validation/src/authoritative-ticket.ts')
@@ -256,6 +338,7 @@ const expectedMetadata = {
     },
     canonicalDataDigest: DATA_DIGEST,
     transcriptSchema: TRANSCRIPT_SCHEMA_VERSION,
+    submissionSchema: null,
   },
 }
 
@@ -386,13 +469,41 @@ assert.equal(JSON.parse(unmigratedBody).features.writes, 'disabled')
 assert.doesNotMatch(unmigratedBody, /no such table|database-id|private\.example|backend_schema/i)
 assert.equal(unmigratedDatabase.writeCalls(), 0)
 
-const unexpectedSchemaDatabase = createMockDatabase({ schema: { version: 2 } })
-const unexpectedSchemaResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), unexpectedSchemaDatabase.env)
-const unexpectedSchemaBody = await unexpectedSchemaResponse.json() as { status: string, backend: { d1: unknown } }
-assert.equal(unexpectedSchemaResponse.status, 200)
-assert.equal(unexpectedSchemaBody.status, 'degraded')
-assert.deepEqual(unexpectedSchemaBody.backend.d1, { configured: true, reachable: true, schemaVersion: 2 })
-assert.equal(unexpectedSchemaDatabase.writeCalls(), 0)
+const upgradedSchemaDatabase = createMockDatabase({ schema: { version: 2 } })
+const upgradedSchemaResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), upgradedSchemaDatabase.env)
+const upgradedSchemaBody = await upgradedSchemaResponse.json() as { status: string, backend: { d1: unknown } }
+assert.equal(upgradedSchemaResponse.status, 200)
+assert.equal(upgradedSchemaBody.status, 'healthy')
+assert.deepEqual(upgradedSchemaBody.backend.d1, { configured: true, reachable: true, schemaVersion: 2 })
+assert.equal(upgradedSchemaDatabase.writeCalls(), 0)
+
+const futureSchemaDatabase = createMockDatabase({ schema: { version: 3 } })
+const futureSchemaResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), futureSchemaDatabase.env)
+const futureSchemaBody = await futureSchemaResponse.json() as { status: string, backend: { d1: unknown } }
+assert.equal(futureSchemaResponse.status, 200)
+assert.equal(futureSchemaBody.status, 'degraded')
+assert.deepEqual(futureSchemaBody.backend.d1, { configured: true, reachable: true, schemaVersion: 3 })
+assert.equal(futureSchemaDatabase.writeCalls(), 0)
+
+const prematureSubmissionDatabase = createMockDatabase({ schema: { version: 2 } })
+const prematureSubmissionResponse = await handleHealthRequest(
+  new Request('https://example.test/api/v1/health'),
+  { ...prematureSubmissionDatabase.env, DRAFT_SUBMISSION_MODE: 'enabled' } as unknown as BackendEnv,
+)
+const prematureSubmissionBody = await prematureSubmissionResponse.json() as {
+  status: string
+  features: { submissions: string, writes: string, d1: string }
+}
+assert.equal(prematureSubmissionResponse.status, 200)
+assert.equal(prematureSubmissionBody.status, 'degraded')
+assert.deepEqual(prematureSubmissionBody.features, {
+  draftValidation: 'disabled',
+  leaderboard: 'disabled',
+  submissions: 'enabled',
+  writes: 'disabled',
+  d1: 'read-only',
+})
+assert.equal(prematureSubmissionDatabase.writeCalls(), 0)
 
 const headDatabase = createMockDatabase({ connectivity: new Error('HEAD must not query D1') })
 const headResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health', { method: 'HEAD' }), headDatabase.env)

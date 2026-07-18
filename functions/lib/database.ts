@@ -1,6 +1,14 @@
 import { getOptionalDatabase, type BackendEnv } from './env'
 
-export const EXPECTED_SCHEMA_VERSION = 1
+export const BASE_SCHEMA_VERSION = 1
+export const EXPECTED_SCHEMA_VERSION = 2
+
+export function databaseSchemaIsCompatible(schemaVersion: number | null, submissionWritesRequired: boolean) {
+  if (schemaVersion === null) return false
+  return submissionWritesRequired
+    ? schemaVersion === EXPECTED_SCHEMA_VERSION
+    : schemaVersion >= BASE_SCHEMA_VERSION && schemaVersion <= EXPECTED_SCHEMA_VERSION
+}
 
 export interface DatabaseHealth {
   configured: boolean

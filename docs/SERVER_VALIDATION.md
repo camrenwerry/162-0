@@ -440,10 +440,13 @@ browser POST /api/v1/validate-draft
 `workers/draft-validation/` is one shared Worker source with two explicit,
 private deployment targets: preview `pennant-pursuit-validation-preview` and
 production `pennant-pursuit-validation-production`. Both disable `workers.dev`
-and Worker preview URLs and have no route, custom domain, D1, KV, R2, Durable
-Object, queue, analytics binding, storage, external fetch, cookie handling, or
-runtime write. No real signing secret is configured in checked-in source or
-Wrangler variables. The preview Worker has the externally configured
+and Worker preview URLs and have no route, custom domain, KV, R2, Durable Object,
+queue, analytics binding, external fetch, or cookie handling. D1C.1 adds an
+unused D1 binding only to the preview Worker; the production Worker remains
+unbound from D1. Existing ticket issuance and validation handlers remain
+storage-free, no submission route or runtime write path exists, and submission
+flags remain disabled. No real signing secret is configured in checked-in source
+or Wrangler variables. The preview Worker has the externally configured
 `DRAFT_TICKET_SIGNING_KEY` secret; the production Worker has no signing secret,
 keeping the two targets isolated. Their only entry point is the Service-Binding-
 compatible `fetch` handler. The original C1/C2/C3 authoritative parser, replay,
@@ -708,3 +711,30 @@ transcript digest, mark a ticket consumed, or add idempotency. One-time ticket
 consumption and persistent replay protection remain deferred. Preview ticket
 issuance remains enabled; production issuance remains disabled, and D1B adds no
 production secret, production configuration enablement, or deployment.
+
+## Phase D1C.1 disabled D1 foundation
+
+D1C.1 prepares, but does not implement, the approved submission transaction.
+Migration `0002_draft_submissions.sql` adds the empty `draft_submissions` table,
+unique ticket-ID primary key, exact-ticket-token digest, canonical transcript
+digest, server timestamps, submission schema, bounded success receipt, and
+retention index. It advances `backend_schema` to version 2. The raw ticket,
+signature, transcript, roster, player data, identity, IP address, rate key, and
+error history have no columns and cannot be persisted by this foundation.
+
+Only the top-level preview private Worker receives the preview D1 binding. Its
+production environment does not declare D1. Both Pages and private-Worker
+configurations set `DRAFT_SUBMISSION_MODE` to exactly `disabled`; submission
+version metadata and leaderboard metadata remain `null`. There is no public or
+private submission route. Only the existing Pages health handler performs its
+read-only schema query; the ticket and validation handlers never access the new
+binding, and no current handler calls `run`, `batch`, or `exec`.
+
+Disabled health treats database schema 1 and 2 as compatible so an additive
+migration and compatible code can be ordered safely. A missing/corrupt/future
+schema remains degraded. A prematurely enabled flag also remains degraded while
+the submission protocol is unpublished and reports writes as disabled.
+
+D1C.1 is local-only. It does not apply a remote preview or production migration,
+deploy a Worker or Pages revision, configure a secret, enable submission, or
+consume a ticket.

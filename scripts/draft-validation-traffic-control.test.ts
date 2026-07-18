@@ -265,6 +265,8 @@ assert.match(pagesConfig, /\[\[services\]\][\s\S]*binding = "VALIDATION_SERVICE"
 assert.match(pagesConfig, /\[env\.production\.vars\][\s\S]*DRAFT_VALIDATION_MODE = "enabled"/)
 assert.match(pagesConfig, /\[vars\][\s\S]*DRAFT_TICKET_MODE = "enabled"/)
 assert.match(pagesConfig, /\[env\.production\.vars\][\s\S]*DRAFT_TICKET_MODE = "disabled"/)
+assert.equal((pagesConfig.match(/^DRAFT_SUBMISSION_MODE = "disabled"$/gm) ?? []).length, 2)
+assert.equal((pagesConfig.match(/^DRAFT_SUBMISSION_MODE = "enabled"$/gm) ?? []).length, 0)
 assert.match(pagesConfig, /\[\[env\.production\.services\]\][\s\S]*binding = "VALIDATION_SERVICE"[\s\S]*service = "pennant-pursuit-validation-production"/)
 assert.doesNotMatch(pagesConfig, /\[\[env\.production\.ratelimits\]\]/)
 assert.deepEqual(
@@ -275,7 +277,8 @@ assert.equal((pagesConfig.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).
 assert.equal((pagesConfig.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 0)
 
 // The shared source and its two explicit configurations guard the intended
-// private, storage-free topology and separate rate-limit state.
+// private topology and separate rate-limit state. D1C.1 adds one unused
+// preview-only D1 binding; the existing routes remain storage-free.
 const workerConfig = readFileSync('workers/draft-validation/wrangler.toml', 'utf8')
 assert.match(workerConfig, /workers_dev = false/)
 assert.match(workerConfig, /preview_urls = false/)
@@ -287,6 +290,8 @@ assert.match(workerConfig, /\[env\.production\][\s\S]*name = "pennant-pursuit-va
 assert.match(workerConfig, /\[env\.production\.vars\][\s\S]*DRAFT_VALIDATION_MODE = "enabled"/)
 assert.match(workerConfig, /\[vars\][\s\S]*DRAFT_TICKET_MODE = "enabled"/)
 assert.match(workerConfig, /\[env\.production\.vars\][\s\S]*DRAFT_TICKET_MODE = "disabled"/)
+assert.equal((workerConfig.match(/^DRAFT_SUBMISSION_MODE = "disabled"$/gm) ?? []).length, 2)
+assert.equal((workerConfig.match(/^DRAFT_SUBMISSION_MODE = "enabled"$/gm) ?? []).length, 0)
 assert.match(workerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*name = "RATE_LIMIT_BURST"[\s\S]*namespace_id = "16204021"[\s\S]*limit = 5[\s\S]*period = 10/)
 assert.match(workerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*name = "RATE_LIMIT_SUSTAINED"[\s\S]*namespace_id = "16204022"[\s\S]*limit = 20[\s\S]*period = 60/)
 assert.deepEqual(
@@ -298,7 +303,10 @@ const productionWorkerName = workerConfig.match(/\[env\.production\][\s\S]*?^nam
 assert.equal(previewWorkerName, 'pennant-pursuit-validation-preview')
 assert.equal(productionWorkerName, 'pennant-pursuit-validation-production')
 assert.notEqual(previewWorkerName, productionWorkerName)
-assert.doesNotMatch(workerConfig, /^(?:routes|route|custom_domain|d1_databases|kv_namespaces|r2_buckets|durable_objects|queues|analytics_engine_datasets|secrets_store_secrets)\s*=/m)
+assert.equal((workerConfig.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
+assert.equal((workerConfig.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 0)
+assert.match(workerConfig, /\[\[d1_databases\]\][\s\S]*database_name = "pennant-pursuit-preview"[\s\S]*migrations_dir = "\.\.\/\.\.\/migrations"/)
+assert.doesNotMatch(workerConfig, /^(?:routes|route|custom_domain|kv_namespaces|r2_buckets|durable_objects|queues|analytics_engine_datasets|secrets_store_secrets)\s*=/m)
 assert.doesNotMatch(pagesConfig + workerConfig, /^DRAFT_TICKET_SIGNING_KEY\s*=/m)
 const proxySource = readFileSync('functions/api/v1/validate-draft.ts', 'utf8')
 assert.doesNotMatch(proxySource, /createWorkerReplayCatalog|replayDraftWithCatalog|calculateDraftResult|readBoundedJson|env\.DB|waitUntil|console\./)
@@ -307,4 +315,4 @@ const sharedProxySource = readFileSync('functions/lib/private-validation-proxy.t
 assert.doesNotMatch(sharedProxySource, /createWorkerReplayCatalog|replayDraftWithCatalog|calculateDraftResult|readBoundedJson|env\.DB|waitUntil|console\./)
 assert.match(sharedProxySource, /service\.fetch/)
 
-console.log('Draft validation traffic control passed: isolated private proxies, trusted key, distinct rate limits, production ticket isolation, and no storage.')
+console.log('Draft validation traffic control passed: isolated private proxies, trusted key, distinct rate limits, production D1 isolation, and storage-free existing routes.')

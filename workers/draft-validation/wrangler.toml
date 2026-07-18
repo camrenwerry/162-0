@@ -10,6 +10,17 @@ preview_urls = false
 [vars]
 DRAFT_VALIDATION_MODE = "enabled"
 DRAFT_TICKET_MODE = "enabled"
+DRAFT_SUBMISSION_MODE = "disabled"
+
+# D1C.1 binds only the private preview Worker to the shared preview database.
+# No current route reads or writes it, and the production environment below
+# intentionally does not declare a D1 binding.
+[[d1_databases]]
+binding = "DB"
+database_name = "pennant-pursuit-preview"
+database_id = "ba6255b4-9425-4863-b10f-79149180f75a"
+preview_database_id = "DB"
+migrations_dir = "../../migrations"
 
 # Namespace IDs are intentionally distinct from every future production
 # namespace. Rate-limit state is managed by Cloudflare, not application storage.
@@ -40,6 +51,7 @@ preview_urls = false
 [env.production.vars]
 DRAFT_VALIDATION_MODE = "enabled"
 DRAFT_TICKET_MODE = "disabled"
+DRAFT_SUBMISSION_MODE = "disabled"
 
 [[env.production.ratelimits]]
 name = "RATE_LIMIT_BURST"

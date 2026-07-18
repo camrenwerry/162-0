@@ -5,13 +5,15 @@ import {
   GAME_RULES_VERSION,
   RNG_VERSION,
   SCORING_VERSION,
+  SUBMISSION_SCHEMA_VERSION,
 } from '../../../src/config/versions'
 import { TRANSCRIPT_SCHEMA_VERSION } from '../../../src/game/DraftTranscript'
 import {
-  EXPECTED_SCHEMA_VERSION,
+  databaseSchemaIsCompatible,
   readDatabaseHealth,
 } from '../../lib/database'
 import { SAFE_JSON_RESPONSE_HEADERS } from '../../lib/api-response'
+import { draftSubmissionFeatureState } from '../../lib/draft-submission-mode'
 import { draftValidationFeatureState } from '../../lib/draft-validation-mode'
 import type { BackendEnv } from '../../lib/env'
 
@@ -36,6 +38,7 @@ const healthMetadata = Object.freeze({
     }),
     canonicalDataDigest: DATA_DIGEST,
     transcriptSchema: TRANSCRIPT_SCHEMA_VERSION,
+    submissionSchema: SUBMISSION_SCHEMA_VERSION,
   }),
 })
 
@@ -53,8 +56,15 @@ function jsonResponse(payload: unknown, status: number) {
 export async function handleHealthRequest(request: Request, env: BackendEnv = {}) {
   if (request.method === 'GET') {
     const d1 = await readDatabaseHealth(env)
-    const healthy = !d1.configured
-      || (d1.reachable && d1.schemaVersion === EXPECTED_SCHEMA_VERSION)
+    const submissionState = draftSubmissionFeatureState(env)
+    const submissionConfigured = submissionState === 'enabled'
+    const submissionProtocolPublished = typeof SUBMISSION_SCHEMA_VERSION === 'string'
+    const submissionWritesReady = submissionConfigured && submissionProtocolPublished
+    const databaseHealthy = d1.reachable
+      && databaseSchemaIsCompatible(d1.schemaVersion, submissionWritesReady)
+    const healthy = submissionConfigured
+      ? submissionProtocolPublished && d1.configured && databaseHealthy
+      : !d1.configured || databaseHealthy
     return jsonResponse({
       ...healthMetadata,
       status: healthy ? 'healthy' : 'degraded',
@@ -62,9 +72,11 @@ export async function handleHealthRequest(request: Request, env: BackendEnv = {}
       features: Object.freeze({
         draftValidation: draftValidationFeatureState(env),
         leaderboard: 'disabled',
-        submissions: 'disabled',
-        writes: 'disabled',
-        d1: d1.configured ? 'read-only' : 'not-configured',
+        submissions: submissionState,
+        writes: submissionWritesReady ? 'submission-only' : 'disabled',
+        d1: d1.configured
+          ? submissionWritesReady ? 'submission-read-write' : 'read-only'
+          : 'not-configured',
       }),
     }, 200)
   }

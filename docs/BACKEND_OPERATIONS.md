@@ -7,7 +7,12 @@ Pennant Pursuit Backend Phase B uses two separate D1 databases:
 
 The top-level/default Wrangler environment binds only preview as `DB`. The explicit `[env.production]` override binds only production as `DB`. The names and UUIDs differ, and neither environment can inherit or select the other database under the checked-in configuration.
 
-The only application table is `backend_schema`, which contains the singleton schema version. No user identity, display name, draft, roster, gameplay, transcript, analytics, request, IP-address, user-agent, or location data is stored. Leaderboard, submissions, and all runtime writes remain disabled.
+Schema version 1 contains only `backend_schema`. The additive D1C.1 schema
+version 2 also defines an initially empty `draft_submissions` table for future
+ticket consumption, but D1C.1 adds no submission route or runtime write path.
+No user identity, display name, raw ticket, signature, draft, roster, gameplay,
+transcript, analytics, request, IP-address, user-agent, or location data is
+stored. Leaderboard, submissions, and all runtime writes remain disabled.
 
 ## Environment boundaries
 
@@ -28,9 +33,11 @@ different private Workers:
 Both targets share the source in `workers/draft-validation/`, but each has a
 separate Worker name and separate 5/10-second and 20/60-second Rate Limiting
 counter namespaces. Both disable `workers.dev` and Worker preview URLs and have
-no route, custom domain, D1, KV, R2, Durable Object, queue, analytics, storage,
-external fetch, or runtime-write binding. No signing secret has been created or
-configured in this repository. The signing secret exists only on the preview
+no route, custom domain, KV, R2, Durable Object, queue, analytics, external
+fetch, or runtime-write binding. D1C.1 gives only the preview Worker an unused
+binding to `pennant-pursuit-preview`; the production Worker has no D1 binding,
+and the validation and ticket handlers remain storage-free. No signing secret
+has been created or configured in this repository. The signing secret exists only on the preview
 Worker as an out-of-repository secret; the production Worker has none. The reviewed production Pages
 configuration sets `DRAFT_VALIDATION_MODE` to exactly `enabled`; a future Pages
 deployment is required before that checked-in setting becomes live. Once live,
@@ -101,6 +108,27 @@ needing multi-key acceptance. To roll back D1A, set the relevant preview
 `DRAFT_TICKET_MODE` to `"disabled"` and deploy that reviewed Pages/Worker
 configuration; no D1 cleanup, migration, or data recovery is required.
 
+## D1C.1 disabled submission foundation
+
+D1C.1 adds migration `0002_draft_submissions.sql`, the preview-only private
+Worker D1 binding, and `DRAFT_SUBMISSION_MODE = "disabled"` in both Pages and
+private-Worker environments. Production's private Worker intentionally has no
+D1 binding. The migration advances `backend_schema` from 1 to 2 and adds only
+the minimal future-consumption columns, database-enforced ticket-ID primary key,
+and retention index approved in D1C.0.
+
+There is still no `/api/v1/submit-draft` route, scheduled cleanup handler,
+submission-path D1 read or write, ticket consumption, or persistent idempotency
+behavior. The existing ticket and validation paths do not access the new binding. While
+submission is disabled, health accepts schema 1 or 2 so code and migration can
+be rolled out independently; an unknown schema remains degraded. A prematurely
+enabled submission flag remains degraded while submission version metadata is
+`null` and does not advertise writes.
+
+D1C.1 performs no remote preview migration, Worker deployment, Pages deployment,
+secret operation, production migration, or remote production configuration
+change. All migration verification is local until a later explicit authorization.
+
 ## Local migration workflow
 
 Local state is persisted beneath the ignored `.wrangler/` directory:
@@ -170,7 +198,7 @@ A Pages deployment is a separate operation and is not part of Backend Phase B. F
 
 D1 Time Travel is continuously available for supported production-backend databases, but a bookmark is only a recovery point; it is not a tested down-migration. A restore overwrites database state and requires a separate reviewed recovery plan and explicit authorization.
 
-A Pages deployment rollback does not roll back D1 schema or data. Applied D1 migrations have no automatic down-migration. Prefer a reviewed forward migration for a released schema problem, or use Time Travel only through a deliberate recovery procedure. Because Phase B stores only the singleton schema-version row, there is no user or gameplay data to recover.
+A Pages deployment rollback does not roll back D1 schema or data. Applied D1 migrations have no automatic down-migration. Prefer a reviewed forward migration for a released schema problem, or use Time Travel only through a deliberate recovery procedure. Production still stores only the singleton schema-version row. D1C.1 has no remote data and no user or gameplay data to recover.
 
 ## Phase C checklist
 
