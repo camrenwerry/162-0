@@ -4,6 +4,10 @@ import {
   handleApiNotFoundRequest,
 } from '../../../functions/lib/api-response'
 import {
+  DraftSubmissionPublicError,
+  draftSubmissionErrorResponse,
+} from '../../../functions/lib/draft-submission-response'
+import {
   handleAuthoritativeValidationRequest,
   isValidationEnabled,
   type ValidationModeEnv,
@@ -13,6 +17,11 @@ import {
   isTicketIssuanceEnabled,
   type TicketModeEnv,
 } from './authoritative-ticket'
+import {
+  handleAuthoritativeSubmissionRequest,
+  isSubmissionEnabled,
+  type SubmissionModeEnv,
+} from './authoritative-submission'
 
 export const INTERNAL_RATE_KEY_HEADER = 'X-Pennant-Pursuit-Rate-Key'
 const RATE_KEY_PATTERN = /^v1:[a-f0-9]{64}$/
@@ -21,37 +30,43 @@ export interface RateLimitBinding {
   limit(options: Readonly<{ key: string }>): Promise<Readonly<{ success: boolean }>>
 }
 
-export interface PrivateValidationWorkerEnv extends ValidationModeEnv, TicketModeEnv {
+export interface PrivateValidationWorkerEnv extends ValidationModeEnv, TicketModeEnv, SubmissionModeEnv {
   readonly RATE_LIMIT_BURST: RateLimitBinding
   readonly RATE_LIMIT_SUSTAINED: RateLimitBinding
 }
 
-function unavailableResponse() {
-  return draftValidationErrorResponse(new DraftValidationPublicError('temporarily_unavailable'))
+function unavailableResponse(submission: boolean) {
+  return submission
+    ? draftSubmissionErrorResponse(new DraftSubmissionPublicError('submission_unavailable'))
+    : draftValidationErrorResponse(new DraftValidationPublicError('temporarily_unavailable'))
 }
 
-function rateLimitedResponse() {
-  return draftValidationErrorResponse(new DraftValidationPublicError('rate_limited'), { 'Retry-After': '60' })
+function rateLimitedResponse(submission: boolean) {
+  const headers = { 'Retry-After': '60' }
+  return submission
+    ? draftSubmissionErrorResponse(new DraftSubmissionPublicError('rate_limited'), headers)
+    : draftValidationErrorResponse(new DraftValidationPublicError('rate_limited'), headers)
 }
 
 async function withRateLimit(
   request: Request,
   env: PrivateValidationWorkerEnv,
   handler: (request: Request, env: PrivateValidationWorkerEnv) => Promise<Response>,
+  submission = false,
 ) {
   const rateKey = request.headers.get(INTERNAL_RATE_KEY_HEADER)
-  if (!rateKey || !RATE_KEY_PATTERN.test(rateKey)) return unavailableResponse()
+  if (!rateKey || !RATE_KEY_PATTERN.test(rateKey)) return unavailableResponse(submission)
 
   let burst: Readonly<{ success: boolean }>
   let sustained: Readonly<{ success: boolean }>
   try {
     burst = await env.RATE_LIMIT_BURST.limit({ key: rateKey })
-    if (!burst.success) return rateLimitedResponse()
+    if (!burst.success) return rateLimitedResponse(submission)
     sustained = await env.RATE_LIMIT_SUSTAINED.limit({ key: rateKey })
   } catch {
-    return unavailableResponse()
+    return unavailableResponse(submission)
   }
-  if (!sustained.success) return rateLimitedResponse()
+  if (!sustained.success) return rateLimitedResponse(submission)
 
   return handler(request, env)
 }
@@ -73,11 +88,18 @@ export async function handlePrivateDraftTicketRequest(request: Request, env: Pri
   return withRateLimit(request, env, handleAuthoritativeDraftTicketRequest)
 }
 
+export async function handlePrivateSubmissionRequest(request: Request, env: PrivateValidationWorkerEnv) {
+  if (!isSubmissionEnabled(env)) return handleApiNotFoundRequest(request)
+
+  return withRateLimit(request, env, handleAuthoritativeSubmissionRequest, true)
+}
+
 export default {
   fetch(request: Request, env: PrivateValidationWorkerEnv) {
     const pathname = new URL(request.url).pathname
     if (pathname === '/api/v1/validate-draft') return handlePrivateValidationRequest(request, env)
     if (pathname === '/api/v1/draft-ticket') return handlePrivateDraftTicketRequest(request, env)
+    if (pathname === '/api/v1/submit-draft') return handlePrivateSubmissionRequest(request, env)
     return handleApiNotFoundRequest(request)
   },
 }

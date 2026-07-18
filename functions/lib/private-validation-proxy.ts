@@ -2,6 +2,10 @@ import {
   DraftValidationPublicError,
   draftValidationErrorResponse,
 } from './api-response'
+import {
+  DraftSubmissionPublicError,
+  draftSubmissionErrorResponse,
+} from './draft-submission-response'
 import type { BackendEnv } from './env'
 
 export const PRIVATE_VALIDATION_ALLOWED_METHODS = 'POST'
@@ -12,8 +16,12 @@ const TRUSTED_CONNECTING_IP_PATTERN = /^(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:
 type ValidationService = Pick<Fetcher, 'fetch'>
 export type PrivateValidationProxyEnv = BackendEnv & { readonly VALIDATION_SERVICE?: ValidationService }
 
-function errorResponse(code: 'method_not_allowed' | 'origin_not_allowed' | 'temporarily_unavailable', headers: Readonly<Record<string, string>> = {}) {
+function validationErrorResponse(code: 'method_not_allowed' | 'origin_not_allowed' | 'temporarily_unavailable', headers: Readonly<Record<string, string>> = {}) {
   return draftValidationErrorResponse(new DraftValidationPublicError(code), headers)
+}
+
+function submissionErrorResponse(code: 'method_not_allowed' | 'origin_not_allowed' | 'submission_unavailable', headers: Readonly<Record<string, string>> = {}) {
+  return draftSubmissionErrorResponse(new DraftSubmissionPublicError(code), headers)
 }
 
 function requestOriginIsAllowed(request: Request) {
@@ -57,7 +65,16 @@ function forwardedRequest(request: Request, rateKey: string) {
  * trusted metadata derivation, and private Service Binding proxying. Request
  * parsing and ticket/validation logic remain in the private Worker.
  */
-export async function proxyPrivateValidationRequest(request: Request, env: PrivateValidationProxyEnv = {}) {
+async function proxyPrivateRequest(
+  request: Request,
+  env: PrivateValidationProxyEnv,
+  submission: boolean,
+) {
+  const errorResponse = (code: 'method_not_allowed' | 'origin_not_allowed' | 'temporarily_unavailable', headers: Readonly<Record<string, string>> = {}) => (
+    submission
+      ? submissionErrorResponse(code === 'temporarily_unavailable' ? 'submission_unavailable' : code, headers)
+      : validationErrorResponse(code, headers)
+  )
   if (request.method !== PRIVATE_VALIDATION_ALLOWED_METHODS) {
     return errorResponse('method_not_allowed', { Allow: PRIVATE_VALIDATION_ALLOWED_METHODS })
   }
@@ -74,4 +91,12 @@ export async function proxyPrivateValidationRequest(request: Request, env: Priva
   } catch {
     return errorResponse('temporarily_unavailable')
   }
+}
+
+export function proxyPrivateValidationRequest(request: Request, env: PrivateValidationProxyEnv = {}) {
+  return proxyPrivateRequest(request, env, false)
+}
+
+export function proxyPrivateSubmissionRequest(request: Request, env: PrivateValidationProxyEnv = {}) {
+  return proxyPrivateRequest(request, env, true)
 }

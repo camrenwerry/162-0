@@ -83,26 +83,19 @@ function requireCanonicalTimestamp(value: unknown) {
   }
 }
 
-function validateHeader(header: Record<string, unknown>) {
+function validateHeaderShape(header: Record<string, unknown>) {
   requireExactKeys(header, HEADER_FIELDS)
-  const transcriptSchemaVersion = requireString(header.transcriptSchemaVersion, VERSION_MAX_LENGTH)
-  const appVersion = requireString(header.appVersion, VERSION_MAX_LENGTH)
-  const gameRulesVersion = requireString(header.gameRulesVersion, VERSION_MAX_LENGTH)
-  const rngVersion = requireString(header.rngVersion, VERSION_MAX_LENGTH)
-  const scoringVersion = requireString(header.scoringVersion, VERSION_MAX_LENGTH)
-  const dataVersion = requireString(header.dataVersion, VERSION_MAX_LENGTH)
-  const digest = requireString(header.canonicalDataDigest, 64)
+  requireString(header.transcriptSchemaVersion, VERSION_MAX_LENGTH)
+  requireString(header.appVersion, VERSION_MAX_LENGTH)
+  requireString(header.gameRulesVersion, VERSION_MAX_LENGTH)
+  requireString(header.rngVersion, VERSION_MAX_LENGTH)
+  requireString(header.scoringVersion, VERSION_MAX_LENGTH)
+  requireString(header.dataVersion, VERSION_MAX_LENGTH)
+  requireString(header.canonicalDataDigest, 64)
   const draftId = requireString(header.draftId, 36)
   const gameplaySeed = requireString(header.gameplaySeed, 42)
   requireCanonicalTimestamp(header.createdAt)
 
-  if (transcriptSchemaVersion !== TRANSCRIPT_SCHEMA_VERSION) draftValidationError('unsupported_transcript_version')
-  if (appVersion !== APP_VERSION) draftValidationError('unsupported_app_version')
-  if (gameRulesVersion !== GAME_RULES_VERSION) draftValidationError('unsupported_rules_version')
-  if (rngVersion !== RNG_VERSION) draftValidationError('unsupported_rng_version')
-  if (scoringVersion !== SCORING_VERSION) draftValidationError('unsupported_scoring_version')
-  if (dataVersion !== DATA_VERSION) draftValidationError('unsupported_data_version')
-  if (!DIGEST_PATTERN.test(digest) || digest !== DATA_DIGEST) draftValidationError('canonical_data_mismatch')
   if (!UUID_V4_PATTERN.test(draftId)) draftValidationError('invalid_request_schema')
   const seedMatch = GAMEPLAY_SEED_PATTERN.exec(gameplaySeed)
   if (!seedMatch || seedMatch[1] === '0'.repeat(32)) draftValidationError('invalid_seed')
@@ -174,7 +167,12 @@ export interface DraftValidationRequestEnvelope {
   readonly transcript: DraftTranscript
 }
 
-export function validateDraftRequestEnvelope(value: unknown): DraftValidationRequestEnvelope {
+/**
+ * Strict structural parsing is intentionally separate from current-version
+ * policy. Submission retries must be canonicalizable before retained rows are
+ * reconciled, even when a ticket has since expired or server versions changed.
+ */
+export function parseDraftRequestEnvelope(value: unknown): DraftValidationRequestEnvelope {
   if (!isRecord(value)) draftValidationError('invalid_request_schema')
   requireExactKeys(value, ENVELOPE_FIELDS)
   const ticket = requireString(value.ticket, 4_096)
@@ -182,8 +180,27 @@ export function validateDraftRequestEnvelope(value: unknown): DraftValidationReq
   if (!isRecord(transcript)) draftValidationError('invalid_request_schema')
   requireExactKeys(transcript, TRANSCRIPT_FIELDS)
   if (!isRecord(transcript.header) || !Array.isArray(transcript.events)) draftValidationError('invalid_request_schema')
-  validateHeader(transcript.header)
+  validateHeaderShape(transcript.header)
   validateEvents(transcript.events)
   validateTranscriptShape(transcript)
   return { ticket, transcript }
+}
+
+export function validateDraftSupportedVersions(transcript: DraftTranscript) {
+  const { header } = transcript
+  if (header.transcriptSchemaVersion !== TRANSCRIPT_SCHEMA_VERSION) draftValidationError('unsupported_transcript_version')
+  if (header.appVersion !== APP_VERSION) draftValidationError('unsupported_app_version')
+  if (header.gameRulesVersion !== GAME_RULES_VERSION) draftValidationError('unsupported_rules_version')
+  if (header.rngVersion !== RNG_VERSION) draftValidationError('unsupported_rng_version')
+  if (header.scoringVersion !== SCORING_VERSION) draftValidationError('unsupported_scoring_version')
+  if (header.dataVersion !== DATA_VERSION) draftValidationError('unsupported_data_version')
+  if (!DIGEST_PATTERN.test(header.canonicalDataDigest) || header.canonicalDataDigest !== DATA_DIGEST) {
+    draftValidationError('canonical_data_mismatch')
+  }
+}
+
+export function validateDraftRequestEnvelope(value: unknown): DraftValidationRequestEnvelope {
+  const envelope = parseDraftRequestEnvelope(value)
+  validateDraftSupportedVersions(envelope.transcript)
+  return envelope
 }

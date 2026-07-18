@@ -93,7 +93,7 @@ function cardFailureCode(transcript: DraftTranscript, catalog: ReplayCatalog): '
   return 'invalid_card'
 }
 
-function replayFailureCode(error: DraftReplayError, transcript: DraftTranscript, catalog: ReplayCatalog): DraftValidationErrorCode {
+export function replayFailureCode(error: DraftReplayError, transcript: DraftTranscript, catalog: ReplayCatalog): DraftValidationErrorCode {
   const message = error.message
   if (message.includes('Unsupported transcript schema')) return 'unsupported_transcript_version'
   if (message.includes('Unsupported app version')) return 'unsupported_app_version'
@@ -115,6 +115,10 @@ function replayFailureCode(error: DraftReplayError, transcript: DraftTranscript,
   if (message.includes('extra event')) return 'unexpected_event_order'
   if (message.includes('schema')) return 'invalid_request_schema'
   return 'temporarily_unavailable'
+}
+
+export function getAuthoritativeReplayCatalog() {
+  return getCatalog()
 }
 
 function teamByFranchiseDecade(catalog: ReplayCatalog) {
