@@ -1,7 +1,9 @@
 import type { DraftTranscript, DraftTranscriptEvent } from '../../src/game/DraftTranscript'
 
-export const DRAFT_SUBMISSION_SCHEMA_VERSION = 'pennant-draft-submission-v1'
-export const DRAFT_SUBMISSION_RETENTION_MS = 86_400_000
+export {
+  DRAFT_SUBMISSION_RETENTION_MS,
+  DRAFT_SUBMISSION_SCHEMA_VERSION,
+} from './draft-submission-constants'
 export const TRANSCRIPT_DIGEST_DOMAIN = 'pennant-pursuit:submission-transcript:v1\n'
 export const TICKET_TOKEN_DIGEST_DOMAIN = 'pennant-pursuit:submission-ticket-token:v1\n'
 

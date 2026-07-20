@@ -9,9 +9,10 @@ abuse mitigation without changing the browser endpoint or game behavior. Phase
 D1A adds preview-only signed draft-ticket issuance, and Phase D1B requires and
 verifies that ticket in preview validation before replay. Phase D1C.1 adds the
 disabled persistence foundation, D1C.2 adds the disabled atomic submission
-path, and D1C.3 adds preview-only scheduled retention cleanup. Submission and
-leaderboard activation remain disabled, and no phase adds identity, analytics,
-or moderation.
+path, D1C.3 adds the scheduled retention handler, and D1C.4 separates its
+preview activation states. Submission and Cron remain disabled in the
+checked-in defaults, leaderboard activation remains disabled, and no phase adds
+identity, analytics, or moderation.
 
 ## Module boundaries
 
@@ -316,9 +317,10 @@ identifiers, alternatives, SQL, D1 details, stack traces, or exception messages.
 Draft validation never reads or writes D1 and works with no `DB` binding or a
 binding that throws if touched. It does not use `waitUntil`, cookies, CORS,
 storage, transcript logging, request logging, or any other persistence path.
-Health continues to describe D1 as read-only and continues to report
-leaderboard, submissions, and writes as disabled; it adds only the effective
+At the D1B stop point, health described D1 as read-only and reported
+leaderboard, submissions, and writes as disabled; it added only the effective
 `draftValidation` state without identifying the environment or database.
+D1C.4 supersedes those submission-health semantics as documented below.
 
 Successful D1B validation proves both deterministic consistency and possession
 of an unmodified, unexpired preview ticket whose claims match the transcript.
@@ -431,7 +433,7 @@ profiles are diagnostic, not deployment-equivalent.
 
 ## C4 private Workers, traffic control, and local operation
 
-The browser still calls the same same-origin endpoint. C4.1 changes only its
+The browser still calls the same-origin endpoint. C4.1 changes only its
 internal execution path:
 
 ```text
@@ -448,15 +450,18 @@ and Worker preview URLs and have no route, custom domain, KV, R2, Durable Object
 queue, analytics binding, external fetch, or cookie handling. Only preview has
 a D1 binding; production remains unbound from D1. Ticket issuance and validation
 remain storage-free. D1C.2 adds a disabled private submission path, and D1C.3
-adds preview-only scheduled retention cleanup without an HTTP route. Submission
-flags remain disabled. No real signing secret is configured in checked-in source
-or Wrangler variables. The preview Worker has the externally configured
-`DRAFT_TICKET_SIGNING_KEY` secret; the production Worker has no signing secret,
-keeping the two targets isolated. Its fetch entry point remains compatible with
-the Pages Service Binding, while the scheduled entry point is reachable only by
-the configured preview Cron. The original C1/C2/C3 authoritative parser, replay,
-canonical catalog, and scoring code live behind the fetch handler; the Pages
-route does not import the catalog, parse a transcript, replay, or score.
+adds preview-only scheduled retention cleanup without an HTTP route. D1C.4
+keeps the checked-in Cron and submission flags disabled and materializes the
+reviewed activation states locally. No real signing secret is configured in
+checked-in source or Wrangler variables. The preview Worker has the externally
+configured `DRAFT_TICKET_SIGNING_KEY` secret; the production Worker has no
+signing secret, keeping the two targets isolated. Its fetch entry point remains
+compatible with the Pages Service Binding. The original C1/C2/C3
+authoritative parser, replay, canonical catalog, and scoring code live behind
+the fetch handler; the Pages route does not import the catalog, parse a
+transcript, replay, or score. The
+scheduled entry point runs remotely only when the separately reviewed
+`cron-enabled` configuration has been applied.
 
 The Pages boundary runs the existing feature, method, and same-origin checks
 before it reads or forwards a request. It accepts the client IP only from
@@ -486,10 +491,10 @@ Limiting counters are per location and eventually consistent: this is coarse
 burst mitigation, not global accounting or fair-play replay protection.
 
 The default/preview Pages configuration binds `VALIDATION_SERVICE` only to
-`pennant-pursuit-validation-preview`, with namespaces `16204011` and
-`16204012`. `[env.production]` binds that same name only to
-`pennant-pursuit-validation-production`, with namespaces `16204021` and
-`16204022`; the two counters are never shared. The reviewed Pages production
+`pennant-pursuit-validation-preview`, with preview-only rate-limit namespaces.
+`[env.production]` binds that same name only to
+`pennant-pursuit-validation-production`, with distinct production rate-limit
+namespaces; the two counters are never shared. The reviewed Pages production
 feature flag sets `DRAFT_VALIDATION_MODE = "enabled"`. After a reviewed Pages
 deployment, valid production `POST`s pass the existing method, origin, host,
 and trusted-metadata checks before invoking only the production Service Binding.
@@ -604,7 +609,7 @@ leaderboard, identity, player name, analytics, D1 access, storage, runtime
 write, migration, or public Worker endpoint.
 
 Only preview enables `DRAFT_TICKET_MODE`. The Pages route is
-`POST /api/v1/draft-ticket`; it uses the same same-origin validation,
+`POST /api/v1/draft-ticket`; it uses the same-origin validation,
 trusted-`CF-Connecting-IP` derived rate key, Service Binding, response headers,
 5-per-10-second burst limit, and 20-per-60-second sustained limit as draft
 validation. The Pages proxy does not parse the body. The private preview Worker
@@ -742,8 +747,12 @@ did not access the new binding, and no D1C.1 handler called `run`, `batch`, or
 
 Disabled health treats database schema 1 and 2 as compatible so an additive
 migration and compatible code can be ordered safely. A missing/corrupt/future
-schema remains degraded. A prematurely enabled flag also remains degraded while
-the submission protocol is unpublished and reports writes as disabled.
+schema remains degraded. D1C.4 publishes the existing submission protocol in
+health only when the Pages flag requests activation and Pages can reach exact
+schema version 2. Otherwise enabled intent reports degraded and unavailable.
+Even with exact schema 2, Pages reports private write execution as externally
+unverified because it cannot prove the private Worker flag, binding, signing
+secret, Service Binding health, or an actual write.
 
 D1C.1 is local-only. It does not apply a remote preview or production migration,
 deploy a Worker or Pages revision, configure a secret, enable submission, or
@@ -767,10 +776,14 @@ migration, deployment, activation, production binding, or health publication.
 
 ## Phase D1C.3 preview retention cleanup path
 
-D1C.3 adds a scheduled handler to the private Worker and the preview-only UTC
-Cron `17 * * * *`. The production environment explicitly declares an empty Cron
-list and still has no D1 binding. Worker public URLs remain disabled, fetch
-routing is unchanged, and there is no HTTP cleanup route.
+D1C.3 adds a scheduled handler to the private Worker. Its original top-level
+preview configuration also included UTC Cron `17 * * * *`, so a default Worker
+deployment would apply the trigger rather than leaving Cron activation as a
+separate boundary. D1C.4 changes the checked-in preview Cron to explicit `[]`
+and adds the schedule only to the generated `cron-enabled` state. The
+production environment keeps an empty Cron list and no D1 binding. Worker
+public URLs remain disabled, fetch routing is unchanged, and there is no HTTP
+cleanup route.
 
 The handler samples current server time exactly once, requires schema version 2,
 and binds that cutoff to at most ten sequential DELETE statements. Each deletes
@@ -784,5 +797,62 @@ aggregate counts, and rejects the event so default Cloudflare retry behavior is
 preserved. Previously completed DELETE statements remain committed and cleanup
 is safe to resume. Completion, backlog, and failure logs never include raw
 exceptions, SQL, rows, receipts, identifiers, digests, secrets, bindings, or
-request data. D1C.3 remains repository-only: no migration, deployment, remote
-Cron activation, feature enablement, Pages change, or production change occurs.
+request data. D1C.3 remained repository-only: no migration, deployment, remote
+Cron activation, feature enablement, Pages change, or production change occurred.
+
+## Phase D1C.4 preview activation preparation
+
+D1C.4 defines exact `disabled`, `submission-enabled`, and `cron-enabled`
+preview states in one checked-in manifest. A deterministic script applies the
+single submission mode to both Pages and Worker preview flags, applies the Cron
+only to the final state, and refuses production drift. Disabled health publishes
+no submission schema or write capability. Configured intent with missing,
+unreachable, malformed, older, or future D1 schema publishes no submission
+schema and reports writes unavailable. Exact reachable schema 2 publishes
+`pennant-draft-submission-v1`, reports schema readiness, and keeps operational
+writes externally unverified.
+
+Guarded preview-only submission and retention harnesses separately verify
+endpoint results, the complete production submission receipt shape and
+semantics, raw HTTP receipt bytes, the canonical UTF-8 D1 text-storage receipt
+contract, exact D1 persistence, and sentinel fingerprints. They reject
+local, ambiguous, and production targets before contact; reject redirects
+without following `Location`; impose finite request and body bounds; reject
+invalid UTF-8 and BOM-prefixed JSON; default to token-free non-execution; and
+take execution authentication only from the environment.
+
+An absence preflight reserves nothing and establishes no ownership. Submission
+ownership requires a complete validated HTTP success receipt and all seven
+immutable fingerprint values independently known before the D1 verification
+read. A row discovered after any failed, timed-out, redirected, malformed,
+invalidly encoded, missing, or otherwise ambiguous response is diagnostic only,
+never enters owned cleanup, remains untouched, and makes the harness fail
+nonzero. Same ID, digests, schema, plausible timestamps, or even a plausible
+stored receipt cannot replace the missing validated HTTP receipt.
+
+Before each destructive step the harness re-reads the complete fingerprint and
+uses a parameterized conditional delete containing the ID, both digests,
+schema, timestamps, and receipt text. It never deletes by ID or prefix alone.
+D1's 100-bound-parameter maximum and seven parameters per fingerprint derive a
+shared maximum of 14 fingerprints per delete request. Submission cleanup makes
+one destructive delete attempt per chunk. A confirmed expected change count is
+classified deleted without a reconciliation read. Every zero-change,
+unexpected-change, or thrown/ambiguous mutation outcome receives exactly one
+read-only exact reconciliation. A successful read distinguishes absent,
+still-owned, and mismatching/non-owned rows. A failed read becomes unresolved
+immediately, with no second reconciliation read, destructive retry, ID-only
+fallback, or broadened deletion scope. Mismatches remain untouched and
+unexpected mutation counts fail nonzero.
+
+The retention harness also preflights scope and cleanup-order collisions, but
+shared activity can begin or end between any two observations. Competitors in
+or before the ordering range, competitors removed between polls, and multiple
+scheduled runs can make counts inconclusive. The harness reports an
+implementation failure only when independent repository evidence proves a
+cleanup-contract violation; observation-only transitions are shared contention,
+missed boundaries, or inconclusive results. Neither harness invokes deployment,
+migration, secret, route, binding, or Cloudflare configuration commands. The
+retention harness uses only the scheduled architecture and introduces no public
+cleanup route. Full commands, results, limitations, stop conditions, and
+rollback are documented in `docs/D1C4_ACTIVATION.md`. Repository preparation
+performs no remote action.

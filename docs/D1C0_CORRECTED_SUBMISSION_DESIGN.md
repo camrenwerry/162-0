@@ -642,7 +642,7 @@ WHERE ticket_id IN (
   SELECT ticket_id
   FROM draft_submissions
   WHERE retain_until_ms <= ?
-  ORDER BY retain_until_ms
+  ORDER BY retain_until_ms, ticket_id
   LIMIT 500
 );
 ```
@@ -904,9 +904,18 @@ Disabled health:
 
 Future separately approved preview activation:
 
-- `submissionSchemaVersion` becomes `pennant-draft-submission-v1`.
-- Enabled submission requires D1 reachable at schema version 2.
-- Otherwise health reports degraded.
+- Health `versions.submissionSchema` becomes
+  `pennant-draft-submission-v1` from the authoritative protocol constant when
+  the Pages submission flag is configured and Pages reaches exact D1 schema
+  version 2.
+- Configured intent with missing, unreachable, malformed, older, or future D1
+  schema reports degraded, publishes no submission schema, and reports writes
+  unavailable.
+- Exact Pages-visible schema readiness does not prove private Worker flags,
+  bindings, signing secrets, Service Binding health, or operational writes;
+  those writes remain externally unverified until separate smoke evidence.
+- Application-wide inactive version metadata may remain `null`; health must
+  not duplicate or drift from the runtime activation state.
 
 Production remains:
 

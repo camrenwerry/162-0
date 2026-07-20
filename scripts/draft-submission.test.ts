@@ -617,7 +617,7 @@ assert.equal((pagesConfig.match(/^DRAFT_SUBMISSION_MODE = "enabled"$/gm) ?? []).
 assert.equal((workerConfig.match(/^DRAFT_SUBMISSION_MODE = "enabled"$/gm) ?? []).length, 0)
 assert.equal((workerConfig.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((workerConfig.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 0)
-assert.match(workerConfig, /^\[triggers\]\ncrons = \["17 \* \* \* \*"\]$/m)
+assert.match(workerConfig, /^\[triggers\]\ncrons = \[\]$/m)
 assert.match(workerConfig, /^\[env\.production\.triggers\]\ncrons = \[\]$/m)
 assert.match(versionSource, /SUBMISSION_SCHEMA_VERSION: null/)
 assert.doesNotMatch(submissionSource, /\bconsole\.|\bwaitUntil\b|\bMath\.random\b|\braw_ticket\b|\bsignature\b/)

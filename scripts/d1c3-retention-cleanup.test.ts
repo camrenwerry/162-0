@@ -94,7 +94,7 @@ class SqliteStatement {
       FROM draft_submissions
       WHERE retain_until_ms <= ?
       ORDER BY retain_until_ms, ticket_id
-      LIMIT 500
+      LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}
     `).all(cutoff) as Array<{ ticket_id: string }>
     this.database.selectedBatches.push(selected.map(({ ticket_id }) => ticket_id))
     this.database.deleteCalls += 1
@@ -204,7 +204,10 @@ assert.equal(RETENTION_CLEANUP_MAX_BATCHES, 10)
 assert.equal(RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION, 2)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, /WHERE retain_until_ms <= \?/)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, /ORDER BY retain_until_ms, ticket_id/)
-assert.match(RETENTION_CLEANUP_DELETE_SQL, /LIMIT 500/)
+assert.match(RETENTION_CLEANUP_DELETE_SQL, new RegExp(`LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}`))
+const retentionCleanupSource = readFileSync('workers/draft-validation/src/retention-cleanup.ts', 'utf8')
+assert.match(retentionCleanupSource, /LIMIT \$\{RETENTION_CLEANUP_BATCH_SIZE\}/)
+assert.doesNotMatch(retentionCleanupSource, /LIMIT 500/)
 assert.equal((RETENTION_CLEANUP_DELETE_SQL.match(/DELETE FROM/g) ?? []).length, 1)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, /DELETE FROM draft_submissions/)
 assert.doesNotMatch(RETENTION_CLEANUP_DELETE_SQL, /submitted_at_ms|backend_schema|unrelated_records/)
@@ -477,15 +480,15 @@ for (const invalidResult of [
   assert.doesNotMatch(errors.join('\n'), PROHIBITED_LOG_DATA)
 }
 
-// Repository configuration remains disabled, private, and preview-only.
+// Repository configuration remains disabled, private, preview-only, and unscheduled by default.
 {
   const workerConfig = readFileSync('workers/draft-validation/wrangler.toml', 'utf8')
   const pagesConfig = readFileSync('wrangler.toml', 'utf8')
   const indexSource = readFileSync('workers/draft-validation/src/index.ts', 'utf8')
   assert.equal((workerConfig.match(/^\[triggers\]$/gm) ?? []).length, 1)
-  assert.equal((workerConfig.match(/^crons = \["17 \* \* \* \*"\]$/gm) ?? []).length, 1)
+  assert.equal((workerConfig.match(/^crons = \["17 \* \* \* \*"\]$/gm) ?? []).length, 0)
   assert.equal((workerConfig.match(/^\[env\.production\.triggers\]$/gm) ?? []).length, 1)
-  assert.equal((workerConfig.match(/^crons = \[\]$/gm) ?? []).length, 1)
+  assert.equal((workerConfig.match(/^crons = \[\]$/gm) ?? []).length, 2)
   assert.equal((workerConfig.match(/^DRAFT_SUBMISSION_MODE = "disabled"$/gm) ?? []).length, 2)
   assert.equal((workerConfig.match(/^DRAFT_SUBMISSION_MODE = "enabled"$/gm) ?? []).length, 0)
   assert.equal((workerConfig.match(/^DRAFT_TICKET_MODE = "enabled"$/gm) ?? []).length, 1)

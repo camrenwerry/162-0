@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node", "../functions/types.d.ts"],
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "strict": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./d1c4-submission-cleanup.test.ts",
+    "./d1c4-submission-smoke.ts",
+    "./d1c4-retention-smoke.ts",
+    "./lib/d1c4-bounded-fetch.ts",
+    "./lib/d1c4-d1-client.ts",
+    "./lib/d1c4-d1-client.typecheck.ts",
+    "./lib/d1c4-preview-guard.ts",
+    "./lib/d1c4-submission-fixture.ts"
+  ]
+}

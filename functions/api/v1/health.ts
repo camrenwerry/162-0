@@ -5,7 +5,6 @@ import {
   GAME_RULES_VERSION,
   RNG_VERSION,
   SCORING_VERSION,
-  SUBMISSION_SCHEMA_VERSION,
 } from '../../../src/config/versions'
 import { TRANSCRIPT_SCHEMA_VERSION } from '../../../src/game/DraftTranscript'
 import {
@@ -13,6 +12,7 @@ import {
   readDatabaseHealth,
 } from '../../lib/database'
 import { SAFE_JSON_RESPONSE_HEADERS } from '../../lib/api-response'
+import { DRAFT_SUBMISSION_SCHEMA_VERSION } from '../../lib/draft-submission-constants'
 import { draftSubmissionFeatureState } from '../../lib/draft-submission-mode'
 import { draftValidationFeatureState } from '../../lib/draft-validation-mode'
 import type { BackendEnv } from '../../lib/env'
@@ -23,23 +23,23 @@ const dataVersionLabel = DATA_VERSION
   .replace(/^lahman-/i, 'Lahman ')
   .replace(/-v(\d+)$/i, ' (v$1)')
 
-const healthMetadata = Object.freeze({
+const baseHealthMetadata = Object.freeze({
   ok: true,
   service: 'pennant-pursuit',
   runtime: 'cloudflare-pages-functions',
-  versions: Object.freeze({
-    app: APP_VERSION,
-    gameRules: GAME_RULES_VERSION,
-    rng: RNG_VERSION,
-    scoring: SCORING_VERSION,
-    data: Object.freeze({
-      id: DATA_VERSION,
-      label: dataVersionLabel,
-    }),
-    canonicalDataDigest: DATA_DIGEST,
-    transcriptSchema: TRANSCRIPT_SCHEMA_VERSION,
-    submissionSchema: SUBMISSION_SCHEMA_VERSION,
+})
+
+const baseVersionMetadata = Object.freeze({
+  app: APP_VERSION,
+  gameRules: GAME_RULES_VERSION,
+  rng: RNG_VERSION,
+  scoring: SCORING_VERSION,
+  data: Object.freeze({
+    id: DATA_VERSION,
+    label: dataVersionLabel,
   }),
+  canonicalDataDigest: DATA_DIGEST,
+  transcriptSchema: TRANSCRIPT_SCHEMA_VERSION,
 })
 
 function responseHeaders() {
@@ -58,25 +58,45 @@ export async function handleHealthRequest(request: Request, env: BackendEnv = {}
     const d1 = await readDatabaseHealth(env)
     const submissionState = draftSubmissionFeatureState(env)
     const submissionConfigured = submissionState === 'enabled'
-    const submissionProtocolPublished = typeof SUBMISSION_SCHEMA_VERSION === 'string'
-    const submissionWritesReady = submissionConfigured && submissionProtocolPublished
+    const submissionSchemaReady = submissionConfigured
+      && d1.configured
+      && d1.reachable
+      && databaseSchemaIsCompatible(d1.schemaVersion, true)
+    const submissionSchema = submissionSchemaReady ? DRAFT_SUBMISSION_SCHEMA_VERSION : null
     const databaseHealthy = d1.reachable
-      && databaseSchemaIsCompatible(d1.schemaVersion, submissionWritesReady)
+      && databaseSchemaIsCompatible(d1.schemaVersion, submissionConfigured)
     const healthy = submissionConfigured
-      ? submissionProtocolPublished && d1.configured && databaseHealthy
+      ? d1.configured && databaseHealthy
       : !d1.configured || databaseHealthy
+    const operationalWriteReadiness = !submissionConfigured
+      ? 'disabled'
+      : submissionSchemaReady ? 'externally-unverified' : 'unavailable'
+    const d1State = !d1.configured
+      ? 'not-configured'
+      : !d1.reachable
+        ? 'unavailable'
+        : databaseHealthy ? 'schema-ready' : 'schema-incompatible'
     return jsonResponse({
-      ...healthMetadata,
+      ...baseHealthMetadata,
+      versions: Object.freeze({
+        ...baseVersionMetadata,
+        submissionSchema,
+      }),
       status: healthy ? 'healthy' : 'degraded',
       backend: Object.freeze({ d1: Object.freeze(d1) }),
+      submission: Object.freeze({
+        configured: submissionConfigured,
+        schemaReady: submissionSchemaReady,
+        operationalWriteReadiness,
+      }),
       features: Object.freeze({
         draftValidation: draftValidationFeatureState(env),
         leaderboard: 'disabled',
-        submissions: submissionState,
-        writes: submissionWritesReady ? 'submission-only' : 'disabled',
-        d1: d1.configured
-          ? submissionWritesReady ? 'submission-read-write' : 'read-only'
-          : 'not-configured',
+        submissions: !submissionConfigured
+          ? 'disabled'
+          : submissionSchemaReady ? 'schema-ready' : 'configured',
+        writes: operationalWriteReadiness,
+        d1: d1State,
       }),
     }, 200)
   }

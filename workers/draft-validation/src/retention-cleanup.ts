@@ -1,6 +1,14 @@
-export const RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION = 2
-export const RETENTION_CLEANUP_BATCH_SIZE = 500
-export const RETENTION_CLEANUP_MAX_BATCHES = 10
+import {
+  RETENTION_CLEANUP_BATCH_SIZE,
+  RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION,
+  RETENTION_CLEANUP_MAX_BATCHES,
+} from './retention-cleanup-config'
+
+export {
+  RETENTION_CLEANUP_BATCH_SIZE,
+  RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION,
+  RETENTION_CLEANUP_MAX_BATCHES,
+} from './retention-cleanup-config'
 
 export const RETENTION_CLEANUP_SCHEMA_SQL = 'SELECT version FROM backend_schema WHERE id = 1'
 export const RETENTION_CLEANUP_DELETE_SQL = `
@@ -10,7 +18,7 @@ export const RETENTION_CLEANUP_DELETE_SQL = `
     FROM draft_submissions
     WHERE retain_until_ms <= ?
     ORDER BY retain_until_ms, ticket_id
-    LIMIT 500
+    LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}
   )
 `
 

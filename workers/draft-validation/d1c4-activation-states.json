@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "previewOnly": true,
+  "cleanupCron": "17 * * * *",
+  "states": {
+    "disabled": {
+      "submissionMode": "disabled",
+      "cleanupCrons": []
+    },
+    "submission-enabled": {
+      "submissionMode": "enabled",
+      "cleanupCrons": []
+    },
+    "cron-enabled": {
+      "submissionMode": "enabled",
+      "cleanupCrons": [
+        "17 * * * *"
+      ]
+    }
+  }
+}

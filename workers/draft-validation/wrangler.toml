@@ -14,7 +14,9 @@ DRAFT_SUBMISSION_MODE = "disabled"
 
 # D1C.1 binds only the private preview Worker to the shared preview database.
 # D1C.2 adds a disabled submission path, and D1C.3 adds bounded cleanup through
-# the scheduled handler. Production below intentionally has no D1 binding.
+# the scheduled handler. D1C.4 keeps the default preview deployment safe: Cron
+# is activated only by a generated, reviewed activation-state configuration.
+# Production below intentionally has no D1 binding.
 [[d1_databases]]
 binding = "DB"
 database_name = "pennant-pursuit-preview"
@@ -23,7 +25,7 @@ preview_database_id = "DB"
 migrations_dir = "../../migrations"
 
 [triggers]
-crons = ["17 * * * *"]
+crons = []
 
 # Namespace IDs are intentionally distinct from every future production
 # namespace. Rate-limit state is managed by Cloudflare, not application storage.

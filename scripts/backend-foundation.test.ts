@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { handleApiNotFoundRequest } from '../functions/api/[[path]]'
 import { handleHealthRequest } from '../functions/api/v1/health'
+import { DRAFT_SUBMISSION_SCHEMA_VERSION } from '../functions/lib/draft-submission'
 import type { BackendEnv } from '../functions/lib/env'
 import {
   APP_VERSION,
@@ -225,17 +226,19 @@ const operationsDocumentation = source('docs/BACKEND_OPERATIONS.md')
 for (const requiredDocumentation of [
   'pennant-pursuit-preview',
   'pennant-pursuit-production',
-  PREVIEW_DATABASE_ID,
-  PRODUCTION_DATABASE_ID,
   'All Cloudflare Pages preview deployments share',
   'must not add `remote = true`',
   '`preview_database_id = "DB"`',
   'does not roll back D1 schema or data',
-  'No user identity',
-  'Leaderboard, submissions, and all runtime writes remain disabled',
+  'No user',
+  'Leaderboard, submissions',
   'Preview-only draft tickets',
+  'D1C.4 preview activation preparation',
   'Phase C checklist',
 ]) assert.match(operationsDocumentation, new RegExp(requiredDocumentation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'))
+assert.doesNotMatch(operationsDocumentation, new RegExp(`${PREVIEW_DATABASE_ID}|${PRODUCTION_DATABASE_ID}`))
+const serverValidationDocumentation = source('docs/SERVER_VALIDATION.md')
+assert.doesNotMatch(serverValidationDocumentation, /162040(?:11|12|21|22)/)
 
 const productionGuard = source('scripts/apply-production-migrations.mjs')
 for (const requiredGuard of [
@@ -349,7 +352,7 @@ const expectedMetadata = {
 
 interface MockOptions {
   connectivity?: { value: number } | Error | null
-  schema?: { version: number } | Error | null
+  schema?: { version: unknown } | Error | null
 }
 
 function createMockDatabase(options: MockOptions = {}) {
@@ -400,6 +403,7 @@ assert.deepEqual(await noDatabaseResponse.json(), {
   ...expectedMetadata,
   status: 'healthy',
   backend: { d1: { configured: false, reachable: false, schemaVersion: null } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
   features: {
     draftValidation: 'disabled',
     leaderboard: 'disabled',
@@ -416,12 +420,13 @@ assert.deepEqual(await healthyResponse.json(), {
   ...expectedMetadata,
   status: 'healthy',
   backend: { d1: { configured: true, reachable: true, schemaVersion: 1 } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
   features: {
     draftValidation: 'disabled',
     leaderboard: 'disabled',
     submissions: 'disabled',
     writes: 'disabled',
-    d1: 'read-only',
+    d1: 'schema-ready',
   },
 })
 assert.deepEqual(healthyDatabase.queries, [CONNECTIVITY_SQL, SCHEMA_SQL])
@@ -430,19 +435,20 @@ assert.equal(healthyDatabase.writeCalls(), 0)
 const productionHealthDatabase = createMockDatabase()
 const productionHealthResponse = await handleHealthRequest(
   new Request('https://example.test/api/v1/health'),
-  { ...productionHealthDatabase.env, DRAFT_VALIDATION_MODE: 'enabled' },
+  { ...productionHealthDatabase.env, DRAFT_VALIDATION_MODE: 'enabled', DRAFT_SUBMISSION_MODE: 'disabled' },
 )
 assert.equal(productionHealthResponse.status, 200)
 assert.deepEqual(await productionHealthResponse.json(), {
   ...expectedMetadata,
   status: 'healthy',
   backend: { d1: { configured: true, reachable: true, schemaVersion: 1 } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
   features: {
     draftValidation: 'enabled',
     leaderboard: 'disabled',
     submissions: 'disabled',
     writes: 'disabled',
-    d1: 'read-only',
+    d1: 'schema-ready',
   },
 })
 assert.deepEqual(productionHealthDatabase.queries, [CONNECTIVITY_SQL, SCHEMA_SQL])
@@ -452,14 +458,18 @@ const unavailableDatabase = createMockDatabase({ connectivity: new Error(RAW_DAT
 const unavailableResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), unavailableDatabase.env)
 const unavailableBody = await unavailableResponse.text()
 assert.equal(unavailableResponse.status, 200)
-assert.deepEqual(JSON.parse(unavailableBody).backend.d1, { configured: true, reachable: false, schemaVersion: null })
-assert.equal(JSON.parse(unavailableBody).status, 'degraded')
-assert.deepEqual(JSON.parse(unavailableBody).features, {
-  draftValidation: 'disabled',
-  leaderboard: 'disabled',
-  submissions: 'disabled',
-  writes: 'disabled',
-  d1: 'read-only',
+assert.deepEqual(JSON.parse(unavailableBody), {
+  ...expectedMetadata,
+  status: 'degraded',
+  backend: { d1: { configured: true, reachable: false, schemaVersion: null } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
+  features: {
+    draftValidation: 'disabled',
+    leaderboard: 'disabled',
+    submissions: 'disabled',
+    writes: 'disabled',
+    d1: 'unavailable',
+  },
 })
 assert.doesNotMatch(unavailableBody, /internal D1 failure|database-id|private\.example|SELECT/i)
 assert.equal(unavailableDatabase.writeCalls(), 0)
@@ -468,47 +478,158 @@ const unmigratedDatabase = createMockDatabase({ schema: new Error(`no such table
 const unmigratedResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), unmigratedDatabase.env)
 const unmigratedBody = await unmigratedResponse.text()
 assert.equal(unmigratedResponse.status, 200)
-assert.deepEqual(JSON.parse(unmigratedBody).backend.d1, { configured: true, reachable: true, schemaVersion: null })
-assert.equal(JSON.parse(unmigratedBody).status, 'degraded')
-assert.equal(JSON.parse(unmigratedBody).features.writes, 'disabled')
+assert.deepEqual(JSON.parse(unmigratedBody), {
+  ...expectedMetadata,
+  status: 'degraded',
+  backend: { d1: { configured: true, reachable: true, schemaVersion: null } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
+  features: {
+    draftValidation: 'disabled',
+    leaderboard: 'disabled',
+    submissions: 'disabled',
+    writes: 'disabled',
+    d1: 'schema-incompatible',
+  },
+})
 assert.doesNotMatch(unmigratedBody, /no such table|database-id|private\.example|backend_schema/i)
 assert.equal(unmigratedDatabase.writeCalls(), 0)
 
 const upgradedSchemaDatabase = createMockDatabase({ schema: { version: 2 } })
 const upgradedSchemaResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), upgradedSchemaDatabase.env)
-const upgradedSchemaBody = await upgradedSchemaResponse.json() as { status: string, backend: { d1: unknown } }
 assert.equal(upgradedSchemaResponse.status, 200)
-assert.equal(upgradedSchemaBody.status, 'healthy')
-assert.deepEqual(upgradedSchemaBody.backend.d1, { configured: true, reachable: true, schemaVersion: 2 })
+assert.deepEqual(await upgradedSchemaResponse.json(), {
+  ...expectedMetadata,
+  status: 'healthy',
+  backend: { d1: { configured: true, reachable: true, schemaVersion: 2 } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
+  features: {
+    draftValidation: 'disabled',
+    leaderboard: 'disabled',
+    submissions: 'disabled',
+    writes: 'disabled',
+    d1: 'schema-ready',
+  },
+})
 assert.equal(upgradedSchemaDatabase.writeCalls(), 0)
 
 const futureSchemaDatabase = createMockDatabase({ schema: { version: 3 } })
 const futureSchemaResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), futureSchemaDatabase.env)
-const futureSchemaBody = await futureSchemaResponse.json() as { status: string, backend: { d1: unknown } }
 assert.equal(futureSchemaResponse.status, 200)
-assert.equal(futureSchemaBody.status, 'degraded')
-assert.deepEqual(futureSchemaBody.backend.d1, { configured: true, reachable: true, schemaVersion: 3 })
+assert.deepEqual(await futureSchemaResponse.json(), {
+  ...expectedMetadata,
+  status: 'degraded',
+  backend: { d1: { configured: true, reachable: true, schemaVersion: 3 } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
+  features: {
+    draftValidation: 'disabled',
+    leaderboard: 'disabled',
+    submissions: 'disabled',
+    writes: 'disabled',
+    d1: 'schema-incompatible',
+  },
+})
 assert.equal(futureSchemaDatabase.writeCalls(), 0)
 
-const prematureSubmissionDatabase = createMockDatabase({ schema: { version: 2 } })
-const prematureSubmissionResponse = await handleHealthRequest(
+const enabledSubmissionDatabase = createMockDatabase({ schema: { version: 2 } })
+const enabledSubmissionResponse = await handleHealthRequest(
   new Request('https://example.test/api/v1/health'),
-  { ...prematureSubmissionDatabase.env, DRAFT_SUBMISSION_MODE: 'enabled' } as unknown as BackendEnv,
+  { ...enabledSubmissionDatabase.env, DRAFT_SUBMISSION_MODE: 'enabled' } as unknown as BackendEnv,
 )
-const prematureSubmissionBody = await prematureSubmissionResponse.json() as {
-  status: string
-  features: { submissions: string, writes: string, d1: string }
-}
-assert.equal(prematureSubmissionResponse.status, 200)
-assert.equal(prematureSubmissionBody.status, 'degraded')
-assert.deepEqual(prematureSubmissionBody.features, {
-  draftValidation: 'disabled',
-  leaderboard: 'disabled',
-  submissions: 'enabled',
-  writes: 'disabled',
-  d1: 'read-only',
+assert.equal(enabledSubmissionResponse.status, 200)
+assert.deepEqual(await enabledSubmissionResponse.json(), {
+  ...expectedMetadata,
+  versions: { ...expectedMetadata.versions, submissionSchema: DRAFT_SUBMISSION_SCHEMA_VERSION },
+  status: 'healthy',
+  backend: { d1: { configured: true, reachable: true, schemaVersion: 2 } },
+  submission: {
+    configured: true,
+    schemaReady: true,
+    operationalWriteReadiness: 'externally-unverified',
+  },
+  features: {
+    draftValidation: 'disabled',
+    leaderboard: 'disabled',
+    submissions: 'schema-ready',
+    writes: 'externally-unverified',
+    d1: 'schema-ready',
+  },
 })
-assert.equal(prematureSubmissionDatabase.writeCalls(), 0)
+assert.equal(enabledSubmissionDatabase.writeCalls(), 0)
+
+async function enabledUnavailableHealth(
+  env: BackendEnv,
+  expectedDatabase: { configured: boolean, reachable: boolean, schemaVersion: number | null },
+  expectedD1: 'not-configured' | 'unavailable' | 'schema-incompatible',
+) {
+  const response = await handleHealthRequest(
+    new Request('https://example.test/api/v1/health'),
+    { ...env, DRAFT_SUBMISSION_MODE: 'enabled' } as unknown as BackendEnv,
+  )
+  const body = await response.json()
+  assert.deepEqual(body, {
+    ...expectedMetadata,
+    status: 'degraded',
+    backend: { d1: expectedDatabase },
+    submission: {
+      configured: true,
+      schemaReady: false,
+      operationalWriteReadiness: 'unavailable',
+    },
+    features: {
+      draftValidation: 'disabled',
+      leaderboard: 'disabled',
+      submissions: 'configured',
+      writes: 'unavailable',
+      d1: expectedD1,
+    },
+  })
+}
+
+await enabledUnavailableHealth(
+  {} as BackendEnv,
+  { configured: false, reachable: false, schemaVersion: null },
+  'not-configured',
+)
+
+const enabledUnreachableDatabase = createMockDatabase({ connectivity: new Error(RAW_DATABASE_ERROR) })
+await enabledUnavailableHealth(
+  enabledUnreachableDatabase.env,
+  { configured: true, reachable: false, schemaVersion: null },
+  'unavailable',
+)
+assert.equal(enabledUnreachableDatabase.writeCalls(), 0)
+
+const enabledMalformedConnectivityDatabase = createMockDatabase({ connectivity: { value: 2 } })
+await enabledUnavailableHealth(
+  enabledMalformedConnectivityDatabase.env,
+  { configured: true, reachable: false, schemaVersion: null },
+  'unavailable',
+)
+assert.equal(enabledMalformedConnectivityDatabase.writeCalls(), 0)
+
+const enabledMalformedSchemaDatabase = createMockDatabase({ schema: { version: '2' } })
+await enabledUnavailableHealth(
+  enabledMalformedSchemaDatabase.env,
+  { configured: true, reachable: true, schemaVersion: null },
+  'schema-incompatible',
+)
+assert.equal(enabledMalformedSchemaDatabase.writeCalls(), 0)
+
+const enabledOlderSchemaDatabase = createMockDatabase({ schema: { version: 1 } })
+await enabledUnavailableHealth(
+  enabledOlderSchemaDatabase.env,
+  { configured: true, reachable: true, schemaVersion: 1 },
+  'schema-incompatible',
+)
+assert.equal(enabledOlderSchemaDatabase.writeCalls(), 0)
+
+const enabledFutureSchemaDatabase = createMockDatabase({ schema: { version: 3 } })
+await enabledUnavailableHealth(
+  enabledFutureSchemaDatabase.env,
+  { configured: true, reachable: true, schemaVersion: 3 },
+  'schema-incompatible',
+)
+assert.equal(enabledFutureSchemaDatabase.writeCalls(), 0)
 
 const headDatabase = createMockDatabase({ connectivity: new Error('HEAD must not query D1') })
 const headResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health', { method: 'HEAD' }), headDatabase.env)
@@ -547,4 +668,4 @@ assert.deepEqual(JSON.parse(source('dist/_routes.json')), expectedRoutes)
 assert.equal(source('public/_redirects').trim(), '/* /index.html 200')
 assert.equal(source('dist/_redirects').trim(), '/* /index.html 200')
 
-console.log('Backend production validation passed: isolated D1 bindings, distinct private validation bindings, read-only health, enabled production validation, and exact API routing.')
+console.log('Backend production validation passed: isolated D1 bindings, distinct private validation bindings, non-mutating health, enabled production validation, and exact API routing.')

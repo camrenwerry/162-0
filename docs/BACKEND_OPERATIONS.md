@@ -2,8 +2,8 @@
 
 Pennant Pursuit Backend Phase B uses two separate D1 databases:
 
-- Preview: `pennant-pursuit-preview` (`ba6255b4-9425-4863-b10f-79149180f75a`)
-- Production: `pennant-pursuit-production` (`4b821c17-b88b-462d-a2ed-c6a2113cc362`)
+- Preview: `pennant-pursuit-preview`
+- Production: `pennant-pursuit-production`
 
 The top-level/default Wrangler environment binds only preview as `DB`. The explicit `[env.production]` override binds only production as `DB`. The names and UUIDs differ, and neither environment can inherit or select the other database under the checked-in configuration.
 
@@ -13,7 +13,8 @@ D1C.2 implements the atomic submission path behind disabled flags, and D1C.3
 implements bounded retention cleanup in the preview private Worker. No user
 identity, display name, raw ticket, signature, draft, roster, gameplay,
 transcript, analytics, request, IP-address, user-agent, or location data has a
-storage column. Leaderboard and submission activation remain disabled.
+storage column. Leaderboard, submissions, and all runtime writes remain
+disabled in the checked-in default configuration.
 
 ## Environment boundaries
 
@@ -26,10 +27,10 @@ In `wrangler.toml`, each `database_id` is a real remote D1 database UUID. The to
 `VALIDATION_SERVICE` is explicit in both Pages environments and targets two
 different private Workers:
 
-- Preview: `pennant-pursuit-validation-preview`, namespaces `16204011` and
-  `16204012`.
-- Production: `pennant-pursuit-validation-production`, namespaces `16204021`
-  and `16204022`.
+- Preview: `pennant-pursuit-validation-preview`, with preview-only rate-limit
+  namespaces.
+- Production: `pennant-pursuit-validation-production`, with distinct
+  production rate-limit namespaces.
 
 Both targets share the source in `workers/draft-validation/`, but each has a
 separate Worker name and separate 5/10-second and 20/60-second Rate Limiting
@@ -127,8 +128,9 @@ cleanup handler, submission-path D1 read or write, ticket consumption, or
 persistent idempotency behavior. Ticket and validation paths did not access the
 new binding. While submission is disabled, health accepts schema 1 or 2 so code
 and migration can be rolled out independently; an unknown schema remains
-degraded. A prematurely enabled submission flag remains degraded while
-submission version metadata is `null` and does not advertise writes.
+degraded. D1C.4 later separates flag intent from Pages-proven schema readiness:
+the protocol is published only for exact reachable schema 2, while private
+Worker write execution remains externally unverified.
 
 D1C.1 performs no remote preview migration, Worker deployment, Pages deployment,
 secret operation, production migration, or remote production configuration
@@ -155,11 +157,14 @@ enable submission, publish submission version metadata, or write remote data.
 
 ## D1C.3 preview retention cleanup path
 
-D1C.3 adds an awaited scheduled handler to the same private Worker. Repository
-configuration schedules only the top-level preview environment at
-`17 * * * *` UTC and gives `[env.production.triggers]` an explicit empty Cron
-list. Both submission flags remain disabled, production remains D1-free, and no
-cleanup HTTP route exists.
+D1C.3 added an awaited scheduled handler to the same private Worker and
+originally placed `17 * * * *` UTC in the top-level preview configuration.
+That meant deploying the default Worker would also apply the Cron Trigger;
+deployment and Cron activation were not independent. D1C.4 corrects the
+checked-in default to explicit `crons = []` and reserves the schedule for the
+reviewed `cron-enabled` activation state. Production keeps an explicit empty
+Cron list, both checked-in submission flags remain disabled, production remains
+D1-free, and no cleanup HTTP route exists.
 
 Each invocation samples current server time once and requires schema version 2.
 It executes at most ten sequential prepared DELETE statements. Each statement
@@ -176,9 +181,29 @@ only the outcome plus bounded completed-batch and deleted-row counts; they never
 contain rows, identifiers, digests, SQL, exception details, secrets, bindings,
 or request data.
 
-D1C.3 changes repository code and configuration only. A remote preview
-migration, Worker deployment, and resulting Cron activation each require
-separate authorization. No production or Pages deployment is part of D1C.3.
+D1C.3 changed repository code and configuration only. Its checked-in schedule
+coupled a future Worker deployment to Cron activation; no remote activation was
+performed. D1C.4 provides separate reviewed configuration states instead.
+
+## D1C.4 preview activation preparation
+
+The checked-in Pages and private-Worker defaults now represent the exact
+disabled state: both submission flags are disabled and preview Cron is
+explicitly empty. The repository defines and validates `disabled`,
+`submission-enabled`, and `cron-enabled` preview states without changing any
+production section. Enabled health publishes
+`pennant-draft-submission-v1` from the existing protocol constant only when the
+Pages flag is configured and reachable D1 schema 2 is exact. It reports schema
+readiness, not private Worker readiness; operational writes remain
+`externally-unverified` until the smoke independently observes endpoint success
+and exact D1 persistence.
+
+See [D1C.4 preview activation preparation](D1C4_ACTIVATION.md) for the exact
+manifest, validation and review commands, generated local config inputs,
+guarded smoke harnesses, stop conditions, and two-step rollback. D1C.4 performs
+no remote migration, deployment, endpoint request, feature activation, Cron
+activation, secret operation, binding change, route change, or production
+change.
 
 ## Local migration workflow
 
@@ -233,7 +258,7 @@ Then inspect pending migrations and use only the guarded wrapper:
 
 ```bash
 npm run db:migrations:list:production
-CONFIRM_PRODUCTION_D1="4b821c17-b88b-462d-a2ed-c6a2113cc362" npm run db:migrations:apply:production
+CONFIRM_PRODUCTION_D1="<production-database-id-from-reviewed-config>" npm run db:migrations:apply:production
 ```
 
 `CONFIRM_PRODUCTION_D1` is a deliberate confirmation token and must exactly equal the production UUID. The wrapper prints the branch and HEAD, refuses dirty worktrees, CI, non-interactive terminals, ambiguous bindings, the wrong database name, an invalid or preview-matching UUID, and a missing or incorrect token. It issues a final warning and requires `APPLY pennant-pursuit-production` to be typed before invoking exactly:
@@ -249,7 +274,7 @@ A Pages deployment is a separate operation and is not part of Backend Phase B. F
 1. Re-run the repository, Cloudflare inventory, binding-isolation, migration-status, schema, and health checks.
 2. Run all type generation, typechecks, tests, lint, and the production build from a clean reviewed revision.
 3. Confirm preview still uses only the preview UUID and production still uses only the production UUID.
-4. Deploy a preview revision and verify static routes, PWA assets, API methods, and read-only preview health.
+4. Deploy a preview revision and verify static routes, PWA assets, API methods, and non-mutating preview health.
 5. Deploy production only under separate authorization, then verify the same behavior and production schema version 1.
 
 ## Recovery and rollback limitations
