@@ -101,11 +101,11 @@ deployment must use the matching pair as its reviewed Pages and private-Worker
 configuration inputs. Never mix files from different states. Repository
 preparation ends before any deployment command.
 
-Stop if validation fails, either generated production section differs, the
-submission flags differ, Cron is present in either of the first two states, the
-Cron transition contains any other difference, Pages health cannot prove exact
-schema readiness for an enabled smoke, the target cannot be proven preview-only,
-or the worktree contains unexplained changes.
+Stop if validation fails, either of the generated production sections differs,
+the submission flags differ, Cron is present in either of the first two states,
+the Cron transition contains any other difference, Pages health cannot prove
+exact schema readiness for an enabled smoke, the target cannot be proven
+preview-only, or the worktree contains unexplained changes.
 
 ## Guarded submission smoke
 
@@ -167,8 +167,8 @@ The harness:
    before reading D1. Ownership is established only when the later D1 row
    exactly matches those independently known values.
 5. Requires an identical retry to return HTTP 200 with exactly the same raw
-   response bytes. Bodies are bounded while streaming, decoded with fatal
-   UTF-8, and reject a BOM or invalid encoding.
+   response bytes. Bodies are bounded while streaming and decoded with fatal
+   UTF-8; a BOM or invalid encoding is rejected.
 6. Verifies the D1 `TEXT` receipt under an explicit storage contract: the
    stored string, encoded as canonical UTF-8 without a BOM, must equal the raw
    bytes of the initial valid UTF-8 HTTP receipt. This does not claim that D1
@@ -202,7 +202,7 @@ The harness:
 Success ends with `Submission smoke passed`. Any HTTP/D1 mismatch, unexpected
 row count, receipt byte mismatch, malformed response, redirect, timeout,
 oversized body, degraded schema readiness, failed cleanup, or ambiguous target
-is a stop condition and exits nonzero.
+is a stop condition and causes the harness to exit nonzero.
 
 ## Guarded retention smoke
 

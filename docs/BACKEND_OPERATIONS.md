@@ -72,19 +72,19 @@ the ticket path neither reads nor writes D1 or any other storage. It returns an
 opaque signed ticket with a server-generated ID and `seeded-v1` draft seed.
 
 The Worker expects a secret named `DRAFT_TICKET_SIGNING_KEY` only at an
-explicitly authorized preview deployment. It is not a Wrangler variable, is not
-present in checked-in configuration or generated types. The deployed preview
-Worker has this secret; production does not. A missing secret fails safely with
-the existing generic 503 response. A deterministic non-production key exists
-only in automated test code and is never part of a deployed bundle.
+explicitly authorized preview deployment. It is not a Wrangler variable and
+is not present in checked-in configuration or generated types. The deployed
+preview Worker has this secret; production does not. A missing secret fails
+safely with the existing generic 503 response. A deterministic non-production
+key exists only in automated test code and is never part of a deployed bundle.
 
 Each ticket is HMAC-SHA-256 signed, expires 15 minutes after issuance, and
 allows at most 60 seconds of future clock skew during later server-side
 verification. Phase D1B verifies these claims during preview validation and
 binds them to the transcript before replay. At the D1B stop point, its signed
 ticket ID was reserved as the future submission idempotency key, and D1B did
-not consume it. D1C.2 later implements that transaction behind the still-
-disabled submission gate.
+not consume it. D1C.2 later implements that transaction behind the
+still-disabled submission gate.
 
 Preview `POST /api/v1/validate-draft` now requires exactly an opaque `ticket`
 and a `transcript`. Ticket verification occurs only in the private Worker after
