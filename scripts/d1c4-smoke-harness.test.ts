@@ -246,6 +246,7 @@ const commonArguments = [
   '--ack', rawTarget.acknowledgement,
 ]
 const output = { log() {}, error() {} }
+const noWait = async () => {}
 
 function healthResponse() {
   return new Response(JSON.stringify({
@@ -446,10 +447,36 @@ async function seedSubmissionRow(
 // Complete submission success: independent persistence, exact retry, substitution,
 // failed replay, stored receipts, and exact cleanup all pass through real orchestration.
 const submissionState = new StatefulFakeD1()
+const submissionRequestPaths: string[] = []
+const submissionWaits: { milliseconds: number, requestPaths: readonly string[] }[] = []
+const submissionPrivateRequestTimes: number[] = []
+let submissionClockMs = 0
+const submissionFetcher = submissionFake(submissionState)
 const submissionResult = await runSubmissionSmoke(
   { target, apiToken: 'local-test-token' },
   {
-    fetcher: submissionFake(submissionState),
+    fetcher: async (input, init) => {
+      const pathname = new URL(String(input)).pathname
+      submissionRequestPaths.push(pathname)
+      if (pathname !== '/api/v1/health') {
+        const activeBurstRequests = submissionPrivateRequestTimes
+          .filter((requestedAt) => requestedAt > submissionClockMs - 10_000)
+        if (activeBurstRequests.length >= 5) {
+          return new Response(JSON.stringify({
+            ok: false,
+            verified: false,
+            submitted: false,
+            error: { code: 'rate_limited', message: 'Too Many Requests' },
+          }), { status: 429, headers: { 'Retry-After': '60' } })
+        }
+        submissionPrivateRequestTimes.push(submissionClockMs)
+      }
+      return submissionFetcher(input, init)
+    },
+    sleep: async (milliseconds) => {
+      submissionWaits.push({ milliseconds, requestPaths: [...submissionRequestPaths] })
+      submissionClockMs += milliseconds
+    },
     createD1: () => submissionD1(submissionState),
   },
 )
@@ -464,6 +491,22 @@ assert.deepEqual(new Set(submissionState.exactDeletedIds), new Set(tickets.map((
 assert(Math.max(...submissionState.deleteBatchSizes) <= EXACT_FINGERPRINT_DELETE_LIMIT)
 assert(submissionState.submissionReads >= 7)
 assert(submissionState.emptySubmissionReads >= 1, 'failed deterministic replay must be checked for an absent receipt')
+assert.deepEqual(submissionWaits, [{
+  milliseconds: 10_250,
+  requestPaths: [
+    '/api/v1/health',
+    '/api/v1/draft-ticket',
+    '/api/v1/submit-draft',
+    '/api/v1/submit-draft',
+    '/api/v1/submit-draft',
+    '/api/v1/draft-ticket',
+  ],
+}])
+assert.deepEqual(submissionRequestPaths.slice(6), [
+  '/api/v1/submit-draft',
+  '/api/v1/submit-draft',
+])
+assert.deepEqual(submissionPrivateRequestTimes, [0, 0, 0, 0, 0, 10_250, 10_250])
 
 const receipt = JSON.stringify({ ok: true, value: 1 })
 const receiptBytes = new TextEncoder().encode(receipt)
@@ -532,7 +575,7 @@ for (const changedAtRead of [2, 3]) {
     : row
   await assert.rejects(() => runSubmissionSmoke(
     { target, apiToken: 'local-test-token' },
-    { fetcher: submissionFake(changedState), createD1: () => submissionD1(changedState) },
+    { fetcher: submissionFake(changedState), sleep: noWait, createD1: () => submissionD1(changedState) },
   ), /immutable|canonical UTF-8/)
   assert.equal(changedState.rows.size, 0)
 }
@@ -542,6 +585,7 @@ await assert.rejects(() => runSubmissionSmoke(
   { target, apiToken: 'local-test-token' },
   {
     fetcher: submissionFake(partialSubmissionState, { failAfterPersist: true }),
+    sleep: noWait,
     createD1: () => submissionD1(partialSubmissionState),
   },
 ), /no valid HTTP success receipt was received/)
@@ -554,6 +598,7 @@ await assert.rejects(() => runSubmissionSmoke(
   { target, apiToken: 'local-test-token' },
   {
     fetcher: submissionFake(submissionCleanupFailure),
+    sleep: noWait,
     createD1: () => submissionD1(submissionCleanupFailure),
   },
 ), /injected cleanup failure/)
@@ -564,6 +609,7 @@ await assert.rejects(() => runSubmissionSmoke(
   { target, apiToken: 'local-test-token' },
   {
     fetcher: submissionFake(lostSubmissionResponse, { loseResponseAfterPersist: true }),
+    sleep: noWait,
     createD1: () => submissionD1(lostSubmissionResponse),
   },
 ), /no valid HTTP success receipt was received/)
@@ -600,6 +646,7 @@ for (const [description, ambiguousAfterCompetitor, competitorOverrides] of ambig
     {
       fetcher: submissionFake(state, { ambiguousAfterCompetitor, competitorOverrides }),
       requestTimeoutMs: ambiguousAfterCompetitor === 'timeout' ? 5 : 1_000,
+      sleep: noWait,
       createD1: () => submissionD1(state),
     },
   ), /submission ownership could not be established/, description)
@@ -619,6 +666,7 @@ await assert.rejects(() => runSubmissionSmoke(
         return new Response(JSON.stringify(defective), { status: 201 })
       },
     }),
+    sleep: noWait,
     createD1: () => submissionD1(invalidCreatedReceiptState),
   },
 ), /submission ownership could not be established/)
@@ -642,6 +690,7 @@ for (const [description, overrides] of [
           }
         },
       }),
+      sleep: noWait,
       createD1: () => submissionD1(mismatchingReservationRace),
     },
   ), /mismatching row.*submission ownership could not be established/)
@@ -663,6 +712,7 @@ await assert.rejects(() => runSubmissionSmoke(
   { target, apiToken: 'local-test-token' },
   {
     fetcher: submissionFake(submissionCleanupMismatch),
+    sleep: noWait,
     createD1: () => submissionD1(submissionCleanupMismatch),
   },
 ), /unexpected count.*ownership mismatch/)
@@ -682,6 +732,7 @@ await assert.rejects(() => runSubmissionSmoke(
         }
       },
     }),
+    sleep: noWait,
     createD1: () => submissionD1(failedReplayCompetitor),
   },
 ), /deliberately invalid deterministic replay|row-free/)
@@ -702,7 +753,7 @@ for (const [name, fetcher, requestTimeoutMs] of [
   const state = new StatefulFakeD1()
   const result = await submissionSmokeCli(
     [...commonArguments, '--execute'],
-    { fetcher, requestTimeoutMs, createD1: () => submissionD1(state) },
+    { fetcher, requestTimeoutMs, sleep: noWait, createD1: () => submissionD1(state) },
     { CLOUDFLARE_API_TOKEN: 'local-test-token' },
     output,
   )

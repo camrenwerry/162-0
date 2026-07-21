@@ -69,6 +69,7 @@ const RESULT_FIELDS = [
 const CATEGORY_FIELDS = ['offense', 'defense', 'startingPitching', 'reliefPitching', 'rosterBalance'] as const
 const CATEGORY_RESULT_FIELDS = ['score', 'grade'] as const
 const STORED_SUCCESS_RECEIPT_LIMIT_BYTES = 8_192
+const PREVIEW_BURST_WINDOW_COOLDOWN_MS = 10_250
 
 type ReceiptCategory = (typeof CATEGORY_FIELDS)[number]
 
@@ -131,6 +132,7 @@ export class SubmissionCleanupFailure extends Error {
 export interface SubmissionSmokeDependencies {
   readonly fetcher?: D1C4Fetch
   readonly requestTimeoutMs?: number
+  readonly sleep?: (milliseconds: number) => Promise<void>
   readonly createD1?: (
     target: ValidatedPreviewSmokeTarget,
     apiToken: string,
@@ -156,6 +158,10 @@ export interface ValidatedSubmissionSuccessReceipt {
 
 function fail(message: string): never {
   throw new Error(message)
+}
+
+function defaultSleep(milliseconds: number) {
+  return new Promise<void>((resolve) => setTimeout(resolve, milliseconds))
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -731,6 +737,7 @@ export async function runSubmissionSmoke(
 ) {
   const fetcher = dependencies.fetcher ?? fetch
   const requestTimeoutMs = dependencies.requestTimeoutMs ?? D1C4_DEFAULT_REQUEST_TIMEOUT_MS
+  const sleep = dependencies.sleep ?? defaultSleep
   const d1 = (dependencies.createD1 ?? defaultD1)(execution.target, execution.apiToken, fetcher)
   const reservedTicketIds: string[] = []
   const ownedRows = new Map<string, DraftSubmissionFingerprint>()
@@ -785,6 +792,11 @@ export async function runSubmissionSmoke(
     await reserveIssuedTicket(d1.read, recoveryTicket.ticketId)
     reservedTicketIds.push(recoveryTicket.ticketId)
     const recoveryTranscript = buildPreviewSubmissionTranscript(recoveryTicket)
+
+    // Ticket issuance is the fifth private request under the Preview IP key.
+    // Let the 5-per-10-second burst window fully expire before requests 6–7.
+    await sleep(PREVIEW_BURST_WINDOW_COOLDOWN_MS)
+
     const failedReplay = await submit(
       fetcher,
       requestTimeoutMs,
