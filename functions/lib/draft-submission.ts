@@ -93,8 +93,8 @@ export function constantTimeDigestEqual(left: string, right: string): boolean | 
   const rightBytes = decodeDigest(right)
   if (!leftBytes || !rightBytes) return null
 
-  const timingSafeEqual = crypto.subtle.timingSafeEqual
-  if (typeof timingSafeEqual === 'function') return timingSafeEqual(leftBytes, rightBytes)
+  const subtle = crypto.subtle
+  if (typeof subtle.timingSafeEqual === 'function') return subtle.timingSafeEqual(leftBytes, rightBytes)
 
   // Standards-only local/test runtimes lack the Workers extension. Both inputs
   // are fixed at 32 bytes, and this fallback visits every byte.

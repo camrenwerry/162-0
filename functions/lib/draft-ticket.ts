@@ -186,13 +186,13 @@ async function signTicket(schema: string, payload: DraftTicketPayload, signingKe
 }
 
 function signaturesEqual(provided: Uint8Array, expected: Uint8Array) {
-  const timingSafeEqual = crypto.subtle.timingSafeEqual
-  if (typeof timingSafeEqual === 'function') {
+  const subtle = crypto.subtle
+  if (typeof subtle.timingSafeEqual === 'function') {
     // Cloudflare Workers provides this native constant-time primitive. Keep its
     // equal-length contract while avoiding a length-based early return.
     return provided.byteLength === expected.byteLength
-      ? timingSafeEqual(provided, expected)
-      : !timingSafeEqual(expected, expected)
+      ? subtle.timingSafeEqual(provided, expected)
+      : !subtle.timingSafeEqual(expected, expected)
   }
 
   // Node's standards-only Web Crypto has no timingSafeEqual extension. The
