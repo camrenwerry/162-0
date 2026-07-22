@@ -25,6 +25,7 @@
     "dev:validation-worker": "wrangler --cwd workers/draft-validation dev",
     "dev:pages-with-validation": "npm run build && wrangler pages dev --persist-to .wrangler/state --service VALIDATION_SERVICE=pennant-pursuit-validation-preview",
     "build": "npm run validate:data && tsc -b && vite build",
+    "app:typecheck": "tsc -b",
     "functions:types": "wrangler types ./functions/types.d.ts",
     "functions:types:check": "wrangler types ./functions/types.d.ts --check",
     "functions:typecheck": "tsc --project functions/tsconfig.json --noEmit",
@@ -86,6 +87,10 @@
     "test:d1c1-foundation": "node scripts/d1c1-foundation.test.mjs",
     "test:release": "vite build --ssr scripts/release-readiness.test.ts --outDir /tmp/pennant-pursuit-release-tests --emptyOutDir && node /tmp/pennant-pursuit-release-tests/release-readiness.test.js",
     "test:pwa": "node scripts/pwa-deployment.test.mjs",
+    "test:preview-check": "node scripts/preview-check.test.mjs",
+    "test": "node scripts/preview-check.mjs --tests",
+    "typecheck": "node scripts/preview-check.mjs --typecheck",
+    "preview:check": "node scripts/preview-check.mjs",
     "validate:data": "npm run data:lahman:validate"
   },
   "dependencies": {

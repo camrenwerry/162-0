@@ -58,6 +58,33 @@ npm run preview
 
 Open the HTTPS deployment—or the local preview on `localhost`, which browsers treat as secure—to inspect the manifest, service-worker registration, offline shell, and installability in browser developer tools. Raw Lahman CSV files remain outside `src` and are not emitted to `dist`.
 
+### Local Preview release readiness
+
+Run the authoritative local-only Preview release check from a clean, synchronized
+`develop` branch:
+
+```bash
+npm run preview:check
+```
+
+The command verifies the Pennant Pursuit repository root, exact
+`develop`/`origin/develop` relationship, clean tracked/staged/untracked state,
+`0 0` divergence, and `git diff --check`. It then validates all D1C.4 activation
+states, runs every repository type check and release-relevant automated test,
+lint, the production build, PWA validation, Preview and production private
+Worker dry-run builds, the Pages Functions build, and bundle size/hash checks.
+Every stage is fail-fast and no stage deploys, migrates, reads secrets, or
+contacts a remote service.
+
+`npm test` runs all release-relevant suites, including the Workerd
+timing-safe-equality regression. `npm run typecheck` checks the application,
+Pages Functions, private Worker, generated Wrangler types, and D1C.4 tooling.
+
+Untracked files are rejected with `git ls-files --others --exclude-standard`.
+Git-ignored local artifacts—`node_modules/`, `dist/`, `dist-ssr/`, `.wrangler/`,
+generated D1C.4 local Wrangler inputs, logs, and `*.local` files—remain untouched
+and do not appear in that check.
+
 ## Draft completion experience
 
 Late-round player lists keep every matching card visible while grouping currently selectable players above greyed-out cards. The grouping is performed by the eligibility engine after search, position, player-type, and stat sorting, so each group preserves the chosen sort order and DH/SP/RP rules remain centralized.
