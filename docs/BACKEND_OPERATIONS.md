@@ -235,12 +235,30 @@ Never add `--remote` to that workflow.
 
 ## Remote preview migration workflow
 
-These commands explicitly target `pennant-pursuit-preview` in the default/top-level environment:
+These legacy commands explicitly target `pennant-pursuit-preview` in the
+default/top-level environment:
 
 ```bash
 npm run db:migrations:list:preview
 npm run db:migrations:apply:preview
 ```
+
+Do not treat `db:migrations:list:preview` as read-only release inspection. The
+pinned Wrangler implementation may create the `d1_migrations` metadata table
+while listing. Phase 1 Preview checking and planning therefore never invoke
+that command; they use the fixed SELECT-only design documented in
+[Preview release workflow: Phase 1](PREVIEW_RELEASE_WORKFLOW.md). The apply
+command remains mutation-capable and outside Phase 1.
+
+Phase 1 mirrors pinned Wrangler 4.111.0's default discovery of every top-level
+`migrations/*.sql` file and its numeric-leading filename ordering. It rejects
+unsupported names, invalid UTF-8, BOMs, duplicate metadata, malformed
+`applied_at` values, and repository/database ordering differences. When a
+pending migration is observed while public submissions are enabled, the plan
+first schedules Cron disablement when active, then Pages write-gate
+disablement, and then verification of the disabled gate before
+`migration.apply`. This ordering is a future plan only; Phase 1 cannot apply
+the migration.
 
 Inspect the pending list before applying. Do not reapply a migration merely as a status check.
 

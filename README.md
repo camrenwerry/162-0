@@ -2,7 +2,13 @@
 
 Pennant Pursuit is a mobile-first historical baseball roster-building game. Classic Mode presents one franchise/decade pool in each of 14 rounds. A complete roster contains C, 1B, 2B, 3B, SS, LF, CF, RF, DH, three SP, and two RP slots, followed by a deterministic 162-game projection.
 
-Version 1.0.0 is the permanent Pennant Pursuit release of the static React + TypeScript + Vite application. It has no accounts, gameplay API, or database server. Local storage is used only to remember whether first-game tips were dismissed; the pre-1.0 storage key remains unchanged so existing preferences survive the rebrand.
+Version 1.0.0 is the permanent Pennant Pursuit release of the React, TypeScript,
+and Vite game. The game requires no player account. Preview-only backend routes
+support server validation, short-lived draft tickets, and bounded,
+ticket-authorized draft submissions behind disabled-by-default gates. Local
+storage is used only to remember whether first-game tips were dismissed; the
+pre-1.0 storage key remains unchanged so existing preferences survive the
+rebrand.
 
 ## Production configuration
 
@@ -46,7 +52,18 @@ The Cloudflare Pages project is `diamond-draft`, with compatibility date `2026-0
 
 Use `npm run dev` for ordinary frontend work. Use `npm run dev:pages` to build and serve the complete static application and Pages Functions locally with persisted local D1 state. The read-only `GET` and `HEAD /api/v1/health` endpoint reports public version compatibility and D1 connectivity without exposing database errors. Unknown `/api/*` paths return JSON `404` responses instead of the React SPA.
 
-Backend Phase B keeps the top-level/default Pages environment bound only to `pennant-pursuit-preview` and gives `[env.production]` its own explicit `pennant-pursuit-production` binding. Both databases contain only schema-version metadata: no user, draft, roster, gameplay, analytics, or request data is stored, and leaderboard, submissions, and runtime writes remain disabled. Do not deploy or add bindings without a separately authorized resource plan. Regenerate the committed Functions runtime types after any Wrangler configuration change with `npm run functions:types`, and verify them with `npm run functions:types:check`. Migration commands, environment boundaries, rollback warnings, and the future submission checklist are in [`docs/BACKEND_OPERATIONS.md`](docs/BACKEND_OPERATIONS.md).
+The top-level/default Pages environment binds only to
+`pennant-pursuit-preview`; `[env.production]` has its own explicit
+`pennant-pursuit-production` binding. Preview can store the bounded,
+ticket-authorized draft-submission records described in the backend operations
+guide. Production remains separately isolated, and the checked-in submission
+gates remain disabled in both environments. Do not deploy or add bindings
+without a separately authorized resource plan. Regenerate the committed
+Functions runtime types after any Wrangler configuration change with
+`npm run functions:types`, and verify them with
+`npm run functions:types:check`. Migration commands, environment boundaries,
+retention, rollback warnings, and submission controls are in
+[`docs/BACKEND_OPERATIONS.md`](docs/BACKEND_OPERATIONS.md).
 
 Preview and test the exact production output locally:
 
@@ -58,13 +75,14 @@ npm run preview
 
 Open the HTTPS deployment—or the local preview on `localhost`, which browsers treat as secure—to inspect the manifest, service-worker registration, offline shell, and installability in browser developer tools. Raw Lahman CSV files remain outside `src` and are not emitted to `dist`.
 
-### Local Preview release readiness
+### Preview release readiness and planning
 
-Run the authoritative local-only Preview release check from a clean, synchronized
-`develop` branch:
+Run the authoritative offline Preview release check from a clean, synchronized
+`develop` branch. Offline is the default:
 
 ```bash
-npm run preview:check
+npm exec --offline -- node scripts/preview-check.mjs
+npm exec --offline -- node scripts/preview-check.mjs --offline
 ```
 
 The command verifies the Pennant Pursuit repository root, exact
@@ -73,8 +91,42 @@ The command verifies the Pennant Pursuit repository root, exact
 states, runs every repository type check and release-relevant automated test,
 lint, the production build, PWA validation, Preview and production private
 Worker dry-run builds, the Pages Functions build, and bundle size/hash checks.
-Every stage is fail-fast and no stage deploys, migrates, reads secrets, or
-contacts a remote service.
+Before any npm-controlled quality stage, the runtime validates all reachable
+package scripts and lifecycle hooks against fixed local-only command and
+argument allowlists. Every stage is fail-fast, child environments are minimal
+and credential-free, and no offline stage deploys, migrates, reads secrets, or
+contacts a remote service. `--online` adds only allowlisted, read-only Git and
+Cloudflare Preview inspection and requires `PENNANT_PREVIEW_API_TOKEN`; it never
+falls back to generic Cloudflare credentials. The repository currently leaves
+several Cloudflare identities unresolved, including the complete Worker route
+zone inventory, so live online mode refuses before network contact until those
+identities are reviewed and checked in.
+
+`npm exec --offline -- node scripts/preview-plan.mjs --target-state <disabled|submission-enabled|cron-enabled>`
+requires an explicit state and produces a deterministic read-only plan. Neither
+command performs remote mutation. Use `--json` for structured output and
+`--no-color` for plain human output. When automation requires JSON-only stdout
+through npm, add npm's `--silent` flag.
+
+These public invocations execute fixed Node entry points through `npm exec`;
+they do not select a package-script name, so matching `prepreview:*` or
+`postpreview:*` lifecycle hooks cannot surround the entry point. The entry
+point still validates every reachable repository-controlled child command and
+lifecycle hook before starting the first quality child.
+
+Planning requires exact Pages and Worker binding sets, an authoritative
+account-zone inventory plus complete Worker route and custom-domain reads, and
+stable double-read snapshots. Phase 1 preserves local intended artifact hashes
+but treats remote artifact currentness as unproven, so matching commits or
+Worker tags never suppress a future deployment. Enabled targets still schedule
+the applicable future submission and retention smoke stages because Phase 1
+has no durable receipt model. A pending migration observed while Cron is
+enabled first schedules Cron disablement, then public-write disablement and
+verification, before `migration.apply`.
+
+The full Phase 1 contract, exit codes, immutable identity model, SELECT-only D1
+inspection design, and current limitations are in
+[`docs/PREVIEW_RELEASE_WORKFLOW.md`](docs/PREVIEW_RELEASE_WORKFLOW.md).
 
 `npm test` runs all release-relevant suites, including the Workerd
 timing-safe-equality regression. `npm run typecheck` checks the application,

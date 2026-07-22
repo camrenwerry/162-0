@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "toolContractVersion": "preview-release-phase-1-v1",
+  "repository": {
+    "packageName": "pennant-pursuit",
+    "packageVersion": "1.0.0",
+    "remoteUrl": "https://github.com/camrenwerry/162-0.git",
+    "previewBranch": "develop",
+    "upstream": "origin/develop",
+    "allowedRoots": [
+      "/Users/camrenwerry/Documents/GitHub/162-0-macbook"
+    ],
+    "lockfileVersion": 3
+  },
+  "toolchain": {
+    "nodeAllowedMajors": [
+      24
+    ],
+    "npmAllowedMajors": [
+      11
+    ],
+    "wranglerVersion": "4.111.0"
+  },
+  "cloudflare": {
+    "apiOrigin": "https://api.cloudflare.com",
+    "account": {
+      "status": "unresolved",
+      "id": null,
+      "reason": "No reviewed Cloudflare account ID is present in repository evidence."
+    },
+    "preview": {
+      "pages": {
+        "project": "diamond-draft",
+        "branch": "develop",
+        "domainPatterns": [
+          "*.diamond-draft.pages.dev"
+        ]
+      },
+      "worker": {
+        "name": "pennant-pursuit-validation-preview",
+        "workersDev": false,
+        "previewUrls": false,
+        "routeZoneIds": {
+          "status": "unresolved",
+          "values": [],
+          "reason": "No reviewed Cloudflare zone IDs are present in repository evidence."
+        },
+        "serviceBinding": {
+          "binding": "VALIDATION_SERVICE",
+          "service": "pennant-pursuit-validation-preview"
+        },
+        "rateLimitNamespaces": [
+          "16204011",
+          "16204012"
+        ]
+      },
+      "d1": {
+        "binding": "DB",
+        "name": "pennant-pursuit-preview",
+        "id": "ba6255b4-9425-4863-b10f-79149180f75a"
+      }
+    },
+    "production": {
+      "pages": {
+        "project": "diamond-draft",
+        "branch": {
+          "status": "unresolved",
+          "value": null,
+          "reason": "The Pages production branch is not recorded in reviewed repository evidence."
+        },
+        "domains": {
+          "status": "unresolved",
+          "values": [],
+          "reason": "Production domains are not recorded in reviewed repository evidence."
+        }
+      },
+      "worker": {
+        "name": "pennant-pursuit-validation-production",
+        "workersDev": false,
+        "previewUrls": false,
+        "serviceBinding": {
+          "binding": "VALIDATION_SERVICE",
+          "service": "pennant-pursuit-validation-production"
+        },
+        "rateLimitNamespaces": [
+          "16204021",
+          "16204022"
+        ],
+        "d1BindingAllowed": false
+      },
+      "d1": {
+        "binding": "DB",
+        "name": "pennant-pursuit-production",
+        "id": "4b821c17-b88b-462d-a2ed-c6a2113cc362"
+      }
+    }
+  },
+  "activation": {
+    "allowedStates": [
+      "disabled",
+      "submission-enabled",
+      "cron-enabled"
+    ],
+    "cleanupCron": "17 * * * *",
+    "canonicalState": "disabled"
+  },
+  "configuration": {
+    "pages": "wrangler.toml",
+    "worker": "workers/draft-validation/wrangler.toml",
+    "activationStates": "workers/draft-validation/d1c4-activation-states.json",
+    "migrationsDirectory": "migrations"
+  }
+}

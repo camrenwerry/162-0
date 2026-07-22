@@ -6,6 +6,19 @@ route, or activate a Cron Trigger. Production is explicitly out of scope, and
 remote smoke execution remains a separate operation requiring explicit
 authorization.
 
+Phase 1 of the newer read-only release workflow validates these same states but
+compiles Preview-only material with no `[env.production]` target sections. See
+[Preview release workflow: Phase 1](PREVIEW_RELEASE_WORKFLOW.md). The canonical
+checked-in configurations remain disabled, and `preview:release` and
+`preview:rollback` are not implemented.
+
+Phase 1 has no trusted remote artifact fingerprint, so even a matching enabled
+configuration retains the applicable future Worker and Pages deployments.
+Without a trusted durable receipt, planning also retains `submission.smoke`
+for `submission-enabled`, and both `submission.smoke` and `retention.smoke` for
+`cron-enabled`. These are future stages only; this preparation workflow does
+not deploy or call either smoke endpoint.
+
 ## Why the activation structure changed
 
 D1C.3 added the scheduled cleanup handler and placed `17 * * * *` directly in

@@ -2,6 +2,16 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
+import { compilePreviewState, validateConfigurationModel } from './lib/preview-release/configuration.mjs'
+import { validateRuntimeCommandGraph } from './lib/preview-release/command-safety.mjs'
+import { canonicalHash } from './lib/preview-release/canonical.mjs'
+import { createReadOnlyCloudflareClient, inspectPreviewRemoteState } from './lib/preview-release/cloudflare-readonly.mjs'
+import { asWorkflowError, EXIT_CODES, remoteError, usageError } from './lib/preview-release/errors.mjs'
+import { computeReleaseHashes, inspectLocalState, inspectServerDevelop } from './lib/preview-release/local-state.mjs'
+import { loadReleaseManifest, requireResolvedRemoteIdentity } from './lib/preview-release/manifest.mjs'
+import { classifyMigrationState, loadRepositoryMigrations } from './lib/preview-release/migrations.mjs'
+import { buildReleasePlan } from './lib/preview-release/plan.mjs'
+import { check, checkReport, failureReport, renderHumanCheck } from './lib/preview-release/reporting.mjs'
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url)
 const DEFAULT_REPOSITORY_ROOT = path.resolve(path.dirname(SCRIPT_PATH), '..')
@@ -48,6 +58,7 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('Release readiness tests', 'test:release'),
   npmRunStage('PWA tests', 'test:pwa'),
   npmRunStage('Preview check orchestration tests', 'test:preview-check'),
+  npmRunStage('Preview workflow Phase 1 tests', 'test:preview-workflow'),
 ])
 
 export const RELEASE_STAGES = Object.freeze([
@@ -71,16 +82,30 @@ export class StageFailure extends Error {
   }
 }
 
+const SAFE_ENVIRONMENT_KEYS = Object.freeze([
+  'PATH', 'TMPDIR', 'TMP', 'TEMP', 'SystemRoot', 'WINDIR', 'COMSPEC', 'PATHEXT',
+  'LANG', 'LC_ALL', 'LC_CTYPE', 'TERM', 'NO_COLOR', 'FORCE_COLOR',
+])
+
+export function credentialFreeEnvironment(environment = process.env) {
+  const safe = Object.fromEntries(SAFE_ENVIRONMENT_KEYS
+    .filter((key) => typeof environment[key] === 'string')
+    .map((key) => [key, environment[key]]))
+  return {
+    ...safe,
+    WRANGLER_WRITE_LOGS: 'false',
+    WRANGLER_SEND_METRICS: 'false',
+    WRANGLER_HIDE_BANNER: 'true',
+    NPM_CONFIG_IGNORE_SCRIPTS: 'true',
+  }
+}
+
 export function createProcessRunner(spawn = spawnSync, environment = process.env) {
+  const safeEnvironment = credentialFreeEnvironment(environment)
   return (command, args, { capture = false, cwd = DEFAULT_REPOSITORY_ROOT } = {}) => spawn(command, args, {
     cwd,
     shell: false,
-    env: {
-      ...environment,
-      WRANGLER_WRITE_LOGS: 'false',
-      WRANGLER_SEND_METRICS: 'false',
-      WRANGLER_HIDE_BANNER: 'true',
-    },
+    env: safeEnvironment,
     encoding: 'utf8',
     stdio: capture ? ['ignore', 'pipe', 'pipe'] : 'inherit',
   })
@@ -102,11 +127,11 @@ function resultOutput(result) {
     .trim()
 }
 
-function assertCompleted(stageName, result) {
+function assertCompleted(stageName, result, includeOutput = true) {
   if (result.error) throw new StageFailure(stageName, result.error.message)
   if (result.signal) throw new StageFailure(stageName, `Command terminated by signal ${result.signal}.`)
   if (result.status !== 0) {
-    const details = resultOutput(result)
+    const details = includeOutput ? resultOutput(result) : ''
     throw new StageFailure(stageName, details || `Command exited with status ${result.status ?? 'unknown'}.`)
   }
 }
@@ -218,43 +243,148 @@ export function runStages(stages, {
   cwd = DEFAULT_REPOSITORY_ROOT,
   runner = createProcessRunner(),
   output = console,
+  capture = false,
 } = {}) {
   for (const stageDefinition of stages) {
     announce(output, stageDefinition)
-    const result = runner(stageDefinition.command, stageDefinition.args, { capture: false, cwd })
-    assertCompleted(stageDefinition.label, result)
+    const result = runner(stageDefinition.command, stageDefinition.args, { capture, cwd })
+    assertCompleted(stageDefinition.label, result, !capture)
   }
 }
 
-export function runPreviewCheck(options = {}) {
-  runRepositoryPreflight(options)
-  runStages(RELEASE_STAGES, options)
-  ;(options.output ?? console).log('\n[preview:check] All local Preview release-readiness checks passed. No remote operations ran.')
+export function parsePreviewCheckArguments(argv) {
+  if (argv.includes('--tests') || argv.includes('--typecheck')) {
+    if (argv.length !== 1) throw usageError('Internal test and typecheck modes cannot be combined with other flags.')
+    return { internal: argv[0] }
+  }
+  const allowed = new Set(['--offline', '--online', '--json', '--no-color'])
+  for (const argument of argv) if (!allowed.has(argument)) throw usageError(`Unknown argument: ${argument}.`)
+  if (new Set(argv).size !== argv.length) throw usageError('Preview check flags may be specified only once.')
+  if (argv.includes('--offline') && argv.includes('--online')) throw usageError('Choose either --offline or --online.')
+  return Object.freeze({
+    mode: argv.includes('--online') ? 'online' : 'offline',
+    json: argv.includes('--json'),
+    color: !argv.includes('--no-color'),
+  })
 }
 
-export function runCli(argv, options = {}) {
-  if (argv.length === 0) {
-    runPreviewCheck(options)
-    return
+export function runOfflineReleaseValidation({
+  repositoryRoot = DEFAULT_REPOSITORY_ROOT,
+  runner,
+  processRunner,
+  output = console,
+  captureStages = false,
+  runQualityStages = true,
+  color = true,
+} = {}) {
+  const loaded = loadReleaseManifest(repositoryRoot)
+  const local = inspectLocalState({ repositoryRoot, manifest: loaded.manifest, ...(runner ? { runner } : {}) })
+  if (!captureStages) {
+    output.log(`[preview:check] Repository root: ${local.repositoryRoot}`)
+    output.log(`[preview:check] Branch: ${local.branch}`)
+    output.log(`[preview:check] Upstream: ${local.upstream}`)
+    output.log(`[preview:check] Divergence: ${local.divergence.ahead} ${local.divergence.behind}`)
   }
+  const compiledStates = validateConfigurationModel(repositoryRoot, loaded.manifest)
+  validateRuntimeCommandGraph(repositoryRoot, [...RELEASE_STAGES, ...TYPECHECK_STAGES, ...TEST_STAGES])
+  const stageOutput = captureStages ? { log() {}, error() {} } : output
+  const effectiveProcessRunner = processRunner ?? createProcessRunner(spawnSync, {
+    ...process.env,
+    ...(color ? {} : { NO_COLOR: '1', FORCE_COLOR: '0' }),
+  })
+  if (runQualityStages) runStages(RELEASE_STAGES, { cwd: repositoryRoot, runner: effectiveProcessRunner, output: stageOutput, capture: captureStages })
+  return Object.freeze({ loaded, local, compiledStates })
+}
+
+export async function runPreviewCheck(options = {}) {
+  const output = options.output ?? console
+  const mode = options.mode ?? 'offline'
+  const context = runOfflineReleaseValidation({
+    ...options,
+    output,
+    captureStages: options.json === true,
+  })
+  const checks = [
+    check('repository.local-state', 'PASS', 'Repository, Git, package, lockfile, and toolchain identities are exact.'),
+    check('manifest.topology', 'PASS', 'Immutable Preview/Production topology is valid and separated.'),
+    check('configuration.activation-states', 'PASS', 'All three Preview-only activation artifacts compile and preserve fail-closed invariants.'),
+    check('quality.release-suite', 'PASS', 'All existing release-readiness stages passed.'),
+  ]
+  if (mode === 'online') {
+    const token = options.token ?? process.env.PENNANT_PREVIEW_API_TOKEN
+    if (typeof token !== 'string' || token.length === 0) createReadOnlyCloudflareClient({ manifest: context.loaded.manifest, token })
+    requireResolvedRemoteIdentity(context.loaded.manifest)
+    const serverHead = inspectServerDevelop({ repositoryRoot: options.repositoryRoot ?? DEFAULT_REPOSITORY_ROOT, manifest: context.loaded.manifest, ...(options.runner ? { runner: options.runner } : {}) })
+    if (serverHead !== context.local.head) throw remoteError('Current HEAD differs from server-side develop.', 'server_git_mismatch', 'remote.git-head')
+    const client = options.client ?? createReadOnlyCloudflareClient({ manifest: context.loaded.manifest, token, fetchImplementation: options.fetchImplementation })
+    const remote = await inspectPreviewRemoteState({ manifest: context.loaded.manifest, client })
+    const migrations = loadRepositoryMigrations(options.repositoryRoot ?? DEFAULT_REPOSITORY_ROOT, context.loaded.manifest.configuration.migrationsDirectory)
+    const migration = classifyMigrationState({ knownMigrations: migrations, ...remote.migrationObservation })
+    const compiled = compilePreviewState(options.repositoryRoot ?? DEFAULT_REPOSITORY_ROOT, context.loaded.manifest, 'disabled')
+    const hashes = computeReleaseHashes({
+      repositoryRoot: options.repositoryRoot ?? DEFAULT_REPOSITORY_ROOT,
+      manifestHash: context.loaded.hash,
+      configurationHash: compiled.hashes.combined,
+      toolchain: context.local.toolchain,
+      ...(options.runner ? { runner: options.runner } : {}),
+    })
+    buildReleasePlan({ manifest: context.loaded.manifest, manifestHash: context.loaded.hash, local: context.local, serverHead, targetState: 'disabled', compiled, hashes, remote, migration })
+    const repositoryRoot = options.repositoryRoot ?? DEFAULT_REPOSITORY_ROOT
+    const finalRemote = await inspectPreviewRemoteState({ manifest: context.loaded.manifest, client })
+    const finalLocal = inspectLocalState({ repositoryRoot, manifest: context.loaded.manifest, ...(options.runner ? { runner: options.runner } : {}) })
+    const finalServerHead = inspectServerDevelop({ repositoryRoot, manifest: context.loaded.manifest, ...(options.runner ? { runner: options.runner } : {}) })
+    const finalHashes = computeReleaseHashes({
+      repositoryRoot,
+      manifestHash: context.loaded.hash,
+      configurationHash: compiled.hashes.combined,
+      toolchain: finalLocal.toolchain,
+      ...(options.runner ? { runner: options.runner } : {}),
+    })
+    if (canonicalHash(context.local) !== canonicalHash(finalLocal)) throw remoteError('Local repository state changed during online Preview checking.', 'stale_local_snapshot', 'remote.snapshot')
+    if (serverHead !== finalServerHead) throw remoteError('Server-side develop changed during online Preview checking.', 'stale_server_snapshot', 'remote.snapshot')
+    if (canonicalHash(remote) !== canonicalHash(finalRemote)) throw remoteError('Cloudflare Preview state changed during online Preview checking.', 'ambiguous_remote_state', 'remote.snapshot')
+    if (canonicalHash(hashes) !== canonicalHash(finalHashes)) throw remoteError('Deployment inputs changed during online Preview checking.', 'stale_artifact_snapshot', 'remote.snapshot')
+    const finalMigration = classifyMigrationState({ knownMigrations: migrations, ...finalRemote.migrationObservation })
+    if (canonicalHash(migration) !== canonicalHash(finalMigration)) throw remoteError('Preview migration state changed during online checking.', 'ambiguous_migration_state', 'remote.snapshot')
+    buildReleasePlan({ manifest: context.loaded.manifest, manifestHash: context.loaded.hash, local: finalLocal, serverHead: finalServerHead, targetState: 'disabled', compiled, hashes: finalHashes, remote: finalRemote, migration: finalMigration })
+    checks.push(
+      check('remote.git-head', 'PASS', 'Server-side develop exactly matches HEAD.'),
+      check('remote.preview-topology', 'PASS', 'Allowlisted Cloudflare Preview identities and restrictions are exact.'),
+      check('remote.migrations', 'PASS', `SELECT-only migration inspection classified stable state as ${finalMigration.classification}.`),
+    )
+  } else {
+    checks.push(check('remote.preview-topology', 'NOT CHECKED', 'Offline mode made no network requests.'))
+  }
+  return checkReport({ mode, checks })
+}
+
+export async function runCli(argv, options = {}) {
   if (argv.length === 1 && argv[0] === '--tests') {
+    validateRuntimeCommandGraph(options.cwd ?? DEFAULT_REPOSITORY_ROOT, [...RELEASE_STAGES, ...TYPECHECK_STAGES, ...TEST_STAGES])
     runStages(TEST_STAGES, options)
     ;(options.output ?? console).log('\n[test] All release-relevant automated tests passed.')
-    return
+    return EXIT_CODES.SUCCESS
   }
   if (argv.length === 1 && argv[0] === '--typecheck') {
+    validateRuntimeCommandGraph(options.cwd ?? DEFAULT_REPOSITORY_ROOT, [...RELEASE_STAGES, ...TYPECHECK_STAGES, ...TEST_STAGES])
     runStages(TYPECHECK_STAGES, options)
     ;(options.output ?? console).log('\n[typecheck] All repository type checks passed.')
-    return
+    return EXIT_CODES.SUCCESS
   }
-  throw new Error(`Unknown arguments: ${argv.join(' ')}`)
+  const parsed = parsePreviewCheckArguments(argv)
+  const report = await runPreviewCheck({ ...options, ...parsed })
+  ;(options.output ?? console).log(parsed.json ? JSON.stringify(report) : renderHumanCheck(report, parsed.color))
+  return EXIT_CODES.SUCCESS
 }
 
 if (path.resolve(process.argv[1] ?? '') === SCRIPT_PATH) {
   try {
-    runCli(process.argv.slice(2))
+    process.exitCode = await runCli(process.argv.slice(2))
   } catch (error) {
-    console.error(`\n[preview:check] FAILED: ${error instanceof Error ? error.message : 'Unknown failure.'}`)
-    process.exitCode = 1
+    const safe = asWorkflowError(error)
+    const json = process.argv.includes('--json')
+    if (json) console.log(JSON.stringify(failureReport('preview:check', safe, [], [process.env.PENNANT_PREVIEW_API_TOKEN])))
+    else console.error(`\n[preview:check] ${safe.status}: ${safe.message}`)
+    process.exitCode = safe.exitCode
   }
 }
