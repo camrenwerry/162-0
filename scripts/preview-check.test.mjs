@@ -95,6 +95,8 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
     writeFileSync(path.join(repositoryRoot, 'scripts', 'preview-check.mjs'), coordinatorSource)
     cpSync(new URL('./preview-identity-bootstrap.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-identity-bootstrap.mjs'))
     cpSync(new URL('./preview-plan.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-plan.mjs'))
+    cpSync(new URL('./preview-readiness.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-readiness.mjs'))
+    cpSync(new URL('./preview-release.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-release.mjs'))
     cpSync(new URL('./lib/preview-release', import.meta.url), path.join(repositoryRoot, 'scripts/lib/preview-release'), { recursive: true })
     cpSync(new URL('./prepare-d1c4-activation.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/prepare-d1c4-activation.mjs'))
     mkdirSync(path.join(repositoryRoot, 'config'), { recursive: true })
@@ -146,6 +148,10 @@ for (const [name, expected] of Object.entries(required)) {
         'postpreview:identity-bootstrap',
         'prepreview:plan',
         'postpreview:plan',
+        'prepreview:readiness',
+        'postpreview:readiness',
+        'prepreview:release',
+        'postpreview:release',
       ]) scripts[name] = 'node scripts/unsafe-outer-lifecycle.mjs'
       writeFileSync(path.join(repositoryRoot, 'scripts/unsafe-outer-lifecycle.mjs'), "import { writeFileSync } from 'node:fs'\nwriteFileSync('unsafe-outer-lifecycle-ran', 'unsafe')\n")
     }
@@ -478,6 +484,7 @@ test('child processes receive exact arguments and all Wrangler safeguards', () =
   }
   const credentialNames = [
     'PENNANT_PREVIEW_API_TOKEN',
+    'PENNANT_PREVIEW_DEPLOY_API_TOKEN',
     'CLOUDFLARE_API_TOKEN',
     'CLOUDFLARE_API_KEY',
     'CLOUDFLARE_EMAIL',
@@ -562,6 +569,14 @@ test('the exact public npm commands cannot trigger matching outer lifecycle hook
     })
     assert.equal(bootstrap.status, 11)
     assert.match(bootstrap.stderr, /PENNANT_PREVIEW_API_TOKEN/)
+    const readiness = spawnSync('npm', ['exec', '--offline', '--', 'node', 'scripts/preview-readiness.mjs', '--target-state', 'disabled'], {
+      cwd: realpathSync(fixture.repositoryRoot), encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'],
+    })
+    assert.notEqual(readiness.status, 0)
+    const release = spawnSync('npm', ['exec', '--offline', '--', 'node', 'scripts/preview-release.mjs', '--plan', '.preview-release/missing.json'], {
+      cwd: realpathSync(fixture.repositoryRoot), encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'],
+    })
+    assert.notEqual(release.status, 0)
     assert.equal(existsSync(path.join(fixture.repositoryRoot, 'unsafe-outer-lifecycle-ran')), false)
   } finally {
     rmSync(fixture.temporaryRoot, { recursive: true, force: true })

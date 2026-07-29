@@ -998,6 +998,10 @@ async function latestPagesDeployment(client, parameters, preview) {
     const aliases = latest.aliases === undefined ? [] : array(latest.aliases, 'Pages deployment aliases')
     const deploymentOrigins = [latest.url, ...aliases]
     if (deploymentOrigins.length === 0 || deploymentOrigins.some((value) => !preview.pages.domainPatterns.some((pattern) => hostnameMatchesPattern(deploymentHostname(value, 'Pages Preview deployment origin'), pattern)))) throw refusalError('Pages develop deployment origin is outside approved Preview domain patterns.', 'remote.pages.deployment')
+    const previewOrigin = `https://${preview.pages.branch}.${preview.pages.project}.pages.dev`
+    if (!deploymentOrigins.includes(previewOrigin)) {
+      throw refusalError('Pages develop deployment is missing the exact reviewed branch Preview origin.', 'remote.pages.deployment')
+    }
     assertDeadline('pages-deployments-origins-normalized')
     return immutablePlain({
       id: latest.id,
@@ -1005,6 +1009,7 @@ async function latestPagesDeployment(client, parameters, preview) {
       branch: preview.pages.branch,
       commitHash,
       status: latest.latest_stage.status,
+      previewOrigin,
     })
   })
 }

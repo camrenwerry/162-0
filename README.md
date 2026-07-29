@@ -146,6 +146,34 @@ command performs remote mutation. Use `--json` for structured output and
 `--no-color` for plain human output. When automation requires JSON-only stdout
 through npm, add npm's `--silent` flag.
 
+After the protected identities are independently grounded, the operator-facing
+readiness command writes a canonical, expiring evidence package under the
+Git-ignored `.preview-release/` directory:
+
+```bash
+PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> npm exec --offline -- node scripts/preview-readiness.mjs --target-state disabled
+```
+
+The package is not approval. Preview execution requires a distinct dedicated
+deploy token, an interactive TTY, a fresh byte-equivalent re-plan, and the exact
+typed challenge printed by the executor:
+
+```bash
+PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> \
+PENNANT_PREVIEW_DEPLOY_API_TOKEN=<dedicated-preview-mutation-token> \
+npm exec --offline -- node scripts/preview-release.mjs \
+  --plan .preview-release/<readiness-package>.json
+```
+
+Generic Cloudflare credentials, CI, edited or stale packages, plan/config/build
+drift, target ambiguity, and Production identities fail closed. The executor
+uses only fixed non-shell Preview commands, repeats plan validation after
+approval, checks remote drift before every stage, validates the exact mutation
+boundary after every command, requires the applicable smoke checks, stops after
+the first failure, and writes a redacted report with forward-only D1 and
+rollback guidance. It has no resume mode or automatic rollback. No deployment
+can occur while the protected identities remain unresolved.
+
 These public invocations execute fixed Node entry points through `npm exec`;
 they do not select a package-script name, so matching `prepreview:*` or
 `postpreview:*` lifecycle hooks cannot surround the entry point. The entry
@@ -155,17 +183,17 @@ lifecycle hook before starting the first quality child.
 Planning requires exact Pages and Worker binding sets, an authoritative
 all-type account-zone inventory plus complete Worker route reads and an exact
 service-filtered Worker custom-domain read, and stable double-read snapshots.
-Phase 1 preserves local intended artifact hashes
-but treats remote artifact currentness as unproven, so matching commits or
-Worker tags never suppress a future deployment. Enabled targets still schedule
-the applicable future submission and retention smoke stages because Phase 1
-has no durable receipt model. A pending migration observed while Cron is
+Planning preserves local intended artifact hashes but treats remote artifact
+currentness as unproven, so matching commits or Worker tags never suppress a
+future deployment. Enabled targets still schedule the applicable future
+submission and retention smoke stages because a prior local report is not
+current remote proof. A pending migration observed while Cron is
 enabled first schedules Cron disablement, then public-write disablement and
 verification, before `migration.apply`.
 
-The full Phase 1 and Phase 1.5 contract, exit codes, immutable identity model,
-bootstrap trust boundary, SELECT-only normal-inspection design, and current
-limitations are in
+The full Milestone 1 contract, exit codes, immutable identity model, bootstrap
+trust boundary, SELECT-only normal-inspection design, approval boundary,
+execution reports, and current limitations are in
 [`docs/PREVIEW_RELEASE_WORKFLOW.md`](docs/PREVIEW_RELEASE_WORKFLOW.md).
 
 `npm test` runs all release-relevant suites, including the Workerd
@@ -174,8 +202,8 @@ Pages Functions, private Worker, generated Wrangler types, and D1C.4 tooling.
 
 Untracked files are rejected with `git ls-files --others --exclude-standard`.
 Git-ignored local artifacts—`node_modules/`, `dist/`, `dist-ssr/`, `.wrangler/`,
-generated D1C.4 local Wrangler inputs, logs, and `*.local` files—remain untouched
-and do not appear in that check.
+`.preview-release/`, generated D1C.4 local Wrangler inputs, logs, and `*.local`
+files—do not appear in that check.
 
 ## Draft completion experience
 

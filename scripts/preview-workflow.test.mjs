@@ -124,7 +124,14 @@ function remoteState(state = 'disabled') {
       project: manifest.cloudflare.preview.pages.project,
       previewBranch: 'develop',
       productionBranch: 'main',
-      deployment: { id: 'preview-deployment', createdOn: '2026-07-22T12:00:00.000Z', branch: 'develop', commitHash: FULL_HEAD, status: 'success' },
+      deployment: {
+        id: 'preview-deployment',
+        createdOn: '2026-07-22T12:00:00.000Z',
+        branch: 'develop',
+        commitHash: FULL_HEAD,
+        status: 'success',
+        previewOrigin: 'https://develop.diamond-draft.pages.dev',
+      },
       artifactHash: null,
       configHash: null,
       submissionMode,
@@ -165,6 +172,13 @@ function planFixture({ state = 'disabled', targetState = 'disabled', head = FULL
     manifest: canonicalHash(reviewed), configuration: compiled.hashes.combined, toolchain: '5'.repeat(64),
     workerSourceArtifact: '6'.repeat(64), pagesSourceArtifact: '7'.repeat(64), appBuildArtifact: '8'.repeat(64),
     workerBuildArtifact: '9'.repeat(64), pagesFunctionsBuildArtifact: 'a'.repeat(64),
+    submissionSmokeBuildArtifact: 'b'.repeat(64), retentionSmokeBuildArtifact: 'c'.repeat(64),
+    protectedConfiguration: {
+      'config/preview-release.json': 'd'.repeat(64),
+      'wrangler.toml': 'e'.repeat(64),
+      'workers/draft-validation/wrangler.toml': 'f'.repeat(64),
+      'workers/draft-validation/d1c4-activation-states.json': '0'.repeat(64),
+    },
   }
   const preparedRemote = clone(remote)
   if (preparedRemote.pages.deployment) preparedRemote.pages.deployment.commitHash = head
@@ -179,7 +193,14 @@ function planFixture({ state = 'disabled', targetState = 'disabled', head = FULL
   return {
     manifest: reviewed,
     manifestHash: canonicalHash(reviewed),
-    local: { head },
+    local: {
+      repositoryRoot: REPOSITORY_ROOT,
+      branch: 'develop',
+      upstream: 'origin/develop',
+      head,
+      divergence: { ahead: 0, behind: 0 },
+      remoteUrl: manifest.repository.remoteUrl,
+    },
     serverHead: head,
     targetState,
     compiled,
@@ -814,13 +835,19 @@ test('server hash inspection uses exactly git ls-remote and classifies match, mi
 
 test('fixed subprocess environment removes both Preview and generic Cloudflare credentials', () => {
   let options
-  const runner = createFixedRunner({ PATH: '/fixture', PENNANT_PREVIEW_API_TOKEN: 'sensitive-fixture-value', CLOUDFLARE_API_TOKEN: 'generic-fixture-value' }, (_command, _args, received) => {
+  const runner = createFixedRunner({
+    PATH: '/fixture',
+    PENNANT_PREVIEW_API_TOKEN: 'sensitive-fixture-value',
+    PENNANT_PREVIEW_DEPLOY_API_TOKEN: 'separate-sensitive-fixture-value',
+    CLOUDFLARE_API_TOKEN: 'generic-fixture-value',
+  }, (_command, _args, received) => {
     options = received
     return result()
   })
   runner('git', ['status'], REPOSITORY_ROOT)
   assert.equal(options.shell, false)
   assert.equal(options.env.PENNANT_PREVIEW_API_TOKEN, undefined)
+  assert.equal(options.env.PENNANT_PREVIEW_DEPLOY_API_TOKEN, undefined)
   assert.equal(options.env.CLOUDFLARE_API_TOKEN, undefined)
 })
 
@@ -844,7 +871,7 @@ test('conservative staged plans include exact future approvals and no-mutation s
   const plan = buildReleasePlan(planFixture({ targetState: 'cron-enabled', migration: pending }))
   assert.deepEqual(plan.futureStages.map(({ id }) => id), ['migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'])
   assert.deepEqual(plan.approvalCheckpoints, plan.futureStages.map(({ id }) => id))
-  assert.equal(plan.statement, 'Phase 1 performed no remote mutation.')
+  assert.equal(plan.statement, 'Planning performed no remote mutation. Execution requires a fresh exact re-plan and interactive approval.')
 })
 
 test('untrusted remote artifact fingerprints conservatively prevent a no-op', () => {
@@ -1070,11 +1097,16 @@ test('P1-05 runtime command graph rejects direct, nested, lifecycle, cyclic, she
   }
 
   const safeEnvironment = credentialFreeEnvironment({
-    PATH: '/fixture', HOME: '/private', PENNANT_PREVIEW_API_TOKEN: 'fixture', CLOUDFLARE_API_TOKEN: 'fixture',
+    PATH: '/fixture', HOME: '/private', PENNANT_PREVIEW_API_TOKEN: 'fixture', PENNANT_PREVIEW_DEPLOY_API_TOKEN: 'fixture',
+    CLOUDFLARE_API_TOKEN: 'fixture',
     CLOUDFLARE_API_KEY: 'fixture', CF_API_TOKEN: 'fixture', CF_API_KEY: 'fixture', CLOUDFLARE_EMAIL: 'fixture',
     CF_EMAIL: 'fixture', WRANGLER_OAUTH_TOKEN: 'fixture', API_KEY: 'fixture',
   })
-  for (const name of ['HOME', 'PENNANT_PREVIEW_API_TOKEN', 'CLOUDFLARE_API_TOKEN', 'CLOUDFLARE_API_KEY', 'CF_API_TOKEN', 'CF_API_KEY', 'CLOUDFLARE_EMAIL', 'CF_EMAIL', 'WRANGLER_OAUTH_TOKEN', 'API_KEY']) assert.equal(safeEnvironment[name], undefined)
+  for (const name of [
+    'HOME', 'PENNANT_PREVIEW_API_TOKEN', 'PENNANT_PREVIEW_DEPLOY_API_TOKEN', 'CLOUDFLARE_API_TOKEN',
+    'CLOUDFLARE_API_KEY', 'CF_API_TOKEN', 'CF_API_KEY', 'CLOUDFLARE_EMAIL', 'CF_EMAIL',
+    'WRANGLER_OAUTH_TOKEN', 'API_KEY',
+  ]) assert.equal(safeEnvironment[name], undefined)
 })
 
 test('P1-06 stable observation windows reject every local, server, Worker, Pages, and migration change', () => {
@@ -1651,6 +1683,6 @@ test('P1-14 plans and report inputs are canonical, unaliased, recursively frozen
   assert.equal(Object.isFrozen(plan.remoteBefore.worker.bindings), true)
 })
 
-test('stable exit-code contract exposes only Phase 1 codes', () => {
+test('stable exit-code contract exposes only the reviewed workflow codes', () => {
   assert.deepEqual(EXIT_CODES, { SUCCESS: 0, USAGE: 2, LOCAL_FAILURE: 10, REMOTE_FAILURE: 11, PRODUCTION_REFUSAL: 12 })
 })

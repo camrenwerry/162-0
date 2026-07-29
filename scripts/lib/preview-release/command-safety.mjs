@@ -26,6 +26,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/preview-plan.mjs'],
   ['--test', 'scripts/preview-identity-bootstrap.test.mjs'],
   ['--test', 'scripts/preview-workflow.test.mjs'],
+  ['--test', 'scripts/preview-release-automation.test.mjs'],
   ['scripts/production-migration-guard.test.mjs'],
   ['scripts/pwa-deployment.test.mjs'],
   ['scripts/responsive-contract.test.mjs'],
@@ -66,6 +67,8 @@ const SAFE_VITE_SSR_ENTRY_POINTS = new Set([
   'scripts/draft-validation-hardening.test.ts',
   'scripts/draft-validation-route.test.ts',
   'scripts/draft-validation-traffic-control.test.ts',
+  'scripts/d1c4-retention-smoke.ts',
+  'scripts/d1c4-submission-smoke.ts',
   'scripts/engine-smoke.ts',
   'scripts/randomizer-distribution.ts',
   'scripts/randomizer.test.ts',
@@ -199,9 +202,14 @@ function commandWordBasename(word) {
 
 function assertSupportedViteCommand(scriptName, words) {
   if (words.length === 2 && words[1] === 'build') return
+  const smokeBuildOutputs = {
+    'scripts/d1c4-submission-smoke.ts': '/tmp/pennant-pursuit-d1c4-submission-smoke',
+    'scripts/d1c4-retention-smoke.ts': '/tmp/pennant-pursuit-d1c4-retention-smoke',
+  }
   const safe = words.length === 7 && words[1] === 'build' && words[2] === '--ssr'
     && SAFE_VITE_SSR_ENTRY_POINTS.has(words[3]) && words[4] === '--outDir'
     && words[5].startsWith('/tmp/pennant-pursuit-') && words[6] === '--emptyOutDir'
+    && (!(words[3] in smokeBuildOutputs) || words[5] === smokeBuildOutputs[words[3]])
   if (!safe) throw new Error(`Unsupported Vite command in ${scriptName}.`)
 }
 
@@ -217,7 +225,11 @@ export function assertLocalReleaseCommand(scriptName, command) {
   for (const words of segments) {
     if (words.includes('--remote')) throw new Error(`Remote flag is forbidden in ${scriptName}.`)
     if (words.some((word) => SHELL_EVALUATORS.has(commandWordBasename(word)))) throw new Error(`Shell evaluator is forbidden in ${scriptName}.`)
-    if (words.some((word) => KNOWN_MUTATION_ENTRY_POINTS.some((entry) => word.replaceAll('\\', '/').includes(entry)))) {
+    const buildOnlySmokeEntry = words[0] === 'vite'
+      && words[1] === 'build'
+      && words[2] === '--ssr'
+      && ['scripts/d1c4-submission-smoke.ts', 'scripts/d1c4-retention-smoke.ts'].includes(words[3])
+    if (!buildOnlySmokeEntry && words.some((word) => KNOWN_MUTATION_ENTRY_POINTS.some((entry) => word.replaceAll('\\', '/').includes(entry)))) {
       throw new Error(`Known mutation entry point is forbidden in ${scriptName}.`)
     }
     if (words.some((word) => /^[A-Za-z_][A-Za-z0-9_]*=/.test(word))) throw new Error(`Environment mutation is forbidden in ${scriptName}.`)

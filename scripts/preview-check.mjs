@@ -59,7 +59,8 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('PWA tests', 'test:pwa'),
   npmRunStage('Preview check orchestration tests', 'test:preview-check'),
   npmRunStage('Preview identity-bootstrap tests', 'test:preview-identity-bootstrap'),
-  npmRunStage('Preview workflow Phase 1 tests', 'test:preview-workflow'),
+  npmRunStage('Preview workflow foundation tests', 'test:preview-workflow'),
+  npmRunStage('Preview release automation tests', 'test:preview-release-automation'),
 ])
 
 export const RELEASE_STAGES = Object.freeze([
@@ -72,6 +73,8 @@ export const RELEASE_STAGES = Object.freeze([
   npmRunStage('Preview private Worker dry-run build', 'validation-worker:build'),
   npmRunStage('Production private Worker dry-run build', 'validation-worker:production:build'),
   npmRunStage('Pages Functions build', 'pages:functions:build'),
+  npmRunStage('Preview submission smoke executable build', 'build:d1c4-submission-smoke'),
+  npmRunStage('Preview retention smoke executable build', 'build:d1c4-retention-smoke'),
   npmRunStage('Bundle size and hash validation', 'validation-bundles:check'),
 ])
 

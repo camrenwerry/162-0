@@ -1,8 +1,9 @@
 import { canonicalHash, immutablePlain } from './canonical.mjs'
 import { assertExactBindings, expectedPagesBindings, expectedWorkerBindings } from './binding-inventory.mjs'
+import { buildExecutionContract } from './execution-contract.mjs'
 import { refusalError, remoteError } from './errors.mjs'
 
-const PLAN_SCHEMA_VERSION = 2
+const PLAN_SCHEMA_VERSION = 3
 const DEPLOYMENT_STAGE_IDS = new Set(['pages.disable', 'cron.disable', 'migration.apply', 'worker.deploy', 'pages.deploy', 'cron.deploy'])
 
 function assertRemoteTopology(manifest, remote) {
@@ -51,7 +52,7 @@ function requiredStages(targetState, observedState, migration, { workerArtifactC
   if (pendingMigration && observedSubmissions) {
     if (observedCron) stages.push(stage('cron.disable', 'Deploy the reviewed Preview Worker configuration with Cron disabled before maintenance.'))
     stages.push(stage('pages.disable', 'Deploy the reviewed Preview Pages configuration with the public submission gate disabled.'))
-    stages.push(stage('submission.disable.verify', 'Verify through a separately authorized future check that the public Preview submission gate is disabled.'))
+    stages.push(stage('submission.disable.verify', 'Verify through an independent read-only inspection that the public Preview submission gate is disabled.'))
   }
   if (pendingMigration) stages.push(stage('migration.apply', 'Apply the reviewed pending Preview D1 migration suffix after write-disable verification.'))
 
@@ -70,11 +71,11 @@ function requiredStages(targetState, observedState, migration, { workerArtifactC
   const pagesNeedsDeploy = maintenance || observedState === 'disabled' || !pagesArtifactCurrent
   if (pagesNeedsDeploy) stages.push(stage('pages.deploy', 'Deploy the Preview-only Pages submission gate as enabled.'))
   if (targetState === 'submission-enabled' && observedCron && !maintenance && !workerNeedsSubmissionDeploy) stages.push(stage('worker.deploy', 'Deploy the Preview-only submission-enabled Worker configuration with Cron absent.'))
-  stages.push(stage('submission.smoke', 'Run the separately authorized future Preview submission smoke test; Phase 1 has no trusted receipt proof.'))
+  stages.push(stage('submission.smoke', 'Run the approved Preview submission smoke test; a prior local report is not current remote proof.'))
 
   if (targetState === 'cron-enabled') {
     if (observedState !== 'cron-enabled' || maintenance || pendingMigration || !workerArtifactCurrent) stages.push(stage('cron.deploy', 'Deploy the Preview-only cron-enabled Worker configuration after submission verification.'))
-    stages.push(stage('retention.smoke', 'Run the separately authorized future Preview retention smoke test; Phase 1 has no trusted receipt proof.'))
+    stages.push(stage('retention.smoke', 'Run the approved Preview retention smoke test; a prior local report is not current remote proof.'))
   }
   return stages
 }
@@ -124,9 +125,25 @@ export function buildReleasePlan(input) {
   const rollbackImplications = targetState === 'disabled'
     ? 'No remote rollback is implemented. Applied D1 migrations remain forward-only.'
     : 'A future rollback must disable the public Pages gate before reducing Worker state; D1 has no automatic down-migration.'
+  const executionContract = buildExecutionContract({
+    futureStages,
+    targetState,
+    manifest,
+    gitHead: local.head,
+    previewOrigin: remote.pages.deployment?.previewOrigin,
+  })
   const withoutId = immutablePlain({
     planSchemaVersion: PLAN_SCHEMA_VERSION,
     toolContractVersion: manifest.toolContractVersion,
+    repository: {
+      root: local.repositoryRoot,
+      branch: local.branch,
+      upstream: local.upstream,
+      divergence: local.divergence,
+      remoteUrl: local.remoteUrl,
+      cleanWorktreeRequired: true,
+      stagedFilesRequired: 0,
+    },
     gitHead: local.head,
     serverDevelopHead: serverHead,
     targetState,
@@ -156,6 +173,7 @@ export function buildReleasePlan(input) {
     futureStages,
     satisfiedStages,
     approvalCheckpoints: futureStages.filter(({ approvalRequired }) => approvalRequired).map(({ id }) => id),
+    executionContract,
     deploymentOutcome: deploymentChangesRequired ? 'CHANGES-REQUIRED' : 'NO-OP',
     operationalVerificationRequired,
     expectedFinalTopology: {
@@ -168,18 +186,19 @@ export function buildReleasePlan(input) {
       pagesBindings: expectedPagesBindings(manifest.cloudflare.preview, targetState === 'disabled' ? 'disabled' : 'enabled'),
       workerBindings: expectedWorkerBindings(manifest.cloudflare.preview, targetState === 'disabled' ? 'disabled' : 'enabled'),
       workersDev: false, previewUrls: false, routes: [], customDomains: [], targetState,
+      cleanupCron: manifest.activation.cleanupCron,
       fingerprints: { pages: intendedPagesArtifact, worker: intendedWorkerArtifact },
     },
     rollbackImplications,
     unresolvedItems: [
       'Applied migration source hashes are not stored by d1_migrations and therefore cannot be compared after application.',
-      'Phase 1 has no trusted durable smoke receipt; enabled states retain future operational verification stages.',
-      'Phase 1 does not implement release, rollback, deployment, migration application, or smoke execution.',
+      'Cloudflare does not expose a trusted remote artifact hash matching the local intended artifact fingerprint.',
+      'Rollback remains a separately planned disabled-state release; D1 migrations are forward-only.',
     ],
     noRemoteMutation: true,
-    phase: 1,
+    phase: 2,
     outcome: futureStages.length === 0 ? 'NO-OP' : 'PLAN',
-    statement: 'Phase 1 performed no remote mutation.',
+    statement: 'Planning performed no remote mutation. Execution requires a fresh exact re-plan and interactive approval.',
   })
   return immutablePlain({ ...withoutId, planId: derivePlanId(withoutId) })
 }

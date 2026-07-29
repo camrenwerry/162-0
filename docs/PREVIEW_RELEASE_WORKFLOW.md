@@ -1,13 +1,36 @@
-# Preview release workflow: Phase 1 and Phase 1.5
+# Preview release workflow: Milestone 1
 
-Phase 1 establishes immutable Preview identity, offline release-readiness
-checks, read-only remote inspection, and deterministic planning. It cannot
-deploy, apply a migration, upload an artifact, change a flag, enable or disable
-Cron, run a smoke request, roll back, or change a Cloudflare resource.
+Milestone 1 establishes immutable Preview identity, offline release-readiness
+checks, read-only remote inspection, deterministic planning, canonical evidence
+packages, and a fail-closed human-approved Preview execution boundary.
+Readiness and planning cannot deploy, apply a migration, upload an artifact,
+change a flag, enable or disable Cron, or run a smoke request.
 
 The canonical Pages and Worker configurations remain `disabled`. The reviewed,
 non-secret identity source is `config/preview-release.json`. Preview/Production
 collisions, incomplete inventories, and ambiguous observations fail closed.
+Four protected identities remain unresolved, so readiness and release are
+intentionally blocked before Cloudflare contact until a separate reviewed
+identity-grounding change is committed. Candidate bootstrap output is never
+authority.
+
+## Command classification
+
+| Command | Classification | Remote behavior |
+| --- | --- | --- |
+| `node scripts/preview-check.mjs` | Read-only inspection and local validation | None by default |
+| `node scripts/preview-check.mjs --online` | Remote read-only validation | Fixed Git and Cloudflare reads |
+| `node scripts/preview-identity-bootstrap.mjs` | Remote read-only, untrusted evidence | Fixed Cloudflare GET inventory only |
+| `node scripts/preview-plan.mjs --target-state …` | Local planning plus remote read-only validation | No mutation |
+| `node scripts/preview-readiness.mjs --target-state …` | Readiness, planning, and local evidence generation | No mutation |
+| `node scripts/preview-release.mjs --plan …` | Explicit Preview mutation boundary | Fixed approved deployments, optional Preview D1 migration, and required smoke validation |
+| `npm run db:migrations:apply:preview` | Direct remote mutation outside safe readiness | Preview D1 mutation |
+| `npm run db:migrations:apply:production` | Production-sensitive guarded mutation | Production D1 mutation |
+| `npm run smoke:d1c4:submission` / `smoke:d1c4:retention` | Direct Preview smoke harnesses | Preview endpoint and owned D1-row mutation only with `--execute` |
+
+The release executor never invokes package-script aliases. Its command manifest
+uses fixed executables and exact argument arrays with no shell, evaluator,
+arbitrary command string, environment interpolation, or user-selectable target.
 
 ## Phase 1.5 identity bootstrap
 
@@ -232,9 +255,10 @@ checkpoints, operational-verification status, rollback implications, and a
 deterministic plan ID. It is recursively immutable and contains no remote
 mutation capability.
 
-`deploymentOutcome` and `operationalVerificationRequired` are separate. Phase
-1 has neither trusted remote artifact fingerprints nor durable smoke receipts.
-It therefore conservatively retains the applicable future deployments, and:
+`deploymentOutcome` and `operationalVerificationRequired` are separate. The
+planner has no trusted remote artifact fingerprints and never treats a prior
+local smoke receipt as current remote proof. It therefore conservatively
+retains the applicable future deployments, and:
 
 - `submission-enabled` always retains `submission.smoke`.
 - `cron-enabled` always retains `submission.smoke` and `retention.smoke`.
@@ -243,7 +267,93 @@ It therefore conservatively retains the applicable future deployments, and:
 
 No hypothetical, missing, stale, or malformed receipt field can turn an
 enabled target into a fully verified no-op. Receipt creation and smoke
-execution remain outside Phase 1.
+execution occur only inside the separately approved release boundary.
+
+## Readiness package
+
+After the four protected identities are independently grounded, one command
+runs the complete local suite, performs stable double-read Preview inspection,
+builds the deterministic plan, and writes a canonical evidence package:
+
+```bash
+PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> npm exec --offline -- node scripts/preview-readiness.mjs --target-state disabled
+```
+
+The target may instead be `submission-enabled` or `cron-enabled`. The package
+is written with mode `0600` under the Git-ignored `.preview-release/` directory.
+It contains versioned schemas, repository/branch/upstream/HEAD state, protected
+configuration hashes, package-lock and source/build fingerprints, exact
+Preview targets, ordered commands, validation requirements, rollback guidance,
+a deterministic plan ID, creation time, and a maximum two-hour expiration.
+
+Readiness refuses wrong repository, branch, upstream, HEAD relationship, dirty
+or staged files, untracked files, divergence, unresolved identities, target
+ambiguity, protected configuration drift, unsafe commands, failed quality
+checks, incomplete builds, unstable remote observations, and Production
+collisions. Byte edits, alternate JSON formatting, unsafe permissions,
+plan/hash mismatches, and stale packages are refused.
+
+Package presence does not mean approval. Regenerating a package does not mean
+approval. Candidate identity output, an environment variable, prior test
+success, a prior deployment, a command alias, and CI cannot grant approval.
+
+## Human-approved Preview execution
+
+Release execution requires two distinct dedicated credentials:
+
+```bash
+PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> \
+PENNANT_PREVIEW_DEPLOY_API_TOKEN=<dedicated-preview-mutation-token> \
+npm exec --offline -- node scripts/preview-release.mjs \
+  --plan .preview-release/<readiness-package>.json
+```
+
+The parent environment must not contain generic Cloudflare credentials,
+Wrangler OAuth credentials, or CI state. The executor requires interactive
+input and output TTYs. It reruns the complete readiness workflow, rebuilds the
+plan, and requires byte-equivalent canonical plan content before showing the
+approval challenge. The operator must type the full plan-ID-and-binding-hash
+challenge exactly; there is no default and approval is not accepted from a
+file, environment variable, package field, or automation context.
+
+The local trust limit is explicit: the TTY gate proves a deliberate action by
+the local operator under the checked-out, clean, approved commit. It is not an
+external organizational signature service and cannot protect a compromised
+operator account or machine. Repository and plan revalidation make editing or
+regenerating JSON insufficient to bypass the gate. The executor repeats the
+exact re-plan after the approval prompt and before the first mutation, so drift
+while the prompt is open also invalidates approval.
+
+After approval, the executor:
+
+1. creates an isolated temporary workspace from verified deployment inputs;
+2. materializes Preview-only configurations without changing protected files;
+3. maps every stage to one fixed non-shell command;
+4. passes only the dedicated deploy token to mutation children;
+5. re-checks Preview state immediately before every stage, inspects it after
+   every command, and rejects changes outside that stage’s mutation boundary;
+6. stops all later mutation after the first failure;
+7. requires new Worker and Pages deployment identities when planned;
+8. requires the approved commit on the final Pages Preview deployment;
+9. requires current migrations and the exact final Preview topology;
+10. requires submission smoke for enabled submissions and both submission and
+    retention smoke for Cron-enabled state; and
+11. writes a canonical redacted execution, validation, and rollback report.
+
+The read token is never passed to mutation children. The deploy token is never
+placed in plans, reports, command arguments, or persisted evidence.
+
+## Failure and rollback
+
+A failed stage marks every later stage `NOT-RUN`. If no mutation was attempted,
+no rollback is needed. After a partial mutation, do not resume or reuse the
+package. Inspect the report and live Preview state read-only, then generate a
+fresh plan.
+
+If the public submission gate may be enabled, the first rollback action is a
+separately planned and approved `disabled` release. Disable Pages public writes
+before reducing the Worker state. D1 migrations remain forward-only; the
+executor never attempts an automatic down-migration or automatic rollback.
 
 ## Exact topology and exposure inventory
 
@@ -320,7 +430,7 @@ configuration, static assets, Functions source, code-generation inputs, and
 available reproducible bundle outputs.
 
 A source commit match is only source evidence. An intended artifact hash is the
-local canonical deployment-input fingerprint. Phase 1 has no version-bound,
+local canonical deployment-input fingerprint. The workflow has no version-bound,
 trusted remote artifact fingerprint, so `provenCurrent` is always false for
 Pages and Worker artifacts. A matching Pages commit or arbitrary Worker tag is
 never artifact proof, and the relevant future deployment remains scheduled.
@@ -336,7 +446,7 @@ The command does not retry into a new plan.
 
 ## Migration inspection and maintenance ordering
 
-Phase 1 does not use `wrangler d1 migrations list` because the pinned Wrangler
+Normal inspection does not use `wrangler d1 migrations list` because the pinned Wrangler
 implementation may initialize `d1_migrations`. It uses only these fixed reads:
 
 ```sql
@@ -381,6 +491,7 @@ online checking and planning currently refuse before network contact. All
 bootstrap network paths and ordinary online paths are tested with faithful
 local fakes; the implementation suite does not run a live bootstrap.
 
-`preview:release` and `preview:rollback` do not exist. Deployment, migration
-application, activation, smoke execution, receipts, resume, and rollback
-orchestration remain later-phase work.
+The executor intentionally has no resume mode and no automatic rollback
+command. A new package and new human approval are required after any failure.
+All repository tests use local fakes; validation does not contact Cloudflare or
+perform a deployment.

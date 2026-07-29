@@ -4,6 +4,13 @@ import { spawnSync } from 'node:child_process'
 import { canonicalHash, fileHash } from './canonical.mjs'
 import { localError, remoteError } from './errors.mjs'
 
+export const PROTECTED_CONFIGURATION_PATHS = Object.freeze([
+  'config/preview-release.json',
+  'wrangler.toml',
+  'workers/draft-validation/wrangler.toml',
+  'workers/draft-validation/d1c4-activation-states.json',
+])
+
 function output(result) {
   return String(result?.stdout ?? '').trim()
 }
@@ -186,5 +193,11 @@ export function computeReleaseHashes({ repositoryRoot, manifestHash, configurati
     appBuildArtifact: directoryArtifactHash(path.join(repositoryRoot, 'dist')),
     workerBuildArtifact: directoryArtifactHash('/tmp/pennant-pursuit-validation-worker-build'),
     pagesFunctionsBuildArtifact: directoryArtifactHash('/tmp/pennant-pursuit-pages-c4-build'),
+    submissionSmokeBuildArtifact: directoryArtifactHash('/tmp/pennant-pursuit-d1c4-submission-smoke'),
+    retentionSmokeBuildArtifact: directoryArtifactHash('/tmp/pennant-pursuit-d1c4-retention-smoke'),
+    protectedConfiguration: Object.freeze(Object.fromEntries(PROTECTED_CONFIGURATION_PATHS.map((relativePath) => [
+      relativePath,
+      fileHash(path.join(repositoryRoot, relativePath)),
+    ]))),
   })
 }
