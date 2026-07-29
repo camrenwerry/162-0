@@ -775,7 +775,10 @@ test('a clean temporary repository runs the actual preview:plan path with stable
     })
     assert.equal(plan.noRemoteMutation, true)
     assert.equal(plan.targetState, 'disabled')
-    assert.deepEqual(plan.futureStages.map(({ id }) => id), ['worker.deploy', 'pages.deploy'])
+    assert.deepEqual(
+      plan.futureStages.map(({ id }) => id),
+      ['migration.apply', 'worker.deploy', 'pages.deploy'],
+    )
     assert.equal(operations.filter((operation) => operation === 'pages-project').length, 2)
     assert.equal(operations.includes('worker-metadata'), false)
   } finally {

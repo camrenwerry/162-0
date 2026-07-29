@@ -1,228 +1,410 @@
-# Leaderboard backend foundation
+# Leaderboard identity and ranking foundation
 
-Milestone 2 adds a local-only, disabled-by-default foundation for a future
-public leaderboard beta. It does not apply a remote migration, deploy code,
-enable submissions, configure a signing secret, choose a public player
-identity, or activate a public leaderboard.
+Milestone 3A completes the local backend contract for the first public-beta
+leaderboard. It adds account-free stable identity, recovery, rename,
+qualification placement, top-three entries, and shared competition ranks. It
+does not add the player-facing leaderboard UI, apply a remote migration,
+deploy, configure secrets, or enable submissions, identity mutations, or
+leaderboard reads.
 
-## Architecture and data flow
+## Trust boundary and data flow
 
-The authoritative path remains:
+The authoritative path is:
 
 ```text
 completed Classic draft
-  -> signed short-lived draft ticket plus transcript
+  -> signed, short-lived draft ticket plus transcript
   -> private Worker ticket verification and deterministic replay
   -> canonical server scoring
-  -> one atomic D1 batch
-       - retained idempotency receipt
-       - optional server-authoritative player identity
-       - durable leaderboard run
+  -> atomic D1 persistence
+       - immutable retained receipt
+       - durable verified leaderboard run
+       - optional pending identity claim
        - reconciliation reads
-  -> immutable submission receipt
+  -> server-calculated Daily, Weekly, and All-Time placement
+  -> optional short-lived identity claim capability
 ```
 
-The Pages submission proxy remains the public trust boundary for same-origin
-requests and the private rate-limit key. The private Worker verifies the
-ticket, transcript, complete roster, supported versions, replay, and score.
-Client-supplied score fields and eligibility booleans are not used.
+The client cannot supply a score, rank, eligibility result, player ID, or run
+ID. Pages checks the same-origin request boundary, derives a rate key only from
+trusted Cloudflare connection metadata, and proxies to a private Worker. The
+private Worker performs rate limiting, strict bounded JSON parsing, ticket
+verification, replay, scoring, identity authentication, and D1 writes.
 
-Migration `0003_leaderboard_foundation.sql` adds two tables. A
-`leaderboard_players` row represents a future stable public identity using an
-HMAC-SHA-256 identity digest and a bounded display label. A
-`leaderboard_runs` row is an append-only audit record for one accepted ticket
-and its server-verified result. Its unique `source_ticket_id` prevents duplicate
-credit while allowing two independent tickets with identical rosters and
-scores.
+This is an account-free beta identity, not an account system. Possession of the
+device credential authenticates the identity for ordinary play. Possession of
+the recovery code can replace that credential. There is no email, password,
+browser fingerprint, IP identity, user-agent identity, customer-support
+recovery, or proof of legal identity. A player who loses both secrets cannot
+recover the identity under this contract.
 
-Standings are computed on read. Public-beta scale does not justify a queue,
-cache table, or materialized ranking. The query indexes begin with board scope
-and eligibility fields and include time, player, and deterministic score order.
-A separate player-history index supports future profile and recent-run reads.
+## Schema version 4
 
-Existing `draft_submissions` rows are not backfilled. They contain a retained
-receipt and digests, but no stable player identity or explicit game-mode
-column, and they are deleted after 24 hours. Treating those rows as historical
-leaderboard evidence would be ambiguous and would break all-time history.
+Migration `0004_leaderboard_identity_ranking.sql` is a forward-only migration
+whose exact predecessor is schema version 3. It extends
+`leaderboard_players` with:
 
-## Identity and privacy
+- a canonical public-name key with a partial unique index;
+- HMAC-SHA-256 device-credential and recovery-code digests, each unique;
+- recovery version, last rename time, credential rotation time, and identity
+  update time; and
+- an explicit `inactive`, `active`, `moderated`, or `invalidated` identity
+  state. Version-3 placeholders migrate to `inactive`.
 
-The current game has no account, device identity, or other trustworthy stable
-player key. The default identity resolver therefore returns no identity.
-Accepted non-test submissions are durably recorded as `identity_pending` and
-cannot appear on a public board.
+`leaderboard_identity_claims` binds one unique claim digest to one unique
+accepted run. It records creation, expiry, consumption, claimed identity, and
+canonical claimed name, but never the raw capability or either returned
+secret. Foreign keys restrict deletion of referenced runs and players.
 
-Before public activation, the product must choose a stable identity and
-public-label policy. A future resolver must derive the identity digest on the
-server with a secret HMAC key; it must not store or expose the raw account,
-device, ticket, submission, IP, user-agent, or fingerprint value. A
-client-provided display name is not an identity. Label normalization,
-moderation, rename behavior, collision handling, and account migration must be
-specified before labels are accepted publicly.
+`leaderboard_identity_events` provides immutable, idempotent event keys for
+claim, recovery, rename, recovery rotation, moderation, and invalidation
+evidence. Events contain no raw credential, recovery code, claim capability,
+ticket, recovery operation identifier, or request body.
 
-The public query joins only active players to eligible runs. Its response
-contains no database keys, identity digests, ticket IDs, internal moderation
-reasons, or anti-abuse evidence. Public labels are trimmed, length-bounded, and
-rejected if they contain control or bidirectional-formatting characters.
-Malformed stored data fails with a generic unavailable response rather than
-being reflected.
+`leaderboard_recovery_operations` is the bounded uncertain-outcome receipt for
+recovery. It stores only domain-separated keyed digests, the internal player
+reference, source and replacement recovery versions, replacement secret
+digests, derivation version, and creation/expiry times. It has no raw recovery
+code, raw operation identifier, device credential, replacement recovery code,
+display name, request body, or response JSON. A unique
+`(player_id, source_recovery_version)` constraint permits one recovery winner
+from a given version. The migration also adds claim-expiry, recovery-operation
+expiry, identity-event, credential lookup, recovery lookup, public-name, and
+leaderboard qualification indexes.
 
-## Eligibility and durable audit state
+Existing version-3 placeholder players and their run history remain valid local
+records after the migration, but their new private identity columns are null,
+their recovery version remains zero, and their identity state is `inactive`.
+Public queries require a fully claimed active identity, so those placeholders
+and anonymous legacy rows cannot become public accidentally. Existing accepted,
+identity-pending, test/smoke, moderated, and invalidated runs and retained draft
+receipts are not rewritten.
 
-A run can be public only when all of these conditions are true:
+## Display-name policy
 
-- the existing signed ticket is authentic, unexpired, transcript-bound, and
-  consumed exactly once;
-- server replay produces a complete valid Classic roster;
-- the canonical server scorer produces the persisted wins, overall score, and
-  tier;
-- a server-authoritative player identity resolves to an active player;
-- the server classifies the run for the queried environment;
-- the run is not test or smoke data; and
-- its status is `eligible`, with no invalidation or moderation timestamp.
+The server applies the following policy before any availability check or
+mutation:
 
-The application cannot promote itself by sending `eligible: true`. Test and
-smoke runs are stored only as `excluded_test`; an accepted run without identity
-is stored only as `identity_pending`. The database enforces these cross-field
-relationships. `invalidated` and `moderated` states require a server timestamp
-and stop contributing on the next read. No moderation or mutation endpoint is
-part of this milestone.
+- normalize the display form with Unicode NFKC;
+- require 3 through 20 Unicode code points after normalization;
+- allow Unicode letters, Unicode numbers, ASCII spaces, underscores, and
+  hyphens;
+- reject leading or trailing whitespace and repeated ASCII spaces, both before
+  and after normalization;
+- reject control, format, surrogate, line-separator, and paragraph-separator
+  characters; and
+- reject every other character.
 
-The submission receipt and leaderboard run are inserted in one D1 batch. The
-ticket is the idempotency key for both records. An exact retry returns the
-original receipt and adds no run. A conflicting transcript for an already-used
-ticket is rejected. Concurrent delivery relies on database uniqueness and
-post-batch reconciliation rather than an application-only check. Different
-tickets remain independent even when their verified result is identical.
+The unique key is derived by NFKC normalization followed by deterministic
+Unicode upper/lower mapping and a final NFKC pass. This makes case variants,
+full-width compatibility forms, sharp-s expansions, and final-sigma variants
+collide without depending on SQLite's default collation. The canonical key has
+a database unique constraint, so an availability response is advisory and
+create/create, create/rename, and rename/rename races are still resolved
+atomically by D1.
 
-## Ranking definitions
+The policy is structural, not a comprehensive profanity or confusable-name
+filter. Human moderation remains necessary. Controlled operations may set an
+identity or run to `moderated` or `invalidated` while preserving the audit
+record. This milestone deliberately adds no public or administrative mutation
+endpoint for those operations.
 
-### Best Run
+## Qualification-based first identity
 
-Each player contributes at most one eligible run to a board. Runs are ordered:
+A valid non-test, non-smoke Classic run with no resolved identity is stored as
+`identity_pending`. The placement service temporarily evaluates that accepted
+candidate alongside fully claimed public entries. If it is within the
+candidate's applicable top three, the accepted response reports
+`identity.setupRequired=true` and may include a short-lived claim capability.
 
-1. higher server-verified projected wins;
-2. higher server-verified overall score;
-3. earlier server submission time; then
-4. lower internal run key as a final stable, non-public tie-break.
+The capability:
 
-The board applies the same complete ordering across player winners. Every row
-receives a unique ordinal rank; tied gameplay values do not share a rank. The
-final internal key is never returned.
+- is an HMAC-authenticated, 256-bit value with an explicit version prefix;
+- is domain-separated from every credential and stored digest;
+- is bound by its digest to exactly one accepted run;
+- expires 15 minutes after the server submission time;
+- cannot select another run, identity, score, or eligibility state; and
+- is returned only in a `Cache-Control: no-store` response.
 
-### Cumulative Performance
+`POST /api/v1/leaderboard-identity-claim` accepts only that capability and a
+validated display name. One D1 batch creates the player, links exactly the
+bound pending run, consumes the claim, writes the audit event, and reads the
+result. Unique constraints and compare-and-set conditions resolve conflicts.
+An exact retry during the claim window safely derives and returns the same
+secret bundle; a changed name, expired capability, unrelated run, already
+conflicting name, or invalid pending state cannot create credit.
 
-The repository contains no approved definition of cumulative performance.
-Summed wins, summed overall score, run count, an average, and a capped formula
-would reward different behavior. This milestone therefore does not invent a
-ranking.
+When identity support is disabled, the run remains durable and private and the
+accepted response reports the capability as disabled. Expired claim rows may
+be deleted without deleting the run. A future UI should present name setup
+immediately after a qualifying result because this milestone does not add a
+claim-renewal protocol.
 
-The data model preserves every eligible run, and an internal query primitive
-can return per-player qualifying-run count, verified-win sum, verified-score
-sum, and first/last server timestamps. It assigns no score or rank. Public
-requests for `family=cumulative-performance` return a fixed unsupported-board
-response, and the API capability flag remains false. A product decision must
-define the formula, tie-breaks, volume/anti-grinding policy, and whether
-historical data should be recomputed before this family can be exposed.
+## Device credential and returning play
 
-## Period rules
+The successful claim returns a `ppd1_` device credential containing 256 bits
+of HMAC-derived material. The raw value is intended for future client-side
+storage only. D1 stores a domain-separated keyed digest.
 
-Server `submitted_at_ms` is the only time authority. Client time and ticket
-issue time do not select a period.
+A later submission may include exactly one optional `identityCredential`
+field. The private Worker validates its shape, hashes it, resolves only an
+active identity, and then runs the unchanged ticket verification, replay, and
+scoring path. The credential cannot supply or alter a score, rank, ticket,
+transcript, environment, or mode. Missing credentials preserve the
+identity-pending behavior; malformed or unknown credentials fail closed.
 
-- Daily is `[00:00:00.000 UTC, next 00:00:00.000 UTC)`.
-- Weekly starts Monday at `00:00:00.000 UTC` and ends at the following Monday,
-  using a half-open interval.
-- All-time has no lower bound and includes eligible runs through the query's
-  captured `asOf` time.
+## Recovery
 
-UTC has no daylight-saving shift. A legitimately accepted late retry retains
-the first server submission time from its immutable receipt; it cannot move
-between periods. New pages reuse the authenticated cursor's `asOf` and exact
-window, so later submissions do not move the snapshot boundary.
+The claim response also returns one recovery code. Its payload contains 130
+bits encoded with a transcription-oriented Crockford alphabet plus a 10-bit
+checksum. Input is case-insensitive, ignores spaces and hyphens, and accepts
+the common `O`/`0` and `I`/`L`/`1` aliases. Only a domain-separated keyed
+digest is stored.
 
-Invalidation or player disabling can still remove a row between page requests.
-That operational mutation is intentionally reflected immediately; callers
-should restart pagination when a moderation change occurs.
+`POST /api/v1/leaderboard-identity-recover` requires exactly:
 
-## Read API
+```json
+{
+  "recoveryCode": "<current private recovery code>",
+  "recoveryOperationId": "ppr1_<43 canonical unpadded base64url characters>"
+}
+```
 
-The endpoint is `GET /api/v1/leaderboards`; `HEAD` is also accepted. It is
-available only when all of these independently supplied runtime values are
-valid:
+The operation identifier represents 32 client-generated random bytes. The
+client must use a cryptographically secure random generator, create it once per
+logical recovery, retain the exact request until the outcome is certain, and
+reuse it only to retry that same uncertain operation. It is a private,
+single-purpose capability: claim capabilities (`ppc1_`), device credentials
+(`ppd1_`), recovery codes (`PP1-`), and recovery operation identifiers
+(`ppr1_`) are structurally and cryptographically separate.
+The server decodes the 43-character payload to exactly 32 bytes and requires
+those bytes to re-encode to the identical canonical unpadded base64url payload;
+padding, noncanonical aliases, wrong-length values, and formatting mutations
+are rejected.
 
-- `LEADERBOARD_READ_MODE=enabled`;
-- `LEADERBOARD_ENVIRONMENT=preview` or `production`;
-- `LEADERBOARD_CURSOR_SIGNING_KEY` is a secret of at least 32 characters;
-- the `DB` binding is present; and
-- schema version 3 is reachable.
+The Worker derives one keyed operation digest and a separate keyed digest of
+the operation identifier plus canonical recovery attempt. Replacement secrets
+are deterministic HMAC outputs under distinct v2 domains over the canonical
+recovery code, raw operation identifier, internal player ID, and source
+recovery version. This binds reproduction to the same recovery attempt, player,
+and version without storing any raw input or output. The signing key and raw
+client-held inputs are required to reproduce the replacements.
 
-None of the protected checked-in environments supplies those leaderboard
-values. The absent flag returns the existing generic API 404 before database
-access.
+One D1 batch conditionally inserts the operation receipt, rotates both player
+digests with a version compare-and-set, asserts the post-rotation invariant,
+writes one digest-keyed recovery audit event, and reads the result. D1 batch
+transactionality makes an injected error roll back the receipt, rotation, and
+event together. The old device credential and old recovery code become invalid
+in the same commit.
 
-Allowlisted query parameters are:
+The retry window is 15 minutes from the server time sampled by the winning
+request and stored with its operation receipt. A retry with the same recovery
+code and exact operation identifier returns the exact same replacement device
+credential and recovery code, `idempotentRetry: true`, and the original
+`recoveryRetryExpiresAt`. The response remains `Cache-Control: no-store`. A
+same-operation concurrent request reconciles to that bundle. Different
+concurrent operation identifiers contend on the player/source-version unique
+constraint: exactly one rotates; a loser has no receipt for its identifier and
+cannot retrieve the winner's bundle.
 
-- `mode=classic` (default; Hard Mode is schema-reserved but not public);
-- `period=daily|weekly|all-time` (default `all-time`);
-- `family=best-run|cumulative-performance` (default `best-run`);
-- `limit=1..50` (default `25`); and
-- `cursor=<authenticated opaque cursor>`.
+At the retry deadline, the receipt no longer authorizes reproduction. Cleanup
+deletes only rows with `expires_at_ms <=` its one sampled cutoff, so it retains
+every still-valid retry. Expired receipt deletion does not delete or change the
+player, current secrets, runs, or audit events. A later valid recovery,
+moderation, invalidation, or player disablement also prevents an older receipt
+from replaying obsolete or revoked secrets.
 
-Unknown, repeated, malformed, or scope-conflicting parameters are rejected.
-Queries are fixed SQL with bound parameters. The cursor is a canonical,
-HMAC-SHA-256-authenticated snapshot containing only API scope, period bounds,
-`asOf`, and the last ordinal rank. Offset pagination is not used.
+Unknown codes, malformed or tampered operation identifiers, mismatched
+code/operation pairs, expired receipts, cross-purpose values, concurrent
+losers, and attempts against non-active identities receive the same generic
+invalid-recovery response. Operation IDs are high entropy but are not accepted
+as authentication by themselves, and neither an identifier guess nor receipt
+existence creates an identity-enumeration response.
 
-Successful responses use schema `pennant-leaderboard-response-v1` and include
-`generatedAt`, board scope, explicit ranking and window metadata, public
-eligibility definitions, capability flags, entries, and page metadata. An
-entry contains only rank, player label, projected wins, overall score, tier,
-server submission time, and mode. Empty boards return the same schema with an
-empty entries array.
+No public API other than the authorized success/retry response, status response,
+leaderboard response, URL, log, analytics record, ordinary report, audit event,
+receipt, or database row contains a raw recovery code, raw operation ID, or raw
+device credential. The future UI must keep the operation ID only while recovery
+is uncertain, retry before `recoveryRetryExpiresAt`, securely save both
+replacement secrets, then discard the operation ID and old recovery code.
 
-Successes allow a short shared cache:
-`public, max-age=15, s-maxage=30, stale-while-revalidate=30`. Errors and blocked
-boards use `no-store`. Database and configuration failures return fixed generic
-errors with no SQL or exception details.
+## Rename and history
 
-## Retention, history, and rollback
+`POST /api/v1/leaderboard-identity-rename` requires the device credential and a
+fully validated new name. A successful database compare-and-set requires that
+the last rename is absent or at least 30 days old, updates the current public
+label and canonical key, records the timestamp and audit event, and returns
+the exact next eligible timestamp.
 
-The 24-hour cleanup job deletes only expired `draft_submissions` receipts.
-Durable `leaderboard_runs` and `leaderboard_players` are independent, so daily,
-weekly, and all-time history survives receipt cleanup. Invalidating a run or
-disabling a player removes current credit without deleting the audit row.
+An exact same-display-name request, including an input that differs only before
+NFKC normalization, is a no-op and consumes no cooldown. A case-only change in
+the normalized display is a real rename and consumes the cooldown. Name
+conflicts and other failed attempts do not consume it. Concurrent attempts
+cannot both satisfy the cooldown condition.
 
-Migration 0003 is forward-only and requires exact predecessor schema version 2
-before any DDL. Foreign keys use `ON UPDATE RESTRICT` and `ON DELETE RESTRICT`;
-leaderboard history cannot be orphaned by an ordinary player deletion. There
-is no automatic down migration. A code rollback can disable reads and
-submissions, but it does not remove schema or durable rows. A released schema
-defect requires a reviewed forward migration or separately authorized D1 Time
-Travel recovery.
+Leaderboard entries join the current player row at read time. A rename
+therefore updates every historical Daily, Weekly, and All-Time presentation
+without creating per-run name snapshots.
 
-## Local verification and future activation
+## Top-three and shared ranking
 
-Local-only migration and focused verification:
+Best Run is the only public ranking family. For each independent environment,
+mode, period, and family, the query:
+
+1. filters to server-verified, non-smoke, eligible Classic runs whose player
+   and identity are active and fully claimed;
+2. orders each player's runs by projected wins descending, overall score
+   descending, server submission time ascending, and internal run key
+   ascending;
+3. retains that player's first three rows;
+4. assigns public `RANK()` using projected wins and overall score only; and
+5. assigns a separate deterministic `ROW_NUMBER()` using the complete order
+   for pagination.
+
+Equal projected wins and overall score share a public competition rank. Thus
+`110/95`, `108/96`, `108/96`, and `105/94` receive ranks `1, 2, 2, 4`.
+Submission time and the internal key stabilize display and pagination but
+never improve a tied row's public rank. A player's fourth and weaker runs stay
+in history and may become visible if a stronger run is invalidated or falls
+outside a Daily or Weekly window.
+
+Classic is the only accepted public mode. Hard Mode remains schema-reserved and
+unsupported. Cumulative Performance remains unavailable because no public
+formula has been approved. Internal aggregate-ready inputs remain intact but
+assign no cumulative score or rank.
+
+## Periods, placement, and pagination
+
+Server `submitted_at_ms` is the only time authority:
+
+- Daily is `[00:00 UTC, next 00:00 UTC)`.
+- Weekly is `[Monday 00:00 UTC, next Monday 00:00 UTC)`.
+- All-Time has no lower bound and is capped by the captured query time.
+
+The reusable placement service evaluates the accepted run independently for
+Daily, Weekly, and All-Time and returns qualification, shared public rank,
+whether it displaced a prior personal top-three entry, the prior third-run
+cutoff when present, consistent proximity below that cutoff, and
+`newPersonalBest`. It also states why identity setup is required and continues
+to report cumulative performance as unavailable. Client placement fields are
+not accepted.
+
+Leaderboard cursor version 2 is a canonical HMAC-SHA-256-authenticated
+snapshot containing scope, period bounds, `asOf`, and the last internal page
+ordinal. Pagination resumes after that ordinal, so a page boundary inside a
+shared rank neither duplicates nor skips ordinary tied rows in an unchanged
+row set. Submissions with a server timestamp later than the captured snapshot
+cannot enter. A concurrently in-flight row committed later with a timestamp
+already inside the snapshot, or moderation, invalidation, player disablement,
+or rename during pagination, can still change current rows; callers should
+restart after such an operational mutation.
+
+## API contract
+
+All identity routes use `POST`, require exactly `application/json`, reject
+content encoding, bound the body to 16,384 bytes, reject duplicate JSON keys
+and unknown fields, use prepared SQL, and return fixed public errors:
+
+- `/api/v1/leaderboard-name-availability`
+- `/api/v1/leaderboard-identity-claim`
+- `/api/v1/leaderboard-identity-recover`
+- `/api/v1/leaderboard-identity-rename`
+- `/api/v1/leaderboard-identity-status`
+
+The status route returns current display name, rename eligibility, next rename
+time, recovery version, and capability booleans. It does not echo the supplied
+credential or return a recovery code, player ID, run ID, or digest.
+
+Recovery success uses the same identity response schema as other identity
+mutations. It returns current display name, replacement device credential,
+replacement recovery code, replacement recovery version,
+`recoveryCodeMustBeStored: true`, `idempotentRetry`, and
+`recoveryRetryExpiresAt`. Claim success uses the same
+`recoveryCodeMustBeStored` instruction. The field does not claim the value can
+appear only once: an authorized same-operation retry reproduces it during the
+bounded recovery window. Recovery never echoes the `recoveryOperationId`.
+Clients must treat a timeout, connection loss, or other uncertain outcome as
+retryable only with the unchanged request; generating a new operation ID after
+a possible commit cannot recover the prior result.
+
+`GET` and `HEAD /api/v1/leaderboards` accept only `mode`, `period`, `family`,
+`limit`, and `cursor`. `mode=classic`, `period=all-time`,
+`family=best-run`, and `limit=25` are defaults; the maximum limit is 50.
+Unknown, repeated, malformed, unsupported, or cursor-conflicting parameters
+are rejected.
+
+Successful reads use schema `pennant-leaderboard-response-v2` and return only
+public rank, current display name, verified projected wins, verified overall
+score, tier, server submission time, mode, period metadata, and an opaque next
+cursor. They explicitly describe competition-shared rank and the
+best-three-runs policy. Cumulative requests return a fixed unsupported-board
+response. Reads may use a short shared cache; all identity and error responses
+use `no-store`.
+
+## Flags, health, retention, and activation
+
+Identity mutations require all of:
+
+- `LEADERBOARD_IDENTITY_MODE=enabled` at both Pages and the private Worker;
+- a Worker-only `LEADERBOARD_IDENTITY_SIGNING_KEY` of 32 through 4,096
+  characters;
+- the private `VALIDATION_SERVICE` binding;
+- a reachable `DB`; and
+- exact schema version 4.
+
+Leaderboard reads separately require `LEADERBOARD_READ_MODE=enabled`, an
+allowlisted environment, a cursor signing key of 32 through 4,096 characters,
+reachable D1, and exact schema version 4. Submission remains controlled by its
+independent existing gate. Missing or malformed values fail closed. Health
+probes the private Worker through the existing service binding and reports
+identity as configured but degraded when the Pages flag, service, private
+Worker flag or secret, database, or exact schema requirement is incomplete.
+The signing key is not copied into Pages.
+
+The checked-in protected configuration supplies none of the new identity or
+read flags and none of the signing secrets. It was not changed in Milestone
+3A. Public reads, submissions, and identity mutations therefore remain
+disabled.
+
+Scheduled retention now performs three separately bounded phases using the same
+server cutoff: at most ten 500-row draft-receipt batches, at most ten 500-row
+expired-claim batches, and at most ten 500-row expired recovery-operation
+batches. Draft receipt deletion does not touch players, runs, identity events,
+or ranking history. Claim deletion does not touch its accepted run. Recovery
+operation cleanup never deletes an unexpired retry receipt and does not touch
+the player or audit event. Used claims cannot be used again while retained, and
+their audit event survives claim expiry cleanup. Recovery and rename never
+replace a player row, so history remains attached. Automatic identity deletion
+is deferred; foreign-key restrictions prevent accidental orphaning.
+
+## Local verification and controlled next step
+
+Local verification is offline:
 
 ```bash
 npm run db:migrations:list:local
 npm run db:migrations:apply:local
 npm run test:leaderboard
+npm run test:draft-submission
+npm run test:d1c3-retention-cleanup
 npm run test:validation-worker
 npm run functions:typecheck
 npm run validation-worker:typecheck
 ```
 
-The integration suite exercises a real signed-ticket fixture, authoritative
-replay and scoring, atomic SQLite-backed D1 behavior, exact retry,
-independent identical runs, ranking, and receipt cleanup. It performs no
-network request.
+The integration suite uses the actual signed-ticket verifier, deterministic
+replay and scorer, and a SQLite-backed D1 adapter for:
 
-Future activation is not a single switch. It requires a reviewed identity and
-label decision, an approved cumulative decision if that board is desired,
-schema 3 applied to the intended remote database, an environment-specific
-cursor secret, explicit preview flags and classification, privacy/moderation
-review, platform rate-limit and load review, preview smoke validation, and
-separate deployment authorization. Production migration, deployment, binding,
-secret, and feature activation remain separately authorized operations.
+```text
+submission -> pending placement -> claim -> returning credential
+  -> shared-rank read -> rename -> second-device recovery -> retention
+```
+
+It performs no live network request or remote mutation.
+
+The next controlled product step is the separate player-facing UI milestone:
+store the device credential locally, present qualification before name setup,
+show and acknowledge the recovery code at the authorized boundary, integrate
+rename/recovery/status, and render the v2 top-three/shared-rank board contract.
+Remote migration, secret configuration, preview activation, smoke testing,
+deployment, and production work each remain separate reviewed operations.

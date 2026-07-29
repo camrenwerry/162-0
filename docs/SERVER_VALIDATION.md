@@ -11,9 +11,11 @@ verifies that ticket in preview validation before replay. Phase D1C.1 adds the
 disabled persistence foundation, D1C.2 adds the disabled atomic submission
 path, D1C.3 adds the scheduled retention handler, and D1C.4 separates its
 preview activation states. Milestone 2 adds the disabled leaderboard schema,
-verified-run audit path, and read API foundation. Submission and Cron remain
-disabled in the checked-in defaults, leaderboard activation remains disabled,
-and no phase activates public identity resolution, analytics, or moderation.
+verified-run audit path, and read API foundation. Milestone 3A adds the local
+account-free identity, placement, top-three, and shared-rank contract.
+Submission and Cron remain disabled in the checked-in defaults, leaderboard
+and identity activation remain disabled, and no phase activates analytics or
+public moderation.
 
 ## Module boundaries
 
@@ -746,14 +748,13 @@ handler performed its read-only schema query; the ticket and validation handlers
 did not access the new binding, and no D1C.1 handler called `run`, `batch`, or
 `exec`.
 
-Disabled health treats database schema 1 and 2 as compatible so an additive
-migration and compatible code can be ordered safely. A missing/corrupt/future
-schema remains degraded. D1C.4 publishes the existing submission protocol in
-health only when the Pages flag requests activation and Pages can reach exact
-schema version 3 after Milestone 2. Otherwise enabled intent reports degraded
-and unavailable. Even with exact schema 3, Pages reports private write
-execution as externally unverified because it cannot prove the private Worker
-flag, binding, signing secret, Service Binding health, or an actual write.
+At the D1C.1 snapshot, disabled health treated database schema 1 and 2 as
+compatible so an additive migration and compatible code could be ordered
+safely. D1C.4 later required exact schema 3 for enabled submission intent.
+Milestone 3A advances the current exact write-ready schema to version 4.
+Otherwise enabled intent reports degraded and unavailable. Even with the exact
+schema, Pages reports private write execution as externally unverified because
+it cannot prove an actual private write.
 
 D1C.1 is local-only. It does not apply a remote preview or production migration,
 deploy a Worker or Pages revision, configure a secret, enable submission, or
@@ -767,9 +768,11 @@ disabled gate is first and returns the generic 404 without reading the body,
 deriving a rate key, invoking the Service Binding, or accessing D1.
 
 At the D1C.2 stop point, the private implementation checked schema version 2
-and retained state before current ticket verification. Milestone 2 advances
-the write-ready requirement to schema version 3 and atomically adds the durable
-leaderboard audit row. Exact token and transcript retries return the
+and retained state before current ticket verification. Milestone 2 advanced
+the write-ready requirement to schema version 3 and atomically added the
+durable leaderboard audit row. Milestone 3A advances the current requirement
+to version 4 and adds pending identity claims and placement enrichment. Exact
+token and transcript retries return the
 immutable stored receipt without replay or rescoring. New submissions perform
 ticket verification, transcript binding, deterministic replay, authoritative
 scoring, and one atomic D1 batch containing an insert-on-conflict and row select.
@@ -790,12 +793,15 @@ production environment keeps an empty Cron list and no D1 binding. Worker
 public URLs remain disabled, fetch routing is unchanged, and there is no HTTP
 cleanup route.
 
-The handler samples current server time exactly once, requires schema version 3,
-and binds that cutoff to at most ten sequential DELETE statements. Each deletes
-at most 500 `draft_submissions` rows whose stored `retain_until_ms` is less than
-or equal to the cutoff, ordered by `retain_until_ms, ticket_id`. Fewer than 500
-deletions completes the run. Ten full batches stop at 5,000 deletions and emit
-the conservative bounded `cleanup.backlog` outcome without another query.
+The current handler samples server time exactly once, requires schema version
+4, and runs separately bounded receipt, expired-identity-claim, and expired
+recovery-operation phases. Each phase executes at most ten sequential DELETE
+statements of at most 500 rows. Receipts use `retain_until_ms, ticket_id`;
+claims use `expires_at_ms, claim_id`; recovery operations use
+`expires_at_ms, operation_digest`. Fewer than 500 deletions completes that
+phase. Ten full batches conservatively report backlog. No phase deletes
+leaderboard runs, players, or identity events, and unexpired recovery retry
+state is retained.
 
 Failure stops before any later batch, emits only `cleanup.failed` with bounded
 aggregate counts, and rejects the event so default Cloudflare retry behavior is
@@ -815,7 +821,17 @@ no submission schema or write capability. Configured intent with missing,
 unreachable, malformed, older, or future D1 schema publishes no submission
 schema and reports writes unavailable. Exact reachable schema 3 publishes
 `pennant-draft-submission-v1`, reports schema readiness, and keeps operational
-writes externally unverified.
+writes externally unverified at the D1C.4 snapshot.
+
+Milestone 3A does not modify those protected activation artifacts. The current
+code now requires exact schema version 4 for submission, leaderboard read, and
+identity readiness. The old generated states therefore must not be used to
+activate Milestone 3A implicitly; a new reviewed activation phase must account
+for migration 0004, both identity gates, the private identity signing key, the
+cursor signing key, and separate preview evidence. Pages checks identity
+readiness with an internal GET over the existing private Service Binding; the
+Worker validates its own flag, signing key, D1 binding, and exact schema, so
+the private identity key is not copied into Pages.
 
 Guarded preview-only submission and retention harnesses separately verify
 endpoint results, the complete production submission receipt shape and

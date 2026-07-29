@@ -28,6 +28,7 @@ function migratedDatabase() {
     'migrations/0001_backend_foundation.sql',
     'migrations/0002_draft_submissions.sql',
     'migrations/0003_leaderboard_foundation.sql',
+    'migrations/0004_leaderboard_identity_ranking.sql',
   ]) sqlite.exec(readFileSync(migration, 'utf8'))
   return sqlite
 }
@@ -39,14 +40,32 @@ function addPlayer(
   status: 'active' | 'disabled' = 'active',
 ) {
   const digest = digestSeed.repeat(Math.ceil(64 / digestSeed.length)).slice(0, 64)
+  const nameKey = label.normalize('NFKC').toUpperCase().toLowerCase().normalize('NFKC')
   const result = sqlite.prepare(`
     INSERT INTO leaderboard_players (
       identity_key_digest,
       public_label,
       status,
-      created_at_ms
-    ) VALUES (?, ?, ?, ?)
-  `).run(digest, label, status, DAILY_START - 1)
+      created_at_ms,
+      public_name_key,
+      device_credential_digest,
+      recovery_code_digest,
+      recovery_version,
+      credential_rotated_at_ms,
+      identity_updated_at_ms,
+      identity_state
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?, 'active')
+  `).run(
+    digest,
+    label,
+    status,
+    DAILY_START - 1,
+    nameKey,
+    digest,
+    digest,
+    DAILY_START - 1,
+    DAILY_START - 1,
+  )
   return Number(result.lastInsertRowid)
 }
 
@@ -115,6 +134,7 @@ const disabledPlayer = addPlayer(sqlite, 'e', 'Player Elm', 'disabled')
 addRun(sqlite, { playerId: playerA, submittedAtMs: DAILY_START, wins: 100, scoreTenths: 800 })
 addRun(sqlite, { playerId: playerA, submittedAtMs: DAILY_START + 1_000, wins: 110, scoreTenths: 900 })
 addRun(sqlite, { playerId: playerA, submittedAtMs: DAILY_START + 2_000, wins: 90, scoreTenths: 990 })
+addRun(sqlite, { playerId: playerA, submittedAtMs: DAILY_START + 2_100, wins: 95, scoreTenths: 850 })
 addRun(sqlite, { playerId: playerB, submittedAtMs: DAILY_START + 500, wins: 110, scoreTenths: 900 })
 addRun(sqlite, { playerId: playerC, submittedAtMs: DAILY_START + 1_500, wins: 109, scoreTenths: 910 })
 addRun(sqlite, { playerId: playerD, submittedAtMs: DAILY_START + 2_500, wins: 108, scoreTenths: 920 })
@@ -188,11 +208,14 @@ assert.deepEqual(daily.entries.map((entry) => ({
   submittedAt: entry.submittedAt,
 })), [
   { rank: 1, label: 'Player Birch', wins: 110, score: 90, submittedAt: new Date(DAILY_START + 500).toISOString() },
-  { rank: 2, label: 'Player Ash', wins: 110, score: 90, submittedAt: new Date(DAILY_START + 1_000).toISOString() },
+  { rank: 1, label: 'Player Ash', wins: 110, score: 90, submittedAt: new Date(DAILY_START + 1_000).toISOString() },
   { rank: 3, label: 'Player Cedar', wins: 109, score: 91, submittedAt: new Date(DAILY_START + 1_500).toISOString() },
   { rank: 4, label: 'Player Dogwood', wins: 108, score: 92, submittedAt: new Date(DAILY_START + 2_500).toISOString() },
+  { rank: 5, label: 'Player Ash', wins: 100, score: 80, submittedAt: new Date(DAILY_START).toISOString() },
+  { rank: 6, label: 'Player Ash', wins: 95, score: 85, submittedAt: new Date(DAILY_START + 2_100).toISOString() },
 ])
 assert.equal(daily.entries.some(({ projectedWins }) => projectedWins === 162), false)
+assert.equal(daily.entries.some(({ projectedWins }) => projectedWins === 90), false)
 
 const weekly = await queryBestRunLeaderboard(database, 'production', leaderboardPeriodWindow('weekly', NOW), 0, 10)
 assert(weekly)
@@ -211,11 +234,11 @@ assert(cumulativeInputs)
 const playerAInputs = cumulativeInputs.find(({ playerId }) => playerId === playerA)
 assert.deepEqual(playerAInputs, {
   playerId: playerA,
-  qualifyingRunCount: 3,
-  verifiedWinsSum: 300,
-  verifiedScoreTenthsSum: 2690,
+  qualifyingRunCount: 4,
+  verifiedWinsSum: 395,
+  verifiedScoreTenthsSum: 3540,
   firstSubmittedAtMs: DAILY_START,
-  lastSubmittedAtMs: DAILY_START + 2_000,
+  lastSubmittedAtMs: DAILY_START + 2_100,
 })
 assert.equal(CUMULATIVE_PERFORMANCE_PUBLICLY_AVAILABLE, false)
 
@@ -265,7 +288,7 @@ assert.deepEqual(firstPage.board.periodWindow, {
 assert.deepEqual(firstPage.capabilities, { bestRun: true, cumulativePerformance: false })
 assert.deepEqual(firstPage.entries.map(({ rank, playerLabel }) => ({ rank, playerLabel })), [
   { rank: 1, playerLabel: 'Player Birch' },
-  { rank: 2, playerLabel: 'Player Ash' },
+  { rank: 1, playerLabel: 'Player Ash' },
 ])
 assert.equal(firstPage.page.limit, 2)
 assert(firstPage.page.nextCursor)
@@ -276,7 +299,7 @@ assert.doesNotMatch(
 
 const decodedCursor = await decodeLeaderboardCursor(firstPage.page.nextCursor, CURSOR_KEY)
 assert(decodedCursor)
-assert.equal(decodedCursor.afterRank, 2)
+assert.equal(decodedCursor.afterOrdinal, 2)
 assert.equal(decodedCursor.asOfMs, NOW)
 const secondPageResponse = await handleLeaderboardRequest(
   new Request(`${ENDPOINT}?mode=classic&period=daily&family=best-run&limit=2&cursor=${encodeURIComponent(firstPage.page.nextCursor)}`),
@@ -310,7 +333,26 @@ assert.deepEqual(secondPage.entries, [
     mode: 'classic',
   },
 ])
-assert.equal(secondPage.page.nextCursor, null)
+assert(secondPage.page.nextCursor)
+const thirdPageResponse = await handleLeaderboardRequest(
+  new Request(`${ENDPOINT}?mode=classic&period=daily&family=best-run&limit=2&cursor=${encodeURIComponent(secondPage.page.nextCursor)}`),
+  environment,
+  () => { throw new Error('cursor page must not sample a new time') },
+)
+assert.equal(thirdPageResponse.status, 200)
+const thirdPage = await thirdPageResponse.json() as {
+  entries: Array<{ rank: number, playerLabel: string, projectedWins: number }>
+  page: { nextCursor: string | null }
+}
+assert.deepEqual(thirdPage.entries.map(({ rank, playerLabel, projectedWins }) => ({
+  rank,
+  playerLabel,
+  projectedWins,
+})), [
+  { rank: 5, playerLabel: 'Player Ash', projectedWins: 100 },
+  { rank: 6, playerLabel: 'Player Ash', projectedWins: 95 },
+])
+assert.equal(thirdPage.page.nextCursor, null)
 
 sqlite.prepare(`
   UPDATE leaderboard_runs
@@ -337,6 +379,52 @@ sqlite.prepare(`
     invalidated_at_ms = NULL
   WHERE player_id = ?
 `).run(playerC)
+
+sqlite.prepare(`
+  UPDATE leaderboard_runs
+  SET
+    eligibility_status = 'moderated',
+    eligibility_reason = 'moderated',
+    invalidated_at_ms = ?
+  WHERE player_id = ?
+`).run(DAILY_END + 2, playerC)
+const afterRunModeration = await queryBestRunLeaderboard(
+  database,
+  'production',
+  { period: 'daily', asOfMs: DAILY_END, startMs: DAILY_START, endMs: DAILY_END },
+  0,
+  10,
+)
+assert(afterRunModeration)
+assert.equal(afterRunModeration.entries.some(({ playerLabel }) => playerLabel === 'Player Cedar'), false)
+sqlite.prepare(`
+  UPDATE leaderboard_runs
+  SET
+    eligibility_status = 'eligible',
+    eligibility_reason = 'eligible',
+    invalidated_at_ms = NULL
+  WHERE player_id = ?
+`).run(playerC)
+
+sqlite.prepare(`
+  UPDATE leaderboard_players
+  SET identity_state = 'moderated'
+  WHERE player_id = ?
+`).run(playerD)
+const afterIdentityModeration = await queryBestRunLeaderboard(
+  database,
+  'production',
+  { period: 'daily', asOfMs: DAILY_END, startMs: DAILY_START, endMs: DAILY_END },
+  0,
+  10,
+)
+assert(afterIdentityModeration)
+assert.equal(afterIdentityModeration.entries.some(({ playerLabel }) => playerLabel === 'Player Dogwood'), false)
+sqlite.prepare(`
+  UPDATE leaderboard_players
+  SET identity_state = 'active'
+  WHERE player_id = ?
+`).run(playerD)
 
 const tamperedCursor = `${firstPage.page.nextCursor.slice(0, -1)}${firstPage.page.nextCursor.endsWith('a') ? 'b' : 'a'}`
 for (const url of [
@@ -398,7 +486,7 @@ const missingKeyResponse = await handleLeaderboardRequest(new Request(ENDPOINT),
   LEADERBOARD_CURSOR_SIGNING_KEY: 'short',
 })
 assert.equal(missingKeyResponse.status, 503)
-for (const incompatibleVersion of [2, 4]) {
+for (const incompatibleVersion of [2, 3, 5]) {
   sqlite.prepare('UPDATE backend_schema SET version = ? WHERE id = 1').run(incompatibleVersion)
   const incompatibleSchemaResponse = await handleLeaderboardRequest(
     new Request(ENDPOINT),
@@ -407,7 +495,7 @@ for (const incompatibleVersion of [2, 4]) {
   )
   assert.equal(incompatibleSchemaResponse.status, 503)
 }
-sqlite.prepare('UPDATE backend_schema SET version = 3 WHERE id = 1').run()
+sqlite.prepare('UPDATE backend_schema SET version = 4 WHERE id = 1').run()
 const failingDatabaseResponse = await handleLeaderboardRequest(new Request(ENDPOINT), {
   ...environment,
   DB: {
@@ -457,4 +545,4 @@ assert.equal(empty.page.nextCursor, null)
 
 sqlite.close()
 
-console.log('Leaderboard API tests passed: deterministic Best Run ranking, UTC windows, mode/data isolation, authenticated cursor pagination, cumulative blocking, privacy, bounds, and redacted failures are verified.')
+console.log('Leaderboard API tests passed: top-three Best Run selection, shared competition ranks, UTC windows, mode/data isolation, tie-safe authenticated cursor pagination, cumulative blocking, privacy, bounds, and redacted failures are verified.')

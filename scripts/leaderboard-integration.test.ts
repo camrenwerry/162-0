@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs'
 import { DatabaseSync } from 'node:sqlite'
 import noRerollsData from './fixtures/transcripts/ordinary-no-rerolls.json'
 import { handleLeaderboardRequest } from '../functions/lib/leaderboard'
+import { handleLeaderboardIdentityRequest } from '../functions/lib/leaderboard-identity'
 import { DRAFT_SUBMISSION_RETENTION_MS } from '../functions/lib/draft-submission'
 import { handleAuthoritativeSubmissionRequest } from '../workers/draft-validation/src/authoritative-submission'
 import { cleanupRetainedDraftSubmissions } from '../workers/draft-validation/src/retention-cleanup'
@@ -15,6 +16,7 @@ import { SqliteD1Database, type SqliteD1Statement } from './lib/sqlite-d1'
 const SUBMISSION_ENDPOINT = 'https://preview.example.test/api/v1/submit-draft'
 const LEADERBOARD_ENDPOINT = 'https://preview.example.test/api/v1/leaderboards?period=all-time'
 const CURSOR_KEY = 'leaderboard-integration-cursor-key-with-at-least-thirty-two-bytes'
+const IDENTITY_KEY = 'leaderboard-integration-identity-key-with-at-least-thirty-two-bytes'
 const FIRST_NOW = 1_800_000_000_000
 const SECOND_NOW = FIRST_NOW + 100
 const JSON_HEADERS = { 'Content-Type': 'application/json' }
@@ -26,6 +28,7 @@ function migratedDatabase() {
     'migrations/0001_backend_foundation.sql',
     'migrations/0002_draft_submissions.sql',
     'migrations/0003_leaderboard_foundation.sql',
+    'migrations/0004_leaderboard_identity_ranking.sql',
   ]) sqlite.exec(readFileSync(migration, 'utf8'))
   return sqlite
 }
@@ -41,10 +44,6 @@ function submissionRequest(body: unknown) {
 function submissionSources(now: number) {
   return {
     now: () => now,
-    resolveLeaderboardIdentity: () => ({
-      identityKeyDigest: 'a'.repeat(64),
-      publicLabel: 'Player Cedar',
-    }),
     classifyLeaderboardRun: () => ({ environment: 'production' as const, isSmoke: false }),
   }
 }
@@ -53,6 +52,8 @@ function submissionEnv(database: SqliteD1Database) {
   return {
     DRAFT_SUBMISSION_MODE: 'enabled',
     DRAFT_TICKET_SIGNING_KEY: TEST_DRAFT_TICKET_SIGNING_KEY,
+    LEADERBOARD_IDENTITY_MODE: 'enabled',
+    LEADERBOARD_IDENTITY_SIGNING_KEY: IDENTITY_KEY,
     DB: database,
   }
 }
@@ -81,10 +82,21 @@ assert.equal(firstResponse.status, 201)
 const firstReceipt = await firstResponse.json() as {
   submittedAt: string
   result: { projectedWins: number, overallScore: number, tier: string }
+  leaderboard: {
+    identity: { setupRequired: boolean }
+    claim: { state: string, capability: string }
+    periods: Record<'daily' | 'weekly' | 'all-time', { qualifies: boolean, rank: number }>
+  }
 }
 assert.equal(firstReceipt.submittedAt, new Date(FIRST_NOW).toISOString())
+assert.equal(firstReceipt.leaderboard.identity.setupRequired, true)
+assert.equal(firstReceipt.leaderboard.claim.state, 'available')
+assert.deepEqual(
+  Object.values(firstReceipt.leaderboard.periods).map(({ qualifies, rank }) => ({ qualifies, rank })),
+  Array.from({ length: 3 }, () => ({ qualifies: true, rank: 1 })),
+)
 assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM draft_submissions').get().count, 1)
-assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_players').get().count, 1)
+assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_players').get().count, 0)
 assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_runs').get().count, 1)
 assert.deepEqual(
   { ...sqlite.prepare(`
@@ -108,9 +120,37 @@ assert.deepEqual(
     verified_wins: firstReceipt.result.projectedWins,
     verified_overall_score_tenths: firstReceipt.result.overallScore * 10,
     tier_label: firstReceipt.result.tier,
-    eligibility_status: 'eligible',
-    eligibility_reason: 'eligible',
+    eligibility_status: 'identity_pending',
+    eligibility_reason: 'identity_unavailable',
   },
+)
+
+const identityEnv = {
+  LEADERBOARD_IDENTITY_MODE: 'enabled',
+  LEADERBOARD_IDENTITY_SIGNING_KEY: IDENTITY_KEY,
+  DB: database,
+}
+const claimResponse = await handleLeaderboardIdentityRequest(
+  new Request('https://preview.example.test/api/v1/leaderboard-identity-claim', {
+    method: 'POST',
+    headers: JSON_HEADERS,
+    body: JSON.stringify({
+      claimCapability: firstReceipt.leaderboard.claim.capability,
+      displayName: 'Player Cedar',
+    }),
+  }),
+  identityEnv,
+  'claim',
+  () => FIRST_NOW + 1,
+)
+assert.equal(claimResponse.status, 201)
+const claimedIdentity = await claimResponse.json() as {
+  identity: { deviceCredential: string, recoveryCode: string }
+}
+assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_players').get().count, 1)
+assert.equal(
+  sqlite.prepare('SELECT eligibility_status FROM leaderboard_runs WHERE run_id = 1').get().eligibility_status,
+  'eligible',
 )
 
 const exactRetry = await handleAuthoritativeSubmissionRequest(
@@ -144,7 +184,11 @@ const secondFixture = await createBoundValidationFixture(noRerollsData.transcrip
   },
 })
 const secondResponse = await handleAuthoritativeSubmissionRequest(
-  submissionRequest({ ticket: secondFixture.ticket, transcript: secondFixture.transcript }),
+  submissionRequest({
+    ticket: secondFixture.ticket,
+    transcript: secondFixture.transcript,
+    identityCredential: claimedIdentity.identity.deviceCredential,
+  }),
   submissionEnv(database),
   submissionSources(SECOND_NOW),
 )
@@ -155,8 +199,7 @@ assert.equal(secondReceipt.result.overallScore, firstReceipt.result.overallScore
 assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM draft_submissions').get().count, 2)
 assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_runs').get().count, 2)
 
-// A conflicting label for an existing identity digest fails the atomic batch
-// until a deliberate rename policy is implemented.
+// A supplied credential is authenticated independently of score fields.
 const conflictingLabelFixture = await createBoundValidationFixture(noRerollsData.transcript, {
   issuedAt: SECOND_NOW,
   payloadOverrides: {
@@ -167,17 +210,14 @@ const conflictingLabelResponse = await handleAuthoritativeSubmissionRequest(
   submissionRequest({
     ticket: conflictingLabelFixture.ticket,
     transcript: conflictingLabelFixture.transcript,
+    identityCredential: `ppd1_${'x'.repeat(43)}`,
   }),
   submissionEnv(database),
   {
     ...submissionSources(SECOND_NOW + 1),
-    resolveLeaderboardIdentity: () => ({
-      identityKeyDigest: 'a'.repeat(64),
-      publicLabel: 'Player Renamed',
-    }),
   },
 )
-assert.equal(conflictingLabelResponse.status, 503)
+assert.equal(conflictingLabelResponse.status, 401)
 assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM draft_submissions').get().count, 2)
 assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_runs').get().count, 2)
 
@@ -196,15 +236,61 @@ const leaderboard = await leaderboardResponse.json() as {
     submittedAt: string
   }>
 }
-assert.deepEqual(leaderboard.entries, [{
-  rank: 1,
-  playerLabel: 'Player Cedar',
-  projectedWins: firstReceipt.result.projectedWins,
-  overallScore: firstReceipt.result.overallScore,
-  tier: firstReceipt.result.tier,
-  submittedAt: new Date(FIRST_NOW).toISOString(),
-  mode: 'classic',
-}])
+assert.deepEqual(leaderboard.entries, [
+  {
+    rank: 1,
+    playerLabel: 'Player Cedar',
+    projectedWins: firstReceipt.result.projectedWins,
+    overallScore: firstReceipt.result.overallScore,
+    tier: firstReceipt.result.tier,
+    submittedAt: new Date(FIRST_NOW).toISOString(),
+    mode: 'classic',
+  },
+  {
+    rank: 1,
+    playerLabel: 'Player Cedar',
+    projectedWins: firstReceipt.result.projectedWins,
+    overallScore: firstReceipt.result.overallScore,
+    tier: firstReceipt.result.tier,
+    submittedAt: new Date(SECOND_NOW).toISOString(),
+    mode: 'classic',
+  },
+])
+
+const renameResponse = await handleLeaderboardIdentityRequest(
+  new Request('https://preview.example.test/api/v1/leaderboard-identity-rename', {
+    method: 'POST',
+    headers: JSON_HEADERS,
+    body: JSON.stringify({
+      deviceCredential: claimedIdentity.identity.deviceCredential,
+      displayName: 'Player Sequoia',
+    }),
+  }),
+  identityEnv,
+  'rename',
+  () => SECOND_NOW + 2,
+)
+assert.equal(renameResponse.status, 200)
+
+const recoveryResponse = await handleLeaderboardIdentityRequest(
+  new Request('https://preview.example.test/api/v1/leaderboard-identity-recover', {
+    method: 'POST',
+    headers: JSON_HEADERS,
+    body: JSON.stringify({
+      recoveryCode: claimedIdentity.identity.recoveryCode,
+      recoveryOperationId: `ppr1_${'R'.repeat(42)}Q`,
+    }),
+  }),
+  identityEnv,
+  'recover',
+  () => SECOND_NOW + 3,
+)
+assert.equal(recoveryResponse.status, 200)
+const recoveredIdentity = await recoveryResponse.json() as {
+  identity: { deviceCredential: string, recoveryCode: string }
+}
+assert.notEqual(recoveredIdentity.identity.deviceCredential, claimedIdentity.identity.deviceCredential)
+assert.notEqual(recoveredIdentity.identity.recoveryCode, claimedIdentity.identity.recoveryCode)
 
 const cleanup = await cleanupRetainedDraftSubmissions(
   { DB: database as unknown as D1Database },
@@ -214,6 +300,8 @@ const cleanup = await cleanupRetainedDraftSubmissions(
   },
 )
 assert.equal(cleanup.rowsDeleted, 2)
+assert.equal(cleanup.claimsDeleted, 1)
+assert.equal(cleanup.recoveryOperationsDeleted, 1)
 assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM draft_submissions').get().count, 0)
 assert.equal(sqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_runs').get().count, 2)
 
@@ -223,7 +311,10 @@ const afterCleanupResponse = await handleLeaderboardRequest(
   () => SECOND_NOW + DRAFT_SUBMISSION_RETENTION_MS + 1,
 )
 assert.equal(afterCleanupResponse.status, 200)
-assert.equal((await afterCleanupResponse.json() as { entries: unknown[] }).entries.length, 1)
+const afterCleanupText = await afterCleanupResponse.text()
+assert.equal((JSON.parse(afterCleanupText) as { entries: unknown[] }).entries.length, 2)
+assert.match(afterCleanupText, /Player Sequoia/)
+assert.doesNotMatch(afterCleanupText, /Player Cedar|deviceCredential|recoveryCode|ppd1_|PP1-/)
 
 sqlite.close()
 
@@ -254,4 +345,4 @@ assert.equal(rollbackSqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_p
 assert.equal(rollbackSqlite.prepare('SELECT COUNT(*) AS count FROM leaderboard_runs').get().count, 0)
 rollbackSqlite.close()
 
-console.log('Leaderboard integration test passed: signed ticket, replay, authoritative scoring, atomic persistence, idempotent retry, independent identical runs, ranking, and retention survival are verified locally.')
+console.log('Leaderboard integration test passed: signed ticket, authoritative scoring, pending qualification, display-name claim, returning credential, top-three/shared ranking, rename, second-device recovery, idempotency, rollback, and retention survival are verified locally.')

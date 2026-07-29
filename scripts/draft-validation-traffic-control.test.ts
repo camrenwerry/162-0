@@ -9,6 +9,7 @@ import {
 } from '../functions/api/v1/validate-draft'
 import { MAX_DRAFT_VALIDATION_BODY_BYTES } from '../functions/lib/bounded-json'
 import {
+  handlePrivateLeaderboardIdentityHealthRequest,
   handlePrivateValidationRequest,
   type PrivateValidationWorkerEnv,
   type RateLimitBinding,
@@ -223,7 +224,7 @@ assert.equal(sustainedHarness.burst.calls, 21)
 assert.equal(sustainedHarness.sustained.calls, 21)
 
 // Malformed and oversized enabled POSTs both consume quota before the Worker
-// parses their body. Health remains outside the service boundary.
+// parses their body. Ordinary health remains outside the service boundary.
 const malformedHarness = createHarness()
 const malformed = await handleValidateDraftRequest(publicRequest('{'), malformedHarness.env)
 assert.equal(malformed.status, 400)
@@ -238,6 +239,40 @@ assert.equal((await handleHealthRequest(new Request('https://preview.example.tes
   DRAFT_VALIDATION_MODE: 'enabled',
 })).status, 200)
 assert.equal(malformedHarness.serviceCalls.value, callsBeforeHealth)
+
+// Identity health uses an internal GET over the existing Service Binding so
+// Pages never needs a copy of the private Worker's signing key.
+let identityHealthQueries = 0
+const identityHealthDatabase = {
+  prepare(query: string) {
+    assert.equal(query, 'SELECT version FROM backend_schema WHERE id = 1')
+    return {
+      async first() {
+        identityHealthQueries += 1
+        return { version: 4 }
+      },
+    }
+  },
+} as unknown as D1Database
+const identityHealthEnv = {
+  LEADERBOARD_IDENTITY_MODE: 'enabled',
+  LEADERBOARD_IDENTITY_SIGNING_KEY: 'traffic-control-identity-signing-key',
+  DB: identityHealthDatabase,
+} as PrivateValidationWorkerEnv
+assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
+  new Request('https://private.example/internal/leaderboard-identity-health'),
+  identityHealthEnv,
+)).status, 204)
+assert.equal(identityHealthQueries, 1)
+assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
+  new Request('https://private.example/internal/leaderboard-identity-health'),
+  { ...identityHealthEnv, LEADERBOARD_IDENTITY_SIGNING_KEY: 'too-short' },
+)).status, 503)
+assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
+  new Request('https://private.example/internal/leaderboard-identity-health', { method: 'POST' }),
+  identityHealthEnv,
+)).status, 503)
+assert.equal(identityHealthQueries, 1)
 
 // Same-origin and method checks remain public, deterministic, and do not
 // forward a rejected request to the private Worker.

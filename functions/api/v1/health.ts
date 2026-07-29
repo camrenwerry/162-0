@@ -17,12 +17,17 @@ import { draftSubmissionFeatureState } from '../../lib/draft-submission-mode'
 import { draftValidationFeatureState } from '../../lib/draft-validation-mode'
 import type { BackendEnv } from '../../lib/env'
 import {
+  leaderboardIdentityFeatureState,
+  type LeaderboardIdentityModeEnv,
+} from '../../lib/leaderboard-identity-mode'
+import {
   leaderboardReadFeatureState,
   leaderboardReadRuntimeIsConfigured,
   type LeaderboardReadModeEnv,
 } from '../../lib/leaderboard-mode'
 
 const ALLOWED_METHODS = 'GET, HEAD'
+const PRIVATE_IDENTITY_HEALTH_URL = 'https://pennant-pursuit.internal/internal/leaderboard-identity-health'
 
 const dataVersionLabel = DATA_VERSION
   .replace(/^lahman-/i, 'Lahman ')
@@ -58,7 +63,19 @@ function jsonResponse(payload: unknown, status: number) {
   return new Response(JSON.stringify(payload), { status, headers: responseHeaders() })
 }
 
-type HealthEnv = BackendEnv & LeaderboardReadModeEnv
+async function privateIdentityIsReady(service: Pick<Fetcher, 'fetch'> | undefined) {
+  if (!service || typeof service.fetch !== 'function') return false
+  try {
+    const response = await service.fetch(new Request(PRIVATE_IDENTITY_HEALTH_URL))
+    return response.status === 204
+  } catch {
+    return false
+  }
+}
+
+type HealthEnv = BackendEnv & LeaderboardReadModeEnv & LeaderboardIdentityModeEnv & {
+  readonly VALIDATION_SERVICE?: Pick<Fetcher, 'fetch'>
+}
 
 export async function handleHealthRequest(request: Request, env: HealthEnv = {}) {
   if (request.method === 'GET') {
@@ -68,6 +85,9 @@ export async function handleHealthRequest(request: Request, env: HealthEnv = {})
     const leaderboardRequested = leaderboardReadFeatureState(env) === 'enabled'
     const leaderboardConfigured = leaderboardRequested
       && leaderboardReadRuntimeIsConfigured(env)
+    const identityRequested = leaderboardIdentityFeatureState(env) === 'enabled'
+    const identityRuntimeConfigured = identityRequested
+      && await privateIdentityIsReady(env.VALIDATION_SERVICE)
     const submissionSchemaReady = submissionConfigured
       && d1.configured
       && d1.reachable
@@ -76,14 +96,22 @@ export async function handleHealthRequest(request: Request, env: HealthEnv = {})
       && d1.configured
       && d1.reachable
       && databaseSchemaIsCompatible(d1.schemaVersion, true)
+    const identitySchemaReady = identityRuntimeConfigured
+      && d1.configured
+      && d1.reachable
+      && databaseSchemaIsCompatible(d1.schemaVersion, true)
     const submissionSchema = submissionSchemaReady ? DRAFT_SUBMISSION_SCHEMA_VERSION : null
     const databaseHealthy = d1.reachable
-      && databaseSchemaIsCompatible(d1.schemaVersion, submissionConfigured || leaderboardRequested)
-    const dataFeatureConfigured = submissionConfigured || leaderboardRequested
+      && databaseSchemaIsCompatible(
+        d1.schemaVersion,
+        submissionConfigured || leaderboardRequested || identityRequested,
+      )
+    const dataFeatureConfigured = submissionConfigured || leaderboardRequested || identityRequested
     const healthy = dataFeatureConfigured
       ? d1.configured
         && databaseHealthy
         && (!leaderboardRequested || leaderboardConfigured)
+        && (!identityRequested || identitySchemaReady)
       : !d1.configured || databaseHealthy
     const operationalWriteReadiness = !submissionConfigured
       ? 'disabled'
@@ -114,6 +142,9 @@ export async function handleHealthRequest(request: Request, env: HealthEnv = {})
         submissions: !submissionConfigured
           ? 'disabled'
           : submissionSchemaReady ? 'schema-ready' : 'configured',
+        ...(identityRequested
+          ? { leaderboardIdentity: identitySchemaReady ? 'schema-ready' : 'configured' }
+          : {}),
         writes: operationalWriteReadiness,
         d1: d1State,
       }),

@@ -32,9 +32,25 @@ import {
   type DraftSubmissionErrorCode,
 } from '../../../functions/lib/draft-submission-response'
 import {
-  parseDraftRequestEnvelope,
+  parseDraftSubmissionRequestEnvelope,
   validateDraftSupportedVersions,
 } from '../../../functions/lib/draft-validation-schema'
+import {
+  deriveClaimCapability,
+  LEADERBOARD_CLAIM_TTL_MS,
+  resolveLeaderboardIdentityCredential,
+  type CredentialLookupDatabase,
+} from '../../../functions/lib/leaderboard-identity'
+import {
+  isLeaderboardIdentityEnabled,
+  isLeaderboardIdentitySigningKey,
+  type LeaderboardIdentityModeEnv,
+} from '../../../functions/lib/leaderboard-identity-mode'
+import {
+  calculateLeaderboardPlacement,
+  emptyLeaderboardPlacement,
+  type LeaderboardPlacement,
+} from '../../../functions/lib/leaderboard-placement'
 import {
   verifyDraftTicket,
   type DraftTicketPayload,
@@ -49,7 +65,7 @@ import {
 
 export const DRAFT_SUBMISSION_ALLOWED_METHODS = 'POST'
 
-const EXPECTED_DATABASE_SCHEMA_VERSION = 3
+const EXPECTED_DATABASE_SCHEMA_VERSION = 4
 const SELECT_SCHEMA_SQL = 'SELECT version FROM backend_schema WHERE id = 1'
 const SELECT_SUBMISSION_SQL = `
   SELECT
@@ -112,9 +128,37 @@ const INSERT_LEADERBOARD_RUN_SQL = `
   )
   ON CONFLICT(source_ticket_id) DO NOTHING
 `
+const INSERT_IDENTITY_CLAIM_SQL = `
+  INSERT INTO leaderboard_identity_claims (
+    run_id,
+    claim_token_digest,
+    created_at_ms,
+    expires_at_ms,
+    used_at_ms,
+    claimed_player_id,
+    claimed_name_key
+  )
+  SELECT
+    run_id,
+    ?,
+    ?,
+    ?,
+    NULL,
+    NULL,
+    NULL
+  FROM leaderboard_runs
+  WHERE source_ticket_id = ?
+    AND game_mode = 'classic'
+    AND environment != 'test'
+    AND is_smoke = 0
+    AND eligibility_status = 'identity_pending'
+    AND eligibility_reason = 'identity_unavailable'
+  ON CONFLICT(run_id) DO NOTHING
+`
 const SELECT_LEADERBOARD_RUN_SQL = `
   SELECT
     r.source_ticket_id,
+    r.run_id,
     r.player_id,
     r.game_mode,
     r.environment,
@@ -132,6 +176,15 @@ const SELECT_LEADERBOARD_RUN_SQL = `
   FROM leaderboard_runs AS r
   LEFT JOIN leaderboard_players AS p ON p.player_id = r.player_id
   WHERE r.source_ticket_id = ?
+  LIMIT 1
+`
+const SELECT_IDENTITY_CLAIM_BY_RUN_SQL = `
+  SELECT
+    claim_token_digest,
+    expires_at_ms,
+    used_at_ms
+  FROM leaderboard_identity_claims
+  WHERE run_id = ?
   LIMIT 1
 `
 
@@ -156,7 +209,7 @@ interface SubmissionDatabase {
   batch(statements: SubmissionPreparedStatement[]): Promise<unknown>
 }
 
-export interface SubmissionModeEnv {
+export interface SubmissionModeEnv extends LeaderboardIdentityModeEnv {
   readonly DRAFT_SUBMISSION_MODE?: unknown
   readonly DRAFT_TICKET_SIGNING_KEY?: unknown
   readonly DB?: unknown
@@ -199,7 +252,14 @@ interface ProposedLeaderboardRun {
   readonly eligibility_reason: 'eligible' | 'identity_unavailable' | 'test_or_smoke_data'
 }
 
+interface ProposedIdentityClaim {
+  readonly digest: string
+  readonly created_at_ms: number
+  readonly expires_at_ms: number
+}
+
 interface StoredLeaderboardRun extends ProposedLeaderboardRun {
+  readonly run_id: number
   readonly player_id: number | null
   readonly invalidated_at_ms: null
   readonly public_label: string | null
@@ -224,6 +284,10 @@ interface SubmissionSources {
     transcript: DraftTranscript,
     ticket: DraftTicketPayload,
   ) => LeaderboardSubmissionClassification
+  readonly calculatePlacement: (
+    database: SubmissionDatabase,
+    run: StoredLeaderboardRun,
+  ) => LeaderboardPlacement | Promise<LeaderboardPlacement>
 }
 
 const defaultSources: SubmissionSources = Object.freeze({
@@ -237,6 +301,22 @@ const defaultSources: SubmissionSources = Object.freeze({
   // and identity-pending until an independently reviewed resolver is added.
   resolveLeaderboardIdentity: () => null,
   classifyLeaderboardRun: () => Object.freeze({ environment: 'preview', isSmoke: false }),
+  calculatePlacement: (
+    database: SubmissionDatabase,
+    run: StoredLeaderboardRun,
+  ) => (
+    run.game_mode === 'classic'
+    && run.environment !== 'test'
+    && run.is_smoke === 0
+      ? calculateLeaderboardPlacement(
+        database,
+        run.environment,
+        run.run_id,
+        run.submitted_at_ms,
+        run.eligibility_status === 'identity_pending',
+      )
+      : emptyLeaderboardPlacement(run.submitted_at_ms)
+  ),
 })
 
 const IDENTITY_DIGEST_PATTERN = /^[0-9a-f]{64}$/
@@ -490,7 +570,7 @@ function createLeaderboardRunProposal(
 
 function storedLeaderboardRun(value: unknown, ticketId: string): StoredLeaderboardRun | null {
   if (!isRecord(value) || !hasExactKeys(value, [
-    'source_ticket_id', 'player_id', 'game_mode', 'environment', 'is_smoke',
+    'source_ticket_id', 'run_id', 'player_id', 'game_mode', 'environment', 'is_smoke',
     'submitted_at_ms', 'verified_wins', 'verified_overall_score_tenths',
     'tier_label', 'eligibility_status', 'eligibility_reason',
     'invalidated_at_ms', 'identity_key_digest', 'public_label', 'player_status',
@@ -510,6 +590,9 @@ function storedLeaderboardRun(value: unknown, ticketId: string): StoredLeaderboa
     && value.player_status === 'active'
   if (
     value.source_ticket_id !== ticketId
+    || typeof value.run_id !== 'number'
+    || !Number.isSafeInteger(value.run_id)
+    || value.run_id < 1
     || (!playerIsNull && !playerIsValid)
     || (value.game_mode !== 'classic' && value.game_mode !== 'hard')
     || (value.environment !== 'preview' && value.environment !== 'production' && value.environment !== 'test')
@@ -540,6 +623,7 @@ function storedLeaderboardRun(value: unknown, ticketId: string): StoredLeaderboa
   ) return null
   return {
     source_ticket_id: value.source_ticket_id,
+    run_id: value.run_id,
     player_id: value.player_id as number | null,
     identity_key_digest: value.identity_key_digest as string | null,
     public_label: value.public_label as string | null,
@@ -656,6 +740,80 @@ async function readRetainedRow(database: SubmissionDatabase, ticketId: string) {
   return storedSubmissionRow(value, ticketId) ?? false
 }
 
+async function readLeaderboardRun(database: SubmissionDatabase, ticketId: string) {
+  const value = await database.prepare(SELECT_LEADERBOARD_RUN_SQL).bind(ticketId).first<unknown>()
+  if (value === null) return null
+  return storedLeaderboardRun(value, ticketId)
+}
+
+async function enrichedSubmissionResponse(
+  baseResponse: Response,
+  database: SubmissionDatabase,
+  run: StoredLeaderboardRun,
+  ticketTokenDigest: string,
+  env: SubmissionModeEnv,
+  nowMs: number,
+  calculatePlacement: SubmissionSources['calculatePlacement'],
+) {
+  if (baseResponse.status !== 200 && baseResponse.status !== 201) return baseResponse
+  const placement = await calculatePlacement(database, run)
+
+  let claim: Readonly<Record<string, unknown>> = Object.freeze({ state: 'not-required' })
+  if (placement.identity.setupRequired) {
+    claim = Object.freeze({ state: 'disabled' })
+    if (
+      isLeaderboardIdentityEnabled(env)
+      && isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)
+    ) {
+      const capability = await deriveClaimCapability(
+        env.LEADERBOARD_IDENTITY_SIGNING_KEY,
+        ticketTokenDigest,
+      )
+      const stored = await database.prepare(SELECT_IDENTITY_CLAIM_BY_RUN_SQL)
+        .bind(run.run_id)
+        .first<{
+          claim_token_digest?: unknown
+          expires_at_ms?: unknown
+          used_at_ms?: unknown
+        }>()
+      if (
+        stored
+        && stored.claim_token_digest === capability.digest
+        && safeTimestamp(stored.expires_at_ms)
+        && (stored.used_at_ms === null || safeTimestamp(stored.used_at_ms))
+      ) {
+        claim = stored.used_at_ms !== null
+          ? Object.freeze({ state: 'claimed' })
+          : nowMs >= stored.expires_at_ms
+            ? Object.freeze({ state: 'expired' })
+            : Object.freeze({
+              state: 'available',
+              capability: capability.token,
+              expiresAt: canonicalTimestamp(stored.expires_at_ms),
+            })
+      }
+    }
+  }
+  const baseText = await baseResponse.text()
+  let basePayload: unknown
+  try {
+    basePayload = parseStrictJson(baseText)
+  } catch {
+    return errorResponse('submission_unavailable')
+  }
+  if (!isRecord(basePayload) || JSON.stringify(basePayload) !== baseText) {
+    return errorResponse('submission_unavailable')
+  }
+  const successStatus = baseResponse.status === 201 ? 201 : 200
+  return draftSubmissionSuccessResponse(JSON.stringify({
+    ...basePayload,
+    leaderboard: Object.freeze({
+      ...placement,
+      claim,
+    }),
+  }), successStatus)
+}
+
 function insertedRowMatchesProposal(row: StoredSubmissionRow, proposal: ProposedSubmissionRow) {
   const tokenMatches = digestMatches(row.ticket_token_digest, proposal.ticket_token_digest)
   const transcriptMatches = digestMatches(row.transcript_digest, proposal.transcript_digest)
@@ -674,6 +832,7 @@ async function persistSubmissionAtomically(
   proposal: ProposedSubmissionRow,
   leaderboard: ProposedLeaderboardRun,
   identity: LeaderboardSubmissionIdentity | null,
+  claim: ProposedIdentityClaim | null,
 ) {
   let batchValue: unknown
   try {
@@ -708,6 +867,14 @@ async function persistSubmissionAtomically(
       leaderboard.eligibility_status,
       leaderboard.eligibility_reason,
     ))
+    if (claim) {
+      statements.push(database.prepare(INSERT_IDENTITY_CLAIM_SQL).bind(
+        claim.digest,
+        claim.created_at_ms,
+        claim.expires_at_ms,
+        leaderboard.source_ticket_id,
+      ))
+    }
     statements.push(database.prepare(SELECT_SUBMISSION_SQL).bind(proposal.ticket_id))
     statements.push(database.prepare(SELECT_LEADERBOARD_RUN_SQL).bind(proposal.ticket_id))
     batchValue = await database.batch(statements)
@@ -715,13 +882,20 @@ async function persistSubmissionAtomically(
     return errorResponse('submission_unavailable')
   }
 
-  const expectedLength = identity ? 5 : 4
+  const expectedLength = 4 + (identity ? 1 : 0) + (claim ? 1 : 0)
   if (!Array.isArray(batchValue) || batchValue.length !== expectedLength) return errorResponse('submission_unavailable')
-  const insertResult = batchValue[0]
-  const identityResult = identity ? batchValue[1] : null
-  const runInsertResult = batchValue[identity ? 2 : 1]
-  const selectResult = batchValue[identity ? 3 : 2]
-  const runSelectResult = batchValue[identity ? 4 : 3]
+  let resultIndex = 0
+  const insertResult = batchValue[resultIndex]
+  resultIndex += 1
+  const identityResult = identity ? batchValue[resultIndex] : null
+  if (identity) resultIndex += 1
+  const runInsertResult = batchValue[resultIndex]
+  resultIndex += 1
+  const claimInsertResult = claim ? batchValue[resultIndex] : null
+  if (claim) resultIndex += 1
+  const selectResult = batchValue[resultIndex]
+  resultIndex += 1
+  const runSelectResult = batchValue[resultIndex]
   if (!isRecord(insertResult) || insertResult.success !== true || !isRecord(insertResult.meta)) {
     return errorResponse('submission_unavailable')
   }
@@ -740,6 +914,16 @@ async function persistSubmissionAtomically(
   const runChanges = runInsertResult.meta.changes
   if (runChanges !== 0 && runChanges !== 1) return errorResponse('submission_unavailable')
   if (runChanges !== changes) return errorResponse('submission_unavailable')
+  if (claimInsertResult !== null) {
+    if (
+      !isRecord(claimInsertResult)
+      || claimInsertResult.success !== true
+      || !isRecord(claimInsertResult.meta)
+    ) return errorResponse('submission_unavailable')
+    const claimChanges = claimInsertResult.meta.changes
+    if (claimChanges !== 0 && claimChanges !== 1) return errorResponse('submission_unavailable')
+    if (changes === 1 && claimChanges !== 1) return errorResponse('submission_unavailable')
+  }
   if (!isRecord(selectResult) || selectResult.success !== true || !Array.isArray(selectResult.results) || selectResult.results.length !== 1) {
     return errorResponse('submission_unavailable')
   }
@@ -780,10 +964,12 @@ export async function handleAuthoritativeSubmissionRequest(
 
   let ticket: string
   let transcript: DraftTranscript
+  let identityCredential: string | null
   try {
-    const envelope = parseDraftRequestEnvelope(await readBoundedJson(request))
+    const envelope = parseDraftSubmissionRequestEnvelope(await readBoundedJson(request))
     ticket = envelope.ticket
     transcript = envelope.transcript
+    identityCredential = envelope.identityCredential
   } catch (error) {
     return error instanceof DraftValidationPublicError
       ? validationErrorResponse(error)
@@ -795,6 +981,11 @@ export async function handleAuthoritativeSubmissionRequest(
   }
   const database = submissionDatabase(env.DB)
   if (!database) return errorResponse('submission_unavailable')
+  const sources: SubmissionSources = { ...defaultSources, ...sourceOverrides }
+  const requestNowMs = sources.now()
+  if (!safeTimestamp(requestNowMs) || canonicalTimestamp(requestNowMs) === null) {
+    return errorResponse('submission_unavailable')
+  }
 
   let ticketTokenDigest: string
   let transcriptDigest: string
@@ -815,12 +1006,34 @@ export async function handleAuthoritativeSubmissionRequest(
     return errorResponse('submission_unavailable')
   }
   if (retained === false) return errorResponse('submission_unavailable')
-  if (retained) return reconcileRetainedRow(retained, ticketTokenDigest, transcriptDigest)
+  if (retained) {
+    const reconciled = reconcileRetainedRow(retained, ticketTokenDigest, transcriptDigest)
+    if (reconciled.status !== 200) return reconciled
+    let storedRun: StoredLeaderboardRun | null
+    try {
+      storedRun = await readLeaderboardRun(database, transcript.header.draftId)
+    } catch {
+      return errorResponse('submission_unavailable')
+    }
+    if (!storedRun) return errorResponse('submission_unavailable')
+    try {
+      return await enrichedSubmissionResponse(
+        reconciled,
+        database,
+        storedRun,
+        ticketTokenDigest,
+        env,
+        requestNowMs,
+        sources.calculatePlacement,
+      )
+    } catch {
+      return errorResponse('submission_unavailable')
+    }
+  }
 
-  const sources: SubmissionSources = { ...defaultSources, ...sourceOverrides }
   let verification: DraftTicketVerificationResult
   try {
-    verification = await sources.verifyTicket(ticket, env.DRAFT_TICKET_SIGNING_KEY, sources.now())
+    verification = await sources.verifyTicket(ticket, env.DRAFT_TICKET_SIGNING_KEY, requestNowMs)
   } catch {
     return errorResponse('submission_unavailable')
   }
@@ -869,7 +1082,24 @@ export async function handleAuthoritativeSubmissionRequest(
   let identity: LeaderboardSubmissionIdentity | null
   let classification: LeaderboardSubmissionClassification
   try {
-    identity = await sources.resolveLeaderboardIdentity(transcript, verification.payload)
+    if (identityCredential !== null) {
+      if (
+        !isLeaderboardIdentityEnabled(env)
+        || !isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)
+      ) return errorResponse('submission_unavailable')
+      const resolved = await resolveLeaderboardIdentityCredential(
+        database as CredentialLookupDatabase,
+        env.LEADERBOARD_IDENTITY_SIGNING_KEY,
+        identityCredential,
+      )
+      if (!resolved) return errorResponse('identity_credential_invalid')
+      identity = {
+        identityKeyDigest: resolved.identityKeyDigest,
+        publicLabel: resolved.publicLabel,
+      }
+    } else {
+      identity = await sources.resolveLeaderboardIdentity(transcript, verification.payload)
+    }
     classification = sources.classifyLeaderboardRun(transcript, verification.payload)
   } catch {
     return errorResponse('submission_unavailable')
@@ -887,7 +1117,33 @@ export async function handleAuthoritativeSubmissionRequest(
   )
   if (!leaderboard) return errorResponse('submission_unavailable')
 
-  return persistSubmissionAtomically(database, {
+  let claim: ProposedIdentityClaim | null = null
+  if (
+    leaderboard.eligibility_status === 'identity_pending'
+    && leaderboard.game_mode === 'classic'
+    && leaderboard.environment !== 'test'
+    && leaderboard.is_smoke === 0
+    && isLeaderboardIdentityEnabled(env)
+  ) {
+    if (!isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)) {
+      return errorResponse('submission_unavailable')
+    }
+    const capability = await deriveClaimCapability(
+      env.LEADERBOARD_IDENTITY_SIGNING_KEY,
+      ticketTokenDigest,
+    )
+    const expiresAtMs = submittedAtMs + LEADERBOARD_CLAIM_TTL_MS
+    if (!safeTimestamp(expiresAtMs) || !Number.isSafeInteger(expiresAtMs)) {
+      return errorResponse('submission_unavailable')
+    }
+    claim = {
+      digest: capability.digest,
+      created_at_ms: submittedAtMs,
+      expires_at_ms: expiresAtMs,
+    }
+  }
+
+  const persisted = await persistSubmissionAtomically(database, {
     ticket_id: transcript.header.draftId,
     ticket_token_digest: ticketTokenDigest,
     transcript_digest: transcriptDigest,
@@ -895,5 +1151,26 @@ export async function handleAuthoritativeSubmissionRequest(
     retain_until_ms: retainUntilMs,
     submission_schema_version: DRAFT_SUBMISSION_SCHEMA_VERSION,
     success_response_json: successResponseJson,
-  }, leaderboard, identity)
+  }, leaderboard, identity, claim)
+  if (persisted.status !== 200 && persisted.status !== 201) return persisted
+  let storedRun: StoredLeaderboardRun | null
+  try {
+    storedRun = await readLeaderboardRun(database, transcript.header.draftId)
+  } catch {
+    return errorResponse('submission_unavailable')
+  }
+  if (!storedRun) return errorResponse('submission_unavailable')
+  try {
+    return await enrichedSubmissionResponse(
+      persisted,
+      database,
+      storedRun,
+      ticketTokenDigest,
+      env,
+      submittedAtMs,
+      sources.calculatePlacement,
+    )
+  } catch {
+    return errorResponse('submission_unavailable')
+  }
 }

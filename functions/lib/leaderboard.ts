@@ -5,11 +5,12 @@ import {
   isLeaderboardReadEnabled,
   type LeaderboardReadModeEnv,
 } from './leaderboard-mode'
+import { validateDisplayName } from './leaderboard-identity'
 
-export const LEADERBOARD_RESPONSE_SCHEMA_VERSION = 'pennant-leaderboard-response-v1'
+export const LEADERBOARD_RESPONSE_SCHEMA_VERSION = 'pennant-leaderboard-response-v2'
 export const LEADERBOARD_DEFAULT_LIMIT = 25
 export const LEADERBOARD_MAX_LIMIT = 50
-export const LEADERBOARD_CURSOR_VERSION = 1
+export const LEADERBOARD_CURSOR_VERSION = 2
 export const CUMULATIVE_PERFORMANCE_PUBLICLY_AVAILABLE = false
 
 export type LeaderboardMode = 'classic'
@@ -37,7 +38,7 @@ export interface LeaderboardCursor {
   readonly asOfMs: number
   readonly startMs: number | null
   readonly endMs: number | null
-  readonly afterRank: number
+  readonly afterOrdinal: number
 }
 
 interface LeaderboardPreparedStatement {
@@ -59,6 +60,7 @@ interface BestRunRow {
   readonly tier_label: unknown
   readonly submitted_at_ms: unknown
   readonly public_rank: unknown
+  readonly page_ordinal: unknown
 }
 
 interface CumulativeInputRow {
@@ -92,10 +94,10 @@ export interface PublicLeaderboardEntry {
 const ALLOWED_METHODS = 'GET, HEAD'
 const ALLOWED_QUERY_PARAMETERS = new Set(['mode', 'period', 'family', 'limit', 'cursor'])
 const CURSOR_FIELDS = [
-  'v', 'mode', 'period', 'family', 'environment', 'asOfMs', 'startMs', 'endMs', 'afterRank',
+  'v', 'mode', 'period', 'family', 'environment', 'asOfMs', 'startMs', 'endMs', 'afterOrdinal',
 ] as const
 const MAX_CURSOR_BYTES = 2_048
-const EXPECTED_LEADERBOARD_SCHEMA_VERSION = 3
+const EXPECTED_LEADERBOARD_SCHEMA_VERSION = 4
 const SELECT_SCHEMA_SQL = 'SELECT version FROM backend_schema WHERE id = 1'
 
 const TIMED_BEST_RUN_SQL = `
@@ -123,6 +125,10 @@ const TIMED_BEST_RUN_SQL = `
       AND r.eligibility_status = 'eligible'
       AND r.is_smoke = 0
       AND p.status = 'active'
+      AND p.identity_state = 'active'
+      AND p.public_name_key IS NOT NULL
+      AND p.device_credential_digest IS NOT NULL
+      AND p.recovery_code_digest IS NOT NULL
       AND r.submitted_at_ms >= ?
       AND r.submitted_at_ms < ?
       AND r.submitted_at_ms <= ?
@@ -134,15 +140,20 @@ const TIMED_BEST_RUN_SQL = `
       verified_overall_score_tenths,
       tier_label,
       submitted_at_ms,
+      RANK() OVER (
+        ORDER BY
+          verified_wins DESC,
+          verified_overall_score_tenths DESC
+      ) AS public_rank,
       ROW_NUMBER() OVER (
         ORDER BY
           verified_wins DESC,
           verified_overall_score_tenths DESC,
           submitted_at_ms ASC,
           run_id ASC
-      ) AS public_rank
+      ) AS page_ordinal
     FROM scoped
-    WHERE player_best = 1
+    WHERE player_best <= 3
   )
   SELECT
     public_label,
@@ -150,10 +161,11 @@ const TIMED_BEST_RUN_SQL = `
     verified_overall_score_tenths,
     tier_label,
     submitted_at_ms,
-    public_rank
+    public_rank,
+    page_ordinal
   FROM ranked
-  WHERE public_rank > ?
-  ORDER BY public_rank ASC
+  WHERE page_ordinal > ?
+  ORDER BY page_ordinal ASC
   LIMIT ?
 `
 
@@ -182,6 +194,10 @@ const ALL_TIME_BEST_RUN_SQL = `
       AND r.eligibility_status = 'eligible'
       AND r.is_smoke = 0
       AND p.status = 'active'
+      AND p.identity_state = 'active'
+      AND p.public_name_key IS NOT NULL
+      AND p.device_credential_digest IS NOT NULL
+      AND p.recovery_code_digest IS NOT NULL
       AND r.submitted_at_ms <= ?
   ),
   ranked AS (
@@ -191,15 +207,20 @@ const ALL_TIME_BEST_RUN_SQL = `
       verified_overall_score_tenths,
       tier_label,
       submitted_at_ms,
+      RANK() OVER (
+        ORDER BY
+          verified_wins DESC,
+          verified_overall_score_tenths DESC
+      ) AS public_rank,
       ROW_NUMBER() OVER (
         ORDER BY
           verified_wins DESC,
           verified_overall_score_tenths DESC,
           submitted_at_ms ASC,
           run_id ASC
-      ) AS public_rank
+      ) AS page_ordinal
     FROM scoped
-    WHERE player_best = 1
+    WHERE player_best <= 3
   )
   SELECT
     public_label,
@@ -207,10 +228,11 @@ const ALL_TIME_BEST_RUN_SQL = `
     verified_overall_score_tenths,
     tier_label,
     submitted_at_ms,
-    public_rank
+    public_rank,
+    page_ordinal
   FROM ranked
-  WHERE public_rank > ?
-  ORDER BY public_rank ASC
+  WHERE page_ordinal > ?
+  ORDER BY page_ordinal ASC
   LIMIT ?
 `
 
@@ -229,6 +251,8 @@ const TIMED_CUMULATIVE_INPUTS_SQL = `
     AND r.eligibility_status = 'eligible'
     AND r.is_smoke = 0
     AND p.status = 'active'
+    AND p.identity_state = 'active'
+    AND p.public_name_key IS NOT NULL
     AND r.submitted_at_ms >= ?
     AND r.submitted_at_ms < ?
     AND r.submitted_at_ms <= ?
@@ -251,6 +275,8 @@ const ALL_TIME_CUMULATIVE_INPUTS_SQL = `
     AND r.eligibility_status = 'eligible'
     AND r.is_smoke = 0
     AND p.status = 'active'
+    AND p.identity_state = 'active'
+    AND p.public_name_key IS NOT NULL
     AND r.submitted_at_ms <= ?
   GROUP BY r.player_id
   ORDER BY r.player_id ASC
@@ -340,7 +366,7 @@ function canonicalCursor(cursor: LeaderboardCursor) {
     asOfMs: cursor.asOfMs,
     startMs: cursor.startMs,
     endMs: cursor.endMs,
-    afterRank: cursor.afterRank,
+    afterOrdinal: cursor.afterOrdinal,
   })
 }
 
@@ -362,9 +388,9 @@ function parseCursorPayload(value: unknown): LeaderboardCursor | null {
     || !isSafeTimestamp(value.asOfMs)
     || !(value.startMs === null || isSafeTimestamp(value.startMs))
     || !(value.endMs === null || isSafeTimestamp(value.endMs))
-    || typeof value.afterRank !== 'number'
-    || !Number.isSafeInteger(value.afterRank)
-    || value.afterRank < 1
+    || typeof value.afterOrdinal !== 'number'
+    || !Number.isSafeInteger(value.afterOrdinal)
+    || value.afterOrdinal < 1
   ) return null
   const expectedWindow = leaderboardPeriodWindow(value.period, value.asOfMs)
   if (expectedWindow.startMs !== value.startMs || expectedWindow.endMs !== value.endMs) return null
@@ -377,7 +403,7 @@ function parseCursorPayload(value: unknown): LeaderboardCursor | null {
     asOfMs: value.asOfMs,
     startMs: value.startMs,
     endMs: value.endMs,
-    afterRank: value.afterRank,
+    afterOrdinal: value.afterOrdinal,
   }
 }
 
@@ -446,8 +472,7 @@ async function leaderboardSchemaIsReady(database: LeaderboardDatabase) {
 function publicEntry(row: BestRunRow): PublicLeaderboardEntry | null {
   if (
     typeof row.public_label !== 'string'
-    || !isSafeDisplayText(row.public_label, 32, true)
-    || row.public_label !== row.public_label.trim()
+    || validateDisplayName(row.public_label)?.displayName !== row.public_label
     || typeof row.verified_wins !== 'number'
     || !Number.isSafeInteger(row.verified_wins)
     || row.verified_wins < 0
@@ -463,6 +488,9 @@ function publicEntry(row: BestRunRow): PublicLeaderboardEntry | null {
     || typeof row.public_rank !== 'number'
     || !Number.isSafeInteger(row.public_rank)
     || row.public_rank < 1
+    || typeof row.page_ordinal !== 'number'
+    || !Number.isSafeInteger(row.page_ordinal)
+    || row.page_ordinal < 1
   ) return null
   const submittedAt = canonicalTimestamp(row.submitted_at_ms)
   if (!submittedAt) return null
@@ -481,7 +509,7 @@ export async function queryBestRunLeaderboard(
   database: LeaderboardDatabase,
   environment: LeaderboardEnvironment,
   window: LeaderboardPeriodWindow,
-  afterRank: number,
+  afterOrdinal: number,
   limit: number,
 ) {
   const fetchLimit = limit + 1
@@ -490,7 +518,7 @@ export async function queryBestRunLeaderboard(
       environment,
       'classic',
       window.asOfMs,
-      afterRank,
+      afterOrdinal,
       fetchLimit,
     )
     : database.prepare(TIMED_BEST_RUN_SQL).bind(
@@ -499,7 +527,7 @@ export async function queryBestRunLeaderboard(
       window.startMs,
       window.endMs,
       window.asOfMs,
-      afterRank,
+      afterOrdinal,
       fetchLimit,
     )
   const result = await statement.all<BestRunRow>()
@@ -508,9 +536,20 @@ export async function queryBestRunLeaderboard(
   if (entries.some((entry) => entry === null)) return null
   const validEntries = entries as PublicLeaderboardEntry[]
   const hasMore = validEntries.length > limit
+  const visibleRows = result.results.slice(0, limit)
+  const lastOrdinal = visibleRows.at(-1)?.page_ordinal
+  if (
+    lastOrdinal !== undefined
+    && (
+      typeof lastOrdinal !== 'number'
+      || !Number.isSafeInteger(lastOrdinal)
+      || lastOrdinal < 1
+    )
+  ) return null
   return {
     entries: validEntries.slice(0, limit),
     hasMore,
+    lastOrdinal: typeof lastOrdinal === 'number' ? lastOrdinal : null,
   }
 }
 
@@ -686,7 +725,7 @@ export async function handleLeaderboardRequest(
   }
 
   let window: LeaderboardPeriodWindow
-  let afterRank = 0
+  let afterOrdinal = 0
   try {
     if (parsed.cursor) {
       const cursor = await decodeLeaderboardCursor(parsed.cursor, env.LEADERBOARD_CURSOR_SIGNING_KEY)
@@ -703,7 +742,7 @@ export async function handleLeaderboardRequest(
         startMs: cursor.startMs,
         endMs: cursor.endMs,
       }
-      afterRank = cursor.afterRank
+      afterOrdinal = cursor.afterOrdinal
     } else {
       window = leaderboardPeriodWindow(parsed.period, now())
     }
@@ -712,10 +751,10 @@ export async function handleLeaderboardRequest(
   }
 
   try {
-    const page = await queryBestRunLeaderboard(database, env.LEADERBOARD_ENVIRONMENT, window, afterRank, parsed.limit)
+    const page = await queryBestRunLeaderboard(database, env.LEADERBOARD_ENVIRONMENT, window, afterOrdinal, parsed.limit)
     if (!page) return errorResponse('leaderboard_unavailable', 503)
     const last = page.entries.at(-1)
-    const nextCursor = page.hasMore && last
+    const nextCursor = page.hasMore && last && page.lastOrdinal !== null
       ? await encodeLeaderboardCursor({
         v: LEADERBOARD_CURSOR_VERSION,
         mode: parsed.mode,
@@ -725,7 +764,7 @@ export async function handleLeaderboardRequest(
         asOfMs: window.asOfMs,
         startMs: window.startMs,
         endMs: window.endMs,
-        afterRank: last.rank,
+        afterOrdinal: page.lastOrdinal,
       }, env.LEADERBOARD_CURSOR_SIGNING_KEY)
       : null
     const generatedAt = canonicalTimestamp(window.asOfMs)
@@ -738,7 +777,7 @@ export async function handleLeaderboardRequest(
         mode: parsed.mode,
         period: parsed.period,
         rankingFamily: parsed.family,
-        rankPolicy: 'unique-ordinal',
+        rankPolicy: 'competition-shared',
         ordering: Object.freeze([
           'projected-wins-desc',
           'overall-score-desc',
@@ -749,7 +788,7 @@ export async function handleLeaderboardRequest(
       }),
       eligibility: Object.freeze({
         verifiedOnly: true,
-        oneBestRunPerPlayer: true,
+        bestThreeRunsPerPlayer: true,
         excludesTestAndSmokeData: true,
         serverSubmissionTimeAuthority: true,
       }),

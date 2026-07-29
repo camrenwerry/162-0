@@ -17,6 +17,7 @@ const HEADER_FIELDS = [
 ] as const
 const TRANSCRIPT_FIELDS = ['header', 'events'] as const
 const ENVELOPE_FIELDS = ['ticket', 'transcript'] as const
+const SUBMISSION_ENVELOPE_FIELDS = ['ticket', 'transcript', 'identityCredential'] as const
 const INITIAL_ROLL_FIELDS = ['type', 'round', 'combinationId'] as const
 const REROLL_FIELDS = ['type', 'reroll', 'round', 'discardedCombinationId', 'resultingCombinationId'] as const
 const PICK_FIELDS = [
@@ -167,6 +168,10 @@ export interface DraftValidationRequestEnvelope {
   readonly transcript: DraftTranscript
 }
 
+export interface DraftSubmissionRequestEnvelope extends DraftValidationRequestEnvelope {
+  readonly identityCredential: string | null
+}
+
 /**
  * Strict structural parsing is intentionally separate from current-version
  * policy. Submission retries must be canonicalizable before retained rows are
@@ -184,6 +189,24 @@ export function parseDraftRequestEnvelope(value: unknown): DraftValidationReques
   validateEvents(transcript.events)
   validateTranscriptShape(transcript)
   return { ticket, transcript }
+}
+
+export function parseDraftSubmissionRequestEnvelope(value: unknown): DraftSubmissionRequestEnvelope {
+  if (!isRecord(value)) draftValidationError('invalid_request_schema')
+  const actual = Object.keys(value)
+  if (
+    (actual.length !== ENVELOPE_FIELDS.length && actual.length !== SUBMISSION_ENVELOPE_FIELDS.length)
+    || actual.some((key) => !(SUBMISSION_ENVELOPE_FIELDS as readonly string[]).includes(key))
+  ) draftValidationError('invalid_request_schema')
+  const envelope = parseDraftRequestEnvelope({
+    ticket: value.ticket,
+    transcript: value.transcript,
+  })
+  if (!Object.hasOwn(value, 'identityCredential')) {
+    return { ...envelope, identityCredential: null }
+  }
+  const identityCredential = requireString(value.identityCredential, 64)
+  return { ...envelope, identityCredential }
 }
 
 export function validateDraftSupportedVersions(transcript: DraftTranscript) {

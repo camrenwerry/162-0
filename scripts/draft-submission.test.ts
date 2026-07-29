@@ -19,6 +19,7 @@ import {
   DRAFT_SUBMISSION_ERROR_DEFINITIONS,
   type DraftSubmissionErrorCode,
 } from '../functions/lib/draft-submission-response'
+import { emptyLeaderboardPlacement } from '../functions/lib/leaderboard-placement'
 import { parseDraftRequestEnvelope } from '../functions/lib/draft-validation-schema'
 import {
   DRAFT_TICKET_MAX_CLOCK_SKEW_MS,
@@ -63,6 +64,7 @@ type MockRow = {
 
 type MockLeaderboardRun = {
   source_ticket_id: string
+  run_id: number
   player_id: number | null
   game_mode: 'classic' | 'hard'
   environment: 'preview' | 'production' | 'test'
@@ -101,7 +103,7 @@ class MockDatabase {
   row: MockRow | null = null
   leaderboardRun: MockLeaderboardRun | null = null
   player: { player_id: number, identity_key_digest: string, public_label: string, status: 'active' } | null = null
-  schemaVersion = 3
+  schemaVersion = 4
   batchMode: BatchMode = 'normal'
   conflictMode: ConflictMode = 'none'
   batchCalls = 0
@@ -171,6 +173,7 @@ class MockDatabase {
         : null
       this.leaderboardRun = {
         source_ticket_id: String(runStatement.bindings[0]),
+        run_id: 1,
         player_id: player?.player_id ?? null,
         game_mode: String(runStatement.bindings[3]) as 'classic' | 'hard',
         environment: String(runStatement.bindings[4]) as 'preview' | 'production' | 'test',
@@ -273,7 +276,10 @@ function reversedObjects(value: unknown): unknown {
 
 const fixture = await createBoundValidationFixture(noRerollsData.transcript, { issuedAt: NOW - 1_000 })
 const envelope = { ticket: fixture.ticket, transcript: fixture.transcript }
-const stableSources = { now: () => NOW }
+const stableSources = {
+  now: () => NOW,
+  calculatePlacement: () => emptyLeaderboardPlacement(NOW),
+}
 
 // Canonical fixed-field serialization and both exact domain-separated digests.
 const canonicalFixed = canonicalizeSubmissionTranscript(fixed113Data.transcript as DraftTranscript)
@@ -479,7 +485,9 @@ assert.equal(firstResponse.status, 201)
 assertSafeHeaders(firstResponse)
 const firstBytes = await firstResponse.text()
 const firstReceipt = JSON.parse(firstBytes) as Record<string, unknown>
-assert.deepEqual(Object.keys(firstReceipt), ['ok', 'verified', 'submitted', 'submissionSchema', 'submittedAt', 'versions', 'result'])
+assert.deepEqual(Object.keys(firstReceipt), [
+  'ok', 'verified', 'submitted', 'submissionSchema', 'submittedAt', 'versions', 'result', 'leaderboard',
+])
 assert.equal(firstReceipt.ok, true)
 assert.equal(firstReceipt.verified, true)
 assert.equal(firstReceipt.submitted, true)
@@ -488,10 +496,12 @@ assert.equal(firstReceipt.submittedAt, new Date(NOW).toISOString())
 assert(firstDatabase.row)
 assert.equal(firstDatabase.row.submitted_at_ms, NOW)
 assert.equal(firstDatabase.row.retain_until_ms, NOW + DRAFT_SUBMISSION_RETENTION_MS)
-assert.equal(firstDatabase.row.success_response_json, firstBytes)
+assert.notEqual(firstDatabase.row.success_response_json, firstBytes)
+assert.doesNotMatch(firstDatabase.row.success_response_json, /leaderboard/)
 assert.equal(firstDatabase.batchCalls, 1)
 assert.deepEqual(firstDatabase.leaderboardRun, {
   source_ticket_id: fixture.transcript.header.draftId,
+  run_id: 1,
   player_id: null,
   game_mode: 'classic',
   environment: 'preview',
@@ -515,18 +525,19 @@ assert.doesNotMatch(firstBytes, /"(?:ticket|ticketId|draftId|submissionId|transc
 
 // Retained exact retry uses only stored authority, survives expiry/key rotation, and returns exact bytes.
 const noRecalculationSources = {
-  now: () => { throw new Error('retained retry must not read current time') },
+  now: () => NOW + 1,
   verifyTicket: async () => { throw new Error('retained retry must not verify') },
   getCatalog: () => { throw new Error('retained retry must not initialize catalog') },
   replay: () => { throw new Error('retained retry must not replay') },
   score: () => { throw new Error('retained retry must not rescore') },
+  calculatePlacement: () => emptyLeaderboardPlacement(NOW),
 }
 const retainedResponse = await handleAuthoritativeSubmissionRequest(
   request(envelope),
   enabledEnvironment(firstDatabase, 'rotated-nonempty-signing-key'),
   noRecalculationSources,
 )
-assert.equal(retainedResponse.status, 200)
+assert.equal(retainedResponse.status, 200, await retainedResponse.clone().text())
 assert.equal(await retainedResponse.text(), firstBytes)
 assert.equal(firstDatabase.batchCalls, 1)
 assert.equal(firstDatabase.row.submitted_at_ms, NOW)
@@ -598,7 +609,7 @@ for (const publicLabel of [' Player Cedar', 'Player\nCedar', `Player\u202eCedar`
 const farFutureRetry = await handleAuthoritativeSubmissionRequest(
   request(envelope),
   enabledEnvironment(firstDatabase),
-  { now: () => NOW + DRAFT_TICKET_TTL_MS + 1 },
+  { ...stableSources, now: () => NOW + DRAFT_TICKET_TTL_MS + 1 },
 )
 assert.equal(farFutureRetry.status, 200)
 assert.equal(await farFutureRetry.text(), firstBytes)
@@ -753,7 +764,12 @@ for (const [conflictMode, code, status] of [
   if (code) await assertError(response, code)
   else {
     assert.equal(response.status, status)
-    assert.equal(await response.text(), database.row?.success_response_json)
+    const responseText = await response.text()
+    assert.equal(
+      (JSON.parse(responseText) as { submittedAt: string }).submittedAt,
+      new Date(NOW).toISOString(),
+    )
+    assert.doesNotMatch(database.row?.success_response_json ?? '', /leaderboard/)
   }
   assert.equal(database.batchCalls, 1)
   assert(database.row)

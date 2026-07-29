@@ -1,5 +1,12 @@
 # D1C.4 preview activation preparation
 
+> Historical activation contract: this document describes the protected
+> submission-only schema-3 activation states from D1C.4. Milestone 3A leaves
+> those artifacts byte-identical and advances current code to exact schema 4
+> with separate, disabled identity and leaderboard gates. Do not use this
+> workflow to activate Milestone 3A without a newly reviewed migration, secret,
+> configuration, and smoke plan.
+
 D1C.4 is repository preparation only. It does not deploy Pages or a Worker,
 apply a migration, contact an endpoint, change a secret, alter a binding or
 route, or activate a Cron Trigger. Production is explicitly out of scope, and

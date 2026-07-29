@@ -21,6 +21,26 @@ export const RETENTION_CLEANUP_DELETE_SQL = `
     LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}
   )
 `
+export const RETENTION_CLAIM_CLEANUP_DELETE_SQL = `
+  DELETE FROM leaderboard_identity_claims
+  WHERE claim_id IN (
+    SELECT claim_id
+    FROM leaderboard_identity_claims
+    WHERE expires_at_ms <= ?
+    ORDER BY expires_at_ms, claim_id
+    LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}
+  )
+`
+export const RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL = `
+  DELETE FROM leaderboard_recovery_operations
+  WHERE operation_digest IN (
+    SELECT operation_digest
+    FROM leaderboard_recovery_operations
+    WHERE expires_at_ms <= ?
+    ORDER BY expires_at_ms, operation_digest
+    LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}
+  )
+`
 
 export type RetentionCleanupOutcome = 'cleanup.completed' | 'cleanup.backlog' | 'cleanup.failed'
 
@@ -29,6 +49,8 @@ export interface RetentionCleanupObservation {
   readonly outcome: RetentionCleanupOutcome
   readonly batchesCompleted: number
   readonly rowsDeleted: number
+  readonly claimsDeleted: number
+  readonly recoveryOperationsDeleted: number
 }
 
 interface RetentionCleanupBindings {
@@ -66,8 +88,17 @@ function cleanupObservation(
   outcome: RetentionCleanupOutcome,
   batchesCompleted: number,
   rowsDeleted: number,
+  claimsDeleted: number,
+  recoveryOperationsDeleted: number,
 ): RetentionCleanupObservation {
-  return Object.freeze({ event: 'draft_submission', outcome, batchesCompleted, rowsDeleted })
+  return Object.freeze({
+    event: 'draft_submission',
+    outcome,
+    batchesCompleted,
+    rowsDeleted,
+    claimsDeleted,
+    recoveryOperationsDeleted,
+  })
 }
 
 function resultChanges(value: unknown) {
@@ -98,6 +129,8 @@ export async function cleanupRetainedDraftSubmissions(
   const sources: RetentionCleanupSources = { ...defaultSources, ...sourceOverrides }
   let batchesCompleted = 0
   let rowsDeleted = 0
+  let claimsDeleted = 0
+  let recoveryOperationsDeleted = 0
 
   try {
     const cutoffMs = sources.now()
@@ -106,6 +139,7 @@ export async function cleanupRetainedDraftSubmissions(
     const database = bindings.DB
     if (!database || !await databaseSchemaIsReady(database)) throw new RetentionCleanupFailure()
 
+    let receiptsComplete = false
     for (let batch = 0; batch < RETENTION_CLEANUP_MAX_BATCHES; batch += 1) {
       const result: unknown = await database
         .prepare(RETENTION_CLEANUP_DELETE_SQL)
@@ -117,17 +151,65 @@ export async function cleanupRetainedDraftSubmissions(
       batchesCompleted += 1
       rowsDeleted += changes
       if (changes < RETENTION_CLEANUP_BATCH_SIZE) {
-        const observation = cleanupObservation('cleanup.completed', batchesCompleted, rowsDeleted)
-        sources.observe(observation)
-        return observation
+        receiptsComplete = true
+        break
       }
     }
 
-    const observation = cleanupObservation('cleanup.backlog', batchesCompleted, rowsDeleted)
+    let claimsComplete = false
+    for (let batch = 0; batch < RETENTION_CLEANUP_MAX_BATCHES; batch += 1) {
+      const result: unknown = await database
+        .prepare(RETENTION_CLAIM_CLEANUP_DELETE_SQL)
+        .bind(cutoffMs)
+        .run()
+      const changes = resultChanges(result)
+      if (changes === null) throw new RetentionCleanupFailure()
+
+      batchesCompleted += 1
+      claimsDeleted += changes
+      if (changes < RETENTION_CLEANUP_BATCH_SIZE) {
+        claimsComplete = true
+        break
+      }
+    }
+
+    let recoveryOperationsComplete = false
+    for (let batch = 0; batch < RETENTION_CLEANUP_MAX_BATCHES; batch += 1) {
+      const result: unknown = await database
+        .prepare(RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL)
+        .bind(cutoffMs)
+        .run()
+      const changes = resultChanges(result)
+      if (changes === null) throw new RetentionCleanupFailure()
+
+      batchesCompleted += 1
+      recoveryOperationsDeleted += changes
+      if (changes < RETENTION_CLEANUP_BATCH_SIZE) {
+        recoveryOperationsComplete = true
+        break
+      }
+    }
+
+    const outcome = receiptsComplete && claimsComplete && recoveryOperationsComplete
+      ? 'cleanup.completed'
+      : 'cleanup.backlog'
+    const observation = cleanupObservation(
+      outcome,
+      batchesCompleted,
+      rowsDeleted,
+      claimsDeleted,
+      recoveryOperationsDeleted,
+    )
     sources.observe(observation)
     return observation
   } catch {
-    const observation = cleanupObservation('cleanup.failed', batchesCompleted, rowsDeleted)
+    const observation = cleanupObservation(
+      'cleanup.failed',
+      batchesCompleted,
+      rowsDeleted,
+      claimsDeleted,
+      recoveryOperationsDeleted,
+    )
     try {
       sources.observe(observation)
     } catch {

@@ -7,6 +7,9 @@ import {
   draftSubmissionErrorResponse,
 } from './draft-submission-response'
 import type { BackendEnv } from './env'
+import {
+  leaderboardIdentityErrorResponse,
+} from './leaderboard-identity'
 
 export const PRIVATE_VALIDATION_ALLOWED_METHODS = 'POST'
 export const INTERNAL_RATE_KEY_HEADER = 'X-Pennant-Pursuit-Rate-Key'
@@ -22,6 +25,21 @@ function validationErrorResponse(code: 'method_not_allowed' | 'origin_not_allowe
 
 function submissionErrorResponse(code: 'method_not_allowed' | 'origin_not_allowed' | 'submission_unavailable', headers: Readonly<Record<string, string>> = {}) {
   return draftSubmissionErrorResponse(new DraftSubmissionPublicError(code), headers)
+}
+
+function identityProxyError(
+  code: 'method_not_allowed' | 'origin_not_allowed' | 'identity_unavailable',
+  headers: Readonly<Record<string, string>> = {},
+) {
+  const response = leaderboardIdentityErrorResponse(
+    code === 'method_not_allowed'
+      ? 'method_not_allowed'
+      : code === 'origin_not_allowed' ? 'origin_not_allowed' : 'identity_unavailable',
+  )
+  if (Object.keys(headers).length === 0) return response
+  const merged = new Headers(response.headers)
+  for (const [name, value] of Object.entries(headers)) merged.set(name, value)
+  return new Response(response.body, { status: response.status, headers: merged })
 }
 
 function requestOriginIsAllowed(request: Request) {
@@ -68,12 +86,15 @@ function forwardedRequest(request: Request, rateKey: string) {
 async function proxyPrivateRequest(
   request: Request,
   env: PrivateValidationProxyEnv,
-  submission: boolean,
+  kind: 'validation' | 'submission' | 'identity',
+  privatePath?: string,
 ) {
   const errorResponse = (code: 'method_not_allowed' | 'origin_not_allowed' | 'temporarily_unavailable', headers: Readonly<Record<string, string>> = {}) => (
-    submission
+    kind === 'submission'
       ? submissionErrorResponse(code === 'temporarily_unavailable' ? 'submission_unavailable' : code, headers)
-      : validationErrorResponse(code, headers)
+      : kind === 'identity'
+        ? identityProxyError(code === 'temporarily_unavailable' ? 'identity_unavailable' : code, headers)
+        : validationErrorResponse(code, headers)
   )
   if (request.method !== PRIVATE_VALIDATION_ALLOWED_METHODS) {
     return errorResponse('method_not_allowed', { Allow: PRIVATE_VALIDATION_ALLOWED_METHODS })
@@ -87,16 +108,28 @@ async function proxyPrivateRequest(
   if (!service || typeof service.fetch !== 'function') return errorResponse('temporarily_unavailable')
 
   try {
-    return await service.fetch(forwardedRequest(request, await deriveTrustedRateKey(connectingIp)))
+    const forwarded = forwardedRequest(request, await deriveTrustedRateKey(connectingIp))
+    const privateRequest = privatePath
+      ? new Request(new URL(privatePath, forwarded.url), forwarded)
+      : forwarded
+    return await service.fetch(privateRequest)
   } catch {
     return errorResponse('temporarily_unavailable')
   }
 }
 
 export function proxyPrivateValidationRequest(request: Request, env: PrivateValidationProxyEnv = {}) {
-  return proxyPrivateRequest(request, env, false)
+  return proxyPrivateRequest(request, env, 'validation')
 }
 
 export function proxyPrivateSubmissionRequest(request: Request, env: PrivateValidationProxyEnv = {}) {
-  return proxyPrivateRequest(request, env, true)
+  return proxyPrivateRequest(request, env, 'submission')
+}
+
+export function proxyPrivateLeaderboardIdentityRequest(
+  request: Request,
+  privatePath: string,
+  env: PrivateValidationProxyEnv = {},
+) {
+  return proxyPrivateRequest(request, env, 'identity', privatePath)
 }

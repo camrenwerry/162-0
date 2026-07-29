@@ -53,6 +53,8 @@ export class SqliteD1Statement {
 }
 
 export class SqliteD1Database {
+  private pendingBatch: Promise<unknown> = Promise.resolve()
+
   constructor(readonly sqlite: DatabaseSync) {}
 
   prepare(query: string) {
@@ -60,17 +62,22 @@ export class SqliteD1Database {
   }
 
   async batch(statements: SqliteD1Statement[]) {
-    this.sqlite.exec('BEGIN IMMEDIATE')
-    try {
-      const results = []
-      for (const statement of statements) {
-        results.push(statement.isRead() ? await statement.all() : await statement.run())
+    const execute = async () => {
+      this.sqlite.exec('BEGIN IMMEDIATE')
+      try {
+        const results = []
+        for (const statement of statements) {
+          results.push(statement.isRead() ? await statement.all() : await statement.run())
+        }
+        this.sqlite.exec('COMMIT')
+        return results
+      } catch (error) {
+        this.sqlite.exec('ROLLBACK')
+        throw error
       }
-      this.sqlite.exec('COMMIT')
-      return results
-    } catch (error) {
-      this.sqlite.exec('ROLLBACK')
-      throw error
     }
+    const result = this.pendingBatch.then(execute, execute)
+    this.pendingBatch = result.then(() => undefined, () => undefined)
+    return result
   }
 }

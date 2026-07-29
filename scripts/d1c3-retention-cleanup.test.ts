@@ -5,9 +5,11 @@ import worker, { type PrivateValidationWorkerEnv } from '../workers/draft-valida
 import {
   cleanupRetainedDraftSubmissions,
   RETENTION_CLEANUP_BATCH_SIZE,
+  RETENTION_CLAIM_CLEANUP_DELETE_SQL,
   RETENTION_CLEANUP_DELETE_SQL,
   RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION,
   RETENTION_CLEANUP_MAX_BATCHES,
+  RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL,
   RETENTION_CLEANUP_SCHEMA_SQL,
   RetentionCleanupFailure,
   type RetentionCleanupObservation,
@@ -61,7 +63,11 @@ class PlannedDatabase {
   }
 
   async run(query: string, bindings: unknown[]) {
-    assert.equal(query, RETENTION_CLEANUP_DELETE_SQL)
+    assert(
+      query === RETENTION_CLEANUP_DELETE_SQL
+      || query === RETENTION_CLAIM_CLEANUP_DELETE_SQL
+      || query === RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL,
+    )
     this.deleteBindings.push([...bindings])
     const step = this.runPlan[this.runCalls]
     this.runCalls += 1
@@ -86,17 +92,23 @@ class SqliteStatement {
   }
 
   async run() {
-    assert.equal(this.query, RETENTION_CLEANUP_DELETE_SQL)
+    assert(
+      this.query === RETENTION_CLEANUP_DELETE_SQL
+      || this.query === RETENTION_CLAIM_CLEANUP_DELETE_SQL
+      || this.query === RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL,
+    )
     const cutoff = this.bindings[0]
     assert.equal(typeof cutoff, 'number')
-    const selected = this.database.sqlite.prepare(`
-      SELECT ticket_id
-      FROM draft_submissions
-      WHERE retain_until_ms <= ?
-      ORDER BY retain_until_ms, ticket_id
-      LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}
-    `).all(cutoff) as Array<{ ticket_id: string }>
-    this.database.selectedBatches.push(selected.map(({ ticket_id }) => ticket_id))
+    if (this.query === RETENTION_CLEANUP_DELETE_SQL) {
+      const selected = this.database.sqlite.prepare(`
+        SELECT ticket_id
+        FROM draft_submissions
+        WHERE retain_until_ms <= ?
+        ORDER BY retain_until_ms, ticket_id
+        LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}
+      `).all(cutoff) as Array<{ ticket_id: string }>
+      this.database.selectedBatches.push(selected.map(({ ticket_id }) => ticket_id))
+    }
     this.database.deleteCalls += 1
     if (this.database.failOnDeleteCall === this.database.deleteCalls) {
       throw new Error('private D1 failure with ticket_id and SQL details')
@@ -153,6 +165,8 @@ async function expectFailure(
     outcome: 'cleanup.failed',
     batchesCompleted: 0,
     rowsDeleted: 0,
+    claimsDeleted: 0,
+    recoveryOperationsDeleted: 0,
     ...expected,
   })
   assert.doesNotMatch(JSON.stringify(observations), PROHIBITED_LOG_DATA)
@@ -163,6 +177,7 @@ function migratedDatabase() {
   sqlite.exec(readFileSync('migrations/0001_backend_foundation.sql', 'utf8'))
   sqlite.exec(readFileSync('migrations/0002_draft_submissions.sql', 'utf8'))
   sqlite.exec(readFileSync('migrations/0003_leaderboard_foundation.sql', 'utf8'))
+  sqlite.exec(readFileSync('migrations/0004_leaderboard_identity_ranking.sql', 'utf8'))
   sqlite.exec('CREATE TABLE unrelated_records (id INTEGER PRIMARY KEY, value TEXT NOT NULL)')
   sqlite.prepare('INSERT INTO unrelated_records (id, value) VALUES (?, ?)').run(1, 'preserve')
   return sqlite
@@ -200,9 +215,91 @@ function remainingTicketIds(sqlite: DatabaseSync) {
     .map(({ ticket_id }) => ticket_id)
 }
 
+function insertPendingRun(sqlite: DatabaseSync, ticketId: string, submittedAtMs: number) {
+  return Number(sqlite.prepare(`
+    INSERT INTO leaderboard_runs (
+      source_ticket_id,
+      player_id,
+      game_mode,
+      environment,
+      is_smoke,
+      submitted_at_ms,
+      verified_wins,
+      verified_overall_score_tenths,
+      tier_label,
+      eligibility_status,
+      eligibility_reason,
+      invalidated_at_ms
+    ) VALUES (?, NULL, 'classic', 'preview', 0, ?, 1, 500, 'Contender',
+      'identity_pending', 'identity_unavailable', NULL)
+  `).run(ticketId, submittedAtMs).lastInsertRowid)
+}
+
+function insertRecoveryOperation(
+  sqlite: DatabaseSync,
+  values: Readonly<{
+    identityDigest: string
+    displayName: string
+    deviceDigest: string
+    recoveryDigest: string
+    operationDigest: string
+    requestBindingDigest: string
+    expiresAtMs: number
+  }>,
+) {
+  const player = sqlite.prepare(`
+    INSERT INTO leaderboard_players (
+      identity_key_digest,
+      public_label,
+      status,
+      created_at_ms,
+      public_name_key,
+      device_credential_digest,
+      recovery_code_digest,
+      recovery_version,
+      credential_rotated_at_ms,
+      identity_updated_at_ms,
+      identity_state
+    ) VALUES (?, ?, 'active', ?, ?, ?, ?, 2, ?, ?, 'active')
+  `).run(
+    values.identityDigest,
+    values.displayName,
+    NOW - 10_000,
+    values.displayName.toUpperCase().toLowerCase(),
+    values.deviceDigest,
+    values.recoveryDigest,
+    NOW - 1_000,
+    NOW - 1_000,
+  )
+  const playerId = Number(player.lastInsertRowid)
+  sqlite.prepare(`
+    INSERT INTO leaderboard_recovery_operations (
+      operation_digest,
+      request_binding_digest,
+      player_id,
+      source_recovery_version,
+      replacement_recovery_version,
+      replacement_device_digest,
+      replacement_recovery_digest,
+      derivation_version,
+      created_at_ms,
+      expires_at_ms
+    ) VALUES (?, ?, ?, 1, 2, ?, ?, 1, ?, ?)
+  `).run(
+    values.operationDigest,
+    values.requestBindingDigest,
+    playerId,
+    values.deviceDigest,
+    values.recoveryDigest,
+    NOW - 1_000,
+    values.expiresAtMs,
+  )
+  return playerId
+}
+
 assert.equal(RETENTION_CLEANUP_BATCH_SIZE, 500)
 assert.equal(RETENTION_CLEANUP_MAX_BATCHES, 10)
-assert.equal(RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION, 3)
+assert.equal(RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION, 4)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, /WHERE retain_until_ms <= \?/)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, /ORDER BY retain_until_ms, ticket_id/)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, new RegExp(`LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}`))
@@ -212,6 +309,36 @@ assert.doesNotMatch(retentionCleanupSource, /LIMIT 500/)
 assert.equal((RETENTION_CLEANUP_DELETE_SQL.match(/DELETE FROM/g) ?? []).length, 1)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, /DELETE FROM draft_submissions/)
 assert.doesNotMatch(RETENTION_CLEANUP_DELETE_SQL, /submitted_at_ms|backend_schema|unrelated_records/)
+assert.match(RETENTION_CLAIM_CLEANUP_DELETE_SQL, /WHERE expires_at_ms <= \?/)
+assert.match(RETENTION_CLAIM_CLEANUP_DELETE_SQL, /ORDER BY expires_at_ms, claim_id/)
+assert.match(
+  RETENTION_CLAIM_CLEANUP_DELETE_SQL,
+  new RegExp(`LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}`),
+)
+assert.equal((RETENTION_CLAIM_CLEANUP_DELETE_SQL.match(/DELETE FROM/g) ?? []).length, 1)
+assert.match(RETENTION_CLAIM_CLEANUP_DELETE_SQL, /DELETE FROM leaderboard_identity_claims/)
+assert.doesNotMatch(RETENTION_CLAIM_CLEANUP_DELETE_SQL, /leaderboard_runs|leaderboard_players/)
+assert.match(RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL, /WHERE expires_at_ms <= \?/)
+assert.match(
+  RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL,
+  /ORDER BY expires_at_ms, operation_digest/,
+)
+assert.match(
+  RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL,
+  new RegExp(`LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}`),
+)
+assert.equal(
+  (RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL.match(/DELETE FROM/g) ?? []).length,
+  1,
+)
+assert.match(
+  RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL,
+  /DELETE FROM leaderboard_recovery_operations/,
+)
+assert.doesNotMatch(
+  RETENTION_RECOVERY_OPERATION_CLEANUP_DELETE_SQL,
+  /leaderboard_runs|leaderboard_players|leaderboard_identity_events/,
+)
 
 // The real SQLite statement uses only the stored, inclusive retention cutoff.
 {
@@ -234,8 +361,10 @@ assert.doesNotMatch(RETENTION_CLEANUP_DELETE_SQL, /submitted_at_ms|backend_schem
   assert.deepEqual(result, {
     event: 'draft_submission',
     outcome: 'cleanup.completed',
-    batchesCompleted: 1,
+    batchesCompleted: 3,
     rowsDeleted: 3,
+    claimsDeleted: 0,
+    recoveryOperationsDeleted: 0,
   })
   assert.deepEqual(observations, [result])
   assert.deepEqual(database.selectedBatches, [[oldest, equalA, equalB]])
@@ -246,17 +375,123 @@ assert.doesNotMatch(RETENTION_CLEANUP_DELETE_SQL, /submitted_at_ms|backend_schem
   )
   assert.deepEqual(
     { ...sqlite.prepare('SELECT version FROM backend_schema WHERE id = 1').get() },
-    { version: 3 },
+    { version: 4 },
+  )
+  sqlite.close()
+}
+
+// Expired identity claims are bounded separately without removing run history.
+{
+  const sqlite = migratedDatabase()
+  const database = new SqliteD1Database(sqlite)
+  const expiredRunId = insertPendingRun(
+    sqlite,
+    '20000000-0000-4000-8000-000000000001',
+    NOW - 10_000,
+  )
+  const currentRunId = insertPendingRun(
+    sqlite,
+    '20000000-0000-4000-8000-000000000002',
+    NOW - 10_000,
+  )
+  sqlite.prepare(`
+    INSERT INTO leaderboard_identity_claims (
+      run_id,
+      claim_token_digest,
+      created_at_ms,
+      expires_at_ms
+    ) VALUES (?, ?, ?, ?)
+  `).run(expiredRunId, 'c'.repeat(64), NOW - 10_000, NOW)
+  sqlite.prepare(`
+    INSERT INTO leaderboard_identity_claims (
+      run_id,
+      claim_token_digest,
+      created_at_ms,
+      expires_at_ms
+    ) VALUES (?, ?, ?, ?)
+  `).run(currentRunId, 'd'.repeat(64), NOW - 10_000, NOW + 1)
+  const { observations, sources } = observationSources()
+
+  const result = await cleanupRetainedDraftSubmissions(bindings(database), sources)
+
+  assert.deepEqual(result, {
+    event: 'draft_submission',
+    outcome: 'cleanup.completed',
+    batchesCompleted: 3,
+    rowsDeleted: 0,
+    claimsDeleted: 1,
+    recoveryOperationsDeleted: 0,
+  })
+  assert.deepEqual(observations, [result])
+  assert.deepEqual(
+    sqlite.prepare('SELECT run_id FROM leaderboard_identity_claims').all().map((row) => ({ ...row })),
+    [{ run_id: currentRunId }],
+  )
+  assert.deepEqual(
+    sqlite.prepare('SELECT run_id FROM leaderboard_runs ORDER BY run_id').all().map((row) => ({ ...row })),
+    [{ run_id: expiredRunId }, { run_id: currentRunId }],
+  )
+  sqlite.close()
+}
+
+// Expired recovery retry receipts are removed without deleting identities, and
+// an operation whose retry window is still open remains reproducible.
+{
+  const sqlite = migratedDatabase()
+  const database = new SqliteD1Database(sqlite)
+  const expiredPlayerId = insertRecoveryOperation(sqlite, {
+    identityDigest: '1'.repeat(64),
+    displayName: 'Expired Retry',
+    deviceDigest: '2'.repeat(64),
+    recoveryDigest: '3'.repeat(64),
+    operationDigest: '4'.repeat(64),
+    requestBindingDigest: '5'.repeat(64),
+    expiresAtMs: NOW,
+  })
+  const validPlayerId = insertRecoveryOperation(sqlite, {
+    identityDigest: '6'.repeat(64),
+    displayName: 'Valid Retry',
+    deviceDigest: '7'.repeat(64),
+    recoveryDigest: '8'.repeat(64),
+    operationDigest: '9'.repeat(64),
+    requestBindingDigest: 'a'.repeat(64),
+    expiresAtMs: NOW + 1,
+  })
+  const { observations, sources } = observationSources()
+
+  const result = await cleanupRetainedDraftSubmissions(bindings(database), sources)
+
+  assert.deepEqual(result, {
+    event: 'draft_submission',
+    outcome: 'cleanup.completed',
+    batchesCompleted: 3,
+    rowsDeleted: 0,
+    claimsDeleted: 0,
+    recoveryOperationsDeleted: 1,
+  })
+  assert.deepEqual(observations, [result])
+  assert.deepEqual(
+    sqlite.prepare(`
+      SELECT operation_digest, player_id
+      FROM leaderboard_recovery_operations
+    `).all().map((row) => ({ ...row })),
+    [{ operation_digest: '9'.repeat(64), player_id: validPlayerId }],
+  )
+  assert.deepEqual(
+    sqlite.prepare('SELECT player_id FROM leaderboard_players ORDER BY player_id')
+      .all()
+      .map((row) => ({ ...row })),
+    [{ player_id: expiredPlayerId }, { player_id: validPlayerId }],
   )
   sqlite.close()
 }
 
 // Bounded sequential batching, exact-500 continuation, one clock sample, and backlog.
 for (const [plan, expected] of [
-  [[successfulRun(0)], { outcome: 'cleanup.completed', batchesCompleted: 1, rowsDeleted: 0 }],
-  [[successfulRun(73)], { outcome: 'cleanup.completed', batchesCompleted: 1, rowsDeleted: 73 }],
-  [[successfulRun(500), successfulRun(0)], { outcome: 'cleanup.completed', batchesCompleted: 2, rowsDeleted: 500 }],
-  [[successfulRun(500), successfulRun(17)], { outcome: 'cleanup.completed', batchesCompleted: 2, rowsDeleted: 517 }],
+  [[successfulRun(0), successfulRun(0), successfulRun(0)], { outcome: 'cleanup.completed', batchesCompleted: 3, rowsDeleted: 0, claimsDeleted: 0, recoveryOperationsDeleted: 0 }],
+  [[successfulRun(73), successfulRun(0), successfulRun(0)], { outcome: 'cleanup.completed', batchesCompleted: 3, rowsDeleted: 73, claimsDeleted: 0, recoveryOperationsDeleted: 0 }],
+  [[successfulRun(500), successfulRun(0), successfulRun(0), successfulRun(0)], { outcome: 'cleanup.completed', batchesCompleted: 4, rowsDeleted: 500, claimsDeleted: 0, recoveryOperationsDeleted: 0 }],
+  [[successfulRun(500), successfulRun(17), successfulRun(0), successfulRun(0)], { outcome: 'cleanup.completed', batchesCompleted: 4, rowsDeleted: 517, claimsDeleted: 0, recoveryOperationsDeleted: 0 }],
 ] as const) {
   const database = new PlannedDatabase([...plan])
   let clockCalls = 0
@@ -274,7 +509,7 @@ for (const [plan, expected] of [
 
 // Both inclusive safe-integer boundaries are valid, sampled once, and bound exactly.
 for (const cutoff of [0, Number.MAX_SAFE_INTEGER]) {
-  const database = new PlannedDatabase([successfulRun(0)])
+  const database = new PlannedDatabase([successfulRun(0), successfulRun(0), successfulRun(0)])
   let clockCalls = 0
   const { observations, sources } = observationSources(() => {
     clockCalls += 1
@@ -284,17 +519,22 @@ for (const cutoff of [0, Number.MAX_SAFE_INTEGER]) {
   assert.deepEqual(result, {
     event: 'draft_submission',
     outcome: 'cleanup.completed',
-    batchesCompleted: 1,
+    batchesCompleted: 3,
     rowsDeleted: 0,
+    claimsDeleted: 0,
+    recoveryOperationsDeleted: 0,
   })
   assert.deepEqual(observations, [result])
   assert.equal(clockCalls, 1)
-  assert.equal(database.runCalls, 1)
-  assert.deepEqual(database.deleteBindings, [[cutoff]])
+  assert.equal(database.runCalls, 3)
+  assert.deepEqual(database.deleteBindings, [[cutoff], [cutoff], [cutoff]])
 }
 
 {
-  const database = new PlannedDatabase(Array.from({ length: 11 }, () => successfulRun(500)))
+  const database = new PlannedDatabase([
+    ...Array.from({ length: 10 }, () => successfulRun(500)),
+    successfulRun(0),
+  ])
   let clockCalls = 0
   const { observations, sources } = observationSources(() => {
     clockCalls += 1
@@ -304,13 +544,15 @@ for (const cutoff of [0, Number.MAX_SAFE_INTEGER]) {
   assert.deepEqual(result, {
     event: 'draft_submission',
     outcome: 'cleanup.backlog',
-    batchesCompleted: 10,
+    batchesCompleted: 12,
     rowsDeleted: 5_000,
+    claimsDeleted: 0,
+    recoveryOperationsDeleted: 0,
   })
   assert.deepEqual(observations, [result])
-  assert.equal(database.runCalls, 10)
+  assert.equal(database.runCalls, 12)
   assert.equal(clockCalls, 1)
-  assert.deepEqual(database.deleteBindings, Array.from({ length: 10 }, () => [NOW]))
+  assert.deepEqual(database.deleteBindings, Array.from({ length: 12 }, () => [NOW]))
 }
 
 // Invalid time, missing bindings, and incompatible schemas fail before deletion.
@@ -326,7 +568,15 @@ for (const cutoff of [-1, 1.5, Number.MAX_SAFE_INTEGER + 1, Number.NaN]) {
   await expectFailure(cleanupRetainedDraftSubmissions({}, sources), observations)
 }
 
-for (const schemaRow of [null, {}, { version: 1 }, { version: 2 }, { version: 4 }, { version: '3' }]) {
+for (const schemaRow of [
+  null,
+  {},
+  { version: 1 },
+  { version: 2 },
+  { version: 3 },
+  { version: 5 },
+  { version: '4' },
+]) {
   const database = new PlannedDatabase()
   database.schemaRow = schemaRow
   const { observations, sources } = observationSources()
@@ -406,8 +656,10 @@ for (const invalidResult of [
   assert.deepEqual(result, {
     event: 'draft_submission',
     outcome: 'cleanup.completed',
-    batchesCompleted: 1,
+    batchesCompleted: 3,
     rowsDeleted: 1,
+    claimsDeleted: 0,
+    recoveryOperationsDeleted: 0,
   })
   assert.deepEqual(remainingTicketIds(sqlite), [])
   sqlite.close()
@@ -456,8 +708,10 @@ for (const invalidResult of [
   assert.deepEqual(logged.map((value) => JSON.parse(value)), [{
     event: 'draft_submission',
     outcome: 'cleanup.completed',
-    batchesCompleted: 1,
+    batchesCompleted: 3,
     rowsDeleted: 0,
+    claimsDeleted: 0,
+    recoveryOperationsDeleted: 0,
   }])
   assert.doesNotMatch(logged.join('\n'), PROHIBITED_LOG_DATA)
 
@@ -477,6 +731,8 @@ for (const invalidResult of [
     outcome: 'cleanup.failed',
     batchesCompleted: 0,
     rowsDeleted: 0,
+    claimsDeleted: 0,
+    recoveryOperationsDeleted: 0,
   }])
   assert.doesNotMatch(errors.join('\n'), PROHIBITED_LOG_DATA)
 }

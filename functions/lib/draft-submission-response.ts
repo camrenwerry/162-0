@@ -27,6 +27,7 @@ export const DRAFT_SUBMISSION_ERROR_DEFINITIONS = Object.freeze({
   incomplete_roster: Object.freeze({ status: 422, message: 'Draft roster is incomplete.' }),
   unexpected_event_order: Object.freeze({ status: 422, message: 'Draft events are not in the required order.' }),
   draft_ticket_already_consumed: Object.freeze({ status: 409, message: 'Draft ticket has already been used for another submission.' }),
+  identity_credential_invalid: Object.freeze({ status: 401, message: 'Identity credential is invalid.' }),
   scoring_failed: Object.freeze({ status: 500, message: 'Authoritative scoring failed.' }),
   submission_unavailable: Object.freeze({ status: 503, message: 'Draft submission is temporarily unavailable.' }),
 })

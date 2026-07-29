@@ -10,18 +10,19 @@ The top-level/default Wrangler environment binds only preview as `DB`. The expli
 Schema version 1 contains only `backend_schema`. The additive D1C.1 schema
 version 2 defines `draft_submissions` for retained submission receipts.
 Milestone 2 schema version 3 adds durable leaderboard players and verified-run
-audit rows. D1C.2 implements the atomic submission path behind disabled flags,
-and D1C.3 implements bounded retention cleanup in the preview private Worker.
-No raw identity, ticket token, signature, draft, roster, gameplay transcript,
-analytics request, IP address, user agent, or location data has a storage
-column. The identity digest and public label columns added in version 3 remain
-unused until a separately reviewed server-authoritative identity resolver
-exists. Leaderboard reads, submissions, and all runtime writes remain disabled
-in the checked-in default configuration.
+audit rows. Milestone 3A schema version 4 adds the account-free identity,
+recovery, rename, and claim-capability foundation. D1C.2 implements the atomic
+submission path behind disabled flags, and D1C.3 implements bounded retention
+cleanup in the preview private Worker. No raw device credential, recovery code,
+recovery operation ID, claim capability, ticket token, signature, draft,
+roster, gameplay transcript, analytics request, IP address, user agent, or
+location data has a storage column. Leaderboard reads, submissions, identity
+mutations, and all runtime writes remain disabled in the checked-in default
+configuration.
 
-The complete Milestone 2 schema, ranking, API, privacy, retention, testing, and
+The complete Milestone 3A schema, ranking, API, privacy, retention, testing, and
 activation contract is in
-[Leaderboard backend foundation](LEADERBOARD_BACKEND.md).
+[Leaderboard identity and ranking foundation](LEADERBOARD_BACKEND.md).
 
 ## Environment boundaries
 
@@ -175,20 +176,26 @@ reviewed `cron-enabled` activation state. Production keeps an explicit empty
 Cron list, both checked-in submission flags remain disabled, production remains
 D1-free, and no cleanup HTTP route exists.
 
-Each invocation samples current server time once and requires schema version 3.
-It executes at most ten sequential prepared DELETE statements. Each statement
-deletes at most 500 rows satisfying only `retain_until_ms <= cutoff_ms`, ordered
-by `retain_until_ms, ticket_id`, and every statement binds the same cutoff. A
-batch deleting fewer than 500 rows completes the run. Ten full batches stop at
-5,000 rows and conservatively emit `cleanup.backlog` without another query.
+Each invocation samples current server time once and requires schema version 4.
+It runs three separately bounded phases: no more than ten receipt DELETEs, ten
+expired-claim DELETEs, and ten expired recovery-operation DELETEs. Every
+statement deletes at most 500 rows using the same cutoff. Receipt rows use
+`retain_until_ms <= cutoff_ms`, ordered by `retain_until_ms, ticket_id`.
+Identity claims use `expires_at_ms <= cutoff_ms`, ordered by
+`expires_at_ms, claim_id`. Recovery operations use the same inclusive expiry
+rule, ordered by `expires_at_ms, operation_digest`. A phase completes after a
+batch smaller than 500; ten full batches conservatively report backlog. No
+phase deletes leaderboard runs, players, or identity events, and the recovery
+phase cannot delete a still-valid uncertain-outcome retry.
 
 Any missing binding, incompatible schema, query exception, or malformed D1
 result stops immediately, emits only bounded `cleanup.failed` observability,
 and rejects the scheduled event without calling `noRetry()`. Earlier DELETE
 statements remain committed and a later invocation can resume. Logs contain
-only the outcome plus bounded completed-batch and deleted-row counts; they never
-contain rows, identifiers, digests, SQL, exception details, secrets, bindings,
-or request data.
+only the outcome plus bounded completed-batch, receipt-deletion,
+claim-deletion, and recovery-operation-deletion counts; they never contain
+rows, identifiers, digests, SQL, exception details, secrets, bindings, or
+request data.
 
 D1C.3 changed repository code and configuration only. Its checked-in schedule
 coupled a future Worker deployment to Cron activation; no remote activation was
@@ -214,6 +221,40 @@ guarded smoke harnesses, stop conditions, and two-step rollback. D1C.4 performs
 no remote migration, deployment, endpoint request, feature activation, Cron
 activation, secret operation, binding change, route change, or production
 change.
+
+## Milestone 3A disabled identity and ranking foundation
+
+Milestone 3A advances the local runtime contract to exact schema version 4.
+Migration `0004_leaderboard_identity_ranking.sql` has not been applied
+remotely. The protected release manifest and both Wrangler files remain
+unchanged, so neither existing D1C.4 activation state enables the new identity
+or leaderboard-read gates.
+
+The account-free identity protocol stores only keyed digests of client-held
+device and recovery secrets. A qualifying identity-pending submission can
+receive a 15-minute, run-bound claim capability; the claim transaction creates
+one stable player, assigns a normalization-aware unique display name, links the
+accepted run, and writes an audit event. Returning submissions authenticate
+with the device credential. Recovery rotates both private secrets while
+preserving the player row and run history. Recovery also requires a private
+client-generated `ppr1_` operation ID. A 15-minute digest-only receipt lets the
+same uncertain request deterministically reproduce the exact replacements
+after a committed response is lost; a different concurrent operation cannot
+retrieve them. Rename uses a database-enforced 30-day compare-and-set cooldown,
+and historical boards resolve the current name.
+
+The read contract now retains up to each player's best three entries per
+Classic Best Run board. Equal projected wins and overall score use shared
+competition rank; a separate internal ordinal stabilizes authenticated cursor
+pagination. Daily and Weekly use UTC half-open windows, and All-Time is bounded
+through its snapshot. Cumulative Performance and Hard Mode remain unavailable.
+
+Future activation requires a separate reviewed migration and deployment plan,
+a Worker-only identity signing secret, an environment-specific leaderboard
+cursor signing secret, explicit Pages and Worker flags, preview smoke evidence,
+privacy and moderation review, and separate authorization. Do not adapt the
+older D1C.4 generated activation states implicitly; they describe the prior
+submission-only rollout and remain protected in this milestone.
 
 ## Local migration workflow
 
