@@ -4,20 +4,28 @@ import { assertExactBindings, expectedPagesBindings, expectedWorkerBindings } fr
 import { immutablePlain } from './canonical.mjs'
 import { PreviewWorkflowError, refusalError, remoteError } from './errors.mjs'
 import { assertSelectOnlySql, BACKEND_VERSION_SQL, MIGRATION_ROWS_SQL, MIGRATION_TABLES_SQL } from './migrations.mjs'
-import { productionDenylist } from './manifest.mjs'
+import { isReviewedGitBranch, isReviewedHostname, productionDenylist } from './manifest.mjs'
 import { safeErrorMessage } from './redaction.mjs'
 
 const DEFAULT_TIMEOUT_MS = 10_000
 const DEFAULT_MAX_BYTES = 1_048_576
 const MAX_PAGES = 10
 const PAGE_SIZE = 25
+const MAX_INVENTORY_RECORDS = MAX_PAGES * PAGE_SIZE
 const IDENTIFIER_PATTERN = /^[a-z0-9][a-z0-9-]{0,62}$/
 const BINDING_NAME_PATTERN = /^[A-Za-z_][A-Za-z0-9_]{0,127}$/
 const ACCOUNT_PATTERN = /^[0-9a-f]{32}$/
 const ZONE_PATTERN = /^[0-9a-f]{32}$/
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
+const CERT_UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+const ROUTE_ID_PATTERN = /^[0-9a-f]{32}$/
+const OPAQUE_ID_PATTERN = /^[A-Za-z0-9_-]{1,128}$/
+const SAFE_OPTIONAL_LABEL_PATTERN = /^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$/
+const MAX_ROUTE_PATTERN_LENGTH = 1024
+const ZONE_TYPE_FILTER = 'full%2Cpartial%2Csecondary%2Cinternal'
 const PUBLIC_GATE_BINDINGS = new Set(['DRAFT_SUBMISSION_MODE', 'DRAFT_TICKET_MODE', 'DRAFT_VALIDATION_MODE'])
 const OPERATION_PARAMETER_KEYS = Object.freeze({
+  accounts: ['page'],
   account: ['accountId'],
   'account-zones': ['accountId', 'page'],
   'pages-project': ['accountId', 'project'],
@@ -37,6 +45,31 @@ const OPERATION_PARAMETER_KEYS = Object.freeze({
 function assertObject(value, label) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) throw remoteError(`${label} has an unexpected JSON shape.`, 'unexpected_json_shape')
   return value
+}
+
+function assertDocumentedPlainObject(value, requiredKeys, optionalKeys, label, stage) {
+  const object = assertObject(value, label)
+  if (Object.getPrototypeOf(object) !== Object.prototype) {
+    throw remoteError(`${label} must be a plain data object.`, 'unexpected_json_shape', stage)
+  }
+  const allowed = new Set([...requiredKeys, ...optionalKeys])
+  const actualKeys = Reflect.ownKeys(object)
+  if (actualKeys.some((key) => typeof key === 'symbol')
+    || actualKeys.some((key) => !allowed.has(key))) {
+    throw remoteError(`${label} contains an undocumented field.`, 'unexpected_json_shape', stage)
+  }
+  for (const key of requiredKeys) {
+    if (!Object.hasOwn(object, key)) {
+      throw remoteError(`${label} is missing required field ${key}.`, 'unexpected_json_shape', stage)
+    }
+  }
+  for (const key of actualKeys) {
+    const descriptor = Object.getOwnPropertyDescriptor(object, key)
+    if (!descriptor || descriptor.enumerable !== true || !Object.hasOwn(descriptor, 'value')) {
+      throw remoteError(`${label} must contain only enumerable data properties.`, 'unexpected_json_shape', stage)
+    }
+  }
+  return object
 }
 
 function array(value, label) {
@@ -127,7 +160,7 @@ function operationDefinition(operation, parameters, manifest, denied) {
     }
     return {
       method: 'GET',
-      path: `/client/v4/zones?account.id=${accountId}&page=${safeParameters.page}&per_page=${PAGE_SIZE}`,
+      path: `/client/v4/zones?account.id=${accountId}&type=${ZONE_TYPE_FILTER}&page=${safeParameters.page}&per_page=${PAGE_SIZE}`,
       paginated: true,
       page: safeParameters.page,
     }
@@ -164,7 +197,11 @@ function operationDefinition(operation, parameters, manifest, denied) {
   if (operation === 'worker-domains') {
     account()
     requireIdentity(safeParameters.worker, preview.worker.name, 'Preview Worker')
-    return { method: 'GET', path: `${prefix}/workers/domains`, optionalSinglePageMetadata: true }
+    return {
+      method: 'GET',
+      path: `${prefix}/workers/domains?service=${preview.worker.name}`,
+      fixedServiceInventory: true,
+    }
   }
   if (operation === 'worker-routes') {
     account()
@@ -190,57 +227,181 @@ function operationDefinition(operation, parameters, manifest, denied) {
   throw refusalError(`Read-only Cloudflare operation is not allowlisted: ${operation}.`, 'remote.request-allowlist')
 }
 
+function bootstrapOperationDefinition(operation, parameters, manifest, groundedAccountId, groundedRouteZoneIds, denied) {
+  const safeParameters = immutableParameterSnapshot(operation, parameters)
+  rejectProductionValues(safeParameters, denied)
+  if (operation === 'accounts') {
+    if (!Number.isInteger(safeParameters.page) || safeParameters.page < 1 || safeParameters.page > MAX_PAGES) {
+      throw refusalError('Cloudflare account page is outside the reviewed pagination bound.', 'remote.request-allowlist')
+    }
+    return {
+      method: 'GET',
+      path: `/client/v4/accounts?page=${safeParameters.page}&per_page=${PAGE_SIZE}`,
+      paginated: true,
+      accountPagination: true,
+      page: safeParameters.page,
+    }
+  }
+  if (!ACCOUNT_PATTERN.test(groundedAccountId ?? '')) {
+    throw refusalError('Identity bootstrap account scope has not been grounded.', 'bootstrap.identity.account')
+  }
+  requireIdentity(safeParameters.accountId, groundedAccountId, 'Cloudflare account ID', ACCOUNT_PATTERN)
+  const prefix = `/client/v4/accounts/${groundedAccountId}`
+  const preview = manifest.cloudflare.preview
+  if (operation === 'account') return { method: 'GET', path: prefix }
+  if (operation === 'account-zones') {
+    if (!Number.isInteger(safeParameters.page) || safeParameters.page < 1 || safeParameters.page > MAX_PAGES) {
+      throw refusalError('Account zone page is outside the reviewed pagination bound.', 'remote.request-allowlist')
+    }
+    return {
+      method: 'GET',
+      path: `/client/v4/zones?account.id=${groundedAccountId}&type=${ZONE_TYPE_FILTER}&page=${safeParameters.page}&per_page=${PAGE_SIZE}`,
+      paginated: true,
+      page: safeParameters.page,
+    }
+  }
+  if (operation === 'pages-project') {
+    requireIdentity(safeParameters.project, preview.pages.project, 'Preview Pages project')
+    return { method: 'GET', path: `${prefix}/pages/projects/${preview.pages.project}` }
+  }
+  if (['worker-settings', 'worker-subdomain'].includes(operation)) {
+    requireIdentity(safeParameters.worker, preview.worker.name, 'Preview Worker')
+    const suffix = operation === 'worker-settings' ? '/settings' : '/subdomain'
+    return { method: 'GET', path: `${prefix}/workers/scripts/${preview.worker.name}${suffix}` }
+  }
+  if (operation === 'worker-domains') {
+    requireIdentity(safeParameters.worker, preview.worker.name, 'Preview Worker')
+    return {
+      method: 'GET',
+      path: `${prefix}/workers/domains?service=${preview.worker.name}`,
+      fixedServiceInventory: true,
+    }
+  }
+  if (operation === 'worker-routes') {
+    requireIdentity(safeParameters.worker, preview.worker.name, 'Preview Worker')
+    requireIdentity(safeParameters.zoneId, safeParameters.zoneId, 'Preview Worker route zone', ZONE_PATTERN)
+    if (!groundedRouteZoneIds.includes(safeParameters.zoneId)) {
+      throw refusalError('Worker route zone is not in the complete grounded account inventory.', 'bootstrap.identity.routes')
+    }
+    return { method: 'GET', path: `/client/v4/zones/${safeParameters.zoneId}/workers/routes`, arrayResult: true }
+  }
+  if (operation === 'd1-database') {
+    requireIdentity(safeParameters.databaseId, preview.d1.id, 'Preview D1 database', UUID_PATTERN)
+    return { method: 'GET', path: `${prefix}/d1/database/${preview.d1.id}` }
+  }
+  throw refusalError(`Identity-bootstrap Cloudflare operation is not allowlisted: ${operation}.`, 'remote.request-allowlist')
+}
+
+function safeNonnegativeInteger(value) {
+  return Number.isSafeInteger(value) && value >= 0
+}
+
 function validateResultInfo(value, expectedPage, resultLength) {
   const info = assertObject(value, 'Cloudflare pagination metadata')
   for (const key of ['count', 'page', 'per_page', 'total_count', 'total_pages']) {
-    if (!Number.isInteger(info[key]) || info[key] < 0) throw remoteError('Cloudflare pagination metadata is malformed.', 'ambiguous_remote_state', 'remote.pagination')
+    if (!safeNonnegativeInteger(info[key])) throw remoteError('Cloudflare pagination metadata is malformed.', 'ambiguous_remote_state', 'remote.pagination')
   }
-  if (info.page !== expectedPage || info.per_page !== PAGE_SIZE || info.count !== resultLength || info.total_pages < expectedPage
-    || info.total_pages > MAX_PAGES || info.total_count < resultLength) {
+  const expectedTotalPages = Math.max(1, Math.ceil(info.total_count / PAGE_SIZE))
+  const expectedPageCount = expectedPage < info.total_pages
+    ? PAGE_SIZE
+    : info.total_count - (PAGE_SIZE * (info.total_pages - 1))
+  if (info.page !== expectedPage || info.per_page !== PAGE_SIZE || info.count !== resultLength
+    || resultLength > info.per_page || info.total_count > MAX_INVENTORY_RECORDS
+    || info.total_pages !== expectedTotalPages || info.total_pages < expectedPage
+    || info.total_pages > MAX_PAGES || resultLength !== expectedPageCount) {
     throw remoteError('Cloudflare pagination metadata is incomplete or inconsistent.', 'ambiguous_remote_state', 'remote.pagination')
   }
   return immutablePlain({ count: info.count, page: info.page, perPage: info.per_page, totalCount: info.total_count, totalPages: info.total_pages })
 }
 
-function validateOptionalSinglePageInfo(value, resultLength) {
-  if (value === undefined) return null
-  const info = assertObject(value, 'Cloudflare optional pagination metadata')
-  const allowed = new Set(['count', 'page', 'per_page', 'total_count', 'total_pages'])
-  if (Object.keys(info).some((key) => !allowed.has(key))) {
-    throw remoteError('Cloudflare optional pagination metadata contains an unknown field.', 'ambiguous_remote_state', 'remote.pagination')
-  }
-  for (const key of allowed) {
-    if (info[key] !== undefined && (!Number.isInteger(info[key]) || info[key] < 0)) {
-      throw remoteError('Cloudflare optional pagination metadata is malformed.', 'ambiguous_remote_state', 'remote.pagination')
+function validateAccountResultInfo(value, expectedPage, resultLength) {
+  const info = assertObject(value, 'Cloudflare account pagination metadata')
+  for (const key of ['count', 'page', 'per_page', 'total_count']) {
+    if (!safeNonnegativeInteger(info[key])) {
+      throw remoteError('Cloudflare account pagination metadata is malformed.', 'ambiguous_remote_state', 'remote.pagination')
     }
   }
-  const count = info.count ?? resultLength
-  const page = info.page ?? 1
-  const perPage = info.per_page ?? resultLength
-  const totalCount = info.total_count ?? resultLength
-  const totalPages = info.total_pages ?? 1
-  if (count !== resultLength || page !== 1 || totalCount !== resultLength || totalPages !== 1
-    || (resultLength > 0 && perPage < resultLength)) {
-    throw remoteError('Cloudflare single-page inventory is incomplete or inconsistent.', 'ambiguous_remote_state', 'remote.pagination')
+  if (info.total_pages !== undefined && !safeNonnegativeInteger(info.total_pages)) {
+    throw remoteError('Cloudflare account pagination metadata is malformed.', 'ambiguous_remote_state', 'remote.pagination')
   }
-  return immutablePlain({ count, page, perPage, totalCount, totalPages })
+  const totalPages = Math.max(1, Math.ceil(info.total_count / info.per_page))
+  const expectedPageCount = expectedPage < totalPages
+    ? info.per_page
+    : info.total_count - (info.per_page * (totalPages - 1))
+  if (info.page !== expectedPage || info.per_page !== PAGE_SIZE || info.count !== resultLength
+    || resultLength > info.per_page || info.total_count > MAX_INVENTORY_RECORDS
+    || totalPages < expectedPage || totalPages > MAX_PAGES
+    || resultLength !== expectedPageCount
+    || (info.total_pages !== undefined && info.total_pages !== totalPages)) {
+    throw remoteError('Cloudflare account pagination metadata is incomplete or inconsistent.', 'ambiguous_remote_state', 'remote.pagination')
+  }
+  return immutablePlain({
+    count: info.count,
+    page: info.page,
+    perPage: info.per_page,
+    totalCount: info.total_count,
+    totalPages,
+  })
+}
+
+function validateFixedServiceInventoryInfo(value, resultLength) {
+  if (resultLength > MAX_INVENTORY_RECORDS) {
+    throw remoteError('Cloudflare filtered service inventory exceeds the reviewed record bound.', 'ambiguous_remote_state', 'remote.pagination')
+  }
+  const info = assertObject(value, 'Cloudflare filtered service pagination metadata')
+  for (const key of ['count', 'page', 'per_page', 'total_count', 'total_pages']) {
+    if (!safeNonnegativeInteger(info[key])) {
+      throw remoteError('Cloudflare filtered service pagination metadata is malformed.', 'ambiguous_remote_state', 'remote.pagination')
+    }
+  }
+  const derivedPages = Math.max(1, Math.ceil(info.total_count / info.per_page))
+  if (info.count !== resultLength || info.page !== 1 || info.total_count !== resultLength
+    || info.total_pages !== 1 || derivedPages !== 1
+    || info.per_page < 1 || info.per_page > MAX_INVENTORY_RECORDS
+    || resultLength > info.per_page) {
+    throw remoteError('Cloudflare filtered service inventory is incomplete or unverifiable.', 'ambiguous_remote_state', 'remote.pagination')
+  }
+  return immutablePlain({
+    count: info.count,
+    page: info.page,
+    perPage: info.per_page,
+    totalCount: info.total_count,
+    totalPages: info.total_pages,
+  })
 }
 
 function assertEnvelope(value, definition) {
   const envelope = assertObject(value, 'Cloudflare response')
   if (envelope.success !== true || !('result' in envelope)) throw remoteError('Cloudflare response did not report success.', 'remote_api_failure')
-  if (definition.arrayResult) return immutablePlain(array(envelope.result, 'Cloudflare array result'))
-  if (definition.optionalSinglePageMetadata) {
-    const items = array(envelope.result, 'Cloudflare single-page result')
-    return immutablePlain({ items, resultInfo: validateOptionalSinglePageInfo(envelope.result_info, items.length) })
+  if (definition.arrayResult) {
+    const items = array(envelope.result, 'Cloudflare array result')
+    if (items.length > MAX_INVENTORY_RECORDS) {
+      throw remoteError('Cloudflare single-page inventory exceeds the reviewed record bound.', 'ambiguous_remote_state', 'remote.pagination')
+    }
+    return immutablePlain(items)
+  }
+  if (definition.fixedServiceInventory) {
+    const items = array(envelope.result, 'Cloudflare filtered service result')
+    return immutablePlain({ items, resultInfo: validateFixedServiceInventoryInfo(envelope.result_info, items.length) })
   }
   if (!definition.paginated) return immutablePlain(envelope.result)
   const items = array(envelope.result, 'Cloudflare paginated result')
-  return immutablePlain({ items, resultInfo: validateResultInfo(envelope.result_info, definition.page, items.length) })
+  const resultInfo = definition.accountPagination
+    ? validateAccountResultInfo(envelope.result_info, definition.page, items.length)
+    : validateResultInfo(envelope.result_info, definition.page, items.length)
+  return immutablePlain({ items, resultInfo })
+}
+
+function validJsonContentType(value) {
+  if (typeof value !== 'string' || /[\u0000-\u001F\u007F]/u.test(value)) return false
+  return /^ *application\/json(?: *; *charset *= *(?:utf-8|"utf-8"))? *$/iu.test(value)
 }
 
 function readWithAbort(reader, signal) {
-  if (signal.aborted) return Promise.reject(Object.assign(new Error('Request deadline exceeded.'), { name: 'AbortError' }))
+  if (signal.aborted) {
+    void reader.cancel('Request deadline exceeded.').catch(() => {})
+    return Promise.reject(Object.assign(new Error('Request deadline exceeded.'), { name: 'AbortError' }))
+  }
   return new Promise((resolve, reject) => {
     const abort = () => {
       void reader.cancel('Request deadline exceeded.').catch(() => {})
@@ -295,9 +456,11 @@ async function readBoundedBody(response, maximumBytes, signal, assertDeadline) {
   }
 }
 
-export function createReadOnlyCloudflareClient({
-  manifest,
+function createBoundedCloudflareClient({
+  apiOrigin,
   token,
+  operationResolver,
+  pathDenied,
   fetchImplementation = globalThis.fetch,
   timeoutMs = DEFAULT_TIMEOUT_MS,
   maximumBytes = DEFAULT_MAX_BYTES,
@@ -306,13 +469,10 @@ export function createReadOnlyCloudflareClient({
   clearTimer = clearTimeout,
 } = {}) {
   if (typeof token !== 'string' || token.length === 0) throw remoteError('Online mode requires PENNANT_PREVIEW_API_TOKEN.', 'missing_preview_token', 'remote.credential')
-  if (manifest.cloudflare.account.status !== 'resolved' || !ACCOUNT_PATTERN.test(manifest.cloudflare.account.id ?? '')) {
-    throw refusalError(`Cloudflare account identity is unresolved: ${manifest.cloudflare.account.reason}`, 'remote.identity.account')
-  }
+  if (apiOrigin !== 'https://api.cloudflare.com') throw refusalError('Only the canonical Cloudflare API origin is approved.', 'remote.request-allowlist')
+  if (typeof operationResolver !== 'function' || !Array.isArray(pathDenied)) throw refusalError('Read-only operation resolver is invalid.', 'remote.request-allowlist')
   if (typeof fetchImplementation !== 'function') throw remoteError('No read-only network implementation is available.', 'network_unavailable')
   if (!Number.isFinite(timeoutMs) || timeoutMs < 0 || typeof monotonicNow !== 'function') throw remoteError('Read-only request deadline is invalid.', 'request_timeout')
-  const denied = productionDenylist(manifest, { includeBranch: true })
-  const pathDenied = productionDenylist(manifest)
   return Object.freeze({
     async request(operation, parameters = {}, validateEndpoint = (value) => value) {
       const controller = new AbortController()
@@ -327,13 +487,13 @@ export function createReadOnlyCloudflareClient({
       }
       try {
         assertDeadline('operation-start')
-        const definition = operationDefinition(operation, parameters, manifest, denied)
+        const definition = operationResolver(operation, parameters)
         if (typeof validateEndpoint !== 'function') throw refusalError('Read-only endpoint validator must be a function.', 'remote.request-allowlist')
         assertDeadline('request-validation-complete')
         const prohibited = pathDenied.find((identity) => definition.path.includes(identity) || definition.body?.includes(identity))
         if (prohibited) throw refusalError(`Read-only request contains prohibited Production identity ${prohibited}.`, 'remote.production-contact')
-        const url = new URL(definition.path, manifest.cloudflare.apiOrigin)
-        if (url.origin !== manifest.cloudflare.apiOrigin || !url.pathname.startsWith('/client/v4/')) {
+        const url = new URL(definition.path, apiOrigin)
+        if (url.origin !== apiOrigin || !url.pathname.startsWith('/client/v4/')) {
           throw refusalError('Read-only request escaped the approved Cloudflare API origin or path prefix.', 'remote.request-allowlist')
         }
         assertDeadline('url-validation-complete')
@@ -348,7 +508,7 @@ export function createReadOnlyCloudflareClient({
         if (response.status >= 300 && response.status < 400) throw remoteError('Cloudflare redirect responses are prohibited.', 'redirect_rejected')
         if (!response.ok) throw remoteError(`Cloudflare read returned HTTP ${response.status}.`, 'remote_http_failure')
         const contentType = response.headers.get('content-type')
-        if (typeof contentType !== 'string' || !/^application\/json(?:\s*;|$)/i.test(contentType)) {
+        if (!validJsonContentType(contentType)) {
           throw remoteError('Cloudflare response is missing the required application/json content type.', 'unexpected_content_type')
         }
         assertDeadline('headers-validated')
@@ -394,6 +554,79 @@ export function createReadOnlyCloudflareClient({
         }
       }
     },
+  })
+}
+
+export function createReadOnlyCloudflareClient({
+  manifest,
+  token,
+  fetchImplementation = globalThis.fetch,
+  timeoutMs = DEFAULT_TIMEOUT_MS,
+  maximumBytes = DEFAULT_MAX_BYTES,
+  monotonicNow = () => performance.now(),
+  setTimer = setTimeout,
+  clearTimer = clearTimeout,
+} = {}) {
+  if (typeof token !== 'string' || token.length === 0) throw remoteError('Online mode requires PENNANT_PREVIEW_API_TOKEN.', 'missing_preview_token', 'remote.credential')
+  if (manifest.cloudflare.account.status !== 'resolved' || !ACCOUNT_PATTERN.test(manifest.cloudflare.account.id ?? '')) {
+    throw refusalError(`Cloudflare account identity is unresolved: ${manifest.cloudflare.account.reason}`, 'remote.identity.account')
+  }
+  const denied = productionDenylist(manifest, { includeBranch: true })
+  return createBoundedCloudflareClient({
+    apiOrigin: manifest.cloudflare.apiOrigin,
+    token,
+    operationResolver: (operation, parameters) => operationDefinition(operation, parameters, manifest, denied),
+    pathDenied: productionDenylist(manifest),
+    fetchImplementation,
+    timeoutMs,
+    maximumBytes,
+    monotonicNow,
+    setTimer,
+    clearTimer,
+  })
+}
+
+export function createIdentityBootstrapCloudflareClient({
+  manifest,
+  token,
+  groundedAccountId = null,
+  groundedRouteZoneIds = [],
+  fetchImplementation = globalThis.fetch,
+  timeoutMs = DEFAULT_TIMEOUT_MS,
+  maximumBytes = DEFAULT_MAX_BYTES,
+  monotonicNow = () => performance.now(),
+  setTimer = setTimeout,
+  clearTimer = clearTimeout,
+} = {}) {
+  if (!Array.isArray(groundedRouteZoneIds)
+    || groundedRouteZoneIds.some((zoneId) => !ZONE_PATTERN.test(zoneId))
+    || new Set(groundedRouteZoneIds).size !== groundedRouteZoneIds.length
+    || groundedRouteZoneIds.length > MAX_INVENTORY_RECORDS) {
+    throw refusalError('Identity bootstrap route-zone scope is malformed or duplicated.', 'bootstrap.identity.routes')
+  }
+  if (groundedAccountId !== null && !ACCOUNT_PATTERN.test(groundedAccountId)) {
+    throw refusalError('Identity bootstrap account scope is malformed.', 'bootstrap.identity.account')
+  }
+  const routeZoneIds = Object.freeze([...groundedRouteZoneIds].sort())
+  const denied = productionDenylist(manifest, { includeBranch: true })
+  return createBoundedCloudflareClient({
+    apiOrigin: manifest.cloudflare.apiOrigin,
+    token,
+    operationResolver: (operation, parameters) => bootstrapOperationDefinition(
+      operation,
+      parameters,
+      manifest,
+      groundedAccountId,
+      routeZoneIds,
+      denied,
+    ),
+    pathDenied: productionDenylist(manifest),
+    fetchImplementation,
+    timeoutMs,
+    maximumBytes,
+    monotonicNow,
+    setTimer,
+    clearTimer,
   })
 }
 
@@ -531,6 +764,181 @@ function deploymentHostname(value, label) {
   return url.hostname
 }
 
+function isReviewedRoutePattern(value) {
+  if (typeof value !== 'string' || value.length === 0 || value.length > MAX_ROUTE_PATTERN_LENGTH
+    || value !== value.trim() || /[^\u0021-\u007E]/u.test(value)) return false
+  const withoutScheme = value.replace(/^https?:\/\//u, '')
+  const slash = withoutScheme.indexOf('/')
+  const routeHostname = slash < 0 ? withoutScheme : withoutScheme.slice(0, slash)
+  const routePath = slash < 0 ? '' : withoutScheme.slice(slash)
+  const hostname = routeHostname.startsWith('*.')
+    ? routeHostname.slice(2)
+    : (routeHostname.startsWith('*') ? routeHostname.slice(1) : routeHostname)
+  const wildcardCount = [...routePath].filter((character) => character === '*').length
+  return !withoutScheme.includes('://')
+    && !hostname.includes('*')
+    && isReviewedHostname(hostname)
+    && (routePath === ''
+      || (/^\/[A-Za-z0-9!$%&'()+,./:;=@_~-]*\*?$/u.test(routePath)
+        && wildcardCount <= 1
+        && (wildcardCount === 0 || routePath.endsWith('*'))))
+}
+
+export function normalizeWorkerRouteInventory(value, {
+  zoneId,
+  previewWorker,
+  assertDeadline = () => {},
+  stage = 'remote.worker.routes',
+} = {}) {
+  const seenIds = new Map()
+  const seenPatterns = new Map()
+  if (!Array.isArray(value)) {
+    throw remoteError(`Worker routes for zone ${zoneId} has an unexpected JSON shape.`, 'unexpected_json_shape', stage)
+  }
+  const normalized = value.map((raw) => {
+    const route = assertDocumentedPlainObject(raw, ['id', 'pattern'], ['script'], 'Worker route', stage)
+    const hasScript = Object.hasOwn(route, 'script')
+    const script = hasScript ? route.script : null
+    if (typeof route.id !== 'string' || !ROUTE_ID_PATTERN.test(route.id)
+      || !isReviewedRoutePattern(route.pattern)
+      || (hasScript && (typeof script !== 'string' || !IDENTIFIER_PATTERN.test(script)))) {
+      throw remoteError('Worker route inventory is malformed or duplicated.', 'ambiguous_remote_state', stage)
+    }
+    const record = { id: route.id, pattern: route.pattern, script, zoneId }
+    const priorId = seenIds.get(record.id)
+    if (priorId) {
+      const conflict = priorId.pattern !== record.pattern || priorId.script !== record.script
+      throw remoteError(
+        conflict
+          ? 'Worker route inventory contains conflicting records for one route ID.'
+          : 'Worker route inventory is malformed or duplicated.',
+        'ambiguous_remote_state',
+        stage,
+      )
+    }
+    const priorPattern = seenPatterns.get(record.pattern)
+    if (priorPattern && (priorPattern.id !== record.id || priorPattern.script !== record.script)) {
+      throw remoteError(
+        'Worker route inventory contains conflicting records for one route pattern.',
+        'ambiguous_remote_state',
+        stage,
+      )
+    }
+    seenIds.set(record.id, record)
+    seenPatterns.set(record.pattern, record)
+    assertDeadline('worker-routes-item-normalized')
+    return record
+  }).sort((left, right) => (
+    left.id.localeCompare(right.id)
+      || left.pattern.localeCompare(right.pattern)
+      || (left.script ?? '').localeCompare(right.script ?? '')
+  ))
+  if (normalized.some(({ script }) => script === previewWorker)) {
+    throw refusalError('Preview Worker has a public route.', stage)
+  }
+  assertDeadline('worker-routes-inventory-normalized')
+  return normalized
+}
+
+function completeWorkerDomainItems(value, stage) {
+  const response = assertObject(value, 'Worker custom-domain response')
+  const items = array(response.items, 'Worker custom-domain inventory')
+  const info = assertObject(response.resultInfo, 'Worker custom-domain completeness metadata')
+  for (const key of ['count', 'page', 'perPage', 'totalCount', 'totalPages']) {
+    if (!safeNonnegativeInteger(info[key])) {
+      throw remoteError('Worker custom-domain completeness metadata is malformed.', 'ambiguous_remote_state', stage)
+    }
+  }
+  if (info.count !== items.length || info.page !== 1 || info.totalCount !== items.length
+    || info.totalPages !== 1 || info.perPage < 1 || info.perPage > MAX_INVENTORY_RECORDS
+    || items.length > info.perPage || items.length > MAX_INVENTORY_RECORDS) {
+    throw remoteError('Worker custom-domain inventory is incomplete or unverifiable.', 'ambiguous_remote_state', stage)
+  }
+  return items
+}
+
+export function normalizeWorkerCustomDomainInventory(value, {
+  groundedZoneIds,
+  previewWorker,
+  assertDeadline = () => {},
+  stage = 'remote.worker.domains',
+} = {}) {
+  if (!Array.isArray(groundedZoneIds)
+    || groundedZoneIds.some((zoneId) => typeof zoneId !== 'string' || !ZONE_PATTERN.test(zoneId))
+    || new Set(groundedZoneIds).size !== groundedZoneIds.length) {
+    throw remoteError('Worker custom-domain zone scope is malformed.', 'ambiguous_remote_state', stage)
+  }
+  const grounded = new Set(groundedZoneIds)
+  const seenIds = new Map()
+  const seenHostnames = new Map()
+  const normalized = completeWorkerDomainItems(value, stage).map((raw) => {
+    const domain = assertDocumentedPlainObject(
+      raw,
+      ['id', 'cert_id', 'hostname', 'service', 'zone_id', 'zone_name'],
+      ['environment'],
+      'Worker custom domain',
+      stage,
+    )
+    const hostname = typeof domain.hostname === 'string' ? domain.hostname.toLowerCase() : ''
+    const zoneName = typeof domain.zone_name === 'string' ? domain.zone_name.toLowerCase() : ''
+    const hasEnvironment = Object.hasOwn(domain, 'environment')
+    const environment = hasEnvironment ? domain.environment : null
+    if (typeof domain.id !== 'string' || !OPAQUE_ID_PATTERN.test(domain.id)
+      || typeof domain.cert_id !== 'string' || !CERT_UUID_PATTERN.test(domain.cert_id)
+      || !isReviewedHostname(hostname) || domain.hostname !== domain.hostname.trim()
+      || typeof domain.service !== 'string' || !IDENTIFIER_PATTERN.test(domain.service)
+      || typeof domain.zone_id !== 'string' || !ZONE_PATTERN.test(domain.zone_id) || !grounded.has(domain.zone_id)
+      || !isReviewedHostname(zoneName) || domain.zone_name !== domain.zone_name.trim()
+      || (hostname !== zoneName && !hostname.endsWith(`.${zoneName}`))
+      || (hasEnvironment && (typeof environment !== 'string' || !SAFE_OPTIONAL_LABEL_PATTERN.test(environment)))) {
+      throw remoteError('Worker custom-domain inventory is malformed or duplicated.', 'ambiguous_remote_state', stage)
+    }
+    if (domain.service !== previewWorker) {
+      throw remoteError('Worker custom-domain response did not honor the fixed Preview service filter.', 'ambiguous_remote_state', stage)
+    }
+    const record = {
+      id: domain.id,
+      certId: domain.cert_id,
+      hostname,
+      service: domain.service,
+      zoneId: domain.zone_id,
+      zoneName,
+      environment,
+    }
+    const priorId = seenIds.get(record.id)
+    if (priorId) {
+      const conflict = JSON.stringify(priorId) !== JSON.stringify(record)
+      throw remoteError(
+        conflict
+          ? 'Worker custom-domain inventory contains conflicting records for one domain ID.'
+          : 'Worker custom-domain inventory is malformed or duplicated.',
+        'ambiguous_remote_state',
+        stage,
+      )
+    }
+    const priorHostname = seenHostnames.get(record.hostname)
+    if (priorHostname) {
+      const conflict = JSON.stringify(priorHostname) !== JSON.stringify(record)
+      throw remoteError(
+        conflict
+          ? 'Worker custom-domain inventory contains conflicting records for one hostname.'
+          : 'Worker custom-domain inventory is malformed or duplicated.',
+        'ambiguous_remote_state',
+        stage,
+      )
+    }
+    seenIds.set(record.id, record)
+    seenHostnames.set(record.hostname, record)
+    assertDeadline('worker-domains-item-normalized')
+    return record
+  }).sort((left, right) => left.hostname.localeCompare(right.hostname) || left.id.localeCompare(right.id))
+  if (normalized.length > 0) {
+    throw refusalError('Preview Worker has a custom domain.', stage)
+  }
+  assertDeadline('worker-domains-inventory-normalized')
+  return normalized
+}
+
 async function completePaginatedInventory(client, operation, parameters, label, finalize = (items) => items) {
   const all = []
   let totalPages
@@ -547,6 +955,8 @@ async function completePaginatedInventory(client, operation, parameters, label, 
         totalCount = info.totalCount
       }
       if (info.page !== page || info.totalPages !== totalPages || info.totalCount !== totalCount
+        || info.perPage !== PAGE_SIZE || items.length > PAGE_SIZE
+        || totalCount > MAX_INVENTORY_RECORDS || all.length + items.length > MAX_INVENTORY_RECORDS
         || (totalPages > 1 && items.length === 0) || (page < totalPages && items.length !== PAGE_SIZE)) {
         throw remoteError(`${label} pagination changed or truncated during inspection.`, 'ambiguous_remote_state', 'remote.pagination')
       }
@@ -641,7 +1051,7 @@ async function authoritativeRouteZones(client, base, preview) {
     const seen = new Set()
     for (const raw of zones) {
       const zone = assertObject(raw, 'Cloudflare account zone')
-      if (!ZONE_PATTERN.test(zone.id ?? '') || seen.has(zone.id)) throw remoteError('Cloudflare account zone inventory is malformed or duplicated.', 'ambiguous_remote_state', 'remote.worker.routes')
+      if (typeof zone.id !== 'string' || !ZONE_PATTERN.test(zone.id) || seen.has(zone.id)) throw remoteError('Cloudflare account zone inventory is malformed or duplicated.', 'ambiguous_remote_state', 'remote.worker.routes')
       const account = assertObject(zone.account, 'Cloudflare account zone owner')
       requireIdentity(account.id, base.accountId, 'Cloudflare zone account', ACCOUNT_PATTERN)
       seen.add(zone.id)
@@ -664,6 +1074,9 @@ export async function inspectPreviewRemoteState({ manifest, client }) {
   if (preview.worker.routeZoneIds.status !== 'resolved' || preview.worker.routeZoneIds.values.length === 0) {
     throw refusalError('Complete Preview Worker route-zone inventory is unresolved.', 'remote.identity.routes')
   }
+  if (preview.worker.routeZoneIds.values.length > MAX_INVENTORY_RECORDS) {
+    throw refusalError('Complete Preview Worker route-zone inventory exceeds the reviewed request bound.', 'remote.identity.routes')
+  }
   const base = { accountId }
   await client.request('account', base, (value, assertDeadline) => {
     const account = assertObject(value, 'Cloudflare account')
@@ -676,7 +1089,10 @@ export async function inspectPreviewRemoteState({ manifest, client }) {
     const project = assertObject(value, 'Pages project')
     requireIdentity(project.name, preview.pages.project, 'Pages project response')
     assertDeadline('pages-project-identity-normalized')
-    if (typeof project.production_branch !== 'string' || project.production_branch === preview.pages.branch) throw refusalError('Pages Preview branch equals or cannot be distinguished from the configured production branch.', 'remote.pages.production-branch')
+    if (!isReviewedGitBranch(project.production_branch)) {
+      throw remoteError('Pages production branch is missing or malformed.', 'ambiguous_remote_state', 'remote.pages.production-branch')
+    }
+    if (project.production_branch === preview.pages.branch) throw refusalError('Pages Preview branch equals the configured production branch.', 'remote.pages.production-branch')
     if (project.production_branch !== manifest.cloudflare.production.pages.branch.value) throw refusalError('Pages production branch differs from the immutable release manifest.', 'remote.pages.production-branch')
     const observedProductionDomains = array(project.domains, 'Pages Production domains').map(String).sort()
     if (JSON.stringify(observedProductionDomains) !== JSON.stringify([...manifest.cloudflare.production.pages.domains.values].sort())) throw refusalError('Pages Production domains differ from the immutable release manifest.', 'remote.pages.production-domains')
@@ -723,41 +1139,41 @@ export async function inspectPreviewRemoteState({ manifest, client }) {
   })
 
   const workerDomains = await client.request('worker-domains', { ...base, worker: preview.worker.name }, (value, assertDeadline) => {
-    const domainResponse = assertObject(value, 'Worker custom-domain response')
-    const domains = array(domainResponse.items, 'Worker custom domains')
-    const domainKeys = new Set()
-    const normalized = domains.map((domain) => {
-      const item = assertObject(domain, 'Worker custom domain')
-      const hostname = String(item.hostname ?? '')
-      const service = String(item.service ?? '')
-      if (!hostname || !service || domainKeys.has(hostname)) throw remoteError('Worker custom-domain inventory is malformed or duplicated.', 'ambiguous_remote_state', 'remote.worker.domains')
-      domainKeys.add(hostname)
-      assertDeadline('worker-domains-item-normalized')
-      return { hostname, service, environment: String(item.environment ?? ''), zoneId: String(item.zone_id ?? '') }
-    }).filter(({ service }) => service === preview.worker.name)
-    if (normalized.length > 0) throw refusalError('Preview Worker has a custom domain.', 'remote.worker.domains')
-    assertDeadline('worker-domains-inventory-normalized')
-    return normalized
+    return normalizeWorkerCustomDomainInventory(value, {
+      groundedZoneIds: routeZoneIds,
+      previewWorker: preview.worker.name,
+      assertDeadline,
+    })
   })
 
   const routes = []
+  const routeIds = new Map()
+  const routePatterns = new Map()
+  let routeRecordCount = 0
   for (const zoneId of routeZoneIds) {
     const zoneRoutes = await client.request('worker-routes', { ...base, worker: preview.worker.name, zoneId }, (value, assertDeadline) => {
-      const routeKeys = new Set()
-      const normalized = []
-      for (const route of array(value, `Worker routes for zone ${zoneId}`)) {
-        const item = assertObject(route, 'Worker route')
-        const key = String(item.id ?? `${item.pattern ?? ''}:${item.script ?? ''}`)
-        if (!key || routeKeys.has(key) || typeof item.script !== 'string' || typeof item.pattern !== 'string') throw remoteError('Worker route inventory is malformed or duplicated.', 'ambiguous_remote_state', 'remote.worker.routes')
-        routeKeys.add(key)
-        if (item.script === preview.worker.name) normalized.push({ pattern: item.pattern, zoneId })
-        assertDeadline('worker-routes-item-normalized')
-      }
-      if (normalized.length > 0) throw refusalError('Preview Worker has a public route.', 'remote.worker.routes')
-      assertDeadline('worker-routes-inventory-normalized')
-      return normalized
+      return normalizeWorkerRouteInventory(value, {
+        zoneId,
+        previewWorker: preview.worker.name,
+        assertDeadline,
+      })
     })
-    routes.push(...zoneRoutes)
+    if (routeRecordCount + zoneRoutes.length > MAX_INVENTORY_RECORDS) {
+      throw remoteError('Worker route inventory exceeds the reviewed aggregate record bound.', 'ambiguous_remote_state', 'remote.worker.routes')
+    }
+    routeRecordCount += zoneRoutes.length
+    for (const route of zoneRoutes) {
+      const priorId = routeIds.get(route.id)
+      if (priorId) {
+        throw remoteError('Worker route inventory contains conflicting records for one route ID.', 'ambiguous_remote_state', 'remote.worker.routes')
+      }
+      const priorPattern = routePatterns.get(route.pattern)
+      if (priorPattern) {
+        throw remoteError('Worker route inventory contains conflicting records for one route pattern.', 'ambiguous_remote_state', 'remote.worker.routes')
+      }
+      routeIds.set(route.id, route)
+      routePatterns.set(route.pattern, route)
+    }
   }
 
   const database = await client.request('d1-database', { ...base, databaseId: preview.d1.id }, (value, assertDeadline) => {

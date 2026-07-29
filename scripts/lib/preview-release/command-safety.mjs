@@ -24,6 +24,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/preview-check.mjs', '--typecheck'],
   ['scripts/preview-check.test.mjs'],
   ['scripts/preview-plan.mjs'],
+  ['--test', 'scripts/preview-identity-bootstrap.test.mjs'],
   ['--test', 'scripts/preview-workflow.test.mjs'],
   ['scripts/production-migration-guard.test.mjs'],
   ['scripts/pwa-deployment.test.mjs'],

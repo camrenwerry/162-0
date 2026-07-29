@@ -20,7 +20,11 @@ import {
   MIGRATION_TABLES_SQL,
 } from './lib/preview-release/migrations.mjs'
 import { buildReleasePlan, derivePlanId } from './lib/preview-release/plan.mjs'
-import { redactText } from './lib/preview-release/redaction.mjs'
+import {
+  containsProhibitedCredentialAssignment,
+  PROHIBITED_CREDENTIAL_ASSIGNMENT_ALIASES,
+  redactText,
+} from './lib/preview-release/redaction.mjs'
 import { checkReport, failureReport, renderHumanCheck, renderHumanPlan } from './lib/preview-release/reporting.mjs'
 import { credentialFreeEnvironment, parsePreviewCheckArguments } from './preview-check.mjs'
 import { assertStableObservationWindow, parsePreviewPlanArguments } from './preview-plan.mjs'
@@ -35,6 +39,8 @@ const ZONE_ID = 'b'.repeat(32)
 const FULL_HEAD = 'c'.repeat(40)
 const WORKER_DEPLOYMENT_ID = '11111111-1111-4111-8111-111111111111'
 const WORKER_VERSION_ID = '22222222-2222-4222-8222-222222222222'
+const MAXIMUM_HOSTNAME = `${'a'.repeat(63)}.${'b'.repeat(63)}.${'c'.repeat(63)}.${'d'.repeat(61)}`
+const OVERLENGTH_HOSTNAME = `${'a'.repeat(63)}.${'b'.repeat(63)}.${'c'.repeat(63)}.${'d'.repeat(62)}`
 
 function resolvedManifest() {
   const value = clone(manifest)
@@ -209,6 +215,118 @@ for (const [description, mutate, pattern] of [
   })
 }
 
+test('credential assignment detection and redaction share one alias and delimiter grammar', () => {
+  const fixtureValue = 'fixture-not-a-real-secret'
+  for (const alias of PROHIBITED_CREDENTIAL_ASSIGNMENT_ALIASES) {
+    for (const assignment of [
+      `${alias}=${fixtureValue}`,
+      `${alias}: ${fixtureValue}`,
+      `${alias} = ${fixtureValue}`,
+      `${alias} : ${fixtureValue}`,
+      `${alias.toLowerCase()}: ${fixtureValue}`,
+    ]) {
+      assert.equal(containsProhibitedCredentialAssignment(assignment), true, assignment)
+      const value = clone(manifest)
+      value.cloudflare.account.reason = assignment
+      assert.throws(() => validateReleaseManifest(value), /prohibited credential material/, assignment)
+      const redacted = redactText(`diagnostic ${assignment}`)
+      assert.equal(redacted.includes(fixtureValue), false, assignment)
+      assert.match(redacted, /\[REDACTED\]/, assignment)
+      assert.throws(
+        () => assertLocalReleaseGraph({ root: `node scripts/preview-check.mjs ${assignment}` }, ['root']),
+        undefined,
+        assignment,
+      )
+    }
+    for (const mixed of [
+      `${alias}:=${fixtureValue}`,
+      `${alias}=:${fixtureValue}`,
+      `${alias} : =${fixtureValue}`,
+      `${alias} = :${fixtureValue}`,
+    ]) {
+      assert.equal(containsProhibitedCredentialAssignment(mixed), true, mixed)
+      const value = clone(manifest)
+      value.cloudflare.account.reason = mixed
+      assert.throws(() => validateReleaseManifest(value), /prohibited credential material/, mixed)
+      assert.equal(redactText(mixed).includes(fixtureValue), false, mixed)
+    }
+  }
+
+  for (const harmless of [
+    `The name ${PROHIBITED_CREDENTIAL_ASSIGNMENT_ALIASES[0]} is prohibited.`,
+    `NOT_${PROHIBITED_CREDENTIAL_ASSIGNMENT_ALIASES[0]}=harmless-fixture`,
+    `${PROHIBITED_CREDENTIAL_ASSIGNMENT_ALIASES[0]}_SUFFIX: harmless-fixture`,
+  ]) {
+    assert.equal(containsProhibitedCredentialAssignment(harmless), false, harmless)
+    const value = clone(manifest)
+    value.cloudflare.account.reason = harmless
+    assert.doesNotThrow(() => validateReleaseManifest(value), harmless)
+  }
+})
+
+test('checked-in and candidate manifests enforce the strict DNS hostname boundary', () => {
+  const withDomains = (domains) => {
+    const value = clone(manifest)
+    value.cloudflare.production.pages.domains = { status: 'resolved', values: domains, reason: '' }
+    return value
+  }
+  assert.doesNotThrow(() => validateReleaseManifest(withDomains([MAXIMUM_HOSTNAME])))
+  assert.doesNotThrow(() => validateReleaseManifest(withDomains([
+    `${'a'.repeat(63)}.example.invalid`,
+  ])))
+  for (const invalid of [
+    OVERLENGTH_HOSTNAME,
+    `${'a'.repeat(64)}.example.invalid`,
+    'example.invalid.',
+    'example..invalid',
+    '*.example.invalid',
+    'WWW.EXAMPLE.INVALID',
+    'éxample.example.invalid',
+  ]) {
+    assert.throws(() => validateReleaseManifest(withDomains([invalid])), /Production domains are malformed/)
+  }
+})
+
+test('checked-in manifest validation enforces the authoritative Git branch grammar', () => {
+  const withBranch = (branch) => {
+    const value = clone(manifest)
+    value.cloudflare.production.pages.branch = { status: 'resolved', value: branch, reason: '' }
+    return value
+  }
+  for (const valid of ['main', 'release/2026/july', 'feature/-child', 'é', 'a'.repeat(255)]) {
+    assert.doesNotThrow(() => validateReleaseManifest(withBranch(valid)), valid)
+  }
+  for (const invalid of [
+    '',
+    '@',
+    '-main',
+    '/main',
+    'main/',
+    'main//release',
+    '.main',
+    'release/.hidden',
+    'release.lock',
+    'release.',
+    'release..next',
+    'release/@{next',
+    'bad branch',
+    'bad~branch',
+    'bad^branch',
+    'bad:branch',
+    'bad?branch',
+    'bad*branch',
+    'bad[branch',
+    String.raw`bad\branch`,
+    'a'.repeat(256),
+  ]) {
+    assert.throws(
+      () => validateReleaseManifest(withBranch(invalid)),
+      /resolved value is malformed|Production branch is malformed/,
+      JSON.stringify(invalid),
+    )
+  }
+})
+
 test('manifest parser rejects a BOM and malformed JSON', () => {
   assert.throws(() => parseReleaseManifest(`\uFEFF${loaded.source}`), /BOM/)
   assert.throws(() => parseReleaseManifest('{'), /not valid JSON/)
@@ -294,6 +412,28 @@ function previewDeployment(id = 'preview-deployment', createdOn = '2026-07-22T12
   }
 }
 
+function workerDomain(overrides = {}) {
+  return {
+    id: 'e'.repeat(32),
+    cert_id: '00000000-0000-4000-8000-000000000001',
+    hostname: 'preview.example.invalid',
+    service: manifest.cloudflare.preview.worker.name,
+    zone_id: ZONE_ID,
+    zone_name: 'example.invalid',
+    ...overrides,
+  }
+}
+
+function workerDomainResultInfo(items) {
+  return {
+    count: items.length,
+    page: 1,
+    perPage: 20,
+    totalCount: items.length,
+    totalPages: 1,
+  }
+}
+
 function faithfulPagesConfig() {
   return {
     always_use_latest_compatibility_date: false,
@@ -349,14 +489,14 @@ function completeInspectionClient({
         calls.push({ operation, parameters: clone(parameters) })
         if (operation === 'pages-deployments') {
           const items = pages[parameters.page - 1] ?? []
-          return validateEndpoint({ items, resultInfo: { page: parameters.page, totalPages: pages.length, totalCount: pages.flat().length } }, validator)
+          return validateEndpoint({ items, resultInfo: { page: parameters.page, perPage: 25, totalPages: pages.length, totalCount: pages.flat().length } }, validator)
         }
         if (operation === 'account-zones') {
           const items = exactZonePages[parameters.page - 1] ?? []
-          return validateEndpoint({ items, resultInfo: { page: parameters.page, totalPages: exactZonePages.length, totalCount: exactZonePages.flat().length } }, validator)
+          return validateEndpoint({ items, resultInfo: { page: parameters.page, perPage: 25, totalPages: exactZonePages.length, totalCount: exactZonePages.flat().length } }, validator)
         }
         if (operation === 'worker-domains') {
-          return validateEndpoint({ items: domains, resultInfo: null }, validator)
+          return validateEndpoint({ items: domains, resultInfo: workerDomainResultInfo(domains) }, validator)
         }
         if (operation === 'worker-routes') {
           return validateEndpoint(routes[parameters.zoneId] ?? [], validator)
@@ -398,6 +538,7 @@ function productionInspectionHarness({ deadlineStage, deadlineValue = 10 } = {})
       operation = 'account'
       resultValue = { id: ACCOUNT_ID }
     } else if (path === '/client/v4/zones' && url.searchParams.has('account.id')) {
+      assert.equal(url.searchParams.get('type'), 'full,partial,secondary,internal')
       operation = 'account-zones'
       resultValue = [{ id: ZONE_ID, account: { id: ACCOUNT_ID } }]
       resultInfo = { count: 1, page: 1, per_page: 25, total_count: 1, total_pages: 1 }
@@ -430,8 +571,10 @@ function productionInspectionHarness({ deadlineStage, deadlineValue = 10 } = {})
       operation = 'worker-schedules'
       resultValue = { schedules: [] }
     } else if (path.endsWith('/workers/domains')) {
+      assert.equal(url.searchParams.get('service'), reviewed.cloudflare.preview.worker.name)
       operation = 'worker-domains'
       resultValue = []
+      resultInfo = { count: 0, page: 1, per_page: 20, total_count: 0, total_pages: 1 }
     } else if (path.endsWith('/workers/routes')) {
       operation = 'worker-routes'
       resultValue = []
@@ -561,7 +704,7 @@ test('full remote inspection validates safe shapes and returns no private respon
       operations.push(operation)
       const values = {
         account: { id: ACCOUNT_ID, name: 'not-returned' },
-        'account-zones': { items: [{ id: ZONE_ID, account: { id: ACCOUNT_ID } }], resultInfo: { page: 1, totalPages: 1, totalCount: 1 } },
+        'account-zones': { items: [{ id: ZONE_ID, account: { id: ACCOUNT_ID } }], resultInfo: { page: 1, perPage: 25, totalPages: 1, totalCount: 1 } },
         'pages-project': {
           name: 'diamond-draft', production_branch: 'main', domains: ['pennant-pursuit.example'],
           deployment_configs: { preview: {
@@ -578,7 +721,7 @@ test('full remote inspection validates safe shapes and returns no private respon
           aliases: ['https://develop.diamond-draft.pages.dev'],
           deployment_trigger: { metadata: { branch: 'develop', commit_hash: FULL_HEAD } },
           latest_stage: { status: 'success' },
-        }], resultInfo: { page: 1, totalPages: 1, totalCount: 1 } },
+        }], resultInfo: { page: 1, perPage: 25, totalPages: 1, totalCount: 1 } },
         'worker-settings': { bindings: rawWorkerBindings() },
         'worker-deployments': { deployments: [{
           id: WORKER_DEPLOYMENT_ID,
@@ -587,7 +730,7 @@ test('full remote inspection validates safe shapes and returns no private respon
         }] },
         'worker-subdomain': { enabled: false, previews_enabled: false },
         'worker-schedules': { schedules: [] },
-        'worker-domains': { items: [], resultInfo: null },
+        'worker-domains': { items: [], resultInfo: workerDomainResultInfo([]) },
         'worker-routes': [],
         'd1-database': { uuid: manifest.cloudflare.preview.d1.id, name: manifest.cloudflare.preview.d1.name },
         'migration-tables': [{ success: true, results: [{ name: 'backend_schema' }, { name: 'd1_migrations' }] }],
@@ -799,7 +942,7 @@ test('P1-03 Worker exposure inspection is complete, manifest-bound, paginated, a
   assert.equal(unresolvedClient.calls.length, 0)
 
   for (const hostname of ['preview.example.invalid', 'production-like.example.invalid']) {
-    const exposed = completeInspectionClient({ domains: [{ hostname, service: manifest.cloudflare.preview.worker.name }] })
+    const exposed = completeInspectionClient({ domains: [workerDomain({ hostname })] })
     await assert.rejects(inspectPreviewRemoteState({ manifest: resolvedManifest(), client: exposed.client }), /custom domain/)
   }
 
@@ -808,7 +951,7 @@ test('P1-03 Worker exposure inspection is complete, manifest-bound, paginated, a
   twoZones.cloudflare.preview.worker.routeZoneIds = { status: 'resolved', values: [ZONE_ID, secondZone], reason: '' }
   const routed = completeInspectionClient({
     zonePages: [[{ id: ZONE_ID, account: { id: ACCOUNT_ID } }, { id: secondZone, account: { id: ACCOUNT_ID } }]],
-    routes: { [secondZone]: [{ id: 'route-2', pattern: 'preview.example.invalid/*', script: manifest.cloudflare.preview.worker.name }] },
+    routes: { [secondZone]: [{ id: 'f'.repeat(32), pattern: 'preview.example.invalid/*', script: manifest.cloudflare.preview.worker.name }] },
   })
   await assert.rejects(inspectPreviewRemoteState({ manifest: validateReleaseManifest(twoZones), client: routed.client }), /public route/)
   assert.equal(routed.calls.some(({ operation, parameters }) => operation === 'worker-routes' && parameters.zoneId === secondZone), true)
@@ -818,6 +961,12 @@ test('P1-03 Worker exposure inspection is complete, manifest-bound, paginated, a
   assert.deepEqual(safe.worker.routes, [])
   assert.deepEqual(safe.worker.customDomains, [])
   assert.equal(complete.calls.some(({ operation, parameters }) => operation === 'worker-domains' && !('page' in parameters)), true)
+
+  const scriptless = completeInspectionClient({
+    routes: { [ZONE_ID]: [{ id: 'e'.repeat(32), pattern: 'disabled.example.invalid/*' }] },
+  })
+  const scriptlessRemote = await inspectPreviewRemoteState({ manifest: resolvedManifest(), client: scriptless.client })
+  assert.deepEqual(scriptlessRemote.worker.routes, [])
 
   const extraZone = completeInspectionClient({ zonePages: [[{ id: ZONE_ID, account: { id: ACCOUNT_ID } }, { id: secondZone, account: { id: ACCOUNT_ID } }]] })
   await assert.rejects(inspectPreviewRemoteState({ manifest: resolvedManifest(), client: extraZone.client }), /zone inventory/)
@@ -830,10 +979,31 @@ test('P1-03 Worker exposure inspection is complete, manifest-bound, paginated, a
   assert.deepEqual(matchingRemote.worker.routes, [])
   assert.equal(matching.calls.filter(({ operation }) => operation === 'worker-routes').length, 2)
 
+  for (const [label, routes] of [
+    ['duplicate ID', {
+      [ZONE_ID]: [{ id: 'e'.repeat(32), pattern: 'first.example.invalid/*', script: 'unrelated-worker' }],
+      [secondZone]: [{ id: 'e'.repeat(32), pattern: 'second.example.invalid/*', script: 'unrelated-worker' }],
+    }],
+    ['duplicate pattern', {
+      [ZONE_ID]: [{ id: 'e'.repeat(32), pattern: 'duplicate.example.invalid/*', script: 'unrelated-worker' }],
+      [secondZone]: [{ id: 'f'.repeat(32), pattern: 'duplicate.example.invalid/*', script: 'unrelated-worker' }],
+    }],
+  ]) {
+    const duplicated = completeInspectionClient({
+      zonePages: [[{ id: ZONE_ID, account: { id: ACCOUNT_ID } }, { id: secondZone, account: { id: ACCOUNT_ID } }]],
+      routes,
+    })
+    await assert.rejects(
+      inspectPreviewRemoteState({ manifest: validateReleaseManifest(twoZones), client: duplicated.client }),
+      /conflicting records/,
+      label,
+    )
+  }
+
   const incompleteBase = completeInspectionClient()
   const incomplete = {
     async request(operation, parameters, validator) {
-      if (operation === 'account-zones') return validateEndpoint({ items: [{ id: ZONE_ID, account: { id: ACCOUNT_ID } }], resultInfo: { page: 1, totalPages: 2, totalCount: 26 } }, validator)
+      if (operation === 'account-zones') return validateEndpoint({ items: [{ id: ZONE_ID, account: { id: ACCOUNT_ID } }], resultInfo: { page: 1, perPage: 25, totalPages: 2, totalCount: 26 } }, validator)
       return incompleteBase.client.request(operation, parameters, validator)
     },
   }
@@ -902,9 +1072,9 @@ test('P1-05 runtime command graph rejects direct, nested, lifecycle, cyclic, she
   const safeEnvironment = credentialFreeEnvironment({
     PATH: '/fixture', HOME: '/private', PENNANT_PREVIEW_API_TOKEN: 'fixture', CLOUDFLARE_API_TOKEN: 'fixture',
     CLOUDFLARE_API_KEY: 'fixture', CF_API_TOKEN: 'fixture', CF_API_KEY: 'fixture', CLOUDFLARE_EMAIL: 'fixture',
-    WRANGLER_OAUTH_TOKEN: 'fixture', API_KEY: 'fixture',
+    CF_EMAIL: 'fixture', WRANGLER_OAUTH_TOKEN: 'fixture', API_KEY: 'fixture',
   })
-  for (const name of ['HOME', 'PENNANT_PREVIEW_API_TOKEN', 'CLOUDFLARE_API_TOKEN', 'CLOUDFLARE_API_KEY', 'CF_API_TOKEN', 'CF_API_KEY', 'CLOUDFLARE_EMAIL', 'WRANGLER_OAUTH_TOKEN', 'API_KEY']) assert.equal(safeEnvironment[name], undefined)
+  for (const name of ['HOME', 'PENNANT_PREVIEW_API_TOKEN', 'CLOUDFLARE_API_TOKEN', 'CLOUDFLARE_API_KEY', 'CF_API_TOKEN', 'CF_API_KEY', 'CLOUDFLARE_EMAIL', 'CF_EMAIL', 'WRANGLER_OAUTH_TOKEN', 'API_KEY']) assert.equal(safeEnvironment[name], undefined)
 })
 
 test('P1-06 stable observation windows reject every local, server, Worker, Pages, and migration change', () => {
@@ -1205,12 +1375,22 @@ test('P1-11 every Cloudflare operation enforces exact parameters and rejects irr
     let contacts = 0
     const client = createReadOnlyCloudflareClient({
       manifest: reviewed, token: 'sensitive-fixture-value',
-      fetchImplementation: async () => {
+      fetchImplementation: async (input) => {
         contacts += 1
+        const url = new URL(input)
+        if (operation === 'account-zones') {
+          assert.equal(url.searchParams.get('type'), 'full,partial,secondary,internal')
+        }
+        if (operation === 'worker-domains') {
+          assert.equal(url.searchParams.get('service'), manifest.cloudflare.preview.worker.name)
+        }
         if (['account-zones', 'pages-deployments'].includes(operation)) {
           return jsonResponse([], { resultInfo: { count: 0, page: 1, per_page: 25, total_count: 0, total_pages: 1 } })
         }
-        if (operation === 'worker-domains' || operation === 'worker-routes') return jsonResponse([])
+        if (operation === 'worker-domains') {
+          return jsonResponse([], { resultInfo: { count: 0, page: 1, per_page: 20, total_count: 0, total_pages: 1 } })
+        }
+        if (operation === 'worker-routes') return jsonResponse([])
         if (operation === 'worker-deployments') return jsonResponse({ deployments: [] })
         return jsonResponse(operation.startsWith('migration-') || operation === 'backend-version' ? [] : {})
       },
@@ -1320,17 +1500,23 @@ test('P1-12 endpoint-specific inventory contracts preserve completeness and sele
     manifest: resolvedManifest(), token: 'sensitive-fixture-value',
     fetchImplementation: async () => jsonResponse([]),
   })
-  assert.deepEqual(await domainsWithoutMetadata.request('worker-domains', {
+  await assert.rejects(domainsWithoutMetadata.request('worker-domains', {
     accountId: ACCOUNT_ID,
     worker: manifest.cloudflare.preview.worker.name,
-  }), { items: [], resultInfo: null })
+  }), /pagination metadata/)
 
-  const documentedDomain = { hostname: 'preview.example.invalid', service: manifest.cloudflare.preview.worker.name, environment: 'production', zone_id: ZONE_ID }
+  const documentedDomain = workerDomain({ environment: 'production' })
   const domainsWithMetadata = createReadOnlyCloudflareClient({
     manifest: resolvedManifest(), token: 'sensitive-fixture-value',
-    fetchImplementation: async () => jsonResponse([documentedDomain], {
-      resultInfo: { count: 1, page: 1, per_page: 20, total_count: 1, total_pages: 1 },
-    }),
+    fetchImplementation: async (url) => {
+      assert.equal(
+        String(url),
+        `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/workers/domains?service=${manifest.cloudflare.preview.worker.name}`,
+      )
+      return jsonResponse([documentedDomain], {
+        resultInfo: { count: 1, page: 1, per_page: 20, total_count: 1, total_pages: 1 },
+      })
+    },
   })
   assert.deepEqual((await domainsWithMetadata.request('worker-domains', {
     accountId: ACCOUNT_ID,
@@ -1346,9 +1532,9 @@ test('P1-12 endpoint-specific inventory contracts preserve completeness and sele
   await assert.rejects(inconsistentDomains.request('worker-domains', {
     accountId: ACCOUNT_ID,
     worker: manifest.cloudflare.preview.worker.name,
-  }), /incomplete or inconsistent/)
+  }), /incomplete or unverifiable/)
 
-  const documentedRoute = { id: 'route-id', pattern: 'preview.example.invalid/*', script: manifest.cloudflare.preview.worker.name }
+  const documentedRoute = { id: 'e'.repeat(32), pattern: 'preview.example.invalid/*', script: manifest.cloudflare.preview.worker.name }
   const routes = createReadOnlyCloudflareClient({
     manifest: resolvedManifest(), token: 'sensitive-fixture-value',
     fetchImplementation: async (url) => {
@@ -1361,6 +1547,17 @@ test('P1-12 endpoint-specific inventory contracts preserve completeness and sele
     worker: manifest.cloudflare.preview.worker.name,
     zoneId: ZONE_ID,
   }), [documentedRoute])
+
+  const documentedScriptlessRoute = { id: 'f'.repeat(32), pattern: 'disabled.example.invalid/*' }
+  const scriptlessRoutes = createReadOnlyCloudflareClient({
+    manifest: resolvedManifest(), token: 'sensitive-fixture-value',
+    fetchImplementation: async () => jsonResponse([documentedScriptlessRoute]),
+  })
+  assert.deepEqual(await scriptlessRoutes.request('worker-routes', {
+    accountId: ACCOUNT_ID,
+    worker: manifest.cloudflare.preview.worker.name,
+    zoneId: ZONE_ID,
+  }), [documentedScriptlessRoute])
 
   for (const [operation, parameters, resultValue] of [
     ['worker-domains', { accountId: ACCOUNT_ID, worker: manifest.cloudflare.preview.worker.name }, {}],

@@ -98,9 +98,47 @@ and credential-free, and no offline stage deploys, migrates, reads secrets, or
 contacts a remote service. `--online` adds only allowlisted, read-only Git and
 Cloudflare Preview inspection and requires `PENNANT_PREVIEW_API_TOKEN`; it never
 falls back to generic Cloudflare credentials. The repository currently leaves
-several Cloudflare identities unresolved, including the complete Worker route
-zone inventory, so live online mode refuses before network contact until those
-identities are reviewed and checked in.
+exactly four Cloudflare identities unresolved: the account ID, complete Worker
+route-zone inventory, Pages production branch, and complete Pages production
+domain inventory. Live online mode therefore refuses before network contact
+until those identities are independently reviewed and checked in.
+
+Phase 1.5 adds a narrow identity-bootstrap command for collecting untrusted
+candidate evidence for only those four fields:
+
+```bash
+PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> npm exec --offline -- node scripts/preview-identity-bootstrap.mjs
+```
+
+The bootstrap accepts only the dedicated least-privilege read token and fixed
+`--json` or `--no-color` flags. It completes a bounded account inventory,
+requires exactly one account, cross-checks its bounded normalized name against
+account detail, and repeats complete account, zone, Pages-project, Preview
+Worker exposure, route, custom-domain, and Preview D1 reads. The fixed zone
+query includes `full`, `partial`, `secondary`, and `internal` zones. The Worker
+custom-domain query uses only the exact Preview Worker service filter and
+requires consistent metadata proving that the filtered result is one complete
+page. Every bootstrap request is an allowlisted GET; it performs no D1 query
+and does not contact a Production-specific Worker, D1, route, or discovered
+hostname.
+
+Paginated inventories use exactly 25 records per page, at most 10 pages, and
+at most 250 aggregate records. Account page count is derived from the
+documented `total_count` and `per_page` fields; `total_pages` is not required
+for List Accounts. Custom-domain and per-zone route responses are also capped
+at 250 records, the aggregate route inventory is capped at 250, and no more
+than 250 grounded zones can fan out into route requests. Declared counts and
+final-page cardinality must agree. Scriptless Worker routes are valid disabled
+routes; a present `script` must be a valid Worker name.
+
+Its normalized candidate identities, checked-in manifest hash, and
+deterministic evidence hash are untrusted evidence pending independent review.
+The command never writes the manifest, injects identities into checking or
+planning, or establishes repository authority. A later, separate
+manifest-grounding change must be independently reviewed before online checking
+or planning can proceed. The canonical disabled state remains unchanged, and
+the bootstrap cannot deploy, migrate, activate, smoke-test, roll back, or
+mutate Cloudflare or GitHub.
 
 `npm exec --offline -- node scripts/preview-plan.mjs --target-state <disabled|submission-enabled|cron-enabled>`
 requires an explicit state and produces a deterministic read-only plan. Neither
@@ -115,8 +153,9 @@ point still validates every reachable repository-controlled child command and
 lifecycle hook before starting the first quality child.
 
 Planning requires exact Pages and Worker binding sets, an authoritative
-account-zone inventory plus complete Worker route and custom-domain reads, and
-stable double-read snapshots. Phase 1 preserves local intended artifact hashes
+all-type account-zone inventory plus complete Worker route reads and an exact
+service-filtered Worker custom-domain read, and stable double-read snapshots.
+Phase 1 preserves local intended artifact hashes
 but treats remote artifact currentness as unproven, so matching commits or
 Worker tags never suppress a future deployment. Enabled targets still schedule
 the applicable future submission and retention smoke stages because Phase 1
@@ -124,8 +163,9 @@ has no durable receipt model. A pending migration observed while Cron is
 enabled first schedules Cron disablement, then public-write disablement and
 verification, before `migration.apply`.
 
-The full Phase 1 contract, exit codes, immutable identity model, SELECT-only D1
-inspection design, and current limitations are in
+The full Phase 1 and Phase 1.5 contract, exit codes, immutable identity model,
+bootstrap trust boundary, SELECT-only normal-inspection design, and current
+limitations are in
 [`docs/PREVIEW_RELEASE_WORKFLOW.md`](docs/PREVIEW_RELEASE_WORKFLOW.md).
 
 `npm test` runs all release-relevant suites, including the Workerd

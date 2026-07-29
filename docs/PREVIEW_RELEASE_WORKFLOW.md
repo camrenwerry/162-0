@@ -1,4 +1,4 @@
-# Preview release workflow: Phase 1
+# Preview release workflow: Phase 1 and Phase 1.5
 
 Phase 1 establishes immutable Preview identity, offline release-readiness
 checks, read-only remote inspection, and deterministic planning. It cannot
@@ -8,6 +8,167 @@ Cron, run a smoke request, roll back, or change a Cloudflare resource.
 The canonical Pages and Worker configurations remain `disabled`. The reviewed,
 non-secret identity source is `config/preview-release.json`. Preview/Production
 collisions, incomplete inventories, and ambiguous observations fail closed.
+
+## Phase 1.5 identity bootstrap
+
+Phase 1 deliberately leaves exactly four identities unresolved:
+
+- `cloudflare.account.id`
+- `cloudflare.preview.worker.routeZoneIds`
+- `cloudflare.production.pages.branch`
+- `cloudflare.production.pages.domains`
+
+Phase 1.5 can collect candidate evidence for only those fields:
+
+```bash
+PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> npm exec --offline -- node scripts/preview-identity-bootstrap.mjs
+```
+
+The fixed Node entry point is the public interface. There is no package-script
+alias around which matching npm pre- or post-lifecycle hooks could run. It
+accepts only `--json` and `--no-color`; positional values, duplicate or unknown
+flags, runtime identities, arbitrary URLs, operations, query parameters, and
+generic Cloudflare credentials are refused.
+
+The generic credential rejection set includes
+`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_API_KEY`, `CLOUDFLARE_EMAIL`,
+`CF_API_TOKEN`, `CF_API_KEY`, `CF_EMAIL`, and `WRANGLER_OAUTH_TOKEN`.
+Credential-material scanning uses case-insensitive textual alias matching at
+identifier boundaries. It rejects the dedicated alias and every generic alias
+when optional horizontal whitespace is followed by either `=` or `:`, optional
+horizontal whitespace, and a same-line value. Runtime environment-variable
+names remain exact and case-sensitive. Credential material is removed from
+child environments and redacted from diagnostic text with the same assignment
+grammar.
+
+The token must be a dedicated, least-privilege read token with the account,
+Zone, Pages, Workers, and D1 metadata-read permissions needed by the fixed
+operations. The bootstrap does not use Wrangler login state or browser
+authentication. It does not spawn a child process, print or persist the token,
+or pass it to another program.
+
+Account discovery begins with a complete, bounded, paginated account inventory
+and requires exactly one accessible account. Zero, multiple, duplicate,
+malformed, incomplete, inconsistent, excessive, or changing results fail
+closed. The command never probes several candidate accounts or selects one by
+partial matching. The specific account endpoint must then confirm that one
+identity. Both observations must contain a nonempty account name of at most 100
+Unicode code points. Names are rejected if they have leading or trailing
+whitespace, control, format, surrogate, line-separator, or paragraph-separator
+characters. They are normalized to NFC in memory, and the inventory and detail
+names must agree after normalization. The name is retained only as internal
+cross-check evidence; it is not added to the candidate manifest or report.
+
+Every paginated request fixes 25 records per page, at most 10 pages, and no
+more than 250 total records. List Accounts uses its documented `count`, `page`,
+`per_page`, and `total_count` response fields; it does not require the
+undocumented `total_pages` field. The implementation derives a bounded page
+count from validated `total_count` and `per_page`, and cross-checks
+`total_pages` only if Cloudflare supplies it. Other paginated endpoints require
+their documented total-page field. Each page count, aggregate count, and
+final-page cardinality must agree.
+
+For the grounded account, the command reads the complete account-zone
+inventory, validates one owner and a unique ID for every zone, sorts the IDs,
+and requires at least one zone under the current manifest contract. Its fixed
+query includes exactly `type=full,partial,secondary,internal`; callers cannot
+omit or replace a type, so internal zones are not silently excluded by
+Cloudflare's default behavior.
+
+The command inspects every grounded zone's complete Worker route inventory.
+Every route record must be an exact plain data object containing a lowercase
+32-hex route ID and a reviewed ASCII route pattern. Documented optional HTTP or
+HTTPS schemes, leading host wildcards, and an omitted path with its implied
+slash are accepted; query strings, infix wildcards, and malformed hosts or
+paths are refused. `script` is the only optional field. An absent script is a
+valid disabled, non-exposure state;
+if present, it must be a nonempty reviewed Worker name. Explicit `null`, empty,
+or malformed script values are not treated as absence. Scalar coercion,
+accessors, inherited or non-enumerable fields, symbol keys, exotic prototypes,
+duplicate IDs or patterns, and conflicting evidence are refused before route
+non-exposure can be established. Each unpaginated per-zone response is capped
+at 250 records, the aggregate route inventory is capped at 250 records, and
+the 250-zone cap bounds route-request fan-out.
+
+Worker custom-domain discovery uses the endpoint's fixed exact
+`service=pennant-pursuit-validation-preview` filter. Callers cannot customize
+that filter. Because the current official endpoint documents pagination
+metadata but no page or per-page query controls, missing metadata, a result
+requiring more than one page, or any inconsistent count is unverifiable and
+fails closed. A successful empty result must prove one complete filtered page
+and is capped at 250 records. Any returned record for another service means the
+fixed filter was not honored and fails closed.
+
+Every returned custom-domain record must contain the documented `id`,
+UUID-form `cert_id`, strict `hostname`, exact Worker `service`, grounded
+`zone_id`, and strict `zone_name`. The deprecated `environment` string is
+optional and is never required for completeness or exposure decisions; when
+present it must still be a safe nonempty identifier. Missing, malformed,
+ungrounded, duplicate, conflicting, or undocumented fields make the filtered
+inventory ambiguous. Any valid record is proof that the Preview Worker has a
+custom domain and is refused. The exact Preview Worker settings must also be
+reachable, and both `workers.dev` and Worker Preview URLs must be disabled.
+
+Only the exact `diamond-draft` Pages project can provide the production branch
+and complete production-domain inventory. The branch must be valid and differ
+from `develop`; a leading ASCII hyphen is invalid, while a hyphen beginning a
+later slash component follows Git's branch grammar and is permitted. Branch
+evidence is neither trimmed nor Unicode-normalized. The same authoritative Git
+branch validator is applied to live Pages observations, in-memory candidates,
+and loaded checked-in manifests. Domains are normalized to
+lowercase and sorted. Every hostname uses 1-through-63-character ASCII labels
+and a maximum 253-character textual hostname; empty, overlength, duplicate,
+malformed, wildcard, trailing-dot, changing, or Preview-colliding values are
+refused. Discovered hostnames are never contacted. The exact Preview D1 UUID and
+`pennant-pursuit-preview` name are confirmed through metadata only; the
+bootstrap never runs a D1 SQL query.
+
+Every operation is a fixed, allowlisted GET under the canonical
+`https://api.cloudflare.com/client/v4/` boundary. There is no arbitrary URL or
+query interface, redirect following, retry, write method, deployment, upload,
+secret operation, route write, schedule write, database write, or
+configuration write. The command does not contact Production-specific Worker,
+D1, route, or discovered-hostname endpoints. Account-wide inventories may
+contain entries for other resources, but the report retains only the normalized
+identity and cross-check evidence required by this bootstrap.
+Successful responses must use only the complete `application/json` media type,
+optionally with one valid UTF-8 charset parameter; malformed, duplicate,
+unsupported, comma-separated, or control-character-bearing media types are
+refused.
+
+The entire critical observation is repeated. Account inventory, specific
+account identity, zone inventory and ownership, Pages identities, Worker
+reachability and public exposure, custom domains, every grounded route
+inventory, and Preview D1 identity must match across both reads. A mismatch is
+ambiguous state, and the command does not retry into a new successful result.
+
+After stable reads, an in-memory candidate resolves only the four fields above,
+clears their unresolved reasons, and passes the existing strict release
+manifest validator. The implementation proves every other manifest field is
+unchanged. It never writes that candidate to
+`config/preview-release.json` or any other repository file.
+
+The regression suite also invokes the exact public
+`node scripts/preview-identity-bootstrap.mjs` entry point in a complete
+temporary repository with an isolated, test-only fake transport. It compares
+the entire repository tree, including contents, paths, types, permissions, and
+symlink targets, before and after the successful process.
+
+Human and JSON reports identify the evidence as
+`untrusted-pending-independent-review`. They include the four normalized
+candidate identities, reviewed Preview anchors, immutable checked-in manifest
+hash, deterministic timestamp-free evidence hash, stable-observation result,
+and explicit no-mutation and no-configuration-change statements. Command
+success is not authority. A later, separate manifest-grounding change must
+receive independent review before these identities become trusted.
+
+Ordinary `preview-check --online` and `preview-plan` continue to read only the
+checked-in manifest and refuse before Cloudflare contact while it remains
+unresolved. They cannot accept or discover bootstrap results at runtime. Phase
+1.5 does not deploy, migrate, activate, smoke-test, create a receipt, resume,
+roll back, or mutate Cloudflare or GitHub. The checked-in Pages and Worker
+submission modes, Cron schedule, URL exposure, Production isolation, and
+canonical `disabled` activation state remain unchanged.
 
 ## Preview check
 
@@ -102,22 +263,23 @@ Worker privacy requires all of the following:
 
 - `workers.dev` is disabled.
 - Worker Preview URLs are disabled.
-- The account-wide custom-domain inventory contains no domain for the Preview
-  Worker.
+- The exact immutable Preview Worker service filter returns no custom domain.
 - The authoritative account-wide zone inventory exactly equals the reviewed
   expected zone identities, and every one contains no route for the Preview
   Worker.
-- The custom-domain single-page response is complete; documented optional
-  response metadata, when present, is internally consistent.
+- The custom-domain response contains required, internally consistent metadata
+  proving the fixed filtered result is one complete page.
 - Each zone route endpoint returns one complete array with no unsupported
-  pagination query.
+  pagination query; a route with no `script` is a valid disabled route.
 
 The paginated account-zone endpoint filtered to the reviewed account is the
-source of completeness. Manifest route-zone values are expected identities
-only and must exactly match that authoritative result before route inspection.
-Because the repository does not currently ground those expected identities,
-online checking and planning refuse before Cloudflare contact. Callers cannot
-supply route zones at runtime. The dedicated token must be scoped for
+source of completeness. Its immutable all-type filter requests `full`,
+`partial`, `secondary`, and `internal` zones explicitly. Manifest route-zone
+values are expected identities only and must exactly match that authoritative
+result before route inspection. Because the repository does not currently
+ground those expected identities, online checking and planning refuse before
+Cloudflare contact. Callers cannot supply route zones, zone types, or the
+Worker-domain service filter at runtime. The dedicated token must be scoped for
 account-wide Zone Read so a restricted subset cannot be mistaken for the
 account inventory.
 
@@ -140,9 +302,8 @@ refused before fetch.
 One monotonic deadline remains active through fetch completion, headers,
 bounded streaming, body completion, decoding, JSON parsing, generic envelope
 validation, endpoint-specific semantic validation, and final normalized result
-construction. A zero or already-expired
-deadline refuses before fetch, and timer cleanup occurs once. Redirects,
-oversized bodies, invalid content
+construction. A zero or already-expired deadline refuses before fetch, and
+timer cleanup occurs once. Redirects, oversized bodies, invalid content
 lengths, stalled streams, invalid UTF-8, BOMs, malformed JSON, unexpected
 shapes, missing or inconsistent pagination metadata, duplicate deployment IDs,
 malformed timestamps, truncated pages, and ambiguous latest deployments are
@@ -207,16 +368,18 @@ and no automatic down-migration is implied.
 
 | Code | Meaning |
 | ---: | --- |
-| `0` | Successful check or valid plan |
+| `0` | Successful check, valid plan, or successful untrusted bootstrap evidence |
 | `2` | Invalid command-line usage |
 | `10` | Local precondition, command-safety, or quality failure |
 | `11` | Remote read, stale snapshot, or ambiguous remote state |
 | `12` | Production-protection or identity-guard refusal |
 
 Repository evidence does not establish the Cloudflare account ID, Worker route
-zone IDs, Pages production branch, or Production domains. Those values remain
-unresolved, so live online commands currently refuse before network contact.
-The online paths are tested with faithful local fakes.
+zone IDs, Pages production branch, or Production domains. Bootstrap output is
+not repository evidence. Those values remain unresolved, so ordinary live
+online checking and planning currently refuse before network contact. All
+bootstrap network paths and ordinary online paths are tested with faithful
+local fakes; the implementation suite does not run a live bootstrap.
 
 `preview:release` and `preview:rollback` do not exist. Deployment, migration
 application, activation, smoke execution, receipts, resume, and rollback

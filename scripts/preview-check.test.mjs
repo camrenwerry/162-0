@@ -6,12 +6,14 @@ import path from 'node:path'
 import test from 'node:test'
 import { assertLocalReleaseGraph, collectReachableScripts } from './lib/preview-release/command-safety.mjs'
 import { createFixedRunner } from './lib/preview-release/local-state.mjs'
-import { createPreviewPlan } from './preview-plan.mjs'
+import { createPreviewPlan, runPreviewPlanCli } from './preview-plan.mjs'
 import {
   RELEASE_STAGES,
   TEST_STAGES,
   TYPECHECK_STAGES,
+  credentialFreeEnvironment,
   createProcessRunner,
+  runCli,
   runRepositoryPreflight,
   runStages,
 } from './preview-check.mjs'
@@ -91,6 +93,7 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
 
     const coordinatorSource = readFileSync(new URL('./preview-check.mjs', import.meta.url), 'utf8')
     writeFileSync(path.join(repositoryRoot, 'scripts', 'preview-check.mjs'), coordinatorSource)
+    cpSync(new URL('./preview-identity-bootstrap.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-identity-bootstrap.mjs'))
     cpSync(new URL('./preview-plan.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-plan.mjs'))
     cpSync(new URL('./lib/preview-release', import.meta.url), path.join(repositoryRoot, 'scripts/lib/preview-release'), { recursive: true })
     cpSync(new URL('./prepare-d1c4-activation.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/prepare-d1c4-activation.mjs'))
@@ -136,7 +139,14 @@ for (const [name, expected] of Object.entries(required)) {
       writeFileSync(path.join(repositoryRoot, 'scripts/unsafe-lifecycle.mjs'), "import { writeFileSync } from 'node:fs'\nwriteFileSync('unsafe-lifecycle-ran', 'unsafe')\n")
     }
     if (unsafeOuterLifecycle) {
-      for (const name of ['prepreview:check', 'postpreview:check', 'prepreview:plan', 'postpreview:plan']) scripts[name] = 'node scripts/unsafe-outer-lifecycle.mjs'
+      for (const name of [
+        'prepreview:check',
+        'postpreview:check',
+        'prepreview:identity-bootstrap',
+        'postpreview:identity-bootstrap',
+        'prepreview:plan',
+        'postpreview:plan',
+      ]) scripts[name] = 'node scripts/unsafe-outer-lifecycle.mjs'
       writeFileSync(path.join(repositoryRoot, 'scripts/unsafe-outer-lifecycle.mjs'), "import { writeFileSync } from 'node:fs'\nwriteFileSync('unsafe-outer-lifecycle-ran', 'unsafe')\n")
     }
 
@@ -466,10 +476,19 @@ test('child processes receive exact arguments and all Wrangler safeguards', () =
     calls.push({ command, args, options })
     return result()
   }
+  const credentialNames = [
+    'PENNANT_PREVIEW_API_TOKEN',
+    'CLOUDFLARE_API_TOKEN',
+    'CLOUDFLARE_API_KEY',
+    'CLOUDFLARE_EMAIL',
+    'CF_API_TOKEN',
+    'CF_API_KEY',
+    'CF_EMAIL',
+    'WRANGLER_OAUTH_TOKEN',
+  ]
   const runner = createProcessRunner(spawn, {
     PATH: '/fixture/bin',
-    PENNANT_PREVIEW_API_TOKEN: 'sensitive-fixture-value',
-    CLOUDFLARE_API_TOKEN: 'generic-fixture-value',
+    ...Object.fromEntries(credentialNames.map((name) => [name, `sensitive-${name}`])),
     WRANGLER_WRITE_LOGS: 'true',
     WRANGLER_SEND_METRICS: 'true',
     WRANGLER_HIDE_BANNER: 'false',
@@ -479,8 +498,7 @@ test('child processes receive exact arguments and all Wrangler safeguards', () =
   assert.deepEqual(calls[0].args, ['run', unsafeLookingArgument])
   assert.equal(calls[0].options.shell, false)
   assert.equal(calls[0].options.env.PATH, '/fixture/bin')
-  assert.equal(calls[0].options.env.PENNANT_PREVIEW_API_TOKEN, undefined)
-  assert.equal(calls[0].options.env.CLOUDFLARE_API_TOKEN, undefined)
+  for (const name of credentialNames) assert.equal(calls[0].options.env[name], undefined)
   assert.equal(calls[0].options.env.WRANGLER_WRITE_LOGS, 'false')
   assert.equal(calls[0].options.env.WRANGLER_SEND_METRICS, 'false')
   assert.equal(calls[0].options.env.WRANGLER_HIDE_BANNER, 'true')
@@ -533,6 +551,17 @@ test('the exact public npm commands cannot trigger matching outer lifecycle hook
     })
     assert.equal(plan.status, 11)
     assert.match(plan.stderr, /PENNANT_PREVIEW_API_TOKEN/)
+    const bootstrap = spawnSync('npm', ['exec', '--offline', '--', 'node', 'scripts/preview-identity-bootstrap.mjs'], {
+      cwd: realpathSync(fixture.repositoryRoot),
+      encoding: 'utf8',
+      env: {
+        ...credentialFreeEnvironment(process.env),
+        PENNANT_PREVIEW_API_TOKEN: '',
+      },
+      stdio: ['ignore', 'pipe', 'pipe'],
+    })
+    assert.equal(bootstrap.status, 11)
+    assert.match(bootstrap.stderr, /PENNANT_PREVIEW_API_TOKEN/)
     assert.equal(existsSync(path.join(fixture.repositoryRoot, 'unsafe-outer-lifecycle-ran')), false)
   } finally {
     rmSync(fixture.temporaryRoot, { recursive: true, force: true })
@@ -549,6 +578,73 @@ test('the exact public preview check refuses an unsafe reachable lifecycle befor
     assert.match(execution.stderr, /Release command graph is unsafe/)
     assert.equal(existsSync(path.join(fixture.repositoryRoot, 'unsafe-lifecycle-ran')), false)
     assert.doesNotMatch(execution.stdout, /D1C\.4 activation-state validation/)
+  } finally {
+    rmSync(fixture.temporaryRoot, { recursive: true, force: true })
+  }
+})
+
+test('unresolved canonical identities block public online check and plan before Git or Cloudflare contact', async () => {
+  const fixture = createCleanPreviewFixture()
+  try {
+    const repositoryRoot = realpathSync(fixture.repositoryRoot)
+    const unresolved = JSON.parse(readFileSync(path.join(repositoryRoot, 'config/preview-release.json'), 'utf8'))
+    assert.equal(unresolved.cloudflare.account.status, 'unresolved')
+    assert.equal(unresolved.cloudflare.preview.worker.routeZoneIds.status, 'unresolved')
+    assert.equal(unresolved.cloudflare.production.pages.branch.status, 'unresolved')
+    assert.equal(unresolved.cloudflare.production.pages.domains.status, 'unresolved')
+
+    let gitRemoteContacts = 0
+    let cloudflareContacts = 0
+    const fixedRunner = createFixedRunner(process.env, spawnSync)
+    const runner = (command, args, cwd) => {
+      if (command === 'git' && args[0] === 'ls-remote') {
+        gitRemoteContacts += 1
+        throw new Error('Git remote contact must not occur.')
+      }
+      return fixedRunner(command, args, cwd)
+    }
+    const client = {
+      async request() {
+        cloudflareContacts += 1
+        throw new Error('Cloudflare client must not be invoked.')
+      },
+    }
+    const fetchImplementation = async () => {
+      cloudflareContacts += 1
+      throw new Error('Network fake must not be invoked.')
+    }
+    const injectedEvidence = {
+      authority: 'untrusted-pending-independent-review',
+      candidateIdentities: {
+        'cloudflare.account.id': 'a'.repeat(32),
+        'cloudflare.preview.worker.routeZoneIds': ['b'.repeat(32)],
+      },
+    }
+    const common = {
+      repositoryRoot,
+      token: 'dedicated-sensitive-fixture-token',
+      runner,
+      client,
+      fetchImplementation,
+      bootstrapEvidence: injectedEvidence,
+      routeZoneIds: ['b'.repeat(32)],
+      runQualityStages: false,
+      output: quietOutput,
+    }
+
+    await assert.rejects(
+      runCli(['--online'], common),
+      (error) => error.exitCode === 12 && /unresolved/.test(error.message),
+    )
+    assert.equal(gitRemoteContacts, 0)
+    assert.equal(cloudflareContacts, 0)
+
+    await assert.rejects(
+      runPreviewPlanCli(['--target-state', 'disabled'], common),
+      (error) => error.exitCode === 12 && /unresolved/.test(error.message),
+    )
+    assert.equal(gitRemoteContacts, 0)
+    assert.equal(cloudflareContacts, 0)
   } finally {
     rmSync(fixture.temporaryRoot, { recursive: true, force: true })
   }
@@ -574,7 +670,7 @@ test('a clean temporary repository runs the actual preview:plan path with stable
         if (operation === 'account-zones') {
           return validate({
             items: [{ id: 'b'.repeat(32), account: { id: 'a'.repeat(32) } }],
-            resultInfo: { page: parameters.page, totalPages: 1, totalCount: 1 },
+            resultInfo: { page: parameters.page, perPage: 25, totalPages: 1, totalCount: 1 },
           })
         }
         if (operation === 'pages-deployments') {
@@ -584,10 +680,15 @@ test('a clean temporary repository runs the actual preview:plan path with stable
               url: 'https://fixture.diamond-draft.pages.dev', aliases: ['https://develop.diamond-draft.pages.dev'],
               deployment_trigger: { metadata: { branch: 'develop', commit_hash: head } }, latest_stage: { status: 'success' },
             }],
-            resultInfo: { page: parameters.page, totalPages: 1, totalCount: 1 },
+            resultInfo: { page: parameters.page, perPage: 25, totalPages: 1, totalCount: 1 },
           })
         }
-        if (operation === 'worker-domains') return validate({ items: [], resultInfo: null })
+        if (operation === 'worker-domains') {
+          return validate({
+            items: [],
+            resultInfo: { count: 0, page: 1, perPage: 20, totalCount: 0, totalPages: 1 },
+          })
+        }
         if (operation === 'worker-routes') return validate([])
         const values = {
           account: { id: 'a'.repeat(32) },

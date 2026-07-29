@@ -88,6 +88,7 @@
     "test:release": "vite build --ssr scripts/release-readiness.test.ts --outDir /tmp/pennant-pursuit-release-tests --emptyOutDir && node /tmp/pennant-pursuit-release-tests/release-readiness.test.js",
     "test:pwa": "node scripts/pwa-deployment.test.mjs",
     "test:preview-check": "node scripts/preview-check.test.mjs",
+    "test:preview-identity-bootstrap": "node --test scripts/preview-identity-bootstrap.test.mjs",
     "test:preview-workflow": "node --test scripts/preview-workflow.test.mjs",
     "text:integrity": "node scripts/text-integrity.mjs",
     "test": "node scripts/preview-check.mjs --tests",

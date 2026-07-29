@@ -58,6 +58,7 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('Release readiness tests', 'test:release'),
   npmRunStage('PWA tests', 'test:pwa'),
   npmRunStage('Preview check orchestration tests', 'test:preview-check'),
+  npmRunStage('Preview identity-bootstrap tests', 'test:preview-identity-bootstrap'),
   npmRunStage('Preview workflow Phase 1 tests', 'test:preview-workflow'),
 ])
 

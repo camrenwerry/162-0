@@ -2,11 +2,16 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { canonicalHash, immutablePlain } from './canonical.mjs'
 import { localError, refusalError } from './errors.mjs'
+import { containsProhibitedCredentialAssignment } from './redaction.mjs'
 
 export const MANIFEST_RELATIVE_PATH = 'config/preview-release.json'
+export const MAX_HOSTNAME_LENGTH = 253
 const ACCOUNT_ID_PATTERN = /^[0-9a-f]{32}$/
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
 const RESOURCE_NAME_PATTERN = /^[a-z0-9][a-z0-9-]{0,62}$/
+const HOSTNAME_PATTERN = /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/
+const INVALID_BRANCH_CHARACTER_PATTERN = /[\u0000-\u0020\u007F~^:?*[\]\\]/u
+const MAX_BRANCH_LENGTH = 255
 const NAMESPACE_PATTERN = /^\d{1,20}$/
 const ALLOWED_STATES = ['disabled', 'submission-enabled', 'cron-enabled']
 const DANGEROUS_KEYS = new Set(['__proto__', 'prototype', 'constructor'])
@@ -37,9 +42,30 @@ function assertResolution(value, label, { array = false } = {}) {
   }
 }
 
+export function isReviewedHostname(value) {
+  return typeof value === 'string'
+    && value.length <= MAX_HOSTNAME_LENGTH
+    && HOSTNAME_PATTERN.test(value)
+}
+
+export function isReviewedGitBranch(value) {
+  if (typeof value !== 'string' || value.length === 0 || value.length > MAX_BRANCH_LENGTH
+    || value !== value.trim() || INVALID_BRANCH_CHARACTER_PATTERN.test(value)
+    || value.includes('..') || value.includes('@{') || value.includes('//')
+    || value.startsWith('/') || value.endsWith('/') || value.startsWith('-')
+    || value.endsWith('.') || value === '@') return false
+  const components = value.split('/')
+  return components.every((component) => (
+    component.length > 0
+      && !component.startsWith('.')
+      && !component.endsWith('.lock')
+  ))
+}
+
 function assertNoCredentialMaterial(value, trail = 'manifest') {
   if (typeof value === 'string') {
-    assert(!/(?:authorization\s*:\s*bearer\s+\S+|-----BEGIN [A-Z ]*PRIVATE KEY-----|(?:PENNANT_PREVIEW_API_TOKEN|CLOUDFLARE_API_TOKEN|CLOUDFLARE_API_KEY|CLOUDFLARE_EMAIL|CF_API_TOKEN|CF_API_KEY|WRANGLER_OAUTH_TOKEN)\s*=\s*\S+)/i.test(value), `${trail} contains prohibited credential material.`)
+    assert(!/(?:authorization\s*:\s*bearer\s+\S+|-----BEGIN [A-Z ]*PRIVATE KEY-----)/i.test(value)
+      && !containsProhibitedCredentialAssignment(value), `${trail} contains prohibited credential material.`)
     return
   }
   if (Array.isArray(value)) {
@@ -208,8 +234,11 @@ export function validateReleaseManifest(input) {
   assert(production.pages.project === preview.pages.project, 'The checked-in Pages environments must belong to the one reviewed Pages project.')
   assertResolution(production.pages.branch, 'cloudflare.production.pages.branch')
   assertResolution(production.pages.domains, 'cloudflare.production.pages.domains', { array: true })
+  if (production.pages.branch.status === 'resolved') {
+    assert(isReviewedGitBranch(production.pages.branch.value), 'Resolved Production branch is malformed.')
+  }
   if (production.pages.domains.status === 'resolved') {
-    assert(production.pages.domains.values.every((value) => /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/.test(value)), 'Resolved Production domains are malformed.')
+    assert(production.pages.domains.values.every(isReviewedHostname), 'Resolved Production domains are malformed.')
   }
 
   assertExactKeys(preview.d1, ['binding', 'id', 'name'], 'cloudflare.preview.d1')
