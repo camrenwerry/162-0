@@ -381,7 +381,7 @@ async function assertHealth(
     || submission.operationalWriteReadiness !== 'externally-unverified'
     || !isRecord(features) || features.submissions !== 'schema-ready'
     || features.writes !== 'externally-unverified'
-    || !isRecord(d1) || d1.schemaVersion !== 2 || d1.reachable !== true
+    || !isRecord(d1) || d1.schemaVersion !== 3 || d1.reachable !== true
   ) fail(
     'sentinel-ownership-failure',
     'Preview health does not prove Pages-visible schema readiness required before Cron smoke; private execution remains externally unverified.',

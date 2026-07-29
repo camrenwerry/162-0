@@ -153,7 +153,11 @@ function remoteState(state = 'disabled') {
       versionId: WORKER_VERSION_ID,
     },
     d1: { id: manifest.cloudflare.preview.d1.id, name: manifest.cloudflare.preview.d1.name },
-    migrationObservation: { tables: ['backend_schema', 'd1_migrations'], rows: migrationRows(), backendVersion: 2 },
+    migrationObservation: {
+      tables: ['backend_schema', 'd1_migrations'],
+      rows: migrationRows(),
+      backendVersion: knownMigrations().length,
+    },
   }
 }
 
@@ -756,7 +760,7 @@ test('full remote inspection validates safe shapes and returns no private respon
         'd1-database': { uuid: manifest.cloudflare.preview.d1.id, name: manifest.cloudflare.preview.d1.name },
         'migration-tables': [{ success: true, results: [{ name: 'backend_schema' }, { name: 'd1_migrations' }] }],
         'migration-rows': [{ success: true, results: migrationRows() }],
-        'backend-version': [{ success: true, results: [{ version: 2 }] }],
+        'backend-version': [{ success: true, results: [{ version: knownMigrations().length }] }],
       }
       return validateEndpoint(values[operation], validator)
     },
@@ -785,7 +789,16 @@ test('migration classifier refuses unmanaged or contradictory schema metadata', 
 for (const [description, rows, backendVersion, classification] of [
   ['unknown migration', [{ id: 1, name: '0000_unknown.sql', applied_at: '2026-07-22 12:34:56' }], 1, 'unknown-applied-migration'],
   ['out-of-order migration', [{ id: 2, name: knownMigrations()[1].name, applied_at: '2026-07-22 12:34:56' }, { id: 1, name: knownMigrations()[0].name, applied_at: '2026-07-22 12:34:56' }], 2, 'ambiguous-malformed'],
-  ['future migration', [...migrationRows(), { id: 3, name: '9999_future.sql', applied_at: '2026-07-22 12:34:56' }], 3, 'database-ahead'],
+  [
+    'future migration',
+    [...migrationRows(), {
+      id: knownMigrations().length + 1,
+      name: '9999_future.sql',
+      applied_at: '2026-07-22 12:34:56',
+    }],
+    knownMigrations().length + 1,
+    'database-ahead',
+  ],
   ['malformed row', [{ id: '1', name: knownMigrations()[0].name }], 1, 'ambiguous-malformed'],
   ['schema version ahead', migrationRows(), 99, 'database-ahead'],
 ]) {

@@ -39,17 +39,18 @@ function resolvedManifest() {
   return validateReleaseManifest(value)
 }
 
-function migrations(count = 2) {
+function migrations(count) {
   const known = loadRepositoryMigrations(REPOSITORY_ROOT)
+  const appliedCount = count ?? known.length
   return classifyMigrationState({
     knownMigrations: known,
-    tables: count === 0 ? ['d1_migrations'] : ['backend_schema', 'd1_migrations'],
-    rows: known.slice(0, count).map(({ id, name }) => ({
+    tables: appliedCount === 0 ? ['d1_migrations'] : ['backend_schema', 'd1_migrations'],
+    rows: known.slice(0, appliedCount).map(({ id, name }) => ({
       id,
       name,
       applied_at: `2026-07-${String(id).padStart(2, '0')} 12:00:00`,
     })),
-    backendVersion: count === 0 ? null : count,
+    backendVersion: appliedCount === 0 ? null : appliedCount,
   })
 }
 

@@ -5,7 +5,9 @@ Pennant Pursuit is a mobile-first historical baseball roster-building game. Clas
 Version 1.0.0 is the permanent Pennant Pursuit release of the React, TypeScript,
 and Vite game. The game requires no player account. Preview-only backend routes
 support server validation, short-lived draft tickets, and bounded,
-ticket-authorized draft submissions behind disabled-by-default gates. Local
+ticket-authorized draft submissions behind disabled-by-default gates. A
+disabled-by-default leaderboard foundation durably records server-verified runs
+without exposing a public identity or an unapproved cumulative formula. Local
 storage is used only to remember whether first-game tips were dismissed; the
 pre-1.0 storage key remains unchanged so existing preferences survive the
 rebrand.
@@ -56,8 +58,14 @@ The top-level/default Pages environment binds only to
 `pennant-pursuit-preview`; `[env.production]` has its own explicit
 `pennant-pursuit-production` binding. Preview can store the bounded,
 ticket-authorized draft-submission records described in the backend operations
-guide. Production remains separately isolated, and the checked-in submission
-gates remain disabled in both environments. Do not deploy or add bindings
+guide. Schema version 3 also preserves server-verified leaderboard run history
+independently from short-lived receipts. Production remains separately
+isolated, and the checked-in submission and leaderboard gates remain disabled.
+The current game has no stable public player identity, and cumulative
+performance has no approved formula, so neither behavior is publicly exposed.
+See
+[`docs/LEADERBOARD_BACKEND.md`](docs/LEADERBOARD_BACKEND.md) for the exact
+ranking, privacy, API, and activation contract. Do not deploy or add bindings
 without a separately authorized resource plan. Regenerate the committed
 Functions runtime types after any Wrangler configuration change with
 `npm run functions:types`, and verify them with

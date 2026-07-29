@@ -16,6 +16,11 @@ import { DRAFT_SUBMISSION_SCHEMA_VERSION } from '../../lib/draft-submission-cons
 import { draftSubmissionFeatureState } from '../../lib/draft-submission-mode'
 import { draftValidationFeatureState } from '../../lib/draft-validation-mode'
 import type { BackendEnv } from '../../lib/env'
+import {
+  leaderboardReadFeatureState,
+  leaderboardReadRuntimeIsConfigured,
+  type LeaderboardReadModeEnv,
+} from '../../lib/leaderboard-mode'
 
 const ALLOWED_METHODS = 'GET, HEAD'
 
@@ -53,20 +58,32 @@ function jsonResponse(payload: unknown, status: number) {
   return new Response(JSON.stringify(payload), { status, headers: responseHeaders() })
 }
 
-export async function handleHealthRequest(request: Request, env: BackendEnv = {}) {
+type HealthEnv = BackendEnv & LeaderboardReadModeEnv
+
+export async function handleHealthRequest(request: Request, env: HealthEnv = {}) {
   if (request.method === 'GET') {
     const d1 = await readDatabaseHealth(env)
     const submissionState = draftSubmissionFeatureState(env)
     const submissionConfigured = submissionState === 'enabled'
+    const leaderboardRequested = leaderboardReadFeatureState(env) === 'enabled'
+    const leaderboardConfigured = leaderboardRequested
+      && leaderboardReadRuntimeIsConfigured(env)
     const submissionSchemaReady = submissionConfigured
+      && d1.configured
+      && d1.reachable
+      && databaseSchemaIsCompatible(d1.schemaVersion, true)
+    const leaderboardSchemaReady = leaderboardConfigured
       && d1.configured
       && d1.reachable
       && databaseSchemaIsCompatible(d1.schemaVersion, true)
     const submissionSchema = submissionSchemaReady ? DRAFT_SUBMISSION_SCHEMA_VERSION : null
     const databaseHealthy = d1.reachable
-      && databaseSchemaIsCompatible(d1.schemaVersion, submissionConfigured)
-    const healthy = submissionConfigured
-      ? d1.configured && databaseHealthy
+      && databaseSchemaIsCompatible(d1.schemaVersion, submissionConfigured || leaderboardRequested)
+    const dataFeatureConfigured = submissionConfigured || leaderboardRequested
+    const healthy = dataFeatureConfigured
+      ? d1.configured
+        && databaseHealthy
+        && (!leaderboardRequested || leaderboardConfigured)
       : !d1.configured || databaseHealthy
     const operationalWriteReadiness = !submissionConfigured
       ? 'disabled'
@@ -91,7 +108,9 @@ export async function handleHealthRequest(request: Request, env: BackendEnv = {}
       }),
       features: Object.freeze({
         draftValidation: draftValidationFeatureState(env),
-        leaderboard: 'disabled',
+        leaderboard: !leaderboardRequested
+          ? 'disabled'
+          : leaderboardSchemaReady ? 'schema-ready' : 'configured',
         submissions: !submissionConfigured
           ? 'disabled'
           : submissionSchemaReady ? 'schema-ready' : 'configured',
@@ -107,4 +126,4 @@ export async function handleHealthRequest(request: Request, env: BackendEnv = {}
   }, 405)
 }
 
-export const onRequest: PagesFunction<BackendEnv> = ({ request, env }) => handleHealthRequest(request, env)
+export const onRequest: PagesFunction<HealthEnv> = ({ request, env }) => handleHealthRequest(request, env)

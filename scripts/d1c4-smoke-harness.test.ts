@@ -253,7 +253,7 @@ function healthResponse() {
     ok: true,
     status: 'healthy',
     versions: { submissionSchema: DRAFT_SUBMISSION_SCHEMA_VERSION },
-    backend: { d1: { configured: true, reachable: true, schemaVersion: 2 } },
+    backend: { d1: { configured: true, reachable: true, schemaVersion: 3 } },
     submission: {
       configured: true,
       schemaReady: true,

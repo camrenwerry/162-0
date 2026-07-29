@@ -756,8 +756,9 @@ test('a clean temporary repository runs the actual preview:plan path with stable
           'migration-rows': [{ success: true, results: [
             { id: 1, name: '0001_backend_foundation.sql', applied_at: '2026-07-22 12:34:56' },
             { id: 2, name: '0002_draft_submissions.sql', applied_at: '2026-07-22 12:35:56' },
+            { id: 3, name: '0003_leaderboard_foundation.sql', applied_at: '2026-07-22 12:36:56' },
           ] }],
-          'backend-version': [{ success: true, results: [{ version: 2 }] }],
+          'backend-version': [{ success: true, results: [{ version: 3 }] }],
         }
         return validate(values[operation])
       },

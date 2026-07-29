@@ -61,6 +61,24 @@ type MockRow = {
   success_response_json: string
 }
 
+type MockLeaderboardRun = {
+  source_ticket_id: string
+  player_id: number | null
+  game_mode: 'classic' | 'hard'
+  environment: 'preview' | 'production' | 'test'
+  is_smoke: 0 | 1
+  submitted_at_ms: number
+  verified_wins: number
+  verified_overall_score_tenths: number
+  tier_label: string
+  eligibility_status: 'eligible' | 'identity_pending' | 'excluded_test'
+  eligibility_reason: 'eligible' | 'identity_unavailable' | 'test_or_smoke_data'
+  invalidated_at_ms: null
+  identity_key_digest: string | null
+  public_label: string | null
+  player_status: 'active' | null
+}
+
 type BatchMode = 'normal' | 'fail' | 'malformed' | 'missing-row' | 'bad-changes'
 type ConflictMode = 'none' | 'same' | 'transcript' | 'token'
 
@@ -81,7 +99,9 @@ class MockStatement {
 
 class MockDatabase {
   row: MockRow | null = null
-  schemaVersion = 2
+  leaderboardRun: MockLeaderboardRun | null = null
+  player: { player_id: number, identity_key_digest: string, public_label: string, status: 'active' } | null = null
+  schemaVersion = 3
   batchMode: BatchMode = 'normal'
   conflictMode: ConflictMode = 'none'
   batchCalls = 0
@@ -95,6 +115,7 @@ class MockDatabase {
   first(query: string): unknown {
     if (query.includes('FROM backend_schema')) return { version: this.schemaVersion }
     if (query.includes('FROM draft_submissions')) return this.row ? structuredClone(this.row) : null
+    if (query.includes('FROM leaderboard_runs')) return this.leaderboardRun ? structuredClone(this.leaderboardRun) : null
     throw new Error('Unexpected test query')
   }
 
@@ -125,11 +146,69 @@ class MockDatabase {
         if (this.conflictMode === 'token') this.row.ticket_token_digest = 'e'.repeat(64)
       }
     }
+    const playerStatement = statements.find(({ query }) => query.includes('INSERT INTO leaderboard_players'))
+    let playerChanges = 0
+    if (playerStatement && !this.player) {
+      this.player = {
+        player_id: 1,
+        identity_key_digest: String(playerStatement.bindings[0]),
+        public_label: String(playerStatement.bindings[1]),
+        status: 'active',
+      }
+      playerChanges = 1
+    }
+    const runStatement = statements.find(({ query }) => query.includes('INSERT INTO leaderboard_runs'))
+    assert(runStatement)
+    assert.equal(runStatement.bindings.length, 12)
+    let runChanges = 0
+    if (!this.leaderboardRun) {
+      const identityDigest = runStatement.bindings[1] === null ? null : String(runStatement.bindings[1])
+      const publicLabel = runStatement.bindings[2] === null ? null : String(runStatement.bindings[2])
+      const player = identityDigest
+        && this.player?.identity_key_digest === identityDigest
+        && this.player.public_label === publicLabel
+        ? this.player
+        : null
+      this.leaderboardRun = {
+        source_ticket_id: String(runStatement.bindings[0]),
+        player_id: player?.player_id ?? null,
+        game_mode: String(runStatement.bindings[3]) as 'classic' | 'hard',
+        environment: String(runStatement.bindings[4]) as 'preview' | 'production' | 'test',
+        is_smoke: Number(runStatement.bindings[5]) as 0 | 1,
+        submitted_at_ms: Number(runStatement.bindings[6]),
+        verified_wins: Number(runStatement.bindings[7]),
+        verified_overall_score_tenths: Number(runStatement.bindings[8]),
+        tier_label: String(runStatement.bindings[9]),
+        eligibility_status: String(runStatement.bindings[10]) as MockLeaderboardRun['eligibility_status'],
+        eligibility_reason: String(runStatement.bindings[11]) as MockLeaderboardRun['eligibility_reason'],
+        invalidated_at_ms: null,
+        identity_key_digest: player?.identity_key_digest ?? null,
+        public_label: player?.public_label ?? null,
+        player_status: player?.status ?? null,
+      }
+      runChanges = changes === 1 ? 1 : 0
+    }
     if (this.batchMode === 'bad-changes') changes = 2
-    return [
-      { success: true, meta: { changes }, results: [] },
-      { success: true, meta: { changes: 0 }, results: this.batchMode === 'missing-row' ? [] : [structuredClone(this.row)] },
-    ]
+    return statements.map((statement, index) => {
+      if (index === 0) return { success: true, meta: { changes }, results: [] }
+      if (statement.query.includes('INSERT INTO leaderboard_players')) {
+        return { success: true, meta: { changes: playerChanges }, results: [] }
+      }
+      if (statement.query.includes('INSERT INTO leaderboard_runs')) {
+        return { success: true, meta: { changes: runChanges }, results: [] }
+      }
+      if (statement.query.includes('FROM draft_submissions')) {
+        return {
+          success: true,
+          meta: { changes: 0 },
+          results: this.batchMode === 'missing-row' ? [] : [structuredClone(this.row)],
+        }
+      }
+      if (statement.query.includes('FROM leaderboard_runs')) {
+        return { success: true, meta: { changes: 0 }, results: [structuredClone(this.leaderboardRun)] }
+      }
+      throw new Error('Unexpected test batch statement')
+    })
   }
 }
 
@@ -411,6 +490,23 @@ assert.equal(firstDatabase.row.submitted_at_ms, NOW)
 assert.equal(firstDatabase.row.retain_until_ms, NOW + DRAFT_SUBMISSION_RETENTION_MS)
 assert.equal(firstDatabase.row.success_response_json, firstBytes)
 assert.equal(firstDatabase.batchCalls, 1)
+assert.deepEqual(firstDatabase.leaderboardRun, {
+  source_ticket_id: fixture.transcript.header.draftId,
+  player_id: null,
+  game_mode: 'classic',
+  environment: 'preview',
+  is_smoke: 0,
+  submitted_at_ms: NOW,
+  verified_wins: (firstReceipt.result as { projectedWins: number }).projectedWins,
+  verified_overall_score_tenths: (firstReceipt.result as { overallScore: number }).overallScore * 10,
+  tier_label: (firstReceipt.result as { tier: string }).tier,
+  eligibility_status: 'identity_pending',
+  eligibility_reason: 'identity_unavailable',
+  invalidated_at_ms: null,
+  identity_key_digest: null,
+  public_label: null,
+  player_status: null,
+})
 assert.deepEqual(Object.keys(firstReceipt.result as Record<string, unknown>), [
   'projectedWins', 'projectedLosses', 'overallScore', 'overallGrade', 'tier',
   'categories', 'strongestCategory', 'weakestCategory',
@@ -434,6 +530,71 @@ assert.equal(retainedResponse.status, 200)
 assert.equal(await retainedResponse.text(), firstBytes)
 assert.equal(firstDatabase.batchCalls, 1)
 assert.equal(firstDatabase.row.submitted_at_ms, NOW)
+
+// A future server-authoritative identity mapping makes one accepted production
+// run eligible, while the same ticket retry cannot add a second credit.
+const identifiedDatabase = new MockDatabase()
+const identitySources = {
+  ...stableSources,
+  resolveLeaderboardIdentity: () => ({
+    identityKeyDigest: 'c'.repeat(64),
+    publicLabel: 'Player Cedar',
+  }),
+  classifyLeaderboardRun: () => ({ environment: 'production' as const, isSmoke: false }),
+}
+const identifiedResponse = await handleAuthoritativeSubmissionRequest(
+  request(envelope),
+  enabledEnvironment(identifiedDatabase),
+  identitySources,
+)
+assert.equal(identifiedResponse.status, 201)
+assert.equal(identifiedDatabase.leaderboardRun?.eligibility_status, 'eligible')
+assert.equal(identifiedDatabase.leaderboardRun?.eligibility_reason, 'eligible')
+assert.equal(identifiedDatabase.leaderboardRun?.environment, 'production')
+assert.equal(identifiedDatabase.leaderboardRun?.identity_key_digest, 'c'.repeat(64))
+assert.equal(identifiedDatabase.leaderboardRun?.public_label, 'Player Cedar')
+assert.equal(identifiedDatabase.batchCalls, 1)
+const identifiedRetry = await handleAuthoritativeSubmissionRequest(
+  request(envelope),
+  enabledEnvironment(identifiedDatabase),
+  {
+    ...noRecalculationSources,
+    resolveLeaderboardIdentity: () => { throw new Error('retained retry must not resolve identity') },
+    classifyLeaderboardRun: () => { throw new Error('retained retry must not classify') },
+  },
+)
+assert.equal(identifiedRetry.status, 200)
+assert.equal(identifiedDatabase.batchCalls, 1)
+
+const smokeDatabase = new MockDatabase()
+const smokeResponse = await handleAuthoritativeSubmissionRequest(
+  request(envelope),
+  enabledEnvironment(smokeDatabase),
+  {
+    ...identitySources,
+    classifyLeaderboardRun: () => ({ environment: 'production' as const, isSmoke: true }),
+  },
+)
+assert.equal(smokeResponse.status, 201)
+assert.equal(smokeDatabase.leaderboardRun?.eligibility_status, 'excluded_test')
+assert.equal(smokeDatabase.leaderboardRun?.eligibility_reason, 'test_or_smoke_data')
+assert.equal(smokeDatabase.leaderboardRun?.is_smoke, 1)
+
+for (const publicLabel of [' Player Cedar', 'Player\nCedar', `Player\u202eCedar`, 'x'.repeat(33)]) {
+  const invalidIdentityDatabase = new MockDatabase()
+  await assertError(await handleAuthoritativeSubmissionRequest(
+    request(envelope),
+    enabledEnvironment(invalidIdentityDatabase),
+    {
+      ...stableSources,
+      resolveLeaderboardIdentity: () => ({
+        identityKeyDigest: 'd'.repeat(64),
+        publicLabel,
+      }),
+    },
+  ), 'submission_unavailable')
+  assert.equal(invalidIdentityDatabase.batchCalls, 0)
+}
 const farFutureRetry = await handleAuthoritativeSubmissionRequest(
   request(envelope),
   enabledEnvironment(firstDatabase),
@@ -622,7 +783,8 @@ assert.match(workerConfig, /^\[env\.production\.triggers\]\ncrons = \[\]$/m)
 assert.match(versionSource, /SUBMISSION_SCHEMA_VERSION: null/)
 assert.doesNotMatch(submissionSource, /\bconsole\.|\bwaitUntil\b|\bMath\.random\b|\braw_ticket\b|\bsignature\b/)
 assert.match(submissionSource, /ON CONFLICT\(ticket_id\) DO NOTHING/)
-assert.match(submissionSource, /database\.batch\(\[insert, select\]\)/)
+assert.match(submissionSource, /database\.batch\(statements\)/)
+assert.match(submissionSource, /ON CONFLICT\(source_ticket_id\) DO NOTHING/)
 assert.doesNotMatch(submissionSource, /ticket_token_digest\s*===\s*|transcript_digest\s*===\s*/)
 
 console.log('D1C.2 submission tests passed: canonical digests, disabled proxying, retained idempotency, ticket binding, replay/scoring, immutable receipts, and atomic D1 reconciliation are verified.')

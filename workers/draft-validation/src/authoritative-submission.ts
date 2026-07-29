@@ -37,6 +37,7 @@ import {
 } from '../../../functions/lib/draft-validation-schema'
 import {
   verifyDraftTicket,
+  type DraftTicketPayload,
   type DraftTicketVerificationResult,
 } from '../../../functions/lib/draft-ticket'
 import {
@@ -48,7 +49,7 @@ import {
 
 export const DRAFT_SUBMISSION_ALLOWED_METHODS = 'POST'
 
-const EXPECTED_DATABASE_SCHEMA_VERSION = 2
+const EXPECTED_DATABASE_SCHEMA_VERSION = 3
 const SELECT_SCHEMA_SQL = 'SELECT version FROM backend_schema WHERE id = 1'
 const SELECT_SUBMISSION_SQL = `
   SELECT
@@ -74,6 +75,64 @@ const INSERT_SUBMISSION_SQL = `
     success_response_json
   ) VALUES (?, ?, ?, ?, ?, ?, ?)
   ON CONFLICT(ticket_id) DO NOTHING
+`
+const INSERT_LEADERBOARD_PLAYER_SQL = `
+  INSERT INTO leaderboard_players (
+    identity_key_digest,
+    public_label,
+    status,
+    created_at_ms
+  ) VALUES (?, ?, 'active', ?)
+  ON CONFLICT(identity_key_digest) DO NOTHING
+`
+const INSERT_LEADERBOARD_RUN_SQL = `
+  INSERT INTO leaderboard_runs (
+    source_ticket_id,
+    player_id,
+    game_mode,
+    environment,
+    is_smoke,
+    submitted_at_ms,
+    verified_wins,
+    verified_overall_score_tenths,
+    tier_label,
+    eligibility_status,
+    eligibility_reason,
+    invalidated_at_ms
+  ) VALUES (
+    ?,
+    (
+      SELECT player_id
+      FROM leaderboard_players
+      WHERE identity_key_digest = ?
+        AND public_label = ?
+        AND status = 'active'
+    ),
+    ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL
+  )
+  ON CONFLICT(source_ticket_id) DO NOTHING
+`
+const SELECT_LEADERBOARD_RUN_SQL = `
+  SELECT
+    r.source_ticket_id,
+    r.player_id,
+    r.game_mode,
+    r.environment,
+    r.is_smoke,
+    r.submitted_at_ms,
+    r.verified_wins,
+    r.verified_overall_score_tenths,
+    r.tier_label,
+    r.eligibility_status,
+    r.eligibility_reason,
+    r.invalidated_at_ms,
+    p.identity_key_digest,
+    p.public_label,
+    p.status AS player_status
+  FROM leaderboard_runs AS r
+  LEFT JOIN leaderboard_players AS p ON p.player_id = r.player_id
+  WHERE r.source_ticket_id = ?
+  LIMIT 1
 `
 
 const RECEIPT_FIELDS = ['ok', 'verified', 'submitted', 'submissionSchema', 'submittedAt', 'versions', 'result'] as const
@@ -115,6 +174,38 @@ interface StoredSubmissionRow {
 
 type ProposedSubmissionRow = StoredSubmissionRow
 
+export interface LeaderboardSubmissionIdentity {
+  /** HMAC-SHA-256 of a future server-authoritative identity key. */
+  readonly identityKeyDigest: string
+  readonly publicLabel: string
+}
+
+export interface LeaderboardSubmissionClassification {
+  readonly environment: 'preview' | 'production' | 'test'
+  readonly isSmoke: boolean
+}
+
+interface ProposedLeaderboardRun {
+  readonly source_ticket_id: string
+  readonly identity_key_digest: string | null
+  readonly game_mode: 'classic' | 'hard'
+  readonly environment: LeaderboardSubmissionClassification['environment']
+  readonly is_smoke: 0 | 1
+  readonly submitted_at_ms: number
+  readonly verified_wins: number
+  readonly verified_overall_score_tenths: number
+  readonly tier_label: string
+  readonly eligibility_status: 'eligible' | 'identity_pending' | 'excluded_test'
+  readonly eligibility_reason: 'eligible' | 'identity_unavailable' | 'test_or_smoke_data'
+}
+
+interface StoredLeaderboardRun extends ProposedLeaderboardRun {
+  readonly player_id: number | null
+  readonly invalidated_at_ms: null
+  readonly public_label: string | null
+  readonly player_status: 'active' | null
+}
+
 interface SubmissionSources {
   readonly now: () => number
   readonly verifyTicket: (
@@ -125,6 +216,14 @@ interface SubmissionSources {
   readonly getCatalog: () => ReplayCatalog | null
   readonly replay: (transcript: DraftTranscript, catalog: ReplayCatalog) => ValidatedDraftRoster
   readonly score: (roster: ValidatedDraftRoster) => DraftResult<unknown>
+  readonly resolveLeaderboardIdentity: (
+    transcript: DraftTranscript,
+    ticket: DraftTicketPayload,
+  ) => LeaderboardSubmissionIdentity | null | Promise<LeaderboardSubmissionIdentity | null>
+  readonly classifyLeaderboardRun: (
+    transcript: DraftTranscript,
+    ticket: DraftTicketPayload,
+  ) => LeaderboardSubmissionClassification
 }
 
 const defaultSources: SubmissionSources = Object.freeze({
@@ -133,7 +232,14 @@ const defaultSources: SubmissionSources = Object.freeze({
   getCatalog: getAuthoritativeReplayCatalog,
   replay: (transcript: DraftTranscript, catalog: ReplayCatalog) => replayDraftWithCatalog(transcript, catalog, CURRENT_REPLAY_VERSION_SUPPORT),
   score: (roster: ValidatedDraftRoster) => calculateDraftResult(roster).result,
+  // The current application has no stable player identity. Preview is the only
+  // Worker with both ticket issuance and D1, so accepted runs remain private
+  // and identity-pending until an independently reviewed resolver is added.
+  resolveLeaderboardIdentity: () => null,
+  classifyLeaderboardRun: () => Object.freeze({ environment: 'preview', isSmoke: false }),
 })
+
+const IDENTITY_DIGEST_PATTERN = /^[0-9a-f]{64}$/
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
@@ -142,6 +248,21 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 function hasExactKeys(value: Record<string, unknown>, expected: readonly string[]) {
   const actual = Object.keys(value)
   return actual.length === expected.length && actual.every((key) => expected.includes(key))
+}
+
+function isSafeDisplayText(value: string, maximumLength: number, rejectFormatting: boolean) {
+  const characters = [...value]
+  if (characters.length < 1 || characters.length > maximumLength) return false
+  return characters.every((character) => {
+    const codePoint = character.codePointAt(0) ?? 0
+    if (codePoint <= 0x1f || (codePoint >= 0x7f && codePoint <= 0x9f)) return false
+    return !rejectFormatting || !(
+      (codePoint >= 0x200b && codePoint <= 0x200f)
+      || (codePoint >= 0x202a && codePoint <= 0x202e)
+      || (codePoint >= 0x2060 && codePoint <= 0x206f)
+      || codePoint === 0xfeff
+    )
+  })
 }
 
 function isSubmissionDatabase(value: unknown): value is SubmissionDatabase {
@@ -306,6 +427,158 @@ function storedReceiptIsValid(row: StoredSubmissionRow) {
     && validStoredReceipt(parsed, row.submitted_at_ms)
 }
 
+function validLeaderboardIdentity(value: unknown): value is LeaderboardSubmissionIdentity {
+  return isRecord(value)
+    && hasExactKeys(value, ['identityKeyDigest', 'publicLabel'])
+    && typeof value.identityKeyDigest === 'string'
+    && IDENTITY_DIGEST_PATTERN.test(value.identityKeyDigest)
+    && typeof value.publicLabel === 'string'
+    && value.publicLabel === value.publicLabel.trim()
+    && isSafeDisplayText(value.publicLabel, 32, true)
+}
+
+function validLeaderboardClassification(value: unknown): value is LeaderboardSubmissionClassification {
+  return isRecord(value)
+    && hasExactKeys(value, ['environment', 'isSmoke'])
+    && (value.environment === 'preview' || value.environment === 'production' || value.environment === 'test')
+    && typeof value.isSmoke === 'boolean'
+}
+
+function createLeaderboardRunProposal(
+  result: DraftResult<unknown>,
+  submittedAtMs: number,
+  ticket: DraftTicketPayload,
+  identity: LeaderboardSubmissionIdentity | null,
+  classification: LeaderboardSubmissionClassification,
+): ProposedLeaderboardRun | null {
+  const scoreTenths = Math.round(result.overallScore * 10)
+  if (
+    (ticket.gameMode !== 'classic' && ticket.gameMode !== 'hard')
+    || !Number.isSafeInteger(result.wins)
+    || result.wins < 0
+    || result.wins > 162
+    || !Number.isSafeInteger(scoreTenths)
+    || scoreTenths < 0
+    || scoreTenths > 1000
+    || result.overallScore !== scoreTenths / 10
+    || typeof result.tierLabel !== 'string'
+    || result.tierLabel !== result.tierLabel.trim()
+    || !isSafeDisplayText(result.tierLabel, 64, false)
+  ) return null
+
+  const excludedTest = classification.environment === 'test' || classification.isSmoke
+  const eligibilityStatus = excludedTest
+    ? 'excluded_test'
+    : identity ? 'eligible' : 'identity_pending'
+  const eligibilityReason = excludedTest
+    ? 'test_or_smoke_data'
+    : identity ? 'eligible' : 'identity_unavailable'
+  return {
+    source_ticket_id: ticket.ticketId,
+    identity_key_digest: identity?.identityKeyDigest ?? null,
+    game_mode: ticket.gameMode,
+    environment: classification.environment,
+    is_smoke: classification.isSmoke ? 1 : 0,
+    submitted_at_ms: submittedAtMs,
+    verified_wins: result.wins,
+    verified_overall_score_tenths: scoreTenths,
+    tier_label: result.tierLabel,
+    eligibility_status: eligibilityStatus,
+    eligibility_reason: eligibilityReason,
+  }
+}
+
+function storedLeaderboardRun(value: unknown, ticketId: string): StoredLeaderboardRun | null {
+  if (!isRecord(value) || !hasExactKeys(value, [
+    'source_ticket_id', 'player_id', 'game_mode', 'environment', 'is_smoke',
+    'submitted_at_ms', 'verified_wins', 'verified_overall_score_tenths',
+    'tier_label', 'eligibility_status', 'eligibility_reason',
+    'invalidated_at_ms', 'identity_key_digest', 'public_label', 'player_status',
+  ])) return null
+  const playerIsNull = value.player_id === null
+    && value.identity_key_digest === null
+    && value.public_label === null
+    && value.player_status === null
+  const playerIsValid = typeof value.player_id === 'number'
+    && Number.isSafeInteger(value.player_id)
+    && value.player_id >= 1
+    && typeof value.identity_key_digest === 'string'
+    && IDENTITY_DIGEST_PATTERN.test(value.identity_key_digest)
+    && typeof value.public_label === 'string'
+    && value.public_label === value.public_label.trim()
+    && isSafeDisplayText(value.public_label, 32, true)
+    && value.player_status === 'active'
+  if (
+    value.source_ticket_id !== ticketId
+    || (!playerIsNull && !playerIsValid)
+    || (value.game_mode !== 'classic' && value.game_mode !== 'hard')
+    || (value.environment !== 'preview' && value.environment !== 'production' && value.environment !== 'test')
+    || (value.is_smoke !== 0 && value.is_smoke !== 1)
+    || !safeTimestamp(value.submitted_at_ms)
+    || typeof value.verified_wins !== 'number'
+    || !Number.isSafeInteger(value.verified_wins)
+    || value.verified_wins < 0
+    || value.verified_wins > 162
+    || typeof value.verified_overall_score_tenths !== 'number'
+    || !Number.isSafeInteger(value.verified_overall_score_tenths)
+    || value.verified_overall_score_tenths < 0
+    || value.verified_overall_score_tenths > 1000
+    || typeof value.tier_label !== 'string'
+    || value.tier_label !== value.tier_label.trim()
+    || !isSafeDisplayText(value.tier_label, 64, false)
+    || (
+      value.eligibility_status !== 'eligible'
+      && value.eligibility_status !== 'identity_pending'
+      && value.eligibility_status !== 'excluded_test'
+    )
+    || (
+      value.eligibility_reason !== 'eligible'
+      && value.eligibility_reason !== 'identity_unavailable'
+      && value.eligibility_reason !== 'test_or_smoke_data'
+    )
+    || value.invalidated_at_ms !== null
+  ) return null
+  return {
+    source_ticket_id: value.source_ticket_id,
+    player_id: value.player_id as number | null,
+    identity_key_digest: value.identity_key_digest as string | null,
+    public_label: value.public_label as string | null,
+    player_status: value.player_status as 'active' | null,
+    game_mode: value.game_mode,
+    environment: value.environment,
+    is_smoke: value.is_smoke,
+    submitted_at_ms: value.submitted_at_ms,
+    verified_wins: value.verified_wins,
+    verified_overall_score_tenths: value.verified_overall_score_tenths,
+    tier_label: value.tier_label,
+    eligibility_status: value.eligibility_status,
+    eligibility_reason: value.eligibility_reason,
+    invalidated_at_ms: null,
+  }
+}
+
+function storedLeaderboardRunMatchesProposal(
+  row: StoredLeaderboardRun,
+  proposal: ProposedLeaderboardRun,
+) {
+  return row.source_ticket_id === proposal.source_ticket_id
+    && row.game_mode === proposal.game_mode
+    && row.environment === proposal.environment
+    && row.is_smoke === proposal.is_smoke
+    && row.submitted_at_ms === proposal.submitted_at_ms
+    && row.verified_wins === proposal.verified_wins
+    && row.verified_overall_score_tenths === proposal.verified_overall_score_tenths
+    && row.tier_label === proposal.tier_label
+    && row.eligibility_status === proposal.eligibility_status
+    && row.eligibility_reason === proposal.eligibility_reason
+    && row.invalidated_at_ms === null
+    && (
+      proposal.identity_key_digest === null
+        ? row.player_id === null && row.identity_key_digest === null
+        : row.player_id !== null && row.identity_key_digest === proposal.identity_key_digest
+    )
+}
+
 function digestMatches(left: string, right: string) {
   return constantTimeDigestEqual(left, right)
 }
@@ -399,6 +672,8 @@ function insertedRowMatchesProposal(row: StoredSubmissionRow, proposal: Proposed
 async function persistSubmissionAtomically(
   database: SubmissionDatabase,
   proposal: ProposedSubmissionRow,
+  leaderboard: ProposedLeaderboardRun,
+  identity: LeaderboardSubmissionIdentity | null,
 ) {
   let batchValue: unknown
   try {
@@ -411,24 +686,75 @@ async function persistSubmissionAtomically(
       proposal.submission_schema_version,
       proposal.success_response_json,
     )
-    const select = database.prepare(SELECT_SUBMISSION_SQL).bind(proposal.ticket_id)
-    batchValue = await database.batch([insert, select])
+    const statements = [insert]
+    if (identity) {
+      statements.push(database.prepare(INSERT_LEADERBOARD_PLAYER_SQL).bind(
+        identity.identityKeyDigest,
+        identity.publicLabel,
+        proposal.submitted_at_ms,
+      ))
+    }
+    statements.push(database.prepare(INSERT_LEADERBOARD_RUN_SQL).bind(
+      leaderboard.source_ticket_id,
+      leaderboard.identity_key_digest,
+      identity?.publicLabel ?? null,
+      leaderboard.game_mode,
+      leaderboard.environment,
+      leaderboard.is_smoke,
+      leaderboard.submitted_at_ms,
+      leaderboard.verified_wins,
+      leaderboard.verified_overall_score_tenths,
+      leaderboard.tier_label,
+      leaderboard.eligibility_status,
+      leaderboard.eligibility_reason,
+    ))
+    statements.push(database.prepare(SELECT_SUBMISSION_SQL).bind(proposal.ticket_id))
+    statements.push(database.prepare(SELECT_LEADERBOARD_RUN_SQL).bind(proposal.ticket_id))
+    batchValue = await database.batch(statements)
   } catch {
     return errorResponse('submission_unavailable')
   }
 
-  if (!Array.isArray(batchValue) || batchValue.length !== 2) return errorResponse('submission_unavailable')
-  const [insertResult, selectResult] = batchValue
+  const expectedLength = identity ? 5 : 4
+  if (!Array.isArray(batchValue) || batchValue.length !== expectedLength) return errorResponse('submission_unavailable')
+  const insertResult = batchValue[0]
+  const identityResult = identity ? batchValue[1] : null
+  const runInsertResult = batchValue[identity ? 2 : 1]
+  const selectResult = batchValue[identity ? 3 : 2]
+  const runSelectResult = batchValue[identity ? 4 : 3]
   if (!isRecord(insertResult) || insertResult.success !== true || !isRecord(insertResult.meta)) {
     return errorResponse('submission_unavailable')
   }
   const changes = insertResult.meta.changes
   if (changes !== 0 && changes !== 1) return errorResponse('submission_unavailable')
+  if (identityResult !== null) {
+    if (!isRecord(identityResult) || identityResult.success !== true || !isRecord(identityResult.meta)) {
+      return errorResponse('submission_unavailable')
+    }
+    const identityChanges = identityResult.meta.changes
+    if (identityChanges !== 0 && identityChanges !== 1) return errorResponse('submission_unavailable')
+  }
+  if (!isRecord(runInsertResult) || runInsertResult.success !== true || !isRecord(runInsertResult.meta)) {
+    return errorResponse('submission_unavailable')
+  }
+  const runChanges = runInsertResult.meta.changes
+  if (runChanges !== 0 && runChanges !== 1) return errorResponse('submission_unavailable')
+  if (runChanges !== changes) return errorResponse('submission_unavailable')
   if (!isRecord(selectResult) || selectResult.success !== true || !Array.isArray(selectResult.results) || selectResult.results.length !== 1) {
     return errorResponse('submission_unavailable')
   }
   const selected = storedSubmissionRow(selectResult.results[0], proposal.ticket_id)
   if (!selected) return errorResponse('submission_unavailable')
+  if (
+    !isRecord(runSelectResult)
+    || runSelectResult.success !== true
+    || !Array.isArray(runSelectResult.results)
+    || runSelectResult.results.length !== 1
+  ) return errorResponse('submission_unavailable')
+  const selectedRun = storedLeaderboardRun(runSelectResult.results[0], proposal.ticket_id)
+  if (!selectedRun || !storedLeaderboardRunMatchesProposal(selectedRun, leaderboard)) {
+    return errorResponse('submission_unavailable')
+  }
 
   if (changes === 1) {
     if (!insertedRowMatchesProposal(selected, proposal)) return errorResponse('submission_unavailable')
@@ -540,6 +866,27 @@ export async function handleAuthoritativeSubmissionRequest(
   const successResponseJson = createSuccessReceipt(result, submittedAtMs)
   if (!successResponseJson) return errorResponse('submission_unavailable')
 
+  let identity: LeaderboardSubmissionIdentity | null
+  let classification: LeaderboardSubmissionClassification
+  try {
+    identity = await sources.resolveLeaderboardIdentity(transcript, verification.payload)
+    classification = sources.classifyLeaderboardRun(transcript, verification.payload)
+  } catch {
+    return errorResponse('submission_unavailable')
+  }
+  if (
+    (identity !== null && !validLeaderboardIdentity(identity))
+    || !validLeaderboardClassification(classification)
+  ) return errorResponse('submission_unavailable')
+  const leaderboard = createLeaderboardRunProposal(
+    result,
+    submittedAtMs,
+    verification.payload,
+    identity,
+    classification,
+  )
+  if (!leaderboard) return errorResponse('submission_unavailable')
+
   return persistSubmissionAtomically(database, {
     ticket_id: transcript.header.draftId,
     ticket_token_digest: ticketTokenDigest,
@@ -548,5 +895,5 @@ export async function handleAuthoritativeSubmissionRequest(
     retain_until_ms: retainUntilMs,
     submission_schema_version: DRAFT_SUBMISSION_SCHEMA_VERSION,
     success_response_json: successResponseJson,
-  })
+  }, leaderboard, identity)
 }

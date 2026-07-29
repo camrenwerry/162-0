@@ -8,13 +8,20 @@ Pennant Pursuit Backend Phase B uses two separate D1 databases:
 The top-level/default Wrangler environment binds only preview as `DB`. The explicit `[env.production]` override binds only production as `DB`. The names and UUIDs differ, and neither environment can inherit or select the other database under the checked-in configuration.
 
 Schema version 1 contains only `backend_schema`. The additive D1C.1 schema
-version 2 also defines `draft_submissions` for retained submission receipts.
-D1C.2 implements the atomic submission path behind disabled flags, and D1C.3
-implements bounded retention cleanup in the preview private Worker. No user
-identity, display name, raw ticket, signature, draft, roster, gameplay,
-transcript, analytics, request, IP-address, user-agent, or location data has a
-storage column. Leaderboard, submissions, and all runtime writes remain
-disabled in the checked-in default configuration.
+version 2 defines `draft_submissions` for retained submission receipts.
+Milestone 2 schema version 3 adds durable leaderboard players and verified-run
+audit rows. D1C.2 implements the atomic submission path behind disabled flags,
+and D1C.3 implements bounded retention cleanup in the preview private Worker.
+No raw identity, ticket token, signature, draft, roster, gameplay transcript,
+analytics request, IP address, user agent, or location data has a storage
+column. The identity digest and public label columns added in version 3 remain
+unused until a separately reviewed server-authoritative identity resolver
+exists. Leaderboard reads, submissions, and all runtime writes remain disabled
+in the checked-in default configuration.
+
+The complete Milestone 2 schema, ranking, API, privacy, retention, testing, and
+activation contract is in
+[Leaderboard backend foundation](LEADERBOARD_BACKEND.md).
 
 ## Environment boundaries
 
@@ -51,9 +58,11 @@ read-only and do not access D1.
 
 Rate Limiting is deliberately best-effort, per-location, and eventually
 consistent; it does not promise an exact sixth-request denial. No transcript,
-roster, player, key, request metadata, validation attempt, identity, ticket,
-leaderboard, or analytics history is stored. D1C.2's disabled persistent ticket
-consumption is not activated and does not establish leaderboard eligibility.
+roster, raw player identity, key, request metadata, validation attempt, ticket,
+or analytics history is stored. The disabled submission path is prepared to
+store a bounded receipt and durable server-verified leaderboard run, but it is
+not activated. Without a reviewed server identity resolver, such a run would be
+`identity_pending` and could not establish public leaderboard eligibility.
 
 ## Preview-only draft tickets
 
@@ -166,7 +175,7 @@ reviewed `cron-enabled` activation state. Production keeps an explicit empty
 Cron list, both checked-in submission flags remain disabled, production remains
 D1-free, and no cleanup HTTP route exists.
 
-Each invocation samples current server time once and requires schema version 2.
+Each invocation samples current server time once and requires schema version 3.
 It executes at most ten sequential prepared DELETE statements. Each statement
 deletes at most 500 rows satisfying only `retain_until_ms <= cutoff_ms`, ordered
 by `retain_until_ms, ticket_id`, and every statement binds the same cutoff. A
@@ -193,10 +202,11 @@ explicitly empty. The repository defines and validates `disabled`,
 `submission-enabled`, and `cron-enabled` preview states without changing any
 production section. Enabled health publishes
 `pennant-draft-submission-v1` from the existing protocol constant only when the
-Pages flag is configured and reachable D1 schema 2 is exact. It reports schema
+Pages flag is configured and reachable D1 schema 3 is exact. It reports schema
 readiness, not private Worker readiness; operational writes remain
 `externally-unverified` until the smoke independently observes endpoint success
-and exact D1 persistence.
+and exact D1 persistence. Version 2 is now a migration predecessor, not a
+write-ready schema.
 
 See [D1C.4 preview activation preparation](D1C4_ACTIVATION.md) for the exact
 manifest, validation and review commands, generated local config inputs,
@@ -226,6 +236,7 @@ npm run validation-worker:types:check
 npm run validation-worker:typecheck
 npm run test:validation-worker
 npm run test:d1c3-retention-cleanup
+npm run test:leaderboard
 ```
 
 For an isolated local scheduled-handler check, apply migrations only to a
@@ -293,7 +304,9 @@ A Pages deployment is a separate operation and is not part of Backend Phase B. F
 2. Run all type generation, typechecks, tests, lint, and the production build from a clean reviewed revision.
 3. Confirm preview still uses only the preview UUID and production still uses only the production UUID.
 4. Deploy a preview revision and verify static routes, PWA assets, API methods, and non-mutating preview health.
-5. Deploy production only under separate authorization, then verify the same behavior and production schema version 1.
+5. Deploy production only under separate authorization, then verify the same
+   behavior and the exact schema expected by that reviewed release. Production
+   remains at schema version 1 until a separately authorized remote migration.
 
 ## Recovery and rollback limitations
 

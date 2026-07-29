@@ -217,6 +217,9 @@ assert.match(packageJson.scripts['test:draft-validation'], /draft-validation-rou
 assert.match(packageJson.scripts['test:draft-validation-traffic-control'], /draft-validation-traffic-control\.test\.ts/)
 assert.match(packageJson.scripts['test:draft-ticket'], /draft-ticket\.test\.ts/)
 assert.match(packageJson.scripts['test:draft-submission'], /draft-submission\.test\.ts/)
+assert.match(packageJson.scripts['test:leaderboard'], /test:leaderboard-schema/)
+assert.match(packageJson.scripts['test:leaderboard'], /test:leaderboard-api/)
+assert.match(packageJson.scripts['test:leaderboard'], /test:leaderboard-integration/)
 assert.match(packageJson.scripts['validation-worker:typecheck'], /workers\/draft-validation\/tsconfig\.json/)
 assert.match(packageJson.scripts['benchmark:draft-validation'], /draft-validation-benchmark\.ts/)
 assert.equal(SUBMISSION_SCHEMA_VERSION, null)
@@ -231,7 +234,7 @@ for (const requiredDocumentation of [
   '`preview_database_id = "DB"`',
   'does not roll back D1 schema or data',
   'No user',
-  'Leaderboard, submissions',
+  'Leaderboard reads, submissions',
   'Preview-only draft tickets',
   'D1C.4 preview activation preparation',
   'Phase C checklist',
@@ -262,12 +265,12 @@ assert.match(
   /spawnSync\('wrangler', APPROVED_WRANGLER_COMMAND/,
 )
 
-const apiImplementations = ['functions/api/[[path]].ts', 'functions/api/v1/draft-ticket.ts', 'functions/api/v1/health.ts', 'functions/api/v1/submit-draft.ts', 'functions/api/v1/validate-draft.ts']
+const apiImplementations = ['functions/api/[[path]].ts', 'functions/api/v1/draft-ticket.ts', 'functions/api/v1/health.ts', 'functions/api/v1/leaderboards.ts', 'functions/api/v1/submit-draft.ts', 'functions/api/v1/validate-draft.ts']
 assert.deepEqual(apiImplementations.filter((path) => existsSync(path)), apiImplementations)
 assert.doesNotMatch(apiImplementations.map(source).join('\n'), /\.run\s*\(|\.batch\s*\(|\.exec\s*\(/)
 assert.deepEqual(readdirSync('functions/api').sort(), ['[[path]].ts', 'v1'])
-assert.deepEqual(readdirSync('functions/api/v1').sort(), ['draft-ticket.ts', 'health.ts', 'submit-draft.ts', 'validate-draft.ts'])
-assert.deepEqual(readdirSync('migrations').sort(), ['0001_backend_foundation.sql', '0002_draft_submissions.sql'])
+assert.deepEqual(readdirSync('functions/api/v1').sort(), ['draft-ticket.ts', 'health.ts', 'leaderboards.ts', 'submit-draft.ts', 'validate-draft.ts'])
+assert.deepEqual(readdirSync('migrations').sort(), ['0001_backend_foundation.sql', '0002_draft_submissions.sql', '0003_leaderboard_foundation.sql'])
 const validationRouteSource = source('functions/api/v1/validate-draft.ts')
 assert.doesNotMatch(validationRouteSource, /\benv\.DB\b|\bgetOptionalDatabase\b|\bwaitUntil\b|\bconsole\.(?:log|warn|error)\b/)
 assert.doesNotMatch(validationRouteSource, /\bcaches\.open\s*\(|\bSet-Cookie\b|\bAccess-Control-Allow-Origin\b/)
@@ -512,13 +515,13 @@ assert.deepEqual(await upgradedSchemaResponse.json(), {
 })
 assert.equal(upgradedSchemaDatabase.writeCalls(), 0)
 
-const futureSchemaDatabase = createMockDatabase({ schema: { version: 3 } })
+const futureSchemaDatabase = createMockDatabase({ schema: { version: 4 } })
 const futureSchemaResponse = await handleHealthRequest(new Request('https://example.test/api/v1/health'), futureSchemaDatabase.env)
 assert.equal(futureSchemaResponse.status, 200)
 assert.deepEqual(await futureSchemaResponse.json(), {
   ...expectedMetadata,
   status: 'degraded',
-  backend: { d1: { configured: true, reachable: true, schemaVersion: 3 } },
+  backend: { d1: { configured: true, reachable: true, schemaVersion: 4 } },
   submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
   features: {
     draftValidation: 'disabled',
@@ -530,7 +533,7 @@ assert.deepEqual(await futureSchemaResponse.json(), {
 })
 assert.equal(futureSchemaDatabase.writeCalls(), 0)
 
-const enabledSubmissionDatabase = createMockDatabase({ schema: { version: 2 } })
+const enabledSubmissionDatabase = createMockDatabase({ schema: { version: 3 } })
 const enabledSubmissionResponse = await handleHealthRequest(
   new Request('https://example.test/api/v1/health'),
   { ...enabledSubmissionDatabase.env, DRAFT_SUBMISSION_MODE: 'enabled' } as unknown as BackendEnv,
@@ -540,7 +543,7 @@ assert.deepEqual(await enabledSubmissionResponse.json(), {
   ...expectedMetadata,
   versions: { ...expectedMetadata.versions, submissionSchema: DRAFT_SUBMISSION_SCHEMA_VERSION },
   status: 'healthy',
-  backend: { d1: { configured: true, reachable: true, schemaVersion: 2 } },
+  backend: { d1: { configured: true, reachable: true, schemaVersion: 3 } },
   submission: {
     configured: true,
     schemaReady: true,
@@ -555,6 +558,53 @@ assert.deepEqual(await enabledSubmissionResponse.json(), {
   },
 })
 assert.equal(enabledSubmissionDatabase.writeCalls(), 0)
+
+const incompleteLeaderboardDatabase = createMockDatabase({ schema: { version: 3 } })
+const incompleteLeaderboardResponse = await handleHealthRequest(
+  new Request('https://example.test/api/v1/health'),
+  { ...incompleteLeaderboardDatabase.env, LEADERBOARD_READ_MODE: 'enabled' },
+)
+assert.equal(incompleteLeaderboardResponse.status, 200)
+assert.deepEqual(await incompleteLeaderboardResponse.json(), {
+  ...expectedMetadata,
+  status: 'degraded',
+  backend: { d1: { configured: true, reachable: true, schemaVersion: 3 } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
+  features: {
+    draftValidation: 'disabled',
+    leaderboard: 'configured',
+    submissions: 'disabled',
+    writes: 'disabled',
+    d1: 'schema-ready',
+  },
+})
+assert.equal(incompleteLeaderboardDatabase.writeCalls(), 0)
+
+const enabledLeaderboardDatabase = createMockDatabase({ schema: { version: 3 } })
+const enabledLeaderboardResponse = await handleHealthRequest(
+  new Request('https://example.test/api/v1/health'),
+  {
+    ...enabledLeaderboardDatabase.env,
+    LEADERBOARD_READ_MODE: 'enabled',
+    LEADERBOARD_ENVIRONMENT: 'preview',
+    LEADERBOARD_CURSOR_SIGNING_KEY: 'health-test-leaderboard-cursor-signing-key',
+  },
+)
+assert.equal(enabledLeaderboardResponse.status, 200)
+assert.deepEqual(await enabledLeaderboardResponse.json(), {
+  ...expectedMetadata,
+  status: 'healthy',
+  backend: { d1: { configured: true, reachable: true, schemaVersion: 3 } },
+  submission: { configured: false, schemaReady: false, operationalWriteReadiness: 'disabled' },
+  features: {
+    draftValidation: 'disabled',
+    leaderboard: 'schema-ready',
+    submissions: 'disabled',
+    writes: 'disabled',
+    d1: 'schema-ready',
+  },
+})
+assert.equal(enabledLeaderboardDatabase.writeCalls(), 0)
 
 async function enabledUnavailableHealth(
   env: BackendEnv,
@@ -623,10 +673,10 @@ await enabledUnavailableHealth(
 )
 assert.equal(enabledOlderSchemaDatabase.writeCalls(), 0)
 
-const enabledFutureSchemaDatabase = createMockDatabase({ schema: { version: 3 } })
+const enabledFutureSchemaDatabase = createMockDatabase({ schema: { version: 4 } })
 await enabledUnavailableHealth(
   enabledFutureSchemaDatabase.env,
-  { configured: true, reachable: true, schemaVersion: 3 },
+  { configured: true, reachable: true, schemaVersion: 4 },
   'schema-incompatible',
 )
 assert.equal(enabledFutureSchemaDatabase.writeCalls(), 0)

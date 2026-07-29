@@ -162,6 +162,7 @@ function migratedDatabase() {
   const sqlite = new DatabaseSync(':memory:')
   sqlite.exec(readFileSync('migrations/0001_backend_foundation.sql', 'utf8'))
   sqlite.exec(readFileSync('migrations/0002_draft_submissions.sql', 'utf8'))
+  sqlite.exec(readFileSync('migrations/0003_leaderboard_foundation.sql', 'utf8'))
   sqlite.exec('CREATE TABLE unrelated_records (id INTEGER PRIMARY KEY, value TEXT NOT NULL)')
   sqlite.prepare('INSERT INTO unrelated_records (id, value) VALUES (?, ?)').run(1, 'preserve')
   return sqlite
@@ -201,7 +202,7 @@ function remainingTicketIds(sqlite: DatabaseSync) {
 
 assert.equal(RETENTION_CLEANUP_BATCH_SIZE, 500)
 assert.equal(RETENTION_CLEANUP_MAX_BATCHES, 10)
-assert.equal(RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION, 2)
+assert.equal(RETENTION_CLEANUP_EXPECTED_SCHEMA_VERSION, 3)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, /WHERE retain_until_ms <= \?/)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, /ORDER BY retain_until_ms, ticket_id/)
 assert.match(RETENTION_CLEANUP_DELETE_SQL, new RegExp(`LIMIT ${RETENTION_CLEANUP_BATCH_SIZE}`))
@@ -245,7 +246,7 @@ assert.doesNotMatch(RETENTION_CLEANUP_DELETE_SQL, /submitted_at_ms|backend_schem
   )
   assert.deepEqual(
     { ...sqlite.prepare('SELECT version FROM backend_schema WHERE id = 1').get() },
-    { version: 2 },
+    { version: 3 },
   )
   sqlite.close()
 }
@@ -325,7 +326,7 @@ for (const cutoff of [-1, 1.5, Number.MAX_SAFE_INTEGER + 1, Number.NaN]) {
   await expectFailure(cleanupRetainedDraftSubmissions({}, sources), observations)
 }
 
-for (const schemaRow of [null, {}, { version: 1 }, { version: 3 }, { version: '2' }]) {
+for (const schemaRow of [null, {}, { version: 1 }, { version: 2 }, { version: 4 }, { version: '3' }]) {
   const database = new PlannedDatabase()
   database.schemaRow = schemaRow
   const { observations, sources } = observationSources()

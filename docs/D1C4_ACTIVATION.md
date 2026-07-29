@@ -46,7 +46,7 @@ unapproved schedule, or more than the expected minimal transition.
 | State | Pages preview submission | Private Worker preview submission | Preview Worker Cron | Pages health |
 | --- | --- | --- | --- | --- |
 | `disabled` | `disabled` | `disabled` | `[]` | submission schema `null`; writes `disabled` |
-| `submission-enabled` | `enabled` | `enabled` | `[]` | intent `configured`; schema is published only when reachable D1 schema 2 is exact; operational writes remain `externally-unverified` |
+| `submission-enabled` | `enabled` | `enabled` | `[]` | intent `configured`; schema is published only when reachable D1 schema 3 is exact; operational writes remain `externally-unverified` |
 | `cron-enabled` | `enabled` | `enabled` | `17 * * * *` | identical to `submission-enabled` |
 
 Every state preserves the production sections byte-for-byte. Production
@@ -56,13 +56,13 @@ private Worker remains without a D1 binding or signing secret.
 Pages health separates three facts. `submission.configured` records only Pages
 configuration intent. `submission.schemaReady` is true only when the Pages
 handler reaches the bound D1 database and reads exact supported schema version
-2. `submission.operationalWriteReadiness` is never a claim about the private
+3. `submission.operationalWriteReadiness` is never a claim about the private
 Worker: it is `disabled`, `unavailable`, or `externally-unverified`.
 
 When submission is configured but D1 is missing, unreachable, malformed,
 older, or newer than the exact supported schema, health is `degraded`, the
 submission schema remains `null`, `features.submissions` is `configured`, and
-`features.writes` is `unavailable`. Exact reachable schema 2 publishes
+`features.writes` is `unavailable`. Exact reachable schema 3 publishes
 `pennant-draft-submission-v1`, reports submissions as `schema-ready`, and keeps
 writes `externally-unverified`. The Pages handler cannot independently prove
 the private Worker flag or D1 binding, signing-secret presence, Service Binding
@@ -305,7 +305,7 @@ observation rather than claiming an implementation failure.
 
 ## Rollback
 
-Rollback changes configuration state; it does not reverse D1 schema 2 or delete
+Rollback changes configuration state; it does not reverse D1 schema 3 or delete
 unrelated records.
 
 From `cron-enabled` to `submission-enabled`:

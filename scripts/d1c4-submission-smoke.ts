@@ -427,7 +427,7 @@ async function assertHealth(fetcher: D1C4Fetch, requestTimeoutMs: number, origin
     || submission.operationalWriteReadiness !== 'externally-unverified'
     || !isRecord(features) || features.submissions !== 'schema-ready'
     || features.writes !== 'externally-unverified' || features.d1 !== 'schema-ready'
-    || !isRecord(d1) || d1.schemaVersion !== 2 || d1.reachable !== true
+    || !isRecord(d1) || d1.schemaVersion !== 3 || d1.reachable !== true
   ) fail('Preview health does not prove Pages-visible submission schema readiness; private write execution remains externally unverified.')
 }
 

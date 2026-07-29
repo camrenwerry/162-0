@@ -10,9 +10,10 @@ D1A adds preview-only signed draft-ticket issuance, and Phase D1B requires and
 verifies that ticket in preview validation before replay. Phase D1C.1 adds the
 disabled persistence foundation, D1C.2 adds the disabled atomic submission
 path, D1C.3 adds the scheduled retention handler, and D1C.4 separates its
-preview activation states. Submission and Cron remain disabled in the
-checked-in defaults, leaderboard activation remains disabled, and no phase adds
-identity, analytics, or moderation.
+preview activation states. Milestone 2 adds the disabled leaderboard schema,
+verified-run audit path, and read API foundation. Submission and Cron remain
+disabled in the checked-in defaults, leaderboard activation remains disabled,
+and no phase activates public identity resolution, analytics, or moderation.
 
 ## Module boundaries
 
@@ -749,10 +750,10 @@ Disabled health treats database schema 1 and 2 as compatible so an additive
 migration and compatible code can be ordered safely. A missing/corrupt/future
 schema remains degraded. D1C.4 publishes the existing submission protocol in
 health only when the Pages flag requests activation and Pages can reach exact
-schema version 2. Otherwise enabled intent reports degraded and unavailable.
-Even with exact schema 2, Pages reports private write execution as externally
-unverified because it cannot prove the private Worker flag, binding, signing
-secret, Service Binding health, or an actual write.
+schema version 3 after Milestone 2. Otherwise enabled intent reports degraded
+and unavailable. Even with exact schema 3, Pages reports private write
+execution as externally unverified because it cannot prove the private Worker
+flag, binding, signing secret, Service Binding health, or an actual write.
 
 D1C.1 is local-only. It does not apply a remote preview or production migration,
 deploy a Worker or Pages revision, configure a secret, enable submission, or
@@ -765,14 +766,18 @@ routes while preserving `DRAFT_SUBMISSION_MODE = "disabled"` everywhere. The
 disabled gate is first and returns the generic 404 without reading the body,
 deriving a rate key, invoking the Service Binding, or accessing D1.
 
-The private implementation checks schema version 2 and retained state before
-current ticket verification. Exact token and transcript retries return the
+At the D1C.2 stop point, the private implementation checked schema version 2
+and retained state before current ticket verification. Milestone 2 advances
+the write-ready requirement to schema version 3 and atomically adds the durable
+leaderboard audit row. Exact token and transcript retries return the
 immutable stored receipt without replay or rescoring. New submissions perform
 ticket verification, transcript binding, deterministic replay, authoritative
 scoring, and one atomic D1 batch containing an insert-on-conflict and row select.
 The stored row contains only approved fixed digests, server timestamps, the
 submission schema identifier, and the bounded receipt. D1C.2 performs no remote
 migration, deployment, activation, production binding, or health publication.
+Milestone 2 extends that same atomic batch with the durable audit state described
+in [Leaderboard backend foundation](LEADERBOARD_BACKEND.md).
 
 ## Phase D1C.3 preview retention cleanup path
 
@@ -785,7 +790,7 @@ production environment keeps an empty Cron list and no D1 binding. Worker
 public URLs remain disabled, fetch routing is unchanged, and there is no HTTP
 cleanup route.
 
-The handler samples current server time exactly once, requires schema version 2,
+The handler samples current server time exactly once, requires schema version 3,
 and binds that cutoff to at most ten sequential DELETE statements. Each deletes
 at most 500 `draft_submissions` rows whose stored `retain_until_ms` is less than
 or equal to the cutoff, ordered by `retain_until_ms, ticket_id`. Fewer than 500
@@ -808,7 +813,7 @@ single submission mode to both Pages and Worker preview flags, applies the Cron
 only to the final state, and refuses production drift. Disabled health publishes
 no submission schema or write capability. Configured intent with missing,
 unreachable, malformed, older, or future D1 schema publishes no submission
-schema and reports writes unavailable. Exact reachable schema 2 publishes
+schema and reports writes unavailable. Exact reachable schema 3 publishes
 `pennant-draft-submission-v1`, reports schema readiness, and keeps operational
 writes externally unverified.
 
