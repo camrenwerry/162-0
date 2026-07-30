@@ -42,6 +42,7 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('Draft engine tests', 'test:engine'),
   npmRunStage('Game smoke tests', 'test:game'),
   npmRunStage('Navigation tests', 'test:navigation'),
+  npmRunStage('Leaderboard UX tests', 'test:leaderboard-ux'),
   npmRunStage('Scoring tests', 'test:scoring'),
   npmRunStage('Seeded random tests', 'test:rng'),
   npmRunStage('Transcript replay tests', 'test:replay'),

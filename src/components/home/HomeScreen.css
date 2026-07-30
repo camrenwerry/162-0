@@ -23,7 +23,9 @@
 .dd-home__actions button:active { transform: scale(0.98); }
 .dd-home__play { min-height: 4.35rem; border: 1px solid #ffe28a; border-radius: 0.45rem; background: linear-gradient(180deg, #f7d66b, #d99c26 58%, #9f6511); box-shadow: 0 0 0 0.22rem rgb(83 55 15 / 60%), 0 1rem 2.5rem rgb(0 0 0 / 42%), inset 0 1px rgb(255 255 255 / 45%); color: #12100b; font-size: 1.45rem; text-shadow: 0 1px rgb(255 255 255 / 30%); }
 .dd-home__actions .dd-home__play:active { filter: brightness(0.88); box-shadow: 0 0 0 0.16rem rgb(83 55 15 / 60%), 0 0.3rem 0.8rem rgb(0 0 0 / 38%), inset 0 2px 0.35rem rgb(83 55 15 / 32%); transform: translateY(2px) scale(0.985); }
-.dd-home__how, .dd-home__updates { min-height: 3.5rem; margin-top: 0.8rem; border: 1px solid #3a4654; border-radius: 0.45rem; background: rgb(8 14 21 / 75%); color: #d7dce2; font-size: 0.95rem; }
+.dd-home__leaderboard, .dd-home__how, .dd-home__updates { min-height: 3.5rem; margin-top: 0.8rem; border: 1px solid #3a4654; border-radius: 0.45rem; background: rgb(8 14 21 / 75%); color: #d7dce2; font-size: 0.95rem; }
+.dd-home__leaderboard { border-color: #8b7434; background: linear-gradient(180deg, rgb(38 34 20 / 88%), rgb(8 14 21 / 88%)); color: #f0d276; }
+.dd-home__leaderboard span { margin-right: 0.45rem; color: #f5c542; }
 .dd-home__how span { margin-right: 0.45rem; color: #f5c542; }
 .dd-home__updates { margin-top: 0.55rem; border-color: #665729; color: #e0c97f; }
 .how-to-backdrop { position: fixed; z-index: 100; display: flex; inset: 0; padding: calc(1rem + env(safe-area-inset-top)) calc(1rem + env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-left)); align-items: center; justify-content: center; background: rgb(0 0 0 / 78%); backdrop-filter: blur(8px); animation: dd-fade 160ms ease-out; }

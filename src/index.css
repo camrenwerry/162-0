@@ -46,7 +46,7 @@
 * { box-sizing: border-box; }
 html { max-width: 100%; overflow-x: clip; background: #03080d; }
 body, #root { min-height: 100vh; background: #03080d; }
-body { max-width: 100%; margin: 0; min-width: 320px; overflow-x: clip; }
+body { max-width: 100%; margin: 0; min-width: min(320px, 100%); overflow-x: clip; }
 .app-route, .app-route__content { min-height: 100svh; background: #03080d; }
 .app-route { isolation: isolate; }
 .app-route__content { animation: app-screen-in 180ms ease-out both; }

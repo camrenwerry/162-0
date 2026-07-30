@@ -32,7 +32,7 @@ assert(index.includes('<style>html,body,#root{min-height:100%;background:#03080d
 assert(globalCss.includes('overflow-x: clip'), 'global horizontal overflow protection is required')
 assert(globalCss.includes('.app-route, .app-route__content { min-height: 100svh; background: #03080d; }'), 'route changes must retain a stable dark viewport without layout shift')
 assert(globalCss.includes('animation: app-screen-in 180ms') && globalCss.includes('.app-route__content, .route-loading { animation: none; }'), 'route fades must stay fast and respect reduced motion')
-assert(app.includes('key={route}') && app.includes('aria-busy="true"') && app.includes('<Suspense fallback='), 'major routes must have keyed transitions and an accessible loading state')
+assert(app.includes('key={`${route}:${navigationRevision}`}') && app.includes('aria-busy="true"') && app.includes('<Suspense fallback='), 'major routes must have keyed transitions and an accessible loading state')
 assert(app.includes('<PennantPursuitLogo') && app.includes('route-loading__logo'), 'route loading must use Pennant Pursuit branding')
 assert(app.includes("if (nextRoute !== route) window.history.pushState") && !app.includes('setTimeout'), 'navigation must remain immediate and avoid duplicate history entries')
 for (const inset of ['top', 'right', 'bottom', 'left']) {

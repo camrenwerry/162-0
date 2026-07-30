@@ -9,14 +9,19 @@ import {
   isLeaderboardIdentitySigningKey,
   type LeaderboardIdentityModeEnv,
 } from './leaderboard-identity-mode'
+import { validateDisplayName } from '../../shared/leaderboard-display-name'
+export {
+  DISPLAY_NAME_MAX_CHARACTERS,
+  DISPLAY_NAME_MIN_CHARACTERS,
+  validateDisplayName,
+} from '../../shared/leaderboard-display-name'
+export type { ValidatedDisplayName } from '../../shared/leaderboard-display-name'
 
 export const LEADERBOARD_IDENTITY_RESPONSE_SCHEMA_VERSION = 'pennant-leaderboard-identity-v1'
 export const LEADERBOARD_IDENTITY_SCHEMA_VERSION = 4
 export const LEADERBOARD_CLAIM_TTL_MS = 15 * 60 * 1000
 export const LEADERBOARD_RECOVERY_RETRY_TTL_MS = 15 * 60 * 1000
 export const LEADERBOARD_RENAME_COOLDOWN_MS = 30 * 24 * 60 * 60 * 1000
-export const DISPLAY_NAME_MIN_CHARACTERS = 3
-export const DISPLAY_NAME_MAX_CHARACTERS = 20
 
 const ALLOWED_METHODS = 'POST'
 const HEX_DIGEST_PATTERN = /^[0-9a-f]{64}$/
@@ -32,8 +37,6 @@ const RECOVERY_SYMBOLS = 26
 const RECOVERY_CHECK_SYMBOLS = 2
 const RECOVERY_GROUP_SIZE = 4
 const RECOVERY_DERIVATION_VERSION = 1
-const DISPLAY_NAME_ALLOWED_PATTERN = /^[\p{L}\p{N}_ -]+$/u
-const DISPLAY_NAME_FORBIDDEN_PATTERN = /[\p{Cc}\p{Cf}\p{Cs}\p{Zl}\p{Zp}]/u
 
 const SELECT_SCHEMA_SQL = 'SELECT version FROM backend_schema WHERE id = 1'
 const SELECT_NAME_SQL = `
@@ -365,11 +368,6 @@ export interface LeaderboardIdentityEnv extends LeaderboardIdentityModeEnv {
   readonly DB?: unknown
 }
 
-export interface ValidatedDisplayName {
-  readonly displayName: string
-  readonly nameKey: string
-}
-
 type IdentityAction = 'availability' | 'claim' | 'recover' | 'rename' | 'status'
 
 type IdentityErrorCode =
@@ -617,38 +615,6 @@ function canonicalRecoveryCode(value: unknown) {
 async function recoveryCodeFromMaterial(material: Uint8Array) {
   const symbols = recoverySymbols(material)
   return formatRecoveryCode(`${symbols}${recoveryChecksum(symbols)}`)
-}
-
-/**
- * Public names are stored in NFKC form. Uniqueness uses deterministic
- * compatibility normalization plus Unicode default upper/lower case mapping.
- * This catches case, full-width, sharp-s, and final-sigma collisions without
- * relying on SQLite collation behavior.
- */
-export function validateDisplayName(value: unknown): ValidatedDisplayName | null {
-  if (typeof value !== 'string' || value !== value.trim() || value.includes('  ')) return null
-  let displayName: string
-  try {
-    displayName = value.normalize('NFKC')
-  } catch {
-    return null
-  }
-  const characters = [...displayName]
-  if (
-    characters.length < DISPLAY_NAME_MIN_CHARACTERS
-    || characters.length > DISPLAY_NAME_MAX_CHARACTERS
-    || displayName !== displayName.trim()
-    || displayName.includes('  ')
-    || DISPLAY_NAME_FORBIDDEN_PATTERN.test(displayName)
-    || !DISPLAY_NAME_ALLOWED_PATTERN.test(displayName)
-  ) return null
-  const nameKey = displayName.toUpperCase().toLowerCase().normalize('NFKC')
-  if (
-    [...nameKey].length < DISPLAY_NAME_MIN_CHARACTERS
-    || [...nameKey].length > 80
-    || nameKey !== nameKey.trim()
-  ) return null
-  return Object.freeze({ displayName, nameKey })
 }
 
 export async function deriveClaimCapability(signingKey: string, ticketTokenDigest: string) {

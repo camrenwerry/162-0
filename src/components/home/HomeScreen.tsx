@@ -7,15 +7,16 @@ import './HomeScreen.css'
 
 interface HomeScreenProps {
   onPlay: () => void
+  onLeaderboard: () => void
   onGameUpdates: () => void
 }
 
-export default function HomeScreen({ onPlay, onGameUpdates }: HomeScreenProps) {
+export default function HomeScreen({ onPlay, onLeaderboard, onGameUpdates }: HomeScreenProps) {
   const [showHowToPlay, setShowHowToPlay] = useState(false)
   const closeHowToPlay = useCallback(() => setShowHowToPlay(false), [])
 
   return (
-    <main className="dd-home">
+    <main className="dd-home" data-route-focus tabIndex={-1}>
       <div className="dd-home__stadium" aria-hidden="true">
         <span className="dd-home__lights dd-home__lights--left" />
         <span className="dd-home__lights dd-home__lights--right" />
@@ -28,6 +29,9 @@ export default function HomeScreen({ onPlay, onGameUpdates }: HomeScreenProps) {
         <p>Build the greatest roster in baseball history.</p>
         <div className="dd-home__actions">
           <button className="dd-home__play" type="button" onClick={onPlay}>Play Classic</button>
+          <button className="dd-home__leaderboard" type="button" onClick={onLeaderboard}>
+            <span aria-hidden="true">◇</span> Leaderboards
+          </button>
           <button className="dd-home__how" type="button" onClick={() => setShowHowToPlay(true)}>
             <span aria-hidden="true">ⓘ</span> How to Play
           </button>

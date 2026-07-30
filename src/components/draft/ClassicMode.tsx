@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState, type ComponentType } from 'react'
 import { DraftEngine } from '../../game/DraftEngine'
 import { useDraftEngine } from '../../game/useDraftEngine'
 import type { PositionFilter, SortKey } from '../../types/draft'
@@ -14,28 +14,120 @@ import SeasonSimulation from '../results/SeasonSimulation'
 import FirstGameHints from './FirstGameHints'
 import { checkProductionData } from '../../game/DataReadiness'
 import { AppErrorBoundary, AppRecovery } from '../AppRecovery'
+import type { DevelopmentResultPreview } from '../../features/leaderboard/developmentResultPreview'
+import type { ResultLeaderboardJourneyProps } from '../leaderboard/ResultLeaderboardJourney'
+import { documentTitleForRoute, type NavigationBlocker } from '../../appNavigation'
 import './ClassicMode.css'
 
 const FILTERS: PositionFilter[] = ['ALL', 'C', '1B', '2B', '3B', 'SS', 'OF', 'DH', 'SP', 'RP']
 
 interface ClassicModeProps {
   onHome: () => void
+  onLeaderboard: () => void
   onGameUpdates: () => void
+  registerNavigationBlocker: (blocker: NavigationBlocker | null) => void
 }
 
-export default function ClassicMode({ onHome, onGameUpdates }: ClassicModeProps) {
+type DevelopmentPreviewState =
+  | Readonly<{ kind: 'loading' }>
+  | Readonly<{
+    kind: 'ready'
+    preview: DevelopmentResultPreview | null
+    JourneyComponent: ComponentType<ResultLeaderboardJourneyProps> | null
+  }>
+  | Readonly<{ kind: 'error' }>
+
+export default function ClassicMode({
+  onHome,
+  onLeaderboard,
+  onGameUpdates,
+  registerNavigationBlocker,
+}: ClassicModeProps) {
   const [readiness] = useState(() => checkProductionData())
+  const [developmentState, setDevelopmentState] = useState<DevelopmentPreviewState>(() => (
+    import.meta.env.DEV
+      ? Object.freeze({ kind: 'loading' })
+      : Object.freeze({ kind: 'ready', preview: null, JourneyComponent: null })
+  ))
+
+  useEffect(() => {
+    if (!import.meta.env.DEV) return
+    let active = true
+    void Promise.all([
+      import('../../features/leaderboard/developmentResultPreview'),
+      import('../leaderboard/ResultLeaderboardJourney'),
+    ])
+      .then(([{ getDevelopmentResultPreview }, { default: JourneyComponent }]) => {
+        if (!active) return
+        const preview = getDevelopmentResultPreview(window.location.search, window.localStorage)
+        setDevelopmentState(Object.freeze({
+          kind: 'ready',
+          preview,
+          JourneyComponent: preview ? JourneyComponent : null,
+        }))
+      })
+      .catch(() => {
+        if (active) setDevelopmentState(Object.freeze({ kind: 'error' }))
+      })
+    return () => {
+      active = false
+    }
+  }, [])
+
   if (!readiness.ready) {
     if (import.meta.env.DEV) console.error('Pennant Pursuit data readiness failed:', readiness.issues)
     return <AppRecovery title="Player data unavailable" message="Pennant Pursuit could not verify its historical player pools. Reload the game, or return home and try again shortly." onHome={onHome} />
   }
-  return <AppErrorBoundary onHome={onHome}><ClassicDraft onHome={onHome} onGameUpdates={onGameUpdates} /></AppErrorBoundary>
+  if (developmentState.kind === 'loading') {
+    return <main className="route-loading" aria-busy="true" aria-live="polite"><p>Preparing the field…</p></main>
+  }
+  if (developmentState.kind === 'error') {
+    return <AppRecovery title="Preview unavailable" message="The local result preview could not be prepared. Return home or start a regular Classic draft." onHome={onHome} />
+  }
+  if (developmentState.preview && developmentState.JourneyComponent) {
+    const developmentPreview = developmentState.preview
+    return (
+      <ResultsScreen
+        roster={developmentPreview.roster}
+        result={developmentPreview.result}
+        onPlayAgain={() => {
+          window.history.replaceState({}, '', '/draft')
+          setDevelopmentState(Object.freeze({ kind: 'ready', preview: null, JourneyComponent: null }))
+        }}
+        onHome={onHome}
+        onLeaderboard={onLeaderboard}
+        onGameUpdates={onGameUpdates}
+        developmentJourney={developmentPreview.journey}
+        DevelopmentJourneyComponent={developmentState.JourneyComponent}
+        registerNavigationBlocker={registerNavigationBlocker}
+      />
+    )
+  }
+  return (
+    <AppErrorBoundary onHome={onHome}>
+      <ClassicDraft
+        onHome={onHome}
+        onLeaderboard={onLeaderboard}
+        onGameUpdates={onGameUpdates}
+        registerNavigationBlocker={registerNavigationBlocker}
+      />
+    </AppErrorBoundary>
+  )
 }
 
-function ClassicDraft({ onHome, onGameUpdates }: ClassicModeProps) {
+function ClassicDraft({ onHome, onLeaderboard, onGameUpdates, registerNavigationBlocker }: ClassicModeProps) {
   const [engine] = useState(() => new DraftEngine())
   const [showResults, setShowResults] = useState(false)
+  const classicFocus = useRef<HTMLElement>(null)
   const draft = useDraftEngine(engine)
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      document.title = documentTitleForRoute('/draft')
+      classicFocus.current?.focus()
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [])
 
   const leaveGame = () => {
     engine.abandon()
@@ -49,7 +141,7 @@ function ClassicDraft({ onHome, onGameUpdates }: ClassicModeProps) {
 
   if (draft.complete && draft.result) {
     return showResults
-      ? <ResultsScreen roster={draft.roster} result={draft.result} onPlayAgain={restartGame} onHome={onHome} onGameUpdates={onGameUpdates} />
+      ? <ResultsScreen roster={draft.roster} result={draft.result} onPlayAgain={restartGame} onHome={onHome} onLeaderboard={onLeaderboard} onGameUpdates={onGameUpdates} registerNavigationBlocker={registerNavigationBlocker} />
       : <SeasonSimulation result={draft.result} onContinue={() => setShowResults(true)} onRestart={restartGame} onHome={leaveGame} onGameUpdates={onGameUpdates} />
   }
 
@@ -58,7 +150,7 @@ function ClassicDraft({ onHome, onGameUpdates }: ClassicModeProps) {
   }
 
   return (
-    <main className={`classic-page${draft.isRolling ? ' is-rolling' : ''}${draft.isFinishing ? ' is-finishing' : ''}`}>
+    <main className={`classic-page${draft.isRolling ? ' is-rolling' : ''}${draft.isFinishing ? ' is-finishing' : ''}`} data-route-focus ref={classicFocus} tabIndex={-1}>
       <div className="classic-page__atmosphere" aria-hidden="true" />
       <div className="classic-shell">
         <DraftHeader
