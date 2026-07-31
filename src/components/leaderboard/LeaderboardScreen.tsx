@@ -550,7 +550,9 @@ export default function LeaderboardScreen({
           )}
         </div>
       </section>
-      {runtimeFeatureIsEnabled('identity') && (
+      {(runtimeFeatureIsEnabled('identityStatus')
+        || runtimeFeatureIsEnabled('identityRename')
+        || runtimeFeatureIsEnabled('recovery')) && (
         <RuntimeIdentityControls
           state={identity.state}
           onRefresh={identity.refresh}

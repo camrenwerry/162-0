@@ -660,6 +660,7 @@ const incompleteIdentityResponse = await handleHealthRequest(
   {
     ...incompleteIdentityDatabase.env,
     LEADERBOARD_IDENTITY_MODE: 'enabled',
+    LEADERBOARD_IDENTITY_STATUS_MODE: 'enabled',
   },
 )
 assert.equal(incompleteIdentityResponse.status, 200)
@@ -678,6 +679,7 @@ const enabledIdentityResponse = await handleHealthRequest(
   {
     ...enabledIdentityDatabase.env,
     LEADERBOARD_IDENTITY_MODE: 'enabled',
+    LEADERBOARD_IDENTITY_STATUS_MODE: 'enabled',
     VALIDATION_SERVICE: {
       async fetch(request: Request) {
         assert.equal(request.url, 'https://pennant-pursuit.internal/internal/leaderboard-identity-health')
@@ -706,7 +708,7 @@ const enabledRecoveryResponse = await handleHealthRequest(
     LEADERBOARD_RECOVERY_MODE: 'enabled',
     VALIDATION_SERVICE: {
       async fetch(request: Request) {
-        assert.match(request.url, /leaderboard-identity-health(?:\?capability=recovery)?$/)
+        assert.match(request.url, /leaderboard-identity-health\?capability=recover$/)
         return new Response(null, { status: 204 })
       },
     },

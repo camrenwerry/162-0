@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import {
   assertSchema4ActivationPlan,
   assertSchema4MigrationTarget,
+  assertSchema4ProtectedConfigurationSupportsActivation,
   assertSchema4RepositoryReadiness,
   assertSchema4StateModelSupportsActivation,
 } from './lib/schema4-activation-readiness.mjs'
@@ -51,9 +52,10 @@ for (const [label, observed, known = migrations] of [
   )
 }
 
+assert.doesNotThrow(() => assertSchema4StateModelSupportsActivation(repositoryRoot))
 assert.throws(
-  () => assertSchema4StateModelSupportsActivation(repositoryRoot),
-  /protected legacy activation model lacks the independent schema-4 identity\/recovery gates/,
+  () => assertSchema4ProtectedConfigurationSupportsActivation(repositoryRoot),
+  /protected configuration does not yet represent enabled schema-4 authority/,
 )
 
 const unresolved = loadReleaseManifest(repositoryRoot).manifest
@@ -73,4 +75,30 @@ assert.doesNotThrow(() => assertSchema4ActivationPlan({
   manifest: unresolved,
 }))
 
-console.log('Schema-4 activation readiness tests passed: exact 3→4 migration planning is accepted while unknown versions, prefix drift, missing/extra migrations, Production ambiguity, and the missing independent recovery state fail closed.')
+const resolved = JSON.parse(JSON.stringify(unresolved))
+resolved.cloudflare.account = {
+  status: 'resolved',
+  id: 'a'.repeat(32),
+  reason: '',
+}
+resolved.cloudflare.production.pages.branch = {
+  status: 'resolved',
+  value: 'main',
+  reason: '',
+}
+resolved.cloudflare.production.pages.domains = {
+  status: 'resolved',
+  values: ['pennant.example'],
+  reason: '',
+}
+assert.throws(
+  () => assertSchema4ActivationPlan({
+    repositoryRoot,
+    targetState: 'submission-enabled',
+    migration: migration(3, pending0004),
+    manifest: resolved,
+  }),
+  /protected configuration does not yet represent enabled schema-4 authority/,
+)
+
+console.log('Schema-4 activation readiness tests passed: the independent local authority model supports every capability while unknown migration state, Production ambiguity, and still-unmodified protected activation configuration fail closed.')

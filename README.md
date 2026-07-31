@@ -80,6 +80,14 @@ contract is in
 CI, dependency-risk decisions, test tiers, aggregate-only Preview diagnostics,
 and the future schema-4 operator procedure are in
 [`docs/MILESTONE_3C2_CI_RELEASE_STABILIZATION.md`](docs/MILESTONE_3C2_CI_RELEASE_STABILIZATION.md).
+The canonical schema-4 capabilities are `leaderboardRead`, `identityClaim`,
+`identityStatus`, `identityRename`, `draftSubmission`, `identityRecovery`, and
+`cleanupCron`. Their independent authority, disable-only broad identity
+ceiling, emergency rollback, strictly read-only identity recovery preparation,
+and remaining protected authorization boundary are in
+[`docs/MILESTONE_3C3_SCHEMA4_AUTHORITY.md`](docs/MILESTONE_3C3_SCHEMA4_AUTHORITY.md).
+Local checks do not imply migration, secret/binding, deployment, remote
+verification, or Preview activation readiness.
 
 Preview and test the exact production output locally:
 

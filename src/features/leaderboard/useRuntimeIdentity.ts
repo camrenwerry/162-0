@@ -5,30 +5,34 @@ import {
   storeLeaderboardIdentity,
   type StoredLeaderboardIdentity,
 } from './identityStorage'
-import { PennantApi, type PublicIdentityStatus } from './pennantApi'
+import { PennantApi } from './pennantApi'
 import { runtimeFeatureIsEnabled } from './runtimeConfig'
-
-export type RuntimeIdentityState =
-  | Readonly<{ kind: 'disabled' | 'missing' | 'corrupt' | 'outdated' | 'unavailable' | 'invalid' }>
-  | Readonly<{ kind: 'checking', identity: StoredLeaderboardIdentity }>
-  | Readonly<{
-    kind: 'ready'
-    identity: StoredLeaderboardIdentity
-    status: PublicIdentityStatus
-  }>
+import {
+  deriveRuntimeIdentityState,
+  type RuntimeIdentityFeatureSnapshot,
+  type RuntimeIdentityState,
+} from './runtimeIdentityState'
+export type { RuntimeIdentityState } from './runtimeIdentityState'
 
 const api = new PennantApi()
 
-function initialState(): RuntimeIdentityState {
-  if (!runtimeFeatureIsEnabled('identity')) return Object.freeze({ kind: 'disabled' })
+function currentFeatureSnapshot(): RuntimeIdentityFeatureSnapshot {
+  return Object.freeze({
+    submission: runtimeFeatureIsEnabled('submission'),
+    identityClaim: runtimeFeatureIsEnabled('identityClaim'),
+    identityStatus: runtimeFeatureIsEnabled('identityStatus'),
+    identityRename: runtimeFeatureIsEnabled('identityRename'),
+    recovery: runtimeFeatureIsEnabled('recovery'),
+  })
+}
+
+function stateFromLocalStorage(): RuntimeIdentityState {
   const stored = readStoredLeaderboardIdentity(window.localStorage)
-  return stored.kind === 'ready'
-    ? Object.freeze({ kind: 'checking', identity: stored.identity })
-    : Object.freeze({ kind: stored.kind })
+  return deriveRuntimeIdentityState(stored, currentFeatureSnapshot())
 }
 
 export function useRuntimeIdentity() {
-  const [state, setState] = useState<RuntimeIdentityState>(initialState)
+  const [state, setState] = useState<RuntimeIdentityState>(stateFromLocalStorage)
   const statusRequest = useRef<Promise<Awaited<ReturnType<PennantApi['identityStatus']>>> | null>(null)
   const statusController = useRef<AbortController | null>(null)
   const abortTimer = useRef<number | null>(null)
@@ -72,12 +76,12 @@ export function useRuntimeIdentity() {
   }, [])
 
   const refresh = useCallback(() => {
-    if (!runtimeFeatureIsEnabled('identity')) {
+    if (!runtimeFeatureIsEnabled('identityStatus')) {
       verificationGeneration.current += 1
       statusController.current?.abort()
       statusController.current = null
       statusRequest.current = null
-      setState(Object.freeze({ kind: 'disabled' }))
+      setState(stateFromLocalStorage())
       return
     }
     const stored = readStoredLeaderboardIdentity(window.localStorage)

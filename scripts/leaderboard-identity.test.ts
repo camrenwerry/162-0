@@ -189,6 +189,9 @@ const sqlite = migratedDatabase()
 const database = new SqliteD1Database(sqlite)
 const env: LeaderboardIdentityEnv = {
   LEADERBOARD_IDENTITY_MODE: 'enabled',
+  LEADERBOARD_IDENTITY_CLAIM_MODE: 'enabled',
+  LEADERBOARD_IDENTITY_STATUS_MODE: 'enabled',
+  LEADERBOARD_IDENTITY_RENAME_MODE: 'enabled',
   LEADERBOARD_RECOVERY_MODE: 'enabled',
   LEADERBOARD_IDENTITY_SIGNING_KEY: IDENTITY_KEY,
   DB: database,
@@ -272,6 +275,7 @@ const proxyResponse = await handleLeaderboardIdentityProxyRequest(
   }),
   {
     LEADERBOARD_IDENTITY_MODE: 'enabled',
+    LEADERBOARD_IDENTITY_CLAIM_MODE: 'enabled',
     VALIDATION_SERVICE: {
       async fetch(request) {
         forwardedIdentityRequest = request
@@ -283,6 +287,7 @@ const proxyResponse = await handleLeaderboardIdentityProxyRequest(
     },
   },
   '/api/v1/leaderboard-name-availability',
+  'availability',
 )
 assert.equal(proxyResponse.status, 200)
 assert(forwardedIdentityRequest)

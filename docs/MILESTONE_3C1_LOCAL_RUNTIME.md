@@ -1,5 +1,11 @@
 # Milestone 3C-1 local runtime integration
 
+> Historical implementation contract: Milestone 3C-3 supersedes this
+> document's aggregate activation discussion with seven independent
+> capabilities. This document remains authoritative only for the underlying
+> browser and schema-4 runtime behavior it describes; it is not an activation
+> procedure.
+
 This document describes the local, fail-closed integration of draft tickets,
 server-authoritative submissions, Best Run leaderboards, account-free identity,
 rename, and recovery. It is an implementation and test contract, not an
@@ -21,6 +27,9 @@ The frontend enables a capability only when its build-time value is exactly
 - `VITE_DRAFT_SUBMISSION_MODE`
 - `VITE_LEADERBOARD_READ_MODE`
 - `VITE_LEADERBOARD_IDENTITY_MODE`
+- `VITE_LEADERBOARD_IDENTITY_CLAIM_MODE`
+- `VITE_LEADERBOARD_IDENTITY_STATUS_MODE`
+- `VITE_LEADERBOARD_IDENTITY_RENAME_MODE`
 - `VITE_LEADERBOARD_RECOVERY_MODE`
 
 Missing values, different spelling, query parameters, and browser storage all
@@ -28,11 +37,16 @@ fail closed. Development fixtures additionally require both a development
 build and `VITE_LOCAL_LEADERBOARD_TEST_MODE=enabled`. Production builds ignore
 fixture selection and the old development identity record.
 
-Backend recovery has its own exact `LEADERBOARD_RECOVERY_MODE` gate in Pages
-and the private Worker. Identity claim, status, and rename can operate while
-recovery is disabled. The public recovery route returns the established generic
-404 when its gate is not enabled. Private health accepts
-`?capability=recovery`; Pages health reports recovery readiness separately.
+The broad `VITE_LEADERBOARD_IDENTITY_MODE` and
+`LEADERBOARD_IDENTITY_MODE` switches are disable-only ceilings: enabling one
+does not enable a narrow identity action. Claim, status, rename, and recovery
+each require their exact narrow frontend, Pages, and private-Worker gate.
+Identity claim, status, and rename can operate while recovery is disabled. The
+public recovery route returns the established generic 404 when its gate is not
+enabled. Private health uses the exact production query
+`?capability=recover`; Pages health reports
+`features.leaderboardRecovery` readiness separately. The schema-4 authority
+capability remains `identityRecovery`.
 
 ## Ticket and submission lifecycle
 
@@ -169,6 +183,13 @@ requests or private material into an incident record.
 
 ## Schema-4 activation readiness and rollback
 
+Milestone 3C-3 supersedes the aggregate identity portion of this section with
+the canonical `leaderboardRead`, `identityClaim`, `identityStatus`,
+`identityRename`, `draftSubmission`, `identityRecovery`, and `cleanupCron`
+authority. See
+[Schema-4 activation authority and identity recovery readiness](MILESTONE_3C3_SCHEMA4_AUTHORITY.md).
+The protected deployment configuration remains unchanged and fail-closed.
+
 `config/preview-schema4-readiness.json` is the local schema-4 contract.
 `npm run schema4:readiness:check` requires the exact migration prefix ending in
 `0004_leaderboard_identity_ranking.sql`, the frontend gates, the independent
@@ -181,12 +202,14 @@ Enabled planning accepts only:
 
 Unknown versions, unknown or reordered migration prefixes, missing 0004, more
 than one migration pending from exact schema 3, Production identity ambiguity,
-dirty/protected local state, or a missing independent recovery state refuse
-activation. The protected legacy D1C.4 model lacks the new gates, so local
-enabled-state generation and Preview planning currently refuse. Disabled is the
-only supported target until a separate authorization updates that model.
+dirty/protected local state, or missing capability-specific protected state
+refuse activation. The protected legacy D1C.4 model lacks the new gates, so
+enabled-state generation and Preview planning currently refuse at the
+protected-configuration boundary. Disabled is the only supported target until
+a separate authorization updates that model.
 
-Rollback disables public submission, identity, recovery, reads, and Cron first.
+Rollback disables public submission, claim, status, rename, recovery, reads,
+and cleanup Cron first.
 Use a reviewed forward fix for schema defects. Schema reversal is not the
 default rollback and must never be improvised.
 

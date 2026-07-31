@@ -1,7 +1,10 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
-import { assertSchema4StateModelSupportsActivation } from './lib/schema4-activation-readiness.mjs'
+import {
+  assertSchema4ProtectedConfigurationSupportsActivation,
+  assertSchema4StateModelSupportsActivation,
+} from './lib/schema4-activation-readiness.mjs'
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url)
 const currentWorkingDirectory = path.resolve(process.cwd())
@@ -248,7 +251,10 @@ export function runActivationCli(argv, output = console) {
     output.log([`D1C.4 state: ${stateName}`, formatDiff('Pages', diff.pages), formatDiff('Private Worker', diff.worker), 'No files or remote state changed.'].join('\n'))
     return 0
   }
-  if (stateName !== 'disabled') assertSchema4StateModelSupportsActivation(REPOSITORY_ROOT)
+  if (stateName !== 'disabled') {
+    assertSchema4StateModelSupportsActivation(REPOSITORY_ROOT)
+    assertSchema4ProtectedConfigurationSupportsActivation(REPOSITORY_ROOT)
+  }
   const generated = materializeActivationState(stateName, inputs)
   const paths = generatedConfigPaths(stateName)
   writeFileSync(paths.pages, generated.pagesConfig, { encoding: 'utf8', flag: 'w' })

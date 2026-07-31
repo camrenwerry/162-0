@@ -686,6 +686,7 @@ for (const invalidResult of [
     DRAFT_VALIDATION_MODE: 'enabled',
     DRAFT_TICKET_MODE: 'enabled',
     DRAFT_SUBMISSION_MODE: 'disabled',
+    RETENTION_CLEANUP_MODE: 'enabled',
     RATE_LIMIT_BURST: { async limit() { return { success: true } } },
     RATE_LIMIT_SUSTAINED: { async limit() { return { success: true } } },
   } as PrivateValidationWorkerEnv

@@ -14,11 +14,24 @@ or recovery gates. Use `npm run schema4:readiness:check` and
 [the schema-4 local runtime contract](MILESTONE_3C1_LOCAL_RUNTIME.md). Only the
 disabled historical state remains materializable.
 
+Milestone 3C-3 adds the canonical local `leaderboardRead`, `identityClaim`,
+`identityStatus`, `identityRename`, `draftSubmission`, `identityRecovery`, and
+`cleanupCron` authority model without changing this protected historical
+configuration. Its evaluator and runtime gates are locally testable; this is
+not full activation readiness. Enabled planning and writes still refuse
+because protected configuration has not been separately authorized. See
+[Schema-4 activation authority and identity recovery readiness](MILESTONE_3C3_SCHEMA4_AUTHORITY.md).
+
 D1C.4 is repository preparation only. It does not deploy Pages or a Worker,
 apply a migration, contact an endpoint, change a secret, alter a binding or
 route, or activate a Cron Trigger. Production is explicitly out of scope, and
 remote smoke execution remains a separate operation requiring explicit
 authorization.
+
+The remaining boundaries are separate: an additive migration proposal,
+protected environment configuration, Worker-only signing secret, existing
+Service Binding review, migration application, deployment, remote
+verification, and activation. None is performed by the D1C.4 commands below.
 
 Phase 1 of the newer read-only release workflow validates these same states but
 compiles Preview-only material with no `[env.production]` target sections. See

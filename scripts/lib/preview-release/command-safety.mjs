@@ -7,6 +7,7 @@ const KNOWN_MUTATION_ENTRY_POINTS = [
   'scripts/apply-production-migrations.mjs',
   'scripts/d1c4-submission-smoke.ts',
   'scripts/d1c4-retention-smoke.ts',
+  'scripts/prepare-identity-recovery.mjs',
   'd1c4-submission-smoke.js',
   'd1c4-retention-smoke.js',
 ]
@@ -20,6 +21,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/leaderboard-ux-contract.test.mjs'],
   ['scripts/leaderboard-ux-contract.test.mjs', '--production'],
   ['scripts/leaderboard-migration.test.mjs'],
+  ['scripts/identity-recovery-preparation.test.mjs'],
   ['scripts/navigation-smoke.test.mjs'],
   ['scripts/player-pipeline.test.mjs'],
   ['scripts/playwright-protected-output.test.mjs'],
@@ -40,6 +42,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/pwa-deployment.test.mjs'],
   ['scripts/responsive-contract.test.mjs'],
   ['scripts/schema4-activation-readiness.mjs', '--check'],
+  ['scripts/schema4-activation-authority.test.mjs'],
   ['scripts/schema4-activation-readiness.test.mjs'],
   ['scripts/smoke-game.mjs'],
   ['scripts/text-integrity.mjs'],
@@ -71,6 +74,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['/tmp/pennant-pursuit-randomizer-distribution/randomizer-distribution.js'],
   ['/tmp/pennant-pursuit-backend-tests/backend-foundation.test.js'],
   ['/tmp/pennant-pursuit-release-tests/release-readiness.test.js'],
+  ['/tmp/pennant-pursuit-schema4-runtime-authority-tests/schema4-runtime-authority.test.js'],
 ].map((argumentsList) => JSON.stringify(argumentsList)))
 
 const SAFE_VITE_SSR_ENTRY_POINTS = new Set([
@@ -100,6 +104,7 @@ const SAFE_VITE_SSR_ENTRY_POINTS = new Set([
   'scripts/randomizer.test.ts',
   'scripts/release-readiness.test.ts',
   'scripts/scoring.test.ts',
+  'scripts/schema4-runtime-authority.test.ts',
   'scripts/seeded-random.test.ts',
   'scripts/server-validation.test.ts',
   'scripts/transcript-replay.test.ts',

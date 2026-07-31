@@ -84,6 +84,121 @@ test('@ci @release production ignores development activation and disabled leader
   expect(apiRequests).toEqual([])
 })
 
+test('@release partial claim/submission activation allows anonymous submission only when identity is genuinely missing', async ({ page }) => {
+  let statusRequests = 0
+  let submissionBody: Record<string, unknown> | null = null
+  page.on('request', (request) => {
+    if (new URL(request.url()).pathname === '/api/v1/leaderboard-identity-status') {
+      statusRequests += 1
+    }
+  })
+  await page.route('**/api/v1/draft-ticket', (route) => route.fulfill({
+    json: ticketResponse(),
+  }))
+  await page.route('**/api/v1/submit-draft', async (route) => {
+    submissionBody = route.request().postDataJSON() as Record<string, unknown>
+    await route.fulfill({ status: 201, json: submissionResponse() })
+  })
+  await page.goto('http://127.0.0.1:4177/')
+  await page.getByRole('button', { name: 'Play Classic' }).click()
+  await completeClassicDraft(page)
+  await expect(page.getByRole('heading', { name: 'Claim your place on the board' })).toBeVisible()
+  expect(submissionBody).not.toBeNull()
+  expect(submissionBody?.identityCredential).toBeNull()
+  expect(statusRequests).toBe(0)
+  await expect(page.getByText('Recover an identity')).toHaveCount(0)
+})
+
+test('@release corrupt, outdated, rejected, and temporarily unverifiable continuity block anonymous replacement', async ({ browser }) => {
+  test.setTimeout(180_000)
+  const scenarios = [
+    {
+      label: 'corrupt',
+      baseURL: 'http://127.0.0.1:4177',
+      expected: 'The saved identity record is damaged.',
+      rejectStatus: false,
+    },
+    {
+      label: 'outdated',
+      baseURL: 'http://127.0.0.1:4177',
+      expected: 'The saved identity record uses an unsupported version.',
+      rejectStatus: false,
+    },
+    {
+      label: 'unavailable',
+      baseURL: 'http://127.0.0.1:4177',
+      expected: 'This browser cannot safely read or verify its saved identity.',
+      rejectStatus: false,
+    },
+    {
+      label: 'invalid',
+      baseURL: 'http://127.0.0.1:4174',
+      expected: 'The saved device credential was rejected.',
+      rejectStatus: true,
+    },
+  ] as const
+
+  for (const scenario of scenarios) {
+    const context = await browser.newContext({
+      baseURL: scenario.baseURL,
+      reducedMotion: 'reduce',
+      serviceWorkers: 'block',
+    })
+    await context.addInitScript(([key, label, serializedIdentity]) => {
+      if (label === 'corrupt') localStorage.setItem(key, '{')
+      else if (label === 'outdated') localStorage.setItem(key, JSON.stringify({ version: 2 }))
+      else if (label === 'unavailable') {
+        const original = Storage.prototype.getItem
+        Storage.prototype.getItem = function getItem(storageKey: string) {
+          if (storageKey === key) throw new DOMException('Identity storage unavailable.', 'SecurityError')
+          return original.call(this, storageKey)
+        }
+      } else {
+        localStorage.setItem(key, serializedIdentity)
+      }
+    }, [STORAGE_KEY, scenario.label, storedIdentity()])
+    const scenarioPage = await context.newPage()
+    let submissionCalls = 0
+    let claimCalls = 0
+    await scenarioPage.route('**/api/v1/draft-ticket', (route) => route.fulfill({
+      json: ticketResponse(),
+    }))
+    await scenarioPage.route('**/api/v1/submit-draft', (route) => {
+      submissionCalls += 1
+      return route.fulfill({ status: 201, json: submissionResponse() })
+    })
+    await scenarioPage.route('**/api/v1/leaderboard-identity-claim', (route) => {
+      claimCalls += 1
+      return route.fulfill({ status: 201, json: submissionResponse() })
+    })
+    if (scenario.rejectStatus) {
+      await scenarioPage.route('**/api/v1/leaderboard-identity-status', (route) => route.fulfill({
+        status: 401,
+        json: {
+          ok: false,
+          error: { code: 'identity_credential_invalid', message: 'invalid' },
+        },
+      }))
+    }
+    await scenarioPage.goto('/')
+    await scenarioPage.getByRole('button', { name: 'Play Classic' }).click()
+    await completeClassicDraft(scenarioPage)
+    await expect(scenarioPage.getByRole('heading', {
+      name: 'Your local result is still safe',
+    })).toBeVisible()
+    await expect(scenarioPage.getByText(scenario.expected, { exact: false })).toBeVisible()
+    expect(submissionCalls, scenario.label).toBe(0)
+    expect(claimCalls, scenario.label).toBe(0)
+    await expect(scenarioPage.getByRole('heading', {
+      name: 'Claim your place on the board',
+    })).toHaveCount(0)
+    await expect(scenarioPage.getByRole('button', {
+      name: 'Remove Saved Identity from This Device',
+    })).toHaveCount(0)
+    await context.close()
+  }
+})
+
 test('@ci @release ticket acquisition succeeds once and fails into an honest local draft', async ({ page }) => {
   let ticketCalls = 0
   await page.route('**/api/v1/draft-ticket', async (route) => {

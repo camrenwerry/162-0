@@ -256,6 +256,7 @@ const identityHealthDatabase = {
 } as unknown as D1Database
 const identityHealthEnv = {
   LEADERBOARD_IDENTITY_MODE: 'enabled',
+  LEADERBOARD_IDENTITY_STATUS_MODE: 'enabled',
   LEADERBOARD_RECOVERY_MODE: 'enabled',
   LEADERBOARD_IDENTITY_SIGNING_KEY: 'traffic-control-identity-signing-key',
   DB: identityHealthDatabase,
@@ -266,12 +267,12 @@ assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
 )).status, 204)
 assert.equal(identityHealthQueries, 1)
 assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
-  new Request('https://private.example/internal/leaderboard-identity-health?capability=recovery'),
+  new Request('https://private.example/internal/leaderboard-identity-health?capability=recover'),
   identityHealthEnv,
 )).status, 204)
 assert.equal(identityHealthQueries, 2)
 assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
-  new Request('https://private.example/internal/leaderboard-identity-health?capability=recovery'),
+  new Request('https://private.example/internal/leaderboard-identity-health?capability=recover'),
   { ...identityHealthEnv, LEADERBOARD_RECOVERY_MODE: 'disabled' },
 )).status, 503)
 assert.equal(identityHealthQueries, 2)

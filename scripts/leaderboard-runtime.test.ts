@@ -3,7 +3,14 @@ import {
   readStoredLeaderboardIdentity,
   removeLeaderboardIdentity,
   storeLeaderboardIdentity,
+  type IdentityStorageReadResult,
 } from '../src/features/leaderboard/identityStorage'
+import {
+  deriveRuntimeIdentityState,
+  resolveRuntimeSubmissionIdentity,
+  type RuntimeIdentityFeatureSnapshot,
+  type RuntimeIdentityState,
+} from '../src/features/leaderboard/runtimeIdentityState'
 import {
   createRecoveryOperationId,
   PennantApi,
@@ -74,6 +81,87 @@ assert.equal(removeLeaderboardIdentity({
   getItem: () => 'still-present',
   removeItem: () => undefined,
 }), 'unavailable')
+
+assert.equal(stored.kind, 'stored')
+if (stored.kind !== 'stored') throw new Error('Runtime identity fixture must be stored.')
+const identityFeatures = (
+  overrides: Partial<RuntimeIdentityFeatureSnapshot> = {},
+): RuntimeIdentityFeatureSnapshot => ({
+  submission: false,
+  identityClaim: false,
+  identityStatus: false,
+  identityRename: false,
+  recovery: false,
+  ...overrides,
+})
+const storageStates = [
+  { kind: 'missing' },
+  { kind: 'corrupt' },
+  { kind: 'outdated' },
+  { kind: 'unavailable' },
+] as const satisfies readonly IdentityStorageReadResult[]
+for (const storageState of storageStates) {
+  const derived = deriveRuntimeIdentityState(
+    storageState,
+    identityFeatures({ submission: true, identityClaim: true }),
+  )
+  assert.equal(
+    derived.kind,
+    storageState.kind,
+    `${storageState.kind} continuity must survive claim/submission with status disabled`,
+  )
+}
+const localWithoutStatus = deriveRuntimeIdentityState(
+  { kind: 'ready', identity: stored.identity },
+  identityFeatures({ identityRename: true }),
+)
+assert.equal(localWithoutStatus.kind, 'local')
+assert.equal(
+  resolveRuntimeSubmissionIdentity(localWithoutStatus).kind,
+  'credential',
+  'valid local identity remains attributable and rename-capable without status',
+)
+const checkingWithStatus = deriveRuntimeIdentityState(
+  { kind: 'ready', identity: stored.identity },
+  identityFeatures({ identityStatus: true }),
+)
+assert.equal(checkingWithStatus.kind, 'checking')
+assert.equal(resolveRuntimeSubmissionIdentity(checkingWithStatus).kind, 'checking')
+const missingForSubmission = deriveRuntimeIdentityState(
+  { kind: 'missing' },
+  identityFeatures({ submission: true }),
+)
+assert.equal(missingForSubmission.kind, 'missing')
+assert.equal(
+  resolveRuntimeSubmissionIdentity(missingForSubmission).kind,
+  'anonymous',
+  'only genuinely missing continuity may submit anonymously',
+)
+const disabledIdentity = deriveRuntimeIdentityState(
+  { kind: 'corrupt' },
+  identityFeatures(),
+)
+assert.equal(disabledIdentity.kind, 'disabled')
+assert.deepEqual(resolveRuntimeSubmissionIdentity(disabledIdentity), {
+  kind: 'blocked',
+  reason: 'disabled',
+})
+const recoveryOnlyMissing = deriveRuntimeIdentityState(
+  { kind: 'missing' },
+  identityFeatures({ recovery: true }),
+)
+assert.equal(recoveryOnlyMissing.kind, 'missing')
+for (const blockedState of [
+  { kind: 'corrupt' },
+  { kind: 'outdated' },
+  { kind: 'unavailable' },
+  { kind: 'invalid' },
+] as const satisfies readonly RuntimeIdentityState[]) {
+  assert.deepEqual(resolveRuntimeSubmissionIdentity(blockedState), {
+    kind: 'blocked',
+    reason: blockedState.kind,
+  })
+}
 
 const recoveryOperation = createRecoveryOperationId((bytes) => {
   bytes.fill(7)

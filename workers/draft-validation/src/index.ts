@@ -29,16 +29,18 @@ import {
   type LeaderboardIdentityEnv,
 } from '../../../functions/lib/leaderboard-identity'
 import {
-  isLeaderboardIdentityEnabled,
+  isLeaderboardIdentityCapability,
+  isLeaderboardIdentityCapabilityEnabled,
   isLeaderboardIdentitySigningKey,
 } from '../../../functions/lib/leaderboard-identity-mode'
-import {
-  isLeaderboardRecoveryEnabled,
-} from '../../../functions/lib/leaderboard-recovery-mode'
 import {
   observePreviewOperation,
   type PreviewOperation,
 } from '../../../functions/lib/preview-observability'
+import {
+  isRetentionCleanupEnabled,
+  type RetentionCleanupModeEnv,
+} from './retention-cleanup-mode'
 
 const INTERNAL_RATE_KEY_HEADER = 'X-Pennant-Pursuit-Rate-Key'
 const RATE_KEY_PATTERN = /^v1:[a-f0-9]{64}$/
@@ -52,7 +54,8 @@ export interface PrivateValidationWorkerEnv extends
   ValidationModeEnv,
   TicketModeEnv,
   SubmissionModeEnv,
-  LeaderboardIdentityEnv {
+  LeaderboardIdentityEnv,
+  RetentionCleanupModeEnv {
   readonly RATE_LIMIT_BURST: RateLimitBinding
   readonly RATE_LIMIT_SUSTAINED: RateLimitBinding
   readonly DB?: D1Database
@@ -124,15 +127,15 @@ export async function handlePrivateSubmissionRequest(request: Request, env: Priv
   return withRateLimit(request, env, handleAuthoritativeSubmissionRequest, 'submission')
 }
 
-type IdentityAction = 'availability' | 'claim' | 'recover' | 'rename' | 'status'
-
 export async function handlePrivateLeaderboardIdentityRequest(
   request: Request,
   env: PrivateValidationWorkerEnv,
-  action: IdentityAction,
+  action: unknown,
 ) {
-  if (!isLeaderboardIdentityEnabled(env)) return handleApiNotFoundRequest(request)
-  if (action === 'recover' && !isLeaderboardRecoveryEnabled(env)) {
+  if (
+    !isLeaderboardIdentityCapability(action)
+    || !isLeaderboardIdentityCapabilityEnabled(env, action)
+  ) {
     return handleApiNotFoundRequest(request)
   }
   return withRateLimit(
@@ -147,11 +150,16 @@ export async function handlePrivateLeaderboardIdentityHealthRequest(
   request: Request,
   env: PrivateValidationWorkerEnv,
 ) {
-  const recoveryRequested = new URL(request.url).searchParams.get('capability') === 'recovery'
+  const requestedCapability = new URL(request.url).searchParams.get('capability') ?? 'status'
+  if (
+    !isLeaderboardIdentityCapability(requestedCapability)
+    || requestedCapability === 'availability'
+  ) {
+    return new Response(null, { status: 503 })
+  }
   if (
     request.method !== 'GET'
-    || !isLeaderboardIdentityEnabled(env)
-    || (recoveryRequested && !isLeaderboardRecoveryEnabled(env))
+    || !isLeaderboardIdentityCapabilityEnabled(env, requestedCapability)
     || !isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)
     || !env.DB
   ) return new Response(null, { status: 503 })
@@ -215,6 +223,7 @@ export default {
     return handleApiNotFoundRequest(request)
   },
   async scheduled(_controller: ScheduledController, env: PrivateValidationWorkerEnv) {
+    if (!isRetentionCleanupEnabled(env)) return
     await cleanupRetainedDraftSubmissions(env)
   },
 } satisfies ExportedHandler<PrivateValidationWorkerEnv>

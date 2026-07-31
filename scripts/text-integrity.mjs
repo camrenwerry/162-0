@@ -77,6 +77,8 @@ function scanFile(relativePath, packageScripts) {
     return ['invalid UTF-8']
   }
   if (source.includes('\0')) findings.push('NUL byte')
+  if (source.includes('\uFFFD')) findings.push('Unicode replacement character')
+  if (/(?:\u00C3[\u0080-\u00BF]|\u00C2[\u0080-\u00BF]|\u00E2\u20AC|\u00F0\u0178)/u.test(source)) findings.push('probable mojibake')
   if (source.length > 0 && !source.endsWith('\n')) findings.push('missing final newline')
   source.split('\n').forEach((line, index) => {
     if (/[ \t]+$/.test(line)) findings.push(`line ${index + 1}: trailing whitespace`)
@@ -88,6 +90,13 @@ function scanFile(relativePath, packageScripts) {
     if (fences % 2 !== 0) findings.push('unbalanced Markdown code fence')
     for (const match of source.matchAll(/npm run (?:--silent )?([a-z0-9:_-]+)/gi)) {
       if (!(match[1] in packageScripts)) findings.push(`unknown npm command ${match[1]}`)
+    }
+  }
+  if (relativePath.endsWith('.json')) {
+    try {
+      JSON.parse(source)
+    } catch {
+      findings.push('malformed JSON')
     }
   }
   if (/Bearer [A-Za-z0-9_-]{24,}/.test(source)) findings.push('secret-like Bearer value')

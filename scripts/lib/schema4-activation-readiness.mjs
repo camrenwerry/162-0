@@ -1,6 +1,9 @@
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { loadRepositoryMigrations } from './preview-release/migrations.mjs'
+import {
+  assertIndependentSchema4AuthorityModel,
+} from './schema4-activation-authority.mjs'
 
 const MODEL_PATH = 'config/preview-schema4-readiness.json'
 const TARGET_SCHEMA = 4
@@ -47,15 +50,35 @@ export function assertSchema4RepositoryReadiness(repositoryRoot) {
     path.join(repositoryRoot, 'src/features/leaderboard/runtimeConfig.ts'),
     'utf8',
   )
-  const recoverySource = readFileSync(
-    path.join(repositoryRoot, 'functions/lib/leaderboard-recovery-mode.ts'),
+  const identitySource = readFileSync(
+    path.join(repositoryRoot, 'functions/lib/leaderboard-identity-mode.ts'),
+    'utf8',
+  )
+  const cleanupSource = readFileSync(
+    path.join(repositoryRoot, 'workers/draft-validation/src/retention-cleanup-mode.ts'),
     'utf8',
   )
   for (const gate of model.requiredPreviewGates.frontend) {
     if (!frontendSource.includes(gate)) refuse(`frontend gate ${gate} is missing.`)
   }
-  if (!recoverySource.includes('LEADERBOARD_RECOVERY_MODE')) {
-    refuse('the independent backend recovery gate is missing.')
+  for (const gate of [
+    'VITE_LEADERBOARD_IDENTITY_CLAIM_MODE',
+    'VITE_LEADERBOARD_IDENTITY_STATUS_MODE',
+    'VITE_LEADERBOARD_IDENTITY_RENAME_MODE',
+    'VITE_LEADERBOARD_RECOVERY_MODE',
+  ]) {
+    if (!frontendSource.includes(gate)) refuse(`independent frontend gate ${gate} is missing.`)
+  }
+  for (const gate of [
+    'LEADERBOARD_IDENTITY_CLAIM_MODE',
+    'LEADERBOARD_IDENTITY_STATUS_MODE',
+    'LEADERBOARD_IDENTITY_RENAME_MODE',
+    'LEADERBOARD_RECOVERY_MODE',
+  ]) {
+    if (!identitySource.includes(gate)) refuse(`independent backend gate ${gate} is missing.`)
+  }
+  if (!cleanupSource.includes('RETENTION_CLEANUP_MODE')) {
+    refuse('the independent cleanup authority gate is missing.')
   }
   return Object.freeze({ model, migrations })
 }
@@ -82,26 +105,41 @@ function exactEnabledGate(source, gate) {
 }
 
 export function assertSchema4StateModelSupportsActivation(repositoryRoot) {
-  const { model } = assertSchema4RepositoryReadiness(repositoryRoot)
+  assertSchema4RepositoryReadiness(repositoryRoot)
+  return assertIndependentSchema4AuthorityModel()
+}
+
+export function assertSchema4ProtectedConfigurationSupportsActivation(repositoryRoot) {
+  assertSchema4RepositoryReadiness(repositoryRoot)
   const pages = readFileSync(path.join(repositoryRoot, 'wrangler.toml'), 'utf8')
   const worker = readFileSync(
     path.join(repositoryRoot, 'workers/draft-validation/wrangler.toml'),
     'utf8',
   )
-  const legacyStates = readFileSync(
-    path.join(repositoryRoot, 'workers/draft-validation/d1c4-activation-states.json'),
-    'utf8',
-  )
-  const missing = [
-    ...model.requiredPreviewGates.pages.filter((gate) => !exactEnabledGate(pages, gate)),
-    ...model.requiredPreviewGates.worker.filter((gate) => !exactEnabledGate(worker, gate)),
+  const pagesGates = [
+    'LEADERBOARD_READ_MODE',
+    'LEADERBOARD_IDENTITY_MODE',
+    'LEADERBOARD_IDENTITY_CLAIM_MODE',
+    'LEADERBOARD_IDENTITY_STATUS_MODE',
+    'LEADERBOARD_IDENTITY_RENAME_MODE',
+    'DRAFT_SUBMISSION_MODE',
+    'LEADERBOARD_RECOVERY_MODE',
   ]
-  if (
-    missing.length > 0
-    || !legacyStates.includes('"recoveryMode"')
-    || !legacyStates.includes('"identityMode"')
-  ) {
-    refuse('the protected legacy activation model lacks the independent schema-4 identity/recovery gates; disabled state is the only allowed target.')
+  const workerGates = [
+    'LEADERBOARD_IDENTITY_MODE',
+    'LEADERBOARD_IDENTITY_CLAIM_MODE',
+    'LEADERBOARD_IDENTITY_STATUS_MODE',
+    'LEADERBOARD_IDENTITY_RENAME_MODE',
+    'DRAFT_SUBMISSION_MODE',
+    'LEADERBOARD_RECOVERY_MODE',
+    'RETENTION_CLEANUP_MODE',
+  ]
+  const missing = [
+    ...pagesGates.filter((gate) => !exactEnabledGate(pages, gate)),
+    ...workerGates.filter((gate) => !exactEnabledGate(worker, gate)),
+  ]
+  if (missing.length > 0) {
+    refuse(`protected configuration does not yet represent enabled schema-4 authority for: ${[...new Set(missing)].join(', ')}.`)
   }
 }
 
@@ -120,4 +158,5 @@ export function assertSchema4ActivationPlan({
     || manifest.cloudflare.production.pages.domains.status !== 'resolved'
   ) refuse('Production identity remains ambiguous.')
   assertSchema4StateModelSupportsActivation(repositoryRoot)
+  assertSchema4ProtectedConfigurationSupportsActivation(repositoryRoot)
 }

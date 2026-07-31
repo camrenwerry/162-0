@@ -36,6 +36,59 @@ async function routeStatus(page: Page, renameEligible = true) {
   })
 }
 
+test('@release valid stored identity can rename while status and recovery are independently disabled', async ({ page, context }) => {
+  await seedIdentity(context)
+  let statusRequests = 0
+  let renameRequests = 0
+  page.on('request', (request) => {
+    if (new URL(request.url()).pathname === '/api/v1/leaderboard-identity-status') {
+      statusRequests += 1
+    }
+  })
+  await page.route('**/api/v1/leaderboards?**', (route) => route.fulfill({
+    json: leaderboardResponse(),
+  }))
+  await page.route('**/api/v1/leaderboard-name-availability', async (route) => {
+    const body = route.request().postDataJSON() as { displayName: string }
+    await route.fulfill({
+      json: {
+        ok: true,
+        schemaVersion: 'pennant-leaderboard-identity-v1',
+        displayName: body.displayName,
+        available: true,
+      },
+    })
+  })
+  await page.route('**/api/v1/leaderboard-identity-rename', async (route) => {
+    renameRequests += 1
+    const body = route.request().postDataJSON() as {
+      deviceCredential: string
+      displayName: string
+    }
+    expect(body).toEqual({
+      deviceCredential: DEVICE_CREDENTIAL,
+      displayName: 'Player Maple',
+    })
+    await route.fulfill({
+      json: identityStatus({
+        displayName: 'Player Maple',
+        renameEligible: true,
+      }).response,
+    })
+  })
+
+  await page.goto('http://127.0.0.1:4177/leaderboard')
+  await expect(page.getByRole('heading', { name: 'Player Cedar' })).toBeVisible()
+  await expect(page.getByText('Saved on this device. Live identity status is separately disabled.')).toBeVisible()
+  await page.getByText('Change display name').click()
+  await page.getByLabel('New display name').fill('Player Maple')
+  await page.getByRole('button', { name: 'Update Display Name' }).click()
+  await expect(page.getByRole('heading', { name: 'Player Maple' })).toBeVisible()
+  await expect(page.getByText('Recover an identity')).toHaveCount(0)
+  expect(statusRequests).toBe(0)
+  expect(renameRequests).toBe(1)
+})
+
 test('@release Daily, Weekly, and All-Time reads anchor one personal row and restart stale pagination', async ({ page, context }) => {
   await seedIdentity(context)
   await routeStatus(page)

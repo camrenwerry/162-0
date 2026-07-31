@@ -343,19 +343,34 @@ use `no-store`.
 
 ## Flags, health, retention, and activation
 
-Identity mutations require all of:
+The canonical seven-capability vocabulary is `leaderboardRead`,
+`identityClaim`, `identityStatus`, `identityRename`, `draftSubmission`,
+`identityRecovery`, and `cleanupCron`.
+
+Every identity action requires all of:
 
 - `LEADERBOARD_IDENTITY_MODE=enabled` at both Pages and the private Worker;
+- its exact narrow flag at both layers:
+  `LEADERBOARD_IDENTITY_CLAIM_MODE`, `LEADERBOARD_IDENTITY_STATUS_MODE`,
+  `LEADERBOARD_IDENTITY_RENAME_MODE`, or `LEADERBOARD_RECOVERY_MODE`;
 - a Worker-only `LEADERBOARD_IDENTITY_SIGNING_KEY` of 32 through 4,096
   characters;
 - the private `VALIDATION_SERVICE` binding;
 - a reachable `DB`; and
 - exact schema version 4.
 
-Leaderboard reads separately require `LEADERBOARD_READ_MODE=enabled`, an
+The broad identity switch is a disable-only ceiling. Enabling it never enables
+claim, status, rename, or recovery. Name availability is enabled only by claim
+or rename. The private health route uses `status` when no query is supplied and
+the exact query values `claim`, `recover`, `rename`, and `status`; identity
+recovery is checked with `?capability=recover`.
+
+`leaderboardRead` separately requires `LEADERBOARD_READ_MODE=enabled`, an
 allowlisted environment, a cursor signing key of 32 through 4,096 characters,
-reachable D1, and exact schema version 4. Submission remains controlled by its
-independent existing gate. Missing or malformed values fail closed. Health
+reachable D1, and exact schema version 4. `draftSubmission` remains controlled
+by `DRAFT_SUBMISSION_MODE`. `cleanupCron` requires both
+`RETENTION_CLEANUP_MODE=enabled` and the exact reviewed Cron trigger. Missing
+or malformed values fail closed. Health
 probes the private Worker through the existing service binding and reports
 identity as configured but degraded when the Pages flag, service, private
 Worker flag or secret, database, or exact schema requirement is incomplete.
@@ -402,9 +417,12 @@ submission -> pending placement -> claim -> returning credential
 
 It performs no live network request or remote mutation.
 
-The next controlled product step is the separate player-facing UI milestone:
-store the device credential locally, present qualification before name setup,
-show and acknowledge the recovery code at the authorized boundary, integrate
-rename/recovery/status, and render the v2 top-three/shared-rank board contract.
-Remote migration, secret configuration, preview activation, smoke testing,
-deployment, and production work each remain separate reviewed operations.
+The player-facing local UI now stores the device credential, preserves invalid
+local continuity, presents qualification before name setup, shows and
+acknowledges one-time recovery material, integrates independently gated
+rename/recovery/status, and renders the v2 top-three/shared-rank board
+contract. This is local implementation evidence, not activation readiness.
+Protected configuration, an additive migration proposal if operator reset is
+authorized, secret and binding review, remote migration, deployment, smoke
+testing, Preview activation, and Production work remain separate reviewed
+operations.

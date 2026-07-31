@@ -42,6 +42,7 @@ import {
   type CredentialLookupDatabase,
 } from '../../../functions/lib/leaderboard-identity'
 import {
+  isLeaderboardIdentityClaimEnabled,
   isLeaderboardIdentityEnabled,
   isLeaderboardIdentitySigningKey,
   type LeaderboardIdentityModeEnv,
@@ -762,7 +763,7 @@ async function enrichedSubmissionResponse(
   if (placement.identity.setupRequired) {
     claim = Object.freeze({ state: 'disabled' })
     if (
-      isLeaderboardIdentityEnabled(env)
+      isLeaderboardIdentityClaimEnabled(env)
       && isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)
     ) {
       const capability = await deriveClaimCapability(
@@ -1123,7 +1124,7 @@ export async function handleAuthoritativeSubmissionRequest(
     && leaderboard.game_mode === 'classic'
     && leaderboard.environment !== 'test'
     && leaderboard.is_smoke === 0
-    && isLeaderboardIdentityEnabled(env)
+    && isLeaderboardIdentityClaimEnabled(env)
   ) {
     if (!isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)) {
       return errorResponse('submission_unavailable')

@@ -17,7 +17,7 @@ import { draftSubmissionFeatureState } from '../../lib/draft-submission-mode'
 import { draftValidationFeatureState } from '../../lib/draft-validation-mode'
 import type { BackendEnv } from '../../lib/env'
 import {
-  leaderboardIdentityFeatureState,
+  leaderboardIdentityCapabilityFeatureState,
   type LeaderboardIdentityModeEnv,
 } from '../../lib/leaderboard-identity-mode'
 import {
@@ -25,10 +25,6 @@ import {
   leaderboardReadRuntimeIsConfigured,
   type LeaderboardReadModeEnv,
 } from '../../lib/leaderboard-mode'
-import {
-  leaderboardRecoveryFeatureState,
-  type LeaderboardRecoveryModeEnv,
-} from '../../lib/leaderboard-recovery-mode'
 
 const ALLOWED_METHODS = 'GET, HEAD'
 const PRIVATE_IDENTITY_HEALTH_URL = 'https://pennant-pursuit.internal/internal/leaderboard-identity-health'
@@ -69,13 +65,13 @@ function jsonResponse(payload: unknown, status: number) {
 
 async function privateIdentityIsReady(
   service: Pick<Fetcher, 'fetch'> | undefined,
-  capability: 'identity' | 'recovery',
+  capability: 'claim' | 'recover' | 'rename' | 'status',
 ) {
   if (!service || typeof service.fetch !== 'function') return false
   try {
-    const url = capability === 'recovery'
-      ? `${PRIVATE_IDENTITY_HEALTH_URL}?capability=recovery`
-      : PRIVATE_IDENTITY_HEALTH_URL
+    const url = capability === 'status'
+      ? PRIVATE_IDENTITY_HEALTH_URL
+      : `${PRIVATE_IDENTITY_HEALTH_URL}?capability=${capability}`
     const response = await service.fetch(new Request(url))
     return response.status === 204
   } catch {
@@ -83,7 +79,7 @@ async function privateIdentityIsReady(
   }
 }
 
-type HealthEnv = BackendEnv & LeaderboardReadModeEnv & LeaderboardIdentityModeEnv & LeaderboardRecoveryModeEnv & {
+type HealthEnv = BackendEnv & LeaderboardReadModeEnv & LeaderboardIdentityModeEnv & {
   readonly VALIDATION_SERVICE?: Pick<Fetcher, 'fetch'>
 }
 
@@ -95,13 +91,25 @@ export async function handleHealthRequest(request: Request, env: HealthEnv = {})
     const leaderboardRequested = leaderboardReadFeatureState(env) === 'enabled'
     const leaderboardConfigured = leaderboardRequested
       && leaderboardReadRuntimeIsConfigured(env)
-    const identityRequested = leaderboardIdentityFeatureState(env) === 'enabled'
-    const identityRuntimeConfigured = identityRequested
-      && await privateIdentityIsReady(env.VALIDATION_SERVICE, 'identity')
-    const recoveryRequested = leaderboardRecoveryFeatureState(env) === 'enabled'
-    const recoveryRuntimeConfigured = identityRequested
-      && recoveryRequested
-      && await privateIdentityIsReady(env.VALIDATION_SERVICE, 'recovery')
+    const identityRequests = Object.freeze({
+      claim: leaderboardIdentityCapabilityFeatureState(env, 'claim') === 'enabled',
+      status: leaderboardIdentityCapabilityFeatureState(env, 'status') === 'enabled',
+      rename: leaderboardIdentityCapabilityFeatureState(env, 'rename') === 'enabled',
+    })
+    const identityRequested = Object.values(identityRequests).some(Boolean)
+    const identityRuntime = Object.freeze({
+      claim: identityRequests.claim
+        && await privateIdentityIsReady(env.VALIDATION_SERVICE, 'claim'),
+      status: identityRequests.status
+        && await privateIdentityIsReady(env.VALIDATION_SERVICE, 'status'),
+      rename: identityRequests.rename
+        && await privateIdentityIsReady(env.VALIDATION_SERVICE, 'rename'),
+    })
+    const identityRuntimeConfigured = Object.entries(identityRequests)
+      .every(([capability, requested]) => !requested || identityRuntime[capability as keyof typeof identityRuntime])
+    const recoveryRequested = leaderboardIdentityCapabilityFeatureState(env, 'recover') === 'enabled'
+    const recoveryRuntimeConfigured = recoveryRequested
+      && await privateIdentityIsReady(env.VALIDATION_SERVICE, 'recover')
     const submissionSchemaReady = submissionConfigured
       && d1.configured
       && d1.reachable
@@ -162,7 +170,18 @@ export async function handleHealthRequest(request: Request, env: HealthEnv = {})
           ? 'disabled'
           : submissionSchemaReady ? 'schema-ready' : 'configured',
         ...(identityRequested
-          ? { leaderboardIdentity: identitySchemaReady ? 'schema-ready' : 'configured' }
+          ? {
+            leaderboardIdentity: identitySchemaReady ? 'schema-ready' : 'configured',
+            ...(identityRequests.claim
+              ? { leaderboardIdentityClaim: identityRuntime.claim && identitySchemaReady ? 'schema-ready' : 'configured' }
+              : {}),
+            ...(identityRequests.status
+              ? { leaderboardIdentityStatus: identityRuntime.status && identitySchemaReady ? 'schema-ready' : 'configured' }
+              : {}),
+            ...(identityRequests.rename
+              ? { leaderboardIdentityRename: identityRuntime.rename && identitySchemaReady ? 'schema-ready' : 'configured' }
+              : {}),
+          }
           : {}),
         ...(identityRequested || recoveryRequested
           ? {

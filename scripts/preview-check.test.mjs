@@ -101,6 +101,7 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
     cpSync(new URL('./preview-release.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-release.mjs'))
     cpSync(new URL('./lib/preview-release', import.meta.url), path.join(repositoryRoot, 'scripts/lib/preview-release'), { recursive: true })
     cpSync(new URL('./prepare-d1c4-activation.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/prepare-d1c4-activation.mjs'))
+    cpSync(new URL('./lib/schema4-activation-authority.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/lib/schema4-activation-authority.mjs'))
     cpSync(new URL('./lib/schema4-activation-readiness.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/lib/schema4-activation-readiness.mjs'))
     cpSync(new URL('./schema4-activation-readiness.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/schema4-activation-readiness.mjs'))
     mkdirSync(path.join(repositoryRoot, 'config'), { recursive: true })
@@ -122,7 +123,10 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
     mkdirSync(path.join(repositoryRoot, 'src/features/leaderboard'), { recursive: true })
     cpSync(new URL('../src/features/leaderboard/runtimeConfig.ts', import.meta.url), path.join(repositoryRoot, 'src/features/leaderboard/runtimeConfig.ts'))
     mkdirSync(path.join(repositoryRoot, 'functions/lib'), { recursive: true })
+    cpSync(new URL('../functions/lib/leaderboard-identity-mode.ts', import.meta.url), path.join(repositoryRoot, 'functions/lib/leaderboard-identity-mode.ts'))
     cpSync(new URL('../functions/lib/leaderboard-recovery-mode.ts', import.meta.url), path.join(repositoryRoot, 'functions/lib/leaderboard-recovery-mode.ts'))
+    mkdirSync(path.join(repositoryRoot, 'workers/draft-validation/src'), { recursive: true })
+    cpSync(new URL('../workers/draft-validation/src/retention-cleanup-mode.ts', import.meta.url), path.join(repositoryRoot, 'workers/draft-validation/src/retention-cleanup-mode.ts'))
     writeFileSync(path.join(repositoryRoot, 'scripts', 'fixture-stage.mjs'), `
 const required = {
   WRANGLER_WRITE_LOGS: 'false',

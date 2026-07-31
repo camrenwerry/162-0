@@ -115,6 +115,11 @@ const globalCss = read('src/index.css')
 const home = read('src/components/home/HomeScreen.tsx')
 const leaderboard = read('src/components/leaderboard/LeaderboardScreen.tsx')
 const journey = read('src/components/leaderboard/ResultLeaderboardJourney.tsx')
+const runtimeJourney = read('src/components/leaderboard/RuntimeResultLeaderboardJourney.tsx')
+const runtimeIdentityControls = read('src/components/leaderboard/RuntimeIdentityControls.tsx')
+const runtimeIdentity = read('src/features/leaderboard/useRuntimeIdentity.ts')
+const runtimeIdentityState = read('src/features/leaderboard/runtimeIdentityState.ts')
+const runtimeConfig = read('src/features/leaderboard/runtimeConfig.ts')
 const leaderboardCss = read('src/components/leaderboard/Leaderboard.css')
 const classic = read('src/components/draft/ClassicMode.tsx')
 const results = read('src/components/draft/ResultsScreen.tsx')
@@ -151,6 +156,40 @@ assert(app.includes('navigationBlockerRef') && app.includes('handlePopState'), '
 assert(app.includes('routeFocusRef') && app.includes('documentTitleForRoute'), 'route focus and title management are missing')
 assert(app.includes("matchMedia('(prefers-reduced-motion: reduce)')"), 'route scrolling must respect reduced motion')
 assert(results.includes("'Results | Pennant Pursuit'"), 'Results title is missing')
+for (const capability of ['identityClaim', 'identityStatus', 'identityRename', 'recovery']) {
+  assert(runtimeConfig.includes(`'${capability}'`), `independent frontend ${capability} authority is missing`)
+}
+assert(
+  runtimeIdentityState.includes("kind: 'local'")
+    && runtimeIdentity.includes("runtimeFeatureIsEnabled('identityStatus')")
+    && runtimeIdentity.includes('deriveRuntimeIdentityState'),
+  'locally stored identity must remain usable without coupling rename or submission to status authority',
+)
+assert(
+  runtimeIdentityControls.includes("state.kind === 'ready' || state.kind === 'local'"),
+  'rename must accept a locally stored identity when status authority is disabled',
+)
+assert(
+  runtimeJourney.includes('resolveRuntimeSubmissionIdentity')
+    && runtimeJourney.includes("identityState.kind === 'missing'")
+    && runtimeJourney.includes("kind: 'identity-blocked'"),
+  'submission attribution must accept valid local identity while anonymous claim remains limited to genuinely missing continuity',
+)
+assert.match(
+  runtimeJourney,
+  /submission\.receipt\.leaderboard\.claim\.state === 'available'[\s\S]*identityState\.kind === 'missing'/,
+  'claim setup must be reachable only for genuinely missing local identity continuity',
+)
+assert.doesNotMatch(
+  runtimeJourney,
+  /onIdentityRemove|Remove Saved Identity from This Device/,
+  'a blocked result must not offer local deletion as a path to anonymous replacement',
+)
+assert.doesNotMatch(
+  runtimeIdentityState,
+  /stored\.kind\s*}\)\s*:\s*Object\.freeze\(\{\s*kind:\s*'disabled'/,
+  'corrupt, outdated, or unavailable storage must not collapse into disabled during partial activation',
+)
 
 for (const period of ['Daily', 'Weekly', 'All-Time']) {
   assert(leaderboard.includes(period), `${period} navigation is missing`)

@@ -5,14 +5,13 @@ import {
 } from './api-response'
 import { readBoundedJson } from './bounded-json'
 import {
-  isLeaderboardIdentityEnabled,
+  isLeaderboardIdentityCapability,
+  isLeaderboardIdentityCapabilityEnabled,
+  isLeaderboardIdentityRecoveryEnabled,
+  isLeaderboardIdentityRenameEnabled,
   isLeaderboardIdentitySigningKey,
   type LeaderboardIdentityModeEnv,
 } from './leaderboard-identity-mode'
-import {
-  isLeaderboardRecoveryEnabled,
-  type LeaderboardRecoveryModeEnv,
-} from './leaderboard-recovery-mode'
 import { validateDisplayName } from '../../shared/leaderboard-display-name'
 export {
   DISPLAY_NAME_MAX_CHARACTERS,
@@ -368,11 +367,9 @@ export interface IdentityDatabase {
   batch(statements: IdentityPreparedStatement[]): Promise<unknown>
 }
 
-export interface LeaderboardIdentityEnv extends LeaderboardIdentityModeEnv, LeaderboardRecoveryModeEnv {
+export interface LeaderboardIdentityEnv extends LeaderboardIdentityModeEnv {
   readonly DB?: unknown
 }
-
-type IdentityAction = 'availability' | 'claim' | 'recover' | 'rename' | 'status'
 
 type IdentityErrorCode =
   | 'method_not_allowed'
@@ -1332,6 +1329,7 @@ async function identityStatus(
   signingKey: string,
   nowMs: number,
   recoveryEnabled: boolean,
+  renameEnabled: boolean,
 ) {
   if (!hasExactKeys(body, ['deviceCredential'])) return leaderboardIdentityErrorResponse('invalid_request_schema')
   const identity = await identityByCredential(database, signingKey, body.deviceCredential)
@@ -1344,7 +1342,7 @@ async function identityStatus(
       bestRun: true,
       cumulativePerformance: false,
       recovery: recoveryEnabled,
-      rename: true,
+      rename: renameEnabled,
     }),
   }, 200)
 }
@@ -1352,11 +1350,13 @@ async function identityStatus(
 export async function handleLeaderboardIdentityRequest(
   request: Request,
   env: LeaderboardIdentityEnv,
-  action: IdentityAction,
+  action: unknown,
   now: () => number = () => Date.now(),
 ) {
-  if (!isLeaderboardIdentityEnabled(env)) return handleApiNotFoundRequest(request)
-  if (action === 'recover' && !isLeaderboardRecoveryEnabled(env)) {
+  if (
+    !isLeaderboardIdentityCapability(action)
+    || !isLeaderboardIdentityCapabilityEnabled(env, action)
+  ) {
     return handleApiNotFoundRequest(request)
   }
   if (request.method !== ALLOWED_METHODS) return leaderboardIdentityErrorResponse('method_not_allowed')
@@ -1378,24 +1378,32 @@ export async function handleLeaderboardIdentityRequest(
   }
   try {
     if (!await schemaIsReady(database)) return leaderboardIdentityErrorResponse('identity_unavailable')
-    if (action === 'availability') return await availability(body, database)
-    if (action === 'claim') {
-      return await claimIdentity(body, database, env.LEADERBOARD_IDENTITY_SIGNING_KEY, nowMs)
+    switch (action) {
+      case 'availability':
+        return await availability(body, database)
+      case 'claim':
+        return await claimIdentity(body, database, env.LEADERBOARD_IDENTITY_SIGNING_KEY, nowMs)
+      case 'recover':
+        return await recoverIdentity(body, database, env.LEADERBOARD_IDENTITY_SIGNING_KEY, nowMs)
+      case 'rename':
+        return await renameIdentity(body, database, env.LEADERBOARD_IDENTITY_SIGNING_KEY, nowMs)
+      case 'status':
+        return await identityStatus(
+          body,
+          database,
+          env.LEADERBOARD_IDENTITY_SIGNING_KEY,
+          nowMs,
+          isLeaderboardIdentityRecoveryEnabled(env),
+          isLeaderboardIdentityRenameEnabled(env),
+        )
+      default:
+        return assertNeverIdentityAction(action)
     }
-    if (action === 'recover') {
-      return await recoverIdentity(body, database, env.LEADERBOARD_IDENTITY_SIGNING_KEY, nowMs)
-    }
-    if (action === 'rename') {
-      return await renameIdentity(body, database, env.LEADERBOARD_IDENTITY_SIGNING_KEY, nowMs)
-    }
-    return await identityStatus(
-      body,
-      database,
-      env.LEADERBOARD_IDENTITY_SIGNING_KEY,
-      nowMs,
-      isLeaderboardRecoveryEnabled(env),
-    )
   } catch {
     return leaderboardIdentityErrorResponse('identity_unavailable')
   }
+}
+
+function assertNeverIdentityAction(action: never): never {
+  throw new TypeError(`Unhandled leaderboard identity action: ${String(action)}`)
 }

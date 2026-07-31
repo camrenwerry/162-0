@@ -17,7 +17,11 @@ import {
   type PennantApiError,
 } from '../../features/leaderboard/pennantApi'
 import { runtimeFeatureIsEnabled } from '../../features/leaderboard/runtimeConfig'
-import type { RuntimeIdentityState } from '../../features/leaderboard/useRuntimeIdentity'
+import {
+  resolveRuntimeSubmissionIdentity,
+  type RuntimeIdentityState,
+  type RuntimeSubmissionIdentityDecision,
+} from '../../features/leaderboard/runtimeIdentityState'
 import type { NavigationBlocker } from '../../appNavigation'
 import './Leaderboard.css'
 
@@ -33,6 +37,10 @@ interface RuntimeResultLeaderboardJourneyProps {
 type SubmissionState =
   | Readonly<{ kind: 'disabled' }>
   | Readonly<{ kind: 'waiting-identity' }>
+  | Readonly<{
+    kind: 'identity-blocked'
+    reason: Extract<RuntimeSubmissionIdentityDecision, { kind: 'blocked' }>['reason']
+  }>
   | Readonly<{ kind: 'submitting' }>
   | Readonly<{ kind: 'error', error: PennantApiError }>
   | Readonly<{ kind: 'success', receipt: DraftSubmissionReceipt }>
@@ -41,17 +49,31 @@ const api = new PennantApi()
 const LEAVE_PROMPT = 'Leave before finishing this leaderboard setup? Your one-time recovery code will not be shown again.'
 
 function submissionCredential(identityState: RuntimeIdentityState): string | null {
-  return identityState.kind === 'ready' ? identityState.identity.deviceCredential : null
+  const decision = resolveRuntimeSubmissionIdentity(identityState)
+  return decision.kind === 'credential' ? decision.credential : null
 }
 
-function identityError(identityState: RuntimeIdentityState): PennantApiError | null {
-  if (identityState.kind === 'ready' || identityState.kind === 'missing' || identityState.kind === 'disabled') {
-    return null
+function blockedIdentityGuidance(
+  reason: Extract<RuntimeSubmissionIdentityDecision, { kind: 'blocked' }>['reason'],
+): string {
+  switch (reason) {
+    case 'corrupt':
+      return 'The saved identity record is damaged. Restore it with its current recovery code when recovery is available. Anonymous submission is blocked to protect identity continuity.'
+    case 'outdated':
+      return 'The saved identity record uses an unsupported version. Restore it with its current recovery code when recovery is available. Anonymous submission is blocked to protect identity continuity.'
+    case 'invalid':
+      return 'The saved device credential was rejected. Restore the identity with its current recovery code when recovery is available. Anonymous submission is blocked to prevent a replacement identity.'
+    case 'unavailable':
+      return 'This browser cannot safely read or verify its saved identity. Restore local storage access before submitting or removing the record.'
+    case 'disabled':
+      return 'Identity continuity is unavailable for this submission. Your local result remains safe.'
+    default:
+      return assertNeverBlockedReason(reason)
   }
-  return Object.freeze({
-    kind: identityState.kind === 'invalid' ? 'invalid-credential' : 'unavailable',
-    retryAfterSeconds: null,
-  })
+}
+
+function assertNeverBlockedReason(reason: never): never {
+  throw new TypeError(`Unhandled blocked identity reason: ${String(reason)}`)
 }
 
 function initialSubmissionState(
@@ -59,11 +81,12 @@ function initialSubmissionState(
   identityState: RuntimeIdentityState,
 ): SubmissionState {
   if (!ticket || !runtimeFeatureIsEnabled('submission')) return Object.freeze({ kind: 'disabled' })
-  if (identityState.kind === 'checking') return Object.freeze({ kind: 'waiting-identity' })
-  const error = identityError(identityState)
-  return error
-    ? Object.freeze({ kind: 'error', error })
-    : Object.freeze({ kind: 'submitting' })
+  const decision = resolveRuntimeSubmissionIdentity(identityState)
+  if (decision.kind === 'checking') return Object.freeze({ kind: 'waiting-identity' })
+  if (decision.kind === 'blocked') {
+    return Object.freeze({ kind: 'identity-blocked', reason: decision.reason })
+  }
+  return Object.freeze({ kind: 'submitting' })
 }
 
 function rankLabel(rank: number | null, qualifies: boolean): string {
@@ -124,9 +147,10 @@ export default function RuntimeResultLeaderboardJourney({
   const mounted = useRef(true)
   const blocking = claimedIdentity !== null && !completedSetup
   const claimSetupPending = submission.kind === 'success'
+    && runtimeFeatureIsEnabled('identityClaim')
     && submission.receipt.leaderboard.identity.setupRequired
     && submission.receipt.leaderboard.claim.state === 'available'
-    && identityState.kind !== 'ready'
+    && identityState.kind === 'missing'
     && !completedSetup
   const controlsHidden = blocking
     || claimSetupPending
@@ -146,9 +170,12 @@ export default function RuntimeResultLeaderboardJourney({
       setSubmission(Object.freeze({ kind: 'waiting-identity' }))
       return
     }
-    const unavailableIdentity = identityError(identityState)
-    if (unavailableIdentity) {
-      setSubmission(Object.freeze({ kind: 'error', error: unavailableIdentity }))
+    const identityDecision = resolveRuntimeSubmissionIdentity(identityState)
+    if (identityDecision.kind === 'blocked') {
+      setSubmission(Object.freeze({
+        kind: 'identity-blocked',
+        reason: identityDecision.reason,
+      }))
       return
     }
     setSubmission(Object.freeze({ kind: 'submitting' }))
@@ -219,7 +246,13 @@ export default function RuntimeResultLeaderboardJourney({
 
   const claimName = async (event: FormEvent) => {
     event.preventDefault()
-    if (claimRequestActive.current || claiming || submission.kind !== 'success') return
+    if (
+      claimRequestActive.current
+      || claiming
+      || submission.kind !== 'success'
+      || !runtimeFeatureIsEnabled('identityClaim')
+      || identityState.kind !== 'missing'
+    ) return
     const claim = submission.receipt.leaderboard.claim
     if (claim.state !== 'available') return
     const validated = validateDisplayName(displayName)
@@ -317,6 +350,19 @@ export default function RuntimeResultLeaderboardJourney({
     )
   }
 
+  if (submission.kind === 'identity-blocked') {
+    return (
+      <section className="result-lb" aria-live="polite">
+        <div className="result-lb__signal" aria-hidden="true">!</div>
+        <div>
+          <span>Identity continuity needs attention</span>
+          <h2>Your local result is still safe</h2>
+          <p>{blockedIdentityGuidance(submission.reason)}</p>
+        </div>
+      </section>
+    )
+  }
+
   if (submission.kind === 'error') {
     return (
       <section className="result-lb" aria-live="polite">
@@ -407,7 +453,7 @@ export default function RuntimeResultLeaderboardJourney({
       </p>
       <PlacementGrid receipt={receipt} />
       {receipt.leaderboard.newPersonalBest && <p><strong>New personal best.</strong> This is your strongest verified run so far.</p>}
-      {receipt.leaderboard.identity.setupRequired && claim.state !== 'available' && identityState.kind !== 'ready' && (
+      {receipt.leaderboard.identity.setupRequired && claim.state !== 'available' && identityState.kind === 'missing' && (
         <p>Identity setup is not available right now, so this placement is not public yet.</p>
       )}
     </section>

@@ -48,6 +48,9 @@ export default function RuntimeIdentityControls({
   const recoveryController = useRef<AbortController | null>(null)
   const abortTimer = useRef<number | null>(null)
   const mounted = useRef(true)
+  const renameIdentity = state.kind === 'ready' || state.kind === 'local'
+    ? state.identity
+    : null
 
   useEffect(() => {
     mounted.current = true
@@ -85,13 +88,18 @@ export default function RuntimeIdentityControls({
 
   const rename = async (event: FormEvent) => {
     event.preventDefault()
-    if (renameRequestActive.current || renaming || state.kind !== 'ready') return
+    if (
+      renameRequestActive.current
+      || renaming
+      || renameIdentity === null
+      || !runtimeFeatureIsEnabled('identityRename')
+    ) return
     const validated = validateDisplayName(renameName)
     if (!validated) {
       setRenameMessage(`Use ${DISPLAY_NAME_MIN_CHARACTERS}–${DISPLAY_NAME_MAX_CHARACTERS} letters, numbers, spaces, hyphens, or underscores.`)
       return
     }
-    if (!state.status.renameEligible) {
+    if (state.kind === 'ready' && !state.status.renameEligible) {
       setRenameMessage(state.status.nextEligibleRenameAt
         ? `Your next name change is available ${new Date(state.status.nextEligibleRenameAt).toLocaleDateString()}.`
         : 'A name change is not available yet.')
@@ -111,7 +119,7 @@ export default function RuntimeIdentityControls({
       setRenameMessage(playerFacingApiMessage(available.error, 'identity'))
       return
     }
-    if (!available.value.available && available.value.displayName !== state.identity.displayName) {
+    if (!available.value.available && available.value.displayName !== renameIdentity.displayName) {
       renameRequestActive.current = false
       if (renameController.current === controller) renameController.current = null
       setRenaming(false)
@@ -119,7 +127,7 @@ export default function RuntimeIdentityControls({
       return
     }
     const result = await api.renameIdentity(
-      state.identity.deviceCredential,
+      renameIdentity.deviceCredential,
       validated.displayName,
       controller.signal,
     )
@@ -132,7 +140,7 @@ export default function RuntimeIdentityControls({
       return
     }
     const stored = storeLeaderboardIdentity({
-      deviceCredential: state.identity.deviceCredential,
+      deviceCredential: renameIdentity.deviceCredential,
       displayName: result.value.displayName,
       recoveryVersion: result.value.recoveryVersion,
     }, window.localStorage)
@@ -141,7 +149,7 @@ export default function RuntimeIdentityControls({
       return
     }
     setRenameName('')
-    setRenameMessage(result.value.displayName === state.identity.displayName
+    setRenameMessage(result.value.displayName === renameIdentity.displayName
       ? 'Your display name is unchanged.'
       : 'Display name updated.')
     onRefresh()
@@ -219,7 +227,7 @@ export default function RuntimeIdentityControls({
       : 'This browser could not remove the saved identity.')
   }
 
-  if (state.kind === 'disabled') return null
+  if (state.kind === 'disabled' && !runtimeFeatureIsEnabled('recovery')) return null
 
   if (recovered) {
     return (
@@ -244,16 +252,22 @@ export default function RuntimeIdentityControls({
     <section className="lb-identity" aria-label="Your leaderboard identity">
       <div>
         <span>Your identity</span>
-        <h2>{state.kind === 'ready' ? state.identity.displayName : 'No verified identity on this device'}</h2>
+        <h2>{renameIdentity ? renameIdentity.displayName : 'No verified identity on this device'}</h2>
         {state.kind === 'checking' && <p>Checking this device identity…</p>}
         {state.kind === 'invalid' && <p>The saved device identity is no longer valid. Recover it or remove the stale local record.</p>}
         {state.kind === 'corrupt' && <p>The saved identity record could not be read safely.</p>}
         {state.kind === 'outdated' && <p>The saved identity record uses an unsupported version.</p>}
         {state.kind === 'unavailable' && <p>This browser could not read or verify its saved identity.</p>}
-        {state.kind === 'missing' && <p>A qualifying result can create an identity, or you can recover an existing one.</p>}
+        {state.kind === 'missing' && (
+          <p>{runtimeFeatureIsEnabled('recovery')
+            ? 'A qualifying result can create an identity, or you can recover an existing one.'
+            : 'No saved identity is available for the enabled identity action.'}</p>
+        )}
+        {state.kind === 'local' && <p>Saved on this device. Live identity status is separately disabled.</p>}
+        {state.kind === 'disabled' && <p>Identity status is disabled. Recovery remains separately controlled.</p>}
       </div>
 
-      {state.kind === 'ready' && (
+      {renameIdentity && runtimeFeatureIsEnabled('identityRename') && (
         <details>
           <summary>Change display name</summary>
           <form onSubmit={(event) => void rename(event)}>
@@ -264,23 +278,23 @@ export default function RuntimeIdentityControls({
               minLength={DISPLAY_NAME_MIN_CHARACTERS}
               maxLength={DISPLAY_NAME_MAX_CHARACTERS}
               autoComplete="off"
-              disabled={renaming || !state.status.renameEligible}
+              disabled={renaming || (state.kind === 'ready' && !state.status.renameEligible)}
               onChange={(event) => {
                 setRenameName(event.target.value)
                 setRenameMessage('')
               }}
             />
-            <button type="submit" disabled={renaming || !state.status.renameEligible}>
+            <button type="submit" disabled={renaming || (state.kind === 'ready' && !state.status.renameEligible)}>
               {renaming ? 'Updating…' : 'Update Display Name'}
             </button>
           </form>
-          {!state.status.renameEligible && state.status.nextEligibleRenameAt && (
+          {state.kind === 'ready' && !state.status.renameEligible && state.status.nextEligibleRenameAt && (
             <p>Next change: {new Date(state.status.nextEligibleRenameAt).toLocaleDateString()}</p>
           )}
         </details>
       )}
 
-      {runtimeFeatureIsEnabled('recovery') && state.kind !== 'ready' && (
+      {runtimeFeatureIsEnabled('recovery') && state.kind !== 'ready' && state.kind !== 'local' && (
         <details open={state.kind === 'invalid'}>
           <summary>Recover an identity</summary>
           <form onSubmit={(event) => void recover(event)}>
@@ -303,7 +317,7 @@ export default function RuntimeIdentityControls({
         </details>
       )}
 
-      {(state.kind === 'ready' || state.kind === 'invalid' || state.kind === 'corrupt' || state.kind === 'outdated') && (
+      {(state.kind === 'ready' || state.kind === 'local' || state.kind === 'invalid' || state.kind === 'corrupt' || state.kind === 'outdated') && (
         <button className="lb-identity__remove" type="button" onClick={remove}>Remove Identity from This Device</button>
       )}
       <p role="status">{renameMessage || recoveryMessage}</p>

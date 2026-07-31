@@ -228,6 +228,21 @@ guard without changing the protected configuration files. See
 Enabled legacy-state generation and Preview planning now refuse until the
 activation model explicitly carries the schema-4 identity and recovery gates.
 
+Milestone 3C-3 defines the canonical `leaderboardRead`, `identityClaim`,
+`identityStatus`, `identityRename`, `draftSubmission`, `identityRecovery`, and
+`cleanupCron` runtime authority and adds a versioned, expiring Preview versus
+Production evaluator. The broad identity switch is a disable-only ceiling;
+each identity action still requires its narrow flag. Checked-in protected
+configuration remains unchanged, so every capability is disabled and enabled
+planning continues to refuse at the protected-configuration boundary. The
+bounded, regular-file-only identity recovery command creates random,
+authority-bound read-only plans. It has no confirmation, execution,
+plan-consumption, callback, mutation adapter, network, subprocess, SQL,
+Wrangler, Cloudflare, or D1 path. Rollback order, emergency stop, future
+protected-change proposal, and the proposed additive operator-audit migration
+are in
+[Milestone 3C-3 schema-4 authority and identity recovery readiness](MILESTONE_3C3_SCHEMA4_AUTHORITY.md).
+
 ## Milestone 3A disabled identity and ranking foundation
 
 Milestone 3A advances the local runtime contract to exact schema version 4.

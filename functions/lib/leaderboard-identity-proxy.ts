@@ -1,6 +1,7 @@
 import { handleApiNotFoundRequest } from './api-response'
 import {
-  isLeaderboardIdentityEnabled,
+  isLeaderboardIdentityCapability,
+  isLeaderboardIdentityCapabilityEnabled,
   type LeaderboardIdentityModeEnv,
 } from './leaderboard-identity-mode'
 import {
@@ -14,7 +15,13 @@ export function handleLeaderboardIdentityProxyRequest(
   request: Request,
   env: LeaderboardIdentityProxyEnv,
   privatePath: string,
+  capability: unknown,
 ) {
-  if (!isLeaderboardIdentityEnabled(env)) return handleApiNotFoundRequest(request)
+  if (
+    !isLeaderboardIdentityCapability(capability)
+    || !isLeaderboardIdentityCapabilityEnabled(env, capability)
+  ) {
+    return handleApiNotFoundRequest(request)
+  }
   return proxyPrivateLeaderboardIdentityRequest(request, privatePath, env)
 }
