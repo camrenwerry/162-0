@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 const PRODUCTION_ORIGIN = 'http://127.0.0.1:4173'
 
-test('a missing lazy chunk with service workers isolated reaches the truthful fallback without reloading', async ({ page }) => {
+test('@ci a missing lazy chunk with service workers isolated reaches the truthful fallback without reloading', async ({ page }) => {
   let chunkRequests = 0
   let documentReloads = 0
   page.on('request', (request) => {

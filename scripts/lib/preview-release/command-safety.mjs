@@ -12,6 +12,7 @@ const KNOWN_MUTATION_ENTRY_POINTS = [
 ]
 
 const SAFE_NODE_ARGUMENTS = new Set([
+  ['scripts/ci-workflow-contract.test.mjs'],
   ['scripts/check-validation-bundles.mjs'],
   ['scripts/d1c1-foundation.test.mjs'],
   ['scripts/draft-timing-safe-workerd.test.mjs'],
@@ -24,10 +25,14 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/playwright-protected-output.test.mjs'],
   ['scripts/prepare-d1c4-activation.mjs', '--check'],
   ['scripts/preview-check.mjs'],
+  ['scripts/preview-check.mjs', '--release-validation'],
+  ['scripts/preview-check.mjs', '--routine-tests'],
   ['scripts/preview-check.mjs', '--tests'],
   ['scripts/preview-check.mjs', '--typecheck'],
   ['scripts/preview-check.test.mjs'],
+  ['scripts/preview-diagnostics-summary.test.mjs'],
   ['scripts/preview-plan.mjs'],
+  ['scripts/protected-release-files.test.mjs'],
   ['--test', 'scripts/preview-identity-bootstrap.test.mjs'],
   ['--test', 'scripts/preview-workflow.test.mjs'],
   ['--test', 'scripts/preview-release-automation.test.mjs'],
@@ -37,6 +42,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/schema4-activation-readiness.mjs', '--check'],
   ['scripts/schema4-activation-readiness.test.mjs'],
   ['scripts/smoke-game.mjs'],
+  ['scripts/text-integrity.mjs'],
   ['scripts/v010-presentation.test.mjs'],
   ['scripts/validate-lahman-data.mjs'],
   ['/tmp/pennant-pursuit-engine-smoke/engine-smoke.js'],
@@ -265,8 +271,13 @@ export function assertLocalReleaseCommand(scriptName, command) {
       if (!SAFE_TSC_ARGUMENTS.has(JSON.stringify(argumentsList))) throw new Error(`Unsupported TypeScript command in ${scriptName}.`)
     } else if (executable === 'eslint') {
       if (words.length !== 2 || words[1] !== '.') throw new Error(`Unsupported ESLint command in ${scriptName}.`)
+    } else if (executable === 'git') {
+      if (JSON.stringify(argumentsList) !== JSON.stringify(['diff', '--check'])) {
+        throw new Error(`Unsupported Git command in ${scriptName}.`)
+      }
     } else if (executable === 'playwright') {
       const safeArguments = new Set([
+        JSON.stringify(['test']),
         JSON.stringify(['test', '--grep', '@release']),
         JSON.stringify(['test', '--config', 'playwright.pwa.config.ts']),
       ])

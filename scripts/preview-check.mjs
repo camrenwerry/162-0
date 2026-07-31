@@ -53,6 +53,7 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('Draft ticket tests', 'test:draft-ticket'),
   npmRunStage('Workerd timing-safe-equality tests', 'test:draft-timing-safe-workerd'),
   npmRunStage('Private Worker tests', 'test:validation-worker'),
+  npmRunStage('Preview diagnostic summary tests', 'test:preview-diagnostics-summary'),
   npmRunStage('Randomizer tests', 'test:randomizer'),
   npmRunStage('Randomizer distribution tests', 'test:randomizer-distribution'),
   npmRunStage('Responsive layout contract tests', 'test:responsive'),
@@ -66,6 +67,17 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('Preview workflow foundation tests', 'test:preview-workflow'),
   npmRunStage('Preview release automation tests', 'test:preview-release-automation'),
 ])
+
+const ROUTINE_EXCLUDED_TEST_SCRIPTS = new Set([
+  'test:browser:pwa-transition',
+  'test:browser:release',
+])
+
+export const ROUTINE_TEST_STAGES = Object.freeze(TEST_STAGES.filter(
+  ({ command, args }) => command !== 'npm'
+    || args[0] !== 'run'
+    || !ROUTINE_EXCLUDED_TEST_SCRIPTS.has(args[1]),
+))
 
 export const RELEASE_STAGES = Object.freeze([
   npmRunStage('D1C.4 activation-state validation', 'd1c4:activation:check'),
@@ -81,6 +93,27 @@ export const RELEASE_STAGES = Object.freeze([
   npmRunStage('Preview submission smoke executable build', 'build:d1c4-submission-smoke'),
   npmRunStage('Preview retention smoke executable build', 'build:d1c4-retention-smoke'),
   npmRunStage('Bundle size and hash validation', 'validation-bundles:check'),
+])
+
+export const MANUAL_RELEASE_STAGES = Object.freeze([
+  npmRunStage('Protected release-file validation', 'ci:protected'),
+  npmRunStage('Routine CI workflow contract', 'ci:workflow'),
+  npmRunStage('Release text integrity', 'text:integrity'),
+  npmRunStage('D1C.4 activation-state validation', 'd1c4:activation:check'),
+  npmRunStage('Schema-4 activation readiness validation', 'schema4:readiness:check'),
+  stage('All repository type checks', 'npm', ['run', 'typecheck']),
+  stage('All release-relevant automated tests and resource identity checks', 'npm', ['test']),
+  npmRunStage('Lint', 'lint'),
+  npmRunStage('Production build', 'build'),
+  npmRunStage('Complete Chromium suite', 'test:browser'),
+  npmRunStage('PWA validation', 'test:pwa'),
+  npmRunStage('Preview private Worker dry-run build', 'validation-worker:build'),
+  npmRunStage('Production private Worker dry-run build', 'validation-worker:production:build'),
+  npmRunStage('Pages Functions build', 'pages:functions:build'),
+  npmRunStage('Preview submission smoke executable build', 'build:d1c4-submission-smoke'),
+  npmRunStage('Preview retention smoke executable build', 'build:d1c4-retention-smoke'),
+  npmRunStage('Bundle size and hash validation', 'validation-bundles:check'),
+  npmRunStage('Git whitespace validation', 'ci:diff'),
 ])
 
 export class StageFailure extends Error {
@@ -104,7 +137,11 @@ export function credentialFreeEnvironment(environment = process.env) {
     ...safe,
     WRANGLER_WRITE_LOGS: 'false',
     WRANGLER_SEND_METRICS: 'false',
+    WRANGLER_SEND_ERROR_REPORTS: 'false',
     WRANGLER_HIDE_BANNER: 'true',
+    CLOUDFLARE_CF_FETCH_ENABLED: 'false',
+    CLOUDFLARE_INCLUDE_PROCESS_ENV: 'false',
+    CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV: 'false',
     NPM_CONFIG_IGNORE_SCRIPTS: 'true',
   }
 }
@@ -262,8 +299,8 @@ export function runStages(stages, {
 }
 
 export function parsePreviewCheckArguments(argv) {
-  if (argv.includes('--tests') || argv.includes('--typecheck')) {
-    if (argv.length !== 1) throw usageError('Internal test and typecheck modes cannot be combined with other flags.')
+  if (argv.includes('--release-validation') || argv.includes('--tests') || argv.includes('--routine-tests') || argv.includes('--typecheck')) {
+    if (argv.length !== 1) throw usageError('Internal validation modes cannot be combined with other flags.')
     return { internal: argv[0] }
   }
   const allowed = new Set(['--offline', '--online', '--json', '--no-color'])
@@ -368,10 +405,27 @@ export async function runPreviewCheck(options = {}) {
 }
 
 export async function runCli(argv, options = {}) {
+  if (argv.length === 1 && argv[0] === '--release-validation') {
+    validateRuntimeCommandGraph(options.cwd ?? DEFAULT_REPOSITORY_ROOT, [
+      ...MANUAL_RELEASE_STAGES,
+      ...RELEASE_STAGES,
+      ...TYPECHECK_STAGES,
+      ...TEST_STAGES,
+    ])
+    runStages(MANUAL_RELEASE_STAGES, options)
+    ;(options.output ?? console).log('\n[release:validate] All credential-free local release validation passed.')
+    return EXIT_CODES.SUCCESS
+  }
   if (argv.length === 1 && argv[0] === '--tests') {
     validateRuntimeCommandGraph(options.cwd ?? DEFAULT_REPOSITORY_ROOT, [...RELEASE_STAGES, ...TYPECHECK_STAGES, ...TEST_STAGES])
     runStages(TEST_STAGES, options)
     ;(options.output ?? console).log('\n[test] All release-relevant automated tests passed.')
+    return EXIT_CODES.SUCCESS
+  }
+  if (argv.length === 1 && argv[0] === '--routine-tests') {
+    validateRuntimeCommandGraph(options.cwd ?? DEFAULT_REPOSITORY_ROOT, [...RELEASE_STAGES, ...TYPECHECK_STAGES, ...TEST_STAGES])
+    runStages(ROUTINE_TEST_STAGES, options)
+    ;(options.output ?? console).log('\n[test:routine] All routine unit and integration tests passed.')
     return EXIT_CODES.SUCCESS
   }
   if (argv.length === 1 && argv[0] === '--typecheck') {

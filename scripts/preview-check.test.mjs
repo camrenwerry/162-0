@@ -8,7 +8,9 @@ import { assertLocalReleaseGraph, collectReachableScripts } from './lib/preview-
 import { createFixedRunner } from './lib/preview-release/local-state.mjs'
 import { createPreviewPlan, runPreviewPlanCli } from './preview-plan.mjs'
 import {
+  MANUAL_RELEASE_STAGES,
   RELEASE_STAGES,
+  ROUTINE_TEST_STAGES,
   TEST_STAGES,
   TYPECHECK_STAGES,
   credentialFreeEnvironment,
@@ -346,7 +348,12 @@ test('Workerd timing-safe-equality is part of the aggregate test path', () => {
 
 test('all recursively reachable release scripts use supported local-only commands', () => {
   const packageJson = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'))
-  const coordinatorReferences = coordinatorScriptReferences([...TYPECHECK_STAGES, ...TEST_STAGES, ...RELEASE_STAGES])
+  const coordinatorReferences = coordinatorScriptReferences([
+    ...TYPECHECK_STAGES,
+    ...TEST_STAGES,
+    ...RELEASE_STAGES,
+    ...MANUAL_RELEASE_STAGES,
+  ])
   const roots = ['test', 'typecheck', ...coordinatorReferences]
   const reachable = assertLocalReleaseGraph(packageJson.scripts, roots)
 
@@ -355,6 +362,21 @@ test('all recursively reachable release scripts use supported local-only command
   assert.equal(reachable.some(({ name }) => name === 'test:d1c4-smoke-harness'), true)
   assert.equal(reachable.some(({ name }) => name === 'test:production-migration'), true)
   assert.equal(reachable.some(({ name }) => name === 'validate:data'), true)
+  assert.equal(reachable.some(({ name }) => name === 'ci:workflow'), true)
+  assert.equal(reachable.some(({ name }) => name === 'ci:diff'), true)
+  assert.equal(reachable.some(({ name }) => name === 'test:browser'), true)
+  assert.equal(packageJson.scripts['release:validate'], 'node scripts/preview-check.mjs --release-validation')
+})
+
+test('routine tests exclude release-only browsers while manual validation retains them', () => {
+  const routineNames = ROUTINE_TEST_STAGES.map(({ args }) => args[1])
+  const manualNames = MANUAL_RELEASE_STAGES.map(({ args }) => args[1])
+  assert.equal(routineNames.includes('test:browser:pwa-transition'), false)
+  assert.equal(routineNames.includes('test:browser:release'), false)
+  assert.equal(routineNames.includes('test:preview-diagnostics-summary'), true)
+  assert.equal(manualNames.includes('test:browser'), true)
+  assert.equal(manualNames.includes('validation-worker:production:build'), true)
+  assert.equal(manualNames.includes('ci:diff'), true)
 })
 
 test('recursive safety traversal rejects an unsafe nested command', () => {
@@ -367,7 +389,7 @@ test('recursive safety traversal rejects an unsafe nested command', () => {
 })
 
 test('runtime safety traversal validates pre and post lifecycle hooks', () => {
-  assert.throws(() => assertLocalReleaseGraph({ root: 'node scripts/preview-check.mjs', preroot: 'git push' }, ['root']), /Unsupported executable git/)
+  assert.throws(() => assertLocalReleaseGraph({ root: 'node scripts/preview-check.mjs', preroot: 'git push' }, ['root']), /Unsupported Git command/)
   assert.throws(() => assertLocalReleaseGraph({ root: 'node scripts/preview-check.mjs', postroot: 'wrangler deploy' }, ['root']), /Unsupported Wrangler command/)
 })
 
@@ -472,6 +494,12 @@ test('safety validation rejects unsupported Wrangler commands', () => {
   assert.throws(() => assertLocalReleaseGraph({ harmless: 'wrangler deploy' }, ['harmless']), /Unsupported Wrangler command/)
 })
 
+test('safety validation permits only the exact read-only Git whitespace command', () => {
+  assert.doesNotThrow(() => assertLocalReleaseGraph({ harmless: 'git diff --check' }, ['harmless']))
+  assert.throws(() => assertLocalReleaseGraph({ harmless: 'git status --short' }, ['harmless']), /Unsupported Git command/)
+  assert.throws(() => assertLocalReleaseGraph({ harmless: 'git push' }, ['harmless']), /Unsupported Git command/)
+})
+
 test('safety validation rejects prohibited command text without executing it', () => {
   let executionAttempts = 0
   const prohibitedCommand = () => { executionAttempts += 1 }
@@ -515,7 +543,11 @@ test('child processes receive exact arguments and all Wrangler safeguards', () =
   for (const name of credentialNames) assert.equal(calls[0].options.env[name], undefined)
   assert.equal(calls[0].options.env.WRANGLER_WRITE_LOGS, 'false')
   assert.equal(calls[0].options.env.WRANGLER_SEND_METRICS, 'false')
+  assert.equal(calls[0].options.env.WRANGLER_SEND_ERROR_REPORTS, 'false')
   assert.equal(calls[0].options.env.WRANGLER_HIDE_BANNER, 'true')
+  assert.equal(calls[0].options.env.CLOUDFLARE_CF_FETCH_ENABLED, 'false')
+  assert.equal(calls[0].options.env.CLOUDFLARE_INCLUDE_PROCESS_ENV, 'false')
+  assert.equal(calls[0].options.env.CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV, 'false')
   assert.equal(calls[0].options.env.NPM_CONFIG_IGNORE_SCRIPTS, 'true')
   assert.equal(calls[0].options.stdio, 'inherit')
 })

@@ -77,6 +77,9 @@ retention, rollback warnings, and submission controls are in
 The local browser, credential, recovery, observability, and schema-4 readiness
 contract is in
 [`docs/MILESTONE_3C1_LOCAL_RUNTIME.md`](docs/MILESTONE_3C1_LOCAL_RUNTIME.md).
+CI, dependency-risk decisions, test tiers, aggregate-only Preview diagnostics,
+and the future schema-4 operator procedure are in
+[`docs/MILESTONE_3C2_CI_RELEASE_STABILIZATION.md`](docs/MILESTONE_3C2_CI_RELEASE_STABILIZATION.md).
 
 Preview and test the exact production output locally:
 

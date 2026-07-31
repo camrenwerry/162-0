@@ -6,20 +6,28 @@ import { fileURLToPath } from 'node:url'
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url)
 const REPOSITORY_ROOT = path.resolve(path.dirname(SCRIPT_PATH), '..')
-const TEXT_EXTENSIONS = new Set(['.css', '.example', '.html', '.js', '.json', '.md', '.mjs', '.sql', '.toml', '.ts', '.tsx'])
+const TEXT_EXTENSIONS = new Set(['.css', '.example', '.html', '.js', '.json', '.md', '.mjs', '.sql', '.toml', '.ts', '.tsx', '.yml', '.yaml'])
 const RELEASE_WORKFLOW_FILES = [
+  '.github/workflows/ci.yml',
   '.env.example',
   'README.md',
   'config/preview-release.json',
+  'config/preview-schema4-readiness.json',
   'docs/BACKEND_OPERATIONS.md',
   'docs/D1C4_ACTIVATION.md',
+  'docs/MILESTONE_3C1_LOCAL_RUNTIME.md',
+  'docs/MILESTONE_3C2_CI_RELEASE_STABILIZATION.md',
   'docs/PREVIEW_RELEASE_WORKFLOW.md',
   'package.json',
+  'scripts/ci-workflow-contract.test.mjs',
+  'scripts/preview-diagnostics-summary.mjs',
+  'scripts/preview-diagnostics-summary.test.mjs',
   'scripts/preview-check.mjs',
   'scripts/preview-check.test.mjs',
   'scripts/preview-identity-bootstrap.mjs',
   'scripts/preview-identity-bootstrap.test.mjs',
   'scripts/preview-plan.mjs',
+  'scripts/protected-release-files.test.mjs',
   'scripts/preview-workflow.test.mjs',
   'scripts/text-integrity.mjs',
   'scripts/lib/preview-release/binding-inventory.mjs',

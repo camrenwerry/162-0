@@ -68,7 +68,7 @@ async function installSuccessfulClaimFlow(page: Page) {
   }))
 }
 
-test('@release production ignores development activation and disabled leaderboard performs no public request', async ({ page }) => {
+test('@ci @release production ignores development activation and disabled leaderboard performs no public request', async ({ page }) => {
   const apiRequests: string[] = []
   page.on('request', (request) => {
     if (new URL(request.url()).pathname.startsWith('/api/')) apiRequests.push(request.url())
@@ -84,7 +84,7 @@ test('@release production ignores development activation and disabled leaderboar
   expect(apiRequests).toEqual([])
 })
 
-test('@release ticket acquisition succeeds once and fails into an honest local draft', async ({ page }) => {
+test('@ci @release ticket acquisition succeeds once and fails into an honest local draft', async ({ page }) => {
   let ticketCalls = 0
   await page.route('**/api/v1/draft-ticket', async (route) => {
     ticketCalls += 1

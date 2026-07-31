@@ -12,6 +12,7 @@ dist
 dist-ssr
 .wrangler/
 .preview-release/
+.preview-diagnostics/
 wrangler.d1c4-*.generated.toml
 *.local
 playwright-report/

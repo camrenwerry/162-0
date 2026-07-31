@@ -145,7 +145,7 @@ the entire small-cohort session:
 
 ```bash
 npx wrangler tail pennant-pursuit-validation-preview --format json --search preview.operation
-npx wrangler pages deployment tail --project-name pennant-pursuit-preview --environment preview --format json --search preview.operation
+npx wrangler pages deployment tail --project-name diamond-draft --environment preview --format json --search preview.operation
 ```
 
 Pause the supervised session and disable the affected gates when the operator
@@ -160,10 +160,12 @@ observes any of these live conditions:
 
 Live tails alone cannot reliably calculate historical percentages, hourly
 rates, unique-user rates, or events missed before the operator connected.
-Retained, privacy-reviewed aggregation and tested alerting are a Milestone 3C-2
-activation prerequisite before any threshold depending on history, percentages,
-or time-window rates may be claimed. Never paste raw tester requests or private
-material into an incident record.
+Milestone 3C-2 adds an aggregate-only local per-session collector, not durable
+remote telemetry; see
+[Milestone 3C-2 CI and Preview release stabilization](MILESTONE_3C2_CI_RELEASE_STABILIZATION.md).
+Any threshold depending on complete history, percentages, or time-window rates
+still requires separately authorized retained telemetry. Never paste raw tester
+requests or private material into an incident record.
 
 ## Schema-4 activation readiness and rollback
 
