@@ -202,6 +202,32 @@ function snapshotTree(root) {
   return entries
 }
 
+function snapshotControlledRepository(root) {
+  const inventory = spawnSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'], {
+    cwd: root,
+    shell: false,
+  })
+  assert.equal(inventory.error, undefined)
+  assert.equal(inventory.signal, null)
+  assert.equal(inventory.status, 0, inventory.stderr.toString('utf8'))
+
+  return inventory.stdout.toString('utf8').split('\0').filter(Boolean).sort().map((relative) => {
+    const absolute = path.join(root, relative)
+    const metadata = lstatSync(absolute)
+    if (metadata.isSymbolicLink()) {
+      return { path: relative, type: 'symlink', mode: metadata.mode & 0o777, target: readlinkSync(absolute) }
+    }
+    assert.equal(metadata.isFile(), true, relative)
+    return {
+      path: relative,
+      type: 'file',
+      mode: metadata.mode & 0o777,
+      size: metadata.size,
+      sha256: fileHash(absolute),
+    }
+  })
+}
+
 function customDomain(index, overrides = {}) {
   return {
     id: (BigInt(index) + 1n).toString(16).padStart(32, '0'),
@@ -487,6 +513,9 @@ test('the exact public Node entry point leaves the complete controlled repositor
     writeFileSync(path.join(temporaryRoot, 'nested/sentinel.bin'), Buffer.from([0, 1, 2, 3, 255]))
     chmodSync(path.join(temporaryRoot, 'nested/sentinel.bin'), 0o640)
     symlinkSync('../README.md', path.join(temporaryRoot, 'nested/readme-link'))
+    const repositoryRootPolicyPath = path.join(temporaryRoot, 'nested/repository-root-policy.txt')
+    writeFileSync(repositoryRootPolicyPath, `Immutable policy value: ${REPOSITORY_ROOT}\n`)
+    assert.equal(readFileSync(repositoryRootPolicyPath, 'utf8').includes(REPOSITORY_ROOT), true)
 
     const preloadPath = path.join(controlRoot, 'public-entry-preload.mjs')
     const nodeWrapper = path.join(controlRoot, 'node')
@@ -497,10 +526,6 @@ test('the exact public Node entry point leaves the complete controlled repositor
     )
     chmodSync(nodeWrapper, 0o755)
 
-    for (const entry of snapshotTree(temporaryRoot).filter(({ type }) => type === 'file')) {
-      const contents = Buffer.from(entry.contents, 'base64').toString('utf8')
-      assert.equal(contents.includes(REPOSITORY_ROOT), false, entry.path)
-    }
     assert.equal(readFileSync(preloadPath, 'utf8').includes(REPOSITORY_ROOT), false)
     assert.equal(readFileSync(nodeWrapper, 'utf8').includes(REPOSITORY_ROOT), false)
 
@@ -512,7 +537,15 @@ test('the exact public Node entry point leaves the complete controlled repositor
     for (const key of GENERIC_CLOUDFLARE_CREDENTIALS) {
       assert.equal(Object.hasOwn(childEnvironment, key), false)
     }
-    const before = snapshotTree(temporaryRoot)
+    const controlledCheckoutBefore = snapshotControlledRepository(REPOSITORY_ROOT)
+    assert.equal(
+      controlledCheckoutBefore.some(({ path: relative }) => relative === 'scripts/lib/preview-release/local-state.mjs'),
+      true,
+    )
+    const before = {
+      controlledCheckout: controlledCheckoutBefore,
+      temporaryRepository: snapshotTree(temporaryRoot),
+    }
     const result = spawnSync('node', ['scripts/preview-identity-bootstrap.mjs', '--json', '--no-color'], {
       cwd: temporaryRoot,
       env: childEnvironment,
@@ -529,7 +562,10 @@ test('the exact public Node entry point leaves the complete controlled repositor
       JSON.parse(requestLine.slice('__PP15_PUBLIC_REQUESTS__'.length)),
       expectedHappyPathRequests(),
     )
-    assert.deepEqual(snapshotTree(temporaryRoot), before)
+    assert.deepEqual({
+      controlledCheckout: snapshotControlledRepository(REPOSITORY_ROOT),
+      temporaryRepository: snapshotTree(temporaryRoot),
+    }, before)
   } finally {
     rmSync(temporaryRoot, { recursive: true, force: true })
     rmSync(controlRoot, { recursive: true, force: true })
