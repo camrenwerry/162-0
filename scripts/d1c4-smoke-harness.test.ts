@@ -8,21 +8,27 @@ import {
   DRAFT_SUBMISSION_SCHEMA_VERSION,
 } from '../functions/lib/draft-submission-constants'
 import type { DraftTranscript } from '../src/game/DraftTranscript'
+import * as shippedSubmissionSmoke from './d1c4-submission-smoke'
+import * as shippedRetentionSmoke from './d1c4-retention-smoke'
 import {
-  runSubmissionSmoke,
   submissionSmokeCli,
+} from './d1c4-submission-smoke'
+import {
   assertStoredSuccessReceipt,
+  runTestOnlySubmissionSmoke as runSubmissionSmoke,
   validateSubmissionSuccessReceipt,
   type SubmissionSmokeD1,
-} from './d1c4-submission-smoke'
+} from './test-only/d1c4-submission-smoke-orchestration'
+import {
+  retentionSmokeCli,
+} from './d1c4-retention-smoke'
 import {
   createRetentionSentinels,
   retentionSentinelIds,
-  retentionSmokeCli,
   RetentionSmokeFailure,
-  runRetentionSmoke,
+  runTestOnlyRetentionSmoke as runRetentionSmoke,
   type RetentionSmokeD1,
-} from './d1c4-retention-smoke'
+} from './test-only/d1c4-retention-smoke-orchestration'
 import type {
   PreviewD1MutationClient,
   PreviewD1ReadClient,
@@ -425,6 +431,13 @@ function submissionD1(d1: StatefulFakeD1): SubmissionSmokeD1 {
   return { read: d1, mutate: d1 }
 }
 
+assert.deepEqual(Object.keys(shippedSubmissionSmoke), ['submissionSmokeCli'])
+assert.deepEqual(Object.keys(shippedRetentionSmoke), ['retentionSmokeCli'])
+await assert.rejects(
+  () => runSubmissionSmoke({ target }, undefined),
+  /requires explicit in-memory network and D1 adapters/,
+)
+
 async function seedSubmissionRow(
   d1: StatefulFakeD1,
   ticket: IssuedPreviewTicket,
@@ -453,7 +466,7 @@ const submissionPrivateRequestTimes: number[] = []
 let submissionClockMs = 0
 const submissionFetcher = submissionFake(submissionState)
 const submissionResult = await runSubmissionSmoke(
-  { target, apiToken: 'local-test-token' },
+  { target },
   {
     fetcher: async (input, init) => {
       const pathname = new URL(String(input)).pathname
@@ -477,7 +490,7 @@ const submissionResult = await runSubmissionSmoke(
       submissionWaits.push({ milliseconds, requestPaths: [...submissionRequestPaths] })
       submissionClockMs += milliseconds
     },
-    createD1: () => submissionD1(submissionState),
+    d1: submissionD1(submissionState),
   },
 )
 assert.deepEqual(submissionResult, {
@@ -574,19 +587,19 @@ for (const changedAtRead of [2, 3]) {
     ? { ...row, successResponseJson: `${row.successResponseJson} ` }
     : row
   await assert.rejects(() => runSubmissionSmoke(
-    { target, apiToken: 'local-test-token' },
-    { fetcher: submissionFake(changedState), sleep: noWait, createD1: () => submissionD1(changedState) },
+    { target },
+    { fetcher: submissionFake(changedState), sleep: noWait, d1: submissionD1(changedState) },
   ), /immutable|canonical UTF-8/)
   assert.equal(changedState.rows.size, 0)
 }
 
 const partialSubmissionState = new StatefulFakeD1()
 await assert.rejects(() => runSubmissionSmoke(
-  { target, apiToken: 'local-test-token' },
+  { target },
   {
     fetcher: submissionFake(partialSubmissionState, { failAfterPersist: true }),
     sleep: noWait,
-    createD1: () => submissionD1(partialSubmissionState),
+    d1: submissionD1(partialSubmissionState),
   },
 ), /no valid HTTP success receipt was received/)
 assert.equal(partialSubmissionState.rows.size, 1, 'an HTTP failure cannot establish cleanup ownership')
@@ -595,22 +608,22 @@ assert.equal(partialSubmissionState.deleteCalls, 0)
 const submissionCleanupFailure = new StatefulFakeD1()
 submissionCleanupFailure.failCleanup = true
 await assert.rejects(() => runSubmissionSmoke(
-  { target, apiToken: 'local-test-token' },
+  { target },
   {
     fetcher: submissionFake(submissionCleanupFailure),
     sleep: noWait,
-    createD1: () => submissionD1(submissionCleanupFailure),
+    d1: submissionD1(submissionCleanupFailure),
   },
 ), /injected cleanup failure/)
 assert.equal(submissionCleanupFailure.rows.size, 2)
 
 const lostSubmissionResponse = new StatefulFakeD1()
 await assert.rejects(() => runSubmissionSmoke(
-  { target, apiToken: 'local-test-token' },
+  { target },
   {
     fetcher: submissionFake(lostSubmissionResponse, { loseResponseAfterPersist: true }),
     sleep: noWait,
-    createD1: () => submissionD1(lostSubmissionResponse),
+    d1: submissionD1(lostSubmissionResponse),
   },
 ), /no valid HTTP success receipt was received/)
 assert.equal(lostSubmissionResponse.rows.size, 1, 'a lost response can never establish cleanup ownership')
@@ -642,12 +655,12 @@ const ambiguousCompetitorCases: readonly [string, AmbiguousSubmissionResponse, P
 for (const [description, ambiguousAfterCompetitor, competitorOverrides] of ambiguousCompetitorCases) {
   const state = new StatefulFakeD1()
   await assert.rejects(() => runSubmissionSmoke(
-    { target, apiToken: 'local-test-token' },
+    { target },
     {
       fetcher: submissionFake(state, { ambiguousAfterCompetitor, competitorOverrides }),
       requestTimeoutMs: ambiguousAfterCompetitor === 'timeout' ? 5 : 1_000,
       sleep: noWait,
-      createD1: () => submissionD1(state),
+      d1: submissionD1(state),
     },
   ), /submission ownership could not be established/, description)
   assert(state.rows.has(tickets[0].ticketId), `${description}: competitor row must remain present`)
@@ -657,7 +670,7 @@ for (const [description, ambiguousAfterCompetitor, competitorOverrides] of ambig
 
 const invalidCreatedReceiptState = new StatefulFakeD1()
 await assert.rejects(() => runSubmissionSmoke(
-  { target, apiToken: 'local-test-token' },
+  { target },
   {
     fetcher: submissionFake(invalidCreatedReceiptState, {
       responseAfterPersist: (validReceipt) => {
@@ -667,7 +680,7 @@ await assert.rejects(() => runSubmissionSmoke(
       },
     }),
     sleep: noWait,
-    createD1: () => submissionD1(invalidCreatedReceiptState),
+    d1: submissionD1(invalidCreatedReceiptState),
   },
 ), /submission ownership could not be established/)
 assert(invalidCreatedReceiptState.rows.has(tickets[0].ticketId))
@@ -680,7 +693,7 @@ for (const [description, overrides] of [
   const mismatchingReservationRace = new StatefulFakeD1()
   let inserted = false
   await assert.rejects(() => runSubmissionSmoke(
-    { target, apiToken: 'local-test-token' },
+    { target },
     {
       fetcher: submissionFake(mismatchingReservationRace, {
         insertBeforeSubmission: async (d1, ticket) => {
@@ -691,7 +704,7 @@ for (const [description, overrides] of [
         },
       }),
       sleep: noWait,
-      createD1: () => submissionD1(mismatchingReservationRace),
+      d1: submissionD1(mismatchingReservationRace),
     },
   ), /mismatching row.*submission ownership could not be established/)
   assert(mismatchingReservationRace.rows.has(tickets[0].ticketId), `${description} competitor must remain untouched`)
@@ -709,11 +722,11 @@ submissionCleanupMismatch.beforeDelete = (fingerprints) => {
   submissionCleanupMismatch.rows.set(ticketId, { ...row, transcriptDigest: 'e'.repeat(64) })
 }
 await assert.rejects(() => runSubmissionSmoke(
-  { target, apiToken: 'local-test-token' },
+  { target },
   {
     fetcher: submissionFake(submissionCleanupMismatch),
     sleep: noWait,
-    createD1: () => submissionD1(submissionCleanupMismatch),
+    d1: submissionD1(submissionCleanupMismatch),
   },
 ), /unexpected count.*ownership mismatch/)
 assert.equal(submissionCleanupMismatch.rows.size, 1)
@@ -722,7 +735,7 @@ assert.equal(submissionCleanupMismatch.rows.values().next().value?.transcriptDig
 const failedReplayCompetitor = new StatefulFakeD1()
 let recoveryCompetitorInserted = false
 await assert.rejects(() => runSubmissionSmoke(
-  { target, apiToken: 'local-test-token' },
+  { target },
   {
     fetcher: submissionFake(failedReplayCompetitor, {
       insertBeforeSubmission: async (d1, ticket) => {
@@ -733,7 +746,7 @@ await assert.rejects(() => runSubmissionSmoke(
       },
     }),
     sleep: noWait,
-    createD1: () => submissionD1(failedReplayCompetitor),
+    d1: submissionD1(failedReplayCompetitor),
   },
 ), /deliberately invalid deterministic replay|row-free/)
 assert(failedReplayCompetitor.rows.has(tickets[1].ticketId), 'failed replay competitor must remain untouched')
@@ -753,7 +766,7 @@ for (const [name, fetcher, requestTimeoutMs] of [
   const state = new StatefulFakeD1()
   const result = await submissionSmokeCli(
     [...commonArguments, '--execute'],
-    { fetcher, requestTimeoutMs, sleep: noWait, createD1: () => submissionD1(state) },
+    { fetcher, requestTimeoutMs, sleep: noWait, d1: submissionD1(state) },
     { CLOUDFLARE_API_TOKEN: 'local-test-token' },
     output,
   )
@@ -782,11 +795,15 @@ function retentionD1(d1: StatefulFakeD1): RetentionSmokeD1 {
 const RETENTION_RUN_ID = '1234567890abcdef1234567890abcdef1234567890abcdef'
 const retentionExecution = {
   target,
-  apiToken: 'local-test-token',
   pollSeconds: 5,
   timeoutSeconds: 3_600,
   requestTimeoutMs: 1_000,
 }
+
+await assert.rejects(
+  () => runRetentionSmoke(retentionExecution, undefined),
+  /requires explicit in-memory network and D1 adapters/,
+)
 
 function seedRow(d1: StatefulFakeD1, ticketId: string, retainUntilMs: number) {
   d1.rows.set(ticketId, {
@@ -807,7 +824,7 @@ async function runRetentionFake(
   let clock = 1_000_000
   return runRetentionSmoke(retentionExecution, {
     fetcher: async () => healthResponse(),
-    createD1: () => retentionD1(d1),
+    d1: retentionD1(d1),
     runId: () => RETENTION_RUN_ID,
     now: () => clock,
     sleep: async (milliseconds) => {
@@ -902,7 +919,7 @@ const sharedContention = new StatefulFakeD1()
 let contentionClock = 1_000_000
 await assert.rejects(() => runRetentionSmoke(retentionExecution, {
   fetcher: async () => healthResponse(),
-  createD1: () => retentionD1(sharedContention),
+  d1: retentionD1(sharedContention),
   runId: () => RETENTION_RUN_ID,
   now: () => contentionClock,
   sleep: async (milliseconds) => {
@@ -922,7 +939,7 @@ const transientOrderingCompetitor = new StatefulFakeD1()
 let transientClock = 1_000_000
 await assert.rejects(() => runRetentionSmoke(retentionExecution, {
   fetcher: async () => healthResponse(),
-  createD1: () => retentionD1(transientOrderingCompetitor),
+  d1: retentionD1(transientOrderingCompetitor),
   runId: () => RETENTION_RUN_ID,
   now: () => transientClock,
   sleep: async (milliseconds) => {
@@ -941,7 +958,7 @@ const competitorBeforeRangeAfterPreflight = new StatefulFakeD1()
 let beforeRangeClock = 1_000_000
 await assert.rejects(() => runRetentionSmoke(retentionExecution, {
   fetcher: async () => healthResponse(),
-  createD1: () => retentionD1(competitorBeforeRangeAfterPreflight),
+  d1: retentionD1(competitorBeforeRangeAfterPreflight),
   runId: () => RETENTION_RUN_ID,
   now: () => beforeRangeClock,
   sleep: async (milliseconds) => {
@@ -960,7 +977,7 @@ const competitorInsideSentinelRange = new StatefulFakeD1()
 let insideRangeClock = 1_000_000
 await assert.rejects(() => runRetentionSmoke(retentionExecution, {
   fetcher: async () => healthResponse(),
-  createD1: () => retentionD1(competitorInsideSentinelRange),
+  d1: retentionD1(competitorInsideSentinelRange),
   runId: () => RETENTION_RUN_ID,
   now: () => insideRangeClock,
   sleep: async (milliseconds) => {
@@ -1009,7 +1026,7 @@ const missedFirstBatch = new StatefulFakeD1()
 let missedClock = 1_000_000
 await assert.rejects(() => runRetentionSmoke(retentionExecution, {
   fetcher: async () => healthResponse(),
-  createD1: () => retentionD1(missedFirstBatch),
+  d1: retentionD1(missedFirstBatch),
   runId: () => RETENTION_RUN_ID,
   now: () => missedClock,
   sleep: async (milliseconds) => {
@@ -1064,7 +1081,7 @@ const unexplainedTransition = new StatefulFakeD1()
 let implementationClock = 1_000_000
 await assert.rejects(() => runRetentionSmoke(retentionExecution, {
   fetcher: async () => healthResponse(),
-  createD1: () => retentionD1(unexplainedTransition),
+  d1: retentionD1(unexplainedTransition),
   runId: () => RETENTION_RUN_ID,
   now: () => implementationClock,
   sleep: async (milliseconds) => {
@@ -1196,7 +1213,7 @@ assert.equal(await retentionSmokeCli([...commonArguments, '--execute'], {
   },
   createD1: () => retentionD1(retentionRedirectState),
 }, { CLOUDFLARE_API_TOKEN: 'local-test-token' }, output), 1)
-assert.deepEqual(retentionRedirectContacts, [`${target.previewBaseUrl}/api/v1/health`])
+assert.deepEqual(retentionRedirectContacts, [])
 assert.equal(retentionRedirectState.rows.size, 0)
 
 let retentionProductionContacts = 0

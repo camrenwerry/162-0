@@ -1,4 +1,4 @@
-import { asWorkflowError } from './errors.mjs'
+import { asWorkflowError, refusalError } from './errors.mjs'
 import { immutablePlain } from './canonical.mjs'
 import { safeErrorMessage } from './redaction.mjs'
 
@@ -83,34 +83,36 @@ export function validationReport(checks) {
   })
 }
 
-export function rollbackGuidance({
-  targetState,
-  observedState,
-  mutationAttempted,
-  completedStageIds,
-  attemptedStageIds = completedStageIds,
-  failedStageId = null,
-}) {
-  const publicEnableAttempted = attemptedStageIds.includes('pages.deploy') && targetState !== 'disabled'
-  const publicDisableCompleted = completedStageIds.includes('pages.disable')
-    || (completedStageIds.includes('pages.deploy') && targetState === 'disabled')
-  const publicGateEnabled = publicEnableAttempted
-    || (observedState !== 'disabled' && !publicDisableCompleted)
-  const migrationApplied = attemptedStageIds.includes('migration.apply')
+export function rollbackGuidance(input) {
+  const {
+    targetState,
+    observedState,
+    mutationAttempted,
+    completedStageIds,
+    attemptedStageIds = completedStageIds,
+    failedStageId = null,
+  } = immutablePlain(input)
+  const currentStages = new Set(['worker.deploy', 'pages.deploy'])
+  if (targetState !== 'disabled' || observedState !== 'disabled'
+    || typeof mutationAttempted !== 'boolean'
+    || !Array.isArray(completedStageIds) || !Array.isArray(attemptedStageIds)
+    || completedStageIds.some((id) => !currentStages.has(id))
+    || attemptedStageIds.some((id) => !currentStages.has(id))
+    || (failedStageId !== null && !currentStages.has(failedStageId))) {
+    throw refusalError('Rollback reporting accepts only the current disabled-only execution boundary.', 'execution.rollback')
+  }
   return immutablePlain({
     schemaVersion: 1,
     kind: 'preview-release-rollback-guidance',
     automaticRollbackPerformed: false,
-    urgency: !mutationAttempted ? 'none' : publicGateEnabled ? 'disable-public-gate' : 'inspect-before-retry',
+    urgency: !mutationAttempted ? 'none' : 'inspect-before-retry',
     failedStageId,
-    publicGateMayBeEnabled: publicGateEnabled,
-    d1MigrationMayHaveAdvanced: migrationApplied,
+    publicGateMayBeEnabled: false,
+    d1MigrationMayHaveAdvanced: false,
     d1RollbackAvailable: false,
     nextAction: !mutationAttempted
       ? 'No remote rollback is needed because no mutation was attempted.'
-      : publicGateEnabled
-        ? 'Generate and independently approve a fresh disabled-state plan; disable the Pages submission gate before any other rollback action.'
-        : 'Inspect the final report and live Preview state read-only before generating a fresh plan. Do not resume from the failed local package.',
+      : 'Inspect the final report and live Preview state read-only before generating a fresh disabled plan. Do not resume from the failed local package.',
     warning: 'Never reuse a partial package, infer success from a command exit alone, or apply a D1 down-migration automatically.',
   })
 }

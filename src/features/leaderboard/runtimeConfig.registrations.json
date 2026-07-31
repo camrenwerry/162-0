@@ -1,0 +1,58 @@
+{
+  "leaderboardRead": {
+    "capability": "leaderboardRead",
+    "surface": "frontendBuild",
+    "descriptorPath": "capabilities.leaderboardRead.frontendBuild",
+    "consumerIdentity": "src/features/leaderboard/runtimeConfig.ts#protectedFrontendFeatureState:leaderboardRead",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  },
+  "identityClaim": {
+    "capability": "identityClaim",
+    "surface": "frontendBuild",
+    "descriptorPath": "capabilities.identityClaim.frontendBuild",
+    "consumerIdentity": "src/features/leaderboard/runtimeConfig.ts#protectedFrontendFeatureState:identityClaim",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  },
+  "identityStatus": {
+    "capability": "identityStatus",
+    "surface": "frontendBuild",
+    "descriptorPath": "capabilities.identityStatus.frontendBuild",
+    "consumerIdentity": "src/features/leaderboard/runtimeConfig.ts#protectedFrontendFeatureState:identityStatus",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  },
+  "identityRename": {
+    "capability": "identityRename",
+    "surface": "frontendBuild",
+    "descriptorPath": "capabilities.identityRename.frontendBuild",
+    "consumerIdentity": "src/features/leaderboard/runtimeConfig.ts#protectedFrontendFeatureState:identityRename",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  },
+  "draftSubmission": {
+    "capability": "draftSubmission",
+    "surface": "frontendBuild",
+    "descriptorPath": "capabilities.draftSubmission.frontendBuild",
+    "consumerIdentity": "src/features/leaderboard/runtimeConfig.ts#protectedFrontendFeatureState:draftSubmission",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  },
+  "identityRecovery": {
+    "capability": "identityRecovery",
+    "surface": "frontendBuild",
+    "descriptorPath": "capabilities.identityRecovery.frontendBuild",
+    "consumerIdentity": "src/features/leaderboard/runtimeConfig.ts#protectedFrontendFeatureState:identityRecovery",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  },
+  "cleanupCron": {
+    "capability": "cleanupCron",
+    "surface": "frontendBuild",
+    "descriptorPath": null,
+    "consumerIdentity": null,
+    "consumerStatus": "deliberately-absent",
+    "compatibilityCeiling": null
+  }
+}

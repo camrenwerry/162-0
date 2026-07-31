@@ -81,10 +81,19 @@ test('@ci @release production ignores development activation and disabled leader
   await page.goto('http://127.0.0.1:4173/leaderboard?leaderboardFixture=ready&leaderboardPreview=qualified')
   await expect(page.getByRole('heading', { name: 'Leaderboards aren’t open yet' })).toBeVisible()
   await expect(page.getByText('Local preview')).toHaveCount(0)
+  await expect(page.getByRole('button', { name: 'Claim Display Name' })).toHaveCount(0)
+  await expect(page.getByText('Change display name')).toHaveCount(0)
+  await expect(page.getByText('Recover an identity')).toHaveCount(0)
+
+  await page.goto('http://127.0.0.1:4173/')
+  await page.getByRole('button', { name: 'Play Classic' }).click()
+  await expect(page.getByRole('heading', { name: 'Make your pick' })).toBeVisible()
+  await expect(page.getByText('Public submission is off. This draft will stay on this device.')).toBeVisible()
   expect(apiRequests).toEqual([])
 })
 
-test('@release partial claim/submission activation allows anonymous submission only when identity is genuinely missing', async ({ page }) => {
+test('deferred partial claim/submission activation allows anonymous submission only when identity is genuinely missing', async ({ page }) => {
+  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
   let statusRequests = 0
   let submissionBody: Record<string, unknown> | null = null
   page.on('request', (request) => {
@@ -109,7 +118,8 @@ test('@release partial claim/submission activation allows anonymous submission o
   await expect(page.getByText('Recover an identity')).toHaveCount(0)
 })
 
-test('@release corrupt, outdated, rejected, and temporarily unverifiable continuity block anonymous replacement', async ({ browser }) => {
+test('deferred corrupt, outdated, rejected, and temporarily unverifiable continuity block anonymous replacement', async ({ browser }) => {
+  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
   test.setTimeout(180_000)
   const scenarios = [
     {
@@ -235,7 +245,8 @@ test('@ci @release ticket acquisition succeeds once and fails into an honest loc
   await expect(page.getByPlaceholder('Search players')).toBeEnabled()
 })
 
-test('@release an accepted submission with a lost response uses one exact retry, then claims identity and removes the one-time code', async ({ page }) => {
+test('deferred an accepted submission with a lost response uses one exact retry, then claims identity and removes the one-time code', async ({ page }) => {
+  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
   const consoleText: string[] = []
   const requestUrls: string[] = []
   page.on('console', (message) => consoleText.push(message.text()))
@@ -376,6 +387,7 @@ test('@release an accepted submission with a lost response uses one exact retry,
 })
 
 test('conflicting exact submission retry remains local and cannot double-submit', async ({ page }) => {
+  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
   await page.route('**/api/v1/draft-ticket', (route) => route.fulfill({ json: ticketResponse() }))
   let submissions = 0
   await page.route('**/api/v1/submit-draft', async (route) => {
@@ -404,6 +416,7 @@ test('conflicting exact submission retry remains local and cannot double-submit'
 })
 
 test('submission offline, timeout, and rate-limit failures restore result controls without automatic mutation retries', async ({ page, context }) => {
+  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
   test.setTimeout(150_000)
   await page.route('**/api/v1/draft-ticket', (route) => route.fulfill({ json: ticketResponse() }))
   let mode: 'offline' | 'timeout' | 'rate-limit' = 'offline'
@@ -457,6 +470,7 @@ test('submission offline, timeout, and rate-limit failures restore result contro
 })
 
 test('identity storage readback failure keeps one-time recovery material visible and reports the device as unready', async ({ page }) => {
+  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
   await page.addInitScript((identityKey) => {
     const setItem = Storage.prototype.setItem
     Storage.prototype.setItem = function safeTestSetItem(key: string, value: string) {
@@ -477,6 +491,7 @@ test('identity storage readback failure keeps one-time recovery material visible
 })
 
 test('identity storage write exception preserves one-time recovery and restores usable controls without a partial record', async ({ page }) => {
+  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
   await page.addInitScript((identityKey) => {
     const original = Storage.prototype.setItem
     const restoreKey = '__restorePennantIdentityStorageWrite'

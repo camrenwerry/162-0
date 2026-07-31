@@ -86,6 +86,9 @@ The canonical schema-4 capabilities are `leaderboardRead`, `identityClaim`,
 ceiling, emergency rollback, strictly read-only identity recovery preparation,
 and remaining protected authorization boundary are in
 [`docs/MILESTONE_3C3_SCHEMA4_AUTHORITY.md`](docs/MILESTONE_3C3_SCHEMA4_AUTHORITY.md).
+The subsequent protected, all-disabled 3D-1 model, strict input limits,
+frontend build-time limitation, and disabled-only release boundary are in
+[`docs/MILESTONE_3D1_PROTECTED_CAPABILITY_MODEL.md`](docs/MILESTONE_3D1_PROTECTED_CAPABILITY_MODEL.md).
 Local checks do not imply migration, secret/binding, deployment, remote
 verification, or Preview activation readiness.
 
@@ -111,8 +114,9 @@ npm exec --offline -- node scripts/preview-check.mjs --offline
 
 The command verifies the Pennant Pursuit repository root, exact
 `develop`/`origin/develop` relationship, clean tracked/staged/untracked state,
-`0 0` divergence, and `git diff --check`. It then validates all D1C.4 activation
-states, runs every repository type check and release-relevant automated test,
+`0 0` divergence, and `git diff --check`. It then validates the current
+all-disabled protected capability foundation and the retained D1C.4 safety
+contracts, runs every repository type check and release-relevant automated test,
 lint, the production build, PWA validation, Preview and production private
 Worker dry-run builds, the Pages Functions build, and bundle size/hash checks.
 Before any npm-controlled quality stage, the runtime validates all reachable
@@ -164,11 +168,12 @@ or planning can proceed. The canonical disabled state remains unchanged, and
 the bootstrap cannot deploy, migrate, activate, smoke-test, roll back, or
 mutate Cloudflare or GitHub.
 
-`npm exec --offline -- node scripts/preview-plan.mjs --target-state <disabled|submission-enabled|cron-enabled>`
-requires an explicit state and produces a deterministic read-only plan. Neither
-command performs remote mutation. Use `--json` for structured output and
-`--no-color` for plain human output. When automation requires JSON-only stdout
-through npm, add npm's `--silent` flag.
+`npm exec --offline -- node scripts/preview-plan.mjs --target-state disabled`
+requires the exact disabled target and produces a deterministic read-only plan.
+The capability-oriented enabled planning conversion is deferred to Milestone
+3D-2. Use `--json` for structured output and `--no-color` for plain human
+output. When automation requires JSON-only stdout through npm, add npm's
+`--silent` flag.
 
 After the protected identities are independently grounded, the operator-facing
 readiness command writes a canonical, expiring evidence package under the
@@ -178,25 +183,10 @@ Git-ignored `.preview-release/` directory:
 PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> npm exec --offline -- node scripts/preview-readiness.mjs --target-state disabled
 ```
 
-The package is not approval. Preview execution requires a distinct dedicated
-deploy token, an interactive TTY, a fresh byte-equivalent re-plan, and the exact
-typed challenge printed by the executor:
-
-```bash
-PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> \
-PENNANT_PREVIEW_DEPLOY_API_TOKEN=<dedicated-preview-mutation-token> \
-npm exec --offline -- node scripts/preview-release.mjs \
-  --plan .preview-release/<readiness-package>.json
-```
-
-Generic Cloudflare credentials, CI, edited or stale packages, plan/config/build
-drift, target ambiguity, and Production identities fail closed. The executor
-uses only fixed non-shell Preview commands, repeats plan validation after
-approval, checks remote drift before every stage, validates the exact mutation
-boundary after every command, requires the applicable smoke checks, stops after
-the first failure, and writes a redacted report with forward-only D1 and
-rollback guidance. It has no resume mode or automatic rollback. No deployment
-can occur while the protected identities remain unresolved.
+The package is not approval. Milestone 3D-1 authorizes no release execution,
+deployment token use, migration, smoke execution, remote mutation, or
+capability activation. Capability-oriented remote inspection, evidence, and
+execution integration require a separate Milestone 3D-2 review.
 
 These public invocations execute fixed Node entry points through `npm exec`;
 they do not select a package-script name, so matching `prepreview:*` or
@@ -208,12 +198,8 @@ Planning requires exact Pages and Worker binding sets, an authoritative
 all-type account-zone inventory plus complete Worker route reads and an exact
 service-filtered Worker custom-domain read, and stable double-read snapshots.
 Planning preserves local intended artifact hashes but treats remote artifact
-currentness as unproven, so matching commits or Worker tags never suppress a
-future deployment. Enabled targets still schedule the applicable future
-submission and retention smoke stages because a prior local report is not
-current remote proof. A pending migration observed while Cron is
-enabled first schedules Cron disablement, then public-write disablement and
-verification, before `migration.apply`.
+currentness as unproven. The current disabled-only contract cannot construct an
+enabled target or an authorized remote activation.
 
 The full Milestone 1 contract, exit codes, immutable identity model, bootstrap
 trust boundary, SELECT-only normal-inspection design, approval boundary,

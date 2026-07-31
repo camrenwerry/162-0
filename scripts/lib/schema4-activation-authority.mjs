@@ -1,16 +1,15 @@
-import { immutablePlain } from './preview-release/canonical.mjs'
+import {
+  immutablePlain,
+  parseStrictJson,
+  STRICT_JSON_LIMITS,
+} from './preview-release/canonical.mjs'
+import { SCHEMA4_CAPABILITIES } from '../../shared/schema4-capabilities.mjs'
 
+export const SCHEMA4_CAPABILITY_MODEL_VERSION = 2
 export const SCHEMA4_AUTHORITY_SCHEMA_VERSION = 1
 export const SCHEMA4_AUTHORITY_MAX_TTL_MS = 24 * 60 * 60 * 1000
-export const SCHEMA4_CAPABILITIES = Object.freeze([
-  'leaderboardRead',
-  'identityClaim',
-  'identityStatus',
-  'identityRename',
-  'draftSubmission',
-  'identityRecovery',
-  'cleanupCron',
-])
+export const SCHEMA4_ENVIRONMENTS = Object.freeze(['preview', 'production'])
+export { SCHEMA4_CAPABILITIES }
 
 const IDENTITY_CAPABILITIES = new Set([
   'identityClaim',
@@ -18,7 +17,7 @@ const IDENTITY_CAPABILITIES = new Set([
   'identityRename',
   'identityRecovery',
 ])
-const ENVIRONMENTS = new Set(['preview', 'production'])
+const ENVIRONMENTS = new Set(SCHEMA4_ENVIRONMENTS)
 const MODES = new Set(['enabled', 'disabled'])
 const EMERGENCY_STATES = new Set(['clear', 'engaged'])
 
@@ -62,6 +61,49 @@ export function createDisabledSchema4Authority(environment) {
   })
 }
 
+export function validateSchema4CapabilityModel(input, nowMs) {
+  const model = immutablePlain(input)
+  if (!safeTimestamp(nowMs)) throw new TypeError('Schema-4 capability-model evaluation time is invalid.')
+  if (!exactKeys(model, [
+    'modelVersion',
+    'authoritySchemaVersion',
+    'maximumReviewWindowMs',
+    'canonicalState',
+    'environments',
+  ])) throw new TypeError('Schema-4 capability model has missing or extra fields.')
+  if (model.modelVersion !== SCHEMA4_CAPABILITY_MODEL_VERSION) {
+    throw new TypeError('Schema-4 capability model version is unsupported.')
+  }
+  if (
+    model.authoritySchemaVersion !== SCHEMA4_AUTHORITY_SCHEMA_VERSION
+    || model.maximumReviewWindowMs !== SCHEMA4_AUTHORITY_MAX_TTL_MS
+    || model.canonicalState !== 'all-disabled'
+    || !exactKeys(model.environments, SCHEMA4_ENVIRONMENTS)
+  ) throw new TypeError('Schema-4 capability model contract is malformed.')
+
+  for (const environment of SCHEMA4_ENVIRONMENTS) {
+    const evaluated = evaluateSchema4ActivationAuthority(model.environments[environment], {
+      expectedEnvironment: environment,
+      nowMs,
+    })
+    if (
+      !evaluated.valid
+      || evaluated.reason !== 'emergency_stop_engaged'
+      || SCHEMA4_CAPABILITIES.some((capability) => evaluated.capabilities[capability] !== 'disabled')
+    ) throw new TypeError(`Schema-4 ${environment} checked-in authority must be emergency-stopped and all-disabled.`)
+  }
+  return model
+}
+
+export function parseSchema4CapabilityModel(source, nowMs) {
+  const parsed = parseStrictJson(source, {
+    label: 'Schema-4 capability model',
+    error: (message) => new TypeError(message),
+    limits: STRICT_JSON_LIMITS.authorityModel,
+  })
+  return validateSchema4CapabilityModel(parsed, nowMs)
+}
+
 export function evaluateSchema4ActivationAuthority(
   authority,
   { expectedEnvironment, nowMs } = {},
@@ -70,7 +112,13 @@ export function evaluateSchema4ActivationAuthority(
     return result(false, 'invalid_expected_environment', expectedEnvironment)
   }
   if (!safeTimestamp(nowMs)) return result(false, 'invalid_evaluation_time', expectedEnvironment)
-  if (!exactKeys(authority, [
+  let snapshot
+  try {
+    snapshot = immutablePlain(authority)
+  } catch {
+    return result(false, 'malformed_authority', expectedEnvironment)
+  }
+  if (!exactKeys(snapshot, [
     'schemaVersion',
     'environment',
     'reviewedAtMs',
@@ -79,51 +127,51 @@ export function evaluateSchema4ActivationAuthority(
     'identityCompatibilityMode',
     'capabilities',
   ])) return result(false, 'malformed_authority', expectedEnvironment)
-  if (authority.schemaVersion !== SCHEMA4_AUTHORITY_SCHEMA_VERSION) {
+  if (snapshot.schemaVersion !== SCHEMA4_AUTHORITY_SCHEMA_VERSION) {
     return result(false, 'unsupported_schema_version', expectedEnvironment)
   }
-  if (authority.environment !== expectedEnvironment) {
+  if (snapshot.environment !== expectedEnvironment) {
     return result(false, 'environment_mismatch', expectedEnvironment)
   }
-  if (!EMERGENCY_STATES.has(authority.emergencyStop)
-    || !MODES.has(authority.identityCompatibilityMode)
-    || !exactKeys(authority.capabilities, SCHEMA4_CAPABILITIES)
-    || SCHEMA4_CAPABILITIES.some((capability) => !MODES.has(authority.capabilities[capability]))) {
+  if (!EMERGENCY_STATES.has(snapshot.emergencyStop)
+    || !MODES.has(snapshot.identityCompatibilityMode)
+    || !exactKeys(snapshot.capabilities, SCHEMA4_CAPABILITIES)
+    || SCHEMA4_CAPABILITIES.some((capability) => !MODES.has(snapshot.capabilities[capability]))) {
     return result(false, 'malformed_authority', expectedEnvironment)
   }
 
-  if (authority.emergencyStop === 'engaged') {
+  if (snapshot.emergencyStop === 'engaged') {
     if (
-      authority.reviewedAtMs !== null
-      || authority.expiresAtMs !== null
-      || authority.identityCompatibilityMode !== 'disabled'
-      || SCHEMA4_CAPABILITIES.some((capability) => authority.capabilities[capability] !== 'disabled')
+      snapshot.reviewedAtMs !== null
+      || snapshot.expiresAtMs !== null
+      || snapshot.identityCompatibilityMode !== 'disabled'
+      || SCHEMA4_CAPABILITIES.some((capability) => snapshot.capabilities[capability] !== 'disabled')
     ) return result(false, 'contradictory_emergency_state', expectedEnvironment)
     return result(true, 'emergency_stop_engaged', expectedEnvironment)
   }
 
   if (
-    !safeTimestamp(authority.reviewedAtMs)
-    || !safeTimestamp(authority.expiresAtMs)
-    || authority.reviewedAtMs > nowMs
-    || authority.expiresAtMs <= authority.reviewedAtMs
-    || authority.expiresAtMs - authority.reviewedAtMs > SCHEMA4_AUTHORITY_MAX_TTL_MS
+    !safeTimestamp(snapshot.reviewedAtMs)
+    || !safeTimestamp(snapshot.expiresAtMs)
+    || snapshot.reviewedAtMs > nowMs
+    || snapshot.expiresAtMs <= snapshot.reviewedAtMs
+    || snapshot.expiresAtMs - snapshot.reviewedAtMs > SCHEMA4_AUTHORITY_MAX_TTL_MS
   ) return result(false, 'malformed_freshness_window', expectedEnvironment)
-  if (nowMs >= authority.expiresAtMs) return result(false, 'stale_authority', expectedEnvironment)
+  if (nowMs >= snapshot.expiresAtMs) return result(false, 'stale_authority', expectedEnvironment)
 
   const contradictoryIdentity = SCHEMA4_CAPABILITIES.some((capability) => (
     IDENTITY_CAPABILITIES.has(capability)
-      && authority.capabilities[capability] === 'enabled'
-      && authority.identityCompatibilityMode !== 'enabled'
+      && snapshot.capabilities[capability] === 'enabled'
+      && snapshot.identityCompatibilityMode !== 'enabled'
   ))
   if (contradictoryIdentity) {
     return result(false, 'identity_compatibility_ceiling_disabled', expectedEnvironment)
   }
-  return result(true, 'reviewed_authority', expectedEnvironment, authority.capabilities)
+  return result(true, 'reviewed_authority', expectedEnvironment, snapshot.capabilities)
 }
 
 export function assertIndependentSchema4AuthorityModel(nowMs = Date.UTC(2026, 6, 31, 12)) {
-  for (const environment of ENVIRONMENTS) {
+  for (const environment of SCHEMA4_ENVIRONMENTS) {
     const disabled = evaluateSchema4ActivationAuthority(
       createDisabledSchema4Authority(environment),
       { expectedEnvironment: environment, nowMs },
@@ -161,7 +209,7 @@ export function assertIndependentSchema4AuthorityModel(nowMs = Date.UTC(2026, 6,
   }
   return Object.freeze({
     schemaVersion: SCHEMA4_AUTHORITY_SCHEMA_VERSION,
-    environments: Object.freeze([...ENVIRONMENTS]),
+    environments: SCHEMA4_ENVIRONMENTS,
     capabilities: SCHEMA4_CAPABILITIES,
   })
 }

@@ -150,7 +150,7 @@ function executeFixedCommand(stage, {
     encoding: 'utf8',
     stdio: ['ignore', 'pipe', 'pipe'],
     env: childEnvironment(environment, deployToken, accountId),
-    timeout: stage.id === 'retention.smoke' ? 3 * 60 * 60 * 1_000 : 20 * 60 * 1_000,
+    timeout: 20 * 60 * 1_000,
   })
 }
 
@@ -172,35 +172,20 @@ function assertCommandSucceeded(stage, result) {
   if (result?.status !== 0) throw remoteError(`${stage.id} exited with status ${result?.status ?? 'unknown'}.`, 'partial_execution', `execution.${stage.id}`)
 }
 
-function expectedMode(targetState) {
-  return targetState === 'disabled' ? 'disabled' : 'enabled'
-}
-
 function assertStageRemoteValidation(stage, remote, releasePackage, migration) {
-  const targetState = releasePackage.plan.targetState
-  if (stage.validation === 'worker-cron-disabled' && remote.worker.schedules.length !== 0) {
-    throw remoteError('Worker Cron remained enabled after the approved disable stage.', 'partial_execution', `execution.${stage.id}`)
+  if (releasePackage.plan.targetState !== 'disabled' || migration.pending.length !== 0) {
+    throw refusalError('Execution ingestion accepts only a current all-disabled plan with no pending migration.', `execution.${stage.id}`)
   }
-  if (stage.validation === 'worker-cron-enabled'
-    && canonicalJson(remote.worker.schedules) !== canonicalJson([releasePackage.plan.expectedFinalTopology.cleanupCron])) {
-    throw remoteError('Worker Cron did not reach the approved enabled state.', 'partial_execution', `execution.${stage.id}`)
-  }
-  if (stage.validation === 'pages-submission-disabled' && remote.pages.submissionMode !== 'disabled') {
-    throw remoteError('Pages submission gate remained enabled after the approved disable stage.', 'partial_execution', `execution.${stage.id}`)
-  }
-  if (stage.validation === 'preview-migrations-current' && migration.pending.length !== 0) {
-    throw remoteError('Preview migrations remain pending after the approved migration stage.', 'partial_execution', `execution.${stage.id}`)
-  }
-  if (stage.validation === 'worker-target-configuration') {
-    if (remote.worker.bindings.find(({ name }) => name === 'DRAFT_SUBMISSION_MODE')?.text !== expectedMode(targetState)) {
-      throw remoteError('Worker submission mode differs from the approved target.', 'partial_execution', `execution.${stage.id}`)
+  if (stage.validation === 'worker-disabled-configuration') {
+    if (remote.worker.bindings.find(({ name }) => name === 'DRAFT_SUBMISSION_MODE')?.text !== 'disabled') {
+      throw remoteError('Worker submission mode is not disabled.', 'partial_execution', `execution.${stage.id}`)
     }
     if (remote.worker.schedules.length !== 0) {
-      throw remoteError('Intermediate Worker deployment unexpectedly enabled Cron.', 'partial_execution', `execution.${stage.id}`)
+      throw remoteError('Worker deployment unexpectedly configured Cron.', 'partial_execution', `execution.${stage.id}`)
     }
   }
-  if (stage.validation === 'pages-target-configuration' && remote.pages.submissionMode !== expectedMode(targetState)) {
-    throw remoteError('Pages submission mode differs from the approved target.', 'partial_execution', `execution.${stage.id}`)
+  if (stage.validation === 'pages-disabled-configuration' && remote.pages.submissionMode !== 'disabled') {
+    throw remoteError('Pages submission mode is not disabled.', 'partial_execution', `execution.${stage.id}`)
   }
 }
 
@@ -234,17 +219,15 @@ function assertPreStageRemoteState(stage, {
 
 function stageTransitionProjection(remote, stage) {
   const projected = structuredClone(remote)
-  if (['cron.disable', 'worker.deploy', 'cron.deploy'].includes(stage.id)) {
+  if (stage.id === 'worker.deploy') {
     projected.worker.bindings = '[APPROVED WORKER TRANSITION]'
     projected.worker.deploymentId = '[APPROVED WORKER TRANSITION]'
     projected.worker.schedules = '[APPROVED WORKER TRANSITION]'
     projected.worker.versionId = '[APPROVED WORKER TRANSITION]'
-  } else if (['pages.disable', 'pages.deploy'].includes(stage.id)) {
+  } else if (stage.id === 'pages.deploy') {
     projected.pages.bindings = '[APPROVED PAGES TRANSITION]'
     projected.pages.deployment = '[APPROVED PAGES TRANSITION]'
     projected.pages.submissionMode = '[APPROVED PAGES TRANSITION]'
-  } else if (stage.id === 'migration.apply') {
-    projected.migrationObservation = '[APPROVED MIGRATION TRANSITION]'
   }
   return immutablePlain(projected)
 }
@@ -261,22 +244,18 @@ function assertAllowedStageTransition(stage, before, after) {
 }
 
 function finalChecks(releasePackage, remote, migration, stageResults) {
-  const targetState = releasePackage.plan.targetState
-  const targetMode = expectedMode(targetState)
   const workerMode = remote.worker.bindings.find(({ name }) => name === 'DRAFT_SUBMISSION_MODE')?.text
-  const requiredCron = targetState === 'cron-enabled'
   const completed = new Set(stageResults.filter(({ status }) => status === 'PASS').map(({ id }) => id))
   const checks = [
     { id: 'plan.binding', status: 'PASS', summary: 'Fresh plan exactly matched the approved package.' },
     { id: 'configuration.protected', status: 'PASS', summary: 'Protected configuration hashes matched the approved package.' },
     {
       id: 'remote.target-state',
-      status: remote.pages.submissionMode === targetMode
-        && workerMode === targetMode
-        && (requiredCron
-          ? canonicalJson(remote.worker.schedules) === canonicalJson([releasePackage.plan.expectedFinalTopology.cleanupCron])
-          : remote.worker.schedules.length === 0) ? 'PASS' : 'FAIL',
-      summary: 'Pages, Worker, and Cron state match the approved Preview target.',
+      status: releasePackage.plan.targetState === 'disabled'
+        && remote.pages.submissionMode === 'disabled'
+        && workerMode === 'disabled'
+        && remote.worker.schedules.length === 0 ? 'PASS' : 'FAIL',
+      summary: 'Pages Functions, Worker, and Cron remain in the approved disabled state.',
     },
     {
       id: 'remote.migrations',
@@ -292,17 +271,10 @@ function finalChecks(releasePackage, remote, migration, stageResults) {
       id: 'remote.deployment-identities',
       status: (!completed.has('pages.deploy')
           || remote.pages.deployment?.id !== releasePackage.plan.remoteBefore.pages.deployment?.id)
-        && (!completed.has('worker.deploy') && !completed.has('cron.deploy') && !completed.has('cron.disable')
+        && (!completed.has('worker.deploy')
           || remote.worker.deploymentId !== releasePackage.plan.remoteBefore.worker.deploymentId
           || remote.worker.versionId !== releasePackage.plan.remoteBefore.worker.versionId) ? 'PASS' : 'FAIL',
       summary: 'Required deployments produced new authoritative Preview deployment identities.',
-    },
-    {
-      id: 'validation.required-smoke',
-      status: releasePackage.plan.futureStages
-        .filter(({ id }) => ['submission.smoke', 'retention.smoke'].includes(id))
-        .every(({ id }) => completed.has(id)) ? 'PASS' : 'FAIL',
-      summary: 'Every smoke stage required by the approved target completed.',
     },
     { id: 'production.prohibited', status: 'PASS', summary: 'No Production operation was available to the executor.' },
   ]
@@ -313,7 +285,7 @@ function iso(now) {
   return new Date(now()).toISOString()
 }
 
-export async function executeReleasePackage(releasePackage, {
+export async function executeReleasePackage(releasePackageInput, {
   repositoryRoot,
   environment = process.env,
   stdinIsTTY = process.stdin.isTTY,
@@ -344,10 +316,15 @@ export async function executeReleasePackage(releasePackage, {
   let finalValidation = validationReport([])
   let status = 'FAIL'
   let credentials
+  let releasePackage = null
   let loaded
   let readOnlyClient
   let knownMigrations
   try {
+    releasePackage = validateReleasePackage(releasePackageInput, {
+      nowMs: now(),
+      requireUnexpired: true,
+    })
     credentials = validateExecutionEnvironment(environment, { stdinIsTTY, stdoutIsTTY, requireInteractive })
     loaded = loadManifest(repositoryRoot)
     const expectedContract = buildExecutionContract({
@@ -357,7 +334,7 @@ export async function executeReleasePackage(releasePackage, {
       gitHead: releasePackage.plan.gitHead,
       previewOrigin: releasePackage.plan.remoteBefore.pages.deployment.previewOrigin,
     })
-    validateReleasePackage(releasePackage, {
+    releasePackage = validateReleasePackage(releasePackage, {
       nowMs: now(),
       expectedExecutionContract: expectedContract,
       requireUnexpired: true,
@@ -402,7 +379,7 @@ export async function executeReleasePackage(releasePackage, {
     if (canonicalJson(postApprovalPlan) !== canonicalJson(releasePackage.plan)) {
       throw refusalError('Readiness plan changed while approval was pending; the package is stale.', 'execution.plan-drift')
     }
-    validateReleasePackage(releasePackage, {
+    releasePackage = validateReleasePackage(releasePackage, {
       nowMs: now(),
       expectedExecutionContract: expectedContract,
       requireUnexpired: true,
@@ -493,7 +470,7 @@ export async function executeReleasePackage(releasePackage, {
     releaseError = asWorkflowError(error)
     status = mutationAttempted ? 'PARTIAL' : releaseError.status === 'REFUSED' ? 'REFUSED' : 'FAIL'
     const completedIds = new Set(stageResults.map(({ id }) => id))
-    for (const stage of releasePackage.plan.executionContract.orderedStages) {
+    for (const stage of releasePackage?.plan.executionContract.orderedStages ?? []) {
       if (!completedIds.has(stage.id)) {
         stageResults.push(immutablePlain({
           id: stage.id,
@@ -529,8 +506,17 @@ export async function executeReleasePackage(releasePackage, {
   } finally {
     if (workspace !== null) rmSync(workspace, { recursive: true, force: true })
   }
+  const reportPackage = releasePackage ?? immutablePlain({
+    artifactHash: 'unvalidated',
+    plan: {
+      planId: 'unvalidated',
+      targetState: 'disabled',
+      observedState: 'disabled',
+      gitHead: 'unvalidated',
+    },
+  })
   const report = executionReport({
-    releasePackage,
+    releasePackage: reportPackage,
     startedAt,
     completedAt: iso(now),
     status,

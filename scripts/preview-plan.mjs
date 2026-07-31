@@ -40,8 +40,8 @@ export function parsePreviewPlanArguments(argv) {
       throw usageError(`Unknown argument: ${argument}.`)
     }
   }
-  if (!targetState) throw usageError('preview:plan requires --target-state <disabled|submission-enabled|cron-enabled>.')
-  if (!['disabled', 'submission-enabled', 'cron-enabled'].includes(targetState)) throw usageError(`Unknown target state: ${targetState}.`)
+  if (!targetState) throw usageError('preview:plan requires --target-state disabled.')
+  if (targetState !== 'disabled') throw usageError('Preview planning is disabled-only until Milestone 3D-2.')
   return Object.freeze({ targetState, json, color })
 }
 

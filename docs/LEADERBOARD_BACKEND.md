@@ -376,10 +376,9 @@ identity as configured but degraded when the Pages flag, service, private
 Worker flag or secret, database, or exact schema requirement is incomplete.
 The signing key is not copied into Pages.
 
-The checked-in protected configuration supplies none of the new identity or
-read flags and none of the signing secrets. It was not changed in Milestone
-3A. Public reads, submissions, and identity mutations therefore remain
-disabled.
+The checked-in protected configuration now supplies the new identity and read
+flags explicitly as disabled and supplies none of the signing secrets. Public
+reads, submissions, and identity mutations therefore remain disabled.
 
 Scheduled retention now performs three separately bounded phases using the same
 server cutoff: at most ten 500-row draft-receipt batches, at most ten 500-row

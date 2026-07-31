@@ -1,0 +1,18 @@
+{
+  "pagesFunctions": {
+    "capability": "draftSubmission",
+    "surface": "pagesFunctions",
+    "descriptorPath": "capabilities.draftSubmission.pagesFunctions",
+    "consumerIdentity": "functions/lib/draft-submission-mode.ts#draftSubmissionFeatureState",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  },
+  "privateWorker": {
+    "capability": "draftSubmission",
+    "surface": "privateWorker",
+    "descriptorPath": "capabilities.draftSubmission.privateWorker",
+    "consumerIdentity": "functions/lib/draft-submission-mode.ts#privateWorkerDraftSubmissionFeatureState",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  }
+}

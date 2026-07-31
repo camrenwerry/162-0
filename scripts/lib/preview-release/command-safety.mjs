@@ -1,5 +1,5 @@
-import { readFileSync } from 'node:fs'
 import path from 'node:path'
+import { readStrictPackageMetadataFile } from './canonical.mjs'
 import { localError } from './errors.mjs'
 
 const SHELL_EVALUATORS = new Set(['sh', 'bash', 'zsh', 'dash', 'ksh', 'fish', 'cmd', 'cmd.exe', 'powershell', 'pwsh', 'eval', 'exec'])
@@ -311,7 +311,10 @@ function coordinatorScriptReferences(stages) {
 export function validateRuntimeCommandGraph(repositoryRoot, stages) {
   let packageJson
   try {
-    packageJson = JSON.parse(readFileSync(path.join(repositoryRoot, 'package.json'), 'utf8'))
+    packageJson = readStrictPackageMetadataFile(path.join(repositoryRoot, 'package.json'), {
+      label: 'release command-safety package metadata',
+      requireScripts: true,
+    }).value
     const roots = ['test', 'typecheck', ...coordinatorScriptReferences(stages)]
     return assertLocalReleaseGraph(packageJson.scripts, roots)
   } catch (error) {

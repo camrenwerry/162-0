@@ -1,5 +1,5 @@
 {
-  "modelVersion": 1,
+  "modelVersion": 2,
   "targetDatabaseSchema": 4,
   "requiredMigration": "0004_leaderboard_identity_ranking.sql",
   "expectedMigrationPrefix": [
@@ -8,25 +8,61 @@
     "0003_leaderboard_foundation.sql",
     "0004_leaderboard_identity_ranking.sql"
   ],
-  "requiredPreviewGates": {
-    "frontend": [
-      "VITE_DRAFT_TICKET_MODE",
-      "VITE_DRAFT_SUBMISSION_MODE",
-      "VITE_LEADERBOARD_READ_MODE",
-      "VITE_LEADERBOARD_IDENTITY_MODE",
-      "VITE_LEADERBOARD_RECOVERY_MODE"
-    ],
-    "pages": [
-      "DRAFT_SUBMISSION_MODE",
-      "LEADERBOARD_READ_MODE",
-      "LEADERBOARD_IDENTITY_MODE",
-      "LEADERBOARD_RECOVERY_MODE"
-    ],
-    "worker": [
-      "DRAFT_SUBMISSION_MODE",
-      "LEADERBOARD_IDENTITY_MODE",
-      "LEADERBOARD_RECOVERY_MODE"
-    ]
+  "authorityContract": {
+    "path": "workers/draft-validation/d1c4-activation-states.json",
+    "modelVersion": 2,
+    "schemaVersion": 1,
+    "maximumReviewWindowMs": 86400000
+  },
+  "frontendBuildTime": {
+    "protectedSource": null,
+    "effectiveState": "all-disabled",
+    "integrationStatus": "deferred-to-3D-2"
+  },
+  "capabilityVariables": {
+    "leaderboardRead": {
+      "frontendBuild": null,
+      "pagesFunctions": "LEADERBOARD_READ_MODE",
+      "privateWorker": null
+    },
+    "identityClaim": {
+      "frontendBuild": null,
+      "pagesFunctions": "LEADERBOARD_IDENTITY_CLAIM_MODE",
+      "privateWorker": "LEADERBOARD_IDENTITY_CLAIM_MODE"
+    },
+    "identityStatus": {
+      "frontendBuild": null,
+      "pagesFunctions": "LEADERBOARD_IDENTITY_STATUS_MODE",
+      "privateWorker": "LEADERBOARD_IDENTITY_STATUS_MODE"
+    },
+    "identityRename": {
+      "frontendBuild": null,
+      "pagesFunctions": "LEADERBOARD_IDENTITY_RENAME_MODE",
+      "privateWorker": "LEADERBOARD_IDENTITY_RENAME_MODE"
+    },
+    "draftSubmission": {
+      "frontendBuild": null,
+      "pagesFunctions": "DRAFT_SUBMISSION_MODE",
+      "privateWorker": "DRAFT_SUBMISSION_MODE"
+    },
+    "identityRecovery": {
+      "frontendBuild": null,
+      "pagesFunctions": "LEADERBOARD_RECOVERY_MODE",
+      "privateWorker": "LEADERBOARD_RECOVERY_MODE"
+    },
+    "cleanupCron": {
+      "frontendBuild": null,
+      "pagesFunctions": null,
+      "privateWorker": "RETENTION_CLEANUP_MODE"
+    }
+  },
+  "identityCompatibilityCeilingVariables": {
+    "frontendBuild": null,
+    "pagesFunctions": "LEADERBOARD_IDENTITY_MODE",
+    "privateWorker": "LEADERBOARD_IDENTITY_MODE"
+  },
+  "environmentMarkers": {
+    "pages": "LEADERBOARD_ENVIRONMENT"
   },
   "expectedHealth": {
     "databaseSchemaVersion": 4,
@@ -34,7 +70,7 @@
     "leaderboardIdentity": "schema-ready",
     "leaderboardRecovery": "schema-ready"
   },
-  "checkedInState": "disabled",
+  "checkedInState": "all-disabled",
   "identityPolicy": "Preview identities are disposable before public release.",
-  "rollbackPolicy": "Disable public writes, identity, recovery, reads, and cleanup first; use a reviewed forward fix. Schema reversal is not the default rollback."
+  "rollbackPolicy": "Engage the environment emergency stop; disable every narrow public and private mode; keep both Cron lists empty; use a reviewed forward fix."
 }

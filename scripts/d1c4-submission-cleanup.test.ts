@@ -4,7 +4,7 @@ import {
   type SubmissionCleanupAttemptResult,
   type SubmissionCleanupD1,
   type SubmissionCleanupOwnershipStatus,
-} from './d1c4-submission-smoke'
+} from './test-only/d1c4-submission-smoke-orchestration'
 import {
   draftSubmissionFingerprintsEqual,
   type DraftSubmissionFingerprint,

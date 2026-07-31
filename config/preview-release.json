@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "toolContractVersion": "preview-release-phase-1-v1",
+  "schemaVersion": 2,
+  "toolContractVersion": "preview-release-disabled-only-v2",
   "repository": {
     "packageName": "pennant-pursuit",
     "packageVersion": "1.0.0",
@@ -96,18 +96,16 @@
     }
   },
   "activation": {
-    "allowedStates": [
-      "disabled",
-      "submission-enabled",
-      "cron-enabled"
-    ],
-    "cleanupCron": "17 * * * *",
-    "canonicalState": "disabled"
+    "capabilityModelVersion": 2,
+    "authoritySchemaVersion": 1,
+    "maximumReviewWindowMs": 86400000,
+    "canonicalCheckedInState": "all-disabled",
+    "releaseTooling": "disabled-only"
   },
   "configuration": {
     "pages": "wrangler.toml",
     "worker": "workers/draft-validation/wrangler.toml",
-    "activationStates": "workers/draft-validation/d1c4-activation-states.json",
+    "capabilityModel": "workers/draft-validation/d1c4-activation-states.json",
     "migrationsDirectory": "migrations"
   }
 }

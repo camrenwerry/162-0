@@ -36,7 +36,9 @@ async function routeStatus(page: Page, renameEligible = true) {
   })
 }
 
-test('@release valid stored identity can rename while status and recovery are independently disabled', async ({ page, context }) => {
+test.describe.skip('Deferred Milestone 3D-2 protected frontend build-time integration', () => {
+
+test('deferred valid stored identity can rename while status and recovery are independently disabled', async ({ page, context }) => {
   await seedIdentity(context)
   let statusRequests = 0
   let renameRequests = 0
@@ -89,7 +91,7 @@ test('@release valid stored identity can rename while status and recovery are in
   expect(renameRequests).toBe(1)
 })
 
-test('@release Daily, Weekly, and All-Time reads anchor one personal row and restart stale pagination', async ({ page, context }) => {
+test('deferred Daily, Weekly, and All-Time reads anchor one personal row and restart stale pagination', async ({ page, context }) => {
   await seedIdentity(context)
   await routeStatus(page)
   const periods: string[] = []
@@ -448,4 +450,6 @@ test('returning status enforces rename cooldown; one stateful recovery backend r
   expect(oldCredentialRejections).toBeGreaterThanOrEqual(1)
   expect(newCredentialAcceptances).toBeGreaterThanOrEqual(1)
   await replacementContext.close()
+})
+
 })

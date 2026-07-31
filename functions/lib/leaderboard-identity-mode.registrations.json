@@ -1,0 +1,70 @@
+{
+  "pagesFunctions": {
+    "identityClaim": {
+      "capability": "identityClaim",
+      "surface": "pagesFunctions",
+      "descriptorPath": "capabilities.identityClaim.pagesFunctions",
+      "consumerIdentity": "functions/lib/leaderboard-identity-mode.ts#leaderboardIdentityCapabilityFeatureState:claim",
+      "consumerStatus": "active",
+      "compatibilityCeiling": "LEADERBOARD_IDENTITY_MODE"
+    },
+    "identityStatus": {
+      "capability": "identityStatus",
+      "surface": "pagesFunctions",
+      "descriptorPath": "capabilities.identityStatus.pagesFunctions",
+      "consumerIdentity": "functions/lib/leaderboard-identity-mode.ts#leaderboardIdentityCapabilityFeatureState:status",
+      "consumerStatus": "active",
+      "compatibilityCeiling": "LEADERBOARD_IDENTITY_MODE"
+    },
+    "identityRename": {
+      "capability": "identityRename",
+      "surface": "pagesFunctions",
+      "descriptorPath": "capabilities.identityRename.pagesFunctions",
+      "consumerIdentity": "functions/lib/leaderboard-identity-mode.ts#leaderboardIdentityCapabilityFeatureState:rename",
+      "consumerStatus": "active",
+      "compatibilityCeiling": "LEADERBOARD_IDENTITY_MODE"
+    },
+    "identityRecovery": {
+      "capability": "identityRecovery",
+      "surface": "pagesFunctions",
+      "descriptorPath": "capabilities.identityRecovery.pagesFunctions",
+      "consumerIdentity": "functions/lib/leaderboard-identity-mode.ts#leaderboardIdentityCapabilityFeatureState:recover",
+      "consumerStatus": "active",
+      "compatibilityCeiling": "LEADERBOARD_IDENTITY_MODE"
+    }
+  },
+  "privateWorker": {
+    "identityClaim": {
+      "capability": "identityClaim",
+      "surface": "privateWorker",
+      "descriptorPath": "capabilities.identityClaim.privateWorker",
+      "consumerIdentity": "functions/lib/leaderboard-identity-mode.ts#privateWorkerLeaderboardIdentityCapabilityFeatureState:claim",
+      "consumerStatus": "active",
+      "compatibilityCeiling": "LEADERBOARD_IDENTITY_MODE"
+    },
+    "identityStatus": {
+      "capability": "identityStatus",
+      "surface": "privateWorker",
+      "descriptorPath": "capabilities.identityStatus.privateWorker",
+      "consumerIdentity": "functions/lib/leaderboard-identity-mode.ts#privateWorkerLeaderboardIdentityCapabilityFeatureState:status",
+      "consumerStatus": "active",
+      "compatibilityCeiling": "LEADERBOARD_IDENTITY_MODE"
+    },
+    "identityRename": {
+      "capability": "identityRename",
+      "surface": "privateWorker",
+      "descriptorPath": "capabilities.identityRename.privateWorker",
+      "consumerIdentity": "functions/lib/leaderboard-identity-mode.ts#privateWorkerLeaderboardIdentityCapabilityFeatureState:rename",
+      "consumerStatus": "active",
+      "compatibilityCeiling": "LEADERBOARD_IDENTITY_MODE"
+    },
+    "identityRecovery": {
+      "capability": "identityRecovery",
+      "surface": "privateWorker",
+      "descriptorPath": "capabilities.identityRecovery.privateWorker",
+      "consumerIdentity": "functions/lib/leaderboard-identity-mode.ts#privateWorkerLeaderboardIdentityCapabilityFeatureState:recover",
+      "consumerStatus": "active",
+      "compatibilityCeiling": "LEADERBOARD_IDENTITY_MODE"
+    }
+  }
+}

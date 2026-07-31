@@ -6,6 +6,10 @@ import {
   type LeaderboardReadModeEnv,
 } from './leaderboard-mode'
 import { validateDisplayName } from './leaderboard-identity'
+import {
+  SCHEMA4_RUNTIME_GATE_REGISTRY,
+  type Schema4RuntimeGateRegistry,
+} from '../../shared/schema4-capabilities.mjs'
 
 export const LEADERBOARD_RESPONSE_SCHEMA_VERSION = 'pennant-leaderboard-response-v2'
 export const LEADERBOARD_DEFAULT_LIMIT = 25
@@ -691,8 +695,9 @@ export async function handleLeaderboardRequest(
   request: Request,
   env: LeaderboardEnv = {},
   now: () => number = () => Date.now(),
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
 ) {
-  if (!isLeaderboardReadEnabled(env)) return handleApiNotFoundRequest(request)
+  if (!isLeaderboardReadEnabled(env, registry)) return handleApiNotFoundRequest(request)
   if (request.method !== 'GET' && request.method !== 'HEAD') {
     return new Response(JSON.stringify({
       ok: false,

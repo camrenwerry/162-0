@@ -1,3 +1,13 @@
+import {
+  SCHEMA4_RUNTIME_GATE_REGISTRY,
+  type Schema4RuntimeGateRegistry,
+} from '../../shared/schema4-capabilities.mjs'
+import {
+  immutableRuntimeConsumerRegistration,
+  runtimeConsumerFeatureState,
+} from '../../shared/schema4-runtime-consumers.mjs'
+import registrationData from './leaderboard-mode.registrations.json'
+
 export type LeaderboardReadFeatureState = 'enabled' | 'disabled'
 
 export interface LeaderboardReadModeEnv {
@@ -9,12 +19,25 @@ export interface LeaderboardReadModeEnv {
 const MINIMUM_CURSOR_KEY_LENGTH = 32
 const MAXIMUM_CURSOR_KEY_LENGTH = 4_096
 
-export function leaderboardReadFeatureState(env: LeaderboardReadModeEnv): LeaderboardReadFeatureState {
-  return env.LEADERBOARD_READ_MODE === 'enabled' ? 'enabled' : 'disabled'
+export const LEADERBOARD_READ_RUNTIME_CONSUMER_REGISTRATION =
+  immutableRuntimeConsumerRegistration(registrationData.pagesFunctions)
+
+export function leaderboardReadFeatureState(
+  env: LeaderboardReadModeEnv,
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
+): LeaderboardReadFeatureState {
+  return runtimeConsumerFeatureState(
+    env,
+    LEADERBOARD_READ_RUNTIME_CONSUMER_REGISTRATION,
+    registry,
+  )
 }
 
-export function isLeaderboardReadEnabled(env: LeaderboardReadModeEnv) {
-  return leaderboardReadFeatureState(env) === 'enabled'
+export function isLeaderboardReadEnabled(
+  env: LeaderboardReadModeEnv,
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
+) {
+  return leaderboardReadFeatureState(env, registry) === 'enabled'
 }
 
 export function isLeaderboardCursorSigningKey(value: unknown): value is string {

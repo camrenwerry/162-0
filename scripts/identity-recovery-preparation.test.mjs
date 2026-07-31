@@ -790,6 +790,7 @@ const reviewedReadOnlyBuiltins = new Set([
   'node:fs',
   'node:path',
   'node:url',
+  'node:util',
 ])
 const shippedGraph = new Map()
 const pendingGraphFiles = [...shippedRoots]
@@ -820,6 +821,7 @@ assert.deepEqual(
     'scripts/lib/preview-release/canonical.mjs',
     'scripts/lib/schema4-activation-authority.mjs',
     'scripts/prepare-identity-recovery.mjs',
+    'shared/schema4-capabilities.mjs',
   ],
 )
 const shippedSource = [...shippedGraph.entries()]

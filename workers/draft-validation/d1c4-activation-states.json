@@ -1,21 +1,42 @@
 {
-  "schemaVersion": 1,
-  "previewOnly": true,
-  "cleanupCron": "17 * * * *",
-  "states": {
-    "disabled": {
-      "submissionMode": "disabled",
-      "cleanupCrons": []
+  "modelVersion": 2,
+  "authoritySchemaVersion": 1,
+  "maximumReviewWindowMs": 86400000,
+  "canonicalState": "all-disabled",
+  "environments": {
+    "preview": {
+      "schemaVersion": 1,
+      "environment": "preview",
+      "reviewedAtMs": null,
+      "expiresAtMs": null,
+      "emergencyStop": "engaged",
+      "identityCompatibilityMode": "disabled",
+      "capabilities": {
+        "leaderboardRead": "disabled",
+        "identityClaim": "disabled",
+        "identityStatus": "disabled",
+        "identityRename": "disabled",
+        "draftSubmission": "disabled",
+        "identityRecovery": "disabled",
+        "cleanupCron": "disabled"
+      }
     },
-    "submission-enabled": {
-      "submissionMode": "enabled",
-      "cleanupCrons": []
-    },
-    "cron-enabled": {
-      "submissionMode": "enabled",
-      "cleanupCrons": [
-        "17 * * * *"
-      ]
+    "production": {
+      "schemaVersion": 1,
+      "environment": "production",
+      "reviewedAtMs": null,
+      "expiresAtMs": null,
+      "emergencyStop": "engaged",
+      "identityCompatibilityMode": "disabled",
+      "capabilities": {
+        "leaderboardRead": "disabled",
+        "identityClaim": "disabled",
+        "identityStatus": "disabled",
+        "identityRename": "disabled",
+        "draftSubmission": "disabled",
+        "identityRecovery": "disabled",
+        "cleanupCron": "disabled"
+      }
     }
   }
 }

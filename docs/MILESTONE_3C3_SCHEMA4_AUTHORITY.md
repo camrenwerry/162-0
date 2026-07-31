@@ -1,16 +1,17 @@
 # Milestone 3C-3 schema-4 activation authority and identity recovery readiness
 
-Milestone 3C-3 establishes the local authority and operator-preparation
+Milestone 3C-3 established the local authority and operator-preparation
 contracts for schema 4. It does not authorize a migration, deployment, remote
 inspection, feature activation, secret or binding change, or identity
-mutation. Existing migrations `0001` through `0004` and every protected
-configuration file remain unchanged.
+mutation. Existing migrations `0001` through `0004` remained unchanged.
 
 The local evaluator, runtime gates, and read-only operator-preparation
 contracts are implemented and locally testable. This is not full activation
-readiness. Preview remains **NO-GO** because protected release and deployment
-configuration does not yet represent these independent capabilities.
-Production remains disabled and is not an activation target.
+readiness. Milestone 3D-1 subsequently added the protected, all-disabled
+capability-model foundation described in
+[Milestone 3D-1 protected capability-model foundation](MILESTONE_3D1_PROTECTED_CAPABILITY_MODEL.md). Preview and
+Production remain disabled, enabled release planning is deferred to 3D-2, and
+neither environment is an activation target in 3D-1.
 
 ## Authority contract
 
@@ -48,16 +49,21 @@ four even if a narrower field says `enabled`.
 | `identityRecovery` | `VITE_LEADERBOARD_RECOVERY_MODE` | `LEADERBOARD_RECOVERY_MODE` | `LEADERBOARD_RECOVERY_MODE` | identity compatibility ceiling and signing key |
 | `cleanupCron` | none | none | `RETENTION_CLEANUP_MODE` | exact reviewed Cron trigger must also be present |
 
+The frontend column records the future build-time vocabulary established by
+3C-3. Milestone 3D-1 subsequently left that protected build-time source
+deliberately undefined and hard-disabled; Pages Wrangler `[vars]` are not
+frontend configuration. See the 3D-1 document for the current boundary.
+
 Name availability is read-only and is reachable only when claim or rename
 authority is enabled. Submission can attribute a returning identity under the
 compatibility ceiling, but submission does not enable claim, status, rename,
 or recovery. A claim capability is created and returned only when claim
 authority is independently enabled.
 
-The checked-in Pages and Worker configuration contains none of the new
-capability-specific identity or cleanup fields. Missing fields fail closed.
-The checked-in submission fields remain disabled and both Worker Cron lists
-remain empty. Consequently the effective checked-in matrix is:
+The checked-in Pages and Worker configuration now explicitly contains every
+applicable capability-specific field as disabled. Missing fields still fail
+closed. Both Worker Cron lists remain empty. Consequently the effective
+checked-in matrix is:
 
 | Environment | Reads | Claim | Status | Rename | Submission | Recovery | Cleanup |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -65,7 +71,7 @@ remain empty. Consequently the effective checked-in matrix is:
 | Production | disabled | disabled | disabled | disabled | disabled | disabled | disabled |
 
 The automated model test evaluates all 128 capability combinations separately
-for Preview and Production. No combination is inferred from another and an
+for Preview and Production, 256 evaluations in total. No combination is inferred from another and an
 authority document for one environment is invalid in the other.
 
 ## Rollback and emergency disablement
@@ -186,34 +192,21 @@ target state, rotate credentials, and mark the plan consumed in one
 transaction. An in-memory set, a successful read-only verification, or a
 process-local lock is not single-use protection.
 
-## Protected configuration authorization still required
+## Protected configuration follow-up
 
-Do not make these changes without a separate protected-change review:
+Milestone 3D-1 implements the versioned, environment-bound, emergency-stopped
+protected representation with every capability disabled. It extends the
+applicable Pages Functions and private-Worker inventories, generated runtime
+types, protected hashes, and local disabled-state compiler contracts. Frontend
+protected build-time integration remains deliberately absent.
 
-1. Update `config/preview-schema4-readiness.json` to a new reviewed model
-   version that lists claim, status, rename, recovery, and cleanup separately.
-2. Update `config/preview-release.json` and
-   `workers/draft-validation/d1c4-activation-states.json` to a versioned,
-   environment-bound capability model with bounded review expiry and an
-   emergency stop.
-3. Add disabled capability-specific fields and exact environment markers to
-   the Preview and Production sections of `wrangler.toml` and
-   `workers/draft-validation/wrangler.toml`. Production values must remain
-   disabled, Production Worker D1 must remain absent, and both Cron lists must
-   remain empty in the canonical checked-in state.
-4. Extend the immutable binding inventory, configuration compiler, remote
-   read-only inspection, plan, execution, generated-type, and protected-hash
-   contracts for the complete new field set.
-5. Separately configure disabled frontend build variables for claim, status,
-   rename, and recovery. Any later enablement requires its own reviewed,
-   environment-specific release package.
-6. Provision the existing Worker-only identity signing secret only under a
-   separate secret authorization. Do not place it in Pages, source, logs, or
-   evidence.
-
-The protected transition must first land with every capability disabled. A
-later authorization may enable one capability at a time. No broad state may
-silently enable a narrower capability.
+Milestone 3D-2 must separately add capability-oriented remote read-only
+inspection, evidence, sequencing, immutable binding comparison, and protected
+frontend build-time integration. Until that review, the
+planner and compiler accept only the disabled target. Secret provisioning,
+migration execution, deployment, remote verification, and activation remain
+separate later authorizations. No broad state may silently enable a narrower
+capability.
 
 ## Additive migration proposal for an operator reset adapter
 

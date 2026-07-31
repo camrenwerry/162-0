@@ -10,7 +10,7 @@ D1A adds preview-only signed draft-ticket issuance, and Phase D1B requires and
 verifies that ticket in preview validation before replay. Phase D1C.1 adds the
 disabled persistence foundation, D1C.2 adds the disabled atomic submission
 path, D1C.3 adds the scheduled retention handler, and D1C.4 separates its
-preview activation states. Milestone 2 adds the disabled leaderboard schema,
+historical preview submission and Cron controls. Milestone 2 adds the disabled leaderboard schema,
 verified-run audit path, and read API foundation. Milestone 3A adds the local
 account-free identity, placement, top-three, and shared-rank contract.
 Submission and Cron remain disabled in the checked-in defaults, leaderboard
@@ -453,18 +453,18 @@ and Worker preview URLs and have no route, custom domain, KV, R2, Durable Object
 queue, analytics binding, external fetch, or cookie handling. Only preview has
 a D1 binding; production remains unbound from D1. Ticket issuance and validation
 remain storage-free. D1C.2 adds a disabled private submission path, and D1C.3
-adds preview-only scheduled retention cleanup without an HTTP route. D1C.4
-keeps the checked-in Cron and submission flags disabled and materializes the
-reviewed activation states locally. No real signing secret is configured in
+adds preview-only scheduled retention cleanup without an HTTP route. Milestone
+3D-1 keeps the checked-in Cron and every capability flag disabled and validates
+an exact protected capability object locally. No real signing secret is configured in
 checked-in source or Wrangler variables. The preview Worker has the externally
 configured `DRAFT_TICKET_SIGNING_KEY` secret; the production Worker has no
 signing secret, keeping the two targets isolated. Its fetch entry point remains
 compatible with the Pages Service Binding. The original C1/C2/C3
 authoritative parser, replay, canonical catalog, and scoring code live behind
 the fetch handler; the Pages route does not import the catalog, parse a
-transcript, replay, or score. The
-scheduled entry point runs remotely only when the separately reviewed
-`cron-enabled` configuration has been applied.
+transcript, replay, or score. The scheduled entry point can run only when
+cleanup mode and a separately reviewed Cron trigger are both present; neither
+is authorized or checked in here.
 
 The Pages boundary runs the existing feature, method, and same-origin checks
 before it reads or forwards a request. It accepts the client IP only from
@@ -787,9 +787,10 @@ in [Leaderboard backend foundation](LEADERBOARD_BACKEND.md).
 D1C.3 adds a scheduled handler to the private Worker. Its original top-level
 preview configuration also included UTC Cron `17 * * * *`, so a default Worker
 deployment would apply the trigger rather than leaving Cron activation as a
-separate boundary. D1C.4 changes the checked-in preview Cron to explicit `[]`
-and adds the schedule only to the generated `cron-enabled` state. The
-production environment keeps an empty Cron list and no D1 binding. Worker
+separate boundary. D1C.4 changes the checked-in preview Cron to explicit `[]`.
+Milestone 3D-1 also keeps cleanup mode disabled and provides no checked-in
+schedule-bearing state. The Production environment keeps an empty Cron list
+and no D1 binding. Worker
 public URLs remain disabled, fetch routing is unchanged, and there is no HTTP
 cleanup route.
 
@@ -811,23 +812,22 @@ exceptions, SQL, rows, receipts, identifiers, digests, secrets, bindings, or
 request data. D1C.3 remained repository-only: no migration, deployment, remote
 Cron activation, feature enablement, Pages change, or production change occurred.
 
-## Phase D1C.4 preview activation preparation
+## Protected schema-4 capability foundation
 
-D1C.4 defines exact `disabled`, `submission-enabled`, and `cron-enabled`
-preview states in one checked-in manifest. A deterministic script applies the
-single submission mode to both Pages and Worker preview flags, applies the Cron
-only to the final state, and refuses production drift. Disabled health publishes
-no submission schema or write capability. Configured intent with missing,
-unreachable, malformed, older, or future D1 schema publishes no submission
-schema and reports writes unavailable. Exact reachable schema 3 publishes
-`pennant-draft-submission-v1`, reports schema readiness, and keeps operational
-writes externally unverified at the D1C.4 snapshot.
+Milestone 3D-1 adds the current protected contract as one exact versioned
+object containing independent read, claim, status, rename, submission,
+recovery, and cleanup authority for Preview and Production. The historical
+D1C.4 named-state record remains historical documentation rather than current
+release authority.
+Checked-in authority is emergency-stopped and all disabled. The validator
+refuses missing, extra, malformed, stale, cross-environment, and contradictory
+objects. It also refuses checked-in enabled modes, nonempty Cron lists, and a
+Production private-Worker D1 binding.
 
-Milestone 3A does not modify those protected activation artifacts. The current
-code now requires exact schema version 4 for submission, leaderboard read, and
-identity readiness. The old generated states therefore must not be used to
-activate Milestone 3A implicitly; a new reviewed activation phase must account
-for migration 0004, both identity gates, the private identity signing key, the
+Current code requires exact schema version 4 for submission, leaderboard read,
+and identity readiness. No protected model understanding constitutes migration
+or activation authority; a separately reviewed later phase must account for
+migration 0004, every narrow identity gate, the private identity signing key, the
 cursor signing key, and separate preview evidence. Pages checks identity
 readiness with an internal GET over the existing private Service Binding; the
 Worker validates its own flag, signing key, D1 binding, and exact schema, so

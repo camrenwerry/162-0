@@ -171,10 +171,10 @@ D1C.3 added an awaited scheduled handler to the same private Worker and
 originally placed `17 * * * *` UTC in the top-level preview configuration.
 That meant deploying the default Worker would also apply the Cron Trigger;
 deployment and Cron activation were not independent. D1C.4 corrects the
-checked-in default to explicit `crons = []` and reserves the schedule for the
-reviewed `cron-enabled` activation state. Production keeps an explicit empty
-Cron list, both checked-in submission flags remain disabled, production remains
-D1-free, and no cleanup HTTP route exists.
+checked-in default to explicit `crons = []`. Milestone 3D-1 keeps cleanup mode
+disabled and provides no schedule-bearing checked-in state. Production keeps
+an explicit empty Cron list, both checked-in submission flags remain disabled,
+Production remains D1-free, and no cleanup HTTP route exists.
 
 Each invocation samples current server time once and requires schema version 4.
 It runs three separately bounded phases: no more than ten receipt DELETEs, ten
@@ -199,42 +199,37 @@ request data.
 
 D1C.3 changed repository code and configuration only. Its checked-in schedule
 coupled a future Worker deployment to Cron activation; no remote activation was
-performed. D1C.4 provides separate reviewed configuration states instead.
+performed. D1C.4 later removed the checked-in schedule.
 
 ## D1C.4 preview activation preparation
 
-The checked-in Pages and private-Worker defaults now represent the exact
-disabled state: both submission flags are disabled and preview Cron is
-explicitly empty. The repository defines and validates `disabled`,
-`submission-enabled`, and `cron-enabled` preview states without changing any
-production section. Enabled health publishes
-`pennant-draft-submission-v1` from the existing protocol constant only when the
-Pages flag is configured and reachable D1 schema 4 is exact. It reports schema
-readiness, not private Worker readiness; operational writes remain
-`externally-unverified` until the smoke independently observes endpoint success
-and exact D1 persistence. Version 2 is now a migration predecessor, not a
-write-ready schema.
+The checked-in Pages and private-Worker defaults represent the exact disabled
+state and Preview Cron is explicitly empty. Milestone 3D-1 supersedes the
+historical named presets with an exact versioned object for `leaderboardRead`,
+`identityClaim`, `identityStatus`, `identityRename`, `draftSubmission`,
+`identityRecovery`, and `cleanupCron` in each environment. See
+[Milestone 3D-1 protected capability-model foundation](MILESTONE_3D1_PROTECTED_CAPABILITY_MODEL.md).
+The original D1C.4 record remains unchanged in
+[D1C.4 preview activation preparation](D1C4_ACTIVATION.md).
 
-See [D1C.4 preview activation preparation](D1C4_ACTIVATION.md) for the exact
-manifest, validation and review commands, generated local config inputs,
-guarded smoke harnesses, stop conditions, and two-step rollback. D1C.4 performs
-no remote migration, deployment, endpoint request, feature activation, Cron
-activation, secret operation, binding change, route change, or production
-change.
+The protected model is a local validation foundation. Enabled planning and
+execution remain unavailable until Milestone 3D-2. It performs no remote
+migration, deployment, endpoint request, feature activation, Cron activation,
+secret operation, binding change, route change, or Production change.
 
-Milestone 3C-1 adds an independent recovery gate and a local schema-4 readiness
-guard without changing the protected configuration files. See
+Milestone 3C-1 added an independent recovery gate and a local schema-4 readiness
+guard. See
 [Milestone 3C-1 local runtime integration](MILESTONE_3C1_LOCAL_RUNTIME.md).
-Enabled legacy-state generation and Preview planning now refuse until the
-activation model explicitly carries the schema-4 identity and recovery gates.
+Enabled Preview planning continues to refuse until its capability-oriented
+Milestone 3D-2 conversion is separately reviewed.
 
 Milestone 3C-3 defines the canonical `leaderboardRead`, `identityClaim`,
 `identityStatus`, `identityRename`, `draftSubmission`, `identityRecovery`, and
 `cleanupCron` runtime authority and adds a versioned, expiring Preview versus
 Production evaluator. The broad identity switch is a disable-only ceiling;
 each identity action still requires its narrow flag. Checked-in protected
-configuration remains unchanged, so every capability is disabled and enabled
-planning continues to refuse at the protected-configuration boundary. The
+configuration is now explicit and all disabled, so enabled planning continues
+to refuse at the protected-configuration boundary. The
 bounded, regular-file-only identity recovery command creates random,
 authority-bound read-only plans. It has no confirmation, execution,
 plan-consumption, callback, mutation adapter, network, subprocess, SQL,
@@ -247,9 +242,9 @@ are in
 
 Milestone 3A advances the local runtime contract to exact schema version 4.
 Migration `0004_leaderboard_identity_ranking.sql` has not been applied
-remotely. The protected release manifest and both Wrangler files remain
-unchanged, so neither existing D1C.4 activation state enables the new identity
-or leaderboard-read gates.
+remotely. Milestone 3D-1 now represents the identity and leaderboard-read gates
+explicitly as disabled in the protected release manifest and both Wrangler
+files.
 
 The account-free identity protocol stores only keyed digests of client-held
 device and recovery secrets. A qualifying identity-pending submission can
@@ -273,9 +268,9 @@ through its snapshot. Cumulative Performance and Hard Mode remain unavailable.
 Future activation requires a separate reviewed migration and deployment plan,
 a Worker-only identity signing secret, an environment-specific leaderboard
 cursor signing secret, explicit Pages and Worker flags, preview smoke evidence,
-privacy and moderation review, and separate authorization. Do not adapt the
-older D1C.4 generated activation states implicitly; they describe the prior
-submission-only rollout and remain protected in this milestone.
+privacy and moderation review, and separate authorization. The 3D-1 protected
+model cannot produce enabled release material; capability-oriented release
+planning is deferred to Milestone 3D-2.
 
 ## Local migration workflow
 

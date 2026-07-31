@@ -25,6 +25,11 @@ import {
   DRAFT_SUBMISSION_RETENTION_MS,
   DRAFT_SUBMISSION_SCHEMA_VERSION,
 } from '../../../functions/lib/draft-submission'
+import { isPrivateWorkerDraftSubmissionEnabled } from '../../../functions/lib/draft-submission-mode'
+import {
+  SCHEMA4_RUNTIME_GATE_REGISTRY,
+  type Schema4RuntimeGateRegistry,
+} from '../../../shared/schema4-capabilities.mjs'
 import {
   DraftSubmissionPublicError,
   draftSubmissionErrorResponse,
@@ -42,8 +47,8 @@ import {
   type CredentialLookupDatabase,
 } from '../../../functions/lib/leaderboard-identity'
 import {
-  isLeaderboardIdentityClaimEnabled,
-  isLeaderboardIdentityEnabled,
+  isPrivateWorkerLeaderboardIdentityClaimEnabled,
+  isPrivateWorkerLeaderboardIdentityEnabled,
   isLeaderboardIdentitySigningKey,
   type LeaderboardIdentityModeEnv,
 } from '../../../functions/lib/leaderboard-identity-mode'
@@ -357,8 +362,11 @@ function submissionDatabase(value: unknown): SubmissionDatabase | null {
   return isSubmissionDatabase(value) ? value : null
 }
 
-export function isSubmissionEnabled(env: SubmissionModeEnv) {
-  return env.DRAFT_SUBMISSION_MODE === 'enabled'
+export function isSubmissionEnabled(
+  env: SubmissionModeEnv,
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
+) {
+  return isPrivateWorkerDraftSubmissionEnabled(env, registry)
 }
 
 function submissionCodeFromValidation(code: DraftValidationErrorCode): DraftSubmissionErrorCode {
@@ -763,7 +771,7 @@ async function enrichedSubmissionResponse(
   if (placement.identity.setupRequired) {
     claim = Object.freeze({ state: 'disabled' })
     if (
-      isLeaderboardIdentityClaimEnabled(env)
+      isPrivateWorkerLeaderboardIdentityClaimEnabled(env)
       && isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)
     ) {
       const capability = await deriveClaimCapability(
@@ -956,8 +964,9 @@ export async function handleAuthoritativeSubmissionRequest(
   request: Request,
   env: SubmissionModeEnv = {},
   sourceOverrides: Partial<SubmissionSources> = {},
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
 ) {
-  if (!isSubmissionEnabled(env)) return handleApiNotFoundRequest(request)
+  if (!isSubmissionEnabled(env, registry)) return handleApiNotFoundRequest(request)
   if (request.method !== DRAFT_SUBMISSION_ALLOWED_METHODS) {
     return errorResponse('method_not_allowed', { Allow: DRAFT_SUBMISSION_ALLOWED_METHODS })
   }
@@ -1085,7 +1094,7 @@ export async function handleAuthoritativeSubmissionRequest(
   try {
     if (identityCredential !== null) {
       if (
-        !isLeaderboardIdentityEnabled(env)
+        !isPrivateWorkerLeaderboardIdentityEnabled(env)
         || !isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)
       ) return errorResponse('submission_unavailable')
       const resolved = await resolveLeaderboardIdentityCredential(
@@ -1124,7 +1133,7 @@ export async function handleAuthoritativeSubmissionRequest(
     && leaderboard.game_mode === 'classic'
     && leaderboard.environment !== 'test'
     && leaderboard.is_smoke === 0
-    && isLeaderboardIdentityClaimEnabled(env)
+    && isPrivateWorkerLeaderboardIdentityClaimEnabled(env)
   ) {
     if (!isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)) {
       return errorResponse('submission_unavailable')

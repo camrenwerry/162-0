@@ -1,10 +1,9 @@
-import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 import { compilePreviewState, validateConfigurationModel } from './lib/preview-release/configuration.mjs'
 import { validateRuntimeCommandGraph } from './lib/preview-release/command-safety.mjs'
-import { canonicalHash } from './lib/preview-release/canonical.mjs'
+import { canonicalHash, readStrictPackageMetadataFile } from './lib/preview-release/canonical.mjs'
 import { createReadOnlyCloudflareClient, inspectPreviewRemoteState } from './lib/preview-release/cloudflare-readonly.mjs'
 import { asWorkflowError, EXIT_CODES, remoteError, usageError } from './lib/preview-release/errors.mjs'
 import { computeReleaseHashes, inspectLocalState, inspectServerDevelop } from './lib/preview-release/local-state.mjs'
@@ -80,7 +79,7 @@ export const ROUTINE_TEST_STAGES = Object.freeze(TEST_STAGES.filter(
 ))
 
 export const RELEASE_STAGES = Object.freeze([
-  npmRunStage('D1C.4 activation-state validation', 'd1c4:activation:check'),
+  npmRunStage('Protected capability-model validation', 'd1c4:activation:check'),
   npmRunStage('Schema-4 activation readiness validation', 'schema4:readiness:check'),
   stage('All repository type checks', 'npm', ['run', 'typecheck']),
   stage('All release-relevant automated tests and resource identity checks', 'npm', ['test']),
@@ -99,7 +98,7 @@ export const MANUAL_RELEASE_STAGES = Object.freeze([
   npmRunStage('Protected release-file validation', 'ci:protected'),
   npmRunStage('Routine CI workflow contract', 'ci:workflow'),
   npmRunStage('Release text integrity', 'text:integrity'),
-  npmRunStage('D1C.4 activation-state validation', 'd1c4:activation:check'),
+  npmRunStage('Protected capability-model validation', 'd1c4:activation:check'),
   npmRunStage('Schema-4 activation readiness validation', 'schema4:readiness:check'),
   stage('All repository type checks', 'npm', ['run', 'typecheck']),
   stage('All release-relevant automated tests and resource identity checks', 'npm', ['test']),
@@ -192,8 +191,10 @@ function runCaptured(stageDefinition, context) {
 }
 
 function readPackageName(repositoryRoot) {
-  const packageJson = JSON.parse(readFileSync(path.join(repositoryRoot, 'package.json'), 'utf8'))
-  return packageJson.name
+  return readStrictPackageMetadataFile(path.join(repositoryRoot, 'package.json'), {
+    label: 'Preview check package metadata',
+    requireScripts: true,
+  }).value.name
 }
 
 function parseRepositoryRoot(stdout) {
@@ -353,7 +354,7 @@ export async function runPreviewCheck(options = {}) {
   const checks = [
     check('repository.local-state', 'PASS', 'Repository, Git, package, lockfile, and toolchain identities are exact.'),
     check('manifest.topology', 'PASS', 'Immutable Preview/Production topology is valid and separated.'),
-    check('configuration.activation-states', 'PASS', 'All three Preview-only activation artifacts compile and preserve fail-closed invariants.'),
+    check('configuration.activation-states', 'PASS', 'The exact all-disabled protected capability configuration compiles and preserves fail-closed invariants.'),
     check('quality.release-suite', 'PASS', 'All existing release-readiness stages passed.'),
   ]
   if (mode === 'online') {

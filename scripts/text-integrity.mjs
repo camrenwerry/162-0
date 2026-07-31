@@ -3,10 +3,15 @@ import { existsSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 import { TextDecoder } from 'node:util'
 import { fileURLToPath } from 'node:url'
+import { readStrictPackageMetadataFile } from './lib/preview-release/canonical.mjs'
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url)
 const REPOSITORY_ROOT = path.resolve(path.dirname(SCRIPT_PATH), '..')
 const TEXT_EXTENSIONS = new Set(['.css', '.example', '.html', '.js', '.json', '.md', '.mjs', '.sql', '.toml', '.ts', '.tsx', '.yml', '.yaml'])
+const GENERATED_TEXT_FILES = new Set([
+  'functions/types.d.ts',
+  'workers/draft-validation/worker-configuration.d.ts',
+])
 const RELEASE_WORKFLOW_FILES = [
   '.github/workflows/ci.yml',
   '.env.example',
@@ -80,11 +85,13 @@ function scanFile(relativePath, packageScripts) {
   if (source.includes('\uFFFD')) findings.push('Unicode replacement character')
   if (/(?:\u00C3[\u0080-\u00BF]|\u00C2[\u0080-\u00BF]|\u00E2\u20AC|\u00F0\u0178)/u.test(source)) findings.push('probable mojibake')
   if (source.length > 0 && !source.endsWith('\n')) findings.push('missing final newline')
-  source.split('\n').forEach((line, index) => {
-    if (/[ \t]+$/.test(line)) findings.push(`line ${index + 1}: trailing whitespace`)
-    const duplicate = line.match(/\b([A-Za-z]{3,})\s+\1\b/i)
-    if (duplicate) findings.push(`line ${index + 1}: duplicated word ${duplicate[1]}`)
-  })
+  if (!GENERATED_TEXT_FILES.has(relativePath)) {
+    source.split('\n').forEach((line, index) => {
+      if (/[ \t]+$/.test(line)) findings.push(`line ${index + 1}: trailing whitespace`)
+      const duplicate = line.match(/\b([A-Za-z]{3,})\s+\1\b/i)
+      if (duplicate) findings.push(`line ${index + 1}: duplicated word ${duplicate[1]}`)
+    })
+  }
   if (relativePath.endsWith('.md')) {
     const fences = source.match(/^```/gm)?.length ?? 0
     if (fences % 2 !== 0) findings.push('unbalanced Markdown code fence')
@@ -93,6 +100,9 @@ function scanFile(relativePath, packageScripts) {
     }
   }
   if (relativePath.endsWith('.json')) {
+    // This is a diagnostic syntax scan of repository text, not an actionable
+    // JSON loader. Protected and release loaders use the centralized strict
+    // bounded parser; package command metadata is loaded strictly below.
     try {
       JSON.parse(source)
     } catch {
@@ -109,7 +119,10 @@ function scanFile(relativePath, packageScripts) {
 try {
   const files = changedFiles()
   if (files.length === 0) throw new Error('No release-workflow text files were available for integrity inspection.')
-  const packageScripts = JSON.parse(readFileSync(path.join(REPOSITORY_ROOT, 'package.json'), 'utf8')).scripts
+  const packageScripts = readStrictPackageMetadataFile(path.join(REPOSITORY_ROOT, 'package.json'), {
+    label: 'text-integrity package metadata',
+    requireScripts: true,
+  }).value.scripts
   const findings = files.flatMap((file) => scanFile(file, packageScripts).map((finding) => `${file}: ${finding}`))
   if (findings.length > 0) {
     console.error(['Text integrity failed:', ...findings.map((finding) => `- ${finding}`)].join('\n'))

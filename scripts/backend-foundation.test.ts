@@ -25,50 +25,22 @@ const RAW_DATABASE_ERROR = 'internal D1 failure: database-id=secret host=private
 const source = (path: string) => readFileSync(path, 'utf8')
 
 const wrangler = source('wrangler.toml')
-const auditedWranglerPhaseB = [
-  'name = "diamond-draft"',
-  'pages_build_output_dir = "dist"',
-  'compatibility_date = "2026-07-14"',
-  '',
-  '[vars]',
-  'DRAFT_VALIDATION_MODE = "enabled"',
-  'DRAFT_TICKET_MODE = "enabled"',
-  'DRAFT_SUBMISSION_MODE = "disabled"',
-  '',
-  '[[d1_databases]]',
-  'binding = "DB"',
-  'database_name = "pennant-pursuit-preview"',
-  `database_id = "${PREVIEW_DATABASE_ID}"`,
-  'preview_database_id = "DB"',
-  'migrations_dir = "migrations"',
-  '',
-  '[[services]]',
-  'binding = "VALIDATION_SERVICE"',
-  'service = "pennant-pursuit-validation-preview"',
-  '',
-  '[env.production]',
-  '',
-  '[env.production.vars]',
-  'DRAFT_VALIDATION_MODE = "enabled"',
-  'DRAFT_TICKET_MODE = "disabled"',
-  'DRAFT_SUBMISSION_MODE = "disabled"',
-  '',
-  '[[env.production.services]]',
-  'binding = "VALIDATION_SERVICE"',
-  'service = "pennant-pursuit-validation-production"',
-  '',
-  '[[env.production.d1_databases]]',
-  'binding = "DB"',
-  'database_name = "pennant-pursuit-production"',
-  `database_id = "${PRODUCTION_DATABASE_ID}"`,
-  'migrations_dir = "migrations"',
-].join('\n')
-const wranglerConfiguration = wrangler
-  .split('\n')
-  .filter((line) => !line.trimStart().startsWith('#'))
-  .join('\n')
-  .trim()
-assert.equal(wranglerConfiguration, auditedWranglerPhaseB, 'Wrangler must preserve isolated D1 bindings, distinct private validation services, enabled read-only production validation, and preview-only ticket issuance')
+const protectedPagesCapabilityVariables = [
+  'LEADERBOARD_READ_MODE',
+  'LEADERBOARD_IDENTITY_MODE',
+  'LEADERBOARD_IDENTITY_CLAIM_MODE',
+  'LEADERBOARD_IDENTITY_STATUS_MODE',
+  'LEADERBOARD_IDENTITY_RENAME_MODE',
+  'DRAFT_SUBMISSION_MODE',
+  'LEADERBOARD_RECOVERY_MODE',
+] as const
+assert.doesNotMatch(wrangler, /^VITE_(?:LEADERBOARD|DRAFT_SUBMISSION).*_MODE\s*=/m)
+for (const variable of protectedPagesCapabilityVariables) {
+  assert.equal((wrangler.match(new RegExp(`^${variable} = "disabled"$`, 'gm')) ?? []).length, 2)
+  assert.doesNotMatch(wrangler, new RegExp(`^${variable} = "enabled"$`, 'm'))
+}
+assert.equal((wrangler.match(/^LEADERBOARD_ENVIRONMENT = "preview"$/gm) ?? []).length, 1)
+assert.equal((wrangler.match(/^LEADERBOARD_ENVIRONMENT = "production"$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^\[\[env\.production\.d1_databases\]\]$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^binding = "DB"$/gm) ?? []).length, 2)
@@ -78,15 +50,13 @@ assert.equal((wrangler.match(new RegExp(`^database_id = "${PREVIEW_DATABASE_ID}"
 assert.equal((wrangler.match(new RegExp(`^database_id = "${PRODUCTION_DATABASE_ID}"$`, 'gm')) ?? []).length, 1)
 assert.match(wrangler, /^preview_database_id = "DB"$/m)
 assert.equal((wrangler.match(/^migrations_dir = "migrations"$/gm) ?? []).length, 2)
-assert.match(wrangler, /^\[env\.production\]\n\n\[env\.production\.vars\]\nDRAFT_VALIDATION_MODE = "enabled"\nDRAFT_TICKET_MODE = "disabled"\nDRAFT_SUBMISSION_MODE = "disabled"\n\n\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"\n\n\[\[env\.production\.d1_databases\]\]$/m)
+assert.match(wrangler, /^\[env\.production\][\s\S]*?^\[env\.production\.vars\][\s\S]*?^\[\[env\.production\.services\]\][\s\S]*?^\[\[env\.production\.d1_databases\]\]$/m)
 assert.match(wrangler, /^\[\[services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-preview"$/m)
 assert.match(wrangler, /^\[\[env\.production\.services\]\]\nbinding = "VALIDATION_SERVICE"\nservice = "pennant-pursuit-validation-production"$/m)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "enabled"$/gm) ?? []).length, 2)
 assert.equal((wrangler.match(/^DRAFT_VALIDATION_MODE = "disabled"$/gm) ?? []).length, 0)
 assert.equal((wrangler.match(/^DRAFT_TICKET_MODE = "enabled"$/gm) ?? []).length, 1)
 assert.equal((wrangler.match(/^DRAFT_TICKET_MODE = "disabled"$/gm) ?? []).length, 1)
-assert.equal((wrangler.match(/^DRAFT_SUBMISSION_MODE = "disabled"$/gm) ?? []).length, 2)
-assert.equal((wrangler.match(/^DRAFT_SUBMISSION_MODE = "enabled"$/gm) ?? []).length, 0)
 assert.doesNotMatch(wrangler, /^\[env\.preview\]$/m)
 assert.doesNotMatch(wrangler, /^remote\s*=/m)
 assert.deepEqual(
@@ -182,15 +152,22 @@ assert.equal((submissionMigration.match(/UPDATE backend_schema/gi) ?? []).length
 assert.doesNotMatch(submissionMigration, /DROP\s|DELETE\s|INSERT\s|raw_ticket|signature|player|roster|identity|ip_address/i)
 
 const generatedTypes = source('functions/types.d.ts')
+assert.doesNotMatch(generatedTypes, /VITE_(?:LEADERBOARD|DRAFT_SUBMISSION).*_MODE/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "enabled";/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_TICKET_MODE: "disabled" \| "enabled";/)
-assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_SUBMISSION_MODE: "disabled";/)
+for (const variable of protectedPagesCapabilityVariables) {
+  assert.match(generatedTypes, new RegExp(`interface __BaseEnv_Env\\s*\\{[\\s\\S]*?${variable}: "disabled";`))
+}
+assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?LEADERBOARD_ENVIRONMENT: "production" \| "preview";/)
 assert.match(generatedTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\/ \| Fetcher \/\* pennant-pursuit-validation-preview \*\//)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DB: D1Database;/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_VALIDATION_MODE: "enabled";/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_TICKET_MODE: "disabled";/)
-assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?DRAFT_SUBMISSION_MODE: "disabled";/)
+for (const variable of protectedPagesCapabilityVariables) {
+  assert.match(generatedTypes, new RegExp(`interface ProductionEnv\\s*\\{[\\s\\S]*?${variable}: "disabled";`))
+}
+assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?LEADERBOARD_ENVIRONMENT: "production";/)
 assert.match(generatedTypes, /interface ProductionEnv\s*\{[\s\S]*?VALIDATION_SERVICE: Fetcher \/\* pennant-pursuit-validation-production \*\//)
 const envSource = source('functions/lib/env.ts')
 const databaseSource = source('functions/lib/database.ts')
@@ -321,14 +298,25 @@ assert.match(ticketSource, /DRAFT_TICKET_SCHEMA_VERSION/)
 assert.doesNotMatch(ticketSource, /\bMath\.random\s*\(|\bfetch\s*\(/)
 
 const privateValidationWorkerConfig = source('workers/draft-validation/wrangler.toml')
+const protectedWorkerCapabilityVariables = [
+  'LEADERBOARD_IDENTITY_MODE',
+  'LEADERBOARD_IDENTITY_CLAIM_MODE',
+  'LEADERBOARD_IDENTITY_STATUS_MODE',
+  'LEADERBOARD_IDENTITY_RENAME_MODE',
+  'DRAFT_SUBMISSION_MODE',
+  'LEADERBOARD_RECOVERY_MODE',
+  'RETENTION_CLEANUP_MODE',
+] as const
 assert.match(privateValidationWorkerConfig, /workers_dev = false/)
 assert.match(privateValidationWorkerConfig, /preview_urls = false/)
 assert.match(privateValidationWorkerConfig, /^name = "pennant-pursuit-validation-preview"$/m)
 assert.match(privateValidationWorkerConfig, /\[env\.production\][\s\S]*?^name = "pennant-pursuit-validation-production"$/m)
 assert.match(privateValidationWorkerConfig, /\[vars\][\s\S]*?DRAFT_TICKET_MODE = "enabled"/)
-assert.match(privateValidationWorkerConfig, /\[vars\][\s\S]*?DRAFT_SUBMISSION_MODE = "disabled"/)
 assert.match(privateValidationWorkerConfig, /\[env\.production\.vars\][\s\S]*?DRAFT_TICKET_MODE = "disabled"/)
-assert.match(privateValidationWorkerConfig, /\[env\.production\.vars\][\s\S]*?DRAFT_SUBMISSION_MODE = "disabled"/)
+for (const variable of protectedWorkerCapabilityVariables) {
+  assert.equal((privateValidationWorkerConfig.match(new RegExp(`^${variable} = "disabled"$`, 'gm')) ?? []).length, 2)
+  assert.doesNotMatch(privateValidationWorkerConfig, new RegExp(`^${variable} = "enabled"$`, 'm'))
+}
 assert.match(privateValidationWorkerConfig, /\[\[ratelimits\]\][\s\S]*?namespace_id = "16204011"[\s\S]*?\[\[ratelimits\]\][\s\S]*?namespace_id = "16204012"/)
 assert.match(privateValidationWorkerConfig, /\[\[env\.production\.ratelimits\]\][\s\S]*?namespace_id = "16204021"[\s\S]*?\[\[env\.production\.ratelimits\]\][\s\S]*?namespace_id = "16204022"/)
 assert.equal((privateValidationWorkerConfig.match(/^\[\[d1_databases\]\]$/gm) ?? []).length, 1)
@@ -338,11 +326,15 @@ assert.doesNotMatch(privateValidationWorkerConfig, /\broutes\b|custom_domain|kv_
 assert.doesNotMatch(privateValidationWorkerConfig, /DRAFT_TICKET_SIGNING_KEY\s*=/)
 const privateValidationWorkerTypes = source('workers/draft-validation/worker-configuration.d.ts')
 assert.match(privateValidationWorkerTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DB\?: D1Database;/)
-assert.match(privateValidationWorkerTypes, /interface __BaseEnv_Env\s*\{[\s\S]*?DRAFT_SUBMISSION_MODE: "disabled";/)
+for (const variable of protectedWorkerCapabilityVariables) {
+  assert.match(privateValidationWorkerTypes, new RegExp(`interface __BaseEnv_Env\\s*\\{[\\s\\S]*?${variable}: "disabled";`))
+}
 const productionWorkerEnv = privateValidationWorkerTypes.match(/interface ProductionEnv\s*\{([\s\S]*?)\n\t\}/)?.[1]
 assert.ok(productionWorkerEnv)
 assert.doesNotMatch(productionWorkerEnv, /\bDB:/)
-assert.match(productionWorkerEnv, /DRAFT_SUBMISSION_MODE: "disabled";/)
+for (const variable of protectedWorkerCapabilityVariables) {
+  assert.match(productionWorkerEnv, new RegExp(`${variable}: "disabled";`))
+}
 const privateValidationWorkerSource = source('workers/draft-validation/src/index.ts')
 const authoritativeValidationSource = source('workers/draft-validation/src/authoritative-validation.ts')
 const authoritativeTicketSource = source('workers/draft-validation/src/authoritative-ticket.ts')

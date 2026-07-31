@@ -1,3 +1,12 @@
+import {
+  type Schema4Capability,
+} from '../../../shared/schema4-capabilities.mjs'
+import {
+  immutableRuntimeConsumerRegistration,
+  runtimeConsumerFeatureState,
+} from '../../../shared/schema4-runtime-consumers.mjs'
+import registrationData from './runtimeConfig.registrations.json'
+
 export type LeaderboardRuntimeFeature =
   | 'draftTicket'
   | 'submission'
@@ -9,25 +18,32 @@ export type LeaderboardRuntimeFeature =
 
 export type RuntimeFeatureState = 'enabled' | 'disabled'
 
+export const FRONTEND_RUNTIME_CONSUMER_REGISTRATIONS = Object.freeze(
+  Object.fromEntries(Object.entries(registrationData).map(([capability, registration]) => [
+    capability,
+    immutableRuntimeConsumerRegistration(registration),
+  ])),
+) as Readonly<Record<Schema4Capability, ReturnType<typeof immutableRuntimeConsumerRegistration>>>
+
 function exactFeatureState(value: unknown): RuntimeFeatureState {
   return value === 'enabled' ? 'enabled' : 'disabled'
 }
 
-function identityCapabilityState(value: unknown): RuntimeFeatureState {
-  return import.meta.env.VITE_LEADERBOARD_IDENTITY_MODE === 'enabled'
-    && value === 'enabled'
-    ? 'enabled'
-    : 'disabled'
+function protectedFrontendFeatureState(capability: Schema4Capability): RuntimeFeatureState {
+  return runtimeConsumerFeatureState(
+    import.meta.env,
+    FRONTEND_RUNTIME_CONSUMER_REGISTRATIONS[capability],
+  )
 }
 
 export const LEADERBOARD_RUNTIME_FEATURES = Object.freeze({
   draftTicket: exactFeatureState(import.meta.env.VITE_DRAFT_TICKET_MODE),
-  submission: exactFeatureState(import.meta.env.VITE_DRAFT_SUBMISSION_MODE),
-  leaderboardRead: exactFeatureState(import.meta.env.VITE_LEADERBOARD_READ_MODE),
-  identityClaim: identityCapabilityState(import.meta.env.VITE_LEADERBOARD_IDENTITY_CLAIM_MODE),
-  identityStatus: identityCapabilityState(import.meta.env.VITE_LEADERBOARD_IDENTITY_STATUS_MODE),
-  identityRename: identityCapabilityState(import.meta.env.VITE_LEADERBOARD_IDENTITY_RENAME_MODE),
-  recovery: identityCapabilityState(import.meta.env.VITE_LEADERBOARD_RECOVERY_MODE),
+  submission: protectedFrontendFeatureState('draftSubmission'),
+  leaderboardRead: protectedFrontendFeatureState('leaderboardRead'),
+  identityClaim: protectedFrontendFeatureState('identityClaim'),
+  identityStatus: protectedFrontendFeatureState('identityStatus'),
+  identityRename: protectedFrontendFeatureState('identityRename'),
+  recovery: protectedFrontendFeatureState('identityRecovery'),
 }) satisfies Readonly<Record<LeaderboardRuntimeFeature, RuntimeFeatureState>>
 
 export function runtimeFeatureIsEnabled(feature: LeaderboardRuntimeFeature): boolean {

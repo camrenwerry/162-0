@@ -4,6 +4,7 @@ import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync,
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import test from 'node:test'
+import { expectedPagesBindings, expectedWorkerBindings } from './lib/preview-release/binding-inventory.mjs'
 import { assertLocalReleaseGraph, collectReachableScripts } from './lib/preview-release/command-safety.mjs'
 import { createFixedRunner } from './lib/preview-release/local-state.mjs'
 import { createPreviewPlan, runPreviewPlanCli } from './preview-plan.mjs'
@@ -115,6 +116,9 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
     }
     writeFileSync(path.join(repositoryRoot, 'config/preview-release.json'), `${JSON.stringify(fixtureManifest, null, 2)}\n`)
     cpSync(new URL('../config/preview-schema4-readiness.json', import.meta.url), path.join(repositoryRoot, 'config/preview-schema4-readiness.json'))
+    mkdirSync(path.join(repositoryRoot, 'shared'), { recursive: true })
+    cpSync(new URL('../shared/schema4-capabilities.mjs', import.meta.url), path.join(repositoryRoot, 'shared/schema4-capabilities.mjs'))
+    cpSync(new URL('../shared/schema4-runtime-consumers.mjs', import.meta.url), path.join(repositoryRoot, 'shared/schema4-runtime-consumers.mjs'))
     cpSync(new URL('../wrangler.toml', import.meta.url), path.join(repositoryRoot, 'wrangler.toml'))
     mkdirSync(path.join(repositoryRoot, 'workers/draft-validation'), { recursive: true })
     cpSync(new URL('../workers/draft-validation/wrangler.toml', import.meta.url), path.join(repositoryRoot, 'workers/draft-validation/wrangler.toml'))
@@ -122,11 +126,18 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
     cpSync(new URL('../migrations', import.meta.url), path.join(repositoryRoot, 'migrations'), { recursive: true })
     mkdirSync(path.join(repositoryRoot, 'src/features/leaderboard'), { recursive: true })
     cpSync(new URL('../src/features/leaderboard/runtimeConfig.ts', import.meta.url), path.join(repositoryRoot, 'src/features/leaderboard/runtimeConfig.ts'))
+    cpSync(new URL('../src/features/leaderboard/runtimeConfig.registrations.json', import.meta.url), path.join(repositoryRoot, 'src/features/leaderboard/runtimeConfig.registrations.json'))
     mkdirSync(path.join(repositoryRoot, 'functions/lib'), { recursive: true })
+    cpSync(new URL('../functions/lib/leaderboard-mode.ts', import.meta.url), path.join(repositoryRoot, 'functions/lib/leaderboard-mode.ts'))
+    cpSync(new URL('../functions/lib/leaderboard-mode.registrations.json', import.meta.url), path.join(repositoryRoot, 'functions/lib/leaderboard-mode.registrations.json'))
     cpSync(new URL('../functions/lib/leaderboard-identity-mode.ts', import.meta.url), path.join(repositoryRoot, 'functions/lib/leaderboard-identity-mode.ts'))
+    cpSync(new URL('../functions/lib/leaderboard-identity-mode.registrations.json', import.meta.url), path.join(repositoryRoot, 'functions/lib/leaderboard-identity-mode.registrations.json'))
+    cpSync(new URL('../functions/lib/draft-submission-mode.ts', import.meta.url), path.join(repositoryRoot, 'functions/lib/draft-submission-mode.ts'))
+    cpSync(new URL('../functions/lib/draft-submission-mode.registrations.json', import.meta.url), path.join(repositoryRoot, 'functions/lib/draft-submission-mode.registrations.json'))
     cpSync(new URL('../functions/lib/leaderboard-recovery-mode.ts', import.meta.url), path.join(repositoryRoot, 'functions/lib/leaderboard-recovery-mode.ts'))
     mkdirSync(path.join(repositoryRoot, 'workers/draft-validation/src'), { recursive: true })
     cpSync(new URL('../workers/draft-validation/src/retention-cleanup-mode.ts', import.meta.url), path.join(repositoryRoot, 'workers/draft-validation/src/retention-cleanup-mode.ts'))
+    cpSync(new URL('../workers/draft-validation/src/retention-cleanup-mode.registrations.json', import.meta.url), path.join(repositoryRoot, 'workers/draft-validation/src/retention-cleanup-mode.registrations.json'))
     writeFileSync(path.join(repositoryRoot, 'scripts', 'fixture-stage.mjs'), `
 const required = {
   WRANGLER_WRITE_LOGS: 'false',
@@ -200,7 +211,10 @@ for (const [name, expected] of Object.entries(required)) {
     runGit(repositoryRoot, ['push', '--set-upstream', 'origin', 'develop'])
     runGit(repositoryRoot, ['remote', 'set-url', 'origin', 'https://github.com/camrenwerry/162-0.git'])
     mkdirSync(path.join(repositoryRoot, 'node_modules/wrangler'), { recursive: true })
-    writeFileSync(path.join(repositoryRoot, 'node_modules/wrangler/package.json'), '{"version":"4.111.0"}\n')
+    writeFileSync(
+      path.join(repositoryRoot, 'node_modules/wrangler/package.json'),
+      '{"name":"wrangler","version":"4.111.0"}\n',
+    )
     writeFileSync(path.join(repositoryRoot, 'ignored.log'), 'ignored fixture output\n')
 
     return { repositoryRoot, temporaryRoot }
@@ -635,7 +649,7 @@ test('the exact public preview check refuses an unsafe reachable lifecycle befor
     assert.equal(execution.status, 10)
     assert.match(execution.stderr, /Release command graph is unsafe/)
     assert.equal(existsSync(path.join(fixture.repositoryRoot, 'unsafe-lifecycle-ran')), false)
-    assert.doesNotMatch(execution.stdout, /D1C\.4 activation-state validation/)
+    assert.doesNotMatch(execution.stdout, /Protected capability-model validation/)
   } finally {
     rmSync(fixture.temporaryRoot, { recursive: true, force: true })
   }
@@ -721,6 +735,21 @@ test('a clean temporary repository runs the actual preview:plan path with stable
       return fixedRunner(command, args, cwd)
     }
     const operations = []
+    const previewIdentity = {
+      d1: { id: 'ba6255b4-9425-4863-b10f-79149180f75a', binding: 'DB' },
+      worker: {
+        serviceBinding: { binding: 'VALIDATION_SERVICE', service: 'pennant-pursuit-validation-preview' },
+        rateLimitNamespaces: ['16204011', '16204012'],
+      },
+    }
+    const pagesEnvVars = Object.fromEntries(expectedPagesBindings(previewIdentity)
+      .filter(({ type }) => type === 'plain_text')
+      .map(({ name, text }) => [name, { value: text }]))
+    const workerBindings = expectedWorkerBindings(previewIdentity).map((binding) => (
+      binding.type === 'ratelimit'
+        ? { name: binding.name, type: binding.type, namespace_id: binding.namespaceId }
+        : structuredClone(binding)
+    ))
     const client = {
       async request(operation, parameters, validator) {
         const validate = (value) => typeof validator === 'function' ? validator(value, () => {}) : value
@@ -757,9 +786,7 @@ test('a clean temporary repository runs the actual preview:plan path with stable
               build_image_major_version: 3,
               compatibility_date: '2026-07-01',
               compatibility_flags: [],
-              env_vars: {
-                DRAFT_VALIDATION_MODE: { value: 'enabled' }, DRAFT_TICKET_MODE: { value: 'enabled' }, DRAFT_SUBMISSION_MODE: { value: 'disabled' },
-              },
+              env_vars: pagesEnvVars,
               fail_open: true,
               usage_model: 'standard',
               ai_bindings: {},
@@ -779,14 +806,7 @@ test('a clean temporary repository runs the actual preview:plan path with stable
               wrangler_config_hash: 'fixture-config-hash',
             } },
           },
-          'worker-settings': { bindings: [
-            { name: 'DB', type: 'd1', id: 'ba6255b4-9425-4863-b10f-79149180f75a' },
-            { name: 'RATE_LIMIT_BURST', type: 'ratelimit', namespace_id: '16204011' },
-            { name: 'RATE_LIMIT_SUSTAINED', type: 'ratelimit', namespace_id: '16204012' },
-            { name: 'DRAFT_VALIDATION_MODE', type: 'plain_text', text: 'enabled' },
-            { name: 'DRAFT_TICKET_MODE', type: 'plain_text', text: 'enabled' },
-            { name: 'DRAFT_SUBMISSION_MODE', type: 'plain_text', text: 'disabled' },
-          ] },
+          'worker-settings': { bindings: workerBindings },
           'worker-deployments': { deployments: [{
             id: '11111111-1111-4111-8111-111111111111',
             created_on: '2026-07-22T12:00:00.000Z',
@@ -800,8 +820,9 @@ test('a clean temporary repository runs the actual preview:plan path with stable
             { id: 1, name: '0001_backend_foundation.sql', applied_at: '2026-07-22 12:34:56' },
             { id: 2, name: '0002_draft_submissions.sql', applied_at: '2026-07-22 12:35:56' },
             { id: 3, name: '0003_leaderboard_foundation.sql', applied_at: '2026-07-22 12:36:56' },
+            { id: 4, name: '0004_leaderboard_identity_ranking.sql', applied_at: '2026-07-22 12:37:56' },
           ] }],
-          'backend-version': [{ success: true, results: [{ version: 3 }] }],
+          'backend-version': [{ success: true, results: [{ version: 4 }] }],
         }
         return validate(values[operation])
       },
@@ -820,7 +841,7 @@ test('a clean temporary repository runs the actual preview:plan path with stable
     assert.equal(plan.targetState, 'disabled')
     assert.deepEqual(
       plan.futureStages.map(({ id }) => id),
-      ['migration.apply', 'worker.deploy', 'pages.deploy'],
+      ['worker.deploy', 'pages.deploy'],
     )
     assert.equal(operations.filter((operation) => operation === 'pages-project').length, 2)
     assert.equal(operations.includes('worker-metadata'), false)

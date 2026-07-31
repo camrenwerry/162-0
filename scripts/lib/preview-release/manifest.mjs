@@ -1,6 +1,12 @@
-import { readFileSync } from 'node:fs'
 import path from 'node:path'
-import { canonicalHash, immutablePlain } from './canonical.mjs'
+import {
+  canonicalHash,
+  immutablePlain,
+  parseStrictJson,
+  PREVIEW_RELEASE_TOOL_CONTRACT_VERSION,
+  readStrictJsonFile,
+  STRICT_JSON_LIMITS,
+} from './canonical.mjs'
 import { localError, refusalError } from './errors.mjs'
 import { containsProhibitedCredentialAssignment } from './redaction.mjs'
 
@@ -13,8 +19,7 @@ const HOSTNAME_PATTERN = /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63
 const INVALID_BRANCH_CHARACTER_PATTERN = /[\u0000-\u0020\u007F~^:?*[\]\\]/u
 const MAX_BRANCH_LENGTH = 255
 const NAMESPACE_PATTERN = /^\d{1,20}$/
-const ALLOWED_STATES = ['disabled', 'submission-enabled', 'cron-enabled']
-const DANGEROUS_KEYS = new Set(['__proto__', 'prototype', 'constructor'])
+export const PREVIEW_RELEASE_TARGET_STATES = Object.freeze(['disabled'])
 
 function assert(condition, message) {
   if (!condition) throw localError(message, 'manifest.validity')
@@ -79,119 +84,11 @@ function assertNoCredentialMaterial(value, trail = 'manifest') {
   }
 }
 
-function parseStrictJson(source) {
-  let offset = 0
-  const fail = (message) => { throw localError(`Release manifest is not valid JSON under the strict manifest grammar: ${message}`, 'manifest.validity') }
-  const whitespace = () => { while (/[\u0009\u000A\u000D\u0020]/.test(source[offset] ?? '')) offset += 1 }
-
-  const string = () => {
-    if (source[offset] !== '"') fail(`expected a string at byte ${offset}.`)
-    const start = offset
-    offset += 1
-    while (offset < source.length) {
-      const character = source[offset]
-      if (character === '"') {
-        offset += 1
-        try {
-          return JSON.parse(source.slice(start, offset))
-        } catch {
-          fail(`malformed string at byte ${start}.`)
-        }
-      }
-      if (character === '\\') {
-        offset += 2
-        continue
-      }
-      if (character.charCodeAt(0) < 0x20) fail(`control character in string at byte ${offset}.`)
-      offset += 1
-    }
-    fail(`unterminated string at byte ${start}.`)
-  }
-
-  const value = () => {
-    whitespace()
-    const character = source[offset]
-    if (character === '"') return string()
-    if (character === '{') return object()
-    if (character === '[') return array()
-    for (const [token, parsed] of [['true', true], ['false', false], ['null', null]]) {
-      if (source.startsWith(token, offset)) {
-        offset += token.length
-        return parsed
-      }
-    }
-    const number = source.slice(offset).match(/^-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/)
-    if (number) {
-      offset += number[0].length
-      const parsed = Number(number[0])
-      if (!Number.isFinite(parsed)) fail(`non-finite number at byte ${offset - number[0].length}.`)
-      return parsed
-    }
-    fail(`unexpected token at byte ${offset}.`)
-  }
-
-  const array = () => {
-    offset += 1
-    const result = []
-    whitespace()
-    if (source[offset] === ']') {
-      offset += 1
-      return result
-    }
-    while (true) {
-      result.push(value())
-      whitespace()
-      if (source[offset] === ']') {
-        offset += 1
-        return result
-      }
-      if (source[offset] !== ',') fail(`expected ',' or ']' at byte ${offset}.`)
-      offset += 1
-    }
-  }
-
-  const object = () => {
-    offset += 1
-    const result = {}
-    const keys = new Set()
-    whitespace()
-    if (source[offset] === '}') {
-      offset += 1
-      return result
-    }
-    while (true) {
-      whitespace()
-      const key = string()
-      if (DANGEROUS_KEYS.has(key)) fail(`dangerous object key ${key} is prohibited.`)
-      if (keys.has(key)) fail(`duplicate object key ${key} is prohibited.`)
-      keys.add(key)
-      whitespace()
-      if (source[offset] !== ':') fail(`expected ':' after object key at byte ${offset}.`)
-      offset += 1
-      Object.defineProperty(result, key, {
-        value: value(), enumerable: true, configurable: true, writable: true,
-      })
-      whitespace()
-      if (source[offset] === '}') {
-        offset += 1
-        return result
-      }
-      if (source[offset] !== ',') fail(`expected ',' or '}' at byte ${offset}.`)
-      offset += 1
-    }
-  }
-
-  const parsed = value()
-  whitespace()
-  if (offset !== source.length) fail(`trailing content at byte ${offset}.`)
-  return parsed
-}
-
 export function validateReleaseManifest(input) {
   const manifest = immutablePlain(input)
   assertExactKeys(manifest, ['activation', 'cloudflare', 'configuration', 'repository', 'schemaVersion', 'toolContractVersion', 'toolchain'], 'Release manifest')
-  assert(manifest.schemaVersion === 1, 'Release manifest schemaVersion must be 1.')
-  assert(manifest.toolContractVersion === 'preview-release-phase-1-v1', 'Unexpected Preview tool contract version.')
+  assert(manifest.schemaVersion === 2, 'Release manifest schemaVersion must be 2.')
+  assert(manifest.toolContractVersion === PREVIEW_RELEASE_TOOL_CONTRACT_VERSION, 'Unexpected Preview tool contract version.')
   assertNoCredentialMaterial(manifest)
 
   const repository = manifest.repository
@@ -274,12 +171,20 @@ export function validateReleaseManifest(input) {
   assert(preview.worker.rateLimitNamespaces.every((value) => !production.worker.rateLimitNamespaces.includes(value)), 'Preview and Production rate-limit namespaces must be distinct.')
 
   const activation = manifest.activation
-  assertExactKeys(activation, ['allowedStates', 'canonicalState', 'cleanupCron'], 'activation')
-  assert(JSON.stringify(activation.allowedStates) === JSON.stringify(ALLOWED_STATES), 'Exactly three ordered Preview activation states are required.')
-  assert(activation.canonicalState === 'disabled', 'Canonical checked-in activation must be disabled.')
-  assert(/^([0-5]?\d|\*) ([01]?\d|2[0-3]|\*) (\*|[12]?\d|3[01]) (\*|[1-9]|1[0-2]) (\*|[0-6])$/.test(activation.cleanupCron), 'Approved cleanup Cron expression is invalid.')
+  assertExactKeys(activation, [
+    'authoritySchemaVersion',
+    'canonicalCheckedInState',
+    'capabilityModelVersion',
+    'maximumReviewWindowMs',
+    'releaseTooling',
+  ], 'activation')
+  assert(activation.capabilityModelVersion === 2, 'Capability model version must be 2.')
+  assert(activation.authoritySchemaVersion === 1, 'Authority schema version must be 1.')
+  assert(activation.maximumReviewWindowMs === 86_400_000, 'Authority review window must be exactly 24 hours.')
+  assert(activation.canonicalCheckedInState === 'all-disabled', 'Canonical checked-in capability state must be all-disabled.')
+  assert(activation.releaseTooling === 'disabled-only', 'Preview release tooling must remain disabled-only.')
 
-  assertExactKeys(manifest.configuration, ['activationStates', 'migrationsDirectory', 'pages', 'worker'], 'configuration')
+  assertExactKeys(manifest.configuration, ['capabilityModel', 'migrationsDirectory', 'pages', 'worker'], 'configuration')
   for (const relativePath of Object.values(manifest.configuration)) {
     assert(typeof relativePath === 'string' && relativePath.length > 0 && !path.isAbsolute(relativePath) && !relativePath.split('/').includes('..'), 'Configuration paths must be repository-relative.')
   }
@@ -289,12 +194,20 @@ export function validateReleaseManifest(input) {
 export function parseReleaseManifest(source) {
   assert(typeof source === 'string', 'Release manifest source must be text.')
   assert(!source.startsWith('\uFEFF'), 'Release manifest must not contain a UTF-8 BOM.')
-  const manifest = parseStrictJson(source)
+  const manifest = parseStrictJson(source, {
+    label: 'Release manifest',
+    error: (message) => localError(message, 'manifest.validity'),
+    limits: STRICT_JSON_LIMITS.releaseManifest,
+  })
   return validateReleaseManifest(manifest)
 }
 
 export function loadReleaseManifest(repositoryRoot, relativePath = MANIFEST_RELATIVE_PATH) {
-  const source = readFileSync(path.join(repositoryRoot, relativePath), 'utf8')
+  const { source } = readStrictJsonFile(path.join(repositoryRoot, relativePath), {
+    label: 'Release manifest',
+    limits: STRICT_JSON_LIMITS.releaseManifest,
+    error: (message) => localError(message, 'manifest.validity'),
+  })
   const manifest = parseReleaseManifest(source)
   return Object.freeze({ manifest, source, hash: canonicalHash(manifest), relativePath })
 }

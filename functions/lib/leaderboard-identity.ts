@@ -9,10 +9,17 @@ import {
   isLeaderboardIdentityCapabilityEnabled,
   isLeaderboardIdentityRecoveryEnabled,
   isLeaderboardIdentityRenameEnabled,
+  isPrivateWorkerLeaderboardIdentityCapabilityEnabled,
+  isPrivateWorkerLeaderboardIdentityRecoveryEnabled,
+  isPrivateWorkerLeaderboardIdentityRenameEnabled,
   isLeaderboardIdentitySigningKey,
   type LeaderboardIdentityModeEnv,
 } from './leaderboard-identity-mode'
 import { validateDisplayName } from '../../shared/leaderboard-display-name'
+import {
+  SCHEMA4_RUNTIME_GATE_REGISTRY,
+  type Schema4RuntimeGateRegistry,
+} from '../../shared/schema4-capabilities.mjs'
 export {
   DISPLAY_NAME_MAX_CHARACTERS,
   DISPLAY_NAME_MIN_CHARACTERS,
@@ -1347,15 +1354,30 @@ async function identityStatus(
   }, 200)
 }
 
-export async function handleLeaderboardIdentityRequest(
+type IdentityCapabilityGate = (
+  env: LeaderboardIdentityModeEnv,
+  capability: unknown,
+  registry: Schema4RuntimeGateRegistry,
+) => boolean
+
+type IdentityActionGate = (
+  env: LeaderboardIdentityModeEnv,
+  registry: Schema4RuntimeGateRegistry,
+) => boolean
+
+async function handleSurfaceLeaderboardIdentityRequest(
   request: Request,
   env: LeaderboardIdentityEnv,
   action: unknown,
-  now: () => number = () => Date.now(),
+  capabilityEnabled: IdentityCapabilityGate,
+  recoveryEnabled: IdentityActionGate,
+  renameEnabled: IdentityActionGate,
+  now: () => number,
+  registry: Schema4RuntimeGateRegistry,
 ) {
   if (
     !isLeaderboardIdentityCapability(action)
-    || !isLeaderboardIdentityCapabilityEnabled(env, action)
+    || !capabilityEnabled(env, action, registry)
   ) {
     return handleApiNotFoundRequest(request)
   }
@@ -1393,8 +1415,8 @@ export async function handleLeaderboardIdentityRequest(
           database,
           env.LEADERBOARD_IDENTITY_SIGNING_KEY,
           nowMs,
-          isLeaderboardIdentityRecoveryEnabled(env),
-          isLeaderboardIdentityRenameEnabled(env),
+          recoveryEnabled(env, registry),
+          renameEnabled(env, registry),
         )
       default:
         return assertNeverIdentityAction(action)
@@ -1402,6 +1424,44 @@ export async function handleLeaderboardIdentityRequest(
   } catch {
     return leaderboardIdentityErrorResponse('identity_unavailable')
   }
+}
+
+export function handleLeaderboardIdentityRequest(
+  request: Request,
+  env: LeaderboardIdentityEnv,
+  action: unknown,
+  now: () => number = () => Date.now(),
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
+) {
+  return handleSurfaceLeaderboardIdentityRequest(
+    request,
+    env,
+    action,
+    isLeaderboardIdentityCapabilityEnabled,
+    isLeaderboardIdentityRecoveryEnabled,
+    isLeaderboardIdentityRenameEnabled,
+    now,
+    registry,
+  )
+}
+
+export function handlePrivateWorkerLeaderboardIdentityRequest(
+  request: Request,
+  env: LeaderboardIdentityEnv,
+  action: unknown,
+  now: () => number = () => Date.now(),
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
+) {
+  return handleSurfaceLeaderboardIdentityRequest(
+    request,
+    env,
+    action,
+    isPrivateWorkerLeaderboardIdentityCapabilityEnabled,
+    isPrivateWorkerLeaderboardIdentityRecoveryEnabled,
+    isPrivateWorkerLeaderboardIdentityRenameEnabled,
+    now,
+    registry,
+  )
 }
 
 function assertNeverIdentityAction(action: never): never {

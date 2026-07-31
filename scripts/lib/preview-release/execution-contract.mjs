@@ -1,27 +1,23 @@
-import { canonicalJson, immutablePlain } from './canonical.mjs'
+import {
+  canonicalJson,
+  immutablePlain,
+  PREVIEW_RELEASE_PLAN_SCHEMA_VERSION,
+  PREVIEW_RELEASE_TOOL_CONTRACT_VERSION,
+} from './canonical.mjs'
 import { localError, refusalError } from './errors.mjs'
 import {
   DEDICATED_PREVIEW_CREDENTIAL,
   DEDICATED_PREVIEW_DEPLOY_CREDENTIAL,
 } from './redaction.mjs'
 
-export const EXECUTION_CONTRACT_VERSION = 'preview-release-execution-v1'
+export const EXECUTION_CONTRACT_VERSION = 'preview-release-execution-disabled-only-v2'
 export const PREVIEW_DEPLOY_CREDENTIAL = DEDICATED_PREVIEW_DEPLOY_CREDENTIAL
 export const PREVIEW_READ_CREDENTIAL = DEDICATED_PREVIEW_CREDENTIAL
-export const PREVIEW_SMOKE_ACKNOWLEDGEMENT = 'D1C4_PREVIEW_ONLY'
 
 const COMMAND_STAGE_IDS = new Set([
-  'cron.disable',
-  'pages.disable',
-  'migration.apply',
   'worker.deploy',
   'pages.deploy',
-  'submission.smoke',
-  'cron.deploy',
-  'retention.smoke',
 ])
-
-const INSPECTION_STAGE_IDS = new Set(['submission.disable.verify'])
 
 function descriptor(id, {
   executable,
@@ -45,22 +41,7 @@ function descriptor(id, {
   })
 }
 
-function inspection(id, validation) {
-  return immutablePlain({
-    id,
-    kind: 'inspection',
-    executable: null,
-    args: [],
-    cwd: 'repository',
-    configurationState: null,
-    credentialSource: PREVIEW_READ_CREDENTIAL,
-    childCredentialName: null,
-    mutation: 'none',
-    validation,
-  })
-}
-
-function workerDeploy(id, state, manifest, gitHead) {
+function workerDeploy(id, gitHead) {
   return descriptor(id, {
     executable: 'wrangler',
     args: [
@@ -68,23 +49,19 @@ function workerDeploy(id, state, manifest, gitHead) {
       'workers/draft-validation',
       'deploy',
       '--config',
-      `wrangler-${state}.toml`,
+      'wrangler-disabled.toml',
       '--strict',
       '--message',
-      `Pennant Pursuit Preview ${state} ${gitHead}`,
+      `Pennant Pursuit Preview disabled ${gitHead}`,
     ],
     cwd: 'release-workspace',
-    configurationState: state,
+    configurationState: 'disabled',
     mutation: 'preview-worker-deployment',
-    validation: id === 'cron.disable'
-      ? 'worker-cron-disabled'
-      : id === 'cron.deploy'
-        ? 'worker-cron-enabled'
-        : 'worker-target-configuration',
+    validation: 'worker-disabled-configuration',
   })
 }
 
-function pagesDeploy(id, state, manifest, gitHead) {
+function pagesDeploy(id, manifest, gitHead) {
   return descriptor(id, {
     executable: 'wrangler',
     args: [
@@ -100,80 +77,38 @@ function pagesDeploy(id, state, manifest, gitHead) {
       '--commit-dirty=false',
     ],
     cwd: 'release-workspace',
-    configurationState: state,
+    configurationState: 'disabled',
     mutation: 'preview-pages-deployment',
-    validation: id === 'pages.disable' ? 'pages-submission-disabled' : 'pages-target-configuration',
-  })
-}
-
-function smokeDescriptor(id, manifest, previewOrigin) {
-  const script = id === 'submission.smoke'
-    ? '/tmp/pennant-pursuit-d1c4-submission-smoke/d1c4-submission-smoke.js'
-    : '/tmp/pennant-pursuit-d1c4-retention-smoke/d1c4-retention-smoke.js'
-  return descriptor(id, {
-    executable: 'node',
-    args: [
-      script,
-      '--preview-base-url',
-      previewOrigin,
-      '--preview-worker',
-      manifest.cloudflare.preview.worker.name,
-      '--preview-environment',
-      'preview',
-      '--account-id',
-      manifest.cloudflare.account.id,
-      '--database-id',
-      manifest.cloudflare.preview.d1.id,
-      '--ack',
-      PREVIEW_SMOKE_ACKNOWLEDGEMENT,
-      '--execute',
-    ],
-    cwd: 'repository',
-    mutation: id === 'submission.smoke'
-      ? 'preview-smoke-owned-submission-rows'
-      : 'preview-smoke-owned-retention-sentinels',
-    validation: id === 'submission.smoke' ? 'submission-smoke-passed' : 'retention-smoke-passed',
+    validation: 'pages-disabled-configuration',
   })
 }
 
 export function buildExecutionContract({ futureStages, targetState, manifest, gitHead, previewOrigin }) {
   if (!Array.isArray(futureStages)) throw localError('Release stages are missing.', 'execution.contract')
-  if (!manifest.activation.allowedStates.includes(targetState)) throw localError('Execution target state is invalid.', 'execution.contract')
+  if (manifest.activation.releaseTooling !== 'disabled-only' || targetState !== 'disabled') {
+    throw localError('Execution target state must remain disabled until Milestone 3D-2.', 'execution.contract')
+  }
+  if (manifest.toolContractVersion !== PREVIEW_RELEASE_TOOL_CONTRACT_VERSION
+    || manifest.activation.canonicalCheckedInState !== 'all-disabled') {
+    throw localError('The current disabled-only manifest contract is missing or unsupported.', 'execution.contract')
+  }
   if (typeof previewOrigin !== 'string' || previewOrigin.length === 0) {
     throw localError('The reviewed Preview smoke origin is missing.', 'execution.contract')
   }
-  const finalSubmissionState = targetState === 'disabled' ? 'disabled' : 'submission-enabled'
-  const workerState = targetState === 'cron-enabled' ? 'submission-enabled' : targetState
   const stages = futureStages.map(({ id }) => {
-    if (id === 'cron.disable') return workerDeploy(id, 'submission-enabled', manifest, gitHead)
-    if (id === 'pages.disable') return pagesDeploy(id, 'disabled', manifest, gitHead)
-    if (id === 'submission.disable.verify') return inspection(id, 'pages-submission-disabled')
-    if (id === 'migration.apply') {
-      return descriptor(id, {
-        executable: 'wrangler',
-        args: [
-          'd1',
-          'migrations',
-          'apply',
-          manifest.cloudflare.preview.d1.name,
-          '--remote',
-          '--config',
-          'wrangler.toml',
-        ],
-        cwd: 'release-workspace',
-        configurationState: 'disabled',
-        mutation: 'preview-d1-forward-migrations',
-        validation: 'preview-migrations-current',
-      })
-    }
-    if (id === 'worker.deploy') return workerDeploy(id, workerState, manifest, gitHead)
-    if (id === 'pages.deploy') return pagesDeploy(id, finalSubmissionState, manifest, gitHead)
-    if (id === 'submission.smoke' || id === 'retention.smoke') return smokeDescriptor(id, manifest, previewOrigin)
-    if (id === 'cron.deploy') return workerDeploy(id, 'cron-enabled', manifest, gitHead)
+    if (id === 'worker.deploy') return workerDeploy(id, gitHead)
+    if (id === 'pages.deploy') return pagesDeploy(id, manifest, gitHead)
     throw localError(`Release stage ${id} has no fixed execution contract.`, 'execution.contract')
   })
   return immutablePlain({
     version: EXECUTION_CONTRACT_VERSION,
+    releaseBoundary: {
+      planSchemaVersion: PREVIEW_RELEASE_PLAN_SCHEMA_VERSION,
+      toolContractVersion: PREVIEW_RELEASE_TOOL_CONTRACT_VERSION,
+      releaseTooling: 'disabled-only',
+      canonicalCheckedInState: 'all-disabled',
+      targetState: 'disabled',
+    },
     orderedStages: stages,
     mutationBoundary: {
       accountId: manifest.cloudflare.account.id,
@@ -190,18 +125,65 @@ export function buildExecutionContract({ futureStages, targetState, manifest, gi
       'preview-identities-exact',
       'preview-migrations-current',
       'target-state-exact',
-      'required-smoke-stages-passed',
+      'disabled-deployments-validated',
       'production-operations-absent',
     ],
   })
 }
 
+function exactKeys(value, expected) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return false
+  return canonicalJson(Object.keys(value).sort()) === canonicalJson([...expected].sort())
+}
+
+export function assertCurrentDisabledExecutionContract(input) {
+  let contract
+  try {
+    contract = immutablePlain(input)
+  } catch (error) {
+    throw localError(
+      `Release command contract is malformed: ${error instanceof Error ? error.message : 'unknown value'}.`,
+      'execution.command-list',
+    )
+  }
+  if (!exactKeys(contract, ['finalValidation', 'mutationBoundary', 'orderedStages', 'releaseBoundary', 'version'])
+    || contract.version !== EXECUTION_CONTRACT_VERSION
+    || canonicalJson(contract.releaseBoundary) !== canonicalJson({
+      planSchemaVersion: PREVIEW_RELEASE_PLAN_SCHEMA_VERSION,
+      toolContractVersion: PREVIEW_RELEASE_TOOL_CONTRACT_VERSION,
+      releaseTooling: 'disabled-only',
+      canonicalCheckedInState: 'all-disabled',
+      targetState: 'disabled',
+    })
+    || !Array.isArray(contract.orderedStages)) {
+    throw refusalError('Release command contract is not the current disabled-only contract.', 'execution.command-list')
+  }
+  const seen = new Set()
+  for (const stage of contract.orderedStages) {
+    if (!exactKeys(stage, [
+      'args', 'childCredentialName', 'configurationState', 'credentialSource', 'cwd', 'executable',
+      'id', 'kind', 'mutation', 'validation',
+    ]) || stage.kind !== 'command' || !COMMAND_STAGE_IDS.has(stage.id) || seen.has(stage.id)
+      || stage.configurationState !== 'disabled' || stage.executable !== 'wrangler') {
+      throw refusalError(`Unsupported or non-disabled execution stage ${stage?.id ?? 'unknown'}.`, 'execution.command-list')
+    }
+    seen.add(stage.id)
+  }
+  const orderedIds = contract.orderedStages.map(({ id }) => id)
+  if (canonicalJson(orderedIds) !== canonicalJson(['worker.deploy', 'pages.deploy'].filter((id) => seen.has(id)))) {
+    throw refusalError('Disabled-only execution stages are out of order.', 'execution.command-list')
+  }
+  return contract
+}
+
 export function assertExecutionContract(actual, expected) {
+  const validatedActual = assertCurrentDisabledExecutionContract(actual)
+  const validatedExpected = assertCurrentDisabledExecutionContract(expected)
   let actualCanonical
   let expectedCanonical
   try {
-    actualCanonical = canonicalJson(actual)
-    expectedCanonical = canonicalJson(expected)
+    actualCanonical = canonicalJson(validatedActual)
+    expectedCanonical = canonicalJson(validatedExpected)
   } catch (error) {
     throw localError(
       `Release command contract is malformed: ${error instanceof Error ? error.message : 'unknown value'}.`,
@@ -211,18 +193,7 @@ export function assertExecutionContract(actual, expected) {
   if (actualCanonical !== expectedCanonical) {
     throw refusalError('Release command list differs from the exact generated Preview execution contract.', 'execution.command-list')
   }
-  for (const stage of actual.orderedStages) {
-    if (stage.kind === 'command' && !COMMAND_STAGE_IDS.has(stage.id)) {
-      throw refusalError(`Unapproved mutation stage ${stage.id}.`, 'execution.command-list')
-    }
-    if (stage.kind === 'inspection' && !INSPECTION_STAGE_IDS.has(stage.id)) {
-      throw refusalError(`Unapproved inspection stage ${stage.id}.`, 'execution.command-list')
-    }
-    if (!['command', 'inspection'].includes(stage.kind)) {
-      throw refusalError(`Unsupported execution stage kind for ${stage.id}.`, 'execution.command-list')
-    }
-  }
-  return immutablePlain(actual)
+  return validatedActual
 }
 
 export function stageCommandText(stage) {

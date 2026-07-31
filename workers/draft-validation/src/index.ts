@@ -24,13 +24,13 @@ import {
 } from './authoritative-submission'
 import { cleanupRetainedDraftSubmissions } from './retention-cleanup'
 import {
-  handleLeaderboardIdentityRequest,
+  handlePrivateWorkerLeaderboardIdentityRequest,
   leaderboardIdentityErrorResponse,
   type LeaderboardIdentityEnv,
 } from '../../../functions/lib/leaderboard-identity'
 import {
   isLeaderboardIdentityCapability,
-  isLeaderboardIdentityCapabilityEnabled,
+  isPrivateWorkerLeaderboardIdentityCapabilityEnabled,
   isLeaderboardIdentitySigningKey,
 } from '../../../functions/lib/leaderboard-identity-mode'
 import {
@@ -41,6 +41,10 @@ import {
   isRetentionCleanupEnabled,
   type RetentionCleanupModeEnv,
 } from './retention-cleanup-mode'
+import {
+  SCHEMA4_RUNTIME_GATE_REGISTRY,
+  type Schema4RuntimeGateRegistry,
+} from '../../../shared/schema4-capabilities.mjs'
 
 const INTERNAL_RATE_KEY_HEADER = 'X-Pennant-Pursuit-Rate-Key'
 const RATE_KEY_PATTERN = /^v1:[a-f0-9]{64}$/
@@ -121,27 +125,43 @@ export async function handlePrivateDraftTicketRequest(request: Request, env: Pri
   return withRateLimit(request, env, handleAuthoritativeDraftTicketRequest)
 }
 
-export async function handlePrivateSubmissionRequest(request: Request, env: PrivateValidationWorkerEnv) {
-  if (!isSubmissionEnabled(env)) return handleApiNotFoundRequest(request)
+export async function handlePrivateSubmissionRequest(
+  request: Request,
+  env: PrivateValidationWorkerEnv,
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
+) {
+  if (!isSubmissionEnabled(env, registry)) return handleApiNotFoundRequest(request)
 
-  return withRateLimit(request, env, handleAuthoritativeSubmissionRequest, 'submission')
+  return withRateLimit(
+    request,
+    env,
+    (forwarded, bindings) => handleAuthoritativeSubmissionRequest(forwarded, bindings, {}, registry),
+    'submission',
+  )
 }
 
 export async function handlePrivateLeaderboardIdentityRequest(
   request: Request,
   env: PrivateValidationWorkerEnv,
   action: unknown,
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
 ) {
   if (
     !isLeaderboardIdentityCapability(action)
-    || !isLeaderboardIdentityCapabilityEnabled(env, action)
+    || !isPrivateWorkerLeaderboardIdentityCapabilityEnabled(env, action, registry)
   ) {
     return handleApiNotFoundRequest(request)
   }
   return withRateLimit(
     request,
     env,
-    (forwarded, bindings) => handleLeaderboardIdentityRequest(forwarded, bindings, action),
+    (forwarded, bindings) => handlePrivateWorkerLeaderboardIdentityRequest(
+      forwarded,
+      bindings,
+      action,
+      () => Date.now(),
+      registry,
+    ),
     'identity',
   )
 }
@@ -149,6 +169,7 @@ export async function handlePrivateLeaderboardIdentityRequest(
 export async function handlePrivateLeaderboardIdentityHealthRequest(
   request: Request,
   env: PrivateValidationWorkerEnv,
+  registry: Schema4RuntimeGateRegistry = SCHEMA4_RUNTIME_GATE_REGISTRY,
 ) {
   const requestedCapability = new URL(request.url).searchParams.get('capability') ?? 'status'
   if (
@@ -159,7 +180,7 @@ export async function handlePrivateLeaderboardIdentityHealthRequest(
   }
   if (
     request.method !== 'GET'
-    || !isLeaderboardIdentityCapabilityEnabled(env, requestedCapability)
+    || !isPrivateWorkerLeaderboardIdentityCapabilityEnabled(env, requestedCapability, registry)
     || !isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)
     || !env.DB
   ) return new Response(null, { status: 503 })

@@ -1,15 +1,26 @@
 import assert from 'node:assert/strict'
-import { chmodSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import {
+  chmodSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  symlinkSync,
+  writeFileSync,
+} from 'node:fs'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import test from 'node:test'
 import {
   createReleasePackage,
   loadReleasePackage,
+  RELEASE_PACKAGE_SCHEMA_VERSION,
   serializeReleaseArtifact,
   validateReleasePackage,
+  writeReleasePackage,
 } from './lib/preview-release/artifacts.mjs'
-import { canonicalHash, canonicalJson } from './lib/preview-release/canonical.mjs'
+import { canonicalHash, canonicalJson, STRICT_JSON_LIMITS } from './lib/preview-release/canonical.mjs'
+import { expectedPagesBindings, expectedWorkerBindings } from './lib/preview-release/binding-inventory.mjs'
 import { compilePreviewState, validateConfigurationModel } from './lib/preview-release/configuration.mjs'
 import { buildExecutionContract } from './lib/preview-release/execution-contract.mjs'
 import { EXIT_CODES } from './lib/preview-release/errors.mjs'
@@ -19,7 +30,7 @@ import { classifyMigrationState, loadRepositoryMigrations } from './lib/preview-
 import { buildReleasePlan, derivePlanId } from './lib/preview-release/plan.mjs'
 import { redactValue } from './lib/preview-release/redaction.mjs'
 import { parsePreviewReadinessArguments } from './preview-readiness.mjs'
-import { parsePreviewReleaseArguments } from './preview-release.mjs'
+import { parsePreviewReleaseArguments, runPreviewReleaseCli } from './preview-release.mjs'
 
 const REPOSITORY_ROOT = path.resolve(new URL('..', import.meta.url).pathname)
 const canonicalManifest = loadReleaseManifest(REPOSITORY_ROOT).manifest
@@ -29,6 +40,7 @@ const HEAD = 'c'.repeat(40)
 const CREATED_MS = Date.parse('2026-07-29T18:00:00.000Z')
 const READ_TOKEN = 'read-preview-fixture-token-value'
 const DEPLOY_TOKEN = 'deploy-preview-fixture-token-value'
+const LEGACY_CRON_FIXTURE = '17 * * * *'
 
 function resolvedManifest() {
   const value = structuredClone(canonicalManifest)
@@ -57,28 +69,13 @@ function migrations(count) {
 function bindings(state) {
   const reviewed = resolvedManifest()
   const submissionMode = state === 'disabled' ? 'disabled' : 'enabled'
-  const sort = (values) => values.sort((left, right) => `${left.type}:${left.name}`.localeCompare(`${right.type}:${right.name}`))
+  const pages = structuredClone(expectedPagesBindings(reviewed.cloudflare.preview))
+  const worker = structuredClone(expectedWorkerBindings(reviewed.cloudflare.preview))
+  pages.find(({ name }) => name === 'DRAFT_SUBMISSION_MODE').text = submissionMode
+  worker.find(({ name }) => name === 'DRAFT_SUBMISSION_MODE').text = submissionMode
   return {
-    pages: sort([
-      { name: 'DB', type: 'd1', id: reviewed.cloudflare.preview.d1.id },
-      { name: 'DRAFT_SUBMISSION_MODE', type: 'plain_text', text: submissionMode },
-      { name: 'DRAFT_TICKET_MODE', type: 'plain_text', text: 'enabled' },
-      { name: 'DRAFT_VALIDATION_MODE', type: 'plain_text', text: 'enabled' },
-      {
-        name: 'VALIDATION_SERVICE',
-        type: 'service',
-        service: reviewed.cloudflare.preview.worker.name,
-        environment: '',
-      },
-    ]),
-    worker: sort([
-      { name: 'DB', type: 'd1', id: reviewed.cloudflare.preview.d1.id },
-      { name: 'DRAFT_SUBMISSION_MODE', type: 'plain_text', text: submissionMode },
-      { name: 'DRAFT_TICKET_MODE', type: 'plain_text', text: 'enabled' },
-      { name: 'DRAFT_VALIDATION_MODE', type: 'plain_text', text: 'enabled' },
-      { name: 'RATE_LIMIT_BURST', type: 'ratelimit', namespaceId: '16204011' },
-      { name: 'RATE_LIMIT_SUSTAINED', type: 'ratelimit', namespaceId: '16204012' },
-    ]),
+    pages,
+    worker,
   }
 }
 
@@ -117,7 +114,7 @@ function remoteState(state = 'disabled', {
       previewUrls: false,
       routes: [],
       customDomains: [],
-      schedules: state === 'cron-enabled' ? [reviewed.activation.cleanupCron] : [],
+      schedules: state === 'cron-enabled' ? [LEGACY_CRON_FIXTURE] : [],
       bindings: inventory.worker,
       artifactHash: null,
       artifactProvenance: 'unproven',
@@ -206,6 +203,8 @@ function planFor(targetState = 'disabled', initialState = 'disabled') {
     retentionSmokeBuildArtifact: 'd'.repeat(64),
     protectedConfiguration: {
       'config/preview-release.json': 'e'.repeat(64),
+      'config/preview-schema4-readiness.json': '1'.repeat(64),
+      'shared/schema4-capabilities.mjs': '2'.repeat(64),
       'wrangler.toml': 'f'.repeat(64),
       'workers/draft-validation/wrangler.toml': '0'.repeat(64),
       'workers/draft-validation/d1c4-activation-states.json': 'a'.repeat(64),
@@ -229,6 +228,32 @@ function planFor(targetState = 'disabled', initialState = 'disabled') {
     remote,
     migration: migrations(),
   })
+}
+
+function reidentifyPlan(input) {
+  const plan = structuredClone(input)
+  delete plan.planId
+  plan.planId = derivePlanId(plan)
+  return plan
+}
+
+function rebindForgedPackage(input) {
+  const releasePackage = structuredClone(input)
+  releasePackage.planHash = canonicalHash(releasePackage.plan)
+  releasePackage.bindingHash = canonicalHash({
+    planId: releasePackage.plan.planId,
+    planHash: releasePackage.planHash,
+    gitHead: releasePackage.plan.gitHead,
+    targetState: releasePackage.plan.targetState,
+    executionContractHash: canonicalHash(releasePackage.plan.executionContract),
+    createdAt: releasePackage.createdAt,
+    expiresAt: releasePackage.expiresAt,
+  })
+  releasePackage.approval.challenge = `APPROVE ${releasePackage.plan.planId} ${releasePackage.bindingHash.slice(0, 24)} ${releasePackage.plan.targetState}`
+  releasePackage.evidence.exactExecutionContractHash = canonicalHash(releasePackage.plan.executionContract)
+  const { artifactHash: _artifactHash, ...withoutArtifactHash } = releasePackage
+  releasePackage.artifactHash = canonicalHash(withoutArtifactHash)
+  return releasePackage
 }
 
 function executionOptions(plan, postState, {
@@ -300,6 +325,132 @@ test('release packages are canonical, deterministic with an injected clock, expi
     () => validateReleasePackage(first, { nowMs: Date.parse(first.expiresAt), requireUnexpired: true }),
     /stale or expired/,
   )
+  assert.equal(RELEASE_PACKAGE_SCHEMA_VERSION, 2)
+  assert.equal(first.schemaVersion, 2)
+  assert.equal(first.plan.planSchemaVersion, 4)
+  assert.equal(first.plan.toolContractVersion, 'preview-release-disabled-only-v2')
+  assert.equal(first.plan.manifestContract.releaseTooling, 'disabled-only')
+  assert.equal(first.plan.manifestContract.canonicalCheckedInState, 'all-disabled')
+  assert.equal(Object.isFrozen(first.plan), true)
+  assert.throws(() => { first.plan.targetState = 'submission-enabled' }, TypeError)
+})
+
+test('every direct creation and validation boundary rejects enabled, unknown, legacy, or hidden configuration', async () => {
+  const currentPlan = planFor()
+  const currentPackage = createReleasePackage(currentPlan, { nowMs: CREATED_MS })
+  assert.doesNotThrow(() => validateReleasePackage(currentPackage))
+
+  for (const targetState of ['submission-enabled', 'cron-enabled', 'future-enabled']) {
+    const enabledPlan = structuredClone(currentPlan)
+    enabledPlan.targetState = targetState
+    assert.throws(
+      () => createReleasePackage(reidentifyPlan(enabledPlan), { nowMs: CREATED_MS }),
+      /disabled-only|exact current|schema|target/i,
+      targetState,
+    )
+    const forged = structuredClone(currentPackage)
+    forged.plan.targetState = targetState
+    forged.plan = reidentifyPlan(forged.plan)
+    assert.throws(
+      () => validateReleasePackage(rebindForgedPackage(forged)),
+      /disabled-only|exact current|schema|target/i,
+      targetState,
+    )
+  }
+
+  for (const mutate of [
+    (plan) => { plan.planSchemaVersion = 3 },
+    (plan) => { plan.toolContractVersion = 'preview-release-v1' },
+    (plan) => { delete plan.manifestContract },
+    (plan) => { plan.manifestContract.releaseTooling = 'enabled-capable' },
+    (plan) => { plan.manifestContract.canonicalCheckedInState = 'submission-enabled' },
+    (plan) => { plan.hiddenConfiguration = { draftSubmission: 'enabled' } },
+    (plan) => { plan.remoteBefore.pages.deployment.hiddenConfiguration = 'enabled' },
+    (plan) => {
+      const hidden = { name: 'HIDDEN_CAPABILITY_MODE', type: 'plain_text', text: 'enabled' }
+      plan.remoteBefore.pages.bindings.push(hidden)
+      plan.expectedFinalTopology.pagesBindings.push(structuredClone(hidden))
+    },
+  ]) {
+    const candidate = structuredClone(currentPlan)
+    mutate(candidate)
+    assert.throws(
+      () => createReleasePackage(reidentifyPlan(candidate), { nowMs: CREATED_MS }),
+      /disabled-only|manifest|schema|exact current|hidden enabled|binding/i,
+    )
+  }
+
+  const legacyPackage = structuredClone(currentPackage)
+  legacyPackage.schemaVersion = 1
+  assert.throws(
+    () => validateReleasePackage(rebindForgedPackage(legacyPackage)),
+    /schema or kind is unsupported/,
+  )
+
+  const writingForgery = structuredClone(currentPackage)
+  writingForgery.plan.targetState = 'submission-enabled'
+  writingForgery.plan = reidentifyPlan(writingForgery.plan)
+  const forgedForWriting = rebindForgedPackage(writingForgery)
+  const artifactRoot = mkdtempSync(path.join(tmpdir(), 'pp-artifact-boundary-'))
+  try {
+    assert.throws(
+      () => writeReleasePackage(artifactRoot, forgedForWriting),
+      /disabled-only|schema|target/i,
+    )
+    assert.throws(
+      () => serializeReleaseArtifact(forgedForWriting),
+      /disabled-only|schema|target/i,
+    )
+    const packageDirectory = path.join(artifactRoot, '.preview-release')
+    mkdirSync(packageDirectory, { mode: 0o700 })
+    const packagePath = path.join(packageDirectory, 'legacy.json')
+    writeFileSync(packagePath, `${canonicalJson(rebindForgedPackage(legacyPackage))}\n`, { mode: 0o600 })
+    await assert.rejects(
+      runPreviewReleaseCli(['--plan', '.preview-release/legacy.json'], {
+        repositoryRoot: artifactRoot,
+      }),
+      /schema or kind is unsupported/,
+    )
+  } finally {
+    rmSync(artifactRoot, { recursive: true, force: true })
+  }
+
+  let approvals = 0
+  let spawns = 0
+  const directExecutionForgery = structuredClone(currentPackage)
+  directExecutionForgery.plan.targetState = 'submission-enabled'
+  directExecutionForgery.plan = reidentifyPlan(directExecutionForgery.plan)
+  const directResult = await executeReleasePackage(
+    rebindForgedPackage(directExecutionForgery),
+    {
+      repositoryRoot: REPOSITORY_ROOT,
+      environment: {},
+      approve: async () => { approvals += 1; return '' },
+      spawn: () => { spawns += 1; return { status: 0 } },
+      runQualityStages: false,
+      now: () => CREATED_MS + 1,
+    },
+  )
+  assert.equal(directResult.report.status, 'REFUSED')
+  assert.equal(approvals, 0)
+  assert.equal(spawns, 0)
+  assert.match(directResult.report.error.message, /disabled-only|schema|target/i)
+
+  const malformedResult = await executeReleasePackage(
+    { schemaVersion: 1 },
+    {
+      repositoryRoot: REPOSITORY_ROOT,
+      environment: {},
+      approve: async () => { approvals += 1; return '' },
+      spawn: () => { spawns += 1; return { status: 0 } },
+      runQualityStages: false,
+      now: () => CREATED_MS + 1,
+    },
+  )
+  assert.notEqual(malformedResult.report.status, 'PASS')
+  assert.equal(malformedResult.report.planId, 'unvalidated')
+  assert.equal(approvals, 0)
+  assert.equal(spawns, 0)
 })
 
 test('canonical artifact loading rejects byte edits, duplicate-like formatting, writable files, and plan tampering', () => {
@@ -319,9 +470,55 @@ test('canonical artifact loading rejects byte edits, duplicate-like formatting, 
     chmodSync(writablePath, 0o622)
     assert.throws(() => loadReleasePackage(writablePath), /non-writable/)
 
+    const invalidUtf8Path = path.join(directory, 'invalid-utf8.json')
+    writeFileSync(invalidUtf8Path, new Uint8Array([0x7B, 0xFF, 0x7D]), { mode: 0o600 })
+    assert.throws(() => loadReleasePackage(invalidUtf8Path), /valid UTF-8/)
+
+    const bomPath = path.join(directory, 'bom.json')
+    writeFileSync(bomPath, Buffer.concat([Buffer.from([0xEF, 0xBB, 0xBF]), Buffer.from('{}')]), { mode: 0o600 })
+    assert.throws(() => loadReleasePackage(bomPath), /BOM/)
+
+    for (const [name, source, pattern] of [
+      ['duplicate', serializeReleaseArtifact(releasePackage).replace('"schemaVersion":2', '"schemaVersion":2,"schemaVersion":2'), /duplicate object key/],
+      ['constructor', '{"constructor":{}}\n', /dangerous object key/],
+      ['prototype', '{"prototype":{}}\n', /dangerous object key/],
+      ['proto', '{"__proto__":{}}\n', /dangerous object key/],
+      ['trailing', `${serializeReleaseArtifact(releasePackage)}true`, /trailing content/],
+      ['malformed', '{\n', /unexpected token|expected a string/],
+      ['nul', '{"value":"\0"}\n', /NUL/],
+      ['replacement', '{"value":"\uFFFD"}\n', /replacement character/],
+      ['escaped-nul-value', `${String.raw`{"value":"\u0000"}`}\n`, /NUL/],
+      ['escaped-nul-key', `${String.raw`{"\u0000":1}`}\n`, /NUL/],
+      ['escaped-replacement-value', `${String.raw`{"value":"\uFFFD"}`}\n`, /replacement character/],
+      ['escaped-replacement-key', `${String.raw`{"\uFFFD":1}`}\n`, /replacement character/],
+      ['high-surrogate', `${String.raw`{"value":"\uD800"}`}\n`, /surrogate|malformed string/],
+      ['low-surrogate', `${String.raw`{"value":"\uDC00"}`}\n`, /surrogate|malformed string/],
+    ]) {
+      const candidatePath = path.join(directory, `${name}.json`)
+      writeFileSync(candidatePath, source, { mode: 0o600 })
+      assert.throws(() => loadReleasePackage(candidatePath), pattern, name)
+    }
+
+    const oversizedPath = path.join(directory, 'oversized.json')
+    writeFileSync(oversizedPath, Buffer.alloc(STRICT_JSON_LIMITS.releasePackage.maxBytes + 1, 0x20), { mode: 0o600 })
+    assert.throws(() => loadReleasePackage(oversizedPath), /bounded/)
+
+    const directoryPath = path.join(directory, 'directory.json')
+    mkdirSync(directoryPath)
+    assert.throws(() => loadReleasePackage(directoryPath), /regular file/)
+    const symlinkPath = path.join(directory, 'symlink.json')
+    symlinkSync(goodPath, symlinkPath)
+    assert.throws(() => loadReleasePackage(symlinkPath), /regular file/)
+
+    const legacyReplay = structuredClone(releasePackage)
+    legacyReplay.schemaVersion = 1
+    const legacyReplayPath = path.join(directory, 'legacy-replay.json')
+    writeFileSync(legacyReplayPath, `${canonicalJson(rebindForgedPackage(legacyReplay))}\n`, { mode: 0o600 })
+    assert.throws(() => loadReleasePackage(legacyReplayPath), /schema or kind is unsupported/)
+
     const tampered = structuredClone(releasePackage)
     tampered.plan.gitHead = 'f'.repeat(40)
-    assert.throws(() => validateReleasePackage(tampered), /plan ID|plan hash|edited/)
+    assert.throws(() => validateReleasePackage(tampered), /plan ID|plan hash|edited|command list differs/)
 
     const forgedEvidence = structuredClone(releasePackage)
     forgedEvidence.evidence.statement = 'Edited evidence fixture.'
@@ -334,10 +531,10 @@ test('canonical artifact loading rejects byte edits, duplicate-like formatting, 
 })
 
 test('exact command contracts bind Preview targets, immutable order, validation, and Production prohibition', () => {
-  const plan = planFor('cron-enabled')
+  const plan = planFor()
   assert.deepEqual(
     plan.executionContract.orderedStages.map(({ id }) => id),
-    ['worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'],
+    ['worker.deploy', 'pages.deploy'],
   )
   const text = canonicalJson(plan.executionContract)
   assert.match(text, /pennant-pursuit-validation-preview/)
@@ -357,22 +554,19 @@ test('exact command contracts bind Preview targets, immutable order, validation,
   )
 })
 
-test('edited or Production-target command manifests refuse before approval or subprocess execution', async () => {
+test('edited or Production-target command manifests refuse during package creation', () => {
   const plan = structuredClone(planFor())
   plan.executionContract.orderedStages[0].args.push(resolvedManifest().cloudflare.production.worker.name)
   delete plan.planId
   plan.planId = derivePlanId(plan)
-  const releasePackage = createReleasePackage(plan, { nowMs: CREATED_MS })
   let approvals = 0
   let spawns = 0
-  const result = await executeReleasePackage(releasePackage, executionOptions(plan, remoteState(), {
-    approve: async () => { approvals += 1; return '' },
-    spawn: () => { spawns += 1; return { status: 0 } },
-  }))
-  assert.equal(result.report.status, 'REFUSED')
+  assert.throws(
+    () => createReleasePackage(plan, { nowMs: CREATED_MS }),
+    /command list differs/,
+  )
   assert.equal(approvals, 0)
   assert.equal(spawns, 0)
-  assert.match(result.report.error.message, /command list differs/)
 })
 
 test('execution credentials are dedicated, distinct, TTY-gated, and reject generic or Production-capable aliases', () => {
@@ -525,50 +719,29 @@ test('successful disabled execution uses only fixed commands, isolated child env
   assert.match(JSON.stringify(result.report), /\[REDACTED\]/)
 })
 
-test('enabled execution cannot pass without the required post-deployment submission smoke stage', async () => {
-  const plan = planFor('submission-enabled')
-  const releasePackage = createReleasePackage(plan, { nowMs: CREATED_MS })
-  const post = remoteState('submission-enabled', {
-    deploymentId: 'pages-enabled',
-    workerDeploymentId: '33333333-3333-4333-8333-333333333333',
-  })
-  const passed = await executeReleasePackage(releasePackage, executionOptions(plan, post))
-  assert.equal(passed.report.status, 'PASS')
-  assert.deepEqual(passed.report.stages.map(({ id }) => id), ['worker.deploy', 'pages.deploy', 'submission.smoke'])
-  assert.equal(passed.report.validation.checks.find(({ id }) => id === 'validation.required-smoke').status, 'PASS')
-
-  let calls = 0
-  const failed = await executeReleasePackage(releasePackage, executionOptions(plan, post, {
-    spawn(executable, args) {
-      calls += 1
-      const smoke = args.includes('/tmp/pennant-pursuit-d1c4-submission-smoke/d1c4-submission-smoke.js')
-      return smoke ? { status: 1, stdout: '', stderr: 'smoke failed' } : { status: 0, stdout: 'ok', stderr: '' }
-    },
-  }))
-  assert.equal(calls, 3)
-  assert.equal(failed.report.status, 'PARTIAL')
-  assert.equal(failed.report.stages.find(({ id }) => id === 'submission.smoke').status, 'FAIL')
-  assert.equal(failed.report.rollback.publicGateMayBeEnabled, true)
+test('enabled execution cannot be compiled into a release package', () => {
+  for (const targetState of ['submission-enabled', 'cron-enabled']) {
+    assert.throws(() => planFor(targetState), /disabled-only until Milestone 3D-2/)
+  }
 })
 
 test('the first command failure stops every later command and produces deterministic partial recovery evidence', async () => {
-  const plan = planFor('cron-enabled', 'submission-enabled')
+  const plan = planFor()
   const releasePackage = createReleasePackage(plan, { nowMs: CREATED_MS })
   let calls = 0
   const spawn = () => {
     calls += 1
     return { status: 1, stdout: '', stderr: `Authorization: Bearer ${DEPLOY_TOKEN}` }
   }
-  const first = await executeReleasePackage(releasePackage, executionOptions(plan, remoteState('cron-enabled'), { spawn }))
+  const first = await executeReleasePackage(releasePackage, executionOptions(plan, remoteState('disabled'), { spawn }))
   calls = 0
-  const second = await executeReleasePackage(releasePackage, executionOptions(plan, remoteState('cron-enabled'), { spawn }))
+  const second = await executeReleasePackage(releasePackage, executionOptions(plan, remoteState('disabled'), { spawn }))
   assert.equal(calls, 1)
   assert.equal(first.report.status, 'PARTIAL')
   assert.equal(first.report.stages[0].status, 'FAIL')
   assert.equal(first.report.stages.slice(1).every(({ status }) => status === 'NOT-RUN'), true)
   assert.equal(first.report.rollback.automaticRollbackPerformed, false)
-  assert.equal(first.report.rollback.publicGateMayBeEnabled, true)
-  assert.equal(first.report.rollback.urgency, 'disable-public-gate')
+  assert.equal(first.report.rollback.publicGateMayBeEnabled, false)
   assert.equal(JSON.stringify(first.report).includes(DEPLOY_TOKEN), false)
   assert.equal(canonicalJson(first.report), canonicalJson(second.report))
 })

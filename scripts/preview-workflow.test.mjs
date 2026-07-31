@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import test from 'node:test'
 import { canonicalHash, immutablePlain } from './lib/preview-release/canonical.mjs'
+import { expectedPagesBindings, expectedWorkerBindings } from './lib/preview-release/binding-inventory.mjs'
 import { createReadOnlyCloudflareClient, inspectPreviewRemoteState } from './lib/preview-release/cloudflare-readonly.mjs'
 import { assertLocalReleaseGraph, validateRuntimeCommandGraph } from './lib/preview-release/command-safety.mjs'
 import { compilePreviewState, validateConfigurationModel } from './lib/preview-release/configuration.mjs'
@@ -46,6 +47,7 @@ const ZONE_ID = 'b'.repeat(32)
 const FULL_HEAD = 'c'.repeat(40)
 const WORKER_DEPLOYMENT_ID = '11111111-1111-4111-8111-111111111111'
 const WORKER_VERSION_ID = '22222222-2222-4222-8222-222222222222'
+const LEGACY_CRON_FIXTURE = '17 * * * *'
 const MAXIMUM_HOSTNAME = `${'a'.repeat(63)}.${'b'.repeat(63)}.${'c'.repeat(63)}.${'d'.repeat(61)}`
 const OVERLENGTH_HOSTNAME = `${'a'.repeat(63)}.${'b'.repeat(63)}.${'c'.repeat(63)}.${'d'.repeat(62)}`
 
@@ -108,22 +110,10 @@ function validMigration(count = knownMigrations().length) {
 
 function remoteState(state = 'disabled') {
   const submissionMode = state === 'disabled' ? 'disabled' : 'enabled'
-  const sortBindings = (bindings) => bindings.sort((left, right) => `${left.type}:${left.name}`.localeCompare(`${right.type}:${right.name}`))
-  const pagesBindings = sortBindings([
-    { name: 'DB', type: 'd1', id: manifest.cloudflare.preview.d1.id },
-    { name: 'DRAFT_SUBMISSION_MODE', type: 'plain_text', text: submissionMode },
-    { name: 'DRAFT_TICKET_MODE', type: 'plain_text', text: 'enabled' },
-    { name: 'DRAFT_VALIDATION_MODE', type: 'plain_text', text: 'enabled' },
-    { name: 'VALIDATION_SERVICE', type: 'service', service: manifest.cloudflare.preview.worker.name, environment: '' },
-  ])
-  const workerBindings = sortBindings([
-    { name: 'DB', type: 'd1', id: manifest.cloudflare.preview.d1.id },
-    { name: 'RATE_LIMIT_BURST', type: 'ratelimit', namespaceId: '16204011' },
-    { name: 'RATE_LIMIT_SUSTAINED', type: 'ratelimit', namespaceId: '16204012' },
-    { name: 'DRAFT_VALIDATION_MODE', type: 'plain_text', text: 'enabled' },
-    { name: 'DRAFT_TICKET_MODE', type: 'plain_text', text: 'enabled' },
-    { name: 'DRAFT_SUBMISSION_MODE', type: 'plain_text', text: submissionMode },
-  ])
+  const pagesBindings = clone(expectedPagesBindings(manifest.cloudflare.preview))
+  const workerBindings = clone(expectedWorkerBindings(manifest.cloudflare.preview))
+  pagesBindings.find(({ name }) => name === 'DRAFT_SUBMISSION_MODE').text = submissionMode
+  workerBindings.find(({ name }) => name === 'DRAFT_SUBMISSION_MODE').text = submissionMode
   return {
     schemaVersion: 2,
     accountId: ACCOUNT_ID,
@@ -152,7 +142,7 @@ function remoteState(state = 'disabled') {
       previewUrls: false,
       routes: [],
       customDomains: [],
-      schedules: state === 'cron-enabled' ? [manifest.activation.cleanupCron] : [],
+      schedules: state === 'cron-enabled' ? [LEGACY_CRON_FIXTURE] : [],
       bindings: workerBindings,
       artifactHash: null,
       artifactProvenance: 'unproven',
@@ -186,6 +176,8 @@ function planFixture({ state = 'disabled', targetState = 'disabled', head = FULL
     submissionSmokeBuildArtifact: 'b'.repeat(64), retentionSmokeBuildArtifact: 'c'.repeat(64),
     protectedConfiguration: {
       'config/preview-release.json': 'd'.repeat(64),
+      'config/preview-schema4-readiness.json': '1'.repeat(64),
+      'shared/schema4-capabilities.mjs': '2'.repeat(64),
       'wrangler.toml': 'e'.repeat(64),
       'workers/draft-validation/wrangler.toml': 'f'.repeat(64),
       'workers/draft-validation/d1c4-activation-states.json': '0'.repeat(64),
@@ -222,7 +214,8 @@ function planFixture({ state = 'disabled', targetState = 'disabled', head = FULL
 }
 
 test('canonical manifest is valid, non-secret, and keeps ungrounded identities unresolved', () => {
-  assert.equal(manifest.schemaVersion, 1)
+  assert.equal(manifest.schemaVersion, 2)
+  assert.equal(manifest.activation.releaseTooling, 'disabled-only')
   assert.equal(manifest.cloudflare.account.status, 'unresolved')
   assert.equal(manifest.cloudflare.account.id, null)
   assert.equal(JSON.stringify(manifest).includes('PENNANT_PREVIEW_API_TOKEN'), false)
@@ -234,7 +227,7 @@ for (const [description, mutate, pattern] of [
   ['Preview Worker equals Production Worker', (value) => { value.cloudflare.preview.worker.name = value.cloudflare.production.worker.name }, /Worker identities must be distinct/],
   ['service targets collide', (value) => { value.cloudflare.preview.worker.serviceBinding.service = value.cloudflare.production.worker.serviceBinding.service }, /service targets must be distinct/],
   ['rate-limit namespaces collide', (value) => { value.cloudflare.preview.worker.rateLimitNamespaces[0] = value.cloudflare.production.worker.rateLimitNamespaces[0] }, /rate-limit namespaces must be distinct/],
-  ['invalid Cron expression', (value) => { value.activation.cleanupCron = 'not a cron' }, /Cron expression is invalid/],
+  ['legacy Cron field', (value) => { value.activation.legacyCleanupCron = LEGACY_CRON_FIXTURE }, /must contain exactly/],
   ['unexpected Worker public URL', (value) => { value.cloudflare.preview.worker.workersDev = true }, /public URLs must be disabled/],
   ['Preview branch equals resolved production branch', (value) => { value.cloudflare.production.pages.branch = { status: 'resolved', value: 'develop', reason: '' } }, /must differ/],
   ['credential field', (value) => { value.cloudflare.apiToken = 'prohibited' }, /must contain exactly|prohibited credential/],
@@ -364,19 +357,21 @@ test('manifest parser rejects a BOM and malformed JSON', () => {
   assert.throws(() => parseReleaseManifest('{'), /not valid JSON/)
 })
 
-test('all activation states compile to Preview-only deployment material', () => {
+test('only the checked-in disabled capability configuration compiles to Preview-only material', () => {
   const states = validateConfigurationModel(REPOSITORY_ROOT, manifest)
-  assert.deepEqual(Object.keys(states), ['disabled', 'submission-enabled', 'cron-enabled'])
+  assert.deepEqual(Object.keys(states), ['disabled'])
   for (const compiled of Object.values(states)) {
     assert.equal(compiled.previewOnly, true)
     assert.doesNotMatch(`${compiled.pagesConfig}\n${compiled.workerConfig}`, /\[env\.production\]/)
     assert.doesNotMatch(`${compiled.pagesConfig}\n${compiled.workerConfig}`, /pennant-pursuit-validation-production|4b821c17-b88b-462d-a2ed-c6a2113cc362|1620402[12]/)
   }
-  assert.equal(states['submission-enabled'].pagesConfig, states['cron-enabled'].pagesConfig)
+  for (const target of ['submission-enabled', 'cron-enabled']) {
+    assert.throws(() => compilePreviewState(REPOSITORY_ROOT, manifest, target), /disabled-only until Milestone 3D-2/)
+  }
 })
 
 test('configuration compiler rejects unknown state and Production identity injection', () => {
-  assert.throws(() => compilePreviewState(REPOSITORY_ROOT, manifest, 'unknown'), /Unknown Preview activation state/)
+  assert.throws(() => compilePreviewState(REPOSITORY_ROOT, manifest, 'unknown'), /disabled-only until Milestone 3D-2/)
   const pages = readFileSync(path.join(REPOSITORY_ROOT, 'wrangler.toml'), 'utf8').replace(
     'service = "pennant-pursuit-validation-preview"',
     'service = "pennant-pursuit-validation-preview"\n# pennant-pursuit-validation-production',
@@ -385,7 +380,7 @@ test('configuration compiler rejects unknown state and Production identity injec
     sources: {
       pages,
       worker: readFileSync(path.join(REPOSITORY_ROOT, manifest.configuration.worker), 'utf8'),
-      activation: readFileSync(path.join(REPOSITORY_ROOT, manifest.configuration.activationStates), 'utf8'),
+      capabilityModel: readFileSync(path.join(REPOSITORY_ROOT, manifest.configuration.capabilityModel), 'utf8'),
     },
   }), /prohibited Production identity/)
 })
@@ -467,16 +462,15 @@ function workerDomainResultInfo(items) {
 }
 
 function faithfulPagesConfig() {
+  const envVars = Object.fromEntries(expectedPagesBindings(manifest.cloudflare.preview)
+    .filter(({ type }) => type === 'plain_text')
+    .map(({ name, text }) => [name, { type: 'plain_text', value: text }]))
   return {
     always_use_latest_compatibility_date: false,
     build_image_major_version: 3,
     compatibility_date: '2026-07-01',
     compatibility_flags: [],
-    env_vars: {
-      DRAFT_VALIDATION_MODE: { type: 'plain_text', value: 'enabled' },
-      DRAFT_TICKET_MODE: { type: 'plain_text', value: 'enabled' },
-      DRAFT_SUBMISSION_MODE: { type: 'plain_text', value: 'disabled' },
-    },
+    env_vars: envVars,
     fail_open: true,
     usage_model: 'standard',
     ai_bindings: {},
@@ -739,11 +733,7 @@ test('full remote inspection validates safe shapes and returns no private respon
         'account-zones': { items: [{ id: ZONE_ID, account: { id: ACCOUNT_ID } }], resultInfo: { page: 1, perPage: 25, totalPages: 1, totalCount: 1 } },
         'pages-project': {
           name: 'diamond-draft', production_branch: 'main', domains: ['pennant-pursuit.example'],
-          deployment_configs: { preview: {
-            env_vars: { DRAFT_VALIDATION_MODE: { value: 'enabled' }, DRAFT_TICKET_MODE: { value: 'enabled' }, DRAFT_SUBMISSION_MODE: { value: 'disabled' } },
-            d1_databases: { DB: { id: manifest.cloudflare.preview.d1.id } },
-            services: { VALIDATION_SERVICE: { service: manifest.cloudflare.preview.worker.name } },
-          } },
+          deployment_configs: { preview: faithfulPagesConfig() },
         },
         'pages-deployments': { items: [{
           id: 'preview-deployment',
@@ -893,27 +883,29 @@ test('fixed subprocess environment removes both Preview and generic Cloudflare c
   assert.equal(options.env.CLOUDFLARE_API_TOKEN, undefined)
 })
 
-test('plan IDs are deterministic and change with HEAD, target, and remote state', () => {
+test('plan IDs are deterministic and enabled targets are unreachable', () => {
   const first = buildReleasePlan(planFixture())
   const second = buildReleasePlan(planFixture())
   assert.equal(first.planId, second.planId)
   assert.notEqual(buildReleasePlan(planFixture({ head: 'd'.repeat(40) })).planId, first.planId)
-  assert.notEqual(buildReleasePlan(planFixture({ targetState: 'submission-enabled' })).planId, first.planId)
+  assert.throws(() => compilePreviewState(REPOSITORY_ROOT, resolvedManifest(), 'submission-enabled'), /disabled-only/)
   const changedRemote = remoteState()
   changedRemote.pages.deployment.id = 'different-deployment'
   assert.notEqual(buildReleasePlan(planFixture({ remote: changedRemote })).planId, first.planId)
 })
 
-test('conservative staged plans include exact future approvals and no-mutation statement', () => {
+test('conservative staged plans include exact disabled approvals and refuse migration actions', () => {
   const disabled = buildReleasePlan(planFixture())
   assert.equal(disabled.outcome, 'PLAN')
   assert.deepEqual(disabled.futureStages.map(({ id }) => id), ['worker.deploy', 'pages.deploy'])
   assert.equal(disabled.noRemoteMutation, true)
   const pending = validMigration(1)
-  const plan = buildReleasePlan(planFixture({ targetState: 'cron-enabled', migration: pending }))
-  assert.deepEqual(plan.futureStages.map(({ id }) => id), ['migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'])
-  assert.deepEqual(plan.approvalCheckpoints, plan.futureStages.map(({ id }) => id))
-  assert.equal(plan.statement, 'Planning performed no remote mutation. Execution requires a fresh exact re-plan and interactive approval.')
+  assert.throws(
+    () => buildReleasePlan(planFixture({ migration: pending })),
+    /Pending migrations cannot be planned or packaged/,
+  )
+  assert.deepEqual(disabled.approvalCheckpoints, disabled.futureStages.map(({ id }) => id))
+  assert.equal(disabled.statement, 'Planning performed no remote mutation. Execution requires a fresh exact re-plan and interactive approval.')
 })
 
 test('untrusted remote artifact fingerprints conservatively prevent a no-op', () => {
@@ -922,11 +914,15 @@ test('untrusted remote artifact fingerprints conservatively prevent a no-op', ()
   assert.deepEqual(plan.futureStages.map(({ id }) => id), ['worker.deploy', 'pages.deploy'])
 })
 
-test('plans disable public gates first and pause Cron before a pending migration', () => {
-  const disable = buildReleasePlan(planFixture({ state: 'cron-enabled', targetState: 'disabled' }))
-  assert.deepEqual(disable.futureStages.map(({ id }) => id), ['pages.disable', 'worker.deploy'])
-  const pending = buildReleasePlan(planFixture({ state: 'cron-enabled', targetState: 'cron-enabled', migration: validMigration(1) }))
-  assert.deepEqual(pending.futureStages.map(({ id }) => id), ['cron.disable', 'pages.disable', 'submission.disable.verify', 'migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'])
+test('legacy enabled remote inventories and enabled targets fail closed pending 3D-2', () => {
+  assert.throws(
+    () => buildReleasePlan(planFixture({ state: 'cron-enabled', targetState: 'disabled' })),
+    /disabled-only until capability-aware release tooling/,
+  )
+  assert.throws(
+    () => compilePreviewState(REPOSITORY_ROOT, resolvedManifest(), 'cron-enabled'),
+    /disabled-only until Milestone 3D-2/,
+  )
 })
 
 test('planning refuses server mismatch, ambiguous migrations, Production collision, and ambiguous remote gates', () => {
@@ -938,7 +934,7 @@ test('planning refuses server mismatch, ambiguous migrations, Production collisi
   const ambiguous = remoteState()
   ambiguous.pages.submissionMode = 'enabled'
   ambiguous.pages.bindings.find(({ name }) => name === 'DRAFT_SUBMISSION_MODE').text = 'enabled'
-  assert.throws(() => buildReleasePlan(planFixture({ remote: ambiguous })), /submission gates disagree/)
+  assert.throws(() => buildReleasePlan(planFixture({ remote: ambiguous })), /disabled-only until capability-aware release tooling/)
 })
 
 test('P1-01 exact binding inventories reject every extra or duplicate binding and accept only the reviewed set', async () => {
@@ -985,21 +981,11 @@ test('P1-01 exact binding inventories reject every extra or duplicate binding an
   )
 })
 
-test('P1-02 enabled targets remain operationally unverified and artifacts remain unproven', () => {
-  const submission = buildReleasePlan(planFixture({ state: 'submission-enabled', targetState: 'submission-enabled' }))
-  assert.deepEqual(submission.futureStages.map(({ id }) => id), ['worker.deploy', 'pages.deploy', 'submission.smoke'])
-  assert.equal(submission.deploymentOutcome, 'CHANGES-REQUIRED')
-  assert.equal(submission.operationalVerificationRequired, true)
-  assert.equal(submission.outcome, 'PLAN')
-  assert.match(renderHumanPlan(submission, false), /Deployment changes: CHANGES-REQUIRED/)
-  assert.match(renderHumanPlan(submission, false), /Operational verification required: yes/)
-
-  for (const evidence of [null, {}, { status: 'stale' }, { status: 'verified', targetState: 'disabled' }]) {
-    const observed = remoteState('cron-enabled')
-    observed.operationalEvidence = evidence
-    const cron = buildReleasePlan(planFixture({ state: 'cron-enabled', targetState: 'cron-enabled', remote: observed }))
-    assert.deepEqual(cron.futureStages.map(({ id }) => id), ['worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'])
-    assert.equal(cron.deploymentOutcome, 'CHANGES-REQUIRED')
+test('P1-02 enabled targets cannot be compiled, planned, or represented as release bindings', () => {
+  for (const targetState of ['submission-enabled', 'cron-enabled']) {
+    assert.throws(() => compilePreviewState(REPOSITORY_ROOT, resolvedManifest(), targetState), /disabled-only/)
+    assert.throws(() => expectedPagesBindings(manifest.cloudflare.preview, 'enabled'), /disabled-only/)
+    assert.throws(() => expectedWorkerBindings(manifest.cloudflare.preview, 'enabled'), /disabled-only/)
   }
 })
 
@@ -1127,12 +1113,16 @@ test('P1-05 runtime command graph rejects direct, nested, lifecycle, cyclic, she
 
   const fixtureRoot = mkdtempSync(path.join(tmpdir(), 'preview-command-graph-'))
   try {
-    writeFileSync(path.join(fixtureRoot, 'package.json'), JSON.stringify({ scripts: {
-      lint: 'node scripts/preview-check.mjs --lint',
-      prelint: 'git push',
-      test: 'node scripts/preview-check.mjs --tests',
-      typecheck: 'node scripts/preview-check.mjs --typecheck',
-    } }))
+    writeFileSync(path.join(fixtureRoot, 'package.json'), JSON.stringify({
+      name: 'pennant-command-safety-fixture',
+      version: '1.0.0',
+      scripts: {
+        lint: 'node scripts/preview-check.mjs --lint',
+        prelint: 'git push',
+        test: 'node scripts/preview-check.mjs --tests',
+        typecheck: 'node scripts/preview-check.mjs --typecheck',
+      },
+    }))
     assert.throws(() => validateRuntimeCommandGraph(fixtureRoot, [{ label: 'Lint', command: 'npm', args: ['run', 'lint'] }]), /unsafe/)
   } finally {
     rmSync(fixtureRoot, { recursive: true, force: true })
@@ -1211,58 +1201,17 @@ test('P1-06 active Worker deployment evidence detects code-only version drift an
   await assert.rejects(inspectPreviewRemoteState({ manifest: resolvedManifest(), client: split.client }), /authoritative version/)
 })
 
-test('P1-07 all current, target, and migration combinations preserve safe stage ordering', () => {
-  const expectations = {
-    current: {
-      disabled: {
-        disabled: ['worker.deploy', 'pages.deploy'],
-        'submission-enabled': ['worker.deploy', 'pages.deploy', 'submission.smoke'],
-        'cron-enabled': ['worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'],
-      },
-      'submission-enabled': {
-        disabled: ['pages.disable', 'worker.deploy'],
-        'submission-enabled': ['worker.deploy', 'pages.deploy', 'submission.smoke'],
-        'cron-enabled': ['worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'],
-      },
-      'cron-enabled': {
-        disabled: ['pages.disable', 'worker.deploy'],
-        'submission-enabled': ['worker.deploy', 'pages.deploy', 'submission.smoke'],
-        'cron-enabled': ['worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'],
-      },
-    },
-    pending: {
-      disabled: {
-        disabled: ['migration.apply', 'worker.deploy', 'pages.deploy'],
-        'submission-enabled': ['migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke'],
-        'cron-enabled': ['migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'],
-      },
-      'submission-enabled': {
-        disabled: ['pages.disable', 'submission.disable.verify', 'migration.apply', 'worker.deploy'],
-        'submission-enabled': ['pages.disable', 'submission.disable.verify', 'migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke'],
-        'cron-enabled': ['pages.disable', 'submission.disable.verify', 'migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'],
-      },
-      'cron-enabled': {
-        disabled: ['cron.disable', 'pages.disable', 'submission.disable.verify', 'migration.apply', 'worker.deploy'],
-        'submission-enabled': ['cron.disable', 'pages.disable', 'submission.disable.verify', 'migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke'],
-        'cron-enabled': ['cron.disable', 'pages.disable', 'submission.disable.verify', 'migration.apply', 'worker.deploy', 'pages.deploy', 'submission.smoke', 'cron.deploy', 'retention.smoke'],
-      },
-    },
+test('P1-07 current planning exposes only disabled deployments and refuses migrations or enabled targets', () => {
+  const current = buildReleasePlan(planFixture())
+  assert.deepEqual(current.futureStages.map(({ id }) => id), ['worker.deploy', 'pages.deploy'])
+  assert.throws(
+    () => buildReleasePlan(planFixture({ migration: validMigration(1) })),
+    /Pending migrations cannot be planned or packaged/,
+  )
+  for (const targetState of ['submission-enabled', 'cron-enabled']) {
+    assert.throws(() => compilePreviewState(REPOSITORY_ROOT, resolvedManifest(), targetState), /disabled-only/)
   }
-  for (const [migrationState, currentStates] of Object.entries(expectations)) {
-    for (const [state, targets] of Object.entries(currentStates)) {
-      for (const [targetState, stages] of Object.entries(targets)) {
-        const migration = migrationState === 'pending' ? validMigration(1) : validMigration()
-        const plan = buildReleasePlan(planFixture({ state, targetState, migration }))
-        assert.deepEqual(plan.futureStages.map(({ id }) => id), stages, `${migrationState}: ${state} -> ${targetState}`)
-        const migrationIndex = stages.indexOf('migration.apply')
-        const verificationIndex = stages.indexOf('submission.disable.verify')
-        const cronDisableIndex = stages.indexOf('cron.disable')
-        if (verificationIndex >= 0) assert.equal(verificationIndex < migrationIndex, true)
-        if (cronDisableIndex >= 0) assert.equal(cronDisableIndex < migrationIndex, true)
-      }
-    }
-  }
-  assert.match(buildReleasePlan(planFixture({ targetState: 'disabled' })).rollbackImplications, /forward-only/)
+  assert.match(buildReleasePlan(planFixture({ targetState: 'disabled' })).rollbackImplications, /cannot plan or apply migrations/)
 })
 
 test('P1-08 intended artifact fingerprints cover every deployment input but remote provenance remains unproven', () => {
@@ -1646,9 +1595,9 @@ test('P1-12 endpoint-specific inventory contracts preserve completeness and sele
 })
 
 test('P1-13 manifest parsing rejects duplicate and dangerous keys and returns deeply immutable plain data', () => {
-  const duplicateTop = loaded.source.replace('"schemaVersion": 1,', '"schemaVersion": 1,\n  "schemaVersion": 1,')
+  const duplicateTop = loaded.source.replace('"schemaVersion": 2,', '"schemaVersion": 2,\n  "schemaVersion": 2,')
   const duplicateNested = loaded.source.replace('"branch": "develop",', '"branch": "develop",\n        "branch": "develop",')
-  const dangerous = loaded.source.replace('"schemaVersion": 1,', '"schemaVersion": 1,\n  "__proto__": {},')
+  const dangerous = loaded.source.replace('"schemaVersion": 2,', '"schemaVersion": 2,\n  "__proto__": {},')
   for (const source of [duplicateTop, duplicateNested]) assert.throws(() => parseReleaseManifest(source), /duplicate object key/)
   assert.throws(() => parseReleaseManifest(dangerous), /dangerous object key/)
 
@@ -1660,7 +1609,7 @@ test('P1-13 manifest parsing rejects duplicate and dangerous keys and returns de
   assert.throws(() => validateReleaseManifest(exotic), /plain object/)
 
   let getterReads = 0
-  const accessorArray = [manifest.activation.allowedStates[0]]
+  const accessorArray = [manifest.repository.allowedRoots[0]]
   Object.defineProperty(accessorArray, '0', { enumerable: true, configurable: true, get() { getterReads += 1; return 'disabled' } })
   for (const unsafe of [
     accessorArray,
@@ -1684,7 +1633,7 @@ test('P1-13 manifest parsing rejects duplicate and dangerous keys and returns de
   let planGetterReads = 0
   const unsafePlanInput = planFixture()
   const unsafeSchedules = []
-  Object.defineProperty(unsafeSchedules, '0', { enumerable: true, configurable: true, get() { planGetterReads += 1; return manifest.activation.cleanupCron } })
+  Object.defineProperty(unsafeSchedules, '0', { enumerable: true, configurable: true, get() { planGetterReads += 1; return LEGACY_CRON_FIXTURE } })
   Object.defineProperty(unsafeSchedules, 'length', { writable: true, value: 1 })
   unsafePlanInput.remote.worker.schedules = unsafeSchedules
   assert.throws(() => buildReleasePlan(unsafePlanInput), /standard data elements/)
@@ -1699,21 +1648,21 @@ test('P1-13 manifest parsing rejects duplicate and dangerous keys and returns de
 
   const validated = parseReleaseManifest(loaded.source)
   assert.equal(Object.isFrozen(validated.cloudflare.preview), true)
-  assert.equal(Object.isFrozen(validated.activation.allowedStates), true)
+  assert.equal(Object.isFrozen(validated.activation), true)
   assert.throws(() => { validated.cloudflare.preview.worker.name = 'changed' }, TypeError)
-  assert.throws(() => { validated.activation.allowedStates.push('changed') }, TypeError)
+  assert.throws(() => { validated.activation.releaseTooling = 'enabled' }, TypeError)
   assert.equal(validated.cloudflare.preview.worker.name, manifest.cloudflare.preview.worker.name)
 })
 
 test('P1-14 plans and report inputs are canonical, unaliased, recursively frozen, and ID-consistent', () => {
-  const input = planFixture({ targetState: 'cron-enabled', migration: validMigration(1) })
+  const input = planFixture()
   const originalRemoteId = input.remote.pages.deployment.id
   const plan = buildReleasePlan(input)
   const before = JSON.stringify(plan)
   for (const mutate of [
     () => plan.futureStages.push({ id: 'unsafe' }),
     () => plan.approvalCheckpoints.push('unsafe'),
-    () => plan.migration.pending.splice(0, 1),
+    () => plan.migration.pending.push({ id: 5 }),
     () => { plan.remoteBefore.pages.deployment.id = 'unsafe' },
   ]) assert.throws(mutate, TypeError)
   input.remote.pages.deployment.id = 'changed-after-plan'

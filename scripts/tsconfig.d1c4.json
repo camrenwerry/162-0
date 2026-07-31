@@ -20,6 +20,8 @@
     "./d1c4-submission-cleanup.test.ts",
     "./d1c4-submission-smoke.ts",
     "./d1c4-retention-smoke.ts",
+    "./test-only/d1c4-submission-smoke-orchestration.ts",
+    "./test-only/d1c4-retention-smoke-orchestration.ts",
     "./lib/d1c4-bounded-fetch.ts",
     "./lib/d1c4-d1-client.ts",
     "./lib/d1c4-d1-client.typecheck.ts",

@@ -8,7 +8,14 @@ compatibility_date = "2026-07-14"
 [vars]
 DRAFT_VALIDATION_MODE = "enabled"
 DRAFT_TICKET_MODE = "enabled"
+LEADERBOARD_ENVIRONMENT = "preview"
+LEADERBOARD_READ_MODE = "disabled"
+LEADERBOARD_IDENTITY_MODE = "disabled"
+LEADERBOARD_IDENTITY_CLAIM_MODE = "disabled"
+LEADERBOARD_IDENTITY_STATUS_MODE = "disabled"
+LEADERBOARD_IDENTITY_RENAME_MODE = "disabled"
 DRAFT_SUBMISSION_MODE = "disabled"
+LEADERBOARD_RECOVERY_MODE = "disabled"
 
 [[d1_databases]]
 binding = "DB"
@@ -29,7 +36,14 @@ service = "pennant-pursuit-validation-preview"
 [env.production.vars]
 DRAFT_VALIDATION_MODE = "enabled"
 DRAFT_TICKET_MODE = "disabled"
+LEADERBOARD_ENVIRONMENT = "production"
+LEADERBOARD_READ_MODE = "disabled"
+LEADERBOARD_IDENTITY_MODE = "disabled"
+LEADERBOARD_IDENTITY_CLAIM_MODE = "disabled"
+LEADERBOARD_IDENTITY_STATUS_MODE = "disabled"
+LEADERBOARD_IDENTITY_RENAME_MODE = "disabled"
 DRAFT_SUBMISSION_MODE = "disabled"
+LEADERBOARD_RECOVERY_MODE = "disabled"
 
 [[env.production.services]]
 binding = "VALIDATION_SERVICE"

@@ -1,0 +1,18 @@
+{
+  "pagesFunctions": {
+    "capability": "cleanupCron",
+    "surface": "pagesFunctions",
+    "descriptorPath": null,
+    "consumerIdentity": null,
+    "consumerStatus": "deliberately-absent",
+    "compatibilityCeiling": null
+  },
+  "privateWorker": {
+    "capability": "cleanupCron",
+    "surface": "privateWorker",
+    "descriptorPath": "capabilities.cleanupCron.privateWorker",
+    "consumerIdentity": "workers/draft-validation/src/retention-cleanup-mode.ts#isRetentionCleanupEnabled",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  }
+}

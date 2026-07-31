@@ -28,8 +28,8 @@ export function parsePreviewReadinessArguments(argv) {
       color = false
     } else throw usageError(`Unknown argument: ${argument}.`)
   }
-  if (!['disabled', 'submission-enabled', 'cron-enabled'].includes(targetState)) {
-    throw usageError('preview:readiness requires --target-state <disabled|submission-enabled|cron-enabled>.')
+  if (targetState !== 'disabled') {
+    throw usageError('preview:readiness requires --target-state disabled until Milestone 3D-2.')
   }
   return Object.freeze({ targetState, json, color })
 }

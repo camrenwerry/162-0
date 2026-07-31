@@ -1,20 +1,29 @@
 import {
   lstatSync,
   mkdirSync,
-  readFileSync,
   realpathSync,
   writeFileSync,
 } from 'node:fs'
 import path from 'node:path'
-import { canonicalHash, canonicalJson, immutablePlain } from './canonical.mjs'
+import {
+  canonicalHash,
+  canonicalJson,
+  immutablePlain,
+  PREVIEW_RELEASE_TOOL_CONTRACT_VERSION,
+  readStrictJsonFile,
+  STRICT_JSON_LIMITS,
+} from './canonical.mjs'
 import { localError, refusalError } from './errors.mjs'
-import { assertExecutionContract } from './execution-contract.mjs'
-import { derivePlanId } from './plan.mjs'
+import {
+  assertCurrentDisabledExecutionContract,
+  assertExecutionContract,
+} from './execution-contract.mjs'
+import { assertCurrentDisabledReleasePlan, derivePlanId } from './plan.mjs'
 
-export const RELEASE_PACKAGE_SCHEMA_VERSION = 1
+export const RELEASE_PACKAGE_SCHEMA_VERSION = 2
 export const RELEASE_PACKAGE_KIND = 'pennant-pursuit-preview-release-package'
 export const RELEASE_PACKAGE_TTL_MS = 2 * 60 * 60 * 1_000
-const MAX_PACKAGE_BYTES = 2 * 1024 * 1024
+const MAX_PACKAGE_BYTES = STRICT_JSON_LIMITS.releasePackage.maxBytes
 
 function canonicalTimestamp(milliseconds, label) {
   if (!Number.isSafeInteger(milliseconds) || milliseconds < 0) {
@@ -33,8 +42,15 @@ export function createReleasePackage(planInput, {
   nowMs = Date.now(),
   ttlMs = RELEASE_PACKAGE_TTL_MS,
 } = {}) {
-  const plan = immutablePlain(planInput)
+  const plan = assertCurrentDisabledReleasePlan(planInput)
   if (!planIdentityIsValid(plan)) throw localError('Release plan ID is invalid.', 'artifact.plan-id')
+  if (plan.toolContractVersion !== PREVIEW_RELEASE_TOOL_CONTRACT_VERSION
+    || plan.manifestContract?.releaseTooling !== 'disabled-only'
+    || plan.manifestContract?.canonicalCheckedInState !== 'all-disabled'
+    || plan.targetState !== 'disabled') {
+    throw refusalError('Release packages require the current disabled-only manifest and plan contract.', 'artifact.schema')
+  }
+  assertCurrentDisabledExecutionContract(plan.executionContract)
   if (!Number.isSafeInteger(ttlMs) || ttlMs < 15 * 60 * 1_000 || ttlMs > RELEASE_PACKAGE_TTL_MS) {
     throw localError('Release package expiration must be between 15 minutes and two hours.', 'artifact.expiration')
   }
@@ -97,10 +113,15 @@ export function validateReleasePackage(packageInput, {
   requireUnexpired = false,
 } = {}) {
   const releasePackage = immutablePlain(packageInput)
-  if (releasePackage.schemaVersion !== RELEASE_PACKAGE_SCHEMA_VERSION || releasePackage.kind !== RELEASE_PACKAGE_KIND) {
+  if (canonicalJson(Object.keys(releasePackage).sort()) !== canonicalJson([
+    'approval', 'artifactHash', 'bindingHash', 'createdAt', 'evidence', 'expirationPolicy',
+    'expiresAt', 'kind', 'plan', 'planHash', 'schemaVersion',
+  ].sort()) || releasePackage.schemaVersion !== RELEASE_PACKAGE_SCHEMA_VERSION || releasePackage.kind !== RELEASE_PACKAGE_KIND) {
     throw localError('Release package schema or kind is unsupported.', 'artifact.schema')
   }
-  if (!planIdentityIsValid(releasePackage.plan)) throw refusalError('Release package contains a tampered plan ID.', 'artifact.plan-id')
+  const plan = assertCurrentDisabledReleasePlan(releasePackage.plan)
+  if (!planIdentityIsValid(plan)) throw refusalError('Release package contains a tampered plan ID.', 'artifact.plan-id')
+  assertCurrentDisabledExecutionContract(plan.executionContract)
   if (releasePackage.planHash !== canonicalHash(releasePackage.plan)) {
     throw refusalError('Release package plan hash does not match its plan.', 'artifact.plan-hash')
   }
@@ -141,7 +162,7 @@ export function validateReleasePackage(packageInput, {
     || releasePackage.approval.inferredFromAutomation !== false) {
     throw refusalError('Release package approval contract is malformed.', 'artifact.approval')
   }
-  if (expectedExecutionContract) assertExecutionContract(releasePackage.plan.executionContract, expectedExecutionContract)
+  if (expectedExecutionContract) assertExecutionContract(plan.executionContract, expectedExecutionContract)
   if (requireUnexpired) {
     const effectiveNow = nowMs ?? Date.now()
     if (!Number.isSafeInteger(effectiveNow) || effectiveNow < createdAtMs || effectiveNow >= expiresAtMs) {
@@ -152,7 +173,11 @@ export function validateReleasePackage(packageInput, {
 }
 
 export function serializeReleaseArtifact(value) {
-  return `${canonicalJson(value)}\n`
+  const snapshot = immutablePlain(value)
+  const serializable = snapshot.kind === RELEASE_PACKAGE_KIND || Object.hasOwn(snapshot, 'plan')
+    ? validateReleasePackage(snapshot)
+    : snapshot
+  return `${canonicalJson(serializable)}\n`
 }
 
 function assertSafeDirectory(directory) {
@@ -189,19 +214,20 @@ export function loadReleasePackage(filePath, options = {}) {
   if (!status.isFile() || status.isSymbolicLink() || (status.mode & 0o022) !== 0 || status.size > MAX_PACKAGE_BYTES) {
     throw refusalError('Release package must be a bounded, non-writable regular file.', 'artifact.path')
   }
-  const source = readFileSync(filePath, 'utf8')
-  if (source.startsWith('\uFEFF') || Buffer.byteLength(source) > MAX_PACKAGE_BYTES) {
-    throw refusalError('Release package encoding or size is invalid.', 'artifact.encoding')
-  }
-  let parsed
+  let loaded
   try {
-    parsed = JSON.parse(source)
-  } catch {
-    throw localError('Release package is not valid JSON.', 'artifact.json')
+    loaded = readStrictJsonFile(filePath, {
+      label: 'Release package',
+      limits: STRICT_JSON_LIMITS.releasePackage,
+      error: (message) => localError(message, 'artifact.json'),
+    })
+  } catch (error) {
+    if (error?.checkId) throw error
+    throw localError('Release package is not valid bounded UTF-8 JSON.', 'artifact.json')
   }
-  const canonicalSource = serializeReleaseArtifact(parsed)
-  if (source !== canonicalSource) {
+  const canonicalSource = serializeReleaseArtifact(loaded.value)
+  if (loaded.source !== canonicalSource) {
     throw refusalError('Release package is not exact canonical JSON; edited packages are rejected.', 'artifact.canonical')
   }
-  return validateReleasePackage(parsed, options)
+  return validateReleasePackage(loaded.value, options)
 }

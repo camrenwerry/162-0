@@ -1,6 +1,11 @@
 import { TextDecoder } from 'node:util'
 import { performance } from 'node:perf_hooks'
-import { assertExactBindings, expectedPagesBindings, expectedWorkerBindings } from './binding-inventory.mjs'
+import {
+  assertExactBindings,
+  expectedPagesBindings,
+  expectedWorkerBindings,
+  PROTECTED_PLAIN_TEXT_BINDINGS,
+} from './binding-inventory.mjs'
 import { immutablePlain } from './canonical.mjs'
 import { PreviewWorkflowError, refusalError, remoteError } from './errors.mjs'
 import { assertSelectOnlySql, BACKEND_VERSION_SQL, MIGRATION_ROWS_SQL, MIGRATION_TABLES_SQL } from './migrations.mjs'
@@ -23,7 +28,7 @@ const OPAQUE_ID_PATTERN = /^[A-Za-z0-9_-]{1,128}$/
 const SAFE_OPTIONAL_LABEL_PATTERN = /^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$/
 const MAX_ROUTE_PATTERN_LENGTH = 1024
 const ZONE_TYPE_FILTER = 'full%2Cpartial%2Csecondary%2Cinternal'
-const PUBLIC_GATE_BINDINGS = new Set(['DRAFT_SUBMISSION_MODE', 'DRAFT_TICKET_MODE', 'DRAFT_VALIDATION_MODE'])
+const PUBLIC_GATE_BINDINGS = new Set(PROTECTED_PLAIN_TEXT_BINDINGS)
 const OPERATION_PARAMETER_KEYS = Object.freeze({
   accounts: ['page'],
   account: ['accountId'],

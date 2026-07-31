@@ -10,12 +10,18 @@ preview_urls = false
 [vars]
 DRAFT_VALIDATION_MODE = "enabled"
 DRAFT_TICKET_MODE = "enabled"
+LEADERBOARD_IDENTITY_MODE = "disabled"
+LEADERBOARD_IDENTITY_CLAIM_MODE = "disabled"
+LEADERBOARD_IDENTITY_STATUS_MODE = "disabled"
+LEADERBOARD_IDENTITY_RENAME_MODE = "disabled"
 DRAFT_SUBMISSION_MODE = "disabled"
+LEADERBOARD_RECOVERY_MODE = "disabled"
+RETENTION_CLEANUP_MODE = "disabled"
 
 # D1C.1 binds only the private preview Worker to the shared preview database.
 # D1C.2 adds a disabled submission path, and D1C.3 adds bounded cleanup through
-# the scheduled handler. D1C.4 keeps the default preview deployment safe: Cron
-# is activated only by a generated, reviewed activation-state configuration.
+# the scheduled handler. The schema-4 capability foundation keeps every narrow
+# mode disabled and requires separate future authority before any activation.
 # Production below intentionally has no D1 binding.
 [[d1_databases]]
 binding = "DB"
@@ -56,7 +62,13 @@ preview_urls = false
 [env.production.vars]
 DRAFT_VALIDATION_MODE = "enabled"
 DRAFT_TICKET_MODE = "disabled"
+LEADERBOARD_IDENTITY_MODE = "disabled"
+LEADERBOARD_IDENTITY_CLAIM_MODE = "disabled"
+LEADERBOARD_IDENTITY_STATUS_MODE = "disabled"
+LEADERBOARD_IDENTITY_RENAME_MODE = "disabled"
 DRAFT_SUBMISSION_MODE = "disabled"
+LEADERBOARD_RECOVERY_MODE = "disabled"
+RETENTION_CLEANUP_MODE = "disabled"
 
 [env.production.triggers]
 crons = []

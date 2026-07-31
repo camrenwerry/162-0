@@ -1,0 +1,18 @@
+{
+  "pagesFunctions": {
+    "capability": "leaderboardRead",
+    "surface": "pagesFunctions",
+    "descriptorPath": "capabilities.leaderboardRead.pagesFunctions",
+    "consumerIdentity": "functions/lib/leaderboard-mode.ts#leaderboardReadFeatureState",
+    "consumerStatus": "active",
+    "compatibilityCeiling": null
+  },
+  "privateWorker": {
+    "capability": "leaderboardRead",
+    "surface": "privateWorker",
+    "descriptorPath": null,
+    "consumerIdentity": null,
+    "consumerStatus": "deliberately-absent",
+    "compatibilityCeiling": null
+  }
+}

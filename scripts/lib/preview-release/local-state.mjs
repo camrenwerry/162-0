@@ -1,15 +1,36 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
-import { canonicalHash, fileHash } from './canonical.mjs'
+import {
+  canonicalHash,
+  fileHash,
+  readStrictPackageMetadataFile,
+} from './canonical.mjs'
 import { localError, remoteError } from './errors.mjs'
 
 export const PROTECTED_CONFIGURATION_PATHS = Object.freeze([
   'config/preview-release.json',
+  'config/preview-schema4-readiness.json',
+  'shared/schema4-capabilities.mjs',
+  'shared/schema4-runtime-consumers.mjs',
+  'src/features/leaderboard/runtimeConfig.registrations.json',
+  'functions/lib/leaderboard-mode.registrations.json',
+  'functions/lib/leaderboard-identity-mode.registrations.json',
+  'functions/lib/draft-submission-mode.registrations.json',
+  'workers/draft-validation/src/retention-cleanup-mode.registrations.json',
   'wrangler.toml',
   'workers/draft-validation/wrangler.toml',
   'workers/draft-validation/d1c4-activation-states.json',
 ])
+
+export function assertExactProtectedConfigurationPaths(paths) {
+  if (!Array.isArray(paths)
+    || new Set(paths).size !== paths.length
+    || canonicalHash([...paths].sort()) !== canonicalHash([...PROTECTED_CONFIGURATION_PATHS].sort())) {
+    throw localError('Protected configuration path inventory is missing, duplicated, or unexpected.', 'local.protected-inventory')
+  }
+  return Object.freeze([...paths])
+}
 
 export const IMMUTABLE_GITHUB_ACTIONS_REPOSITORY_ROOTS = Object.freeze([
   '/home/runner/work/162-0/162-0',
@@ -94,8 +115,16 @@ function parseDivergence(value) {
 }
 
 function assertLockfile(repositoryRoot, manifest) {
-  const packageJson = JSON.parse(readFileSync(path.join(repositoryRoot, 'package.json'), 'utf8'))
-  const lock = JSON.parse(readFileSync(path.join(repositoryRoot, 'package-lock.json'), 'utf8'))
+  const packageJson = readStrictPackageMetadataFile(path.join(repositoryRoot, 'package.json'), {
+    label: 'release package.json metadata',
+    error: (message) => localError(message, 'repository.package'),
+    requireScripts: true,
+  }).value
+  const lock = readStrictPackageMetadataFile(path.join(repositoryRoot, 'package-lock.json'), {
+    label: 'release package-lock.json metadata',
+    error: (message) => localError(message, 'repository.lockfile'),
+    requireLockfile: true,
+  }).value
   if (packageJson.name !== manifest.repository.packageName || packageJson.version !== manifest.repository.packageVersion) {
     throw localError('package.json identity differs from the immutable Preview manifest.', 'repository.package')
   }
@@ -145,7 +174,13 @@ export function inspectLocalState({ repositoryRoot, manifest, runner = createFix
   const { packageJson } = assertLockfile(repositoryRoot, manifest)
   const nodeVersion = process.versions.node
   const npmVersion = assertResult(runner('npm', ['--version'], repositoryRoot), 'npm version', 'toolchain.versions')
-  const wranglerPackage = JSON.parse(readFileSync(path.join(repositoryRoot, 'node_modules/wrangler/package.json'), 'utf8'))
+  const wranglerPackage = readStrictPackageMetadataFile(
+    path.join(repositoryRoot, 'node_modules/wrangler/package.json'),
+    {
+      label: 'installed Wrangler package metadata',
+      error: (message) => localError(message, 'toolchain.versions'),
+    },
+  ).value
   if (!manifest.toolchain.nodeAllowedMajors.includes(major(nodeVersion, 'Node'))) throw localError(`Node ${nodeVersion} is not approved by the Preview manifest.`, 'toolchain.versions')
   if (!manifest.toolchain.npmAllowedMajors.includes(major(npmVersion, 'npm'))) throw localError(`npm ${npmVersion} is not approved by the Preview manifest.`, 'toolchain.versions')
   if (wranglerPackage.version !== manifest.toolchain.wranglerVersion) throw localError(`Wrangler ${wranglerPackage.version} differs from approved ${manifest.toolchain.wranglerVersion}.`, 'toolchain.versions')
@@ -174,6 +209,7 @@ export function inspectServerDevelop({ repositoryRoot, manifest, runner = create
 }
 
 export function computeReleaseHashes({ repositoryRoot, manifestHash, configurationHash, toolchain, runner = createFixedRunner() }) {
+  assertExactProtectedConfigurationPaths(PROTECTED_CONFIGURATION_PATHS)
   const result = runner('git', ['ls-tree', '-r', '-z', 'HEAD'], repositoryRoot)
   const entries = parseHeadTree(assertResult(result, 'Immutable HEAD source inventory', 'git.source-inventory'))
   const byPath = new Map(entries.map((entry) => [entry.path, entry]))
