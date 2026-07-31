@@ -32,6 +32,13 @@ import {
   isLeaderboardIdentityEnabled,
   isLeaderboardIdentitySigningKey,
 } from '../../../functions/lib/leaderboard-identity-mode'
+import {
+  isLeaderboardRecoveryEnabled,
+} from '../../../functions/lib/leaderboard-recovery-mode'
+import {
+  observePreviewOperation,
+  type PreviewOperation,
+} from '../../../functions/lib/preview-observability'
 
 const INTERNAL_RATE_KEY_HEADER = 'X-Pennant-Pursuit-Rate-Key'
 const RATE_KEY_PATTERN = /^v1:[a-f0-9]{64}$/
@@ -125,6 +132,9 @@ export async function handlePrivateLeaderboardIdentityRequest(
   action: IdentityAction,
 ) {
   if (!isLeaderboardIdentityEnabled(env)) return handleApiNotFoundRequest(request)
+  if (action === 'recover' && !isLeaderboardRecoveryEnabled(env)) {
+    return handleApiNotFoundRequest(request)
+  }
   return withRateLimit(
     request,
     env,
@@ -137,9 +147,11 @@ export async function handlePrivateLeaderboardIdentityHealthRequest(
   request: Request,
   env: PrivateValidationWorkerEnv,
 ) {
+  const recoveryRequested = new URL(request.url).searchParams.get('capability') === 'recovery'
   if (
     request.method !== 'GET'
     || !isLeaderboardIdentityEnabled(env)
+    || (recoveryRequested && !isLeaderboardRecoveryEnabled(env))
     || !isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)
     || !env.DB
   ) return new Response(null, { status: 503 })
@@ -156,28 +168,49 @@ export async function handlePrivateLeaderboardIdentityHealthRequest(
 }
 
 export default {
-  fetch(request: Request, env: PrivateValidationWorkerEnv) {
+  async fetch(request: Request, env: PrivateValidationWorkerEnv, context: ExecutionContext) {
     const pathname = new URL(request.url).pathname
     if (pathname === '/internal/leaderboard-identity-health') {
       return handlePrivateLeaderboardIdentityHealthRequest(request, env)
     }
     if (pathname === '/api/v1/validate-draft') return handlePrivateValidationRequest(request, env)
-    if (pathname === '/api/v1/draft-ticket') return handlePrivateDraftTicketRequest(request, env)
-    if (pathname === '/api/v1/submit-draft') return handlePrivateSubmissionRequest(request, env)
+    const observed = async (
+      operation: PreviewOperation,
+      response: Response | Promise<Response>,
+      startedAt = Date.now(),
+    ) => observePreviewOperation(
+      operation,
+      await response,
+      startedAt,
+      () => Date.now(),
+      (task) => context.waitUntil(task),
+    )
+    if (pathname === '/api/v1/draft-ticket') {
+      const startedAt = Date.now()
+      return observed('ticket', handlePrivateDraftTicketRequest(request, env), startedAt)
+    }
+    if (pathname === '/api/v1/submit-draft') {
+      const startedAt = Date.now()
+      return observed('submission', handlePrivateSubmissionRequest(request, env), startedAt)
+    }
     if (pathname === '/api/v1/leaderboard-name-availability') {
       return handlePrivateLeaderboardIdentityRequest(request, env, 'availability')
     }
     if (pathname === '/api/v1/leaderboard-identity-claim') {
-      return handlePrivateLeaderboardIdentityRequest(request, env, 'claim')
+      const startedAt = Date.now()
+      return observed('claim', handlePrivateLeaderboardIdentityRequest(request, env, 'claim'), startedAt)
     }
     if (pathname === '/api/v1/leaderboard-identity-recover') {
-      return handlePrivateLeaderboardIdentityRequest(request, env, 'recover')
+      const startedAt = Date.now()
+      return observed('recovery', handlePrivateLeaderboardIdentityRequest(request, env, 'recover'), startedAt)
     }
     if (pathname === '/api/v1/leaderboard-identity-rename') {
-      return handlePrivateLeaderboardIdentityRequest(request, env, 'rename')
+      const startedAt = Date.now()
+      return observed('rename', handlePrivateLeaderboardIdentityRequest(request, env, 'rename'), startedAt)
     }
     if (pathname === '/api/v1/leaderboard-identity-status') {
-      return handlePrivateLeaderboardIdentityRequest(request, env, 'status')
+      const startedAt = Date.now()
+      return observed('identity-status', handlePrivateLeaderboardIdentityRequest(request, env, 'status'), startedAt)
     }
     return handleApiNotFoundRequest(request)
   },

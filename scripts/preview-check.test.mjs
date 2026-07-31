@@ -99,6 +99,8 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
     cpSync(new URL('./preview-release.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-release.mjs'))
     cpSync(new URL('./lib/preview-release', import.meta.url), path.join(repositoryRoot, 'scripts/lib/preview-release'), { recursive: true })
     cpSync(new URL('./prepare-d1c4-activation.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/prepare-d1c4-activation.mjs'))
+    cpSync(new URL('./lib/schema4-activation-readiness.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/lib/schema4-activation-readiness.mjs'))
+    cpSync(new URL('./schema4-activation-readiness.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/schema4-activation-readiness.mjs'))
     mkdirSync(path.join(repositoryRoot, 'config'), { recursive: true })
     const fixtureManifest = JSON.parse(readFileSync(new URL('../config/preview-release.json', import.meta.url), 'utf8'))
     fixtureManifest.repository.allowedRoots = [realpathSync(repositoryRoot)]
@@ -109,11 +111,16 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
       fixtureManifest.cloudflare.production.pages.domains = { status: 'resolved', values: ['pennant-pursuit.example'], reason: '' }
     }
     writeFileSync(path.join(repositoryRoot, 'config/preview-release.json'), `${JSON.stringify(fixtureManifest, null, 2)}\n`)
+    cpSync(new URL('../config/preview-schema4-readiness.json', import.meta.url), path.join(repositoryRoot, 'config/preview-schema4-readiness.json'))
     cpSync(new URL('../wrangler.toml', import.meta.url), path.join(repositoryRoot, 'wrangler.toml'))
     mkdirSync(path.join(repositoryRoot, 'workers/draft-validation'), { recursive: true })
     cpSync(new URL('../workers/draft-validation/wrangler.toml', import.meta.url), path.join(repositoryRoot, 'workers/draft-validation/wrangler.toml'))
     cpSync(new URL('../workers/draft-validation/d1c4-activation-states.json', import.meta.url), path.join(repositoryRoot, 'workers/draft-validation/d1c4-activation-states.json'))
     cpSync(new URL('../migrations', import.meta.url), path.join(repositoryRoot, 'migrations'), { recursive: true })
+    mkdirSync(path.join(repositoryRoot, 'src/features/leaderboard'), { recursive: true })
+    cpSync(new URL('../src/features/leaderboard/runtimeConfig.ts', import.meta.url), path.join(repositoryRoot, 'src/features/leaderboard/runtimeConfig.ts'))
+    mkdirSync(path.join(repositoryRoot, 'functions/lib'), { recursive: true })
+    cpSync(new URL('../functions/lib/leaderboard-recovery-mode.ts', import.meta.url), path.join(repositoryRoot, 'functions/lib/leaderboard-recovery-mode.ts'))
     writeFileSync(path.join(repositoryRoot, 'scripts', 'fixture-stage.mjs'), `
 const required = {
   WRANGLER_WRITE_LOGS: 'false',

@@ -256,6 +256,7 @@ const identityHealthDatabase = {
 } as unknown as D1Database
 const identityHealthEnv = {
   LEADERBOARD_IDENTITY_MODE: 'enabled',
+  LEADERBOARD_RECOVERY_MODE: 'enabled',
   LEADERBOARD_IDENTITY_SIGNING_KEY: 'traffic-control-identity-signing-key',
   DB: identityHealthDatabase,
 } as PrivateValidationWorkerEnv
@@ -265,6 +266,16 @@ assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
 )).status, 204)
 assert.equal(identityHealthQueries, 1)
 assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
+  new Request('https://private.example/internal/leaderboard-identity-health?capability=recovery'),
+  identityHealthEnv,
+)).status, 204)
+assert.equal(identityHealthQueries, 2)
+assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
+  new Request('https://private.example/internal/leaderboard-identity-health?capability=recovery'),
+  { ...identityHealthEnv, LEADERBOARD_RECOVERY_MODE: 'disabled' },
+)).status, 503)
+assert.equal(identityHealthQueries, 2)
+assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
   new Request('https://private.example/internal/leaderboard-identity-health'),
   { ...identityHealthEnv, LEADERBOARD_IDENTITY_SIGNING_KEY: 'too-short' },
 )).status, 503)
@@ -272,7 +283,7 @@ assert.equal((await handlePrivateLeaderboardIdentityHealthRequest(
   new Request('https://private.example/internal/leaderboard-identity-health', { method: 'POST' }),
   identityHealthEnv,
 )).status, 503)
-assert.equal(identityHealthQueries, 1)
+assert.equal(identityHealthQueries, 2)
 
 // Same-origin and method checks remain public, deterministic, and do not
 // forward a rejected request to the private Worker.

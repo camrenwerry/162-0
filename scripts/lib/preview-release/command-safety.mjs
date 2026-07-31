@@ -21,6 +21,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/leaderboard-migration.test.mjs'],
   ['scripts/navigation-smoke.test.mjs'],
   ['scripts/player-pipeline.test.mjs'],
+  ['scripts/playwright-protected-output.test.mjs'],
   ['scripts/prepare-d1c4-activation.mjs', '--check'],
   ['scripts/preview-check.mjs'],
   ['scripts/preview-check.mjs', '--tests'],
@@ -33,6 +34,8 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/production-migration-guard.test.mjs'],
   ['scripts/pwa-deployment.test.mjs'],
   ['scripts/responsive-contract.test.mjs'],
+  ['scripts/schema4-activation-readiness.mjs', '--check'],
+  ['scripts/schema4-activation-readiness.test.mjs'],
   ['scripts/smoke-game.mjs'],
   ['scripts/v010-presentation.test.mjs'],
   ['scripts/validate-lahman-data.mjs'],
@@ -51,6 +54,8 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['/tmp/pennant-pursuit-leaderboard-integration-tests/leaderboard-integration.test.js'],
   ['/tmp/pennant-pursuit-leaderboard-placement-tests/leaderboard-placement.test.js'],
   ['/tmp/pennant-pursuit-leaderboard-ux-tests/leaderboard-ux.test.js'],
+  ['/tmp/pennant-pursuit-leaderboard-runtime-tests/leaderboard-runtime.test.js'],
+  ['/tmp/pennant-pursuit-preview-observability-tests/preview-observability.test.js'],
   ['/tmp/pennant-pursuit-d1c3-retention-cleanup-tests/d1c3-retention-cleanup.test.js'],
   ['/tmp/pennant-pursuit-d1c4-activation-tests/d1c4-activation.test.js'],
   ['/tmp/pennant-pursuit-d1c4-network-d1-client-tests/d1c4-network-d1-client.test.js'],
@@ -83,6 +88,8 @@ const SAFE_VITE_SSR_ENTRY_POINTS = new Set([
   'scripts/leaderboard-integration.test.ts',
   'scripts/leaderboard-placement.test.ts',
   'scripts/leaderboard-ux.test.ts',
+  'scripts/leaderboard-runtime.test.ts',
+  'scripts/preview-observability.test.ts',
   'scripts/randomizer-distribution.ts',
   'scripts/randomizer.test.ts',
   'scripts/release-readiness.test.ts',
@@ -258,6 +265,14 @@ export function assertLocalReleaseCommand(scriptName, command) {
       if (!SAFE_TSC_ARGUMENTS.has(JSON.stringify(argumentsList))) throw new Error(`Unsupported TypeScript command in ${scriptName}.`)
     } else if (executable === 'eslint') {
       if (words.length !== 2 || words[1] !== '.') throw new Error(`Unsupported ESLint command in ${scriptName}.`)
+    } else if (executable === 'playwright') {
+      const safeArguments = new Set([
+        JSON.stringify(['test', '--grep', '@release']),
+        JSON.stringify(['test', '--config', 'playwright.pwa.config.ts']),
+      ])
+      if (!safeArguments.has(JSON.stringify(argumentsList))) {
+        throw new Error(`Unsupported Playwright command in ${scriptName}.`)
+      }
     } else if (executable === 'wrangler') {
       if (!SAFE_WRANGLER_ARGUMENTS.has(JSON.stringify(argumentsList))) throw new Error(`Unsupported Wrangler command in ${scriptName}.`)
     } else throw new Error(`Unsupported executable ${executable} in ${scriptName}.`)

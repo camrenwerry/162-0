@@ -14,6 +14,9 @@ dist-ssr
 .preview-release/
 wrangler.d1c4-*.generated.toml
 *.local
+playwright-report/
+test-results/
+blob-report/
 
 # Editor directories and files
 .vscode/*

@@ -89,6 +89,30 @@
 .result-lb--disabled .result-lb__signal { margin: 0; }
 .result-lb--disabled h2 { font-size: 1.35rem; }
 .result-lb--disabled p { margin: 0.45rem 0 0; color: #93a2af; font-size: 0.875rem; line-height: 1.55; }
+.result-lb > button, .result-lb form button { min-height: 3rem; margin-top: 0.75rem; padding: 0.65rem 1rem; border: 1px solid #e8c65f; border-radius: 0.5rem; background: linear-gradient(#f1cd64, #aa7019); color: #111; cursor: pointer; font-family: var(--font-display); font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+.result-lb > button:disabled, .result-lb form button:disabled { border-color: #4a5964; background: #27323a; color: #89949c; cursor: not-allowed; }
+.result-lb > code { display: block; max-width: 33rem; margin: 1rem auto 0; padding: 0.9rem; overflow-wrap: anywhere; border: 1px solid #8f7632; border-radius: 0.55rem; background: #050b0f; color: #fff0bc; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.875rem; letter-spacing: 0.035em; line-height: 1.6; user-select: all; }
+.result-lb > label { display: flex; max-width: 33rem; margin: 0.8rem auto 0; padding: 0.75rem; align-items: center; gap: 0.7rem; border: 1px solid #344752; border-radius: 0.5rem; background: #0a141b; color: #c8d0d6; font-size: 0.875rem; line-height: 1.4; text-align: left; }
+.result-lb > label input { width: 1.25rem; height: 1.25rem; flex: 0 0 auto; accent-color: #d9ad3a; }
+.lb-load-more { display: block; min-width: 10rem; min-height: 3rem; margin: 1rem auto; padding: 0.6rem 1rem; border: 1px solid #d0af51; border-radius: 0.5rem; background: #111d25; color: #efd372; cursor: pointer; font-family: var(--font-display); font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+.lb-load-more:disabled { opacity: 0.55; cursor: wait; }
+.lb-identity { width: min(calc(100% - 1rem - env(safe-area-inset-left) - env(safe-area-inset-right)), 72rem); margin: 1rem auto 0; padding: 1rem; border: 1px solid #2e414d; border-radius: 0.75rem; background: linear-gradient(145deg, #0c171f, #070e14); color: #dce3e7; }
+.lb-identity > div > span, .lb-identity > span { color: #d7b64f; font-family: var(--font-display); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.lb-identity h2 { margin-top: 0.2rem; font-family: 'Bebas Neue', var(--font-display); font-size: 1.5rem; letter-spacing: 0.035em; text-transform: uppercase; }
+.lb-identity p { margin-top: 0.45rem; color: #91a1ac; font-size: 0.84rem; line-height: 1.5; }
+.lb-identity details { margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid #263842; }
+.lb-identity summary { min-height: 2.75rem; padding: 0.65rem 0; color: #d4dde2; cursor: pointer; font-family: var(--font-display); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+.lb-identity form { display: grid; max-width: 28rem; margin-top: 0.5rem; gap: 0.4rem; }
+.lb-identity form label { color: #bec9d0; font-size: 0.75rem; }
+.lb-identity form input { min-height: 3rem; padding: 0.65rem 0.75rem; border: 1px solid #526472; border-radius: 0.45rem; outline: 0; background: #060d13; color: #f7f8f9; }
+.lb-identity form input:focus { border-color: #efc858; box-shadow: 0 0 0 3px rgb(239 200 88 / 12%); }
+.lb-identity button { min-height: 2.75rem; padding: 0.55rem 0.8rem; border: 1px solid #657680; border-radius: 0.45rem; background: #111e27; color: #dce4e8; cursor: pointer; font-family: var(--font-display); font-weight: 800; text-transform: uppercase; }
+.lb-identity form button { margin-top: 0.3rem; border-color: #d5b44e; background: #2b2410; color: #f3d36c; }
+.lb-identity button:disabled { opacity: 0.55; cursor: not-allowed; }
+.lb-identity__remove { margin-top: 1rem; border-color: #72454a !important; background: #211315 !important; color: #e9b8bd !important; font-size: 0.75rem; }
+.lb-identity--recovery { text-align: center; }
+.lb-identity--recovery > code { display: block; max-width: 33rem; margin: 1rem auto; padding: 0.9rem; overflow-wrap: anywhere; border: 1px solid #8f7632; border-radius: 0.55rem; background: #050b0f; color: #fff0bc; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; user-select: all; }
+.lb-identity--recovery > label { display: flex; max-width: 33rem; margin: 0.8rem auto; align-items: center; justify-content: center; gap: 0.6rem; color: #c8d0d6; font-size: 0.84rem; }
 
 @keyframes lb-pulse { to { border-color: #d6b34e; box-shadow: 0 0 2.5rem rgb(214 179 78 / 20%); transform: scale(1.04); } }
 @keyframes lb-shimmer { to { background-position: -200% 0; } }

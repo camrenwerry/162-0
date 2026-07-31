@@ -11,7 +11,7 @@ assert.match(app, /documentTitleForRoute/, 'route navigation must update documen
 assert.match(app, /prefers-reduced-motion/, 'route scrolling must respect reduced motion')
 assert.match(app, /<ClassicMode[\s\S]*?onHome=/, 'draft navigation target is missing')
 assert.match(app, /<GameUpdatesScreen onHome=/, 'Game Updates navigation target is missing')
-assert.match(app, /<LeaderboardScreen onHome=/, 'Leaderboard navigation target is missing')
+assert.match(app, /<LeaderboardScreen[\s\S]*?onHome=/, 'Leaderboard navigation target is missing')
 assert.match(app, /<HomeScreen[\s\S]*?onPlay=/, 'Home navigation target is missing')
 assert.match(app, /<PennantPursuitLogo className="route-loading__logo"/, 'route fallback branding is missing')
 assert.doesNotMatch(app, /setTimeout/, 'navigation must not add artificial loading delays')

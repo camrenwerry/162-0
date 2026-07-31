@@ -127,6 +127,7 @@ assert.deepEqual(
 
 const identityEnv = {
   LEADERBOARD_IDENTITY_MODE: 'enabled',
+  LEADERBOARD_RECOVERY_MODE: 'enabled',
   LEADERBOARD_IDENTITY_SIGNING_KEY: IDENTITY_KEY,
   DB: database,
 }

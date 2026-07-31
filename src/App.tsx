@@ -7,10 +7,11 @@ import {
   type NavigationBlocker,
   type Route,
 } from './appNavigation'
+import { importLazyRoute } from './utils/lazyRoute'
 
-const ClassicMode = lazy(() => import('./components/draft/ClassicMode'))
-const GameUpdatesScreen = lazy(() => import('./components/updates/GameUpdatesScreen'))
-const LeaderboardScreen = lazy(() => import('./components/leaderboard/LeaderboardScreen'))
+const ClassicMode = lazy(() => importLazyRoute(() => import('./components/draft/ClassicMode')))
+const GameUpdatesScreen = lazy(() => importLazyRoute(() => import('./components/updates/GameUpdatesScreen')))
+const LeaderboardScreen = lazy(() => importLazyRoute(() => import('./components/leaderboard/LeaderboardScreen')))
 
 function getRoute(): Route {
   if (window.location.pathname === '/draft') return '/draft'
@@ -99,7 +100,13 @@ function App() {
   } else if (route === '/leaderboard') {
     screen = (
       <Suspense fallback={<RouteLoading label="Loading leaderboard…" />}>
-        <div className="app-route__content"><LeaderboardScreen onHome={() => navigate('/')} onPlay={() => navigate('/draft')} /></div>
+        <div className="app-route__content">
+          <LeaderboardScreen
+            onHome={() => navigate('/')}
+            onPlay={() => navigate('/draft')}
+            registerNavigationBlocker={registerNavigationBlocker}
+          />
+        </div>
       </Suspense>
     )
   } else if (route === '/updates') {

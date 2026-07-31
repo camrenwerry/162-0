@@ -209,7 +209,7 @@ explicitly empty. The repository defines and validates `disabled`,
 `submission-enabled`, and `cron-enabled` preview states without changing any
 production section. Enabled health publishes
 `pennant-draft-submission-v1` from the existing protocol constant only when the
-Pages flag is configured and reachable D1 schema 3 is exact. It reports schema
+Pages flag is configured and reachable D1 schema 4 is exact. It reports schema
 readiness, not private Worker readiness; operational writes remain
 `externally-unverified` until the smoke independently observes endpoint success
 and exact D1 persistence. Version 2 is now a migration predecessor, not a
@@ -221,6 +221,12 @@ guarded smoke harnesses, stop conditions, and two-step rollback. D1C.4 performs
 no remote migration, deployment, endpoint request, feature activation, Cron
 activation, secret operation, binding change, route change, or production
 change.
+
+Milestone 3C-1 adds an independent recovery gate and a local schema-4 readiness
+guard without changing the protected configuration files. See
+[Milestone 3C-1 local runtime integration](MILESTONE_3C1_LOCAL_RUNTIME.md).
+Enabled legacy-state generation and Preview planning now refuse until the
+activation model explicitly carries the schema-4 identity and recovery gates.
 
 ## Milestone 3A disabled identity and ranking foundation
 

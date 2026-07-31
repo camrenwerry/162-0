@@ -59,10 +59,12 @@ The top-level/default Pages environment binds only to
 `pennant-pursuit-production` binding. Preview can store the bounded,
 ticket-authorized draft-submission records described in the backend operations
 guide. Schema version 3 also preserves server-verified leaderboard run history
-independently from short-lived receipts. Production remains separately
+independently from short-lived receipts, and schema version 4 adds the disabled
+identity, recovery, and ranking foundation. Production remains separately
 isolated, and the checked-in submission and leaderboard gates remain disabled.
-The current game has no stable public player identity, and cumulative
-performance has no approved formula, so neither behavior is publicly exposed.
+The local runtime supports account-free Preview identity and independent
+recovery gating, but neither behavior is publicly activated. Cumulative
+performance still has no approved formula and is not exposed.
 See
 [`docs/LEADERBOARD_BACKEND.md`](docs/LEADERBOARD_BACKEND.md) for the exact
 ranking, privacy, API, and activation contract. Do not deploy or add bindings
@@ -72,6 +74,9 @@ Functions runtime types after any Wrangler configuration change with
 `npm run functions:types:check`. Migration commands, environment boundaries,
 retention, rollback warnings, and submission controls are in
 [`docs/BACKEND_OPERATIONS.md`](docs/BACKEND_OPERATIONS.md).
+The local browser, credential, recovery, observability, and schema-4 readiness
+contract is in
+[`docs/MILESTONE_3C1_LOCAL_RUNTIME.md`](docs/MILESTONE_3C1_LOCAL_RUNTIME.md).
 
 Preview and test the exact production output locally:
 

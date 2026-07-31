@@ -9,6 +9,7 @@ import { classifyMigrationState, loadRepositoryMigrations } from './lib/preview-
 import { buildReleasePlan } from './lib/preview-release/plan.mjs'
 import { failureReport, renderHumanPlan } from './lib/preview-release/reporting.mjs'
 import { runOfflineReleaseValidation } from './preview-check.mjs'
+import { assertSchema4ActivationPlan } from './lib/schema4-activation-readiness.mjs'
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url)
 const DEFAULT_REPOSITORY_ROOT = path.resolve(path.dirname(SCRIPT_PATH), '..')
@@ -68,6 +69,12 @@ export async function createPreviewPlan({
   const remote = await inspectPreviewRemoteState({ manifest: context.loaded.manifest, client: readOnlyClient })
   const knownMigrations = loadRepositoryMigrations(repositoryRoot, context.loaded.manifest.configuration.migrationsDirectory)
   const migration = classifyMigrationState({ knownMigrations, ...remote.migrationObservation })
+  assertSchema4ActivationPlan({
+    repositoryRoot,
+    targetState,
+    migration,
+    manifest: context.loaded.manifest,
+  })
   const hashes = computeReleaseHashes({
     repositoryRoot,
     manifestHash: context.loaded.hash,

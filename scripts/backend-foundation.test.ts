@@ -362,7 +362,12 @@ for (const handler of [
   assert(start >= 0 && end > start)
   assert.doesNotMatch(privateValidationWorkerSource.slice(start, end), /\benv\.DB\b/)
 }
-assert.doesNotMatch(privateValidationWorkerSource, /\bwaitUntil\b/)
+assert.equal((privateValidationWorkerSource.match(/\bwaitUntil\s*\(/g) ?? []).length, 1)
+assert.match(
+  privateValidationWorkerSource,
+  /\(task\) => context\.waitUntil\(task\)/,
+  'only the response-independent Preview diagnostic task may extend the Worker event',
+)
 assert.doesNotMatch(privateValidationWorkerSource, /\bconsole\.(?:log|warn|error)\b/)
 assert.doesNotMatch(privateValidationWorkerSource, /\bawait\s+fetch\s*\(/)
 assert.doesNotMatch(privateValidationWorkerSource, /\bglobalThis\.fetch\s*\(/)
@@ -660,10 +665,11 @@ const incompleteIdentityResponse = await handleHealthRequest(
 assert.equal(incompleteIdentityResponse.status, 200)
 const incompleteIdentityHealth = await incompleteIdentityResponse.json() as {
   status: string
-  features: { leaderboardIdentity?: string }
+  features: { leaderboardIdentity?: string, leaderboardRecovery?: string }
 }
 assert.equal(incompleteIdentityHealth.status, 'degraded')
 assert.equal(incompleteIdentityHealth.features.leaderboardIdentity, 'configured')
+assert.equal(incompleteIdentityHealth.features.leaderboardRecovery, 'disabled')
 assert.equal(incompleteIdentityDatabase.writeCalls(), 0)
 
 const enabledIdentityDatabase = createMockDatabase({ schema: { version: 4 } })
@@ -684,11 +690,35 @@ const enabledIdentityResponse = await handleHealthRequest(
 assert.equal(enabledIdentityResponse.status, 200)
 const enabledIdentityHealth = await enabledIdentityResponse.json() as {
   status: string
-  features: { leaderboardIdentity?: string }
+  features: { leaderboardIdentity?: string, leaderboardRecovery?: string }
 }
 assert.equal(enabledIdentityHealth.status, 'healthy')
 assert.equal(enabledIdentityHealth.features.leaderboardIdentity, 'schema-ready')
+assert.equal(enabledIdentityHealth.features.leaderboardRecovery, 'disabled')
 assert.equal(enabledIdentityDatabase.writeCalls(), 0)
+
+const enabledRecoveryDatabase = createMockDatabase({ schema: { version: 4 } })
+const enabledRecoveryResponse = await handleHealthRequest(
+  new Request('https://example.test/api/v1/health'),
+  {
+    ...enabledRecoveryDatabase.env,
+    LEADERBOARD_IDENTITY_MODE: 'enabled',
+    LEADERBOARD_RECOVERY_MODE: 'enabled',
+    VALIDATION_SERVICE: {
+      async fetch(request: Request) {
+        assert.match(request.url, /leaderboard-identity-health(?:\?capability=recovery)?$/)
+        return new Response(null, { status: 204 })
+      },
+    },
+  },
+)
+assert.equal(enabledRecoveryResponse.status, 200)
+const enabledRecoveryHealth = await enabledRecoveryResponse.json() as {
+  status: string
+  features: { leaderboardRecovery?: string }
+}
+assert.equal(enabledRecoveryHealth.status, 'healthy')
+assert.equal(enabledRecoveryHealth.features.leaderboardRecovery, 'schema-ready')
 
 async function enabledUnavailableHealth(
   env: BackendEnv,

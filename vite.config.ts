@@ -33,6 +33,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp}'],
         globIgnores: [
           '**/assets/ClassicMode-*.js',
+          '**/assets/generated-*.js',
           'branding/pennant-pursuit-master.png',
           'branding/pennant-pursuit-logo.png',
           'branding/pennant-pursuit-logo-dark.webp',

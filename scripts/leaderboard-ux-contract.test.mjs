@@ -17,7 +17,7 @@ const TEXT_ASSET_GROUPS = Object.freeze([
 const EXTENSIONLESS_TEXT_ASSETS = new Set(['_headers', '_redirects'])
 const FORBIDDEN_PRODUCTION_SENTINELS = Object.freeze([
   'Grandstand Grace',
-  'PP1-',
+  'PP1-7H2K-9M4Q-T6RX-3W8D-F5JC-NP7A-2QR5',
   'pennant-pursuit:leaderboard-preview-identity:v1',
   'leaderboardFixture',
   'leaderboardResult',
@@ -124,9 +124,18 @@ const workerConfig = read('workers/draft-validation/wrangler.toml')
 assert(app.includes("'/leaderboard'") && app.includes('<LeaderboardScreen'), 'leaderboard route is missing')
 assert(home.includes('dd-home__leaderboard') && home.includes('Leaderboards'), 'Home leaderboard entry is missing')
 assert(home.indexOf('dd-home__play') < home.indexOf('dd-home__leaderboard'), 'Play Classic must remain the first Home action')
-assert.match(classic, /import\('\.\.\/\.\.\/features\/leaderboard\/developmentResultPreview'\)/)
-assert.match(classic, /import\('\.\.\/leaderboard\/ResultLeaderboardJourney'\)/)
-assert.match(leaderboard, /void import\('\.\.\/\.\.\/features\/leaderboard\/developmentResultPreview'\)/)
+assert.match(
+  classic,
+  /DEVELOPMENT_FIXTURES_ENABLED\s*=\s*import\.meta\.env\.DEV\s*&&\s*localLeaderboardFixturesAreEnabled\(\)/,
+)
+assert.match(classic, /\/\* @vite-ignore \*\/ DEVELOPMENT_RESULT_MODULE_PATH/)
+assert.match(classic, /\/\* @vite-ignore \*\/ DEVELOPMENT_JOURNEY_MODULE_PATH/)
+assert.match(
+  leaderboard,
+  /DEVELOPMENT_FIXTURES_ENABLED\s*=\s*import\.meta\.env\.DEV\s*&&\s*localLeaderboardFixturesAreEnabled\(\)/,
+)
+assert.match(leaderboard, /DEVELOPMENT_FIXTURE_QUERY\s*=\s*import\.meta\.env\.DEV/)
+assert.match(leaderboard, /\/\* @vite-ignore \*\/ DEVELOPMENT_RESULT_MODULE_PATH/)
 assert.doesNotMatch(classic, /^import \{[^}]*getDevelopmentResultPreview/m, 'development preview must not use a production-reachable static value import')
 assert.doesNotMatch(results, /^import ResultLeaderboardJourney/m, 'private journey UI must not be statically imported by production results')
 
@@ -149,6 +158,9 @@ for (const period of ['Daily', 'Weekly', 'All-Time']) {
 assert(leaderboard.includes('role="tablist"') && leaderboard.includes('role="tabpanel"'))
 assert(leaderboard.includes("event.key === 'ArrowRight'") && leaderboard.includes("event.key === 'ArrowLeft'"))
 assert(!leaderboard.includes('entry.roster') && !leaderboard.includes('results-roster'))
+assert.match(leaderboard, /key=\{entry\.stableKey\}/, 'React row identity must use the stable raw-entry key')
+assert.match(leaderboard, /existing = new Set\(view\.snapshot\.entries\.map\(\(entry\) => entry\.stableKey\)\)/)
+assert.doesNotMatch(leaderboard, /existing\.has\([^)]*timeContext/, 'presentation time must not drive pagination de-duplication')
 assert.match(
   leaderboard,
   /<th data-label="Player" scope="row">[\s\S]*?lb-row__player-name[\s\S]*?lb-row__you[\s\S]*?<\/th>/,

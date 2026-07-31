@@ -189,9 +189,20 @@ const sqlite = migratedDatabase()
 const database = new SqliteD1Database(sqlite)
 const env: LeaderboardIdentityEnv = {
   LEADERBOARD_IDENTITY_MODE: 'enabled',
+  LEADERBOARD_RECOVERY_MODE: 'enabled',
   LEADERBOARD_IDENTITY_SIGNING_KEY: IDENTITY_KEY,
   DB: database,
 }
+
+const recoveryGateDisabled = await handleLeaderboardIdentityRequest(
+  identityRequest({
+    recoveryCode: 'PP1-0000-0000-0000-0000-0000-0000-0000',
+    recoveryOperationId: RECOVERY_OPERATION_E,
+  }),
+  { ...env, LEADERBOARD_RECOVERY_MODE: 'disabled' },
+  'recover',
+)
+assert.equal(recoveryGateDisabled.status, 404)
 
 const disabledDatabase = new Proxy({}, {
   get() {
@@ -892,6 +903,7 @@ assert.equal(status.status, 200)
 const statusText = await status.text()
 assert.doesNotMatch(statusText, /deviceCredential|recoveryCode|digest|playerId|runId/)
 assert.match(statusText, /cumulativePerformance":false/)
+assert.match(statusText, /recovery":true/)
 
 const persistedRecoveryState = JSON.stringify({
   players: sqlite.prepare('SELECT * FROM leaderboard_players').all().map((row) => ({ ...row })),

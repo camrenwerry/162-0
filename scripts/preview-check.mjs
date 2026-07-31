@@ -43,6 +43,9 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('Game smoke tests', 'test:game'),
   npmRunStage('Navigation tests', 'test:navigation'),
   npmRunStage('Leaderboard UX tests', 'test:leaderboard-ux'),
+  npmRunStage('Playwright protected-output tests', 'test:browser:protected-output'),
+  npmRunStage('Two-version PWA transition tests', 'test:browser:pwa-transition'),
+  npmRunStage('Release-relevant local browser tests', 'test:browser:release'),
   npmRunStage('Scoring tests', 'test:scoring'),
   npmRunStage('Seeded random tests', 'test:rng'),
   npmRunStage('Transcript replay tests', 'test:replay'),
@@ -66,6 +69,7 @@ export const TEST_STAGES = Object.freeze([
 
 export const RELEASE_STAGES = Object.freeze([
   npmRunStage('D1C.4 activation-state validation', 'd1c4:activation:check'),
+  npmRunStage('Schema-4 activation readiness validation', 'schema4:readiness:check'),
   stage('All repository type checks', 'npm', ['run', 'typecheck']),
   stage('All release-relevant automated tests and resource identity checks', 'npm', ['test']),
   npmRunStage('Lint', 'lint'),

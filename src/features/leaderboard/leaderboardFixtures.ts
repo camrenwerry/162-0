@@ -1,5 +1,16 @@
-export const LEADERBOARD_PERIODS = ['daily', 'weekly', 'all-time'] as const
-export type LeaderboardPeriod = typeof LEADERBOARD_PERIODS[number]
+import {
+  type LeaderboardPeriod,
+  type PublicLeaderboardEntry,
+  type ReadyLeaderboardSnapshot,
+} from './leaderboardRuntimeModel'
+export {
+  LEADERBOARD_PERIODS,
+  createLeaderboardStateSnapshot,
+  type LeaderboardPeriod,
+  type LeaderboardSnapshot,
+  type PublicLeaderboardEntry,
+  type ReadyLeaderboardSnapshot,
+} from './leaderboardRuntimeModel'
 
 export interface RankableLeaderboardResult {
   readonly projectedWins: number
@@ -12,28 +23,6 @@ export interface LeaderboardCandidate extends RankableLeaderboardResult {
   readonly mode: 'Classic'
   readonly isPersonal: boolean
 }
-
-export interface PublicLeaderboardEntry extends LeaderboardCandidate {
-  readonly rank: number
-}
-
-interface LeaderboardSnapshotBase {
-  readonly period: LeaderboardPeriod
-}
-
-export interface ReadyLeaderboardSnapshot extends LeaderboardSnapshotBase {
-  readonly kind: 'ready'
-  readonly entries: readonly PublicLeaderboardEntry[]
-  readonly personalEntry: PublicLeaderboardEntry | null
-  readonly personalStatus: 'visible' | 'anchored' | 'none'
-  readonly updatedLabel: string
-}
-
-export type LeaderboardSnapshot =
-  | ReadyLeaderboardSnapshot
-  | (LeaderboardSnapshotBase & {
-    readonly kind: 'loading' | 'empty' | 'error' | 'offline' | 'disabled'
-  })
 
 export type ResultJourneyScenario = 'first-time' | 'returning' | 'near-miss'
 export type ResultJourneyStage =
@@ -113,10 +102,14 @@ export function rankLeaderboardCandidates(
 
   let rank = 0
   let previous: LeaderboardCandidate | null = null
-  return Object.freeze(ordered.map(({ candidate }, index) => {
+  return Object.freeze(ordered.map(({ candidate, sourceIndex }, index) => {
     if (!previous || compareLeaderboardResults(previous, candidate) !== 0) rank = index + 1
     previous = candidate
-    return Object.freeze({ ...candidate, rank })
+    return Object.freeze({
+      ...candidate,
+      rank,
+      stableKey: JSON.stringify(['development-fixture', sourceIndex, candidate.displayName]),
+    })
   }))
 }
 
@@ -151,13 +144,6 @@ export function createReadyLeaderboardSnapshot(
     personalStatus: visiblePersonal ? 'visible' : bestPersonal ? 'anchored' : 'none',
     updatedLabel,
   })
-}
-
-export function createLeaderboardStateSnapshot(
-  kind: Exclude<LeaderboardSnapshot['kind'], 'ready'>,
-  period: LeaderboardPeriod = 'daily',
-): LeaderboardSnapshot {
-  return Object.freeze({ kind, period })
 }
 
 export function createResultPlacement(

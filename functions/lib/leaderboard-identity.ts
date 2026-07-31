@@ -9,6 +9,10 @@ import {
   isLeaderboardIdentitySigningKey,
   type LeaderboardIdentityModeEnv,
 } from './leaderboard-identity-mode'
+import {
+  isLeaderboardRecoveryEnabled,
+  type LeaderboardRecoveryModeEnv,
+} from './leaderboard-recovery-mode'
 import { validateDisplayName } from '../../shared/leaderboard-display-name'
 export {
   DISPLAY_NAME_MAX_CHARACTERS,
@@ -364,7 +368,7 @@ export interface IdentityDatabase {
   batch(statements: IdentityPreparedStatement[]): Promise<unknown>
 }
 
-export interface LeaderboardIdentityEnv extends LeaderboardIdentityModeEnv {
+export interface LeaderboardIdentityEnv extends LeaderboardIdentityModeEnv, LeaderboardRecoveryModeEnv {
   readonly DB?: unknown
 }
 
@@ -1327,6 +1331,7 @@ async function identityStatus(
   database: IdentityDatabase,
   signingKey: string,
   nowMs: number,
+  recoveryEnabled: boolean,
 ) {
   if (!hasExactKeys(body, ['deviceCredential'])) return leaderboardIdentityErrorResponse('invalid_request_schema')
   const identity = await identityByCredential(database, signingKey, body.deviceCredential)
@@ -1338,7 +1343,7 @@ async function identityStatus(
     capabilities: Object.freeze({
       bestRun: true,
       cumulativePerformance: false,
-      recovery: true,
+      recovery: recoveryEnabled,
       rename: true,
     }),
   }, 200)
@@ -1351,6 +1356,9 @@ export async function handleLeaderboardIdentityRequest(
   now: () => number = () => Date.now(),
 ) {
   if (!isLeaderboardIdentityEnabled(env)) return handleApiNotFoundRequest(request)
+  if (action === 'recover' && !isLeaderboardRecoveryEnabled(env)) {
+    return handleApiNotFoundRequest(request)
+  }
   if (request.method !== ALLOWED_METHODS) return leaderboardIdentityErrorResponse('method_not_allowed')
   if (!isLeaderboardIdentitySigningKey(env.LEADERBOARD_IDENTITY_SIGNING_KEY)) {
     return leaderboardIdentityErrorResponse('identity_unavailable')
@@ -1380,7 +1388,13 @@ export async function handleLeaderboardIdentityRequest(
     if (action === 'rename') {
       return await renameIdentity(body, database, env.LEADERBOARD_IDENTITY_SIGNING_KEY, nowMs)
     }
-    return await identityStatus(body, database, env.LEADERBOARD_IDENTITY_SIGNING_KEY, nowMs)
+    return await identityStatus(
+      body,
+      database,
+      env.LEADERBOARD_IDENTITY_SIGNING_KEY,
+      nowMs,
+      isLeaderboardRecoveryEnabled(env),
+    )
   } catch {
     return leaderboardIdentityErrorResponse('identity_unavailable')
   }

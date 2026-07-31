@@ -7,6 +7,13 @@
 > workflow to activate Milestone 3A without a newly reviewed migration, secret,
 > configuration, and smoke plan.
 
+Milestone 3C-1 enforces that warning in tooling. `--write` refuses
+`submission-enabled` and `cron-enabled`, and Preview planning refuses enabled
+targets, because this protected historical model has no independent identity
+or recovery gates. Use `npm run schema4:readiness:check` and
+[the schema-4 local runtime contract](MILESTONE_3C1_LOCAL_RUNTIME.md). Only the
+disabled historical state remains materializable.
+
 D1C.4 is repository preparation only. It does not deploy Pages or a Worker,
 apply a migration, contact an endpoint, change a secret, alter a binding or
 route, or activate a Cron Trigger. Production is explicitly out of scope, and
@@ -102,11 +109,15 @@ Expected review output:
 - Comparing `submission-enabled` with `cron-enabled`: no Pages difference and
   exactly `crons = []` to `crons = ["17 * * * *"]` in the Worker.
 
-Prepare ignored local configuration inputs only after review:
+The current schema-4 guard allows writing only the disabled artifact:
 
 ```bash
-npm run d1c4:activation -- --state <disabled|submission-enabled|cron-enabled> --write
+npm run d1c4:activation -- --state disabled --write
 ```
+
+Requests to write either historical enabled state fail nonzero until a
+separately reviewed activation model includes the independent identity and
+recovery gates.
 
 That creates these local files, with the chosen state in each filename:
 

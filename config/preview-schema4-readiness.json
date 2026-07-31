@@ -1,0 +1,40 @@
+{
+  "modelVersion": 1,
+  "targetDatabaseSchema": 4,
+  "requiredMigration": "0004_leaderboard_identity_ranking.sql",
+  "expectedMigrationPrefix": [
+    "0001_backend_foundation.sql",
+    "0002_draft_submissions.sql",
+    "0003_leaderboard_foundation.sql",
+    "0004_leaderboard_identity_ranking.sql"
+  ],
+  "requiredPreviewGates": {
+    "frontend": [
+      "VITE_DRAFT_TICKET_MODE",
+      "VITE_DRAFT_SUBMISSION_MODE",
+      "VITE_LEADERBOARD_READ_MODE",
+      "VITE_LEADERBOARD_IDENTITY_MODE",
+      "VITE_LEADERBOARD_RECOVERY_MODE"
+    ],
+    "pages": [
+      "DRAFT_SUBMISSION_MODE",
+      "LEADERBOARD_READ_MODE",
+      "LEADERBOARD_IDENTITY_MODE",
+      "LEADERBOARD_RECOVERY_MODE"
+    ],
+    "worker": [
+      "DRAFT_SUBMISSION_MODE",
+      "LEADERBOARD_IDENTITY_MODE",
+      "LEADERBOARD_RECOVERY_MODE"
+    ]
+  },
+  "expectedHealth": {
+    "databaseSchemaVersion": 4,
+    "submissionSchema": "pennant-draft-submission-v1",
+    "leaderboardIdentity": "schema-ready",
+    "leaderboardRecovery": "schema-ready"
+  },
+  "checkedInState": "disabled",
+  "identityPolicy": "Preview identities are disposable before public release.",
+  "rollbackPolicy": "Disable public writes, identity, recovery, reads, and cleanup first; use a reviewed forward fix. Schema reversal is not the default rollback."
+}

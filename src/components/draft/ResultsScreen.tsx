@@ -9,6 +9,10 @@ import type { NavigationBlocker } from '../../appNavigation'
 import { ROSTER_SLOTS, type DraftResult, type Roster, type ScoringCategoryKey } from '../../types/draft'
 import { buildCompleteShareText, getFeedbackUrl, shareResult } from '../../utils/appActions'
 import ShareFallbackDialog from './ShareFallbackDialog'
+import RuntimeResultLeaderboardJourney from '../leaderboard/RuntimeResultLeaderboardJourney'
+import type { DraftTranscript } from '../../game/DraftTranscript'
+import type { DraftTicket } from '../../features/leaderboard/pennantApi'
+import type { RuntimeIdentityState } from '../../features/leaderboard/useRuntimeIdentity'
 
 interface ResultsScreenProps {
   roster: Roster
@@ -19,6 +23,12 @@ interface ResultsScreenProps {
   onGameUpdates: () => void
   developmentJourney?: DevelopmentResultJourneyData
   DevelopmentJourneyComponent?: ComponentType<ResultLeaderboardJourneyProps>
+  runtimeJourney?: Readonly<{
+    ticket: DraftTicket | null
+    transcript: DraftTranscript
+    identityState: RuntimeIdentityState
+    onIdentityChanged: () => void
+  }>
   registerNavigationBlocker: (blocker: NavigationBlocker | null) => void
 }
 
@@ -37,6 +47,7 @@ export default function ResultsScreen({
   onGameUpdates,
   developmentJourney,
   DevelopmentJourneyComponent,
+  runtimeJourney,
   registerNavigationBlocker,
 }: ResultsScreenProps) {
   const [shareStatus, setShareStatus] = useState<string | null>(null)
@@ -128,7 +139,13 @@ export default function ResultsScreen({
           <p><span>Strongest category</span><strong>{formatCategoryLabel(result.strongestCategory)}</strong></p>
           <p><span>Weakest category</span><strong>{formatCategoryLabel(result.weakestCategory)}</strong></p>
         </section>
-        {developmentJourney && DevelopmentJourneyComponent ? (
+        {runtimeJourney ? (
+          <RuntimeResultLeaderboardJourney
+            {...runtimeJourney}
+            onBlockingChange={handleLeaderboardBlockingChange}
+            registerNavigationBlocker={registerNavigationBlocker}
+          />
+        ) : developmentJourney && DevelopmentJourneyComponent ? (
           <DevelopmentJourneyComponent
             data={developmentJourney}
             onBlockingChange={handleLeaderboardBlockingChange}

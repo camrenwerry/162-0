@@ -25,6 +25,10 @@ import {
   leaderboardReadRuntimeIsConfigured,
   type LeaderboardReadModeEnv,
 } from '../../lib/leaderboard-mode'
+import {
+  leaderboardRecoveryFeatureState,
+  type LeaderboardRecoveryModeEnv,
+} from '../../lib/leaderboard-recovery-mode'
 
 const ALLOWED_METHODS = 'GET, HEAD'
 const PRIVATE_IDENTITY_HEALTH_URL = 'https://pennant-pursuit.internal/internal/leaderboard-identity-health'
@@ -63,17 +67,23 @@ function jsonResponse(payload: unknown, status: number) {
   return new Response(JSON.stringify(payload), { status, headers: responseHeaders() })
 }
 
-async function privateIdentityIsReady(service: Pick<Fetcher, 'fetch'> | undefined) {
+async function privateIdentityIsReady(
+  service: Pick<Fetcher, 'fetch'> | undefined,
+  capability: 'identity' | 'recovery',
+) {
   if (!service || typeof service.fetch !== 'function') return false
   try {
-    const response = await service.fetch(new Request(PRIVATE_IDENTITY_HEALTH_URL))
+    const url = capability === 'recovery'
+      ? `${PRIVATE_IDENTITY_HEALTH_URL}?capability=recovery`
+      : PRIVATE_IDENTITY_HEALTH_URL
+    const response = await service.fetch(new Request(url))
     return response.status === 204
   } catch {
     return false
   }
 }
 
-type HealthEnv = BackendEnv & LeaderboardReadModeEnv & LeaderboardIdentityModeEnv & {
+type HealthEnv = BackendEnv & LeaderboardReadModeEnv & LeaderboardIdentityModeEnv & LeaderboardRecoveryModeEnv & {
   readonly VALIDATION_SERVICE?: Pick<Fetcher, 'fetch'>
 }
 
@@ -87,7 +97,11 @@ export async function handleHealthRequest(request: Request, env: HealthEnv = {})
       && leaderboardReadRuntimeIsConfigured(env)
     const identityRequested = leaderboardIdentityFeatureState(env) === 'enabled'
     const identityRuntimeConfigured = identityRequested
-      && await privateIdentityIsReady(env.VALIDATION_SERVICE)
+      && await privateIdentityIsReady(env.VALIDATION_SERVICE, 'identity')
+    const recoveryRequested = leaderboardRecoveryFeatureState(env) === 'enabled'
+    const recoveryRuntimeConfigured = identityRequested
+      && recoveryRequested
+      && await privateIdentityIsReady(env.VALIDATION_SERVICE, 'recovery')
     const submissionSchemaReady = submissionConfigured
       && d1.configured
       && d1.reachable
@@ -100,18 +114,23 @@ export async function handleHealthRequest(request: Request, env: HealthEnv = {})
       && d1.configured
       && d1.reachable
       && databaseSchemaIsCompatible(d1.schemaVersion, true)
+    const recoverySchemaReady = recoveryRuntimeConfigured && identitySchemaReady
     const submissionSchema = submissionSchemaReady ? DRAFT_SUBMISSION_SCHEMA_VERSION : null
     const databaseHealthy = d1.reachable
       && databaseSchemaIsCompatible(
         d1.schemaVersion,
         submissionConfigured || leaderboardRequested || identityRequested,
       )
-    const dataFeatureConfigured = submissionConfigured || leaderboardRequested || identityRequested
+    const dataFeatureConfigured = submissionConfigured
+      || leaderboardRequested
+      || identityRequested
+      || recoveryRequested
     const healthy = dataFeatureConfigured
       ? d1.configured
         && databaseHealthy
         && (!leaderboardRequested || leaderboardConfigured)
         && (!identityRequested || identitySchemaReady)
+        && (!recoveryRequested || recoverySchemaReady)
       : !d1.configured || databaseHealthy
     const operationalWriteReadiness = !submissionConfigured
       ? 'disabled'
@@ -144,6 +163,13 @@ export async function handleHealthRequest(request: Request, env: HealthEnv = {})
           : submissionSchemaReady ? 'schema-ready' : 'configured',
         ...(identityRequested
           ? { leaderboardIdentity: identitySchemaReady ? 'schema-ready' : 'configured' }
+          : {}),
+        ...(identityRequested || recoveryRequested
+          ? {
+            leaderboardRecovery: !recoveryRequested
+              ? 'disabled'
+              : recoverySchemaReady ? 'schema-ready' : 'configured',
+          }
           : {}),
         writes: operationalWriteReadiness,
         d1: d1State,

@@ -1,6 +1,7 @@
 .classic-page { position: relative; min-height: 100svh; padding-bottom: calc(9.5rem + env(safe-area-inset-bottom)); overflow-x: clip; background: #070c12; color: #f6f7f8; }
 .classic-page__atmosphere { position: fixed; inset: 0; background: radial-gradient(ellipse at 50% 10%, rgb(30 72 105 / 32%), transparent 31rem), linear-gradient(180deg, rgb(8 19 29 / 30%), transparent 46%), repeating-linear-gradient(105deg, transparent 0 6rem, rgb(255 255 255 / 0.5%) 6.05rem 6.1rem); pointer-events: none; }
 .classic-shell { position: relative; width: min(calc(100% - 1rem - env(safe-area-inset-left) - env(safe-area-inset-right)), 76rem); margin-inline: auto; padding-top: calc(0.55rem + env(safe-area-inset-top)); }
+.draft-service-note { margin: 0; padding: 0.65rem 1rem; border-right: 1px solid #293746; border-bottom: 1px solid #293746; border-left: 1px solid #293746; color: #aeb8c2; background: rgb(9 16 24 / 93%); font-size: 0.72rem; line-height: 1.4; text-align: center; }
 
 .dd-draft-header { display: grid; min-height: 4.1rem; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.6rem; border: 1px solid #293746; border-radius: 0.65rem 0.65rem 0 0; background: rgb(9 16 24 / 93%); box-shadow: 0 0.8rem 2.5rem rgb(0 0 0 / 30%); }
 .dd-draft-header > .game-menu { margin-left: 0.65rem; }

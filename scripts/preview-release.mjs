@@ -9,6 +9,8 @@ import {
 import { asWorkflowError, EXIT_CODES, usageError } from './lib/preview-release/errors.mjs'
 import { executeReleasePackage } from './lib/preview-release/release-execution.mjs'
 import { failureReport, renderHumanExecution } from './lib/preview-release/reporting.mjs'
+import { loadReleaseManifest } from './lib/preview-release/manifest.mjs'
+import { assertSchema4ActivationPlan } from './lib/schema4-activation-readiness.mjs'
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url)
 const DEFAULT_REPOSITORY_ROOT = path.resolve(path.dirname(SCRIPT_PATH), '..')
@@ -80,6 +82,13 @@ export async function runPreviewReleaseCli(argv, options = {}) {
   const releasePackage = loadReleasePackage(planPath, {
     nowMs: options.now?.() ?? Date.now(),
     requireUnexpired: true,
+  })
+  const { manifest } = loadReleaseManifest(repositoryRoot)
+  assertSchema4ActivationPlan({
+    repositoryRoot,
+    targetState: releasePackage.plan.targetState,
+    migration: releasePackage.plan.migration,
+    manifest,
   })
   const execution = await executeReleasePackage(releasePackage, {
     ...options,

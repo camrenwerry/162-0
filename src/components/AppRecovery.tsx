@@ -1,5 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react'
 import { VERSION_LABEL } from '../config/app'
+import { isObsoleteLazyChunkError } from '../utils/lazyRoute'
 import PennantPursuitLogo from './PennantPursuitLogo'
 import './AppRecovery.css'
 
@@ -34,17 +35,28 @@ export function AppRecovery({
 }
 
 interface BoundaryProps { children: ReactNode; onHome?: () => void }
-interface BoundaryState { failed: boolean }
+interface BoundaryState { failed: boolean; error: unknown }
 
 export class AppErrorBoundary extends Component<BoundaryProps, BoundaryState> {
-  state: BoundaryState = { failed: false }
-  static getDerivedStateFromError(): BoundaryState { return { failed: true } }
+  state: BoundaryState = { failed: false, error: null }
+  static getDerivedStateFromError(error: unknown): BoundaryState { return { failed: true, error } }
   componentDidCatch(error: Error, info: ErrorInfo) {
     if (import.meta.env.DEV) console.error('Pennant Pursuit recovery boundary', error, info)
   }
   render() {
-    return this.state.failed
-      ? <AppRecovery title="Something went wrong" message="Your draft could not continue." retryLabel="Restart Game" homeLabel="Return Home" onRetry={() => window.location.assign('/draft')} onHome={this.props.onHome} />
-      : this.props.children
+    if (!this.state.failed) return this.props.children
+    if (isObsoleteLazyChunkError(this.state.error)) {
+      return (
+        <AppRecovery
+          title="The app update could not finish"
+          message="This screen still has an obsolete app file after one automatic recovery attempt. Refresh once more, or return home."
+          retryLabel="Refresh App"
+          homeLabel="Return Home"
+          onRetry={() => window.location.reload()}
+          onHome={this.props.onHome}
+        />
+      )
+    }
+    return <AppRecovery title="Something went wrong" message="Your draft could not continue." retryLabel="Restart Game" homeLabel="Return Home" onRetry={() => window.location.assign('/draft')} onHome={this.props.onHome} />
   }
 }

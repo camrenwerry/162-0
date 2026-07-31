@@ -17,9 +17,26 @@ import { AppErrorBoundary, AppRecovery } from '../AppRecovery'
 import type { DevelopmentResultPreview } from '../../features/leaderboard/developmentResultPreview'
 import type { ResultLeaderboardJourneyProps } from '../leaderboard/ResultLeaderboardJourney'
 import { documentTitleForRoute, type NavigationBlocker } from '../../appNavigation'
+import {
+  PennantApi,
+  playerFacingApiMessage,
+  type DraftTicket,
+} from '../../features/leaderboard/pennantApi'
+import {
+  localLeaderboardFixturesAreEnabled,
+  runtimeFeatureIsEnabled,
+} from '../../features/leaderboard/runtimeConfig'
+import { useRuntimeIdentity, type RuntimeIdentityState } from '../../features/leaderboard/useRuntimeIdentity'
 import './ClassicMode.css'
 
 const FILTERS: PositionFilter[] = ['ALL', 'C', '1B', '2B', '3B', 'SS', 'OF', 'DH', 'SP', 'RP']
+const DEVELOPMENT_FIXTURES_ENABLED = import.meta.env.DEV && localLeaderboardFixturesAreEnabled()
+const DEVELOPMENT_RESULT_MODULE_PATH = import.meta.env.DEV
+  ? '/src/features/leaderboard/developmentResultPreview.ts'
+  : ''
+const DEVELOPMENT_JOURNEY_MODULE_PATH = import.meta.env.DEV
+  ? '/src/components/leaderboard/ResultLeaderboardJourney.tsx'
+  : ''
 
 interface ClassicModeProps {
   onHome: () => void
@@ -44,18 +61,23 @@ export default function ClassicMode({
   registerNavigationBlocker,
 }: ClassicModeProps) {
   const [readiness] = useState(() => checkProductionData())
+  const [draftRevision, setDraftRevision] = useState(0)
   const [developmentState, setDevelopmentState] = useState<DevelopmentPreviewState>(() => (
-    import.meta.env.DEV
+    DEVELOPMENT_FIXTURES_ENABLED
       ? Object.freeze({ kind: 'loading' })
       : Object.freeze({ kind: 'ready', preview: null, JourneyComponent: null })
   ))
 
   useEffect(() => {
-    if (!import.meta.env.DEV) return
+    if (!DEVELOPMENT_FIXTURES_ENABLED) return
     let active = true
     void Promise.all([
-      import('../../features/leaderboard/developmentResultPreview'),
-      import('../leaderboard/ResultLeaderboardJourney'),
+      import(/* @vite-ignore */ DEVELOPMENT_RESULT_MODULE_PATH) as Promise<
+        typeof import('../../features/leaderboard/developmentResultPreview')
+      >,
+      import(/* @vite-ignore */ DEVELOPMENT_JOURNEY_MODULE_PATH) as Promise<
+        typeof import('../leaderboard/ResultLeaderboardJourney')
+      >,
     ])
       .then(([{ getDevelopmentResultPreview }, { default: JourneyComponent }]) => {
         if (!active) return
@@ -106,17 +128,133 @@ export default function ClassicMode({
   return (
     <AppErrorBoundary onHome={onHome}>
       <ClassicDraft
+        key={draftRevision}
         onHome={onHome}
         onLeaderboard={onLeaderboard}
         onGameUpdates={onGameUpdates}
+        onNewDraft={() => setDraftRevision((revision) => revision + 1)}
         registerNavigationBlocker={registerNavigationBlocker}
       />
     </AppErrorBoundary>
   )
 }
 
-function ClassicDraft({ onHome, onLeaderboard, onGameUpdates, registerNavigationBlocker }: ClassicModeProps) {
-  const [engine] = useState(() => new DraftEngine())
+interface ClassicDraftProps extends ClassicModeProps {
+  onNewDraft: () => void
+}
+
+type DraftBootstrapState =
+  | Readonly<{ kind: 'loading' }>
+  | Readonly<{
+    kind: 'ready'
+    engine: DraftEngine
+    ticket: DraftTicket | null
+    ticketMessage: string | null
+  }>
+
+const api = new PennantApi()
+const REMOTE_DRAFT_ENABLED = runtimeFeatureIsEnabled('draftTicket')
+  && runtimeFeatureIsEnabled('submission')
+
+function engineForTicket(ticket: DraftTicket | null) {
+  if (!ticket) return new DraftEngine()
+  return new DraftEngine({
+    sessionFactory: () => Object.freeze({
+      gameplaySeed: ticket.draftSeed,
+      draftId: ticket.ticketId,
+      createdAt: new Date(ticket.issuedAt).toISOString(),
+    }),
+  })
+}
+
+function ClassicDraft(props: ClassicDraftProps) {
+  const [bootstrap, setBootstrap] = useState<DraftBootstrapState>(() => (
+    REMOTE_DRAFT_ENABLED
+      ? Object.freeze({ kind: 'loading' })
+      : Object.freeze({
+        kind: 'ready',
+        engine: engineForTicket(null),
+        ticket: null,
+        ticketMessage: 'Public submission is off. This draft will stay on this device.',
+      })
+  ))
+  const ticketRequest = useRef<Promise<Awaited<ReturnType<PennantApi['requestDraftTicket']>>> | null>(null)
+  const ticketAbort = useRef<AbortController | null>(null)
+  const ticketAbortTimer = useRef<number | null>(null)
+  const identity = useRuntimeIdentity()
+
+  useEffect(() => {
+    if (ticketAbortTimer.current !== null) {
+      window.clearTimeout(ticketAbortTimer.current)
+      ticketAbortTimer.current = null
+    }
+    if (bootstrap.kind !== 'loading') return
+    if (ticketRequest.current === null) {
+      ticketAbort.current = new AbortController()
+      ticketRequest.current = api.requestDraftTicket(ticketAbort.current.signal)
+    }
+    let active = true
+    void ticketRequest.current.then((result) => {
+      if (!active) return
+      setBootstrap(result.ok
+        ? Object.freeze({
+          kind: 'ready',
+          engine: engineForTicket(result.value),
+          ticket: result.value,
+          ticketMessage: null,
+        })
+        : Object.freeze({
+          kind: 'ready',
+          engine: engineForTicket(null),
+          ticket: null,
+          ticketMessage: playerFacingApiMessage(result.error, 'ticket'),
+        }))
+    })
+    return () => {
+      active = false
+      ticketAbortTimer.current = window.setTimeout(() => ticketAbort.current?.abort(), 0)
+    }
+  }, [bootstrap.kind])
+
+  if (bootstrap.kind === 'loading') {
+    return (
+      <main className="route-loading" aria-busy="true" aria-live="polite">
+        <p>Preparing your draft…</p>
+      </main>
+    )
+  }
+  return (
+    <ClassicDraftReady
+      {...props}
+      engine={bootstrap.engine}
+      ticket={bootstrap.ticket}
+      ticketMessage={bootstrap.ticketMessage}
+      identityState={identity.state}
+      onIdentityChanged={identity.refresh}
+    />
+  )
+}
+
+interface ClassicDraftReadyProps extends ClassicDraftProps {
+  engine: DraftEngine
+  ticket: DraftTicket | null
+  ticketMessage: string | null
+  identityState: RuntimeIdentityState
+  onIdentityChanged: () => void
+}
+
+function ClassicDraftReady({
+  onHome,
+  onLeaderboard,
+  onGameUpdates,
+  onNewDraft,
+  registerNavigationBlocker,
+  engine,
+  ticket,
+  ticketMessage,
+  identityState,
+  onIdentityChanged,
+}: ClassicDraftReadyProps) {
   const [showResults, setShowResults] = useState(false)
   const classicFocus = useRef<HTMLElement>(null)
   const draft = useDraftEngine(engine)
@@ -135,13 +273,27 @@ function ClassicDraft({ onHome, onLeaderboard, onGameUpdates, registerNavigation
   }
 
   const restartGame = () => {
-    setShowResults(false)
-    engine.restart()
+    engine.abandon()
+    onNewDraft()
   }
 
   if (draft.complete && draft.result) {
     return showResults
-      ? <ResultsScreen roster={draft.roster} result={draft.result} onPlayAgain={restartGame} onHome={onHome} onLeaderboard={onLeaderboard} onGameUpdates={onGameUpdates} registerNavigationBlocker={registerNavigationBlocker} />
+      ? <ResultsScreen
+        roster={draft.roster}
+        result={draft.result}
+        onPlayAgain={restartGame}
+        onHome={onHome}
+        onLeaderboard={onLeaderboard}
+        onGameUpdates={onGameUpdates}
+        registerNavigationBlocker={registerNavigationBlocker}
+        runtimeJourney={{
+          ticket,
+          transcript: engine.getTranscript(),
+          identityState,
+          onIdentityChanged,
+        }}
+      />
       : <SeasonSimulation result={draft.result} onContinue={() => setShowResults(true)} onRestart={restartGame} onHome={leaveGame} onGameUpdates={onGameUpdates} />
   }
 
@@ -161,8 +313,9 @@ function ClassicDraft({ onHome, onLeaderboard, onGameUpdates, registerNavigation
           interactionsDisabled={draft.interactionsDisabled}
           onTeamReroll={() => engine.rerollTeam()}
           onEraReroll={() => engine.rerollEra()}
-          menu={<GameMenu onHome={leaveGame} onRestart={() => engine.restart()} onGameUpdates={onGameUpdates} feedbackContext={{ screen: 'draft', round: draft.round, team: draft.combination.team, decade: draft.combination.decade }} />}
+          menu={<GameMenu onHome={leaveGame} onRestart={restartGame} onGameUpdates={onGameUpdates} feedbackContext={{ screen: 'draft', round: draft.round, team: draft.combination.team, decade: draft.combination.decade }} />}
         />
+        {ticketMessage && <p className="draft-service-note" role="status">{ticketMessage}</p>}
         <div className="draft-workspace">
           <div className="draft-primary">
             <TeamDecadeReveal

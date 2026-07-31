@@ -82,6 +82,16 @@ assert.equal(spawnSync(process.execPath, ['scripts/prepare-d1c4-activation.mjs']
   cwd: process.cwd(), encoding: 'utf8', env: { ...process.env },
 }).status, 0)
 
+for (const state of ['submission-enabled', 'cron-enabled']) {
+  const guarded = spawnSync(
+    process.execPath,
+    ['scripts/prepare-d1c4-activation.mjs', '--state', state, '--write'],
+    { cwd: process.cwd(), encoding: 'utf8', env: { ...process.env } },
+  )
+  assert.equal(guarded.status, 1)
+  assert.match(`${guarded.stdout}\n${guarded.stderr}`, /Schema-4 activation refused/)
+}
+
 const identities = readConfiguredPreviewIdentities()
 const validTarget = {
   previewBaseUrl: `https://develop.${identities.pagesProject}.pages.dev`,
