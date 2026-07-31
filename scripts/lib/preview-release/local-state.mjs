@@ -11,6 +11,17 @@ export const PROTECTED_CONFIGURATION_PATHS = Object.freeze([
   'workers/draft-validation/d1c4-activation-states.json',
 ])
 
+export const IMMUTABLE_GITHUB_ACTIONS_REPOSITORY_ROOTS = Object.freeze([
+  '/home/runner/work/162-0/162-0',
+])
+
+export function isImmutableAllowedRepositoryRoot(actualRoot, manifestAllowedRoots) {
+  const normalizedRoot = path.normalize(actualRoot)
+  return [...manifestAllowedRoots, ...IMMUTABLE_GITHUB_ACTIONS_REPOSITORY_ROOTS]
+    .map(path.normalize)
+    .includes(normalizedRoot)
+}
+
 function output(result) {
   return String(result?.stdout ?? '').trim()
 }
@@ -113,7 +124,7 @@ function assertDocumentationCommands(repositoryRoot, scripts) {
 export function inspectLocalState({ repositoryRoot, manifest, runner = createFixedRunner() }) {
   const runGit = (args, description) => assertResult(runner('git', args, repositoryRoot), description, `git.${args[0]}`)
   const actualRoot = path.normalize(runGit(['rev-parse', '--show-toplevel'], 'Repository identity'))
-  if (!manifest.repository.allowedRoots.map(path.normalize).includes(actualRoot)) {
+  if (!isImmutableAllowedRepositoryRoot(actualRoot, manifest.repository.allowedRoots)) {
     throw localError(`Repository root ${actualRoot} is not in the immutable allowed-root policy.`, 'repository.path')
   }
   if (actualRoot !== path.normalize(repositoryRoot)) throw localError('Command working directory is not the Git repository root.', 'repository.path')

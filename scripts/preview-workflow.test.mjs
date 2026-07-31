@@ -8,7 +8,14 @@ import { createReadOnlyCloudflareClient, inspectPreviewRemoteState } from './lib
 import { assertLocalReleaseGraph, validateRuntimeCommandGraph } from './lib/preview-release/command-safety.mjs'
 import { compilePreviewState, validateConfigurationModel } from './lib/preview-release/configuration.mjs'
 import { EXIT_CODES } from './lib/preview-release/errors.mjs'
-import { computeReleaseHashes, createFixedRunner, inspectLocalState, inspectServerDevelop } from './lib/preview-release/local-state.mjs'
+import {
+  computeReleaseHashes,
+  createFixedRunner,
+  IMMUTABLE_GITHUB_ACTIONS_REPOSITORY_ROOTS,
+  inspectLocalState,
+  inspectServerDevelop,
+  isImmutableAllowedRepositoryRoot,
+} from './lib/preview-release/local-state.mjs'
 import { loadReleaseManifest, parseReleaseManifest, validateReleaseManifest } from './lib/preview-release/manifest.mjs'
 import {
   assertSelectOnlySql,
@@ -818,6 +825,28 @@ test('local inspection accepts only the exact clean repository contract', () => 
   const local = inspectLocalState({ repositoryRoot: REPOSITORY_ROOT, manifest, runner: fake.runner })
   assert.equal(local.head, FULL_HEAD)
   assert.equal(local.branch, 'develop')
+})
+
+test('immutable allowed-root policy admits only reviewed local roots and the canonical GitHub Actions workspace', () => {
+  assert.deepEqual(IMMUTABLE_GITHUB_ACTIONS_REPOSITORY_ROOTS, [
+    '/home/runner/work/162-0/162-0',
+  ])
+  for (const reviewedRoot of manifest.repository.allowedRoots) {
+    assert.equal(isImmutableAllowedRepositoryRoot(reviewedRoot, manifest.repository.allowedRoots), true)
+  }
+  assert.equal(
+    isImmutableAllowedRepositoryRoot('/home/runner/work/162-0/162-0', manifest.repository.allowedRoots),
+    true,
+  )
+  for (const unexpectedRoot of [
+    '/home/runner/work/162-0',
+    '/home/runner/work/162-0/162-0-copy',
+    '/home/runner/work/other/other',
+    '/home/runner/work/162-0/162-0/subdirectory',
+    '/tmp/162-0',
+  ]) {
+    assert.equal(isImmutableAllowedRepositoryRoot(unexpectedRoot, manifest.repository.allowedRoots), false)
+  }
 })
 
 for (const [description, command, args, stdout, pattern] of [
