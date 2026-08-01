@@ -14,9 +14,9 @@ function gate(feature, variable, compatibilityCeiling = null) {
 
 export const SCHEMA4_RUNTIME_GATE_REGISTRY = Object.freeze({
   frontendBuildTime: Object.freeze({
-    protectedSource: null,
+    protectedSource: 'src/config/protectedCapabilities.mjs',
     effectiveState: 'all-disabled',
-    integrationStatus: 'deferred-to-3D-2',
+    integrationStatus: 'protected-local-source',
   }),
   capabilities: Object.freeze({
     leaderboardRead: Object.freeze({

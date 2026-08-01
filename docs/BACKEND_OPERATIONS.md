@@ -212,16 +212,18 @@ historical named presets with an exact versioned object for `leaderboardRead`,
 The original D1C.4 record remains unchanged in
 [D1C.4 preview activation preparation](D1C4_ACTIVATION.md).
 
-The protected model is a local validation foundation. Enabled planning and
-execution remain unavailable until Milestone 3D-2. It performs no remote
+The protected model is a local validation foundation. Milestone 3D-2A adds
+strict local-only release-inspection contracts and an `UNKNOWN` projection,
+but enabled planning and execution remain unavailable. It performs no remote
 migration, deployment, endpoint request, feature activation, Cron activation,
 secret operation, binding change, route change, or Production change.
 
 Milestone 3C-1 added an independent recovery gate and a local schema-4 readiness
 guard. See
 [Milestone 3C-1 local runtime integration](MILESTONE_3C1_LOCAL_RUNTIME.md).
-Enabled Preview planning continues to refuse until its capability-oriented
-Milestone 3D-2 conversion is separately reviewed.
+Enabled Preview planning continues to refuse. Authenticated read-only Preview
+inspection is separately scoped to 3D-2B, and non-executable package, planning,
+and reporting integration is separately scoped to 3D-2C.
 
 Milestone 3C-3 defines the canonical `leaderboardRead`, `identityClaim`,
 `identityStatus`, `identityRename`, `draftSubmission`, `identityRecovery`, and
@@ -269,8 +271,9 @@ Future activation requires a separate reviewed migration and deployment plan,
 a Worker-only identity signing secret, an environment-specific leaderboard
 cursor signing secret, explicit Pages and Worker flags, preview smoke evidence,
 privacy and moderation review, and separate authorization. The 3D-1 protected
-model cannot produce enabled release material; capability-oriented release
-planning is deferred to Milestone 3D-2.
+model cannot produce enabled release material. The 3D-2A local projection is
+also non-executable and cannot prove remote currentness; remote inspection and
+release-artifact integration remain separate 3D-2B and 3D-2C work.
 
 ## Local migration workflow
 

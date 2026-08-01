@@ -1,12 +1,14 @@
 import { asWorkflowError, refusalError } from './errors.mjs'
 import { immutablePlain } from './canonical.mjs'
 import { safeErrorMessage } from './redaction.mjs'
+import { assertNoReleaseInspectionArtifactForLegacyExecution } from '../release-inspection/markers.mjs'
 
 export function check(id, status, summary, classification = null) {
   return immutablePlain({ id, status, summary, classification })
 }
 
 export function checkReport(input) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(input)
   const { mode, checks, noRemoteMutation = true } = immutablePlain(input)
   return immutablePlain({
     schemaVersion: 1,
@@ -19,6 +21,7 @@ export function checkReport(input) {
 }
 
 export function failureReport(command, error, checks = [], sensitiveValues = []) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(checks)
   const safe = asWorkflowError(error)
   return immutablePlain({
     schemaVersion: 1,
@@ -36,6 +39,7 @@ export function failureReport(command, error, checks = [], sensitiveValues = [])
 }
 
 export function renderHumanCheck(report, color = true) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(report)
   const safeReport = immutablePlain(report)
   const colors = color ? {
     PASS: '\u001B[32m', FAIL: '\u001B[31m', REFUSED: '\u001B[31m', AMBIGUOUS: '\u001B[33m', 'NOT CHECKED': '\u001B[90m', 'NO-OP': '\u001B[36m',
@@ -49,6 +53,7 @@ export function renderHumanCheck(report, color = true) {
 }
 
 export function renderHumanPlan(plan, color = true) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(plan)
   const safePlan = immutablePlain(plan)
   const label = safePlan.outcome === 'NO-OP' ? 'NO-OP' : 'PASS'
   const prefix = color ? (label === 'NO-OP' ? '\u001B[36m' : '\u001B[32m') : ''
@@ -74,6 +79,7 @@ export function renderHumanPlan(plan, color = true) {
 }
 
 export function validationReport(checks) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(checks)
   const safeChecks = immutablePlain(checks)
   return immutablePlain({
     schemaVersion: 1,
@@ -84,6 +90,7 @@ export function validationReport(checks) {
 }
 
 export function rollbackGuidance(input) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(input)
   const {
     targetState,
     observedState,
@@ -128,6 +135,7 @@ export function executionReport({
   error = null,
   sensitiveValues = [],
 }) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(releasePackage)
   const completedStageIds = stageResults.filter(({ status: stageStatus }) => stageStatus === 'PASS').map(({ id }) => id)
   const attemptedStageIds = stageResults.filter(({ status: stageStatus }) => ['PASS', 'FAIL'].includes(stageStatus)).map(({ id }) => id)
   const failedStageId = stageResults.find(({ status: stageStatus }) => stageStatus === 'FAIL')?.id ?? null
@@ -168,6 +176,7 @@ export function executionReport({
 }
 
 export function renderHumanExecution(report, color = true) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(report)
   const safeReport = immutablePlain(report)
   const colorCode = color ? (safeReport.status === 'PASS' ? '\u001B[32m' : '\u001B[31m') : ''
   const reset = color ? '\u001B[0m' : ''

@@ -3,8 +3,8 @@ import {
 } from '../../../shared/schema4-capabilities.mjs'
 import {
   immutableRuntimeConsumerRegistration,
-  runtimeConsumerFeatureState,
 } from '../../../shared/schema4-runtime-consumers.mjs'
+import { protectedFrontendCapabilityState } from '../../config/protectedCapabilities.mjs'
 import registrationData from './runtimeConfig.registrations.json'
 
 export type LeaderboardRuntimeFeature =
@@ -30,10 +30,11 @@ function exactFeatureState(value: unknown): RuntimeFeatureState {
 }
 
 function protectedFrontendFeatureState(capability: Schema4Capability): RuntimeFeatureState {
-  return runtimeConsumerFeatureState(
-    import.meta.env,
-    FRONTEND_RUNTIME_CONSUMER_REGISTRATIONS[capability],
-  )
+  const registration = FRONTEND_RUNTIME_CONSUMER_REGISTRATIONS[capability]
+  return registration.consumerStatus === 'active'
+    && registration.capability === capability
+    ? protectedFrontendCapabilityState(capability)
+    : 'disabled'
 }
 
 export const LEADERBOARD_RUNTIME_FEATURES = Object.freeze({

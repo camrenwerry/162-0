@@ -30,24 +30,18 @@ export default defineConfig({
       env: inheritedEnvironment,
     },
     {
-      command: 'npm run dev -- --host 127.0.0.1 --port 4174',
+      command: 'VITE_DRAFT_TICKET_MODE=enabled npm run dev -- --host 127.0.0.1 --port 4174',
       url: 'http://127.0.0.1:4174',
       reuseExistingServer: false,
       timeout: 120_000,
-      env: {
-        ...inheritedEnvironment,
-        VITE_DRAFT_TICKET_MODE: 'enabled',
-      },
+      env: inheritedEnvironment,
     },
     {
-      command: 'npm run dev -- --host 127.0.0.1 --port 4176',
+      command: 'VITE_DRAFT_TICKET_MODE=disabled npm run dev -- --host 127.0.0.1 --port 4176',
       url: 'http://127.0.0.1:4176',
       reuseExistingServer: false,
       timeout: 120_000,
-      env: {
-        ...inheritedEnvironment,
-        VITE_DRAFT_TICKET_MODE: 'enabled',
-      },
+      env: inheritedEnvironment,
     },
   ],
 })

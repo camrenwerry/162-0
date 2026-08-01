@@ -94,6 +94,12 @@ It contains no protected `VITE_*` capability variables. A future frontend
 activation requires separately reviewed 3D-2 build-time integration and
 protected evidence. Provider build settings are not established here.
 
+This section records the 3D-1 checkpoint. Milestone 3D-2A subsequently added
+`src/config/protectedCapabilities.mjs` as a protected local source containing
+the exact seven disabled frontend states. It does not establish provider build
+settings or activation authority. See
+[Milestone 3D-2A canonical contracts and local projection](MILESTONE_3D2A_RELEASE_INSPECTION_CONTRACTS.md).
+
 ## Protected checked-in state
 
 The applicable Pages Functions and private-Worker capability variables are
@@ -151,9 +157,11 @@ migration creation or application, secret provisioning, Service Binding
 changes, routes, custom domains, Cron enablement, Production Worker D1, and any
 capability activation.
 
-Milestone 3D-2 owns separately reviewed capability-oriented planning, remote
-read-only evidence, exact capability diffing, protected frontend build-time
-integration, and activation sequencing. Milestone 3D-3 or later owns any
+Milestone 3D-2A subsequently added local-only canonical contracts, protected
+frontend integration, and an `UNKNOWN`, non-executable local projection.
+Milestone 3D-2B owns separately reviewed remote read-only Preview inspection,
+and 3D-2C owns non-executable package, planning, diff, and reporting
+integration. Milestone 3D-3 or later owns any
 authorized deployment, migration application, secret provisioning, smoke
 execution, rollback execution, or capability activation. Production requires
 its own independent authorization.

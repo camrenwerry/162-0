@@ -92,8 +92,47 @@ test('@ci @release production ignores development activation and disabled leader
   expect(apiRequests).toEqual([])
 })
 
+test('@ci @release the production service worker cannot preserve stale protected activation state', async ({ browser }) => {
+  test.setTimeout(90_000)
+  const context = await browser.newContext({
+    baseURL: 'http://127.0.0.1:4173',
+    reducedMotion: 'reduce',
+    serviceWorkers: 'allow',
+  })
+  await context.addInitScript(() => {
+    for (const name of [
+      'leaderboardRead',
+      'identityClaim',
+      'identityStatus',
+      'identityRename',
+      'draftSubmission',
+      'identityRecovery',
+      'cleanupCron',
+    ]) localStorage.setItem(`pennant-pursuit:protected:${name}`, 'enabled')
+  })
+  const controlledPage = await context.newPage()
+  const apiRequests: string[] = []
+  controlledPage.on('request', (request) => {
+    if (new URL(request.url()).pathname.startsWith('/api/')) apiRequests.push(request.url())
+  })
+  try {
+    await controlledPage.goto('/?leaderboardRead=enabled&draftSubmission=enabled')
+    await controlledPage.evaluate(async () => { await navigator.serviceWorker.ready })
+    await controlledPage.reload()
+    expect(await controlledPage.evaluate(() => navigator.serviceWorker.controller !== null)).toBe(true)
+
+    await controlledPage.goto('/leaderboard?identityClaim=enabled&identityRecovery=enabled')
+    await expect(controlledPage.getByRole('heading', { name: 'Leaderboards aren’t open yet' })).toBeVisible()
+    await expect(controlledPage.getByRole('button', { name: 'Claim Display Name' })).toHaveCount(0)
+    await expect(controlledPage.getByText('Recover an identity')).toHaveCount(0)
+    expect(apiRequests).toEqual([])
+  } finally {
+    await context.close()
+  }
+})
+
 test('deferred partial claim/submission activation allows anonymous submission only when identity is genuinely missing', async ({ page }) => {
-  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
+  test.skip(true, 'Enabled frontend states remain prohibited by the 3D-2A all-disabled policy.')
   let statusRequests = 0
   let submissionBody: Record<string, unknown> | null = null
   page.on('request', (request) => {
@@ -119,7 +158,7 @@ test('deferred partial claim/submission activation allows anonymous submission o
 })
 
 test('deferred corrupt, outdated, rejected, and temporarily unverifiable continuity block anonymous replacement', async ({ browser }) => {
-  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
+  test.skip(true, 'Enabled frontend states remain prohibited by the 3D-2A all-disabled policy.')
   test.setTimeout(180_000)
   const scenarios = [
     {
@@ -211,19 +250,32 @@ test('deferred corrupt, outdated, rejected, and temporarily unverifiable continu
 
 test('@ci @release ticket acquisition succeeds once and fails into an honest local draft', async ({ page }) => {
   let ticketCalls = 0
+  let submissionCalls = 0
   await page.route('**/api/v1/draft-ticket', async (route) => {
     ticketCalls += 1
     await route.fulfill({ json: ticketResponse() })
+  })
+  await page.route('**/api/v1/submit-draft', async (route) => {
+    submissionCalls += 1
+    await route.fulfill({ status: 201, json: submissionResponse() })
   })
   await page.goto('http://127.0.0.1:4176/draft')
   await expect(page.getByRole('heading', { name: 'Make your pick' })).toBeVisible()
   await expect(page.getByText('Public submission is off. This draft will stay on this device.')).toBeVisible()
   expect(ticketCalls).toBe(0)
 
-  await page.goto('/draft')
+  await page.goto('http://127.0.0.1:4174/draft')
+  await expect(page).toHaveURL('http://127.0.0.1:4174/draft')
   await expect(page.getByRole('heading', { name: 'Make your pick' })).toBeVisible()
   expect(ticketCalls).toBe(1)
   expect(page.url()).not.toContain('TTTT')
+  await completeClassicDraft(page)
+  await expect(page.getByRole('heading', { name: 'Keep chasing your best season' })).toBeVisible()
+  await expect(page.getByText(
+    'Public submission is off. This projected season remains available to share and replay on this device.',
+  )).toBeVisible()
+  expect(submissionCalls).toBe(0)
+  await expect(page.getByRole('heading', { name: 'Claim your place on the board' })).toHaveCount(0)
 
   await page.unroute('**/api/v1/draft-ticket')
   await page.route('**/api/v1/draft-ticket', (route) => route.fulfill({
@@ -246,7 +298,7 @@ test('@ci @release ticket acquisition succeeds once and fails into an honest loc
 })
 
 test('deferred an accepted submission with a lost response uses one exact retry, then claims identity and removes the one-time code', async ({ page }) => {
-  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
+  test.skip(true, 'Enabled frontend states remain prohibited by the 3D-2A all-disabled policy.')
   const consoleText: string[] = []
   const requestUrls: string[] = []
   page.on('console', (message) => consoleText.push(message.text()))
@@ -387,7 +439,7 @@ test('deferred an accepted submission with a lost response uses one exact retry,
 })
 
 test('conflicting exact submission retry remains local and cannot double-submit', async ({ page }) => {
-  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
+  test.skip(true, 'Enabled frontend states remain prohibited by the 3D-2A all-disabled policy.')
   await page.route('**/api/v1/draft-ticket', (route) => route.fulfill({ json: ticketResponse() }))
   let submissions = 0
   await page.route('**/api/v1/submit-draft', async (route) => {
@@ -416,7 +468,7 @@ test('conflicting exact submission retry remains local and cannot double-submit'
 })
 
 test('submission offline, timeout, and rate-limit failures restore result controls without automatic mutation retries', async ({ page, context }) => {
-  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
+  test.skip(true, 'Enabled frontend states remain prohibited by the 3D-2A all-disabled policy.')
   test.setTimeout(150_000)
   await page.route('**/api/v1/draft-ticket', (route) => route.fulfill({ json: ticketResponse() }))
   let mode: 'offline' | 'timeout' | 'rate-limit' = 'offline'
@@ -470,7 +522,7 @@ test('submission offline, timeout, and rate-limit failures restore result contro
 })
 
 test('identity storage readback failure keeps one-time recovery material visible and reports the device as unready', async ({ page }) => {
-  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
+  test.skip(true, 'Enabled frontend states remain prohibited by the 3D-2A all-disabled policy.')
   await page.addInitScript((identityKey) => {
     const setItem = Storage.prototype.setItem
     Storage.prototype.setItem = function safeTestSetItem(key: string, value: string) {
@@ -491,7 +543,7 @@ test('identity storage readback failure keeps one-time recovery material visible
 })
 
 test('identity storage write exception preserves one-time recovery and restores usable controls without a partial record', async ({ page }) => {
-  test.skip(true, 'Deferred to Milestone 3D-2 protected frontend build-time integration.')
+  test.skip(true, 'Enabled frontend states remain prohibited by the 3D-2A all-disabled policy.')
   await page.addInitScript((identityKey) => {
     const original = Storage.prototype.setItem
     const restoreKey = '__restorePennantIdentityStorageWrite'

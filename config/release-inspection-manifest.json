@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "pennant-pursuit-release-inspection-manifest",
+  "toolContractVersion": "release-inspection-local-only-v1",
+  "policy": {
+    "capabilityTarget": "all-disabled",
+    "currentnessWithoutIndependentProof": "unknown",
+    "executionAuthorization": "prohibited",
+    "filesystemWritesByDefault": "prohibited",
+    "previewRemoteEvidence": "unavailable",
+    "productionRemoteEvidence": "excluded",
+    "remoteInspection": "prohibited-in-3D-2A"
+  },
+  "sources": {
+    "authority": "workers/draft-validation/d1c4-activation-states.json",
+    "frontendCapabilities": "src/config/protectedCapabilities.mjs",
+    "legacyResourceIdentity": "config/preview-release.json",
+    "migrationsDirectory": "migrations",
+    "pagesConfiguration": "wrangler.toml",
+    "readiness": "config/preview-schema4-readiness.json",
+    "redirects": "public/_redirects",
+    "registry": "shared/schema4-capabilities.mjs",
+    "routes": "public/_routes.json",
+    "workerConfiguration": "workers/draft-validation/wrangler.toml"
+  },
+  "localTopologyPolicy": {
+    "previewWorkerPublicExposure": "forbidden",
+    "productionWorkerD1": "forbidden",
+    "schedules": "exact-empty"
+  },
+  "providerBuildPolicy": {
+    "pagesBuildOutputDirectory": "dist",
+    "protectedFrontendSource": "src/config/protectedCapabilities.mjs",
+    "remoteProviderSettings": "unavailable"
+  },
+  "secretPolicies": {
+    "preview": {
+      "frontend": {
+        "DRAFT_TICKET_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_CURSOR_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_IDENTITY_SIGNING_KEY": "not-applicable"
+      },
+      "pages": {
+        "DRAFT_TICKET_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_CURSOR_SIGNING_KEY": "forbidden",
+        "LEADERBOARD_IDENTITY_SIGNING_KEY": "not-applicable"
+      },
+      "worker": {
+        "DRAFT_TICKET_SIGNING_KEY": "required",
+        "LEADERBOARD_CURSOR_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_IDENTITY_SIGNING_KEY": "forbidden"
+      },
+      "schedule": {
+        "DRAFT_TICKET_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_CURSOR_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_IDENTITY_SIGNING_KEY": "not-applicable"
+      }
+    },
+    "production": {
+      "frontend": {
+        "DRAFT_TICKET_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_CURSOR_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_IDENTITY_SIGNING_KEY": "not-applicable"
+      },
+      "pages": {
+        "DRAFT_TICKET_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_CURSOR_SIGNING_KEY": "forbidden",
+        "LEADERBOARD_IDENTITY_SIGNING_KEY": "not-applicable"
+      },
+      "worker": {
+        "DRAFT_TICKET_SIGNING_KEY": "forbidden",
+        "LEADERBOARD_CURSOR_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_IDENTITY_SIGNING_KEY": "forbidden"
+      },
+      "schedule": {
+        "DRAFT_TICKET_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_CURSOR_SIGNING_KEY": "not-applicable",
+        "LEADERBOARD_IDENTITY_SIGNING_KEY": "not-applicable"
+      }
+    }
+  }
+}

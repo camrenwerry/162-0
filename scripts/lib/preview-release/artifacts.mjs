@@ -19,6 +19,7 @@ import {
   assertExecutionContract,
 } from './execution-contract.mjs'
 import { assertCurrentDisabledReleasePlan, derivePlanId } from './plan.mjs'
+import { assertNoReleaseInspectionArtifactForLegacyExecution } from '../release-inspection/markers.mjs'
 
 export const RELEASE_PACKAGE_SCHEMA_VERSION = 2
 export const RELEASE_PACKAGE_KIND = 'pennant-pursuit-preview-release-package'
@@ -112,6 +113,7 @@ export function validateReleasePackage(packageInput, {
   expectedExecutionContract,
   requireUnexpired = false,
 } = {}) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(packageInput)
   const releasePackage = immutablePlain(packageInput)
   if (canonicalJson(Object.keys(releasePackage).sort()) !== canonicalJson([
     'approval', 'artifactHash', 'bindingHash', 'createdAt', 'evidence', 'expirationPolicy',
@@ -173,6 +175,7 @@ export function validateReleasePackage(packageInput, {
 }
 
 export function serializeReleaseArtifact(value) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(value)
   const snapshot = immutablePlain(value)
   const serializable = snapshot.kind === RELEASE_PACKAGE_KIND || Object.hasOwn(snapshot, 'plan')
     ? validateReleasePackage(snapshot)

@@ -366,12 +366,12 @@ test('only the checked-in disabled capability configuration compiles to Preview-
     assert.doesNotMatch(`${compiled.pagesConfig}\n${compiled.workerConfig}`, /pennant-pursuit-validation-production|4b821c17-b88b-462d-a2ed-c6a2113cc362|1620402[12]/)
   }
   for (const target of ['submission-enabled', 'cron-enabled']) {
-    assert.throws(() => compilePreviewState(REPOSITORY_ROOT, manifest, target), /disabled-only until Milestone 3D-2/)
+    assert.throws(() => compilePreviewState(REPOSITORY_ROOT, manifest, target), /remains disabled-only/)
   }
 })
 
 test('configuration compiler rejects unknown state and Production identity injection', () => {
-  assert.throws(() => compilePreviewState(REPOSITORY_ROOT, manifest, 'unknown'), /disabled-only until Milestone 3D-2/)
+  assert.throws(() => compilePreviewState(REPOSITORY_ROOT, manifest, 'unknown'), /remains disabled-only/)
   const pages = readFileSync(path.join(REPOSITORY_ROOT, 'wrangler.toml'), 'utf8').replace(
     'service = "pennant-pursuit-validation-preview"',
     'service = "pennant-pursuit-validation-preview"\n# pennant-pursuit-validation-production',
@@ -921,7 +921,7 @@ test('legacy enabled remote inventories and enabled targets fail closed pending 
   )
   assert.throws(
     () => compilePreviewState(REPOSITORY_ROOT, resolvedManifest(), 'cron-enabled'),
-    /disabled-only until Milestone 3D-2/,
+    /remains disabled-only/,
   )
 })
 

@@ -1,7 +1,9 @@
 # Preview release workflow
 
-Milestone 3D-1 leaves the Preview release workflow disabled-only while adding
-the protected schema-4 capability-model foundation. It does not authorize
+Milestone 3D-1 left the legacy Preview release workflow disabled-only while
+adding the protected schema-4 capability-model foundation. Milestone 3D-2A
+adds strict local release-inspection contracts and projection without making
+that legacy workflow capability-oriented or executable. Neither milestone authorizes
 remote inspection, release execution, deployment, migration, smoke execution,
 secret provisioning, or capability activation.
 
@@ -78,9 +80,11 @@ contract can be validated without network access.
 The protected configuration inventory is exact and duplicate-free:
 
 - `config/preview-release.json`;
+- `config/release-inspection-manifest.json`;
 - `config/preview-schema4-readiness.json`;
 - `shared/schema4-capabilities.mjs`;
 - `shared/schema4-runtime-consumers.mjs`;
+- `src/config/protectedCapabilities.mjs`;
 - `src/features/leaderboard/runtimeConfig.registrations.json`;
 - `functions/lib/leaderboard-mode.registrations.json`;
 - `functions/lib/leaderboard-identity-mode.registrations.json`;
@@ -102,10 +106,14 @@ includes disabled claim, status, rename, submission, recovery, cleanup, and the
 legacy identity ceiling. Missing, extra, duplicate, malformed, or enabled
 protected values fail validation.
 
-Milestone 3D-1 has no protected frontend build-time source. Its protected
-frontend gates are deliberately unconfigured and all disabled. Any future
-frontend activation needs separately reviewed 3D-2 build-time integration and
-evidence.
+Milestone 3D-1 historically had no protected frontend build-time source.
+Milestone 3D-2A now establishes `src/config/protectedCapabilities.mjs` as the
+single protected static-bundle source with exactly seven literal disabled
+states. Runtime frontend gates consume it instead of ambient `VITE_*`, process,
+query, storage, or global values. The structural validator understands enabled
+states only to reject them under the checked-in all-disabled policy. Any future
+frontend activation still requires a separate protected change and reviewed
+remote evidence.
 
 ## Environment isolation
 
@@ -118,12 +126,38 @@ Production stays independent from Preview:
 - no secret value or placeholder is stored in source;
 - no environment can consume authority reviewed for the other environment.
 
+## Local release-inspection projection
+
+Milestone 3D-2A provides an environment-neutral, stdout-only Node entry point:
+
+```bash
+node scripts/release-inspection-local.mjs
+```
+
+It validates exact Preview and Production capability matrices, binding and
+secret policies, authority context, protected source hashes, migration and
+routing provenance, and explicit remote-observation placeholders. It performs
+no network request and no filesystem write. Preview remote evidence is
+unavailable, Production inspection is excluded, remote currentness is unknown,
+and execution authorization is prohibited. Platform prerequisites such as
+draft-ticket validation remain explicit and outside the seven capabilities.
+The legacy planner, package, reports, and executor reject these artifacts.
+
+`npm run release-inspection:local` is a convenience wrapper for the same entry
+point. The program itself makes no filesystem write, including no repository
+artifact or evidence write. That guarantee does not claim that npm performs
+literally zero package-manager filesystem calls: npm may inspect or maintain
+its own cache and logs outside the program. Those wrapper operations are not
+release-inspection evidence and do not weaken the Node entry point's no-write
+boundary.
+
 ## Deferred release work
 
-Milestone 3D-2 owns capability-oriented release planning and evidence based on
-exact capability objects. That work
-includes remote read-only inspection, immutable evidence, exact capability
-diffing, deployment readiness, and activation sequencing.
+Milestone 3D-2B owns separately authorized authenticated read-only Preview
+inspection after complete identity grounding and least-privilege review.
+Milestone 3D-2C owns non-executable package, planning, diff, evidence-freshness,
+rollback-contract, and reporting integration. Neither may infer `NO-OP` from
+local intent; independent complete current remote evidence is required.
 
 Milestone 3D-3 or later separately owns any authorized migration application,
 secret provisioning, deployment, smoke execution, rollback execution, and

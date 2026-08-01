@@ -9,9 +9,12 @@ import { validateCheckedInProtectedCapabilityFoundation } from './prepare-d1c4-a
 
 const protectedFiles = Object.freeze({
   'config/preview-release.json': '6f2fa50826559fb031292229d010b3c44ff0007f977738f34e8a60646209b8de',
-  'config/preview-schema4-readiness.json': '03cdc5991e993f9266447cce83a8d13d0f61e920e2b9dad4e3581ad739ea2171',
-  'shared/schema4-capabilities.mjs': '71978a8eb024b976aeeb5a9737b7f5815eff4f1ca3201b5fe417ba2a402e3943',
+  'config/release-inspection-manifest.json': '4aea6b112840e6879a57923fdd98d58064068b8e280ff69662a3122cb26e1051',
+  'config/preview-schema4-readiness.json': '7a738fd754c8581f2cad6e9cc1c1a5358256ec3f65b47e7120b24f9ec43b0ae4',
+  'scripts/lib/preview-release/wrangler-topology.mjs': 'ba4447b30bd8ae9568830e8a78fde041d62c5bc4ce887df9bf38877a5ad97e2a',
+  'shared/schema4-capabilities.mjs': 'cee0c6ab8f62a67ff51b6da7215dbf5bfcf07f70db01a783217258c9b463ce97',
   'shared/schema4-runtime-consumers.mjs': 'cef6af9bace31a86c3e045a3cce19ca32e55ed40c017bd4f1650111858e7d5d6',
+  'src/config/protectedCapabilities.mjs': 'b49db6f6d246ffb1d984fe856d57554b5ee1ea30c144bd62a5dada0e63781d0e',
   'src/features/leaderboard/runtimeConfig.registrations.json': '06f802ac61aa55315c8ee072cbffb9ff730c3496149c9db0f537877c5b3f0e5d',
   'functions/lib/leaderboard-mode.registrations.json': '444d479401eb9f0f4148289a6b3459d67312ff05f1530011dd2dc92bf64d462d',
   'functions/lib/leaderboard-identity-mode.registrations.json': '20ce2b653850298090faaa564eb0d5c24a44eae0452a27f94d65b89c8ca757c8',
@@ -38,9 +41,12 @@ const worker = readFileSync('workers/draft-validation/wrangler.toml', 'utf8')
 assert.equal(new Set(PROTECTED_CONFIGURATION_PATHS).size, PROTECTED_CONFIGURATION_PATHS.length)
 assert.deepEqual(PROTECTED_CONFIGURATION_PATHS, [
     'config/preview-release.json',
+    'config/release-inspection-manifest.json',
     'config/preview-schema4-readiness.json',
+    'scripts/lib/preview-release/wrangler-topology.mjs',
     'shared/schema4-capabilities.mjs',
     'shared/schema4-runtime-consumers.mjs',
+    'src/config/protectedCapabilities.mjs',
     'src/features/leaderboard/runtimeConfig.registrations.json',
     'functions/lib/leaderboard-mode.registrations.json',
     'functions/lib/leaderboard-identity-mode.registrations.json',

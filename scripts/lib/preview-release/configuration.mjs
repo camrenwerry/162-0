@@ -63,7 +63,7 @@ function assertNoProductionTargets(manifest, pagesConfig, workerConfig) {
 
 export function compilePreviewState(repositoryRoot, manifest, stateName, { sources } = {}) {
   if (manifest.activation.releaseTooling !== 'disabled-only' || stateName !== 'disabled') {
-    throw localError('Preview release configuration is disabled-only until Milestone 3D-2.', 'configuration.activation-state')
+    throw localError('Legacy Preview release configuration remains disabled-only; release-inspection evidence grants no activation authority.', 'configuration.activation-state')
   }
   const pagesSource = sources?.pages ?? readBoundedUtf8File(
     path.join(repositoryRoot, manifest.configuration.pages),

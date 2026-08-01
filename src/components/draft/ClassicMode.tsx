@@ -153,8 +153,7 @@ type DraftBootstrapState =
   }>
 
 const api = new PennantApi()
-const REMOTE_DRAFT_ENABLED = runtimeFeatureIsEnabled('draftTicket')
-  && runtimeFeatureIsEnabled('submission')
+const DRAFT_TICKET_ENABLED = runtimeFeatureIsEnabled('draftTicket')
 
 function engineForTicket(ticket: DraftTicket | null) {
   if (!ticket) return new DraftEngine()
@@ -169,7 +168,7 @@ function engineForTicket(ticket: DraftTicket | null) {
 
 function ClassicDraft(props: ClassicDraftProps) {
   const [bootstrap, setBootstrap] = useState<DraftBootstrapState>(() => (
-    REMOTE_DRAFT_ENABLED
+    DRAFT_TICKET_ENABLED
       ? Object.freeze({ kind: 'loading' })
       : Object.freeze({
         kind: 'ready',

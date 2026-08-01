@@ -376,7 +376,7 @@ test('every direct creation and validation boundary rejects enabled, unknown, le
     mutate(candidate)
     assert.throws(
       () => createReleasePackage(reidentifyPlan(candidate), { nowMs: CREATED_MS }),
-      /disabled-only|manifest|schema|exact current|hidden enabled|binding/i,
+      /disabled-only|manifest|schema|exact current|hidden enabled|binding|release-inspection artifacts/i,
     )
   }
 
@@ -436,19 +436,17 @@ test('every direct creation and validation boundary rejects enabled, unknown, le
   assert.equal(spawns, 0)
   assert.match(directResult.report.error.message, /disabled-only|schema|target/i)
 
-  const malformedResult = await executeReleasePackage(
-    { schemaVersion: 1 },
-    {
+  await assert.rejects(
+    () => executeReleasePackage({ schemaVersion: 1 }, {
       repositoryRoot: REPOSITORY_ROOT,
       environment: {},
       approve: async () => { approvals += 1; return '' },
       spawn: () => { spawns += 1; return { status: 0 } },
       runQualityStages: false,
       now: () => CREATED_MS + 1,
-    },
+    }),
+    /release-inspection artifacts.*prohibited/i,
   )
-  assert.notEqual(malformedResult.report.status, 'PASS')
-  assert.equal(malformedResult.report.planId, 'unvalidated')
   assert.equal(approvals, 0)
   assert.equal(spawns, 0)
 })
@@ -721,7 +719,7 @@ test('successful disabled execution uses only fixed commands, isolated child env
 
 test('enabled execution cannot be compiled into a release package', () => {
   for (const targetState of ['submission-enabled', 'cron-enabled']) {
-    assert.throws(() => planFor(targetState), /disabled-only until Milestone 3D-2/)
+    assert.throws(() => planFor(targetState), /remains disabled-only/)
   }
 })
 

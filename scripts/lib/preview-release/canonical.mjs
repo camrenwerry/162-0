@@ -155,10 +155,20 @@ export function parseStrictJson(source, {
   label = 'JSON input',
   error = (message) => new TypeError(message),
   limits = STRICT_JSON_LIMITS.releaseManifest,
+  exactIntegerTokens = {},
 } = {}) {
   if (typeof source !== 'string') throw error(`${label} must be text.`)
   if (!limits || !validLimit(limits.maxBytes) || !validLimit(limits.maxDepth) || !validLimit(limits.maxNodes)) {
     throw error(`${label} parser limits are invalid.`)
+  }
+  if (!exactIntegerTokens || typeof exactIntegerTokens !== 'object' || Array.isArray(exactIntegerTokens)
+    || Object.getPrototypeOf(exactIntegerTokens) !== Object.prototype) {
+    throw error(`${label} exact-integer token policy is invalid.`)
+  }
+  for (const [field, token] of Object.entries(exactIntegerTokens)) {
+    if (DANGEROUS_KEYS.has(field) || typeof token !== 'string' || !/^(?:0|[1-9]\d*)$/.test(token)) {
+      throw error(`${label} exact-integer token policy is invalid.`)
+    }
   }
   if (source.startsWith('\uFEFF')) throw error(`${label} must not contain a UTF-8 BOM.`)
   if (source.includes('\0')) throw error(`${label} must not contain NUL.`)
@@ -198,10 +208,18 @@ export function parseStrictJson(source, {
     fail(`unterminated string at character ${start}.`)
   }
 
-  const value = (depth) => {
+  const value = (depth, exactIntegerToken = null) => {
     nodes += 1
     if (nodes > limits.maxNodes) fail(`structural node count exceeds ${limits.maxNodes}.`)
     whitespace()
+    if (exactIntegerToken !== null) {
+      const exactNumber = source.slice(offset).match(/^-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/)
+      if (!exactNumber || exactNumber[0] !== exactIntegerToken) {
+        fail(`field requires exact integer token ${exactIntegerToken} at character ${offset}.`)
+      }
+      offset += exactNumber[0].length
+      return Number(exactIntegerToken)
+    }
     const character = source[offset]
     if (character === '"') return string()
     if (character === '{') return object(depth)
@@ -263,7 +281,13 @@ export function parseStrictJson(source, {
       if (source[offset] !== ':') fail(`expected ':' after object key at character ${offset}.`)
       offset += 1
       Object.defineProperty(result, key, {
-        value: value(depth + 1), enumerable: true, configurable: true, writable: true,
+        value: value(
+          depth + 1,
+          Object.hasOwn(exactIntegerTokens, key) ? exactIntegerTokens[key] : null,
+        ),
+        enumerable: true,
+        configurable: true,
+        writable: true,
       })
       whitespace()
       if (source[offset] === '}') {

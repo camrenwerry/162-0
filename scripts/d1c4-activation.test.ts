@@ -88,6 +88,65 @@ for (const candidate of [
   { ...inputs, workerConfig: `${inputs.workerConfig}\n[[env.production.d1_databases]]\nbinding = "DB"\n` },
 ]) assert.throws(() => validateProtectedCapabilityFoundation(candidate))
 
+const workerRootSetting = (setting: string) => inputs.workerConfig.replace(
+  'preview_urls = false\n\n[vars]',
+  `preview_urls = false\n${setting}\n\n[vars]`,
+)
+const unsafeTopologyCandidates = [
+  { ...inputs, workerConfig: workerRootSetting('routes = []') },
+  {
+    ...inputs,
+    workerConfig: workerRootSetting(
+      'routes = [{ pattern = "validation.example.invalid/*", custom_domain = true }]',
+    ),
+  },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[[kv_namespaces]]\nbinding = "CACHE"\nid = "fixture"\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[[r2_buckets]]\nbinding = "BUCKET"\nbucket_name = "fixture"\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[durable_objects]\nbindings = []\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[queues]\nproducers = []\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[[analytics_engine_datasets]]\nbinding = "ANALYTICS"\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[browser]\nbinding = "BROWSER"\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[ai]\nbinding = "AI"\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[[hyperdrive]]\nbinding = "HYPERDRIVE"\nid = "fixture"\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[[future_bindings]]\nbinding = "FUTURE"\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[env.staging]\nworkers_dev = true\n` },
+  { ...inputs, workerConfig: `${inputs.workerConfig}\n[env.production.ai]\nbinding = "AI"\n` },
+  {
+    ...inputs,
+    workerConfig: inputs.workerConfig.replace(
+      'binding = "DB"',
+      'binding = "DRAFT_VALIDATION_MODE"',
+    ),
+  },
+  {
+    ...inputs,
+    workerConfig: inputs.workerConfig.replace('namespace_id = "16204011"', 'namespace_id = "16204021"'),
+  },
+  { ...inputs, workerConfig: inputs.workerConfig.replace('limit = 5', 'limit = 6') },
+  { ...inputs, workerConfig: inputs.workerConfig.replace('main = "src/index.ts"', 'main = "src/alternate.ts"') },
+  {
+    ...inputs,
+    pagesConfig: inputs.pagesConfig.replace(
+      'compatibility_date = "2026-07-14"',
+      'compatibility_date = "2026-07-14"\nroutes = []',
+    ),
+  },
+  {
+    ...inputs,
+    pagesConfig: inputs.pagesConfig.replace(
+      'service = "pennant-pursuit-validation-preview"',
+      'service = "pennant-pursuit-validation-production"',
+    ),
+  },
+  { ...inputs, pagesConfig: `${inputs.pagesConfig}\n[[env.production.kv_namespaces]]\nbinding = "CACHE"\nid = "fixture"\n` },
+]
+for (const candidate of unsafeTopologyCandidates) {
+  assert.throws(
+    () => validateProtectedCapabilityFoundation(candidate),
+    /Wrangler topology validation refused/,
+  )
+}
+
 const submissionOnly = changedModel((model) => {
   model.environments.preview.emergencyStop = 'clear'
   model.environments.preview.identityCompatibilityMode = 'enabled'

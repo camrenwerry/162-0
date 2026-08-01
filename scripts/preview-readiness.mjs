@@ -29,7 +29,7 @@ export function parsePreviewReadinessArguments(argv) {
     } else throw usageError(`Unknown argument: ${argument}.`)
   }
   if (targetState !== 'disabled') {
-    throw usageError('preview:readiness requires --target-state disabled until Milestone 3D-2.')
+    throw usageError('Legacy preview:readiness remains disabled-only; release-inspection evidence grants no execution authority.')
   }
   return Object.freeze({ targetState, json, color })
 }

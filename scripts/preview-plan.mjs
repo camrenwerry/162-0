@@ -41,7 +41,7 @@ export function parsePreviewPlanArguments(argv) {
     }
   }
   if (!targetState) throw usageError('preview:plan requires --target-state disabled.')
-  if (targetState !== 'disabled') throw usageError('Preview planning is disabled-only until Milestone 3D-2.')
+  if (targetState !== 'disabled') throw usageError('Legacy Preview planning remains disabled-only; release-inspection evidence grants no execution authority.')
   return Object.freeze({ targetState, json, color })
 }
 

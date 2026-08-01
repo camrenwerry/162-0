@@ -101,6 +101,7 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
     cpSync(new URL('./preview-readiness.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-readiness.mjs'))
     cpSync(new URL('./preview-release.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/preview-release.mjs'))
     cpSync(new URL('./lib/preview-release', import.meta.url), path.join(repositoryRoot, 'scripts/lib/preview-release'), { recursive: true })
+    cpSync(new URL('./lib/release-inspection', import.meta.url), path.join(repositoryRoot, 'scripts/lib/release-inspection'), { recursive: true })
     cpSync(new URL('./prepare-d1c4-activation.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/prepare-d1c4-activation.mjs'))
     cpSync(new URL('./lib/schema4-activation-authority.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/lib/schema4-activation-authority.mjs'))
     cpSync(new URL('./lib/schema4-activation-readiness.mjs', import.meta.url), path.join(repositoryRoot, 'scripts/lib/schema4-activation-readiness.mjs'))
@@ -115,6 +116,7 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
       fixtureManifest.cloudflare.production.pages.domains = { status: 'resolved', values: ['pennant-pursuit.example'], reason: '' }
     }
     writeFileSync(path.join(repositoryRoot, 'config/preview-release.json'), `${JSON.stringify(fixtureManifest, null, 2)}\n`)
+    cpSync(new URL('../config/release-inspection-manifest.json', import.meta.url), path.join(repositoryRoot, 'config/release-inspection-manifest.json'))
     cpSync(new URL('../config/preview-schema4-readiness.json', import.meta.url), path.join(repositoryRoot, 'config/preview-schema4-readiness.json'))
     mkdirSync(path.join(repositoryRoot, 'shared'), { recursive: true })
     cpSync(new URL('../shared/schema4-capabilities.mjs', import.meta.url), path.join(repositoryRoot, 'shared/schema4-capabilities.mjs'))
@@ -124,6 +126,8 @@ function createCleanPreviewFixture({ resolvedRemote = false, unsafeOuterLifecycl
     cpSync(new URL('../workers/draft-validation/wrangler.toml', import.meta.url), path.join(repositoryRoot, 'workers/draft-validation/wrangler.toml'))
     cpSync(new URL('../workers/draft-validation/d1c4-activation-states.json', import.meta.url), path.join(repositoryRoot, 'workers/draft-validation/d1c4-activation-states.json'))
     cpSync(new URL('../migrations', import.meta.url), path.join(repositoryRoot, 'migrations'), { recursive: true })
+    mkdirSync(path.join(repositoryRoot, 'src/config'), { recursive: true })
+    cpSync(new URL('../src/config/protectedCapabilities.mjs', import.meta.url), path.join(repositoryRoot, 'src/config/protectedCapabilities.mjs'))
     mkdirSync(path.join(repositoryRoot, 'src/features/leaderboard'), { recursive: true })
     cpSync(new URL('../src/features/leaderboard/runtimeConfig.ts', import.meta.url), path.join(repositoryRoot, 'src/features/leaderboard/runtimeConfig.ts'))
     cpSync(new URL('../src/features/leaderboard/runtimeConfig.registrations.json', import.meta.url), path.join(repositoryRoot, 'src/features/leaderboard/runtimeConfig.registrations.json'))

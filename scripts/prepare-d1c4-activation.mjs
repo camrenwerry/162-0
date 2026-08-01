@@ -13,6 +13,10 @@ import {
   assertSchema4RepositoryReadiness,
   loadSchema4ReadinessModel,
 } from './lib/schema4-activation-readiness.mjs'
+import {
+  inspectPagesWranglerTopology,
+  inspectWorkerWranglerTopology,
+} from './lib/preview-release/wrangler-topology.mjs'
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url)
 const currentWorkingDirectory = path.resolve(process.cwd())
@@ -26,34 +30,6 @@ const CAPABILITY_MODEL_PATH = path.join(REPOSITORY_ROOT, 'workers/draft-validati
 
 function fail(message) {
   throw new Error(message)
-}
-
-function sectionBounds(source, section) {
-  const heading = `[${section}]`
-  const start = source.indexOf(`${heading}\n`)
-  if (start < 0 || source.indexOf(`${heading}\n`, start + heading.length) >= 0) {
-    fail(`Expected exactly one ${heading} section.`)
-  }
-  const bodyStart = start + heading.length + 1
-  const nextSection = source.indexOf('\n[', bodyStart)
-  return { start, bodyStart, end: nextSection < 0 ? source.length : nextSection + 1 }
-}
-
-function sectionBody(source, section) {
-  const { bodyStart, end } = sectionBounds(source, section)
-  return source.slice(bodyStart, end)
-}
-
-function parsePlainStringVariables(source, section) {
-  const entries = new Map()
-  for (const line of sectionBody(source, section).split('\n')) {
-    if (line === '' || line.startsWith('#')) continue
-    const match = line.match(/^([A-Z][A-Z0-9_]*) = "([a-z-]+)"$/)
-    if (!match) fail(`[${section}] contains a malformed plain-text variable.`)
-    if (entries.has(match[1])) fail(`[${section}] contains duplicate variable ${match[1]}.`)
-    entries.set(match[1], match[2])
-  }
-  return entries
 }
 
 function expectedVariables(readiness, surface, environment) {
@@ -85,43 +61,46 @@ function assertExactVariables(actual, expected, label) {
 }
 
 function assertCheckedInConfiguration(pagesConfig, workerConfig, readiness) {
+  const pages = inspectPagesWranglerTopology(pagesConfig)
+  const worker = inspectWorkerWranglerTopology(workerConfig)
   assertExactVariables(
-    parsePlainStringVariables(pagesConfig, 'vars'),
+    new Map(Object.entries(pages.environments.preview.variables)),
     expectedVariables(readiness, 'pagesFunctions', 'preview'),
     'Pages Preview',
   )
   assertExactVariables(
-    parsePlainStringVariables(pagesConfig, 'env.production.vars'),
+    new Map(Object.entries(pages.environments.production.variables)),
     expectedVariables(readiness, 'pagesFunctions', 'production'),
     'Pages Production',
   )
   assertExactVariables(
-    parsePlainStringVariables(workerConfig, 'vars'),
+    new Map(Object.entries(worker.environments.preview.variables)),
     expectedVariables(readiness, 'privateWorker', 'preview'),
     'Worker Preview',
   )
   assertExactVariables(
-    parsePlainStringVariables(workerConfig, 'env.production.vars'),
+    new Map(Object.entries(worker.environments.production.variables)),
     expectedVariables(readiness, 'privateWorker', 'production'),
     'Worker Production',
   )
-  const previewTriggerLines = sectionBody(workerConfig, 'triggers').split('\n')
-    .filter((line) => line !== '' && !line.startsWith('#'))
-  if (JSON.stringify(previewTriggerLines) !== JSON.stringify(['crons = []'])) {
+  if (worker.environments.preview.crons.length !== 0) {
     fail('Checked-in private Worker Preview Cron list must be empty.')
   }
-  const productionTriggerLines = sectionBody(workerConfig, 'env.production.triggers').split('\n')
-    .filter((line) => line !== '' && !line.startsWith('#'))
-  if (JSON.stringify(productionTriggerLines) !== JSON.stringify(['crons = []'])) {
+  if (worker.environments.production.crons.length !== 0) {
     fail('Checked-in private Worker Production Cron list must be empty.')
   }
-  if (/^\[triggers\]$|^crons\s*=/m.test(pagesConfig)) {
-    fail('Pages configuration must not define Cron triggers.')
-  }
-  const productionWorker = workerConfig.slice(sectionBounds(workerConfig, 'env.production').start)
-  if (/^\[\[env\.production\.d1_databases\]\]$/m.test(productionWorker)) {
+  if (worker.environments.production.d1 !== null) {
     fail('Production Worker must not have a D1 binding.')
   }
+  for (const environment of ['preview', 'production']) {
+    if (worker.environments[environment].workersDev !== false
+      || worker.environments[environment].previewUrls !== false
+      || worker.environments[environment].routes.length !== 0
+      || worker.environments[environment].customDomains.length !== 0) {
+      fail(`${environment} private Worker must have no public exposure.`)
+    }
+  }
+  return Object.freeze({ pages, worker })
 }
 
 export function loadProtectedCapabilityInputs(repositoryRoot = REPOSITORY_ROOT) {
@@ -155,8 +134,13 @@ export function validateProtectedCapabilityFoundation(inputs = loadProtectedCapa
     || capabilityModel.authoritySchemaVersion !== readiness.authorityContract.schemaVersion
     || capabilityModel.maximumReviewWindowMs !== readiness.authorityContract.maximumReviewWindowMs
   ) fail('Protected capability model differs from the readiness contract.')
-  assertCheckedInConfiguration(inputs.pagesConfig, inputs.workerConfig, readiness)
-  return Object.freeze({ capabilityModel, pagesConfig: inputs.pagesConfig, workerConfig: inputs.workerConfig })
+  const topologies = assertCheckedInConfiguration(inputs.pagesConfig, inputs.workerConfig, readiness)
+  return Object.freeze({
+    capabilityModel,
+    pagesConfig: inputs.pagesConfig,
+    workerConfig: inputs.workerConfig,
+    topologies,
+  })
 }
 
 export function validateCheckedInProtectedCapabilityFoundation(repositoryRoot = REPOSITORY_ROOT) {

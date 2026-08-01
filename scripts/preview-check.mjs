@@ -65,6 +65,7 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('Preview identity-bootstrap tests', 'test:preview-identity-bootstrap'),
   npmRunStage('Preview workflow foundation tests', 'test:preview-workflow'),
   npmRunStage('Preview release automation tests', 'test:preview-release-automation'),
+  npmRunStage('Release-inspection contract tests', 'test:release-inspection'),
 ])
 
 const ROUTINE_EXCLUDED_TEST_SCRIPTS = new Set([

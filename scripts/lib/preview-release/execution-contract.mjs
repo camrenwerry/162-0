@@ -9,6 +9,7 @@ import {
   DEDICATED_PREVIEW_CREDENTIAL,
   DEDICATED_PREVIEW_DEPLOY_CREDENTIAL,
 } from './redaction.mjs'
+import { assertNoReleaseInspectionArtifactForLegacyExecution } from '../release-inspection/markers.mjs'
 
 export const EXECUTION_CONTRACT_VERSION = 'preview-release-execution-disabled-only-v2'
 export const PREVIEW_DEPLOY_CREDENTIAL = DEDICATED_PREVIEW_DEPLOY_CREDENTIAL
@@ -83,10 +84,12 @@ function pagesDeploy(id, manifest, gitHead) {
   })
 }
 
-export function buildExecutionContract({ futureStages, targetState, manifest, gitHead, previewOrigin }) {
+export function buildExecutionContract(input) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(input)
+  const { futureStages, targetState, manifest, gitHead, previewOrigin } = immutablePlain(input)
   if (!Array.isArray(futureStages)) throw localError('Release stages are missing.', 'execution.contract')
   if (manifest.activation.releaseTooling !== 'disabled-only' || targetState !== 'disabled') {
-    throw localError('Execution target state must remain disabled until Milestone 3D-2.', 'execution.contract')
+    throw localError('Legacy Preview execution remains disabled-only; release-inspection evidence grants no execution authority.', 'execution.contract')
   }
   if (manifest.toolContractVersion !== PREVIEW_RELEASE_TOOL_CONTRACT_VERSION
     || manifest.activation.canonicalCheckedInState !== 'all-disabled') {
@@ -137,6 +140,7 @@ function exactKeys(value, expected) {
 }
 
 export function assertCurrentDisabledExecutionContract(input) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(input)
   let contract
   try {
     contract = immutablePlain(input)

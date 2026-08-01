@@ -44,8 +44,8 @@ assert.deepEqual(Object.keys(model.capabilityVariables), [
 assert.deepEqual(Object.keys(model.capabilityVariables), EXPECTED_CAPABILITIES)
 assert.deepEqual(model.frontendBuildTime, {
   effectiveState: 'all-disabled',
-  integrationStatus: 'deferred-to-3D-2',
-  protectedSource: null,
+  integrationStatus: 'protected-local-source',
+  protectedSource: 'src/config/protectedCapabilities.mjs',
 })
 for (const capability of Object.keys(model.capabilityVariables)) {
   assert.equal(model.capabilityVariables[capability].frontendBuild, null)
@@ -57,7 +57,7 @@ for (const source of [
   readinessSource.replace('"cleanupCron": {', '"unknownCapability": {'),
   readinessSource.replace('"privateWorker": "RETENTION_CLEANUP_MODE"', '"privateWorker": "RETENTION_MODE"'),
   readinessSource.replace('"pagesFunctions": "LEADERBOARD_READ_MODE"', '"pagesFunctions": "LEADERBOARD_MODE"'),
-  readinessSource.replace('"protectedSource": null', '"protectedSource": "wrangler.toml"'),
+  readinessSource.replace('"protectedSource": "src/config/protectedCapabilities.mjs"', '"protectedSource": "wrangler.toml"'),
   readinessSource.replace('"checkedInState": "all-disabled",', ''),
   readinessSource.replace('"checkedInState": "all-disabled",', '"checkedInState": "all-disabled",\n  "extra": true,'),
 ]) assert.throws(() => parseSchema4ReadinessModel(source), /Schema-4 activation refused/)
@@ -238,7 +238,7 @@ for (const [label, observed, known = migrations] of [
 assert.doesNotThrow(() => assertSchema4StateModelSupportsActivation(repositoryRoot))
 assert.throws(
   () => assertSchema4ProtectedConfigurationSupportsActivation(repositoryRoot),
-  /disabled-only until Milestone 3D-2/,
+  /remains disabled-only/,
 )
 
 const unresolved = loadReleaseManifest(repositoryRoot).manifest
@@ -249,7 +249,7 @@ assert.throws(
     migration: migration(3, pending0004),
     manifest: unresolved,
   }),
-  /disabled-only until Milestone 3D-2/,
+  /remains disabled-only/,
 )
 assert.doesNotThrow(() => assertSchema4ActivationPlan({
   repositoryRoot,
@@ -265,7 +265,7 @@ assert.throws(
     migration: migration(3, pending0004),
     manifest: unresolved,
   }),
-  /disabled-only until Milestone 3D-2/,
+  /remains disabled-only/,
 )
 
 console.log('Schema-4 activation readiness tests passed: the exact protected model and variable mapping are versioned, all-disabled in both environments, and legacy release tooling cannot construct an enabled target.')

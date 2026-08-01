@@ -16,9 +16,9 @@ export interface Schema4RuntimeGateDescriptor {
 export type Schema4RuntimeSurface = 'frontendBuild' | 'pagesFunctions' | 'privateWorker'
 export type Schema4RuntimeGateRegistry = Readonly<{
   frontendBuildTime: Readonly<{
-    protectedSource: null
+    protectedSource: 'src/config/protectedCapabilities.mjs'
     effectiveState: 'all-disabled'
-    integrationStatus: 'deferred-to-3D-2'
+    integrationStatus: 'protected-local-source'
   }>
   capabilities: Readonly<Record<Schema4Capability, Readonly<{
     frontendBuild: Schema4RuntimeGateDescriptor | null

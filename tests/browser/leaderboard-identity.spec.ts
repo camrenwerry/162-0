@@ -36,7 +36,7 @@ async function routeStatus(page: Page, renameEligible = true) {
   })
 }
 
-test.describe.skip('Deferred Milestone 3D-2 protected frontend build-time integration', () => {
+test.describe.skip('Enabled frontend states remain prohibited by the 3D-2A all-disabled policy', () => {
 
 test('deferred valid stored identity can rename while status and recovery are independently disabled', async ({ page, context }) => {
   await seedIdentity(context)

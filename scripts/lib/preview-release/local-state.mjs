@@ -7,30 +7,12 @@ import {
   readStrictPackageMetadataFile,
 } from './canonical.mjs'
 import { localError, remoteError } from './errors.mjs'
+import {
+  assertExactProtectedConfigurationPaths,
+  PROTECTED_CONFIGURATION_PATHS,
+} from './protected-paths.mjs'
 
-export const PROTECTED_CONFIGURATION_PATHS = Object.freeze([
-  'config/preview-release.json',
-  'config/preview-schema4-readiness.json',
-  'shared/schema4-capabilities.mjs',
-  'shared/schema4-runtime-consumers.mjs',
-  'src/features/leaderboard/runtimeConfig.registrations.json',
-  'functions/lib/leaderboard-mode.registrations.json',
-  'functions/lib/leaderboard-identity-mode.registrations.json',
-  'functions/lib/draft-submission-mode.registrations.json',
-  'workers/draft-validation/src/retention-cleanup-mode.registrations.json',
-  'wrangler.toml',
-  'workers/draft-validation/wrangler.toml',
-  'workers/draft-validation/d1c4-activation-states.json',
-])
-
-export function assertExactProtectedConfigurationPaths(paths) {
-  if (!Array.isArray(paths)
-    || new Set(paths).size !== paths.length
-    || canonicalHash([...paths].sort()) !== canonicalHash([...PROTECTED_CONFIGURATION_PATHS].sort())) {
-    throw localError('Protected configuration path inventory is missing, duplicated, or unexpected.', 'local.protected-inventory')
-  }
-  return Object.freeze([...paths])
-}
+export { assertExactProtectedConfigurationPaths, PROTECTED_CONFIGURATION_PATHS }
 
 export const IMMUTABLE_GITHUB_ACTIONS_REPOSITORY_ROOTS = Object.freeze([
   '/home/runner/work/162-0/162-0',

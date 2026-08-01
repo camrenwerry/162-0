@@ -15,9 +15,9 @@
     "maximumReviewWindowMs": 86400000
   },
   "frontendBuildTime": {
-    "protectedSource": null,
+    "protectedSource": "src/config/protectedCapabilities.mjs",
     "effectiveState": "all-disabled",
-    "integrationStatus": "deferred-to-3D-2"
+    "integrationStatus": "protected-local-source"
   },
   "capabilityVariables": {
     "leaderboardRead": {

@@ -197,16 +197,18 @@ process-local lock is not single-use protection.
 Milestone 3D-1 implements the versioned, environment-bound, emergency-stopped
 protected representation with every capability disabled. It extends the
 applicable Pages Functions and private-Worker inventories, generated runtime
-types, protected hashes, and local disabled-state compiler contracts. Frontend
-protected build-time integration remains deliberately absent.
-
-Milestone 3D-2 must separately add capability-oriented remote read-only
-inspection, evidence, sequencing, immutable binding comparison, and protected
-frontend build-time integration. Until that review, the
-planner and compiler accept only the disabled target. Secret provisioning,
-migration execution, deployment, remote verification, and activation remain
-separate later authorizations. No broad state may silently enable a narrower
+types, protected hashes, and local disabled-state compiler contracts. At the
+completion of Milestone 3C-3, frontend protected build-time integration was
+still deliberately absent. Milestone 3D-2A later added the protected,
+all-disabled frontend authority source; that addition did not enable any
 capability.
+
+The remaining Milestone 3D-2 work must separately add capability-oriented
+remote read-only inspection, evidence, sequencing, and immutable binding
+comparison. The planner and compiler continue to accept only the disabled
+target. Secret provisioning, migration execution, deployment, remote
+verification, and activation remain separate later authorizations. No broad
+state may silently enable a narrower capability.
 
 ## Additive migration proposal for an operator reset adapter
 

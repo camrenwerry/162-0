@@ -503,6 +503,11 @@ test('the exact public Node entry point leaves the complete controlled repositor
       path.join(temporaryRoot, 'scripts/lib/preview-release'),
       { recursive: true },
     )
+    mkdirSync(path.join(temporaryRoot, 'scripts/lib/release-inspection'), { recursive: true })
+    cpSync(
+      path.join(REPOSITORY_ROOT, 'scripts/lib/release-inspection/markers.mjs'),
+      path.join(temporaryRoot, 'scripts/lib/release-inspection/markers.mjs'),
+    )
     const temporaryManifest = clone(manifest)
     temporaryManifest.repository.allowedRoots = [temporaryRoot]
     writeFileSync(

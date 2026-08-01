@@ -18,6 +18,7 @@ import { classifyMigrationState, loadRepositoryMigrations } from './migrations.m
 import { redactText } from './redaction.mjs'
 import { executionReport, validationReport } from './reporting.mjs'
 import { createPreviewPlan } from '../../preview-plan.mjs'
+import { assertNoReleaseInspectionArtifactForLegacyExecution } from '../release-inspection/markers.mjs'
 
 const GENERIC_CREDENTIALS = Object.freeze([
   'CLOUDFLARE_API_TOKEN',
@@ -285,29 +286,31 @@ function iso(now) {
   return new Date(now()).toISOString()
 }
 
-export async function executeReleasePackage(releasePackageInput, {
-  repositoryRoot,
-  environment = process.env,
-  stdinIsTTY = process.stdin.isTTY,
-  stdoutIsTTY = process.stdout.isTTY,
-  requireInteractive = true,
-  approve,
-  runner,
-  processRunner,
-  client,
-  fetchImplementation,
-  output = console,
-  runQualityStages = true,
-  spawn = spawnSync,
-  now = Date.now,
-  createPlan = createPreviewPlan,
-  loadManifest = loadReleaseManifest,
-  compileConfiguration = validateConfigurationModel,
-  inspectRemote = inspectPreviewRemoteState,
-  loadMigrations = loadRepositoryMigrations,
-  classifyMigrations = classifyMigrationState,
-  createWorkspace = createReleaseWorkspace,
-} = {}) {
+export async function executeReleasePackage(releasePackageInput, options = {}) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(releasePackageInput)
+  const {
+    repositoryRoot,
+    environment = process.env,
+    stdinIsTTY = process.stdin.isTTY,
+    stdoutIsTTY = process.stdout.isTTY,
+    requireInteractive = true,
+    approve,
+    runner,
+    processRunner,
+    client,
+    fetchImplementation,
+    output = console,
+    runQualityStages = true,
+    spawn = spawnSync,
+    now = Date.now,
+    createPlan = createPreviewPlan,
+    loadManifest = loadReleaseManifest,
+    compileConfiguration = validateConfigurationModel,
+    inspectRemote = inspectPreviewRemoteState,
+    loadMigrations = loadRepositoryMigrations,
+    classifyMigrations = classifyMigrationState,
+    createWorkspace = createReleaseWorkspace,
+  } = options
   const startedAt = iso(now)
   const stageResults = []
   let mutationAttempted = false

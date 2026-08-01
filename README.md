@@ -89,6 +89,10 @@ and remaining protected authorization boundary are in
 The subsequent protected, all-disabled 3D-1 model, strict input limits,
 frontend build-time limitation, and disabled-only release boundary are in
 [`docs/MILESTONE_3D1_PROTECTED_CAPABILITY_MODEL.md`](docs/MILESTONE_3D1_PROTECTED_CAPABILITY_MODEL.md).
+The 3D-2A exact seven-capability contract family, protected frontend source,
+binding and secret-policy inventory, and environment-neutral local projection
+are in
+[`docs/MILESTONE_3D2A_RELEASE_INSPECTION_CONTRACTS.md`](docs/MILESTONE_3D2A_RELEASE_INSPECTION_CONTRACTS.md).
 Local checks do not imply migration, secret/binding, deployment, remote
 verification, or Preview activation readiness.
 
@@ -169,11 +173,23 @@ the bootstrap cannot deploy, migrate, activate, smoke-test, roll back, or
 mutate Cloudflare or GitHub.
 
 `npm exec --offline -- node scripts/preview-plan.mjs --target-state disabled`
-requires the exact disabled target and produces a deterministic read-only plan.
-The capability-oriented enabled planning conversion is deferred to Milestone
-3D-2. Use `--json` for structured output and `--no-color` for plain human
-output. When automation requires JSON-only stdout through npm, add npm's
-`--silent` flag.
+requires the exact disabled target and produces a deterministic legacy
+disabled-only plan. It cannot ingest a 3D-2A release-inspection artifact. Use
+`--json` for structured output and `--no-color` for plain human output. When
+automation requires JSON-only stdout through npm, add npm's `--silent` flag.
+
+The environment-neutral 3D-2A local projection is emitted as canonical JSON on
+standard output and writes no file:
+
+```bash
+npm run release-inspection:local
+```
+
+It reports exact local protected intent and explicit unavailable remote
+evidence for both environments. Its result is always `UNKNOWN`, its execution
+authorization is prohibited, and Production inspection is excluded. It does
+not contact Cloudflare or GitHub, and it does not turn local configuration into
+a remote-currentness or release-readiness claim.
 
 After the protected identities are independently grounded, the operator-facing
 readiness command writes a canonical, expiring evidence package under the
@@ -185,8 +201,10 @@ PENNANT_PREVIEW_API_TOKEN=<dedicated-read-token> npm exec --offline -- node scri
 
 The package is not approval. Milestone 3D-1 authorizes no release execution,
 deployment token use, migration, smoke execution, remote mutation, or
-capability activation. Capability-oriented remote inspection, evidence, and
-execution integration require a separate Milestone 3D-2 review.
+capability activation. Milestone 3D-2A adds local contracts and projection
+only. Authenticated read-only Preview inspection remains 3D-2B work; package,
+planning, and reporting integration remains 3D-2C work. None of those stages
+grants execution authority.
 
 These public invocations execute fixed Node entry points through `npm exec`;
 they do not select a package-script name, so matching `prepreview:*` or

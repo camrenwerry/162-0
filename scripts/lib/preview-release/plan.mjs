@@ -16,6 +16,7 @@ import {
   buildExecutionContract,
 } from './execution-contract.mjs'
 import { refusalError, remoteError } from './errors.mjs'
+import { assertNoReleaseInspectionArtifactForLegacyExecution } from '../release-inspection/markers.mjs'
 
 export const PLAN_SCHEMA_VERSION = PREVIEW_RELEASE_PLAN_SCHEMA_VERSION
 const DEPLOYMENT_STAGE_IDS = new Set(['worker.deploy', 'pages.deploy'])
@@ -98,9 +99,10 @@ export function derivePlanId(planWithoutId) {
 }
 
 export function buildReleasePlan(input) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(input)
   const { manifest, manifestHash, local, serverHead, targetState, compiled, hashes, remote, migration } = immutablePlain(input)
   if (manifest.activation.releaseTooling !== 'disabled-only' || targetState !== 'disabled') {
-    throw remoteError('Preview release planning is disabled-only until Milestone 3D-2.', 'invalid_target_state', 'plan.target-state')
+    throw remoteError('Legacy Preview release planning remains disabled-only; release-inspection evidence grants no execution authority.', 'invalid_target_state', 'plan.target-state')
   }
   if (manifest.toolContractVersion !== PREVIEW_RELEASE_TOOL_CONTRACT_VERSION
     || manifest.activation.canonicalCheckedInState !== 'all-disabled') {
@@ -306,6 +308,7 @@ function assertNoHiddenEnabledConfiguration(value, trail = '$') {
 }
 
 export function assertCurrentDisabledReleasePlan(input) {
+  assertNoReleaseInspectionArtifactForLegacyExecution(input)
   let plan
   try {
     plan = immutablePlain(input)

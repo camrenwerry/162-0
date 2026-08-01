@@ -159,11 +159,11 @@ export function validateSchema4RuntimeGateRegistry(
   if (!exactKeys(registry, ['capabilities', 'frontendBuildTime'])
     || !exactJson(registry.frontendBuildTime, {
       effectiveState: 'all-disabled',
-      integrationStatus: 'deferred-to-3D-2',
-      protectedSource: null,
+      integrationStatus: 'protected-local-source',
+      protectedSource: 'src/config/protectedCapabilities.mjs',
     })
     || !exactKeys(registry.capabilities, SCHEMA4_CAPABILITIES)) {
-    refuse('the runtime gate registry is incomplete or does not preserve the deferred frontend boundary.')
+    refuse('the runtime gate registry is incomplete or does not preserve the protected frontend boundary.')
   }
   const variables = {}
   for (const capability of SCHEMA4_CAPABILITIES) {
@@ -420,11 +420,11 @@ export function assertSchema4StateModelSupportsActivation(repositoryRoot) {
 
 export function assertSchema4ProtectedConfigurationSupportsActivation(repositoryRoot) {
   assertSchema4RepositoryReadiness(repositoryRoot)
-  refuse('protected release tooling is disabled-only until Milestone 3D-2 provides reviewed capability integration.')
+  refuse('legacy protected release tooling remains disabled-only; release-inspection evidence grants no execution authority.')
 }
 
 export function assertSchema4ActivationPlan({ repositoryRoot, targetState }) {
   assertSchema4RepositoryReadiness(repositoryRoot)
   if (targetState === 'disabled') return
-  refuse('protected release tooling is disabled-only until Milestone 3D-2 provides reviewed capability integration.')
+  refuse('legacy protected release tooling remains disabled-only; release-inspection evidence grants no execution authority.')
 }
