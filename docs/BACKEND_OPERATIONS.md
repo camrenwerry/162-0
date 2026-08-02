@@ -218,6 +218,15 @@ but enabled planning and execution remain unavailable. It performs no remote
 migration, deployment, endpoint request, feature activation, Cron activation,
 secret operation, binding change, route change, or Production change.
 
+Milestone 3D-2B.2 adds closed Preview resource normalization, single-read
+orchestration, and pure candidate projection for the same seven capabilities
+across `frontend`, `pages`, `worker`, and `schedule`. Missing or incomplete
+evidence remains unknown. Candidate state never changes release currentness
+from `UNKNOWN` or execution authorization from `prohibited`. Stable double
+reads are deferred to 3D-2B.3, and authenticated observation remains separately
+authorized. See
+[Milestone 3D-2B.2 Preview resource observation and candidate projection](MILESTONE_3D2B2_PREVIEW_RESOURCE_OBSERVATION.md).
+
 Milestone 3C-1 added an independent recovery gate and a local schema-4 readiness
 guard. See
 [Milestone 3C-1 local runtime integration](MILESTONE_3C1_LOCAL_RUNTIME.md).

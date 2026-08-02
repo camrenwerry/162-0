@@ -6,6 +6,10 @@ import {
   parseStrictJson,
 } from '../preview-release/canonical.mjs'
 import { assertReleaseInspectionIntrinsicIntegrity } from './intrinsic-integrity.mjs'
+import {
+  PREVIEW_OBSERVATION_LIMITS,
+  PREVIEW_OPERATION_INVENTORY,
+} from './preview-observation-limits.mjs'
 import { assertNoProductionPoisoning } from './production-poisoning.mjs'
 
 const isProxy = utilTypes.isProxy
@@ -28,25 +32,7 @@ function withIntrinsicIntegrity(operation) {
 
 export const REMOTE_OBSERVATION_ORIGIN = 'https://api.cloudflare.com'
 
-export const REMOTE_OBSERVATION_LIMITS = immutablePlain({
-  maximumReviewedRouteZones: 32,
-  maximumRequestsPerFullRead: 64,
-  maximumRequestsPerDoubleRead: 128,
-  maximumPaginationPages: 10,
-  maximumRecordsPerFamily: 250,
-  maximumResponseBytes: 1_048_576,
-  maximumResponseReadIterations: 4_096,
-  maximumSerializedObservationBytes: 1_048_576,
-  requestTimeoutMs: 10_000,
-  fullReadTimeoutMs: 120_000,
-  doubleReadTimeoutMs: 300_000,
-  stableReadDelayMs: 2_000,
-  freshnessWindowMs: 300_000,
-  maximumFutureClockSkewMs: 1_000,
-  concurrency: 1,
-  automaticRetries: 0,
-  redirectPolicy: 'reject-every-3xx',
-})
+export const REMOTE_OBSERVATION_LIMITS = PREVIEW_OBSERVATION_LIMITS
 
 export const REMOTE_RESPONSE_JSON_LIMITS = Object.freeze({
   maxBytes: REMOTE_OBSERVATION_LIMITS.maximumResponseBytes,
@@ -246,7 +232,10 @@ export const PREVIEW_OPERATION_REGISTRY = immutablePlain(Object.fromEntries(
   operations.map((entry) => [entry.name, entry]),
 ))
 
-export const PREVIEW_OPERATION_NAMES = Object.freeze(Object.keys(PREVIEW_OPERATION_REGISTRY))
+export const PREVIEW_OPERATION_NAMES = PREVIEW_OPERATION_INVENTORY
+if (canonicalJson(Object.keys(PREVIEW_OPERATION_REGISTRY)) !== canonicalJson(PREVIEW_OPERATION_NAMES)) {
+  throw new TypeError('Preview operation registry differs from the pure operation inventory.')
+}
 export const PREVIEW_ENDPOINT_FAMILIES = Object.freeze([
   'account',
   'zones',

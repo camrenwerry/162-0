@@ -1,5 +1,11 @@
 import type { PreviewOperationName } from './remote-transport.mjs'
 
+declare const previewValidatedSingleReadSnapshotBrand: unique symbol
+declare const previewSafeTimestampBrand: unique symbol
+type PreviewSafeTimestamp = number & Readonly<{
+  [previewSafeTimestampBrand]: 'non-negative-safe-integer'
+}>
+
 export type PreviewResourceOutcomeState =
   | 'complete'
   | 'missing'
@@ -318,11 +324,16 @@ export type PreviewResourceOutcome =
   | PreviewContradictoryResourceOutcome
   | PreviewNullResourceOutcome
 
-export interface PreviewSingleReadSnapshot {
+declare class PreviewValidatedSingleReadSnapshotAuthority {
+  private constructor()
+  private readonly [previewValidatedSingleReadSnapshotBrand]: true
+}
+
+export type PreviewSingleReadSnapshot = PreviewValidatedSingleReadSnapshotAuthority & Readonly<{
   readonly schemaVersion: 1
   readonly kind: 'pennant-pursuit-preview-single-read-observation'
   readonly environment: 'preview'
-  readonly capturedAtMs: number
+  readonly capturedAtMs: PreviewSafeTimestamp
   readonly observationState: PreviewResourceOutcomeState
   readonly resourceOutcomes: readonly PreviewResourceOutcome[]
   readonly freshnessStatus: 'unknown'
@@ -331,7 +342,7 @@ export interface PreviewSingleReadSnapshot {
   readonly noRemoteMutation: true
   readonly noSecretValues: true
   readonly productionContacted: false
-}
+}>
 
 export const PREVIEW_SINGLE_READ_SCHEMA_VERSION: 1
 export const PREVIEW_SINGLE_READ_KIND: 'pennant-pursuit-preview-single-read-observation'

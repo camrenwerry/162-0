@@ -1,10 +1,6 @@
 import { types as utilTypes } from 'node:util'
-import { immutablePlain } from '../preview-release/canonical.mjs'
-import {
-  canonicalCalendarDate,
-  canonicalCronExpression,
-} from './preview-normalization.mjs'
-import { REMOTE_OBSERVATION_LIMITS } from './remote-transport.mjs'
+import { immutablePlain } from '../preview-release/canonical-data.mjs'
+import { PREVIEW_OBSERVATION_LIMITS } from './preview-observation-limits.mjs'
 
 const isProxy = utilTypes.isProxy
 const SAFE = /^[A-Za-z0-9][A-Za-z0-9._:-]*$/u
@@ -63,7 +59,7 @@ function record(value, keys) {
   return value
 }
 
-function array(value, validator, maximum = REMOTE_OBSERVATION_LIMITS.maximumRecordsPerFamily) {
+function array(value, validator, maximum = PREVIEW_OBSERVATION_LIMITS.maximumRecordsPerFamily) {
   if (!Array.isArray(value)
     || value.length > maximum) fail()
   value.forEach(validator)
@@ -80,11 +76,45 @@ function nullableText(value, pattern = SAFE, maximum = 512) {
 
 function nullableCalendarDate(value) {
   if (value === null) return
-  try {
-    canonicalCalendarDate('normalized-resource-schema', value, 'invalid-compatibility-date')
-  } catch {
-    fail()
+  if (typeof value !== 'string' || !/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/u.test(value)) fail()
+  const year = Number(value.slice(0, 4))
+  const month = Number(value.slice(5, 7))
+  const day = Number(value.slice(8, 10))
+  const leapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)
+  const daysInMonth = [31, leapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  if (year < 1 || month < 1 || month > 12 || day < 1 || day > daysInMonth[month - 1]) fail()
+}
+
+function validCronField(field, minimum, maximum) {
+  if (!/^[0-9*,/-]+$/u.test(field)) return false
+  for (const segment of field.split(',')) {
+    if (segment.length === 0) return false
+    const stepParts = segment.split('/')
+    if (stepParts.length > 2 || stepParts.some((part) => part.length === 0)) return false
+    const [range, step] = stepParts
+    if (step !== undefined) {
+      const stepNumber = Number(step)
+      if (!/^\d+$/u.test(step) || !Number.isSafeInteger(stepNumber) || stepNumber < 1) return false
+    }
+    if (range === '*') continue
+    const parts = range.split('-')
+    if (parts.length > 2 || parts.some((part) => !/^\d+$/u.test(part))) return false
+    const numbers = parts.map(Number)
+    if (numbers.some((number) => number < minimum || number > maximum)) return false
+    if (numbers.length === 2 && numbers[0] > numbers[1]) return false
   }
+  return true
+}
+
+function validCronExpression(value) {
+  if (typeof value !== 'string' || /[^\x20-\x7E]/u.test(value) || value.startsWith('@')) return false
+  const fields = value.split(' ')
+  const ranges = [[0, 59], [0, 23], [1, 31], [1, 12], [0, 7]]
+  return fields.length === 5 && fields.every((field, index) => validCronField(
+    field,
+    ranges[index][0],
+    ranges[index][1],
+  ))
 }
 
 function integer(value) {
@@ -160,7 +190,7 @@ function pagesDeployments(value) {
     text(entry.previewOrigin, ORIGIN, 261)
     array(entry.aliases, (alias) => text(alias, ORIGIN, 261))
     aliasRecordCount += entry.aliases.length
-    if (aliasRecordCount > REMOTE_OBSERVATION_LIMITS.maximumRecordsPerFamily) fail()
+    if (aliasRecordCount > PREVIEW_OBSERVATION_LIMITS.maximumRecordsPerFamily) fail()
   })
 }
 
@@ -192,7 +222,7 @@ function workerDeployments(value) {
         || version.trafficPercentage < 0 || version.trafficPercentage > 100) fail()
     })
     versionRecordCount += deployment.versions.length
-    if (versionRecordCount > REMOTE_OBSERVATION_LIMITS.maximumRecordsPerFamily) fail()
+    if (versionRecordCount > PREVIEW_OBSERVATION_LIMITS.maximumRecordsPerFamily) fail()
   })
 }
 
@@ -229,7 +259,7 @@ function migrationRows(value) {
   })
   array(value.pendingRepositorySuffix, (name) => text(name, /^[A-Za-z0-9][A-Za-z0-9._-]*\.sql$/u))
   if (value.rows.length + value.pendingRepositorySuffix.length
-    > REMOTE_OBSERVATION_LIMITS.maximumRecordsPerFamily) fail()
+    > PREVIEW_OBSERVATION_LIMITS.maximumRecordsPerFamily) fail()
 }
 
 export function validatePreviewNormalizedResourceValue(operation, input) {
@@ -253,7 +283,7 @@ export function validatePreviewNormalizedResourceValue(operation, input) {
       base(value, EXPECTED_KIND[operation], ['zones'])
       array(value.zones, (zone) => {
         record(zone, ['ordinal', 'name']); integer(zone.ordinal); text(zone.name, HOST, 253)
-      }, REMOTE_OBSERVATION_LIMITS.maximumReviewedRouteZones); break
+      }, PREVIEW_OBSERVATION_LIMITS.maximumReviewedRouteZones); break
     case 'pages-project': pagesProject(value); break
     case 'pages-preview-deployments': pagesDeployments(value); break
     case 'worker-settings': workerSettings(value); break
@@ -263,9 +293,7 @@ export function validatePreviewNormalizedResourceValue(operation, input) {
       if (typeof value.workersDev !== 'boolean' || typeof value.previewUrls !== 'boolean') fail(); break
     case 'worker-schedules':
       base(value, EXPECTED_KIND[operation], ['schedules'])
-      array(value.schedules, (cron) => {
-        try { canonicalCronExpression('normalized-resource-schema', cron) } catch { fail() }
-      }); break
+      array(value.schedules, (cron) => { if (!validCronExpression(cron)) fail() }); break
     case 'worker-custom-domains': domains(value); break
     case 'worker-routes': routes(value); break
     case 'd1-database':

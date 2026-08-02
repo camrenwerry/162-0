@@ -118,12 +118,12 @@ export interface ReleaseInspectionBindingPolicy {
           }> | null
           workerMain: string
           workerName: string
-          workerRateLimits: readonly Readonly<{
+          workerRateLimits: ReadonlyArray<Readonly<{
             limit: number
             name: string
             namespaceId: string
             period: number
-          }>[]
+          }>>
         }>
         remoteEvidence: 'unavailable'
       }>
@@ -138,7 +138,7 @@ export interface ReleaseInspectionLocalProjection {
   readonly policy: 'all-disabled'
   readonly manifestHash: string
   readonly authorityHash: string
-  readonly protectedSourceHashes: readonly Readonly<{ path: string; sha256: string }>[]
+  readonly protectedSourceHashes: ReadonlyArray<Readonly<{ path: string; sha256: string }>>
   readonly capabilityMatrix: ReleaseInspectionCapabilityMatrix
   readonly bindingPolicy: ReleaseInspectionBindingPolicy
   readonly remoteObservation: Readonly<Record<string, unknown>>
@@ -149,13 +149,17 @@ export interface ReleaseInspectionLocalProjection {
 }
 
 export interface ReleaseInspectionTrustedSourceContext {
-  readonly protectedSourceHashes: readonly Readonly<{ path: string; sha256: string }>[]
+  readonly protectedSourceHashes: ReadonlyArray<Readonly<{ path: string; sha256: string }>>
 }
 
 export const RELEASE_INSPECTION_SCHEMA_VERSION: 1
 export const RELEASE_INSPECTION_TOOL_CONTRACT_VERSION: 'release-inspection-local-only-v1'
 export const RELEASE_INSPECTION_ENVIRONMENTS: readonly ReleaseInspectionEnvironment[]
 export const RELEASE_INSPECTION_CAPABILITIES: readonly Schema4Capability[]
+export const RELEASE_INSPECTION_CAPABILITY_SURFACES: Readonly<Record<
+  Schema4Capability,
+  readonly ReleaseInspectionSurface[]
+>>
 export const RELEASE_INSPECTION_SURFACES: readonly ReleaseInspectionSurface[]
 export const RELEASE_INSPECTION_SECRET_NAMES: readonly string[]
 export const RELEASE_INSPECTION_SECRET_POLICY_STATES: readonly ReleaseInspectionSecretPolicy[]

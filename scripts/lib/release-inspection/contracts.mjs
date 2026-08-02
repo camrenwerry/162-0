@@ -13,6 +13,10 @@ import {
   RELEASE_INSPECTION_KINDS,
   RELEASE_INSPECTION_TOOL_CONTRACT_VERSION,
 } from './markers.mjs'
+import {
+  RELEASE_INSPECTION_CAPABILITY_SURFACES,
+  RELEASE_INSPECTION_SURFACES,
+} from './capability-model.mjs'
 
 export {
   assertNoReleaseInspectionArtifactForLegacyExecution,
@@ -23,12 +27,10 @@ export {
 export const RELEASE_INSPECTION_SCHEMA_VERSION = 1
 export const RELEASE_INSPECTION_ENVIRONMENTS = SCHEMA4_ENVIRONMENTS
 export const RELEASE_INSPECTION_CAPABILITIES = SCHEMA4_CAPABILITIES
-export const RELEASE_INSPECTION_SURFACES = Object.freeze([
-  'frontend',
-  'pages',
-  'worker',
-  'schedule',
-])
+export {
+  RELEASE_INSPECTION_CAPABILITY_SURFACES,
+  RELEASE_INSPECTION_SURFACES,
+}
 export const RELEASE_INSPECTION_SECRET_NAMES = Object.freeze([
   'DRAFT_TICKET_SIGNING_KEY',
   'LEADERBOARD_CURSOR_SIGNING_KEY',
@@ -82,16 +84,6 @@ export const RELEASE_INSPECTION_PROTECTED_SOURCE_HASHES = immutablePlain({
   'workers/draft-validation/src/retention-cleanup-mode.registrations.json': 'ca961c5a822b4af6261484d00b685157595444ebcad42fff1167c4beeb2a3890',
   'workers/draft-validation/wrangler.toml': '862952756bfc0fc2b4cbd256cb5914f40e13376580fddd50a85584ef51927d83',
   'wrangler.toml': 'e1c6602a297a4bbcf82e376a6085ba8e0056faf9b8cd38a010c1b39966ba7f3e',
-})
-
-const EXPECTED_CAPABILITY_SURFACES = immutablePlain({
-  leaderboardRead: ['frontend', 'pages'],
-  identityClaim: ['frontend', 'pages', 'worker'],
-  identityStatus: ['frontend', 'pages', 'worker'],
-  identityRename: ['frontend', 'pages', 'worker'],
-  draftSubmission: ['frontend', 'pages', 'worker'],
-  identityRecovery: ['frontend', 'pages', 'worker'],
-  cleanupCron: ['worker', 'schedule'],
 })
 
 const MODES = new Set(['disabled', 'enabled'])
@@ -585,7 +577,7 @@ export function validateCapabilityMatrix(input, trustedContext) {
         const label = `${environment}.${capability}.${surface}`
         const surfaceRecord = record.surfaces[surface]
         validateSurfaceState(surfaceRecord, label)
-        const applicable = EXPECTED_CAPABILITY_SURFACES[capability].includes(surface)
+        const applicable = RELEASE_INSPECTION_CAPABILITY_SURFACES[capability].includes(surface)
         if (!applicable) {
           if (surfaceRecord.applicability !== 'not-applicable'
             || surfaceRecord.configuredState !== 'not-applicable'

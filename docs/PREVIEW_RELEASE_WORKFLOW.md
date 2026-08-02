@@ -3,9 +3,17 @@
 Milestone 3D-1 left the legacy Preview release workflow disabled-only while
 adding the protected schema-4 capability-model foundation. Milestone 3D-2A
 adds strict local release-inspection contracts and projection without making
-that legacy workflow capability-oriented or executable. Neither milestone authorizes
-remote inspection, release execution, deployment, migration, smoke execution,
-secret provisioning, or capability activation.
+that legacy workflow capability-oriented or executable. Milestone 3D-2B.2 adds
+closed Preview resource normalization, single-read observation, and a pure
+candidate capability projection. These milestones do not authorize remote
+inspection, release execution, deployment, migration, smoke execution, secret
+provisioning, or capability activation.
+
+The 3D-2B.2 candidate projection has no operator CLI. It can consume only an
+opaque validated normalized single-read snapshot, and it permanently retains
+`releaseCurrentness: "UNKNOWN"` and
+`executionAuthorization: "prohibited"`. See
+[Milestone 3D-2B.2 Preview resource observation and candidate projection](MILESTONE_3D2B2_PREVIEW_RESOURCE_OBSERVATION.md).
 
 ## Current command boundary
 
