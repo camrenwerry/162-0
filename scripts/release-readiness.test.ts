@@ -71,6 +71,16 @@ const expectedUpdateHighlights = [
   'The same historical drafting experience.',
   'The same pursuit of building the greatest roster in baseball history.',
 ]
+const expectedMobileRosterUpdate = {
+  id: 'mobile-roster-overview',
+  label: 'August 2, 2026',
+  heading: 'Mobile Roster Overview',
+  highlights: [
+    'Expand a full 14-player roster view at any time on mobile.',
+    'Newly filled roster slots automatically follow into view.',
+    'Improved mobile roster awareness with accessible controls and clear announcements.',
+  ],
+}
 assert.equal(APP_VERSION, '1.0.0')
 assert.equal(JSON.parse(read('package.json')).version, APP_VERSION, 'package and shared app versions must match')
 assert.equal(VERSION_METADATA_SCHEMA_VERSION, 1)
@@ -96,13 +106,17 @@ assert.deepEqual(VERSION_METADATA, {
   rngVersion: 'seeded-v1',
   leaderboardVersion: null,
 })
-assert.equal(GAME_UPDATES[0]?.version, APP_VERSION)
-assert.equal(GAME_UPDATES[0]?.label, 'Pennant Pursuit 1.0.0')
-assert.equal(GAME_UPDATES[0]?.heading, 'A New Era Begins')
-assert.equal(GAME_UPDATES[0]?.intro, 'Pennant Pursuit has officially arrived.')
-assert.deepEqual(GAME_UPDATES[0]?.highlights, expectedUpdateHighlights)
-assert.equal(GAME_UPDATES[0]?.note, 'Thank you for helping shape the future of Pennant Pursuit.')
-const numericVersions = GAME_UPDATES.map(({ version }) => version.split('.').reduce((total, part) => total * 1000 + Number(part), 0))
+assert.deepEqual(GAME_UPDATES[0], expectedMobileRosterUpdate)
+assert.equal(GAME_UPDATES[1]?.version, APP_VERSION)
+assert.equal(GAME_UPDATES[1]?.label, 'Pennant Pursuit 1.0.0')
+assert.equal(GAME_UPDATES[1]?.heading, 'A New Era Begins')
+assert.equal(GAME_UPDATES[1]?.intro, 'Pennant Pursuit has officially arrived.')
+assert.deepEqual(GAME_UPDATES[1]?.highlights, expectedUpdateHighlights)
+assert.equal(GAME_UPDATES[1]?.note, 'Thank you for helping shape the future of Pennant Pursuit.')
+assert.equal(GAME_UPDATES[2]?.version, '0.12.0')
+assert.equal(GAME_UPDATES[2]?.heading, "What's New")
+assert.equal(GAME_UPDATES[2]?.highlights.length, 6)
+const numericVersions = GAME_UPDATES.flatMap(({ version }) => version ? [version.split('.').reduce((total, part) => total * 1000 + Number(part), 0)] : [])
 assert.deepEqual(numericVersions, [...numericVersions].sort((left, right) => right - left), 'game updates must remain newest-first')
 
 const app = read('src/App.tsx')

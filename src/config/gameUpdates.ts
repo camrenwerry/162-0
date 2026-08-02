@@ -1,7 +1,8 @@
 import { APP_VERSION } from './versions'
 
 export interface GameUpdate {
-  version: string
+  id?: string
+  version?: string
   label?: string
   heading: string
   intro?: string
@@ -11,6 +12,16 @@ export interface GameUpdate {
 
 // Keep releases newest-first so future updates can be added without changing the screen.
 export const GAME_UPDATES: readonly GameUpdate[] = [
+  {
+    id: 'mobile-roster-overview',
+    label: 'August 2, 2026',
+    heading: 'Mobile Roster Overview',
+    highlights: [
+      'Expand a full 14-player roster view at any time on mobile.',
+      'Newly filled roster slots automatically follow into view.',
+      'Improved mobile roster awareness with accessible controls and clear announcements.',
+    ],
+  },
   {
     version: APP_VERSION,
     label: `Pennant Pursuit ${APP_VERSION}`,

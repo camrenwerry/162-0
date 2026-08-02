@@ -22,7 +22,7 @@ export default function GameUpdatesScreen({ onHome }: GameUpdatesScreenProps) {
 
         <div className="game-updates__releases">
           {GAME_UPDATES.map((update) => (
-            <article className="game-updates__release" key={update.version}>
+            <article className="game-updates__release" key={update.id ?? update.version}>
               <h1>{update.label ?? `Version ${update.version}`}</h1>
               <h2>{update.heading}</h2>
               {update.intro && <p>{update.intro}</p>}
