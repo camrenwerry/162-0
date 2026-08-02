@@ -1972,6 +1972,7 @@ test('approved request, pagination, zone, response, timeout, retry, redirect, an
     maximumPaginationPages: 10,
     maximumRecordsPerFamily: 250,
     maximumResponseBytes: 1_048_576,
+    maximumResponseReadIterations: 4_096,
     maximumSerializedObservationBytes: 1_048_576,
     requestTimeoutMs: 10_000,
     fullReadTimeoutMs: 120_000,

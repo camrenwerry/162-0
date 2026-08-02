@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "fixtures": {
+    "account": "account.json",
+    "zones": "zones-page.json",
+    "pagesProject": "pages-project.json",
+    "workerSettings": "worker-settings.json",
+    "d1Database": "d1-database.json",
+    "d1Query": "d1-query.json"
+  }
+}

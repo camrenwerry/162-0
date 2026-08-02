@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": {
+    "bindings": [],
+    "compatibility_date": "2026-01-01",
+    "usage_model": "bundled"
+  }
+}

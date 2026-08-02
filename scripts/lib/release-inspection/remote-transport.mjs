@@ -6,6 +6,7 @@ import {
   parseStrictJson,
 } from '../preview-release/canonical.mjs'
 import { assertReleaseInspectionIntrinsicIntegrity } from './intrinsic-integrity.mjs'
+import { assertNoProductionPoisoning } from './production-poisoning.mjs'
 
 const isProxy = utilTypes.isProxy
 const bufferByteLength = Buffer.byteLength
@@ -34,6 +35,7 @@ export const REMOTE_OBSERVATION_LIMITS = immutablePlain({
   maximumPaginationPages: 10,
   maximumRecordsPerFamily: 250,
   maximumResponseBytes: 1_048_576,
+  maximumResponseReadIterations: 4_096,
   maximumSerializedObservationBytes: 1_048_576,
   requestTimeoutMs: 10_000,
   fullReadTimeoutMs: 120_000,
@@ -259,8 +261,6 @@ const RESOURCE_NAME_PATTERN = /^[a-z0-9][a-z0-9-]{0,62}$/
 const DATABASE_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
 const DEDICATED_CREDENTIAL = 'PENNANT_PREVIEW_API_TOKEN'
 const DEDICATED_CREDENTIAL_SKELETON = 'pennantpreviewapitoken'
-const TRUSTED_OBJECT_PROTOTYPE_KEYS = new Set(Reflect.ownKeys(Object.prototype))
-const TRUSTED_ARRAY_PROTOTYPE_KEYS = new Set(Reflect.ownKeys(Array.prototype))
 
 // These literals are the immutable projection of the protected identities in
 // config/preview-release.json. The caller never supplies or overrides them.
@@ -298,103 +298,15 @@ function exactKeys(value, expected) {
     && expected.every((key) => actual.includes(key))
 }
 
-function decodedVariants(value) {
-  const variants = [value]
-  let current = value
-  for (let index = 0; index < 16; index += 1) {
-    let decoded
-    try {
-      decoded = decodeURIComponent(current)
-    } catch {
-      fail('request identity contains malformed percent encoding.')
-    }
-    if (decoded === current) break
-    variants.push(decoded)
-    current = decoded
-  }
-  try {
-    if (decodeURIComponent(current) !== current) fail('request identity exceeds the repeated-encoding bound.')
-  } catch {
-    fail('request identity contains malformed percent encoding.')
-  }
-  return variants
-}
-
-function rejectProductionPoisoning(values) {
-  for (const value of values) {
-    if (typeof value !== 'string') continue
-    for (const variant of decodedVariants(value)) {
-      const normalized = variant.normalize('NFKC').toLowerCase()
-      if (TRUSTED_PRODUCTION_IDENTIFIERS.some((denied) => normalized.includes(denied))) {
-        fail('request identity contains a prohibited Production identifier.')
-      }
-    }
-  }
-}
-
-function descriptorGraphStrings(input, label) {
-  const values = []
-  const seen = new Set()
-  const visitPrototypeDescriptors = (prototype, depth) => {
-    const trustedKeys = prototype === Object.prototype
-      ? TRUSTED_OBJECT_PROTOTYPE_KEYS
-      : TRUSTED_ARRAY_PROTOTYPE_KEYS
-    for (const key of Reflect.ownKeys(prototype)) {
-      if (typeof key === 'string') values.push(key)
-      const descriptor = Reflect.getOwnPropertyDescriptor(prototype, key)
-      if (!descriptor) fail(`${label} contains an inherited descriptor failure.`)
-      if (!Object.hasOwn(descriptor, 'value') || descriptor.get || descriptor.set) {
-        if (!trustedKeys.has(key)) fail(`${label} contains an inherited accessor.`)
-        continue
-      }
-      if (typeof descriptor.value === 'function') {
-        if (!trustedKeys.has(key)) fail(`${label} contains an inherited callable value.`)
-        continue
-      }
-      if (typeof descriptor.value === 'string' || typeof descriptor.value === 'number') {
-        visit(descriptor.value, depth + 1)
-      } else if (descriptor.value && typeof descriptor.value === 'object') {
-        visit(descriptor.value, depth + 1)
-      }
-    }
-  }
-  const visit = (value, depth) => {
-    if (value === null || ['boolean', 'undefined'].includes(typeof value)) return
-    if (typeof value === 'number') {
-      if (Number.isFinite(value)) values.push(String(value))
-      return
-    }
-    if (typeof value === 'string') {
-      values.push(value)
-      return
-    }
-    if (!value || typeof value !== 'object' || isProxy(value) || depth > 16 || seen.has(value)) {
-      fail(`${label} must be non-proxy, acyclic, bounded descriptor data.`)
-    }
-    seen.add(value)
-    for (const key of Reflect.ownKeys(value)) {
-      if (typeof key !== 'string') fail(`${label} must not contain symbol keys.`)
-      values.push(key)
-      const descriptor = Reflect.getOwnPropertyDescriptor(value, key)
-      if (!descriptor || !Object.hasOwn(descriptor, 'value') || descriptor.get || descriptor.set) {
-        fail(`${label} must contain only data properties.`)
-      }
-      visit(descriptor.value, depth + 1)
-    }
-    const prototype = Reflect.getPrototypeOf(value)
-    if (prototype === Object.prototype || prototype === Array.prototype) {
-      visitPrototypeDescriptors(prototype, depth + 1)
-    } else if (prototype) {
-      visit(prototype, depth + 1)
-    }
-    seen.delete(value)
-  }
-  visit(input, 0)
-  return values
+function rejectProductionPoisoning(input, label) {
+  assertNoProductionPoisoning(input, TRUSTED_PRODUCTION_IDENTIFIERS, {
+    label,
+    error: (reason) => new TypeError(`Remote observation transport refused: ${label} ${reason}`),
+  })
 }
 
 function validateIdentity(input) {
-  rejectProductionPoisoning(descriptorGraphStrings(input, 'Preview identity'))
+  rejectProductionPoisoning(input, 'Preview identity')
   const identity = snapshotPlain(input, 'Preview identity')
   if (!exactKeys(identity, [
     'accountId', 'databaseId', 'pagesProject', 'routeZoneIds', 'workerName',
@@ -418,17 +330,17 @@ function validateIdentity(input) {
     identity.pagesProject,
     identity.workerName,
     ...identity.routeZoneIds,
-  ])
+  ], 'Preview identity')
   return identity
 }
 
 function validateParameters(definition, input, identity) {
-  rejectProductionPoisoning(descriptorGraphStrings(input, `${definition.name} parameters`))
+  rejectProductionPoisoning(input, `${definition.name} parameters`)
   const parameters = snapshotPlain(input, `${definition.name} parameters`)
   if (!exactKeys(parameters, definition.parameterKeys)) {
     fail(`${definition.name} requires exactly its declared parameter schema.`)
   }
-  rejectProductionPoisoning(Object.values(parameters))
+  rejectProductionPoisoning(Object.values(parameters), `${definition.name} parameters`)
   if (parameters.accountId !== identity.accountId) fail('accountId does not equal the grounded Preview identity.')
   if (Object.hasOwn(parameters, 'pagesProject') && parameters.pagesProject !== identity.pagesProject) {
     fail('pagesProject does not equal the grounded Preview identity.')

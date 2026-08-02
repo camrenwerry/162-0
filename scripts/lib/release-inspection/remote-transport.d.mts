@@ -26,6 +26,7 @@ export interface RemoteObservationLimits {
   readonly maximumPaginationPages: 10
   readonly maximumRecordsPerFamily: 250
   readonly maximumResponseBytes: 1048576
+  readonly maximumResponseReadIterations: 4096
   readonly maximumSerializedObservationBytes: 1048576
   readonly requestTimeoutMs: 10000
   readonly fullReadTimeoutMs: 120000

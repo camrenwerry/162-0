@@ -1,4 +1,6 @@
 import { Buffer as NodeBuffer } from "node:buffer";
+import { types as nodeUtilTypes } from "node:util";
+import { runInNewContext } from "node:vm";
 
 const reflectOwnKeys = Reflect.ownKeys;
 const reflectApply = Reflect.apply;
@@ -8,11 +10,101 @@ const objectHasOwn = Object.hasOwn;
 const objectIs = Object.is;
 const TrustedTypeError = TypeError;
 const trustedGlobalThis = globalThis;
+const isProxy = nodeUtilTypes.isProxy;
+const pristineWeakMapIntrinsics = runInNewContext(`({
+  WeakMap,
+  functionToString: Function.prototype.toString,
+  weakMapDelete: WeakMap.prototype.delete,
+  weakMapGet: WeakMap.prototype.get,
+  weakMapHas: WeakMap.prototype.has,
+  weakMapPrototype: WeakMap.prototype,
+  weakMapSet: WeakMap.prototype.set,
+})`);
+const TrustedWeakMap = pristineWeakMapIntrinsics.WeakMap;
+const trustedFunctionToString = pristineWeakMapIntrinsics.functionToString;
+const trustedWeakMapGet = pristineWeakMapIntrinsics.weakMapGet;
+const trustedWeakMapSet = pristineWeakMapIntrinsics.weakMapSet;
 
 const INTEGRITY_FAILURE =
   "Release-inspection intrinsic integrity refused: protected intrinsic descriptors or global bindings differ from trusted startup state.";
 const MAX_TRUSTED_TARGETS = 4_096;
 const MAX_TRUSTED_OWN_KEYS = 65_536;
+
+function nativeSource(value) {
+  if (typeof value !== "function" || isProxy(value)) {
+    throw new TrustedTypeError(INTEGRITY_FAILURE);
+  }
+  return reflectApply(trustedFunctionToString, value, []);
+}
+
+function assertStartupWeakMapIntegrity() {
+  try {
+    const constructorDescriptor = reflectGetOwnPropertyDescriptor(trustedGlobalThis, "WeakMap");
+    if (
+      !constructorDescriptor ||
+      !objectHasOwn(constructorDescriptor, "value") ||
+      constructorDescriptor.configurable !== true ||
+      constructorDescriptor.enumerable !== false ||
+      constructorDescriptor.writable !== true
+    ) {
+      throw new TrustedTypeError(INTEGRITY_FAILURE);
+    }
+    const currentConstructor = constructorDescriptor.value;
+    const currentPrototype = currentConstructor.prototype;
+    const expectedPrototype = pristineWeakMapIntrinsics.weakMapPrototype;
+    if (
+      nativeSource(currentConstructor) !== nativeSource(TrustedWeakMap) ||
+      reflectGetPrototypeOf(currentConstructor) !== Function.prototype ||
+      !currentPrototype ||
+      reflectGetPrototypeOf(currentPrototype) !== Object.prototype
+    ) {
+      throw new TrustedTypeError(INTEGRITY_FAILURE);
+    }
+    const expectedKeys = reflectOwnKeys(expectedPrototype);
+    const currentKeys = reflectOwnKeys(currentPrototype);
+    if (currentKeys.length !== expectedKeys.length) {
+      throw new TrustedTypeError(INTEGRITY_FAILURE);
+    }
+    for (let index = 0; index < expectedKeys.length; index += 1) {
+      const key = expectedKeys[index];
+      if (!currentKeys.some((candidate) => objectIs(candidate, key))) {
+        throw new TrustedTypeError(INTEGRITY_FAILURE);
+      }
+      const expected = reflectGetOwnPropertyDescriptor(expectedPrototype, key);
+      const current = reflectGetOwnPropertyDescriptor(currentPrototype, key);
+      if (
+        !expected ||
+        !current ||
+        expected.configurable !== current.configurable ||
+        expected.enumerable !== current.enumerable ||
+        objectHasOwn(expected, "value") !== objectHasOwn(current, "value")
+      ) {
+        throw new TrustedTypeError(INTEGRITY_FAILURE);
+      }
+      if (objectHasOwn(expected, "value")) {
+        if (expected.writable !== current.writable) {
+          throw new TrustedTypeError(INTEGRITY_FAILURE);
+        }
+        if (typeof expected.value === "function") {
+          if (nativeSource(expected.value) !== nativeSource(current.value)) {
+            throw new TrustedTypeError(INTEGRITY_FAILURE);
+          }
+        } else if (!objectIs(expected.value, current.value)) {
+          throw new TrustedTypeError(INTEGRITY_FAILURE);
+        }
+      } else if (expected.get || expected.set || current.get || current.set) {
+        throw new TrustedTypeError(INTEGRITY_FAILURE);
+      }
+    }
+    if (currentPrototype.constructor !== currentConstructor) {
+      throw new TrustedTypeError(INTEGRITY_FAILURE);
+    }
+  } catch {
+    throw new TrustedTypeError(INTEGRITY_FAILURE);
+  }
+}
+
+assertStartupWeakMapIntegrity();
 
 // These are the mutable global bindings read by the release-observation graph.
 // Imported Node constructors are rooted separately below so the graph also
@@ -38,6 +130,7 @@ const PROTECTED_GLOBAL_KEYS = [
   "Uint8Array",
   "URL",
   "URLSearchParams",
+  "WeakMap",
   "WeakSet",
   "decodeURIComponent",
   "encodeURIComponent",
@@ -203,4 +296,19 @@ export function assertReleaseInspectionIntrinsicIntegrity() {
   } catch {
     throw new TrustedTypeError(INTEGRITY_FAILURE);
   }
+}
+
+export function createReleaseInspectionWeakMap() {
+  assertReleaseInspectionIntrinsicIntegrity();
+  return new TrustedWeakMap();
+}
+
+export function getReleaseInspectionWeakMapValue(authority, key) {
+  assertReleaseInspectionIntrinsicIntegrity();
+  return reflectApply(trustedWeakMapGet, authority, [key]);
+}
+
+export function setReleaseInspectionWeakMapValue(authority, key, value) {
+  assertReleaseInspectionIntrinsicIntegrity();
+  reflectApply(trustedWeakMapSet, authority, [key, value]);
 }

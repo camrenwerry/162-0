@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": [
+    {
+      "success": true,
+      "results": [],
+      "meta": {
+        "rows_read": 0,
+        "rows_written": 0
+      }
+    }
+  ]
+}
