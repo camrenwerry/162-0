@@ -6,12 +6,26 @@ import {
   openSync,
   readFileSync,
   readSync,
+  Stats,
 } from 'node:fs'
 import path from 'node:path'
 import { TextDecoder, types as utilTypes } from 'node:util'
 
+const isProxy = utilTypes.isProxy
+const reflectApply = Reflect.apply
+const objectGetPrototypeOf = Object.getPrototypeOf
+const pathJoin = path.join
+const bufferAllocUnsafe = Buffer.allocUnsafe
+const bufferByteLength = Buffer.byteLength
+const bufferFrom = Buffer.from
+const statsIsFile = Stats.prototype.isFile
+const textDecoderDecode = TextDecoder.prototype.decode
+const trustedHashPrototype = objectGetPrototypeOf(createHash('sha256'))
+const hashUpdate = trustedHashPrototype.update
+const hashDigest = trustedHashPrototype.digest
+
 const DANGEROUS_KEYS = new Set(['__proto__', 'prototype', 'constructor'])
-const UTF8_BOM = Buffer.from([0xEF, 0xBB, 0xBF])
+const UTF8_BOM = bufferFrom([0xEF, 0xBB, 0xBF])
 export const PREVIEW_RELEASE_TOOL_CONTRACT_VERSION = 'preview-release-disabled-only-v2'
 export const PREVIEW_RELEASE_PLAN_SCHEMA_VERSION = 4
 
@@ -54,13 +68,20 @@ export function decodeStrictUtf8(bytes, {
   allowBom = false,
 } = {}) {
   if (!(bytes instanceof Uint8Array)) strictJsonError(error, `${label} must be bytes.`)
-  if (!allowBom && bytes.length >= UTF8_BOM.length
-    && UTF8_BOM.every((byte, index) => bytes[index] === byte)) {
+  let hasUtf8Bom = bytes.length >= UTF8_BOM.length
+  for (let index = 0; hasUtf8Bom && index < UTF8_BOM.length; index += 1) {
+    if (bytes[index] !== UTF8_BOM[index]) hasUtf8Bom = false
+  }
+  if (!allowBom && hasUtf8Bom) {
     strictJsonError(error, `${label} must not contain a UTF-8 BOM.`)
   }
   let decoded
   try {
-    decoded = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes)
+    decoded = reflectApply(
+      textDecoderDecode,
+      new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }),
+      [bytes],
+    )
   } catch {
     strictJsonError(error, `${label} must contain valid UTF-8.`)
   }
@@ -78,23 +99,25 @@ export function readBoundedUtf8File(filePath, {
 } = {}) {
   if (!validLimit(maxBytes)) strictJsonError(error, `${label} byte limit is invalid.`)
   const pathStatus = lstatSync(filePath)
-  if (!pathStatus.isFile()) strictJsonError(error, `${label} must be a regular, non-symbolic-link file.`)
+  if (!reflectApply(statsIsFile, pathStatus, [])) {
+    strictJsonError(error, `${label} must be a regular, non-symbolic-link file.`)
+  }
   const descriptor = openSync(filePath, 'r')
   try {
     const status = fstatSync(descriptor)
-    if (!status.isFile()) strictJsonError(error, `${label} must be a regular file.`)
+    if (!reflectApply(statsIsFile, status, [])) strictJsonError(error, `${label} must be a regular file.`)
     if (status.dev !== pathStatus.dev || status.ino !== pathStatus.ino) {
       strictJsonError(error, `${label} changed before it was read.`)
     }
     if (status.size > maxBytes) strictJsonError(error, `${label} exceeds the ${maxBytes}-byte limit.`)
-    const bytes = Buffer.allocUnsafe(status.size)
+    const bytes = bufferAllocUnsafe(status.size)
     let total = 0
     while (total < bytes.length) {
       const count = readSync(descriptor, bytes, total, bytes.length - total, total)
       if (count === 0) strictJsonError(error, `${label} changed while it was being read.`)
       total += count
     }
-    const extra = Buffer.allocUnsafe(1)
+    const extra = bufferAllocUnsafe(1)
     if (readSync(descriptor, extra, 0, 1, total) !== 0) {
       strictJsonError(error, `${label} changed or exceeded its byte limit while it was being read.`)
     }
@@ -174,7 +197,7 @@ export function parseStrictJson(source, {
   if (source.includes('\0')) throw error(`${label} must not contain NUL.`)
   if (source.includes('\uFFFD')) throw error(`${label} must not contain the Unicode replacement character.`)
   assertValidUnicode(source, (message) => { throw error(`${label} ${message}`) }, 'source text')
-  const byteLength = Buffer.byteLength(source, 'utf8')
+  const byteLength = bufferByteLength(source, 'utf8')
   if (byteLength > limits.maxBytes) throw error(`${label} exceeds the ${limits.maxBytes}-byte limit.`)
   let offset = 0
   let nodes = 0
@@ -312,7 +335,7 @@ function clonePlain(value, trail = '$') {
     return value
   }
   if (Array.isArray(value)) {
-    if (utilTypes.isProxy(value)) throw new TypeError(`Canonical JSON prohibits proxies at ${trail}.`)
+    if (isProxy(value)) throw new TypeError(`Canonical JSON prohibits proxies at ${trail}.`)
     if (Object.getPrototypeOf(value) !== Array.prototype) throw new TypeError(`Canonical JSON requires a plain array at ${trail}.`)
     const keys = Reflect.ownKeys(value)
     if (keys.some((key) => typeof key === 'symbol')) throw new TypeError(`Canonical JSON prohibits symbol keys at ${trail}.`)
@@ -339,7 +362,7 @@ function clonePlain(value, trail = '$') {
     return clone
   }
   if (typeof value === 'object') {
-    if (utilTypes.isProxy(value)) throw new TypeError(`Canonical JSON prohibits proxies at ${trail}.`)
+    if (isProxy(value)) throw new TypeError(`Canonical JSON prohibits proxies at ${trail}.`)
     const prototype = Object.getPrototypeOf(value)
     if (prototype !== Object.prototype) throw new TypeError(`Canonical JSON requires an ordinary plain object at ${trail}.`)
     const clone = {}
@@ -381,7 +404,9 @@ export function canonicalJson(value) {
 }
 
 export function sha256(value) {
-  return createHash('sha256').update(value).digest('hex')
+  const hash = createHash('sha256')
+  reflectApply(hashUpdate, hash, [value])
+  return reflectApply(hashDigest, hash, ['hex'])
 }
 
 export function canonicalHash(value) {
@@ -395,7 +420,7 @@ export function fileHash(filePath) {
 export function aggregateFileHash(repositoryRoot, relativePaths) {
   const entries = [...new Set(relativePaths)].sort().map((relativePath) => ({
     path: relativePath,
-    sha256: fileHash(path.join(repositoryRoot, relativePath)),
+    sha256: fileHash(pathJoin(repositoryRoot, relativePath)),
   }))
   return canonicalHash(entries)
 }

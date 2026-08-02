@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": true,
+    "strict": true,
+    "target": "ES2022",
+    "types": ["node"]
+  },
+  "files": [
+    "release-observation-declarations.contract.ts",
+    "lib/release-inspection/remote-contracts.d.mts",
+    "lib/release-inspection/remote-transport.d.mts"
+  ]
+}

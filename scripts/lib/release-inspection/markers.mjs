@@ -1,7 +1,11 @@
 import { types as utilTypes } from 'node:util'
 import { immutablePlain } from '../preview-release/canonical.mjs'
+import { assertReleaseInspectionIntrinsicIntegrity } from './intrinsic-integrity.mjs'
+
+const isProxy = utilTypes.isProxy
 
 export const RELEASE_INSPECTION_TOOL_CONTRACT_VERSION = 'release-inspection-local-only-v1'
+export const RELEASE_INSPECTION_REMOTE_TOOL_CONTRACT_VERSION = 'release-inspection-read-only-observation-v1'
 
 export const RELEASE_INSPECTION_KINDS = Object.freeze({
   manifest: 'pennant-pursuit-release-inspection-manifest',
@@ -9,12 +13,14 @@ export const RELEASE_INSPECTION_KINDS = Object.freeze({
   bindingPolicy: 'pennant-pursuit-release-inspection-binding-policy',
   observationPlaceholder: 'pennant-pursuit-release-inspection-observation-placeholder',
   localProjection: 'pennant-pursuit-release-inspection-local-projection',
+  remoteObservation: 'pennant-pursuit-release-inspection-remote-observation',
 })
 
 const normalizeMarker = (value) => value.normalize('NFKC').toLowerCase()
 const RELEASE_INSPECTION_MARKERS = new Set([
   ...Object.values(RELEASE_INSPECTION_KINDS),
   RELEASE_INSPECTION_TOOL_CONTRACT_VERSION,
+  RELEASE_INSPECTION_REMOTE_TOOL_CONTRACT_VERSION,
 ].map(normalizeMarker))
 const UNAMBIGUOUS_INSPECTION_KEYS = new Set([
   'artifactKind',
@@ -28,6 +34,22 @@ const UNAMBIGUOUS_INSPECTION_KEYS = new Set([
   'protectedSourceHashes',
   'noNetworkAccess',
   'noFilesystemWrites',
+  'releaseCurrentness',
+  'productionContacted',
+  'noSecretValues',
+  'localExpectations',
+  'stableRead',
+  'credentialScope',
+  'requestCounts',
+  'capturedAtMs',
+  'captureStartedAtMs',
+  'captureCompletedAtMs',
+  'firstReadCompletedAtMs',
+  'secondReadStartedAtMs',
+  'secondReadCompletedAtMs',
+  'expiresAtMs',
+  'readOrdinals',
+  'endpointFamily',
   'policy',
   'result',
 ].map(normalizeMarker))
@@ -133,7 +155,7 @@ const LEGACY_ALLOWED_CONTEXTUAL_PATHS = Object.freeze({
 })
 
 function exactOwnDataKeys(value, expected) {
-  if (!value || typeof value !== 'object' || utilTypes.isProxy(value) || Array.isArray(value)) return false
+  if (!value || typeof value !== 'object' || isProxy(value) || Array.isArray(value)) return false
   let keys
   let prototype
   try {
@@ -189,7 +211,7 @@ function assertNoMarkerInDescriptorGraph(root) {
     }
     if (value === null || ['undefined', 'boolean', 'number'].includes(typeof value)) return
     if (typeof value !== 'object') throw barrierError()
-    if (utilTypes.isProxy(value) || depth > MAX_DEPTH || nodes >= MAX_NODES
+    if (isProxy(value) || depth > MAX_DEPTH || nodes >= MAX_NODES
       || active.has(value) || seen.has(value)) throw barrierError()
     active.add(value)
     seen.add(value)
@@ -239,6 +261,7 @@ function assertNoMarkerInDescriptorGraph(root) {
 }
 
 export function assertNoReleaseInspectionArtifactForLegacyExecution(input) {
+  assertReleaseInspectionIntrinsicIntegrity()
   assertNoMarkerInDescriptorGraph(input)
   try {
     immutablePlain(input)

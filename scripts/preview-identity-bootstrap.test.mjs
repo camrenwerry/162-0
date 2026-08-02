@@ -508,6 +508,10 @@ test('the exact public Node entry point leaves the complete controlled repositor
       path.join(REPOSITORY_ROOT, 'scripts/lib/release-inspection/markers.mjs'),
       path.join(temporaryRoot, 'scripts/lib/release-inspection/markers.mjs'),
     )
+    cpSync(
+      path.join(REPOSITORY_ROOT, 'scripts/lib/release-inspection/intrinsic-integrity.mjs'),
+      path.join(temporaryRoot, 'scripts/lib/release-inspection/intrinsic-integrity.mjs'),
+    )
     const temporaryManifest = clone(manifest)
     temporaryManifest.repository.allowedRoots = [temporaryRoot]
     writeFileSync(

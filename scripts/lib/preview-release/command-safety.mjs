@@ -36,8 +36,10 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/preview-plan.mjs'],
   ['scripts/protected-release-files.test.mjs'],
   ['scripts/release-inspection-local.mjs'],
+  ['scripts/release-inspection-observe.mjs'],
   ['--test', 'scripts/preview-identity-bootstrap.test.mjs'],
   ['--test', 'scripts/release-inspection-contracts.test.mjs'],
+  ['--test', 'scripts/release-observation-contracts.test.mjs'],
   ['--test', 'scripts/preview-workflow.test.mjs'],
   ['--test', 'scripts/preview-release-automation.test.mjs'],
   ['scripts/production-migration-guard.test.mjs'],
@@ -116,6 +118,7 @@ const SAFE_TSC_ARGUMENTS = new Set([
   ['-b'],
   ['--project', 'functions/tsconfig.json', '--noEmit'],
   ['--project', 'scripts/tsconfig.d1c4.json', '--noEmit'],
+  ['--project', 'scripts/tsconfig.release-observation.json', '--noEmit'],
   ['--project', 'workers/draft-validation/tsconfig.json', '--noEmit'],
 ].map((argumentsList) => JSON.stringify(argumentsList)))
 

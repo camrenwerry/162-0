@@ -33,6 +33,7 @@ export const TYPECHECK_STAGES = Object.freeze([
   npmRunStage('Private Worker generated-type check', 'validation-worker:types:check'),
   npmRunStage('Private Worker type check', 'validation-worker:typecheck'),
   npmRunStage('D1C.4 tooling type check', 'd1c4:typecheck'),
+  npmRunStage('Release-observation declaration contract check', 'test:release-observation-declarations'),
 ])
 
 export const TEST_STAGES = Object.freeze([
@@ -66,6 +67,7 @@ export const TEST_STAGES = Object.freeze([
   npmRunStage('Preview workflow foundation tests', 'test:preview-workflow'),
   npmRunStage('Preview release automation tests', 'test:preview-release-automation'),
   npmRunStage('Release-inspection contract tests', 'test:release-inspection'),
+  npmRunStage('Release-observation aggregate tests', 'test:release-observation'),
 ])
 
 const ROUTINE_EXCLUDED_TEST_SCRIPTS = new Set([

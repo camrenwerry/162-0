@@ -7,7 +7,7 @@ import { readStrictPackageMetadataFile } from './lib/preview-release/canonical.m
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url)
 const REPOSITORY_ROOT = path.resolve(path.dirname(SCRIPT_PATH), '..')
-const TEXT_EXTENSIONS = new Set(['.css', '.example', '.html', '.js', '.json', '.md', '.mjs', '.sql', '.toml', '.ts', '.tsx', '.yml', '.yaml'])
+const TEXT_EXTENSIONS = new Set(['.css', '.d.mts', '.example', '.html', '.js', '.json', '.md', '.mjs', '.mts', '.sql', '.toml', '.ts', '.tsx', '.yml', '.yaml'])
 const GENERATED_TEXT_FILES = new Set([
   'functions/types.d.ts',
   'workers/draft-validation/worker-configuration.d.ts',
@@ -25,6 +25,7 @@ const RELEASE_WORKFLOW_FILES = [
   'docs/MILESTONE_3C2_CI_RELEASE_STABILIZATION.md',
   'docs/PREVIEW_RELEASE_WORKFLOW.md',
   'docs/MILESTONE_3D2A_RELEASE_INSPECTION_CONTRACTS.md',
+  'docs/MILESTONE_3D2B1_OBSERVATION_CONTRACTS.md',
   'package.json',
   'scripts/ci-workflow-contract.test.mjs',
   'scripts/preview-diagnostics-summary.mjs',
@@ -35,7 +36,11 @@ const RELEASE_WORKFLOW_FILES = [
   'scripts/preview-identity-bootstrap.test.mjs',
   'scripts/preview-plan.mjs',
   'scripts/release-inspection-local.mjs',
+  'scripts/release-inspection-observe.mjs',
   'scripts/release-inspection-contracts.test.mjs',
+  'scripts/release-observation-contracts.test.mjs',
+  'scripts/release-observation-declarations.contract.ts',
+  'scripts/tsconfig.release-observation.json',
   'scripts/protected-release-files.test.mjs',
   'scripts/preview-workflow.test.mjs',
   'scripts/text-integrity.mjs',
@@ -54,8 +59,13 @@ const RELEASE_WORKFLOW_FILES = [
   'scripts/lib/preview-release/redaction.mjs',
   'scripts/lib/preview-release/reporting.mjs',
   'scripts/lib/release-inspection/contracts.mjs',
+  'scripts/lib/release-inspection/intrinsic-integrity.mjs',
   'scripts/lib/release-inspection/local-projection.mjs',
   'scripts/lib/release-inspection/markers.mjs',
+  'scripts/lib/release-inspection/remote-contracts.mjs',
+  'scripts/lib/release-inspection/remote-contracts.d.mts',
+  'scripts/lib/release-inspection/remote-transport.mjs',
+  'scripts/lib/release-inspection/remote-transport.d.mts',
   'src/config/protectedCapabilities.mjs',
 ]
 
