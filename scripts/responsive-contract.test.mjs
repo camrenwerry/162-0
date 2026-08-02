@@ -47,6 +47,12 @@ assert(simulationCss.includes('min-height: 100svh') && simulationCss.includes('1
 assert(draftCss.includes('max-height: calc(100dvh - env(safe-area-inset-top)'), 'the position picker must fit inside the viewport')
 assert(draftCss.includes('.position-filters') && draftCss.includes('overflow-x: auto'), 'position filters must remain horizontally accessible')
 assert(draftCss.includes('.roster-bar__slots') && draftCss.includes('scroll-snap-type: x proximity'), 'the mobile roster must remain horizontally accessible')
+assert(roster.includes('aria-expanded={overviewExpanded}') && roster.includes('aria-controls={overviewId}'), 'the mobile roster overview must use a real accessible disclosure')
+assert(roster.includes('aria-live="polite"') && roster.includes('aria-atomic="true"'), 'successful roster additions must use one bounded polite announcement')
+assert(roster.includes("event.key === 'Escape'") && roster.includes('disclosureRef.current?.focus()'), 'Escape must collapse the mobile roster overview without losing disclosure focus')
+assert(roster.includes("window.innerWidth >= 900") && roster.includes("behavior: reducedMotion ? 'auto' : 'smooth'"), 'new-slot following must remain mobile-only and respect reduced motion')
+assert(draftCss.includes('@media (max-width: 899px)') && draftCss.includes('.roster-bar__overview-grid') && draftCss.includes('max-height: min(24rem'), 'the full-roster grid must stay mobile-only and internally scrollable')
+assert(draftCss.includes('.roster-bar__disclosure:focus-visible') && draftCss.includes('min-height: 2.75rem'), 'the mobile roster disclosure must preserve visible focus and a 44px touch target')
 assert(draftCss.includes("padding-bottom: calc(9.5rem + env(safe-area-inset-bottom))"), 'draft content must clear the fixed roster and home indicator')
 
 for (const minimum of ['width: 2.75rem; height: 2.75rem', 'min-height: 2.75rem', 'min-height: 3.25rem']) {

@@ -128,6 +128,7 @@
 .roster-bar__summary { display: flex; width: min(100%, 76rem); margin: 0 auto 0.42rem; align-items: center; justify-content: space-between; color: #b9c2cc; font-family: 'Bebas Neue', var(--font-display); font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; }
 .roster-bar__summary strong { color: #f5c542; font-size: 0.8rem; }
 .roster-bar__summary i { color: #697687; font-style: normal; }
+.roster-bar__disclosure, .roster-bar__overview { display: none; }
 .roster-bar__slots { display: flex; width: min(100%, 76rem); margin-inline: auto; gap: 0.34rem; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; }
 .roster-bar__slots::-webkit-scrollbar { display: none; }
 .roster-bar__slots > div { position: relative; display: flex; width: 4.25rem; min-width: 4.25rem; height: 3.2rem; padding: 0.38rem; align-items: center; justify-content: center; flex-direction: column; border: 1px solid #2d3b49; border-radius: 0.36rem; background: #0a121b; scroll-snap-align: start; }
@@ -152,6 +153,7 @@
 .classic-page.is-finishing .roster-bar__slots > div.is-filled:nth-child(12)::after { animation-delay: 330ms; }
 .classic-page.is-finishing .roster-bar__slots > div.is-filled:nth-child(13)::after { animation-delay: 360ms; }
 .classic-page.is-finishing .roster-bar__slots > div.is-filled:nth-child(14)::after { animation-delay: 390ms; }
+.roster-bar__announcement { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .roster-how { display: none; }
 
 .picker-backdrop { position: fixed; z-index: 60; display: flex; inset: 0; align-items: end; justify-content: center; background: rgb(0 0 0 / 78%); backdrop-filter: blur(6px); animation: fade-in 150ms ease-out; }
@@ -290,6 +292,26 @@
   .results-screen__glow { filter: blur(3rem); }
 }
 
+@media (max-width: 899px) {
+  .roster-bar__summary { gap: 0.4rem; }
+  .roster-bar__summary > span { flex: 1; }
+  .roster-bar__disclosure { display: flex; min-height: 2.75rem; padding: 0.35rem 0.58rem; align-items: center; justify-content: center; gap: 0.35rem; border: 1px solid #596878; border-radius: 0.4rem; outline-offset: 2px; background: #0c1721; color: #d9e1e8; cursor: pointer; font-family: var(--font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.045em; text-transform: uppercase; white-space: nowrap; }
+  .roster-bar__disclosure i { color: #f5c542; font-size: 0.72rem; transform: rotate(180deg); transition: transform 160ms ease; }
+  .roster-bar__disclosure[aria-expanded='true'] i { transform: rotate(0); }
+  .roster-bar__disclosure:focus-visible { outline: 2px solid #f5c542; }
+  .roster-bar__overview:not([hidden]) { display: block; width: min(100%, 76rem); max-height: min(24rem, calc(100dvh - 7.5rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))); margin: 0 auto 0.45rem; padding: 0.42rem; overflow-y: auto; overscroll-behavior: contain; border: 1px solid #3a4856; border-radius: 0.45rem; background: #08111a; scrollbar-color: #64552f #0a121b; scrollbar-width: thin; }
+  .roster-bar__overview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.38rem; }
+  .roster-bar__overview-grid > div { display: grid; min-width: 0; min-height: 3.45rem; padding: 0.42rem 0.5rem; grid-template-columns: 2.1rem minmax(0, 1fr); align-content: center; border: 1px solid #2d3b49; border-radius: 0.36rem; background: #0a121b; }
+  .roster-bar__overview-grid > div.is-filled { border-color: #5d512d; background: linear-gradient(135deg, rgb(77 56 12 / 25%), #0a121b); }
+  .roster-bar__overview-grid strong { grid-row: 1 / 3; align-self: center; color: #e0ad3e; font-family: var(--font-display); font-size: 0.72rem; }
+  .roster-bar__overview-grid span, .roster-bar__overview-grid small { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .roster-bar__overview-grid span { font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; }
+  .roster-bar__overview-grid span.is-empty { color: #8794a2; }
+  .roster-bar__overview-grid small { margin-top: 0.12rem; color: #d5a83f; font-size: 0.47rem; letter-spacing: 0.025em; text-transform: uppercase; }
+  .roster-bar__overview-grid span.is-empty + small { color: #667483; }
+  .roster-bar.is-overview-expanded .roster-bar__slots { display: none; }
+}
+
 @media (min-width: 900px) {
   .classic-page { padding-bottom: calc(2rem + env(safe-area-inset-bottom)); }
   .classic-shell { width: min(calc(100% - 2.5rem - env(safe-area-inset-left) - env(safe-area-inset-right)), 76rem); padding-top: calc(1.2rem + env(safe-area-inset-top)); }
@@ -320,4 +342,5 @@
   .picker-backdrop, .position-picker, .reveal-badge .is-rolling, .reveal-badge .is-landed, .player-card, .roster-bar__slots > div.is-new, .results-particles i, .classic-page.is-finishing, .results-shell { animation-duration: 120ms; animation-iteration-count: 1; }
   .classic-page.is-finishing .roster-bar__slots > div.is-filled:nth-child(n)::after { animation-delay: 0ms; animation-duration: 120ms; }
   .picker-confirm, .results-play-again { transition: none; }
+  .roster-bar__disclosure i { transition: none; }
 }
