@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": [
+    {
+      "success": true,
+      "results": [
+        {
+          "name": "backend_schema"
+        },
+        {
+          "name": "d1_migrations"
+        }
+      ],
+      "meta": {
+        "rows_read": 2,
+        "rows_written": 0
+      }
+    }
+  ]
+}

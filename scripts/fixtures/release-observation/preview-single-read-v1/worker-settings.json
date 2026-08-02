@@ -3,8 +3,45 @@
   "errors": [],
   "messages": [],
   "result": {
-    "bindings": [],
+    "bindings": [
+      {
+        "name": "DRAFT_VALIDATION_MODE",
+        "type": "plain_text",
+        "text": "enabled"
+      },
+      {
+        "name": "DB",
+        "type": "d1",
+        "id": "00000000-0000-4000-8000-000000000001",
+        "database_name": "pennant-pursuit-preview"
+      },
+      {
+        "name": "VALIDATION_SERVICE",
+        "type": "service",
+        "service": "pennant-pursuit-validation-preview",
+        "environment": "preview"
+      },
+      {
+        "name": "RATE_LIMIT_BURST",
+        "type": "ratelimit",
+        "namespace_id": "fixture-preview-rate-limit-burst",
+        "simple": {
+          "limit": 5,
+          "period": 10
+        }
+      },
+      {
+        "name": "RATE_LIMIT_SUSTAINED",
+        "type": "ratelimit",
+        "namespace_id": "fixture-preview-rate-limit-sustained",
+        "simple": {
+          "limit": 20,
+          "period": 60
+        }
+      }
+    ],
     "compatibility_date": "2026-01-01",
+    "compatibility_flags": [],
     "usage_model": "bundled"
   }
 }

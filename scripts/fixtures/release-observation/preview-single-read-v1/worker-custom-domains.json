@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": [
+    {
+      "id": "domain-preview-001",
+      "hostname": "validation.preview.invalid",
+      "service": "pennant-pursuit-validation-preview",
+      "zone_id": "22222222222222222222222222222222",
+      "zone_name": "preview.invalid",
+      "environment": "preview",
+      "cert_id": "00000000-0000-4000-8000-000000000002"
+    }
+  ],
+  "result_info": {
+    "page": 1,
+    "per_page": 25,
+    "count": 1,
+    "total_count": 1,
+    "total_pages": 1
+  }
+}

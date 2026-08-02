@@ -233,7 +233,7 @@ test('single-read resource semantics are a closed allowlisted schema', () => {
     assert.throws(() => createPreviewSingleReadSnapshot({
       capturedAtMs: 101,
       resourceOutcomes: [{ ...outcome('complete'), value }],
-    }), /closed Preview placeholder schema|resource value kind/)
+    }), /normalized resource value|closed Preview placeholder schema|resource value kind/)
   }
   for (const value of [
     { ...placeholder, extra: true },
@@ -1066,14 +1066,27 @@ test('raw-byte transport refuses malformed remote data and credential echo', asy
   await assert.rejects(echo.request(operation('account')), /credential-echo-rejected/)
 })
 
-test('fixture catalog is minimal, synthetic, strict, and Preview-only', () => {
+test('fixture catalog is complete, synthetic, strict, and Preview-only', () => {
   const index = parseStrictJson(readFileSync(path.join(FIXTURE_ROOT, 'index.json'), 'utf8'), {
     label: 'Preview fixture index',
     error: (message) => new TypeError(message),
   })
   assert.equal(index.schemaVersion, 1)
   assert.deepEqual(Object.keys(index.fixtures).sort(), [
-    'account', 'd1Database', 'd1Query', 'pagesProject', 'workerSettings', 'zones',
+    'account',
+    'account-zones',
+    'backend-schema-version',
+    'd1-database',
+    'migration-rows',
+    'migration-table-discovery',
+    'pages-preview-deployments',
+    'pages-project',
+    'worker-custom-domains',
+    'worker-deployments',
+    'worker-routes',
+    'worker-schedules',
+    'worker-settings',
+    'worker-subdomain',
   ])
   for (const file of Object.values(index.fixtures)) {
     const bytes = fixtureBytes(file)
@@ -1098,6 +1111,7 @@ test('runtime and declaration public export surfaces remain exact', async () => 
     ]],
     ['preview-identity', ['loadPreviewObservationIdentity', 'validatePreviewObservationIdentity']],
     ['preview-http-transport', ['createPreviewHttpTransport']],
+    ['preview-resource-observer', ['observePreviewResourcesWithTransport']],
   ]
   for (const [name, expected] of inventories) {
     const runtime = await import(`./lib/release-inspection/${name}.mjs`)
@@ -1119,12 +1133,20 @@ test('new source graph is dormant, local-only, and avoids raw response convenien
     'scripts/lib/release-inspection/preview-identity.mjs',
     'scripts/lib/release-inspection/preview-http-transport.mjs',
     'scripts/lib/release-inspection/preview-authority.mjs',
+    'scripts/lib/release-inspection/preview-d1-observer.mjs',
+    'scripts/lib/release-inspection/preview-normalization.mjs',
+    'scripts/lib/release-inspection/preview-pages-observer.mjs',
+    'scripts/lib/release-inspection/preview-provider-normalizers.mjs',
+    'scripts/lib/release-inspection/preview-resource-observer.mjs',
+    'scripts/lib/release-inspection/preview-resource-schemas.mjs',
+    'scripts/lib/release-inspection/preview-worker-observer.mjs',
     'scripts/lib/release-inspection/production-poisoning.mjs',
     'scripts/lib/release-inspection/testing/mock-preview-transport.mjs',
   ]
   for (const file of files) {
     const source = readFileSync(path.join(REPOSITORY_ROOT, file), 'utf8')
-    assert.doesNotMatch(source, /(?:child_process|wrangler|cloudflare-readonly|release-execution|preview-plan|reporting\.mjs|artifacts\.mjs)/u)
+    assert.doesNotMatch(source, /(?:child_process|cloudflare-readonly|release-execution|preview-plan|reporting\.mjs|artifacts\.mjs)/u)
+    assert.doesNotMatch(source, /(?:from|import)\s*['"][^'"]*wrangler/iu)
     assert.doesNotMatch(source, /(?:writeFile|appendFile|mkdir|rmSync|unlink|renameSync|spawn|execFile)/u)
   }
   const source = readFileSync(

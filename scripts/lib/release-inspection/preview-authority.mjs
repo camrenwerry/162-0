@@ -17,6 +17,8 @@ import {
   setReleaseInspectionWeakMapValue,
 } from './intrinsic-integrity.mjs'
 import { assertNoProductionPoisoning } from './production-poisoning.mjs'
+import { normalizePreviewProviderEnvelope } from './preview-provider-normalizers.mjs'
+import { repositoryMigrationNamesForObservation } from './preview-d1-observer.mjs'
 import {
   consumeRequestBudget,
   createPreviewOperationRequest,
@@ -69,6 +71,7 @@ const abortControllerSignalGetter = Object.getOwnPropertyDescriptor(
 )?.get
 
 const identityAuthority = createReleaseInspectionWeakMap()
+const resourceTransportAuthority = createReleaseInspectionWeakMap()
 const DEPENDENCY_KEYS = Object.freeze(['clearTimer', 'fetchImplementation', 'now', 'setTimer'])
 const VALID_CONTENT_TYPE = /^application\/json(?:\s*;\s*charset\s*=\s*"?utf-8"?)?$/iu
 const ACCOUNT_ID_PATTERN = /^[0-9a-f]{32}$/u
@@ -104,6 +107,10 @@ const SYNTHETIC_IDENTITY = immutablePlain({
   workerName: 'pennant-pursuit-validation-preview',
   databaseId: 'ba6255b4-9425-4863-b10f-79149180f75a',
   routeZoneIds: ['2'.repeat(32)],
+  rateLimitNamespaceIds: {
+    RATE_LIMIT_BURST: 'fixture-preview-rate-limit-burst',
+    RATE_LIMIT_SUSTAINED: 'fixture-preview-rate-limit-sustained',
+  },
 })
 
 class PreviewHttpTransportError extends Error {
@@ -156,6 +163,10 @@ function validatedRawIdentity(manifest) {
     workerName: manifest.cloudflare.preview.worker.name,
     databaseId: manifest.cloudflare.preview.d1.id,
     routeZoneIds: [...zones.values].sort(),
+    rateLimitNamespaceIds: {
+      RATE_LIMIT_BURST: manifest.cloudflare.preview.worker.rateLimitNamespaces[0],
+      RATE_LIMIT_SUSTAINED: manifest.cloudflare.preview.worker.rateLimitNamespaces[1],
+    },
   })
   if (!ACCOUNT_ID_PATTERN.test(raw.accountId)
     || raw.routeZoneIds.some((zoneId) => !ZONE_ID_PATTERN.test(zoneId))) {
@@ -163,7 +174,7 @@ function validatedRawIdentity(manifest) {
   }
   // The 3D-2B.1 request builder remains the authority for fixed Preview names,
   // the D1 UUID, Production poisoning, and reviewed route-zone bounds.
-  createPreviewOperationRequest('account', { accountId: raw.accountId }, raw)
+  createPreviewOperationRequest('account', { accountId: raw.accountId }, transportIdentity(raw))
   return raw
 }
 
@@ -327,7 +338,17 @@ function privateRequest(operation, identity) {
   if (operation.operation === 'd1-database'
     || operation.operation.startsWith('migration-')
     || operation.operation === 'backend-schema-version') parameters.databaseId = identity.databaseId
-  return createPreviewOperationRequest(operation.operation, parameters, identity)
+  return createPreviewOperationRequest(operation.operation, parameters, transportIdentity(identity))
+}
+
+function transportIdentity(identity) {
+  return immutablePlain({
+    accountId: identity.accountId,
+    pagesProject: identity.pagesProject,
+    workerName: identity.workerName,
+    databaseId: identity.databaseId,
+    routeZoneIds: identity.routeZoneIds,
+  })
 }
 
 function requestUrl(request) {
@@ -473,13 +494,37 @@ function containsCredential(value, token) {
   ))
 }
 
-function consumeEnvelope(envelope, request, byteLength) {
+function consumeEnvelope(
+  envelope,
+  request,
+  byteLength,
+  mode,
+  rawIdentity,
+  repositoryMigrationNames,
+  testing,
+) {
   if (envelope.success !== true || envelope.errors.length !== 0 || envelope.messages.length !== 0) {
     fail('provider-response-failure', request.operation)
   }
-  // 3D-2B.2a deliberately consumes and discards provider data here. A later
-  // milestone may add operation-specific normalizers inside this private
-  // boundary without making provider envelopes or identifiers public.
+  if (mode === 'resource') {
+    return normalizePreviewProviderEnvelope(
+      request,
+      envelope,
+      immutablePlain({
+        ...rawIdentity,
+        observedDatabaseId: testing
+          ? '00000000-0000-4000-8000-000000000001'
+          : rawIdentity.databaseId,
+        ...(testing ? {
+          observedRateLimitNamespaceIds: {
+            RATE_LIMIT_BURST: 'fixture-preview-rate-limit-burst',
+            RATE_LIMIT_SUSTAINED: 'fixture-preview-rate-limit-sustained',
+          },
+        } : {}),
+      }),
+      repositoryMigrationNames,
+    )
+  }
   return immutablePlain({
     operation: request.operation,
     bodyBytes: byteLength,
@@ -487,7 +532,14 @@ function consumeEnvelope(envelope, request, byteLength) {
   })
 }
 
-function createTransport(rawIdentity, credentialEnvironment, dependenciesInput, testing = false) {
+function createTransport(
+  rawIdentity,
+  credentialEnvironment,
+  dependenciesInput,
+  testing = false,
+  mode = 'receipt',
+  repositoryMigrationNames = [],
+) {
   validateObservationCredentialEnvironment(credentialEnvironment)
   const token = tokenFromValidatedEnvironment(credentialEnvironment)
   const dependencies = validateDependencies(dependenciesInput, { requireInjectedFetch: testing })
@@ -502,7 +554,7 @@ function createTransport(rawIdentity, credentialEnvironment, dependenciesInput, 
     const operation = normalizeOperation(operationInput)
     const privateDescriptor = validatePreviewOperationRequest(
       privateRequest(operation, rawIdentity),
-      rawIdentity,
+      transportIdentity(rawIdentity),
     )
     if (inFlight) fail('concurrent-request-prohibited', operation.operation)
     const elapsedAtStart = clockNow(dependencies, operation.operation) - startedAtMs
@@ -567,7 +619,15 @@ function createTransport(rawIdentity, credentialEnvironment, dependenciesInput, 
         fail('malformed-response', operation.operation)
       }
       if (containsCredential(envelope, token)) fail('credential-echo-rejected', operation.operation)
-      return consumeEnvelope(envelope, privateDescriptor, bytes.byteLength)
+      return consumeEnvelope(
+        envelope,
+        privateDescriptor,
+        bytes.byteLength,
+        mode,
+        rawIdentity,
+        repositoryMigrationNames,
+        testing,
+      )
     } finally {
       if (timer !== null) {
         try { dependencies.clearTimer(timer) } catch { /* bounded cleanup */ }
@@ -577,7 +637,36 @@ function createTransport(rawIdentity, credentialEnvironment, dependenciesInput, 
     }
   }
 
-  return Object.freeze({ request, requestBudget: () => budget })
+  const publicTransport = Object.freeze({
+    request,
+    requestBudget: () => budget,
+    ...(mode === 'resource' ? { reviewedRouteZoneCount: rawIdentity.routeZoneIds.length } : {}),
+  })
+  if (mode === 'resource') {
+    setReleaseInspectionWeakMapValue(
+      resourceTransportAuthority,
+      publicTransport,
+      Object.freeze({
+        request,
+        requestBudget: publicTransport.requestBudget,
+        reviewedRouteZoneCount: rawIdentity.routeZoneIds.length,
+        assertExhausted: null,
+      }),
+    )
+  }
+  return publicTransport
+}
+
+export function resolvePreviewResourceTransportAuthority(input) {
+  assertReleaseInspectionIntrinsicIntegrity()
+  if (!input || typeof input !== 'object' || isProxy(input)) {
+    throw new TypeError('Preview resource observation refused: transport authority provenance is absent.')
+  }
+  const authority = getReleaseInspectionWeakMapValue(resourceTransportAuthority, input)
+  if (!authority) {
+    throw new TypeError('Preview resource observation refused: transport authority provenance is absent.')
+  }
+  return authority
 }
 
 export function createPreviewHttpTransport(identityInput, credentialEnvironment, dependenciesInput) {
@@ -599,20 +688,24 @@ function syntheticTransportForTesting(credentialEnvironment, dependenciesInput) 
   return createTransport(SYNTHETIC_IDENTITY, credentialEnvironment, dependenciesInput, true)
 }
 
-function authoritativeMockRequest(operation) {
+function authoritativeMockRequest(operation, syntheticIdentity) {
   const definition = PREVIEW_OPERATION_REGISTRY[operation.operation]
   if (!definition) fail('mock-projection-mismatch')
   const parameters = {}
   for (const key of definition.parameterKeys) {
-    if (key === 'accountId') parameters.accountId = SYNTHETIC_IDENTITY.accountId
-    else if (key === 'databaseId') parameters.databaseId = SYNTHETIC_IDENTITY.databaseId
-    else if (key === 'pagesProject') parameters.pagesProject = SYNTHETIC_IDENTITY.pagesProject
-    else if (key === 'workerName') parameters.workerName = SYNTHETIC_IDENTITY.workerName
+    if (key === 'accountId') parameters.accountId = syntheticIdentity.accountId
+    else if (key === 'databaseId') parameters.databaseId = syntheticIdentity.databaseId
+    else if (key === 'pagesProject') parameters.pagesProject = syntheticIdentity.pagesProject
+    else if (key === 'workerName') parameters.workerName = syntheticIdentity.workerName
     else if (key === 'page') parameters.page = operation.page
-    else if (key === 'zoneId') parameters.zoneId = SYNTHETIC_IDENTITY.routeZoneIds[operation.routeZoneIndex]
+    else if (key === 'zoneId') parameters.zoneId = syntheticIdentity.routeZoneIds[operation.routeZoneIndex]
     else fail('mock-projection-mismatch')
   }
-  return createPreviewOperationRequest(operation.operation, parameters, SYNTHETIC_IDENTITY)
+  return createPreviewOperationRequest(
+    operation.operation,
+    parameters,
+    transportIdentity(syntheticIdentity),
+  )
 }
 
 function encodedQuery(query) {
@@ -626,8 +719,8 @@ function encodedQuery(query) {
   )).join('&')}`
 }
 
-function assertExactMockProjection(url, options, operation, token) {
-  const request = authoritativeMockRequest(operation)
+function assertExactMockProjection(url, options, operation, token, syntheticIdentity) {
+  const request = authoritativeMockRequest(operation, syntheticIdentity)
   if (!(url instanceof TrustedURL) || isProxy(url) || Reflect.ownKeys(url).length !== 0
     || Reflect.apply(urlOriginGetter, url, []) !== request.origin
     || Reflect.apply(urlPathnameGetter, url, []) !== request.path
@@ -663,7 +756,7 @@ function assertExactMockProjection(url, options, operation, token) {
   }
 }
 
-function mutatedMockProjection(url, options, fault) {
+function mutatedMockProjection(url, options, fault, syntheticIdentity) {
   if (!fault.startsWith('projection-') || fault === 'projection-mismatch') {
     return { url, options }
   }
@@ -685,9 +778,9 @@ function mutatedMockProjection(url, options, fault) {
   else if (fault === 'projection-missing-body') delete mutatedOptions.body
   else if (fault === 'projection-extra-body') mutatedOptions.body = '{}'
   else if (fault === 'projection-wrong-account') {
-    mutatedUrl.pathname = mutatedUrl.pathname.replace(SYNTHETIC_IDENTITY.accountId, '3'.repeat(32))
+    mutatedUrl.pathname = mutatedUrl.pathname.replace(syntheticIdentity.accountId, '3'.repeat(32))
   } else if (fault === 'projection-wrong-zone') {
-    mutatedUrl.pathname = mutatedUrl.pathname.replace(SYNTHETIC_IDENTITY.routeZoneIds[0], '4'.repeat(32))
+    mutatedUrl.pathname = mutatedUrl.pathname.replace(syntheticIdentity.routeZoneIds[0], '4'.repeat(32))
   } else fail('invalid-mock-exchange')
   return { url: mutatedUrl, options: mutatedOptions }
 }
@@ -712,13 +805,29 @@ function normalizeExchange(input) {
   })
 }
 
-export function createMockPreviewTransport(credentialEnvironment, exchangesInput) {
+function createMockTransport(
+  credentialEnvironment,
+  exchangesInput,
+  mode = 'receipt',
+  repositoryMigrationNames = [],
+) {
   validateObservationCredentialEnvironment(credentialEnvironment)
   const token = tokenFromValidatedEnvironment(credentialEnvironment)
   if (!Array.isArray(exchangesInput) || isProxy(exchangesInput) || exchangesInput.length === 0) {
     fail('invalid-mock-exchanges')
   }
   const exchanges = exchangesInput.map((entry) => normalizeExchange(entry))
+  const maximumRouteZoneIndex = exchanges.reduce((maximum, entry) => (
+    entry.request.operation === 'worker-routes'
+      ? Math.max(maximum, entry.request.routeZoneIndex)
+      : maximum
+  ), 0)
+  const syntheticIdentity = immutablePlain({
+    ...SYNTHETIC_IDENTITY,
+    routeZoneIds: Array.from({ length: maximumRouteZoneIndex + 1 }, (_, index) => (
+      index === 0 ? '2'.repeat(32) : (index + 2).toString(16).padStart(32, '0')
+    )),
+  })
   let cursor = 0
   let active = null
   let scheduledTimeout = null
@@ -729,8 +838,14 @@ export function createMockPreviewTransport(credentialEnvironment, exchangesInput
     const projectionFault = exchange.fault === 'projection-mismatch'
       ? 'projection-changed-method'
       : exchange.fault
-    const projected = mutatedMockProjection(url, options, projectionFault)
-    assertExactMockProjection(projected.url, projected.options, exchange.request, token)
+    const projected = mutatedMockProjection(url, options, projectionFault, syntheticIdentity)
+    assertExactMockProjection(
+      projected.url,
+      projected.options,
+      exchange.request,
+      token,
+      syntheticIdentity,
+    )
     if (exchange.fault === 'timeout') {
       scheduledTimeout?.()
       return new Promise(() => {})
@@ -774,16 +889,23 @@ export function createMockPreviewTransport(credentialEnvironment, exchangesInput
     return new Response(exchange.bytes, { status, headers })
   }
 
-  const transport = syntheticTransportForTesting(credentialEnvironment, {
-    fetchImplementation,
-    setTimer(callback) {
-      scheduledTimeout = callback
-      return 1
+  const transport = createTransport(
+    syntheticIdentity,
+    credentialEnvironment,
+    {
+      fetchImplementation,
+      setTimer(callback) {
+        scheduledTimeout = callback
+        return 1
+      },
+      clearTimer() { scheduledTimeout = null },
     },
-    clearTimer() { scheduledTimeout = null },
-  })
+    true,
+    mode,
+    repositoryMigrationNames,
+  )
 
-  return Object.freeze({
+  const publicTransport = Object.freeze({
     async request(operationInput) {
       if (cursor >= exchanges.length) fail('unexpected-extra-mock-request')
       const operation = normalizeOperation(operationInput)
@@ -798,11 +920,43 @@ export function createMockPreviewTransport(credentialEnvironment, exchangesInput
       }
     },
     requestBudget: transport.requestBudget,
+    ...(mode === 'resource' ? {
+      reviewedRouteZoneCount: transport.reviewedRouteZoneCount,
+    } : {}),
     assertExhausted() {
       if (cursor !== exchanges.length) fail('unconsumed-mock-exchange')
       return true
     },
   })
+  if (mode === 'resource') {
+    setReleaseInspectionWeakMapValue(
+      resourceTransportAuthority,
+      publicTransport,
+      Object.freeze({
+        request: publicTransport.request,
+        requestBudget: publicTransport.requestBudget,
+        reviewedRouteZoneCount: transport.reviewedRouteZoneCount,
+        assertExhausted: publicTransport.assertExhausted,
+      }),
+    )
+  }
+  return publicTransport
+}
+
+export function createMockPreviewTransport(credentialEnvironment, exchangesInput) {
+  return createMockTransport(credentialEnvironment, exchangesInput)
+}
+
+export function createMockPreviewResourceTransport(
+  credentialEnvironment,
+  exchangesInput,
+) {
+  return createMockTransport(
+    credentialEnvironment,
+    exchangesInput,
+    'resource',
+    repositoryMigrationNamesForObservation(),
+  )
 }
 
 export function createSyntheticPreviewHttpTransportForTesting(credentialEnvironment, dependenciesInput) {

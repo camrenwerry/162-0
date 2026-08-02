@@ -1,1 +1,4 @@
-export { createMockPreviewTransport } from '../preview-authority.mjs'
+export {
+  createMockPreviewResourceTransport,
+  createMockPreviewTransport,
+} from '../preview-authority.mjs'

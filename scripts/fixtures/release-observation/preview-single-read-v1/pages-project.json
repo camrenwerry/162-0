@@ -4,6 +4,38 @@
   "messages": [],
   "result": {
     "name": "diamond-draft",
-    "subdomain": "synthetic-preview.pages.dev"
+    "subdomain": "synthetic-preview.pages.dev",
+    "production_branch": "main",
+    "deployment_configs": {
+      "preview": {
+        "compatibility_date": "2026-07-14",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "env_vars": {
+          "DRAFT_VALIDATION_MODE": {
+            "type": "plain_text",
+            "value": "enabled"
+          },
+          "LEADERBOARD_READ_MODE": {
+            "type": "plain_text",
+            "value": "disabled"
+          }
+        },
+        "d1_databases": {
+          "DB": {
+            "id": "00000000-0000-4000-8000-000000000001"
+          }
+        },
+        "services": {
+          "VALIDATION_SERVICE": {
+            "service": "pennant-pursuit-validation-preview",
+            "environment": "preview"
+          }
+        }
+      },
+      "production": {}
+    },
+    "wrangler_config_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
   }
 }

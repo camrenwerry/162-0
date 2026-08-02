@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": [
+    {
+      "success": true,
+      "results": [
+        {
+          "id": 1,
+          "version": 4
+        }
+      ],
+      "meta": {
+        "rows_read": 1,
+        "rows_written": 0
+      }
+    }
+  ]
+}

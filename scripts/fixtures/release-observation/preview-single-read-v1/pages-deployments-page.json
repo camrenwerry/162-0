@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": [
+    {
+      "id": "deployment-preview-001",
+      "environment": "preview",
+      "created_on": "2026-07-15T12:00:00.000Z",
+      "modified_on": "2026-07-15T12:01:30.000Z",
+      "deployment_trigger": {
+        "type": "github",
+        "metadata": {
+          "branch": "develop",
+          "commit_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "commit_message": "Synthetic Preview fixture deployment"
+        }
+      },
+      "latest_stage": {
+        "name": "deploy",
+        "status": "success",
+        "started_on": "2026-07-15T12:00:30.000Z",
+        "ended_on": "2026-07-15T12:01:20.000Z"
+      },
+      "url": "https://preview-001.diamond-draft.pages.dev",
+      "aliases": [
+        "https://develop.diamond-draft.pages.dev"
+      ]
+    }
+  ],
+  "result_info": {
+    "page": 1,
+    "per_page": 25,
+    "count": 1,
+    "total_count": 1,
+    "total_pages": 1
+  }
+}

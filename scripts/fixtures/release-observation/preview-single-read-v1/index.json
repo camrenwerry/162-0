@@ -2,10 +2,18 @@
   "schemaVersion": 1,
   "fixtures": {
     "account": "account.json",
-    "zones": "zones-page.json",
-    "pagesProject": "pages-project.json",
-    "workerSettings": "worker-settings.json",
-    "d1Database": "d1-database.json",
-    "d1Query": "d1-query.json"
+    "account-zones": "zones-page.json",
+    "pages-project": "pages-project.json",
+    "pages-preview-deployments": "pages-deployments-page.json",
+    "worker-settings": "worker-settings.json",
+    "worker-deployments": "worker-deployments.json",
+    "worker-subdomain": "worker-subdomain.json",
+    "worker-schedules": "worker-schedules.json",
+    "worker-custom-domains": "worker-custom-domains.json",
+    "worker-routes": "worker-routes.json",
+    "d1-database": "d1-database.json",
+    "migration-table-discovery": "migration-tables-query.json",
+    "migration-rows": "migration-rows-query.json",
+    "backend-schema-version": "backend-schema-version-query.json"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": [
+    {
+      "id": "route-preview-001",
+      "pattern": "validation.preview.invalid/api/*",
+      "script": "pennant-pursuit-validation-preview"
+    },
+    {
+      "id": "route-unrelated-001",
+      "pattern": "unrelated.preview.invalid/*",
+      "script": null
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": [
+    {
+      "success": true,
+      "results": [
+        {
+          "id": 1,
+          "name": "0001_backend_foundation.sql",
+          "applied_at": "2026-07-15 12:02:00"
+        },
+        {
+          "id": 2,
+          "name": "0002_draft_submissions.sql",
+          "applied_at": "2026-07-15 12:03:00"
+        },
+        {
+          "id": 3,
+          "name": "0003_leaderboard_foundation.sql",
+          "applied_at": "2026-07-15 12:04:00"
+        },
+        {
+          "id": 4,
+          "name": "0004_leaderboard_identity_ranking.sql",
+          "applied_at": "2026-07-15 12:05:00"
+        }
+      ],
+      "meta": {
+        "rows_read": 4,
+        "rows_written": 0
+      }
+    }
+  ]
+}

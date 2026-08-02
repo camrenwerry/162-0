@@ -9,6 +9,7 @@ import {
   PREVIEW_OPERATION_NAMES,
   REMOTE_OBSERVATION_LIMITS,
 } from './remote-transport.mjs'
+import { validatePreviewNormalizedResourceValue } from './preview-resource-schemas.mjs'
 
 const isProxy = utilTypes.isProxy
 
@@ -29,8 +30,6 @@ const OPERATION_ORDER = new Map(PREVIEW_OPERATION_NAMES.map((operation, index) =
 const bufferByteLength = Buffer.byteLength
 const DANGEROUS_KEYS = new Set(['__proto__', 'constructor', 'prototype'])
 const OUTCOME_KEYS = Object.freeze(['capturedAtMs', 'issueCode', 'operation', 'state', 'value'])
-const VALUE_KEYS = Object.freeze(['kind', 'schemaVersion'])
-const VALUE_KIND = 'preview-resource-observation-placeholder'
 const ISSUE_CODE_BY_STATE = Object.freeze({
   complete: null,
   missing: 'resource-missing',
@@ -134,22 +133,6 @@ function assertCanonicalBudget(input) {
   return total
 }
 
-function validateNormalizedValue(input) {
-  if (!exactKeys(input, VALUE_KEYS)) {
-    fail('resource values must use the closed Preview placeholder schema.')
-  }
-  let value
-  try {
-    value = immutablePlain(input)
-  } catch {
-    fail('resource values must be plain, accessor-free data.')
-  }
-  if (value.kind !== VALUE_KIND || value.schemaVersion !== 1) {
-    fail('resource value kind or schema version is unsupported.')
-  }
-  return value
-}
-
 function validateOutcome(input) {
   if (!exactKeys(input, OUTCOME_KEYS)) fail('resource outcomes must use the exact closed field inventory.')
   let outcome
@@ -166,7 +149,9 @@ function validateOutcome(input) {
   if (outcome.issueCode !== ISSUE_CODE_BY_STATE[outcome.state]) {
     fail('resource outcome issue code contradicts its state.')
   }
-  const value = outcome.value === null ? null : validateNormalizedValue(outcome.value)
+  const value = outcome.value === null
+    ? null
+    : validatePreviewNormalizedResourceValue(outcome.operation, outcome.value)
   if (VALUE_STATES.has(outcome.state) !== (value !== null)) {
     fail(`${outcome.state} resource outcome has contradictory value semantics.`)
   }

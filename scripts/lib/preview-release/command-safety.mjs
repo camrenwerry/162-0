@@ -38,6 +38,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['scripts/release-inspection-local.mjs'],
   ['scripts/release-inspection-observe.mjs'],
   ['--test', 'scripts/preview-identity-bootstrap.test.mjs'],
+  ['--test', 'scripts/preview-resource-observation.test.mjs'],
   ['--test', 'scripts/release-inspection-contracts.test.mjs'],
   ['--test', 'scripts/release-observation-contracts.test.mjs'],
   ['--test', 'scripts/release-preview-observation.test.mjs'],
