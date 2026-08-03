@@ -227,6 +227,17 @@ reads are deferred to 3D-2B.3, and authenticated observation remains separately
 authorized. See
 [Milestone 3D-2B.2 Preview resource observation and candidate projection](MILESTONE_3D2B2_PREVIEW_RESOURCE_OBSERVATION.md).
 
+Milestone 3D-2B.3a adds only the pure read-one versus read-two semantic
+stability contract. Its `MATCH` means stable equality between two normalized
+Preview reads and does not mean local-versus-remote agreement, currentness, or
+authorization. Double-read orchestration, delay, clocks, freshness, and the
+final stable artifact remain deferred. See
+[Milestone 3D-2B.3a stable comparison contract](MILESTONE_3D2B3A_STABLE_COMPARISON_CONTRACT.md).
+Runtime validation and private identity—not TypeScript assignability—provide
+snapshot authority. Nominal declarations prevent ordinary structural misuse,
+but assertions, `any`, `unknown` casts, and deliberate intersections provide no
+runtime provenance and cannot authorize a reconstructed snapshot.
+
 Milestone 3C-1 added an independent recovery gate and a local schema-4 readiness
 guard. See
 [Milestone 3C-1 local runtime integration](MILESTONE_3C1_LOCAL_RUNTIME.md).

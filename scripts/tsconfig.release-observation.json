@@ -14,12 +14,15 @@
     "release-observation-declarations.contract.ts",
     "release-preview-observation-declarations.contract.ts",
     "release-preview-capability-projection-declarations.contract.ts",
+    "release-preview-stable-comparison-declarations.contract.ts",
     "lib/release-inspection/remote-contracts.d.mts",
     "lib/release-inspection/remote-transport.d.mts",
     "lib/release-inspection/preview-observation-contracts.d.mts",
     "lib/release-inspection/preview-identity.d.mts",
     "lib/release-inspection/preview-http-transport.d.mts",
     "lib/release-inspection/preview-resource-observer.d.mts",
-    "lib/release-inspection/preview-capability-projection.d.mts"
+    "lib/release-inspection/preview-capability-projection.d.mts",
+    "lib/release-inspection/preview-stability-projection.d.mts",
+    "lib/release-inspection/preview-stable-comparison.d.mts"
   ]
 }

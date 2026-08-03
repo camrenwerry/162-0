@@ -368,7 +368,7 @@ test('Workerd timing-safe-equality is part of the aggregate test path', () => {
   assert.equal(packageJson.scripts.test, 'node scripts/preview-check.mjs --tests')
   assert.equal(
     packageJson.scripts['test:release-observation'],
-    'npm run test:release-observation-contracts && npm run test:release-preview-observation && npm run test:preview-resource-observation && npm run test:preview-capability-projection && npm run test:release-observation-declarations',
+    'npm run test:release-observation-contracts && npm run test:release-preview-observation && npm run test:preview-resource-observation && npm run test:preview-capability-projection && npm run test:preview-stable-comparison && npm run test:release-observation-declarations',
   )
   assert.equal(RELEASE_STAGES.some(({ command, args }) => command === 'npm' && args.length === 1 && args[0] === 'test'), true)
 })
@@ -391,6 +391,7 @@ test('all recursively reachable release scripts use supported local-only command
   assert.equal(reachable.some(({ name }) => name === 'test:release-preview-observation'), true)
   assert.equal(reachable.some(({ name }) => name === 'test:preview-resource-observation'), true)
   assert.equal(reachable.some(({ name }) => name === 'test:preview-capability-projection'), true)
+  assert.equal(reachable.some(({ name }) => name === 'test:preview-stable-comparison'), true)
   assert.equal(reachable.some(({ name }) => name === 'test:release-observation-declarations'), true)
   assert.equal(reachable.some(({ name }) => name === 'test:d1c4-smoke-harness'), true)
   assert.equal(reachable.some(({ name }) => name === 'test:production-migration'), true)

@@ -15,6 +15,16 @@ opaque validated normalized single-read snapshot, and it permanently retains
 `executionAuthorization: "prohibited"`. See
 [Milestone 3D-2B.2 Preview resource observation and candidate projection](MILESTONE_3D2B2_PREVIEW_RESOURCE_OBSERVATION.md).
 
+The 3D-2B.3a pure comparison contract can compare exactly two opaque validated
+single-read snapshots, but it does not perform either read or wait between
+them. Its `MATCH` means only read-to-read semantic stability and grants neither
+currentness nor execution authority. See
+[Milestone 3D-2B.3a stable comparison contract](MILESTONE_3D2B3A_STABLE_COMPARISON_CONTRACT.md).
+TypeScript assignability is not release provenance: assertions, `any`,
+`unknown` casts, and deliberate intersections cannot create the private runtime
+identity required by the comparison authority. Runtime-produced results remain
+closed and deeply frozen.
+
 ## Current command boundary
 
 The authoritative local check is offline by default:

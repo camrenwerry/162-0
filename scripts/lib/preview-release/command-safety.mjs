@@ -40,6 +40,7 @@ const SAFE_NODE_ARGUMENTS = new Set([
   ['--test', 'scripts/preview-identity-bootstrap.test.mjs'],
   ['--test', 'scripts/preview-resource-observation.test.mjs'],
   ['--test', 'scripts/preview-capability-projection.test.mjs'],
+  ['--test', 'scripts/preview-stable-comparison.test.mjs'],
   ['--test', 'scripts/release-inspection-contracts.test.mjs'],
   ['--test', 'scripts/release-observation-contracts.test.mjs'],
   ['--test', 'scripts/release-preview-observation.test.mjs'],
