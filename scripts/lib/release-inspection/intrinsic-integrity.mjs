@@ -126,6 +126,7 @@ const PROTECTED_GLOBAL_KEYS = [
   "String",
   "Symbol",
   "TextDecoder",
+  "TextEncoder",
   "TypeError",
   "Uint8Array",
   "URL",

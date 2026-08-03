@@ -25,6 +25,19 @@ TypeScript assignability is not release provenance: assertions, `any`,
 identity required by the comparison authority. Runtime-produced results remain
 closed and deeply frozen.
 
+The 3D-2B.3b orchestration authority executes exactly two injected Preview
+single-read attempts with the same frozen opaque identity. Read one settles
+before one required injected 2,000 millisecond delay, and the delay settles
+before read two starts. Validated monotonic evidence—not wall-clock time—proves
+the sequence. Independent 64-request counts and the 128-request aggregate are
+recorded in bounded secret-free receipts. See
+[Milestone 3D-2B.3b double-read orchestration](MILESTONE_3D2B3B_DOUBLE_READ_ORCHESTRATION.md).
+Receipt byte enforcement uses privately captured trusted UTF-8 authority and
+normalizes canonicalization or measurement failures to fixed errors without
+raw provider, dependency, receipt, snapshot, identity, or secret detail.
+The operator-facing online Preview mode remains refusal-only. Freshness and the
+final stable evidence artifact remain deferred to 3D-2B.3c.
+
 ## Current command boundary
 
 The authoritative local check is offline by default:

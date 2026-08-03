@@ -238,6 +238,18 @@ snapshot authority. Nominal declarations prevent ordinary structural misuse,
 but assertions, `any`, `unknown` casts, and deliberate intersections provide no
 runtime provenance and cannot authorize a reconstructed snapshot.
 
+Milestone 3D-2B.3b adds the offline-only double-read orchestration authority.
+It reuses one frozen opaque Preview identity, awaits exactly two single-read
+attempts sequentially, and enforces one injected 2,000 millisecond delay using
+validated monotonic evidence. Per-read request counts remain independently
+capped at 64 and the aggregate is capped at 128. Receipts are private, bounded,
+deterministic, and exclude raw observations and secrets. Their 16 KiB UTF-8
+bound uses privately captured trusted byte authority; canonicalization or
+measurement failures become fixed, secret-free orchestration errors rather
+than propagating dependency or provider exceptions. Freshness and the final
+stable artifact remain deferred to 3D-2B.3c. See
+[Milestone 3D-2B.3b double-read orchestration](MILESTONE_3D2B3B_DOUBLE_READ_ORCHESTRATION.md).
+
 Milestone 3C-1 added an independent recovery gate and a local schema-4 readiness
 guard. See
 [Milestone 3C-1 local runtime integration](MILESTONE_3C1_LOCAL_RUNTIME.md).

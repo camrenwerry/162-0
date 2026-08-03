@@ -818,6 +818,7 @@ assert.deepEqual(
   [...shippedGraph.keys()].sort(),
   [
     'scripts/lib/identity-recovery-preparation.mjs',
+    'scripts/lib/preview-release/canonical-data.mjs',
     'scripts/lib/preview-release/canonical.mjs',
     'scripts/lib/schema4-activation-authority.mjs',
     'scripts/prepare-identity-recovery.mjs',

@@ -368,7 +368,7 @@ test('Workerd timing-safe-equality is part of the aggregate test path', () => {
   assert.equal(packageJson.scripts.test, 'node scripts/preview-check.mjs --tests')
   assert.equal(
     packageJson.scripts['test:release-observation'],
-    'npm run test:release-observation-contracts && npm run test:release-preview-observation && npm run test:preview-resource-observation && npm run test:preview-capability-projection && npm run test:preview-stable-comparison && npm run test:release-observation-declarations',
+    'npm run test:release-observation-contracts && npm run test:release-preview-observation && npm run test:preview-resource-observation && npm run test:preview-capability-projection && npm run test:preview-stable-comparison && npm run test:preview-double-read-orchestration && npm run test:release-observation-declarations',
   )
   assert.equal(RELEASE_STAGES.some(({ command, args }) => command === 'npm' && args.length === 1 && args[0] === 'test'), true)
 })

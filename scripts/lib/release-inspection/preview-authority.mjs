@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import { realpathSync } from 'node:fs'
 import { types as utilTypes } from 'node:util'
 import path from 'node:path'
@@ -203,6 +204,17 @@ export function validatePreviewObservationIdentity(input) {
   assertReleaseInspectionIntrinsicIntegrity()
   rawIdentityFor(input)
   return input
+}
+
+export function resolvePreviewObservationIdentityContinuity(input) {
+  assertReleaseInspectionIntrinsicIntegrity()
+  const authority = rawIdentityFor(input)
+  return Object.freeze({
+    identity: input,
+    continuityDigest: createHash('sha256')
+      .update(canonicalJson(authority.rawIdentity), 'utf8')
+      .digest('hex'),
+  })
 }
 
 export function loadPreviewObservationIdentity(repositoryRoot) {
